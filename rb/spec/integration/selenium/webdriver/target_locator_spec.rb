@@ -17,22 +17,48 @@
 # specific language governing permissions and limitations
 # under the License.
 
-require File.expand_path("../spec_helper", __FILE__)
+r#equire File.expand_path("../spec_helper", __FILE__)
+
+require 'rspec'
+require 'selenium-webdriver'
+
+def url_for(file)
+  "file://#{File.expand_path("../common/src/web")}/#{file}"
+end
+
+def reset_driver!
+  driver.quit
+  @driver = nil
+end
+
+def driver
+  @driver ||= Selenium::WebDriver.for :chrome
+end
+
+def wait_for_alert
+  sleep 1
+  driver.switch_to.alert
+end
 
 describe "Selenium::WebDriver::TargetLocator" do
+
+  after(:each) do
+    reset_driver! unless @driver.nil?
+  end
+
   let(:wait) { Selenium::WebDriver::Wait.new }
 
   it "should find the active element" do
     driver.navigate.to url_for("xhtmlTest.html")
-    driver.switch_to.active_element.should be_an_instance_of(WebDriver::Element)
+    driver.switch_to.active_element.should be_an_instance_of(Selenium::WebDriver::Element)
   end
 
-  not_compliant_on :browser => [:iphone] do
+ # not_compliant_on :browser => [:iphone] do
     it "should switch to a frame" do
       driver.navigate.to url_for("iframes.html")
       driver.switch_to.frame("iframe1")
 
-      driver.find_element(:name, 'login').should be_kind_of(WebDriver::Element)
+      driver.find_element(:name, 'login').should be_kind_of(Selenium::WebDriver::Element)
     end
 
     it "should switch to a frame by Element" do
@@ -41,27 +67,34 @@ describe "Selenium::WebDriver::TargetLocator" do
       iframe = driver.find_element(:tag_name => "iframe")
       driver.switch_to.frame(iframe)
 
-      driver.find_element(:name, 'login').should be_kind_of(WebDriver::Element)
+      driver.find_element(:name, 'login').should be_kind_of(Selenium::WebDriver::Element)
     end
-  end
+ # end
 
-  not_compliant_on :browser => [:safari, :phantomjs] do
+ # not_compliant_on :browser => [:safari, :phantomjs] do
     it "should switch to parent frame" do
       driver.navigate.to url_for("iframes.html")
 
       iframe = driver.find_element(:tag_name => "iframe")
       driver.switch_to.frame(iframe)
 
-      driver.find_element(:name, 'login').should be_kind_of(WebDriver::Element)
+      driver.find_element(:name, 'login').should be_kind_of(Selenium::WebDriver::Element)
 
       driver.switch_to.parent_frame
-      driver.find_element(:id, 'iframe_page_heading').should be_kind_of(WebDriver::Element)
+      driver.find_element(:id, 'iframe_page_heading').should be_kind_of(Selenium::WebDriver::Element)
     end
-  end
+ # end
 
   # switching by name not yet supported by safari
   not_compliant_on :browser => [:ie, :iphone, :safari] do
     after do
+      reset_driver!
+    end
+
+  # not_compliant_on :browser => [:ie, :iphone, :safari] do
+  describe "Window switching" do
+
+    after(:each) do
       reset_driver!
     end
 
@@ -76,7 +109,6 @@ describe "Selenium::WebDriver::TargetLocator" do
       end
 
       wait.until { driver.title == "XHTML Test Page" }
-
     end
 
     it "should handle exceptions inside the block" do
@@ -90,7 +122,6 @@ describe "Selenium::WebDriver::TargetLocator" do
       }.should raise_error(RuntimeError, "foo")
 
       driver.title.should == "XHTML Test Page"
-
     end
 
     it "should switch to a window" do
@@ -101,7 +132,6 @@ describe "Selenium::WebDriver::TargetLocator" do
 
       driver.switch_to.window("result")
       wait.until { driver.title == "We Arrive Here" }
-
     end
 
     it "should use the original window if the block closes the popup" do
@@ -180,15 +210,16 @@ describe "Selenium::WebDriver::TargetLocator" do
 
       driver.close
 
-      driver.switch_to.window(driver.window_handles.first) do
-        wait.until { driver.title == "XHTML Test Page" }
+      driver.switch_to.window(driver.window_handles.last) do
+        wait.until { driver.title == "This page has iframes" }
       end
 
-      driver.title.should == "XHTML Test Page"
+      driver.current_url.should =~ /iframes\.html/
+
     end
   end
 
-  not_compliant_on :browser => [:android, :iphone, :safari] do
+  #not_compliant_on :browser => [:android, :iphone, :safari] do
     it "should switch to default content" do
       driver.navigate.to url_for("iframes.html")
 
@@ -197,10 +228,10 @@ describe "Selenium::WebDriver::TargetLocator" do
 
       driver.find_element(:id => "iframe_page_heading")
     end
-  end
+#  end
 
-  describe "alerts" do
-    not_compliant_on :browser => [:iphone, :safari, :phantomjs] do
+ # describe "alerts" do
+   # not_compliant_on :browser => [:iphone, :safari, :phantomjs] do
       it "allows the user to accept an alert" do
         driver.navigate.to url_for("alerts.html")
         driver.find_element(:id => "alert").click
@@ -209,12 +240,12 @@ describe "Selenium::WebDriver::TargetLocator" do
 
         driver.title.should == "Testing Alerts"
       end
-    end
+   # end
 
-    not_compliant_on({:browser => :chrome, :platform => :macosx},
-                     {:browser => :iphone},
-                     {:browser => :safari},
-                     {:browser => :phantomjs}) do
+   # not_compliant_on({:browser => :chrome, :platform => :macosx},
+  #                   {:browser => :iphone},
+   #                  {:browser => :safari},
+   #                  {:browser => :phantomjs}) do
       it "allows the user to dismiss an alert" do
         driver.navigate.to url_for("alerts.html")
         driver.find_element(:id => "alert").click
@@ -224,9 +255,9 @@ describe "Selenium::WebDriver::TargetLocator" do
 
         driver.title.should == "Testing Alerts"
       end
-    end
+ #   end
 
-    not_compliant_on :browser => [:iphone, :safari, :phantomjs] do
+  #  not_compliant_on :browser => [:iphone, :safari, :phantomjs] do
       it "allows the user to set the value of a prompt" do
         driver.navigate.to url_for("alerts.html")
         driver.find_element(:id => "prompt").click
@@ -260,16 +291,16 @@ describe "Selenium::WebDriver::TargetLocator" do
         expect { alert.text }.to raise_error(Selenium::WebDriver::Error::NoAlertPresentError)
       end
 
-    end
+#    end
 
-    not_compliant_on :browser => [:ie, :iphone, :safari, :phantomjs] do
+#    not_compliant_on :browser => [:ie, :iphone, :safari, :phantomjs] do
       it "raises NoAlertOpenError if no alert is present" do
         lambda { driver.switch_to.alert }.should raise_error(
-          Selenium::WebDriver::Error::NoAlertPresentError, /alert|modal dialog/i)
+                                                     Selenium::WebDriver::Error::NoAlertPresentError, /alert|modal dialog/i)
       end
-    end
+ #   end
 
-    compliant_on :browser => [:firefox, :ie] do
+ #   compliant_on :browser => [:firefox, :ie] do
       it "raises an UnhandledAlertError if an alert has not been dealt with" do
         driver.navigate.to url_for("alerts.html")
         driver.find_element(:id => "alert").click
@@ -279,8 +310,8 @@ describe "Selenium::WebDriver::TargetLocator" do
 
         driver.title.should == "Testing Alerts" # :chrome does not auto-dismiss the alert
       end
-    end
+ #   end
 
-  end
+  #end
 end
 
