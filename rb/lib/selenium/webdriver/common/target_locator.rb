@@ -69,8 +69,8 @@ module Selenium
             returned = yield
           ensure
             current_handles = @bridge.getWindowHandles
-            original = current_handles.first unless current_handles.include? original
-            @bridge.switchToWindow original
+            original = current_handles.first unless current_handles.include? id
+            @bridge.switchToWindow original unless original.nil?
             returned
           end
         else

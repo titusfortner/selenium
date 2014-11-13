@@ -47,7 +47,7 @@ module Selenium
         end
 
         def reset_driver!
-          quit_driver
+          quit_driver unless @driver_instance.nil?
           @driver_instance = new_driver_instance
         end
 
