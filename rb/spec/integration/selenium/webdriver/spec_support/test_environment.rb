@@ -109,10 +109,7 @@ module Selenium
         end
 
         def url_for(filename)
-          url = app_server.where_is filename
-          url.sub!("127.0.0.1", "10.0.2.2") if browser == :android
-
-          url
+          app_server.where_is filename
         end
 
         def root
@@ -131,8 +128,6 @@ module Selenium
                        create_marionette_driver
                      when :chrome
                        create_chrome_driver
-                     when :iphone
-                       create_iphone_driver
                      when :safari
                        create_safari_driver
                      when :phantomjs
@@ -227,15 +222,6 @@ module Selenium
           end
 
           WebDriver::Driver.for :phantomjs
-        end
-
-        def create_iphone_driver
-          url = ENV['iphone_url']
-          if url
-            WebDriver::Driver.for :iphone, :url => url
-          else
-            WebDriver::Driver.for :iphone
-          end
         end
 
         def create_safari_driver

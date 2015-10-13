@@ -23,7 +23,7 @@ module Selenium
   module WebDriver
 
     # Marionette BUG - Interactions Not Supported
-    not_compliant_on({:browser => [:chrome, :android, :iphone, :safari, :marionette]},
+    not_compliant_on({:browser => [:chrome, :safari, :marionette]},
                      {:driver => :marionette}) do
       describe Keyboard do
         it "sends keys to the active element" do
