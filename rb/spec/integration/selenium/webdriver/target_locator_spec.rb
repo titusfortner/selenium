@@ -70,7 +70,7 @@ not_compliant_on :driver => :remote, :browser => :marionette do
       end
     end
 
-    not_compliant_on :browser => [:ie, :iphone, :safari] do
+    not_compliant_on :browser => :ie do
       it "should switch to a window and back when given a block" do
         driver.navigate.to url_for("xhtmlTest.html")
 
@@ -207,7 +207,7 @@ not_compliant_on :driver => :remote, :browser => :marionette do
       end
     end
 
-    not_compliant_on :browser => [:android, :iphone, :safari] do
+    not_compliant_on :browser => :safari do
       it "should switch to default content" do
         driver.navigate.to url_for("iframes.html")
 
@@ -219,7 +219,7 @@ not_compliant_on :driver => :remote, :browser => :marionette do
     end
 
     # Edge BUG - https://connect.microsoft.com/IE/feedback/details/1850030
-    not_compliant_on :browser => [:iphone, :safari, :phantomjs, :edge] do
+    not_compliant_on :browser => [:safari, :phantomjs, :edge] do
       describe "alerts" do
         it "allows the user to accept an alert" do
           driver.navigate.to url_for("alerts.html")

@@ -85,7 +85,7 @@ module Selenium
           end
 
           # Marionette BUG - Failed to convert expiry to Date
-          not_compliant_on({:browser => [:ie, :android, :iphone, :safari, :marionette]},
+          not_compliant_on({:browser => [:ie, :safari, :marionette]},
                            {:driver => :marionette}) do
             it "should use DateTime for expires" do
               driver.navigate.to url_for("xhtmlTest.html")

@@ -25,7 +25,7 @@ module Selenium
     describe Mouse do
 
       # Marionette BUG - Interactions Not Supported
-      not_compliant_on({:browser => [:android, :iphone, :safari, :marionette]},
+      not_compliant_on({:browser => [:safari, :marionette]},
                        {:driver => :marionette}) do
         it "clicks an element" do
           driver.navigate.to url_for("formPage.html")
