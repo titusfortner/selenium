@@ -43,7 +43,7 @@ describe "Driver" do
     end
   end
 
-  not_compliant_on :browser => [ :iphone, :safari] do
+  not_compliant_on :browser => :safari do
     it "should save a screenshot" do
       driver.navigate.to url_for("xhtmlTest.html")
       path = "screenshot_tmp.png"
@@ -181,22 +181,20 @@ describe "Driver" do
       expect(element.text).to eq("Foo")
     end
 
-    not_compliant_on :browser => [:android] do
-      it "should unwrap elements in deep objects" do
-        driver.navigate.to url_for("xhtmlTest.html")
-        result = driver.execute_script(<<-SCRIPT)
-        var e1 = document.getElementById('id1');
-        var body = document.body;
+    it "should unwrap elements in deep objects" do
+      driver.navigate.to url_for("xhtmlTest.html")
+      result = driver.execute_script(<<-SCRIPT)
+      var e1 = document.getElementById('id1');
+      var body = document.body;
 
-        return {
-          elements: {'body' : body, other: [e1] }
-        };
-        SCRIPT
+      return {
+        elements: {'body' : body, other: [e1] }
+      };
+      SCRIPT
 
-        expect(result).to be_kind_of(Hash)
-        expect(result['elements']['body']).to be_kind_of(WebDriver::Element)
-        expect(result['elements']['other'].first).to be_kind_of(WebDriver::Element)
-      end
+      expect(result).to be_kind_of(Hash)
+      expect(result['elements']['body']).to be_kind_of(WebDriver::Element)
+      expect(result['elements']['other'].first).to be_kind_of(WebDriver::Element)
     end
 
     it "should return booleans" do
@@ -260,7 +258,7 @@ describe "Driver" do
     end
   end
 
-  not_compliant_on :browser => [:iphone, :android, :phantomjs] do
+  not_compliant_on :browser => :phantomjs do
     describe "execute async script" do
       before {
         driver.manage.timeouts.script_timeout = 0
