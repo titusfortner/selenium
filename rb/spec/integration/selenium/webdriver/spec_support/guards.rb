@@ -75,8 +75,7 @@ module Selenium
               :browser        => GlobalTestEnv.browser,
               :driver         => GlobalTestEnv.driver,
               :platform       => Platform.os,
-              :native         => GlobalTestEnv.native_events?,
-              :window_manager => !!ENV['DESKTOP_SESSION']
+              :native         => GlobalTestEnv.native_events?
             }
           end
 
@@ -110,8 +109,8 @@ module Selenium
           @debug_guard = false
         end
 
-        def not_compliant_on(*opts, &blk)
-          Guards.record(:not_compliant, opts, :file => caller.first)
+        def not_compliant_on(key, *opts, &blk)
+          Guards.record(:not_compliant, opts, :file => caller.first, :reason => key)
           yield if GlobalTestEnv.unguarded? || !Guards.env_matches?(opts)
         end
 

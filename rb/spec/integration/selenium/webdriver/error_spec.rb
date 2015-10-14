@@ -29,21 +29,23 @@ describe Selenium::WebDriver::Error do
     }.to raise_error(WebDriver::Error::NoSuchElementError)
   end
 
-  compliant_on({:driver => :firefox}, {:driver => :remote, :browser => :firefox}) do
-    it "should show stack trace information" do
-      driver.navigate.to url_for("xhtmlTest.html")
+  compliant_on :browser => [:firefox, :marionette] do
+    not_compliant_on "No stacktrace variable returned", {:driver => :marionette} do
+      it "should show stack trace information" do
+        driver.navigate.to url_for("xhtmlTest.html")
 
-      rescued = false
-      ex = nil
+        rescued = false
+        ex = nil
 
-      begin
-        driver.find_element(:id, "nonexistant")
-      rescue => ex
-        rescued = true
+        begin
+          driver.find_element(:id, "nonexistant")
+        rescue => ex
+          rescued = true
+        end
+
+        expect(rescued).to be true
+        expect(ex.backtrace.first).to include("[remote server]")
       end
-
-      expect(rescued).to be true
-      expect(ex.backtrace.first).to include("[remote server]")
     end
   end
 end

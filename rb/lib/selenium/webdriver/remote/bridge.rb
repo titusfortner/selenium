@@ -534,8 +534,9 @@ module Selenium
           data = execute :getLog, {}, :type => type.to_s
 
           Array(data).map do |l|
+            next if l.fetch('level', nil).nil?
             LogEntry.new l.fetch('level'), l.fetch('timestamp'), l.fetch('message')
-          end
+          end.compact
         end
 
         #
