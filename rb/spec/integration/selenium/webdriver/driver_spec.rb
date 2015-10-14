@@ -266,8 +266,8 @@ describe "Driver" do
       expect(result).to eq(3)
     end
 
-    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:driver => :remote, :browser => :phantomjs, :platform => :macosx}  do
-      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:browser => :marionette, :platform => :macosx} do
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:driver => :remote, :browser => :phantomjs, :platform => [:macosx, :linux]}  do
+      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:browser => :marionette, :platform => [:macosx, :linux]} do
         it "times out if the callback is not invoked" do
           expect {
             # Script is expected to be async and explicitly callback, so this should timeout.

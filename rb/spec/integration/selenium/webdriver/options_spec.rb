@@ -24,7 +24,7 @@ module Selenium
     describe Options do
 
       #TODO - File Ghostdriver Bug
-      not_compliant_on "No Driver Logs and Browser Logs are empty", {:browser => :phantomjs, :platform => :macosx} do
+      not_compliant_on "No Driver Logs and Browser Logs are empty", {:browser => :phantomjs, :platform => [:macosx, :linux]} do
         not_compliant_on "Logging not implemented in w3c", {:driver => :marionette}, {:browser => :marionette} do
           describe 'logs' do
 
@@ -44,7 +44,7 @@ module Selenium
               end
             end
 
-            not_compliant_on "https://code.google.com/p/chromedriver/issues/detail?id=1098", {:browser => :chrome, :platform => :macosx} do
+            not_compliant_on "https://code.google.com/p/chromedriver/issues/detail?id=1098", {:browser => :chrome, :platform => [:macosx, :linux]} do
               it 'can get the driver log' do
                 driver.navigate.to url_for("simpleTest.html")
 

@@ -26,7 +26,7 @@ describe "Element" do
     driver.find_element(:id, "imageButton").click
   end
 
-  not_compliant_on "Known Javascript Error", {:driver => :marionette, :platform => :macosx} do
+  not_compliant_on "Known Javascript Error", {:driver => :marionette, :platform => [:macosx, :linux]} do
     it "should submit" do
       driver.navigate.to url_for("formPage.html")
       wait(10).until { driver.find_elements(:id, "submitButton").size > 0 }
@@ -49,8 +49,8 @@ describe "Element" do
 
   not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", {:browser => :safari} do
     not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", {:browser => :phantomjs} do
-      not_compliant_on "Unable to get attribute value on that input element", {:driver => :marionette, :platform => :macosx},
-                                                                              {:browser => :marionette, :platform => :macosx} do
+      not_compliant_on "Unable to get attribute value on that input element", {:driver => :marionette, :platform => [:macosx, :linux]},
+                                                                              {:browser => :marionette, :platform => [:macosx, :linux]} do
         it "should handle file uploads" do
           driver.navigate.to url_for("formPage.html")
 
