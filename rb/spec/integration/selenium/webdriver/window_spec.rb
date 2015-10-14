@@ -57,7 +57,7 @@ module Selenium
         end
       end
 
-      not_compliant_on "http://github.com/detro/ghostdriver/issues/466", { :browser => :phantomjs, :platform => :macosx } do
+      not_compliant_on "http://github.com/detro/ghostdriver/issues/466", { :browser => :phantomjs, :platform => [:macosx, :linux] } do
         not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1148", {:browser => :safari, :platform => :macosx} do
           not_compliant_on "Window Position is not currently in w3c spec", {:driver => :marionette} do
             it "sets the position of the current window" do
@@ -67,6 +67,8 @@ module Selenium
               target_y = pos.y + 10
 
               window.position = Point.new(target_x, target_y)
+
+              wait.until {window.position.x != pos.x && window.position.y != pos.y}
 
               new_pos = window.position
               expect(new_pos.x).to eq(target_x)
@@ -80,6 +82,8 @@ module Selenium
         window.size = old_size = Dimension.new(200, 200)
 
         window.maximize
+
+        wait.until {window.size.height != 200 && window.size.width != 200}
 
         new_size = window.size
         expect(new_size.width).to be > old_size.width

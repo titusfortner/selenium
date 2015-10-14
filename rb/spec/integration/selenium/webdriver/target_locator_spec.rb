@@ -119,7 +119,7 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
       expect(driver.title).to eq("XHTML Test Page")
     end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => :macosx} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
       it "should close current window when more than two windows exist" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -132,7 +132,7 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
       end
     end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => :macosx} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
       it "should close another window when more than two windows exist" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -147,7 +147,7 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
       end
     end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => :macosx} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
       it "should iterate over open windows when current window is not closed" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -164,7 +164,7 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
       end
     end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => :macosx} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
       it "should iterate over open windows when current window is closed" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -238,7 +238,7 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
           end
 
           # TODO - File Marionette Bug
-          not_compliant_on "Marionette Error: keysToSend.join is not a function", {:driver => :marionette, :platform => :macosx} do
+          not_compliant_on "Marionette Error: keysToSend.join is not a function", {:driver => :marionette, :platform => [:macosx, :linux]} do
             it "allows the user to set the value of a prompt" do
               driver.navigate.to url_for("alerts.html")
               driver.find_element(:id => "prompt").click

@@ -59,7 +59,7 @@ module Selenium
             }
           end
 
-          not_compliant_on "http://github.com/detro/ghostdriver/issues/125", {:browser => :phantomjs, :platform => :macosx} do
+          not_compliant_on "http://github.com/detro/ghostdriver/issues/125", {:browser => :phantomjs, :platform => [:macosx, :linux]} do
             it "context clicks an element" do
               driver.navigate.to url_for("javascriptPage.html")
               element = driver.find_element(:id, 'doubleClickField')
