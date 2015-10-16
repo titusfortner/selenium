@@ -35,7 +35,9 @@ module Selenium
           expect(temp_driver.instance_variable_get('@bridge').instance_variable_get('@launcher')).to_not be_nil
           temp_driver.quit
         end
+      end
 
+      compliant_on({:driver => :remote, :browser => :firefox}, {:driver => :firefox}) do
         it "Does not use wires by default when designated binary does not use Marionette" do
           marionette_path = ENV['MARIONETTE_PATH']
           ENV['MARIONETTE_PATH'] = nil
@@ -49,7 +51,6 @@ module Selenium
       end
 
       compliant_on({:driver => :remote, :browser => :marionette}, {:driver => :marionette}) do
-
         context "when designated firefox installation includes Marionette" do
 
           it "Uses Wires when initialized with W3C desired_capabilities" do
@@ -69,7 +70,6 @@ module Selenium
       end
 
       compliant_on({:driver => :remote, :browser => :marionette}, {:driver => :marionette}) do
-
         context "when designated firefox installation does not include Marionette" do
           before(:each) do
             @marionette_path = ENV['MARIONETTE_PATH']
@@ -88,6 +88,8 @@ module Selenium
           it "Raises Wires Exception when initialized with marionette option" do
             expect{Selenium::WebDriver.for :firefox, {marionette: true}}.to raise_exception ArgumentError, message
           end
+
+          it_behaves_like "driver that can be started concurrently", :marionette
         end
       end
     end
