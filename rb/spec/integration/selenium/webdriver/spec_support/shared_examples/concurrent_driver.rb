@@ -1,4 +1,4 @@
-shared_examples_for "driver that can be started concurrently" do |driver_name|
+shared_examples_for "driver that can be started concurrently" do |browser_name, driver_name|
   it "is started sequentially" do
     expect {
       Timeout.timeout(45) do
@@ -7,7 +7,8 @@ shared_examples_for "driver that can be started concurrently" do |driver_name|
 
         5.times do
           threads << Thread.new do
-            drivers << Selenium::WebDriver.for(driver_name)
+            opt = driver_name ? {marionette: true} : {}
+            drivers << Selenium::WebDriver.for(browser_name, opt)
           end
         end
 

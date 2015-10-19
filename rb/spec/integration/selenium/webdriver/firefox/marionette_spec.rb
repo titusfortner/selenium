@@ -66,6 +66,8 @@ module Selenium
             expect(temp_driver.instance_variable_get('@bridge').instance_variable_get('@launcher')).to be_nil
             temp_driver.quit
           end
+
+          it_behaves_like "driver that can be started concurrently", :firefox, :marionette
         end
       end
 
@@ -88,8 +90,6 @@ module Selenium
           it "Raises Wires Exception when initialized with marionette option" do
             expect{Selenium::WebDriver.for :firefox, {marionette: true}}.to raise_exception ArgumentError, message
           end
-
-          it_behaves_like "driver that can be started concurrently", :marionette
         end
       end
     end
