@@ -25,49 +25,43 @@ describe "Driver" do
     expect(driver.title).to eq("XHTML Test Page")
   end
 
-  # Marionette BUG - AutomatedTester: "I need to add pagesource back and add it to the spec"
-  not_compliant_on :driver => :marionette do
-    it "should get the page source" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      expect(driver.page_source).to match(%r[<title>XHTML Test Page</title>]i)
+  it "should get the page source" do
+    driver.navigate.to url_for("xhtmlTest.html")
+    expect(driver.page_source).to match(%r[<title>XHTML Test Page</title>]i)
+  end
+
+  it "should refresh the page" do
+    driver.navigate.to url_for("javascriptPage.html")
+    sleep 1 # javascript takes too long to load
+    driver.find_element(:id, 'updatediv').click
+    expect(driver.find_element(:id, 'dynamo').text).to eq("Fish and chips!")
+    driver.navigate.refresh
+    expect(driver.find_element(:id, 'dynamo').text).to eq("What's for dinner?")
+  end
+
+  it "should save a screenshot" do
+    driver.navigate.to url_for("xhtmlTest.html")
+    path = "screenshot_tmp.png"
+
+    begin
+      driver.save_screenshot path
+      expect(File.exist?(path)).to be true # sic
+      expect(File.size(path)).to be > 0
+    ensure
+      File.delete(path) if File.exist?(path)
     end
   end
 
-  not_compliant_on :browser => :safari do
-    it "should refresh the page" do
-      driver.navigate.to url_for("javascriptPage.html")
-      driver.find_element(:id, 'updatediv').click
-      expect(driver.find_element(:id, 'dynamo').text).to eq("Fish and chips!")
-      driver.navigate.refresh
-      expect(driver.find_element(:id, 'dynamo').text).to eq("What's for dinner?")
-    end
+  it "should return a screenshot in the specified format" do
+    driver.navigate.to url_for("xhtmlTest.html")
+
+    ss = driver.screenshot_as(:png)
+    expect(ss).to be_kind_of(String)
+    expect(ss.size).to be > 0
   end
 
-  not_compliant_on :browser => :safari do
-    it "should save a screenshot" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      path = "screenshot_tmp.png"
-
-      begin
-        driver.save_screenshot path
-        expect(File.exist?(path)).to be true # sic
-        expect(File.size(path)).to be > 0
-      ensure
-        File.delete(path) if File.exist?(path)
-      end
-    end
-
-    it "should return a screenshot in the specified format" do
-      driver.navigate.to url_for("xhtmlTest.html")
-
-      ss = driver.screenshot_as(:png)
-      expect(ss).to be_kind_of(String)
-      expect(ss.size).to be > 0
-    end
-
-    it "raises an error when given an unknown format" do
-      expect { driver.screenshot_as(:jpeg) }.to raise_error(WebDriver::Error::UnsupportedOperationError)
-    end
+  it "raises an error when given an unknown format" do
+    expect { driver.screenshot_as(:jpeg) }.to raise_error(WebDriver::Error::UnsupportedOperationError)
   end
 
   describe "one element" do
@@ -112,7 +106,7 @@ describe "Driver" do
       driver.navigate.to url_for("nestedElements.html")
 
       element = driver.find_element(:name, "form2")
-      child   = element.find_element(:name, "selectomatic")
+      child = element.find_element(:name, "selectomatic")
 
       expect(child.attribute("id")).to eq("2")
     end
@@ -121,7 +115,7 @@ describe "Driver" do
       driver.navigate.to url_for("nestedElements.html")
 
       element = driver.find_element(:name, "form2")
-      child   = element.find_element(:tag_name, "select")
+      child = element.find_element(:tag_name, "select")
 
       expect(child.attribute("id")).to eq("2")
     end
@@ -212,8 +206,7 @@ describe "Driver" do
       expect(driver.execute_script('return ["zero", "one", "two"];')).to eq(%w[zero one two])
     end
 
-    # Marionette BUG - Not finding local javascript for execution
-    not_compliant_on({:driver => :marionette}, {:browser => :marionette}) do
+    not_compliant_on "https://github.com/jgraham/wires/issues/18", {:driver => :marionette}, {:browser => :marionette} do
       it "should be able to call functions on the page" do
         driver.navigate.to url_for("javascriptPage.html")
         driver.execute_script("displayMessage('I like cheese');")
@@ -258,25 +251,24 @@ describe "Driver" do
     end
   end
 
-  not_compliant_on :browser => :phantomjs do
-    describe "execute async script" do
-      before {
-        driver.manage.timeouts.script_timeout = 0
-        driver.navigate.to url_for("ajaxy_page.html")
-      }
+  describe "execute async script" do
+    before {
+      driver.manage.timeouts.script_timeout = 0
+      driver.navigate.to url_for("ajaxy_page.html")
+    }
 
-      it "should be able to return arrays of primitives from async scripts" do
-        result = driver.execute_async_script "arguments[arguments.length - 1]([null, 123, 'abc', true, false]);"
-        expect(result).to eq([nil, 123, 'abc', true, false])
-      end
+    it "should be able to return arrays of primitives from async scripts" do
+      result = driver.execute_async_script "arguments[arguments.length - 1]([null, 123, 'abc', true, false]);"
+      expect(result).to eq([nil, 123, 'abc', true, false])
+    end
 
-      it "should be able to pass multiple arguments to async scripts" do
-        result = driver.execute_async_script "arguments[arguments.length - 1](arguments[0] + arguments[1]);", 1, 2
-        expect(result).to eq(3)
-      end
+    it "should be able to pass multiple arguments to async scripts" do
+      result = driver.execute_async_script "arguments[arguments.length - 1](arguments[0] + arguments[1]);", 1, 2
+      expect(result).to eq(3)
+    end
 
-      # Edge BUG - https://connect.microsoft.com/IE/feedback/details/1849991/
-      not_compliant_on({:browser => :edge}, {:driver => :remote, :browser => :marionette}) do
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:driver => :remote, :browser => :phantomjs, :platform => [:macosx, :linux]}  do
+      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:browser => :marionette, :platform => [:macosx, :linux]} do
         it "times out if the callback is not invoked" do
           expect {
             # Script is expected to be async and explicitly callback, so this should timeout.
@@ -286,5 +278,4 @@ describe "Driver" do
       end
     end
   end
-
 end

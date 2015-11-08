@@ -24,74 +24,72 @@ module Selenium
     describe Window do
       let(:window) { driver.manage.window }
 
-      compliant_on :browser => [:firefox, :chrome, :edge] do
-        it "gets the size of the current window" do
-          size = window.size
+      it "gets the size of the current window" do
+        size = window.size
 
-          expect(size).to be_kind_of(Dimension)
+        expect(size).to be_kind_of(Dimension)
 
-          expect(size.width).to be > 0
-          expect(size.height).to be > 0
+        expect(size.width).to be > 0
+        expect(size.height).to be > 0
+      end
+
+      it "sets the size of the current window" do
+        size = window.size
+
+        target_width = size.width - 20
+        target_height = size.height - 20
+
+        window.size = Dimension.new(target_width, target_height)
+
+        new_size = window.size
+        expect(new_size.width).to eq(target_width)
+        expect(new_size.height).to eq(target_height)
+      end
+
+      not_compliant_on "Window Position is not currently in w3c spec", {:driver => :marionette} do
+        it "gets the position of the current window" do
+          pos = driver.manage.window.position
+
+          expect(pos).to be_kind_of(Point)
+
+          expect(pos.x).to be >= 0
+          expect(pos.y).to be >= 0
         end
+      end
 
-        it "sets the size of the current window" do
-          size = window.size
+      not_compliant_on "http://github.com/detro/ghostdriver/issues/466", { :browser => :phantomjs, :platform => [:macosx, :linux] } do
+        not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1148", {:browser => :safari, :platform => :macosx} do
+          not_compliant_on "Window Position is not currently in w3c spec", {:driver => :marionette} do
+            it "sets the position of the current window" do
+              pos = window.position
 
-          target_width = size.width - 20
-          target_height = size.height - 20
+              target_x = pos.x + 10
+              target_y = pos.y + 10
 
-          window.size = Dimension.new(target_width, target_height)
+              window.position = Point.new(target_x, target_y)
 
-          new_size = window.size
-          expect(new_size.width).to eq(target_width)
-          expect(new_size.height).to eq(target_height)
-        end
+              wait.until {window.position.x != pos.x && window.position.y != pos.y}
 
-        # Marionette BUG -
-        # GET /session/2146a9d2-690a-4844-a5f4-e38b02d670c3/window/:window_handle/position
-        # did not match a known command
-        not_compliant_on({:driver => :marionette},
-                         {:driver => :remote, :browser => :firefox, :platform => :linux}) do
-          it "gets the position of the current window" do
-            pos = driver.manage.window.position
-
-            expect(pos).to be_kind_of(Point)
-
-            expect(pos.x).to be >= 0
-            expect(pos.y).to be >= 0
-          end
-        end
-
-        not_compliant_on :driver => [:remote, :marionette], :browser => :firefox, :platform => :linux do
-          it "sets the position of the current window" do
-            pos = window.position
-
-            target_x = pos.x + 10
-            target_y = pos.y + 10
-
-            window.position = Point.new(target_x, target_y)
-
-            new_pos = window.position
-            expect(new_pos.x).to eq(target_x)
-            expect(new_pos.y).to eq(target_y)
+              new_pos = window.position
+              expect(new_pos.x).to eq(target_x)
+              expect(new_pos.y).to eq(target_y)
+            end
           end
         end
       end
 
-      compliant_on({:browser => :ie},
-                   {:browser => :edge},
-                   {:browser => :firefox, :platform => [:windows, :macosx]}) do
-        it "can maximize the current window" do
-          window.size = old_size = Dimension.new(200, 200)
+      it "can maximize the current window" do
+        window.size = old_size = Dimension.new(400, 400)
+        wait.until { window.size == old_size }
 
-          window.maximize
+        window.maximize
 
-          new_size = window.size
-          expect(new_size.width).to be > old_size.width
-          expect(new_size.height).to be > old_size.height
-        end
+        wait.until { window.size != old_size }
+
+        new_size = window.size
+        expect(new_size.width).to be > old_size.width
+        expect(new_size.height).to be > old_size.height
       end
-
     end
   end
 end

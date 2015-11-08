@@ -26,11 +26,10 @@ describe "Element" do
     driver.find_element(:id, "imageButton").click
   end
 
-  # Marionette BUG - AutomatedTester: "known bug with execute script"
-  not_compliant_on :driver => :marionette do
+  not_compliant_on "Known Javascript Error", {:driver => :marionette, :platform => [:macosx, :linux]} do
     it "should submit" do
       driver.navigate.to url_for("formPage.html")
-      wait(5).until {driver.find_elements(:id, "submitButton").size > 0}
+      wait(10).until { driver.find_elements(:id, "submitButton").size > 0 }
       driver.find_element(:id, "submitButton").submit
     end
   end
@@ -40,35 +39,33 @@ describe "Element" do
     driver.find_element(:id, "working").send_keys("foo", "bar")
   end
 
-  not_compliant_on :browser => :safari do
-    it "should send key presses" do
-      driver.navigate.to url_for("javascriptPage.html")
-      key_reporter = driver.find_element(:id, 'keyReporter')
+  it "should send key presses" do
+    driver.navigate.to url_for("javascriptPage.html")
+    key_reporter = driver.find_element(:id, 'keyReporter')
 
-      key_reporter.send_keys("Tet", :arrow_left, "s")
-      expect(key_reporter.attribute('value')).to eq("Test")
-    end
+    key_reporter.send_keys("Tet", :arrow_left, "s")
+    expect(key_reporter.attribute('value')).to eq("Test")
   end
 
-  # FIXME - Find alternate implementation for File Uploads
-  # TODO - Figure out if/how this works on Firefox/Chrome without Remote server
-  # PhantomJS on windows issue: https://github.com/ariya/phantomjs/issues/10993
-  not_compliant_on({:browser => [:safari, :edge, :marionette]},
-                   {:browser => :phantomjs, :platform => [:windows, :linux]},
-                   {:driver => :marionette}) do
-    it "should handle file uploads" do
-      driver.navigate.to url_for("formPage.html")
+  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", {:browser => :safari} do
+    not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", {:browser => :phantomjs} do
+      not_compliant_on "Unable to get attribute value on that input element", {:driver => :marionette, :platform => [:macosx, :linux]},
+                                                                              {:browser => :marionette, :platform => [:macosx, :linux]} do
+        it "should handle file uploads" do
+          driver.navigate.to url_for("formPage.html")
 
-      element = driver.find_element(:id, 'upload')
-      expect(element.attribute('value')).to be_empty
+          element = driver.find_element(:id, 'upload')
+          expect(element.attribute('value')).to be_empty
 
-      file = Tempfile.new('file-upload')
-      path = file.path
-      path.gsub!("/", "\\") if WebDriver::Platform.windows?
+          file = Tempfile.new('file-upload')
+          path = file.path
+          path.gsub!("/", "\\") if WebDriver::Platform.windows?
 
-      element.send_keys path
+          element.send_keys path
 
-      expect(element.attribute('value')).to include(File.basename(path))
+          expect(element.attribute('value')).to include(File.basename(path))
+        end
+      end
     end
   end
 
@@ -77,20 +74,9 @@ describe "Element" do
     expect(driver.find_element(:id, "withText").attribute("rows")).to eq("5")
   end
 
-  not_compliant_on :browser => :edge do
-    it "should return nil for non-existent attributes" do
-      driver.navigate.to url_for("formPage.html")
-      expect(driver.find_element(:id, "withText").attribute("nonexistent")).to be_nil
-    end
-  end
-
-  # Per W3C spec this should return Invalid Argument not Unknown Error, but there is no comparable error code
-  compliant_on :browser => :edge do
-    it "should return nil for non-existent attributes" do
-      driver.navigate.to url_for("formPage.html")
-      element = driver.find_element(:id, "withText")
-      expect {element.attribute("nonexistent")}.to raise_error(Selenium::WebDriver::Error::UnknownError)
-    end
+  it "should return nil for non-existent attributes" do
+    driver.navigate.to url_for("formPage.html")
+    expect(driver.find_element(:id, "withText").attribute("nonexistent")).to be_nil
   end
 
   it "should clear" do
@@ -102,7 +88,7 @@ describe "Element" do
     driver.navigate.to url_for("formPage.html")
 
     cheese = driver.find_element(:id, "cheese")
-    peas   = driver.find_element(:id, "peas")
+    peas = driver.find_element(:id, "peas")
 
     cheese.click
 
@@ -130,50 +116,44 @@ describe "Element" do
     expect(driver.find_element(:class, "header")).to be_displayed
   end
 
-  # Location not currently supported in Spec, but should be?
-  not_compliant_on :driver => :marionette do
-    it "should get location" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      loc = driver.find_element(:class, "header").location
+  it "should get location" do
+    driver.navigate.to url_for("xhtmlTest.html")
+    loc = driver.find_element(:class, "header").location
 
-      expect(loc.x).to be >= 1
-      expect(loc.y).to be >= 1
-    end
-
-    it "should get location once scrolled into view" do
-      driver.navigate.to url_for("javascriptPage.html")
-      loc = driver.find_element(:id, 'keyUp').location_once_scrolled_into_view
-
-      expect(loc.x).to be >= 1
-      expect(loc.y).to be >= 0 # can be 0 if scrolled to the top
-    end
+    expect(loc.x).to be >= 1
+    expect(loc.y).to be >= 1
   end
 
-  # Marionette BUG:
-  # GET /session/f7082a32-e685-2843-ad2c-5bb6f376dac5/element/b6ff4468-ed6f-7c44-be4b-ca5a3ea8bf26/size
-  # did not match a known command"
-  not_compliant_on :driver => :marionette do
-    it "should get size" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      size = driver.find_element(:class, "header").size
+  it "should get location once scrolled into view" do
+    driver.navigate.to url_for("javascriptPage.html")
+    loc = driver.find_element(:id, 'keyUp').location_once_scrolled_into_view
 
-      expect(size.width).to be > 0
-      expect(size.height).to be > 0
-    end
+    expect(loc.x).to be >= 1
+    expect(loc.y).to be >= 0 # can be 0 if scrolled to the top
   end
 
-  compliant_on :driver => [:ie, :chrome, :edge] do # Firefox w/native events: issue 1771
-    it "should drag and drop" do
-      driver.navigate.to url_for("dragAndDropTest.html")
+  it "should get size" do
+    driver.navigate.to url_for("xhtmlTest.html")
+    size = driver.find_element(:class, "header").size
 
-      img1 = driver.find_element(:id, "test1")
-      img2 = driver.find_element(:id, "test2")
+    expect(size.width).to be > 0
+    expect(size.height).to be > 0
+  end
 
-      driver.action.drag_and_drop_by(img1, 100, 100).
-                    drag_and_drop(img2, img1).
-                    perform
+  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4136", {:browser => :safari} do
+    not_compliant_on "Interactions not yet supported", {:driver => :marionette}, {:browser => :marionette} do
+      it "should drag and drop" do
+        driver.navigate.to url_for("dragAndDropTest.html")
 
-      expect(img1.location).to eq(img2.location)
+        img1 = driver.find_element(:id, "test1")
+        img2 = driver.find_element(:id, "test2")
+
+        driver.action.drag_and_drop_by(img1, 100, 100).
+            drag_and_drop(img2, img1).
+            perform
+
+        expect(img1.location).to eq(img2.location)
+      end
     end
   end
 
@@ -198,17 +178,15 @@ describe "Element" do
     expect(body).to eql(xbody)
   end
 
-  not_compliant_on :browser => :phantomjs do
-    it "should know when two elements are not equal" do
-      driver.navigate.to url_for("simpleTest.html")
+  it "should know when two elements are not equal" do
+    driver.navigate.to url_for("simpleTest.html")
 
-      elements = driver.find_elements(:tag_name, 'p')
-      p1 = elements.fetch(0)
-      p2 = elements.fetch(1)
+    elements = driver.find_elements(:tag_name, 'p')
+    p1 = elements.fetch(0)
+    p2 = elements.fetch(1)
 
-      expect(p1).not_to eq(p2)
-      expect(p1).not_to eql(p2)
-    end
+    expect(p1).not_to eq(p2)
+    expect(p1).not_to eql(p2)
   end
 
   it "should return the same #hash for equal elements when found by Driver#find_element" do
@@ -228,5 +206,4 @@ describe "Element" do
 
     expect(body.hash).to eq(xbody.hash)
   end
-
 end
