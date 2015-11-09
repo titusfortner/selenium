@@ -62,8 +62,6 @@ module Selenium
         end
 
         def start
-          Platform.exit_hook { stop } # make sure we don't leave the server running
-
           socket_lock.locked do
             find_free_port
             start_process
