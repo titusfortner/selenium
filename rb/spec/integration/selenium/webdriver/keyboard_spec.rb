@@ -22,8 +22,8 @@ require_relative 'spec_helper'
 module Selenium
   module WebDriver
 
-    not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4136", {:browser => :safari} do
-      not_compliant_on "Interactions not yet supported", {:driver => :marionette}, {:browser => :marionette} do
+    not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4136", :browser => :safari do
+      not_compliant_on "Interactions not yet supported", :browser => :marionette do
         describe Keyboard do
           it "sends keys to the active element" do
             driver.navigate.to url_for("bodyTypingTest.html")

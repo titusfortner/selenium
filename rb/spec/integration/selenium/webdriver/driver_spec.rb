@@ -25,9 +25,12 @@ describe "Driver" do
     expect(driver.title).to eq("XHTML Test Page")
   end
 
-  it "should get the page source" do
-    driver.navigate.to url_for("xhtmlTest.html")
-    expect(driver.page_source).to match(%r[<title>XHTML Test Page</title>]i)
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1237", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    it "should get the page source" do
+      driver.navigate.to url_for("xhtmlTest.html")
+      expect(driver.page_source).to match(%r[<title>XHTML Test Page</title>]i)
+    end
   end
 
   it "should refresh the page" do
@@ -157,123 +160,132 @@ describe "Driver" do
     end
   end
 
-  describe "execute script" do
-    it "should return strings" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      expect(driver.execute_script("return document.title;")).to eq("XHTML Test Page")
-    end
-
-    it "should return numbers" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      expect(driver.execute_script("return document.title.length;")).to eq("XHTML Test Page".length)
-    end
-
-    it "should return elements" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      element = driver.execute_script("return document.getElementById('id1');")
-      expect(element).to be_kind_of(WebDriver::Element)
-      expect(element.text).to eq("Foo")
-    end
-
-    it "should unwrap elements in deep objects" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      result = driver.execute_script(<<-SCRIPT)
-      var e1 = document.getElementById('id1');
-      var body = document.body;
-
-      return {
-        elements: {'body' : body, other: [e1] }
-      };
-      SCRIPT
-
-      expect(result).to be_kind_of(Hash)
-      expect(result['elements']['body']).to be_kind_of(WebDriver::Element)
-      expect(result['elements']['other'].first).to be_kind_of(WebDriver::Element)
-    end
-
-    it "should return booleans" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      expect(driver.execute_script("return true;")).to eq(true)
-    end
-
-    it "should raise if the script is bad" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      expect { driver.execute_script("return squiggle();") }.to raise_error
-    end
-
-    it "should return arrays" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      expect(driver.execute_script('return ["zero", "one", "two"];')).to eq(%w[zero one two])
-    end
-
-    not_compliant_on "https://github.com/jgraham/wires/issues/18", {:driver => :marionette}, {:browser => :marionette} do
-      it "should be able to call functions on the page" do
-        driver.navigate.to url_for("javascriptPage.html")
-        driver.execute_script("displayMessage('I like cheese');")
-        expect(driver.find_element(:id, "result").text.strip).to eq("I like cheese")
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1237", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    describe "execute script" do
+      it "should return strings" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        expect(driver.execute_script("return document.title;")).to eq("XHTML Test Page")
       end
-    end
 
-    it "should be able to pass string arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      expect(driver.execute_script("return arguments[0] == 'fish' ? 'fish' : 'not fish';", "fish")).to eq("fish")
-    end
+      it "should return numbers" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        expect(driver.execute_script("return document.title.length;")).to eq("XHTML Test Page".length)
+      end
 
-    it "should be able to pass boolean arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      expect(driver.execute_script("return arguments[0] == true;", true)).to eq(true)
-    end
+      it "should return elements" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        element = driver.execute_script("return document.getElementById('id1');")
+        expect(element).to be_kind_of(WebDriver::Element)
+        expect(element.text).to eq("Foo")
+      end
 
-    it "should be able to pass numeric arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      expect(driver.execute_script("return arguments[0] == 1 ? 1 : 0;", 1)).to eq(1)
-    end
+      it "should unwrap elements in deep objects" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        result = driver.execute_script(<<-SCRIPT)
+        var e1 = document.getElementById('id1');
+        var body = document.body;
 
-    it "should be able to pass null arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      expect(driver.execute_script("return arguments[0];", nil)).to eq(nil)
-    end
+        return {
+          elements: {'body' : body, other: [e1] }
+        };
+        SCRIPT
 
-    it "should be able to pass array arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      expect(driver.execute_script("return arguments[0];", [1, '2', 3])).to eq([1, '2', 3])
-    end
+        expect(result).to be_kind_of(Hash)
+        expect(result['elements']['body']).to be_kind_of(WebDriver::Element)
+        expect(result['elements']['other'].first).to be_kind_of(WebDriver::Element)
+      end
 
-    it "should be able to pass element arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      button = driver.find_element(:id, "plainButton")
-      expect(driver.execute_script("arguments[0]['flibble'] = arguments[0].getAttribute('id'); return arguments[0]['flibble'];", button)).to eq("plainButton")
-    end
+      it "should return booleans" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        expect(driver.execute_script("return true;")).to eq(true)
+      end
 
-    it "should be able to pass in multiple arguments" do
-      driver.navigate.to url_for("javascriptPage.html")
-      expect(driver.execute_script("return arguments[0] + arguments[1];", "one", "two")).to eq("onetwo")
+      it "should raise if the script is bad" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        expect { driver.execute_script("return squiggle();") }.to raise_error
+      end
+
+      it "should return arrays" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        expect(driver.execute_script('return ["zero", "one", "two"];')).to eq(%w[zero one two])
+      end
+
+      not_compliant_on "https://github.com/jgraham/wires/issues/18", :browser => :marionette do
+        it "should be able to call functions on the page" do
+          driver.navigate.to url_for("javascriptPage.html")
+          driver.execute_script("displayMessage('I like cheese');")
+          expect(driver.find_element(:id, "result").text.strip).to eq("I like cheese")
+        end
+      end
+
+      it "should be able to pass string arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        expect(driver.execute_script("return arguments[0] == 'fish' ? 'fish' : 'not fish';", "fish")).to eq("fish")
+      end
+
+      it "should be able to pass boolean arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        expect(driver.execute_script("return arguments[0] == true;", true)).to eq(true)
+      end
+
+      it "should be able to pass numeric arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        expect(driver.execute_script("return arguments[0] == 1 ? 1 : 0;", 1)).to eq(1)
+      end
+
+      it "should be able to pass null arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        expect(driver.execute_script("return arguments[0];", nil)).to eq(nil)
+      end
+
+      it "should be able to pass array arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        expect(driver.execute_script("return arguments[0];", [1, '2', 3])).to eq([1, '2', 3])
+      end
+
+      it "should be able to pass element arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        button = driver.find_element(:id, "plainButton")
+        expect(driver.execute_script("arguments[0]['flibble'] = arguments[0].getAttribute('id'); return arguments[0]['flibble'];", button)).to eq("plainButton")
+      end
+
+      it "should be able to pass in multiple arguments" do
+        driver.navigate.to url_for("javascriptPage.html")
+        expect(driver.execute_script("return arguments[0] + arguments[1];", "one", "two")).to eq("onetwo")
+      end
     end
   end
 
-  describe "execute async script" do
-    before {
-      driver.manage.timeouts.script_timeout = 0
-      driver.navigate.to url_for("ajaxy_page.html")
-    }
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1237", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    describe "execute async script" do
+      before {
+        driver.manage.timeouts.script_timeout = 0
+        driver.navigate.to url_for("ajaxy_page.html")
+      }
 
-    it "should be able to return arrays of primitives from async scripts" do
-      result = driver.execute_async_script "arguments[arguments.length - 1]([null, 123, 'abc', true, false]);"
-      expect(result).to eq([nil, 123, 'abc', true, false])
-    end
+      it "should be able to return arrays of primitives from async scripts" do
+        result = driver.execute_async_script "arguments[arguments.length - 1]([null, 123, 'abc', true, false]);"
+        expect(result).to eq([nil, 123, 'abc', true, false])
+      end
 
-    it "should be able to pass multiple arguments to async scripts" do
-      result = driver.execute_async_script "arguments[arguments.length - 1](arguments[0] + arguments[1]);", 1, 2
-      expect(result).to eq(3)
-    end
+      it "should be able to pass multiple arguments to async scripts" do
+        result = driver.execute_async_script "arguments[arguments.length - 1](arguments[0] + arguments[1]);", 1, 2
+        expect(result).to eq(3)
+      end
 
-    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:driver => :remote, :browser => :phantomjs, :platform => [:macosx, :linux]}  do
-      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:browser => :marionette, :platform => [:macosx, :linux]} do
-        it "times out if the callback is not invoked" do
-          expect {
-            # Script is expected to be async and explicitly callback, so this should timeout.
-            driver.execute_async_script "return 1 + 2;"
-          }.to raise_error(Selenium::WebDriver::Error::ScriptTimeoutError)
+      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:driver => :remote,
+                                                                              :browser => :phantomjs,
+                                                                              :platform => [:macosx, :linux]}  do
+        not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:browser => :mariontte,
+                                                                                :platform => [:macosx, :linux]} do
+          it "times out if the callback is not invoked" do
+            expect {
+              # Script is expected to be async and explicitly callback, so this should timeout.
+              driver.execute_async_script "return 1 + 2;"
+            }.to raise_error(Selenium::WebDriver::Error::ScriptTimeoutError)
+          end
         end
       end
     end

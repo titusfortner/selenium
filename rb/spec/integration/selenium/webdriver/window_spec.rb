@@ -21,74 +21,80 @@ require_relative 'spec_helper'
 
 module Selenium
   module WebDriver
-    describe Window do
-      let(:window) { driver.manage.window }
 
-      it "gets the size of the current window" do
-        size = window.size
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                            :browser => :marionette} do
+      describe Window do
+        let(:window) { driver.manage.window }
 
-        expect(size).to be_kind_of(Dimension)
+        it "gets the size of the current window" do
+          size = window.size
 
-        expect(size.width).to be > 0
-        expect(size.height).to be > 0
-      end
+          expect(size).to be_kind_of(Dimension)
 
-      it "sets the size of the current window" do
-        size = window.size
-
-        target_width = size.width - 20
-        target_height = size.height - 20
-
-        window.size = Dimension.new(target_width, target_height)
-
-        new_size = window.size
-        expect(new_size.width).to eq(target_width)
-        expect(new_size.height).to eq(target_height)
-      end
-
-      not_compliant_on "Window Position is not currently in w3c spec", {:driver => :marionette} do
-        it "gets the position of the current window" do
-          pos = driver.manage.window.position
-
-          expect(pos).to be_kind_of(Point)
-
-          expect(pos.x).to be >= 0
-          expect(pos.y).to be >= 0
+          expect(size.width).to be > 0
+          expect(size.height).to be > 0
         end
-      end
 
-      not_compliant_on "http://github.com/detro/ghostdriver/issues/466", { :browser => :phantomjs, :platform => [:macosx, :linux] } do
-        not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1148", {:browser => :safari, :platform => :macosx} do
-          not_compliant_on "Window Position is not currently in w3c spec", {:driver => :marionette} do
-            it "sets the position of the current window" do
-              pos = window.position
+        it "sets the size of the current window" do
+          size = window.size
 
-              target_x = pos.x + 10
-              target_y = pos.y + 10
+          target_width = size.width - 20
+          target_height = size.height - 20
 
-              window.position = Point.new(target_x, target_y)
+          window.size = Dimension.new(target_width, target_height)
 
-              wait.until {window.position.x != pos.x && window.position.y != pos.y}
+          new_size = window.size
+          expect(new_size.width).to eq(target_width)
+          expect(new_size.height).to eq(target_height)
+        end
 
-              new_pos = window.position
-              expect(new_pos.x).to eq(target_x)
-              expect(new_pos.y).to eq(target_y)
+        not_compliant_on "Window Position is not currently in w3c spec", :browser => :marionette do
+          it "gets the position of the current window" do
+            pos = driver.manage.window.position
+
+            expect(pos).to be_kind_of(Point)
+
+            expect(pos.x).to be >= 0
+            expect(pos.y).to be >= 0
+          end
+        end
+
+        not_compliant_on "http://github.com/detro/ghostdriver/issues/466", { :browser => :phantomjs,
+                                                                             :platform => [:macosx, :linux] } do
+          not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1148", {:browser => :safari,
+                                                                                  :platform => :macosx} do
+            not_compliant_on "Window Position is not currently in w3c spec", :browser => :marionette do
+              it "sets the position of the current window" do
+                pos = window.position
+
+                target_x = pos.x + 10
+                target_y = pos.y + 10
+
+                window.position = Point.new(target_x, target_y)
+
+                wait.until {window.position.x != pos.x && window.position.y != pos.y}
+
+                new_pos = window.position
+                expect(new_pos.x).to eq(target_x)
+                expect(new_pos.y).to eq(target_y)
+              end
             end
           end
         end
-      end
 
-      it "can maximize the current window" do
-        window.size = old_size = Dimension.new(400, 400)
-        wait.until { window.size == old_size }
+        it "can maximize the current window" do
+          window.size = old_size = Dimension.new(400, 400)
+          wait.until { window.size == old_size }
 
-        window.maximize
+          window.maximize
 
-        wait.until { window.size != old_size }
+          wait.until { window.size != old_size }
 
-        new_size = window.size
-        expect(new_size.width).to be > old_size.width
-        expect(new_size.height).to be > old_size.height
+          new_size = window.size
+          expect(new_size.width).to be > old_size.width
+          expect(new_size.height).to be > old_size.height
+        end
       end
     end
   end

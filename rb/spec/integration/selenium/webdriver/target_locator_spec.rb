@@ -19,55 +19,53 @@
 
 require_relative 'spec_helper'
 
-not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser => :marionette} do
-  describe "Selenium::WebDriver::TargetLocator" do
-    after do
-      reset_driver!
+describe "Selenium::WebDriver::TargetLocator" do
+
+  let(:new_window) { driver.window_handles.find { |handle| handle != driver.window_handle } }
+
+  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=805475", :browser => :marionette do
+    it "should find the active element" do
+      driver.navigate.to url_for("xhtmlTest.html")
+      expect(driver.switch_to.active_element).to be_an_instance_of(WebDriver::Element)
     end
+  end
 
-    let(:wait) { Selenium::WebDriver::Wait.new }
-    let(:new_window) { driver.window_handles.find { |handle| handle != driver.window_handle } }
+  it "should switch to a frame directly" do
+    driver.navigate.to url_for("iframes.html")
+    driver.switch_to.frame("iframe1")
 
-    # TODO - File Marionette bug
-    not_compliant_on "UnknownCommandError /session_id/element/active", {:driver => :marionette}, {:browser => :marionette} do
-      it "should find the active element" do
-        driver.navigate.to url_for("xhtmlTest.html")
-        expect(driver.switch_to.active_element).to be_an_instance_of(WebDriver::Element)
+    expect(driver.find_element(:name, 'login')).to be_kind_of(WebDriver::Element)
+  end
+
+  it "should switch to a frame by Element" do
+    driver.navigate.to url_for("iframes.html")
+
+    iframe = driver.find_element(:tag_name => "iframe")
+    driver.switch_to.frame(iframe)
+
+    expect(driver.find_element(:name, 'login')).to be_kind_of(WebDriver::Element)
+  end
+
+  not_compliant_on "Parent Frame implemented after driver out of active development", :browser => [:phantomjs, :safari] do
+    it "should switch to parent frame" do
+      # For some reason Marionette loses control of itself here unless reset. Unable to isolate
+      compliant_on :driver => :marionette do
+        reset_driver!
       end
-    end
-
-    it "should switch to a frame" do
-      driver.navigate.to url_for("iframes.html")
-      driver.switch_to.frame("iframe1")
-
-      expect(driver.find_element(:name, 'login')).to be_kind_of(WebDriver::Element)
-    end
-
-    it "should switch to a frame by Element" do
       driver.navigate.to url_for("iframes.html")
 
       iframe = driver.find_element(:tag_name => "iframe")
       driver.switch_to.frame(iframe)
 
       expect(driver.find_element(:name, 'login')).to be_kind_of(WebDriver::Element)
+
+      driver.switch_to.parent_frame
+      expect(driver.find_element(:id, 'iframe_page_heading')).to be_kind_of(WebDriver::Element)
     end
+  end
 
-    not_compliant_on "Parent Frame implemented after driver out of active development", {:browser => [:phantomjs, :safari]} do
-      not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1206122", {:driver => :marionette} do
-        it "should switch to parent frame" do
-          driver.navigate.to url_for("iframes.html")
-
-          iframe = driver.find_element(:tag_name => "iframe")
-          driver.switch_to.frame(iframe)
-
-          expect(driver.find_element(:name, 'login')).to be_kind_of(WebDriver::Element)
-
-          driver.switch_to.parent_frame
-          expect(driver.find_element(:id, 'iframe_page_heading')).to be_kind_of(WebDriver::Element)
-        end
-      end
-    end
-
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
     it "should switch to a window and back when given a block" do
       driver.navigate.to url_for("xhtmlTest.html")
 
@@ -80,7 +78,10 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
       wait.until { driver.title == "XHTML Test Page" }
     end
+  end
 
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
     it "should handle exceptions inside the block" do
       driver.navigate.to url_for("xhtmlTest.html")
 
@@ -93,7 +94,10 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
       expect(driver.title).to eq("XHTML Test Page")
     end
+  end
 
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
     it "should switch to a window without a block" do
       driver.navigate.to url_for("xhtmlTest.html")
 
@@ -102,8 +106,12 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
       driver.switch_to.window(new_window)
       expect(driver.title).to eq("We Arrive Here")
+      ensure_single_window
     end
+  end
 
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
     it "should use the original window if the block closes the popup" do
       driver.navigate.to url_for("xhtmlTest.html")
 
@@ -118,8 +126,12 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
       expect(driver.current_url).to include("xhtmlTest.html")
       expect(driver.title).to eq("XHTML Test Page")
     end
+  end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette,
+                                                                              :platform => [:macosx, :linux]} do
       it "should close current window when more than two windows exist" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -129,10 +141,15 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
         driver.switch_to.window(driver.window_handle) { driver.close }
         expect(driver.window_handles.size).to eq 2
+        ensure_single_window
       end
     end
+  end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette,
+                                                                              :platform => [:macosx, :linux]} do
       it "should close another window when more than two windows exist" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -144,10 +161,15 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
         driver.switch_to.window(window_to_close) { driver.close }
         expect(driver.window_handles.size).to eq 2
+        ensure_single_window
       end
     end
+  end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette,
+                                                                              :platform => [:macosx, :linux]} do
       it "should iterate over open windows when current window is not closed" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -161,10 +183,15 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
         driver.switch_to.window(matching_window)
         expect(driver.title).to eq("We Arrive Here")
+        ensure_single_window
       end
     end
+  end
 
-    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette, :platform => [:macosx, :linux]} do
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:driver => :marionette,
+                                                                              :platform => [:macosx, :linux]} do
       it "should iterate over open windows when current window is closed" do
         driver.navigate.to url_for("xhtmlTest.html")
         driver.find_element(:link, "Create a new anonymous window").click
@@ -180,9 +207,13 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
         driver.switch_to.window(matching_window)
         expect(driver.title).to eq("We Arrive Here")
+        ensure_single_window
       end
     end
+  end
 
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1241", {:driver => :remote,
+                                                                          :browser => :marionette} do
     it "should switch to a window and execute a block when current window is closed" do
       driver.navigate.to url_for("xhtmlTest.html")
       driver.find_element(:link, "Open new window").click
@@ -199,16 +230,20 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
 
       expect(driver.title).to eq("XHTML Test Page")
     end
+  end
 
-    it "should switch to default content" do
-      driver.navigate.to url_for("iframes.html")
+  it "should switch to default content" do
+    driver.navigate.to url_for("iframes.html")
 
-      driver.switch_to.frame 0
-      driver.switch_to.default_content
+    driver.switch_to.frame 0
+    driver.switch_to.default_content
 
-      driver.find_element(:id => "iframe_page_heading")
-    end
+    driver.find_element(:id => "iframe_page_heading")
+  end
 
+
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1242", {:driver => :remote,
+                                                                          :browser => :marionette} do
     not_compliant_on "http://github.com/detro/ghostdriver/issues/20", {:browser => :phantomjs} do
       not_compliant_on "http://code.google.com/p/selenium/issues/detail?id=3862", {:browser => :safari} do
         describe "alerts" do
@@ -222,7 +257,8 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
             expect(driver.title).to eq("Testing Alerts")
           end
 
-          not_compliant_on "https://code.google.com/p/chromedriver/issues/detail?id=26", {:browser => :chrome, :platform => :macosx} do
+          not_compliant_on "https://code.google.com/p/chromedriver/issues/detail?id=26", {:browser => :chrome,
+                                                                                          :platform => :macosx} do
             it "allows the user to dismiss an alert" do
               driver.navigate.to url_for("alerts.html")
               driver.find_element(:id => "alert").click
@@ -237,7 +273,8 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
           end
 
           # TODO - File Marionette Bug
-          not_compliant_on "Marionette Error: keysToSend.join is not a function", {:driver => :marionette, :platform => [:macosx, :linux]} do
+          not_compliant_on "Marionette Error: keysToSend.join is not a function", {:driver => :marionette,
+                                                                                   :platform => [:macosx, :linux]} do
             it "allows the user to set the value of a prompt" do
               driver.navigate.to url_for("alerts.html")
               driver.find_element(:id => "prompt").click
@@ -283,6 +320,7 @@ not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1150", {:browser
               wait_for_alert
 
               expect { driver.title }.to raise_error(Selenium::WebDriver::Error::UnhandledAlertError)
+              reset_driver!
             end
           end
         end

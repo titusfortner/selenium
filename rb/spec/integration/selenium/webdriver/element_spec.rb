@@ -20,17 +20,26 @@
 require_relative 'spec_helper'
 
 describe "Element" do
+  before do
+    compliant_on :browser => :safari do
+      sleep 0.5 # Some kind of race condition preventing initial navigation; only on safari
+    end
+  end
 
   it "should click" do
     driver.navigate.to url_for("formPage.html")
     driver.find_element(:id, "imageButton").click
   end
 
-  not_compliant_on "Known Javascript Error", {:driver => :marionette, :platform => [:macosx, :linux]} do
-    it "should submit" do
-      driver.navigate.to url_for("formPage.html")
-      wait(10).until { driver.find_elements(:id, "submitButton").size > 0 }
-      driver.find_element(:id, "submitButton").submit
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1237", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    not_compliant_on "Known Javascript Error", {:driver => :marionette,
+                                                :platform => [:macosx, :linux]} do
+      it "should submit" do
+        driver.navigate.to url_for("formPage.html")
+        wait_for_element(:id => "submitButton")
+        driver.find_element(:id, "submitButton").submit
+      end
     end
   end
 
@@ -49,8 +58,8 @@ describe "Element" do
 
   not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", {:browser => :safari} do
     not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", {:browser => :phantomjs} do
-      not_compliant_on "Unable to get attribute value on that input element", {:driver => :marionette, :platform => [:macosx, :linux]},
-                                                                              {:browser => :marionette, :platform => [:macosx, :linux]} do
+      not_compliant_on "Unable to get attribute value on that input element", {:browser => :marionette,
+                                                                               :platform => [:macosx, :linux]} do
         it "should handle file uploads" do
           driver.navigate.to url_for("formPage.html")
 
@@ -116,32 +125,41 @@ describe "Element" do
     expect(driver.find_element(:class, "header")).to be_displayed
   end
 
-  it "should get location" do
-    driver.navigate.to url_for("xhtmlTest.html")
-    loc = driver.find_element(:class, "header").location
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1238", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    it "should get location" do
+      driver.navigate.to url_for("xhtmlTest.html")
+      loc = driver.find_element(:class, "header").location
 
-    expect(loc.x).to be >= 1
-    expect(loc.y).to be >= 1
+      expect(loc.x).to be >= 1
+      expect(loc.y).to be >= 1
+    end
   end
 
-  it "should get location once scrolled into view" do
-    driver.navigate.to url_for("javascriptPage.html")
-    loc = driver.find_element(:id, 'keyUp').location_once_scrolled_into_view
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1238", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    it "should get location once scrolled into view" do
+      driver.navigate.to url_for("javascriptPage.html")
+      loc = driver.find_element(:id, 'keyUp').location_once_scrolled_into_view
 
-    expect(loc.x).to be >= 1
-    expect(loc.y).to be >= 0 # can be 0 if scrolled to the top
+      expect(loc.x).to be >= 1
+      expect(loc.y).to be >= 0 # can be 0 if scrolled to the top
+    end
   end
 
-  it "should get size" do
-    driver.navigate.to url_for("xhtmlTest.html")
-    size = driver.find_element(:class, "header").size
+  not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1238", {:driver => :remote,
+                                                                          :browser => :marionette} do
+    it "should get size" do
+      driver.navigate.to url_for("xhtmlTest.html")
+      size = driver.find_element(:class, "header").size
 
-    expect(size.width).to be > 0
-    expect(size.height).to be > 0
+      expect(size.width).to be > 0
+      expect(size.height).to be > 0
+    end
   end
 
-  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4136", {:browser => :safari} do
-    not_compliant_on "Interactions not yet supported", {:driver => :marionette}, {:browser => :marionette} do
+  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4136", :browser => :safari do
+    not_compliant_on "Interactions not yet supported", :browser => :marionette do
       it "should drag and drop" do
         driver.navigate.to url_for("dragAndDropTest.html")
 

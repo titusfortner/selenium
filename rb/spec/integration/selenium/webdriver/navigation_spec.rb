@@ -20,7 +20,6 @@
 require_relative 'spec_helper'
 
 describe "Navigation" do
-  let(:wait) { Selenium::WebDriver::Wait.new :timeout => 10 }
 
   not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=3771", {:browser => :safari} do
     it "should navigate back and forward" do

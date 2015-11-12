@@ -30,7 +30,7 @@ describe Selenium::WebDriver::Error do
   end
 
   compliant_on :browser => [:firefox, :marionette] do
-    not_compliant_on "No stacktrace variable returned", {:driver => :marionette} do
+    not_compliant_on "No stacktrace variable returned", :driver => :marionette do
       it "should show stack trace information" do
         driver.navigate.to url_for("xhtmlTest.html")
 

@@ -36,8 +36,6 @@ module Selenium
         def browser
           if driver == :remote
             (ENV['WD_REMOTE_BROWSER'] || :firefox).to_sym
-          elsif driver == :marionette
-            :firefox
           else
             driver
           end
@@ -50,6 +48,14 @@ module Selenium
         def reset_driver!
           quit_driver
           @driver_instance = new_driver_instance
+        end
+
+        def ensure_single_window
+          @driver_instance.window_handles[1..-1].each do |handle|
+            @driver_instance.switch_to.window(handle)
+            @driver_instance.close
+          end
+          @driver_instance.switch_to.window @driver_instance.window_handles.first
         end
 
         def quit_driver
@@ -145,11 +151,11 @@ module Selenium
         end
 
         def remote_capabilities
-          if ENV['WD_REMOTE_BROWSER'] == 'marionette'
+          if browser == :marionette
             caps = WebDriver::Remote::W3CCapabilities.firefox
             caps[:marionette] = true
           else
-            caps = WebDriver::Remote::Capabilities.send(ENV['WD_REMOTE_BROWSER'] || 'firefox')
+            caps = WebDriver::Remote::Capabilities.send(browser)
 
             caps.javascript_enabled = true
             caps.css_selectors_enabled = true

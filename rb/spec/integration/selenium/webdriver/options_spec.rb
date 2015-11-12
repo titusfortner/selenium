@@ -25,7 +25,7 @@ module Selenium
 
       #TODO - File Ghostdriver Bug
       not_compliant_on "No Driver Logs and Browser Logs are empty", {:browser => :phantomjs, :platform => [:macosx, :linux]} do
-        not_compliant_on "Logging not implemented in w3c", {:driver => :marionette}, {:browser => :marionette} do
+        not_compliant_on "Logging not implemented in w3c", :browser => :marionette do
           describe 'logs' do
 
             it 'can fetch available log types' do
@@ -55,7 +55,9 @@ module Selenium
             end
           end
         end
+      end
 
+      not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1223907", { :driver => :marionette } do
         describe "cookie management" do
           it "should get all" do
             driver.navigate.to url_for("xhtmlTest.html")
@@ -84,8 +86,9 @@ module Selenium
           end
 
           # TODO - File Marionette Bug
-          not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/392", {:browser => :safari, :platform => :macosx} do
-            not_compliant_on "InvalidArgumentError: Failed to convert expiry to Date", {:driver => :marionette}, {:browser => :marionette} do
+          not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/392", {:browser => :safari,
+                                                                                 :platform => :macosx} do
+            not_compliant_on "InvalidArgumentError: Failed to convert expiry to Date", :browser => :marionette do
               it "should use DateTime for expires" do
                 driver.navigate.to url_for("xhtmlTest.html")
 
