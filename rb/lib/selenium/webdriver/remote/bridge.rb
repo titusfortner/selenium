@@ -153,10 +153,6 @@ module Selenium
         # alerts
         #
 
-        def getAlert
-          execute :getAlert
-        end
-
         def acceptAlert
           command = :acceptAlert
           execute command

@@ -153,10 +153,6 @@ module Selenium
         # alerts
         #
 
-        def getAlert
-          execute :getAlert
-        end
-
         def acceptAlert
           execute :acceptAlert
         end
@@ -271,6 +267,10 @@ module Selenium
           execute :maximizeWindow
         end
 
+        def fullscreenWindow(handle = :current)
+          execute :fullscreenWindow
+        end
+
         def getWindowSize(handle = :current)
           data = execute :getWindowSize
 
@@ -380,7 +380,7 @@ module Selenium
         #
 
         def addCookie(cookie)
-          execute :addCookie, {}, cookie
+          execute :addCookie, {}, :cookie => cookie
         end
 
         def deleteCookie(name)
