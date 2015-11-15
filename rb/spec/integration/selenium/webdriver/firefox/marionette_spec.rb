@@ -51,7 +51,7 @@ module Selenium
             @driver.quit
           end
 
-          not_compliant_on :browser => :marionette do
+          not_compliant_on "This causes a Profile Error when run with either marionette or firefox", :browser => :marionette do
             it "Does not use wires by default" do
               unless ENV['MARIONETTE_PATH']
                 pending "Set ENV['MARIONETTE_PATH'] to test Marionette enabled Firefox installations"
@@ -64,9 +64,9 @@ module Selenium
             end
           end
 
-          not_compliant_on :browser => :marionette do
-            it_behaves_like "driver that can be started concurrently", :marionette
-          end
+         not_compliant_on "Marionette via Wires does not support multiple instances", :browser => :marionette do
+          it_behaves_like "driver that can be started concurrently", :marionette
+         end
         end
       end
 
