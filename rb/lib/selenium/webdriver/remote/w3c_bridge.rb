@@ -153,10 +153,6 @@ module Selenium
         # alerts
         #
 
-        def getAlert
-          execute :getAlert
-        end
-
         def acceptAlert
           execute :acceptAlert
         end
@@ -194,7 +190,9 @@ module Selenium
         end
 
         def getPageSource
-          execute :getPageSource
+          executeScript("var source = document.documentElement.outerHTML;" +
+                            "if (!source) { source = new XMLSerializer().serializeToString(document); }" +
+                            "return source;")
         end
 
         def getVisible
@@ -267,6 +265,10 @@ module Selenium
 
         def maximizeWindow(handle = :current)
           execute :maximizeWindow
+        end
+
+        def fullscreenWindow(handle = :current)
+          execute :fullscreenWindow
         end
 
         def getWindowSize(handle = :current)
@@ -378,7 +380,7 @@ module Selenium
         #
 
         def addCookie(cookie)
-          execute :addCookie, {}, cookie
+          execute :addCookie, {}, :cookie => cookie
         end
 
         def deleteCookie(name)
@@ -542,19 +544,18 @@ module Selenium
         end
 
         def getElementLocation(element)
-          data = execute :getElementLocation, :id => element
+          data = execute :getElementRect, :id => element
 
           Point.new data['x'], data['y']
         end
 
         def getElementLocationOnceScrolledIntoView(element)
-          data = execute :getElementLocationOnceScrolledIntoView, :id => element
-
-          Point.new data['x'], data['y']
+          sendKeysToElement(element, [''])
+          getElementLocation(element)
         end
 
         def getElementSize(element)
-          data = execute :getElementSize, :id => element
+          data = execute :getElementRect, :id => element
 
           Dimension.new data['width'], data['height']
         end
