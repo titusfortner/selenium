@@ -50,6 +50,14 @@ module Selenium
           @driver_instance = new_driver_instance
         end
 
+        def ensure_single_window
+          @driver_instance.window_handles[1..-1].each do |handle|
+            @driver_instance.switch_to.window(handle)
+            @driver_instance.close
+          end
+          @driver_instance.switch_to.window @driver_instance.window_handles.first
+        end
+
         def quit_driver
           if @driver_instance
             @driver_instance.quit

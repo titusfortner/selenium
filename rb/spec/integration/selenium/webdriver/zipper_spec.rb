@@ -65,7 +65,7 @@ module Selenium
         expect(File.read(File.join(unzipped, base_file_name))).to eq(file_content)
       end
 
-      not_compliant_on :platform => :windows do
+      not_compliant_on "Symlinks not applicable on Windows", :platform => :windows do
         it "follows symlinks when zipping" do
           filename = create_file
           File.symlink(filename, File.join(dir_to_zip, "link"))
@@ -79,7 +79,6 @@ module Selenium
           expect(File.read(File.join(unzipped, "link"))).to eq(file_content)
         end
       end
-
     end
   end
 end
