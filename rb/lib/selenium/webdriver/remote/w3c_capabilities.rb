@@ -92,7 +92,7 @@ module Selenium
             caps = new
             caps.browser_name = data.delete("browserName")
             caps.browser_version = data.delete("browserVersion")
-            caps.platform_name = data.delete("platformName").downcase.to_sym if data.has_key?('platform')
+            caps.platform_name = data.delete("platformName").downcase.to_sym if data.has_key?('platformName')
             caps.platform_version = data.delete("platformVersion")
             caps.accept_ssl_certs = data.delete("acceptSslCerts")
             caps.takes_screenshot = data.delete("takesScreenshot  ")
