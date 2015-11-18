@@ -126,15 +126,13 @@ module Selenium
         end
 
         def status
+          jwp = Selenium::WebDriver::Remote::Bridge::COMMANDS[:status]
+          self.class.command(:status, jwp.first, jwp.last)
           execute :status
         end
 
         def get(url)
           execute :get, {}, :url => url
-        end
-
-        def getCapabilities
-          W3CCapabilities.json_create execute(:getCapabilities)
         end
 
         def setImplicitWaitTimeout(milliseconds)
@@ -195,29 +193,14 @@ module Selenium
                             "return source;")
         end
 
-        def getVisible
-          execute :getVisible
-        end
-
-        def setVisible(bool)
-          execute :setVisible, {}, bool
-        end
-
         def switchToWindow(name)
           execute :switchToWindow, {}, :handle => name
         end
 
+        # W3C only supports index number and Element
         def switchToFrame(id)
-          locator  = case id
-                     when String
-                       find_element_by('id', id)
-                     when Hash
-                       find_element_by(id.keys.first.to_s, id.values.first)
-                     else
-                       id
-                     end
-
-          execute :switchToFrame, {}, :id => locator
+          id = find_element_by('id', id) if id.is_a? String
+          execute :switchToFrame, {}, :id => id
         end
 
         def switchToParentFrame
@@ -256,35 +239,40 @@ module Selenium
           execute :getWindowHandle
         end
 
-        # TODO - These Commands might require checking for being
-        # current window before performing
         def setWindowSize(width, height, handle = :current)
+          unless handle == :current
+            raise Error::WebDriverError, 'The W3C standard does not support setting window size of a window that isn\'t the current window; Switch to desired window before setting its size'
+          end
           execute :setWindowSize, {}, {:width  => width,
                                    :height => height}
         end
 
         def maximizeWindow(handle = :current)
+          unless handle == :current
+            raise Error::WebDriverError, 'The W3C standard does not support maximizing window size of a window that isn\'t the current window; Switch to desired window before maximizing its size'
+          end
           execute :maximizeWindow
         end
 
-        def fullscreenWindow(handle = :current)
+        def fullscreenWindow
           execute :fullscreenWindow
         end
 
         def getWindowSize(handle = :current)
+          unless handle == :current
+            raise Error::WebDriverError, 'The W3C standard does not support getting window size of a window that isn\'t the current window; Switch to desired window before getting its size'
+          end
           data = execute :getWindowSize
 
           Dimension.new data['width'], data['height']
         end
 
-        def setWindowPosition(x, y, handle = :current)
-          execute :setWindowPosition, :x => x, :y => y
+        def setWindowPosition(_x, _y, _handle = :current)
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support setting the Window Position'
         end
 
         def getWindowPosition(handle = :current)
-          data = execute :getWindowPosition
-
-          Point.new data['x'], data['y']
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support getting the Window Position'
         end
 
         def getScreenshot
@@ -296,69 +284,67 @@ module Selenium
         #
 
         def getLocalStorageItem(key)
-          execute :getLocalStorageItem, :key => key
+          executeScript("return localStorage.getItem('#{key}')")
         end
 
         def removeLocalStorageItem(key)
-          execute :removeLocalStorageItem, :key => key
+          executeScript("localStorage.removeItem('#{key}')")
         end
 
         def getLocalStorageKeys
-          execute :getLocalStorageKeys
+          executeScript("return Object.keys(localStorage)")
         end
 
         def setLocalStorageItem(key, value)
-          execute :setLocalStorageItem, {}, :key => key, :value => value
+          executeScript("localStorage.setItem('#{key}', '#{value}')")
         end
 
         def clearLocalStorage
-          execute :clearLocalStorage
+          executeScript("localStorage.clear()")
         end
 
         def getLocalStorageSize
-          execute :getLocalStorageSize
+          executeScript("return localStorage.length")
         end
 
         def getSessionStorageItem(key)
-          execute :getSessionStorageItem, :key => key
+          executeScript("return sessionStorage.getItem('#{key}')")
         end
 
         def removeSessionStorageItem(key)
-          execute :removeSessionStorageItem, :key => key
+          executeScript("sessionStorage.removeItem('#{key}')")
         end
 
         def getSessionStorageKeys
-          execute :getSessionStorageKeys
+          executeScript("return Object.keys(sessionStorage)")
         end
 
         def setSessionStorageItem(key, value)
-          execute :setSessionStorageItem, {}, :key => key, :value => value
+          executeScript("sessionStorage.setItem('#{key}', '#{value}')")
         end
 
         def clearSessionStorage
-          execute :clearSessionStorage
+          executeScript("sessionStorage.clear()")
         end
 
         def getSessionStorageSize
-          execute :getSessionStorageSize
+          executeScript("return sessionStorage.length")
         end
 
         def getLocation
-          obj = execute(:getLocation) || {} # android returns null
-          Location.new obj['latitude'], obj['longitude'], obj['altitude']
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support getting location'
         end
 
-        def setLocation(lat, lon, alt)
-          loc = {:latitude => lat, :longitude => lon, :altitude => alt}
-          execute :setLocation, {}, :location => loc
+        def setLocation(_lat, _lon, _alt)
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support setting location'
         end
 
         def getNetworkConnection
-          execute :getNetworkConnection
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support getting network connection'
         end
 
-        def setNetworkConnection(type)
-          execute :setNetworkConnection, {}, :parameters => {:type => type}
+        def setNetworkConnection(_type)
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support setting network connection'
         end
 
         #
@@ -409,33 +395,53 @@ module Selenium
         end
 
         def click
-          execute :click, {}, :button => 0
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_down,
+                                           :button => 0},
+                                          {:name => :pointer_up}]}]
         end
 
         def doubleClick
-          execute :doubleClick
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_down,
+                                            :button => 0},
+                                           {:name => :pointer_up},
+                                           {:name => :pointer_down,
+                                            :button => 0},
+                                           {:name => :pointer_up}]}]
         end
 
         def contextClick
-          execute :click, {}, :button => 2
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_down,
+                                            :button => 2},
+                                           {:name => :pointer_up}]}]
         end
 
         def mouseDown
-          execute :mouseDown
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_down,
+                                            :button => 0}]}]
         end
 
         def mouseUp
-          execute :mouseUp
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_up,
+                                            :button => 0}]}]
         end
 
         def mouseMoveTo(element, x = nil, y = nil)
-          params = { :element => element }
-
-          if x && y
-            params.merge! :xoffset => x, :yoffset => y
-          end
-
-          execute :mouseMoveTo, {}, params
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_move,
+                                            :element => element,
+                                            :x => x,
+                                            :y => y}]}]
         end
 
         def sendKeysToActiveElement(keys)
@@ -446,18 +452,9 @@ module Selenium
           execute :elementSendKeys, {:id => element}, {:value => keys.join('').split(//)}
         end
 
-        def upload(local_file)
-          unless File.file?(local_file)
-            raise Error::WebDriverError, "you may only upload files: #{local_file.inspect}"
-          end
-
-          execute :uploadFile, {}, :file => Zipper.zip_file(local_file)
-        end
-
         def clearElement(element)
           execute :elementClear, :id => element
         end
-
 
         def submitElement(element)
           executeScript("var e = arguments[0].ownerDocument.createEvent('Event');" +
@@ -466,61 +463,15 @@ module Selenium
         end
 
         def dragElement(element, right_by, down_by)
-          execute :dragElement, {:id => element}, :x => right_by, :y => down_by
-        end
-
-        def touchSingleTap(element)
-          execute :touchSingleTap, {}, :element => element
-        end
-
-        def touchDoubleTap(element)
-          execute :touchDoubleTap, {}, :element => element
-        end
-
-        def touchLongPress(element)
-          execute :touchLongPress, {}, :element => element
-        end
-
-        def touchDown(x, y)
-          execute :touchDown, {}, :x => x, :y => y
-        end
-
-        def touchUp(x, y)
-          execute :touchUp, {}, :x => x, :y => y
-        end
-
-        def touchMove(x, y)
-          execute :touchMove, {}, :x => x, :y => y
-        end
-
-        def touchScroll(element, x, y)
-          if element
-            execute :touchScroll, {}, :element => element,
-                                      :xoffset => x,
-                                      :yoffset => y
-          else
-            execute :touchScroll, {}, :xoffset => x, :yoffset => y
-          end
-        end
-
-        def touchFlick(xspeed, yspeed)
-          execute :touchFlick, {}, :xspeed => xspeed, :yspeed => yspeed
-        end
-
-        def touchElementFlick(element, right_by, down_by, speed)
-          execute :touchFlick, {}, :element => element,
-                                   :xoffset => right_by,
-                                   :yoffset => down_by,
-                                   :speed   => speed
-
-        end
-
-        def setScreenOrientation(orientation)
-          execute :setScreenOrientation, {}, :orientation => orientation
-        end
-
-        def getScreenOrientation
-          execute :getScreenOrientation
+          execute :actions, [{:source => :mouse,
+                              :id => '1',
+                              :actions => [{:name => :pointer_down,
+                                            :button => 0},
+                                           {:name => :pointer_move,
+                                            :element => element,
+                                            :x => right_by,
+                                            :y => down_by},
+                                           {:name => :pointer_up}]}]
         end
 
         #
@@ -569,14 +520,13 @@ module Selenium
         end
 
         def isElementDisplayed(element)
+          jwp = Selenium::WebDriver::Remote::Bridge::COMMANDS[:isElementDisplayed]
+          self.class.command(:isElementDisplayed, jwp.first, jwp.last)
           execute :isElementDisplayed, :id => element
         end
+
         def getElementValueOfCssProperty(element, prop)
           execute :getElementCssValue, :id => element, :property_name => prop
-        end
-
-        def elementEquals(element, other)
-          element.ref == other.ref
         end
 
         #

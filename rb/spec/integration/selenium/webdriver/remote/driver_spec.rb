@@ -29,11 +29,9 @@ module Selenium
             expect(driver.session_id).to be_kind_of(String)
           end
 
-          not_compliant_on "W3C does not support status end point", :browser => :marionette do
-            it "should expose remote status" do
-              expect(driver).to be_kind_of(DriverExtensions::HasRemoteStatus)
-              expect(driver.remote_status).to be_kind_of(Hash)
-            end
+          it "should expose remote status" do
+            expect(driver).to be_kind_of(DriverExtensions::HasRemoteStatus)
+            expect(driver.remote_status).to be_kind_of(Hash)
           end
         end
       end

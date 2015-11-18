@@ -48,8 +48,6 @@ module Selenium
           end
         end
 
-        alias_method :version, :browser_version
-
         #
         # Convenience methods for the common choices.
         #
@@ -64,6 +62,9 @@ module Selenium
           end
 
           def firefox(opts = {})
+            opts[:browser_version] = opts.delete :version
+            opts[:platform_name] = opts.delete :platform
+
             new({
               :browser_name => "firefox"
                 }.merge(opts))
