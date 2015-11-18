@@ -154,13 +154,11 @@ module Selenium
         #
 
         def acceptAlert
-          command = :acceptAlert
-          execute command
+          execute :acceptAlert
         end
 
         def dismissAlert
-          command = :dismissAlert
-          execute command
+          execute :dismissAlert
         end
 
         def setAlertValue(keys)
@@ -169,8 +167,7 @@ module Selenium
         end
 
         def getAlertText
-          command = :getAlertText
-          execute command
+          execute :getAlertText
         end
 
         #
@@ -197,20 +194,9 @@ module Selenium
           execute :getPageSource
         end
 
-        def getVisible
-          execute :getVisible
-        end
-
-        def setVisible(bool)
-          execute :setVisible, {}, bool
-        end
-
         def switchToWindow(name)
-          if capabilities.browser_name == 'MicrosoftEdge'
-            execute :switchToWindow, {}, :handle => name
-          else
-            execute :switchToWindow, {}, :name => name
-          end
+          key = capabilities.browser_name == 'MicrosoftEdge' ? :handle : :name
+          execute :switchToWindow, {}, key => name
         end
 
         def switchToFrame(id)
@@ -454,7 +440,6 @@ module Selenium
           execute :clearElement, :id => element
         end
 
-
         def submitElement(element)
           execute :submitElement, :id => element
         end
@@ -587,12 +572,9 @@ module Selenium
         def isElementDisplayed(element)
           execute :isElementDisplayed, :id => element
         end
+
         def getElementValueOfCssProperty(element, prop)
           execute :getElementValueOfCssProperty, :id => element, :property_name => prop
-        end
-
-        def elementEquals(element, other)
-          element.ref == other.ref
         end
 
         #
