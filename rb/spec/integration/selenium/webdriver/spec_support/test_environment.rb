@@ -94,7 +94,7 @@ module Selenium
 
         def remote_server_jar
           if File.file?('selenium-standalone.jar')
-            @remote_server_jar ||= 'selenium-standalone.jar'
+            @remote_server_jar ||= Pathname.new('selenium-standalone.jar').expand_path(__FILE__)
           else
             @remote_server_jar ||= root.join("build/java/server/test/org/openqa/selenium/server-with-tests-standalone.jar").to_s
           end
