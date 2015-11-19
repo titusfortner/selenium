@@ -1,0 +1,53 @@
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+
+require 'bundler'
+require 'selenium-webdriver'
+require 'rspec/core/rake_task'
+
+task default: [:unit, :all_tests]
+
+RSpec::Core::RakeTask.new(:integration) do |spec|
+  spec.ruby_opts = "-I lib:spec"
+  spec.rspec_opts = %w[--color --require fuubar --format Fuubar]
+  spec.pattern = 'spec/integration/selenium/webdriver/**/*_spec.rb'
+end
+
+RSpec::Core::RakeTask.new(:unit) do |spec|
+  spec.ruby_opts = "-I lib:spec"
+  spec.rspec_opts = %w[--color --require fuubar --format Fuubar]
+  spec.pattern = 'spec/unit/selenium/webdriver/**/*_spec.rb'
+end
+
+
+desc 'Run specs in all browsers'
+task all_tests: [:chrome,
+                 :firefox,
+                 :phantomjs,
+                 :remote_chrome,
+                 :remote_firefox,
+                 :remote_phantomjs,
+                 (:marionette if ENV['MARIONETTE_PATH']),
+                 (:remote_marionette if ENV['MARIONETTE_PATH']),
+                 (:safari if Selenium::WebDriver::Platform.os == :macosx),
+                 (:remote_safari if Selenium::WebDriver::Platform.os == :macosx),
+                 (:ie if Selenium::WebDriver::Platform.os == :windows),
+                 (:remote_ie if Selenium::WebDriver::Platform.os == :windows),
+                 (:edge if Selenium::WebDriver::Platform.os == :windows),
+                 (:remote_edge if Selenium::WebDriver::Platform.os == :windows)].compact
+
+%w(firefox marionette chrome safari phantomjs ie edge).each do |browser|
+  desc "Run specs in #{browser}"
+  task browser do
+    ENV['WD_SPEC_DRIVER'] = browser
+    Rake::Task['integration'].execute
+  end
+end
+
+%w(remote_firefox remote_chrome remote_safari remote_marionette remote_phantomjs remote_ie remote_edge).each do |browser|
+  desc "Run specs in #{browser.tr('_', ' ')}"
+  task browser do
+    ENV['WD_SPEC_DRIVER'] = 'remote'
+    ENV['WD_REMOTE_BROWSER'] = browser.split('_').last
+    Rake::Task['integration'].execute
+  end
+end
