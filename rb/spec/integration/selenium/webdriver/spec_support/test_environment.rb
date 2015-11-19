@@ -17,6 +17,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
+ENV['MARIONETTE_PATH']="/opt/developer/firefox-bin"
+
 module Selenium
   module WebDriver
     module SpecSupport
@@ -91,7 +93,11 @@ module Selenium
         end
 
         def remote_server_jar
-          @remote_server_jar ||= root.join("build/java/server/test/org/openqa/selenium/server-with-tests-standalone.jar").to_s
+          if File.file?('selenium-standalone.jar')
+            @remote_server_jar ||= 'selenium-standalone.jar'
+          else
+            @remote_server_jar ||= root.join("build/java/server/test/org/openqa/selenium/server-with-tests-standalone.jar").to_s
+          end
         end
 
         def quit
