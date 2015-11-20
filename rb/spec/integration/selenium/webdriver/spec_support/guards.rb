@@ -75,7 +75,8 @@ module Selenium
               :browser        => GlobalTestEnv.browser,
               :driver         => GlobalTestEnv.driver,
               :platform       => Platform.os,
-              :native         => GlobalTestEnv.native_events?
+              :native         => GlobalTestEnv.native_events?,
+              :window_manager => !Selenium::WebDriver::Platform.linux? || !!ENV['DESKTOP_SESSION']
             }
           end
 

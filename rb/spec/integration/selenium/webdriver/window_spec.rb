@@ -80,17 +80,19 @@ module Selenium
         end
       end
 
-      it "can maximize the current window" do
-        window.size = old_size = Dimension.new(400, 400)
-        wait.until { window.size == old_size }
+      compliant_on :window_manager => true do
+        it "can maximize the current window" do
+          window.size = old_size = Dimension.new(400, 400)
+          wait.until { window.size == old_size }
 
-        window.maximize
+          window.maximize
 
-        wait.until { window.size != old_size }
+          wait.until { window.size != old_size }
 
-        new_size = window.size
-        expect(new_size.width).to be > old_size.width
-        expect(new_size.height).to be > old_size.height
+          new_size = window.size
+          expect(new_size.width).to be > old_size.width
+          expect(new_size.height).to be > old_size.height
+        end
       end
     end
   end
