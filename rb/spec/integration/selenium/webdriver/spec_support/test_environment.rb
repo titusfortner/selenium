@@ -157,8 +157,7 @@ module Selenium
 
         def remote_capabilities
           if browser == :marionette
-            caps = WebDriver::Remote::W3CCapabilities.firefox
-            caps[:marionette] = true
+            caps = WebDriver::Remote::Capabilities.firefox(:marionette => true)
           else
             caps = WebDriver::Remote::Capabilities.send(browser)
 
