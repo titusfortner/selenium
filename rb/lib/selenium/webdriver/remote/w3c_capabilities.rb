@@ -48,6 +48,9 @@ module Selenium
           end
         end
 
+        alias_method :version, :browser_version
+        alias_method :platform, :platform_name
+
         #
         # Convenience methods for the common choices.
         #
