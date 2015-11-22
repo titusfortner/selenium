@@ -293,7 +293,14 @@ describe "Selenium::WebDriver::TargetLocator" do
             wait_for_alert
 
             expect { driver.title }.to raise_error(Selenium::WebDriver::Error::UnhandledAlertError)
-            reset_driver!
+
+            not_compliant_on "Firefox closes alert", :browser => :firefox do
+              driver.switch_to.alert.accept
+            end
+
+            compliant_on :browser => :firefox do
+              reset_driver!
+            end
           end
         end
       end
