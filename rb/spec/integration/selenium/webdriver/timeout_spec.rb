@@ -63,14 +63,17 @@ describe "Timeouts" do
       expect(driver.find_elements(:class_name => "redbox")).to be_empty
     end
 
-    it "should return after first attempt to find many after disabling implicit waits" do
-      add = driver.find_element(:id => "adder")
+    not_compliant_on "Takes too long to click", :platform => :windows,
+                                                :browser => :marionette do
+      it "should return after first attempt to find many after disabling implicit waits" do
+        add = driver.find_element(:id => "adder")
 
-      driver.manage.timeouts.implicit_wait = 3
-      driver.manage.timeouts.implicit_wait = 0
-      add.click
+        driver.manage.timeouts.implicit_wait = 3
+        driver.manage.timeouts.implicit_wait = 0
+        add.click
 
-      expect(driver.find_elements(:class_name => "redbox")).to be_empty
+        expect(driver.find_elements(:class_name => "redbox")).to be_empty
+      end
     end
   end
 

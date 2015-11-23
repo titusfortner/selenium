@@ -57,8 +57,7 @@ module Selenium
         end
       end
 
-      not_compliant_on "http://github.com/detro/ghostdriver/issues/466", { :browser => :phantomjs,
-                                                                           :platform => [:macosx, :linux] } do
+      not_compliant_on "http://github.com/detro/ghostdriver/issues/466", :browser => :phantomjs do
         not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1148", {:browser => :safari,
                                                                                 :platform => :macosx} do
           not_compliant_on "Window Position is not currently in w3c spec", :browser => :marionette do

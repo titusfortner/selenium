@@ -268,15 +268,15 @@ describe "Driver" do
     end
 
     not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:driver => :remote,
-                                                                            :browser => :phantomjs,
-                                                                            :platform => [:macosx, :linux]}  do
-      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", {:browser => :marionette,
-                                                                              :platform => [:macosx, :linux]} do
-        it "times out if the callback is not invoked" do
-          expect {
-            # Script is expected to be async and explicitly callback, so this should timeout.
-            driver.execute_async_script "return 1 + 2;"
-          }.to raise_error(Selenium::WebDriver::Error::ScriptTimeoutError)
+                                                                            :browser => :phantomjs}  do
+      not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1149", :browser => :marionette do
+        not_compliant_on "https://connect.microsoft.com/IE/feedback/details/1849991/", :browser => :edge do
+          it "times out if the callback is not invoked" do
+            expect {
+              # Script is expected to be async and explicitly callback, so this should timeout.
+              driver.execute_async_script "return 1 + 2;"
+            }.to raise_error(Selenium::WebDriver::Error::ScriptTimeoutError)
+          end
         end
       end
     end

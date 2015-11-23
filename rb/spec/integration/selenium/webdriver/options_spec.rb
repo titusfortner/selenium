@@ -23,43 +23,42 @@ module Selenium
   module WebDriver
     describe Options do
 
-      not_compliant_on "Logging not implemented in w3c", :browser => :marionette do
-        describe 'logs' do
-          compliant_on :driver => :remote do
-            not_compliant_on "Phantomjs includes har not driver", {:browser => :phantomjs,
-                                                                   :platform => [:macosx, :linux]} do
-              it 'can fetch available log types' do
-                expect(driver.manage.logs.available_types).to include(:browser, :driver, :server, :client)
+      not_compliant_on "Logging not implemented in w3c", :browser => [:marionette, :edge] do
+        not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/468#issuecomment-94301391", :browser => :ie do
+          describe 'logs' do
+            compliant_on :driver => :remote do
+              not_compliant_on "Phantomjs includes har not driver", :browser => :phantomjs do
+                it 'can fetch available log types' do
+                  expect(driver.manage.logs.available_types).to include(:browser, :driver, :server, :client)
+                end
               end
             end
-          end
 
-          not_compliant_on "Phantomjs includes har not driver", {:browser => :phantomjs,
-                                                                 :platform => [:macosx, :linux]} do
-            it 'can fetch available log types' do
-              expect(driver.manage.logs.available_types).to include(:browser, :driver)
+            not_compliant_on "Phantomjs includes har not driver", :browser => :phantomjs do
+              it 'can fetch available log types' do
+                expect(driver.manage.logs.available_types).to include(:browser, :driver)
+              end
             end
-          end
 
-          # All other browsers show empty
-          compliant_on :browser => :firefox do
-            it 'can get the browser log' do
-              driver.navigate.to url_for("simpleTest.html")
+            # All other browsers show empty
+            compliant_on :browser => :firefox do
+              it 'can get the browser log' do
+                driver.navigate.to url_for("simpleTest.html")
 
-              entries = driver.manage.logs.get(:browser)
-              expect(entries).not_to be_empty
-              expect(entries.first).to be_kind_of(LogEntry)
+                entries = driver.manage.logs.get(:browser)
+                expect(entries).not_to be_empty
+                expect(entries.first).to be_kind_of(LogEntry)
+              end
             end
-          end
 
-          not_compliant_on "Phantomjs includes har not driver", {:browser => :phantomjs,
-                                                                 :platform => [:macosx, :linux]} do
-            it 'can get the driver log' do
-              driver.navigate.to url_for("simpleTest.html")
+            not_compliant_on "Phantomjs includes har not driver", :browser => :phantomjs do
+              it 'can get the driver log' do
+                driver.navigate.to url_for("simpleTest.html")
 
-              entries = driver.manage.logs.get(:driver)
-              expect(entries).not_to be_empty
-              expect(entries.first).to be_kind_of(LogEntry)
+                entries = driver.manage.logs.get(:driver)
+                expect(entries).not_to be_empty
+                expect(entries.first).to be_kind_of(LogEntry)
+              end
             end
           end
         end

@@ -119,75 +119,80 @@ describe "Selenium::WebDriver::TargetLocator" do
     expect(driver.title).to eq("XHTML Test Page")
   end
 
-  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:browser => :marionette,
-                                                                            :platform => [:macosx, :linux]} do
-    it "should close current window when more than two windows exist" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      driver.find_element(:link, "Create a new anonymous window").click
-      wait.until { driver.window_handles.size == 2 }
-      driver.find_element(:link, "Open new window").click
-      wait.until { driver.window_handles.size == 3 }
+  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", :browser => :marionette do
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1168", :browser => :ie do
+      it "should close current window when more than two windows exist" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        driver.find_element(:link, "Create a new anonymous window").click
+        wait.until { driver.window_handles.size == 2 }
+        driver.find_element(:link, "Open new window").click
+        wait.until { driver.window_handles.size == 3 }
 
-      driver.switch_to.window(driver.window_handle) { driver.close }
-      expect(driver.window_handles.size).to eq 2
-      ensure_single_window
-    end
-  end
-
-  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:browser => :marionette,
-                                                                            :platform => [:macosx, :linux]} do
-    it "should close another window when more than two windows exist" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      driver.find_element(:link, "Create a new anonymous window").click
-      wait.until { driver.window_handles.size == 2 }
-      driver.find_element(:link, "Open new window").click
-      wait.until { driver.window_handles.size == 3 }
-
-      window_to_close = driver.window_handles.last
-
-      driver.switch_to.window(window_to_close) { driver.close }
-      expect(driver.window_handles.size).to eq 2
-      ensure_single_window
-    end
-  end
-
-  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:browser => :marionette,
-                                                                            :platform => [:macosx, :linux]} do
-    it "should iterate over open windows when current window is not closed" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      driver.find_element(:link, "Create a new anonymous window").click
-      wait.until { driver.window_handles.size == 2 }
-      driver.find_element(:link, "Open new window").click
-      wait.until { driver.window_handles.size == 3 }
-
-      matching_window = driver.window_handles.find do |wh|
-        driver.switch_to.window(wh) { driver.title == "We Arrive Here" }
+        driver.switch_to.window(driver.window_handle) { driver.close }
+        expect(driver.window_handles.size).to eq 2
+        ensure_single_window
       end
-
-      driver.switch_to.window(matching_window)
-      expect(driver.title).to eq("We Arrive Here")
-      ensure_single_window
     end
   end
 
-  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", {:browser => :marionette,
-                                                                            :platform => [:macosx, :linux]} do
-    it "should iterate over open windows when current window is closed" do
-      driver.navigate.to url_for("xhtmlTest.html")
-      driver.find_element(:link, "Create a new anonymous window").click
-      wait.until { driver.window_handles.size == 2 }
-      driver.find_element(:link, "Open new window").click
-      wait.until { driver.window_handles.size == 3 }
+  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", :browser => :marionette do
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1168", :browser => :ie do
 
-      driver.close
+      it "should close another window when more than two windows exist" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        driver.find_element(:link, "Create a new anonymous window").click
+        wait.until { driver.window_handles.size == 2 }
+        driver.find_element(:link, "Open new window").click
+        wait.until { driver.window_handles.size == 3 }
 
-      matching_window = driver.window_handles.find do |wh|
-        driver.switch_to.window(wh) { driver.title == "We Arrive Here" }
+        window_to_close = driver.window_handles.last
+
+        driver.switch_to.window(window_to_close) { driver.close }
+        expect(driver.window_handles.size).to eq 2
+        ensure_single_window
       end
+    end
+  end
 
-      driver.switch_to.window(matching_window)
-      expect(driver.title).to eq("We Arrive Here")
-      ensure_single_window
+  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", :browser => :marionette do
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1168", :browser => :ie do
+      it "should iterate over open windows when current window is not closed" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        driver.find_element(:link, "Create a new anonymous window").click
+        wait.until { driver.window_handles.size == 2 }
+        driver.find_element(:link, "Open new window").click
+        wait.until { driver.window_handles.size == 3 }
+
+        matching_window = driver.window_handles.find do |wh|
+          driver.switch_to.window(wh) { driver.title == "We Arrive Here" }
+        end
+
+        driver.switch_to.window(matching_window)
+        expect(driver.title).to eq("We Arrive Here")
+        ensure_single_window
+      end
+    end
+  end
+
+  not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1128656", :browser => :marionette do
+    not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/1168", :browser => :ie do
+      it "should iterate over open windows when current window is closed" do
+        driver.navigate.to url_for("xhtmlTest.html")
+        driver.find_element(:link, "Create a new anonymous window").click
+        wait.until { driver.window_handles.size == 2 }
+        driver.find_element(:link, "Open new window").click
+        wait.until { driver.window_handles.size == 3 }
+
+        driver.close
+
+        matching_window = driver.window_handles.find do |wh|
+          driver.switch_to.window(wh) { driver.title == "We Arrive Here" }
+        end
+
+        driver.switch_to.window(matching_window)
+        expect(driver.title).to eq("We Arrive Here")
+        ensure_single_window
+      end
     end
   end
 
@@ -246,8 +251,7 @@ describe "Selenium::WebDriver::TargetLocator" do
         end
 
         # TODO - File Marionette Bug
-        not_compliant_on "Marionette Error: keysToSend.join is not a function", {:browser => :marionette,
-                                                                                 :platform => [:macosx, :linux]} do
+        not_compliant_on "Marionette Error: keysToSend.join is not a function", :browser => :marionette do
           it "allows the user to set the value of a prompt" do
             driver.navigate.to url_for("alerts.html")
             driver.find_element(:id => "prompt").click
@@ -286,7 +290,7 @@ describe "Selenium::WebDriver::TargetLocator" do
           expect { driver.switch_to.alert }.to raise_error(Selenium::WebDriver::Error::NoSuchAlertError, /alert|modal/i)
         end
 
-        not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1206126", {:browser => :marionette} do
+        not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1206126", :browser => :marionette do
           it "raises an UnhandledAlertError if an alert has not been dealt with" do
             driver.navigate.to url_for("alerts.html")
             driver.find_element(:id => "alert").click
@@ -294,7 +298,7 @@ describe "Selenium::WebDriver::TargetLocator" do
 
             expect { driver.title }.to raise_error(Selenium::WebDriver::Error::UnhandledAlertError)
 
-            not_compliant_on "Firefox closes alert", :browser => :firefox do
+            not_compliant_on "Exception closes alert", :browser => [:firefox, :ie] do
               driver.switch_to.alert.accept
             end
 

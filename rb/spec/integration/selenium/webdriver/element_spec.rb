@@ -40,8 +40,7 @@ describe "Element" do
     end
   end
 
-  not_compliant_on "Known Javascript Error", {:browser => :marionette,
-                                              :platform => [:macosx, :linux]} do
+  not_compliant_on "Known Javascript Error", :browser => :marionette do
     it "should submit" do
       driver.navigate.to url_for("formPage.html")
       wait_for_element(:id => "submitButton")
@@ -62,10 +61,9 @@ describe "Element" do
     expect(key_reporter.attribute('value')).to eq("Test")
   end
 
-  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", {:browser => :safari} do
-    not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", {:browser => :phantomjs} do
-      not_compliant_on "Unable to get attribute value on that input element", {:browser => :marionette,
-                                                                               :platform => [:macosx, :linux]} do
+  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
+    not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs do
+      not_compliant_on "Unable to get attribute value on that input element", :browser => :marionette do
         it "should handle file uploads" do
           driver.navigate.to url_for("formPage.html")
 
