@@ -22,7 +22,15 @@ module Selenium
     module Edge
 
       # @api private
-      class Bridge < Remote::Bridge
+      class Bridge < Remote::W3CBridge
+
+        # These are commands Edge is still using from JSON Wire Protocol
+        %i(executeScript executeAsyncScript submitElement doubleClick mouseDown mouseUp mouseMoveTo
+           click sendKeysToActiveElement getWindowHandles getCurrentWindowHandle getWindowSize
+           setWindowSize getWindowPosition setWindowPosition maximizeWindow).each do |cmd|
+          jwp = Selenium::WebDriver::Remote::Bridge::COMMANDS[cmd]
+          self.command(cmd, jwp.first, jwp.last)
+        end
 
         def initialize(opts = {})
           http_client = opts.delete(:http_client)
@@ -73,10 +81,89 @@ module Selenium
           @service.stop if @service
         end
 
+        def executeScript(script, *args)
+          result = execute :executeScript, {}, :script => script, :args => args
+          unwrap_script_result result
+        end
+
+        def executeAsyncScript(script, *args)
+          result = execute :executeAsyncScript, {}, :script => script, :args => args
+          unwrap_script_result result
+        end
+
+        def submitElement(element)
+          execute :submitElement, :id => element
+        end
+
+        def doubleClick
+          execute :doubleClick
+        end
+
+        def click
+          execute :click, {}, :button => 0
+        end
+
+        def contextClick
+          execute :click, {}, :button => 2
+        end
+
+        def mouseDown
+          execute :mouseDown
+        end
+
+        def mouseUp
+          execute :mouseUp
+        end
+
+        def mouseMoveTo(element, x = nil, y = nil)
+          params = { :element => element }
+
+          if x && y
+            params.merge! :xoffset => x, :yoffset => y
+          end
+
+          execute :mouseMoveTo, {}, params
+        end
+
+        def sendKeysToActiveElement(key)
+          execute :sendKeysToActiveElement, {}, :value => key
+        end
+
+        def getCurrentWindowHandle
+          execute :getCurrentWindowHandle
+        end
+
+        def getWindowSize(handle = :current)
+          data = execute :getWindowSize, :window_handle => handle
+
+          Dimension.new data['width'], data['height']
+        end
+
+        def setWindowSize(width, height, handle = :current)
+          execute :setWindowSize, {:window_handle => handle},
+                  :width  => width,
+                  :height => height
+        end
+
+        def getWindowPosition(handle = :current)
+          data = execute :getWindowPosition, :window_handle => handle
+
+          Point.new data['x'], data['y']
+        end
+
+        def setWindowPosition(x, y, handle = :current)
+          execute :setWindowPosition, {:window_handle => handle},
+                  :x => x, :y => y
+        end
+
+        def maximizeWindow(handle = :current)
+          execute :maximizeWindow, :window_handle => handle
+        end
+
         private
 
         def create_capabilities(opts)
-          caps               = opts.delete(:desired_capabilities) { Remote::Capabilities.edge }
+          caps               = opts.delete(:desired_capabilities) { Remote::W3CCapabilities.edge }
           page_load_strategy = opts.delete(:page_load_strategy) || "normal"
 
           unless opts.empty?
