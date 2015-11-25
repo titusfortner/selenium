@@ -77,19 +77,23 @@ module Selenium
             expect(cookies.first[:value]).to eq("bar")
           end
 
-          it "should delete one" do
-            driver.navigate.to url_for("xhtmlTest.html")
-            driver.manage.add_cookie :name => "foo", :value => "bar"
+          not_compliant_on "https://connect.microsoft.com/IE/Feedback/Details/1864122", :browser => :edge do
+            it "should delete one" do
+              driver.navigate.to url_for("xhtmlTest.html")
+              driver.manage.add_cookie :name => "foo", :value => "bar"
 
-            driver.manage.delete_cookie("foo")
+              driver.manage.delete_cookie("foo")
+            end
           end
 
-          it "should delete all" do
-            driver.navigate.to url_for("xhtmlTest.html")
+          not_compliant_on "https://connect.microsoft.com/IE/Feedback/Details/1864122", :browser => :edge do
+            it "should delete all" do
+              driver.navigate.to url_for("xhtmlTest.html")
 
-            driver.manage.add_cookie :name => "foo", :value => "bar"
-            driver.manage.delete_all_cookies
-            expect(driver.manage.all_cookies).to be_empty
+              driver.manage.add_cookie :name => "foo", :value => "bar"
+              driver.manage.delete_all_cookies
+              expect(driver.manage.all_cookies).to be_empty
+            end
           end
 
           # TODO - File Marionette Bug

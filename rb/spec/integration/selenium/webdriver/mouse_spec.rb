@@ -48,15 +48,17 @@ module Selenium
             expect(text).to eq("Dropped!")
           end
 
-          it "double clicks an element" do
-            driver.navigate.to url_for("javascriptPage.html")
-            element = driver.find_element(:id, 'doubleClickField')
+          not_compliant_on "https://connect.microsoft.com/IE/Feedback/Details/1850023", :browser => :edge do
+            it "double clicks an element" do
+              driver.navigate.to url_for("javascriptPage.html")
+              element = driver.find_element(:id, 'doubleClickField')
 
-            driver.mouse.double_click element
+              driver.mouse.double_click element
 
-            wait(5).until {
-              element.attribute(:value) == 'DoubleClicked'
-            }
+              wait(5).until {
+                element.attribute(:value) == 'DoubleClicked'
+              }
+            end
           end
 
           not_compliant_on "http://github.com/detro/ghostdriver/issues/125", :browser => :phantomjs do

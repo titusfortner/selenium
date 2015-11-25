@@ -50,7 +50,7 @@ RSpec.configure do |c|
   end
 
   c.after(:each) do
-    @exception ||= !example.exception.nil?
+    @exception ||= !RSpec.current_example.exception.nil?
   end
 
   c.after(:suite) do

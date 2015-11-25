@@ -32,18 +32,20 @@ module Selenium
           driver.file_detector = nil
         end
 
-        not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs  do
-          not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
-            not_compliant_on "W3C does not have an upload endpoint", :browser => :marionette do
-              it "uses the file detector" do
-                driver.navigate.to url_for("upload.html")
+        not_compliant_on "File Edge Bug", :browser => :edge do
+          not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs  do
+            not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
+              not_compliant_on "W3C does not have an upload endpoint", :browser => :marionette do
+                it "uses the file detector" do
+                  driver.navigate.to url_for("upload.html")
 
-                driver.find_element(:id => "upload").send_keys("random string")
-                driver.find_element(:id => "go").submit
+                  driver.find_element(:id => "upload").send_keys("random string")
+                  driver.find_element(:id => "go").submit
 
-                driver.switch_to.frame("upload_target")
-                body = driver.find_element(:xpath => "//body")
-                expect(body.text).to include("uses the set file detector")
+                  driver.switch_to.frame("upload_target")
+                  body = driver.find_element(:xpath => "//body")
+                  expect(body.text).to include("uses the set file detector")
+                end
               end
             end
           end

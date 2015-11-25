@@ -131,6 +131,8 @@ module Selenium
           instance = case driver
                      when :remote
                        create_remote_driver
+                     when :edge
+                       create_edge_driver
                      when :firefox
                        create_firefox_driver
                      when :marionette
@@ -209,6 +211,11 @@ module Selenium
         def create_marionette_driver
           caps = WebDriver::Remote::W3CCapabilities.firefox
           WebDriver.for :firefox, :desired_capabilities => caps
+        end
+
+        def create_edge_driver
+          caps = WebDriver::Remote::W3CCapabilities.edge
+          WebDriver.for :edge, :desired_capabilities => caps
         end
 
         def create_chrome_driver

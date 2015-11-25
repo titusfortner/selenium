@@ -50,6 +50,7 @@ describe "Element" do
 
   it "should send string keys" do
     driver.navigate.to url_for("formPage.html")
+    wait_for_element(:id => "working")
     driver.find_element(:id, "working").send_keys("foo", "bar")
   end
 
@@ -61,22 +62,24 @@ describe "Element" do
     expect(key_reporter.attribute('value')).to eq("Test")
   end
 
-  not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
-    not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs do
-      not_compliant_on "Unable to get attribute value on that input element", :browser => :marionette do
-        it "should handle file uploads" do
-          driver.navigate.to url_for("formPage.html")
+  not_compliant_on "File Edge Bug", :browser => :edge do
+    not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
+      not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs do
+        not_compliant_on "Unable to get attribute value on that input element", :browser => :marionette do
+          it "should handle file uploads" do
+            driver.navigate.to url_for("formPage.html")
 
-          element = driver.find_element(:id, 'upload')
-          expect(element.attribute('value')).to be_empty
+            element = driver.find_element(:id, 'upload')
+            expect(element.attribute('value')).to be_empty
 
-          file = Tempfile.new('file-upload')
-          path = file.path
-          path.gsub!("/", "\\") if WebDriver::Platform.windows?
+            file = Tempfile.new('file-upload')
+            path = file.path
+            path.gsub!("/", "\\") if WebDriver::Platform.windows?
 
-          element.send_keys path
+            element.send_keys path
 
-          expect(element.attribute('value')).to include(File.basename(path))
+            expect(element.attribute('value')).to include(File.basename(path))
+          end
         end
       end
     end
