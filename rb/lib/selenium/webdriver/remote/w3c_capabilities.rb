@@ -76,14 +76,7 @@ module Selenium
           alias_method :ff, :firefox
 
           def w3c?(opts = {})
-            intended = opts[:desired_capabilities].is_a?(W3CCapabilities) || !!opts.delete(:marionette)
-            if intended && Firefox::Binary.version < 43
-              raise ArgumentError, "Firefox Version #{Firefox::Binary.version} does not support Marionette; Set Selenium::WebDriver::Firefox::Binary.path to point to a supported binary"
-            elsif intended
-              true
-            else
-              false
-            end
+            opts[:desired_capabilities].is_a?(W3CCapabilities) || !!opts.delete(:marionette)
           end
 
           #
