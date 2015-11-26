@@ -23,68 +23,70 @@ module Selenium
   module WebDriver
 
     describe Firefox do
-      compliant_on :browser => :marionette do
-        context "when designated firefox binary includes Marionette" do
-          before(:each) do
-            Selenium::WebDriver::Firefox::Binary.path = ENV['MARIONETTE_PATH']
+      context "when designated firefox binary includes Marionette" do
+        before(:each) do
+          unless ENV['MARIONETTE_PATH']
+            pending "Set ENV['MARIONETTE_PATH'] to test Marionette enabled Firefox installations"
           end
+        end
 
-          it "Uses Wires when initialized with W3C desired_capabilities" do
-            caps = Selenium::WebDriver::Remote::W3CCapabilities.firefox
+        compliant_on :browser => :marionette do
+          it "Uses Wires when setting mariontte option in capabilities" do
+            caps = Selenium::WebDriver::Remote::Capabilities.firefox(:marionette => true, :firefox_binary => ENV['MARIONETTE_PATH'])
             expect do
               @driver = Selenium::WebDriver.for :firefox, :desired_capabilities => caps
             end.to_not raise_exception
             @driver.quit
           end
+        end
 
-          it "Uses Wires when initialized with non W3C desired_capabilities using marionette option" do
-            caps = Selenium::WebDriver::Remote::Capabilities.firefox(:marionette => true)
-            expect do
-              @driver = Selenium::WebDriver.for :firefox, :desired_capabilities => caps
-            end.to_not raise_exception
-            @driver.quit
-          end
-
-          it "Uses Wires when initialized with marionette option" do
-            @driver = Selenium::WebDriver.for :firefox, {marionette: true}
+        compliant_on :browser => :marionette do
+          it "Uses Wires when setting marionette option in driver initialization" do
+            caps = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_binary => ENV['MARIONETTE_PATH'])
+            @driver = Selenium::WebDriver.for :firefox, {marionette: true,
+                                                         :desired_capabilities => caps}
             expect(@driver.instance_variable_get('@bridge').instance_variable_get('@launcher')).to be_nil
             @driver.quit
           end
+        end
 
-          not_compliant_on "This causes a Profile Error when run with either marionette or firefox", :browser => :marionette do
-            it "Does not use wires by default" do
-              unless ENV['MARIONETTE_PATH']
-                pending "Set ENV['MARIONETTE_PATH'] to test Marionette enabled Firefox installations"
+        not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1228121", :browser => :marionette do
+          compliant_on :browser => :firefox do
+            it "Does not use wires when marionette option is not set" do
+              begin
+                default_path = Firefox::Binary.path
+
+                caps = Selenium::WebDriver::Remote::Capabilities.firefox(firefox_binary: ENV['MARIONETTE_PATH'])
+                @driver = Selenium::WebDriver.for :firefox, :desired_capabilities => caps
+
+                expect(@driver.instance_variable_get('@bridge').instance_variable_get('@launcher')).to_not be_nil
+                @driver.quit
+              ensure
+                Firefox::Binary.path = default_path
               end
-
-              Selenium::WebDriver::Firefox::Binary.path = ENV['MARIONETTE_PATH']
-              @driver = Selenium::WebDriver.for :firefox
-              expect(@driver.instance_variable_get('@bridge').instance_variable_get('@launcher')).to_not be_nil
-              @driver.quit
             end
           end
+        end
 
-         not_compliant_on "Marionette via Wires does not support multiple instances", :browser => :marionette do
-          it_behaves_like "driver that can be started concurrently", :marionette
-         end
+        compliant_on :browser => :marionette do
+          not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1228107", :browser => :marionette do
+           it_behaves_like "driver that can be started concurrently", :marionette
+          end
         end
       end
 
       compliant_on :browser => :firefox do
+        # TODO - Adjust specs when default Firefox version includes Marionette
         context "when designated firefox binary does not include Marionette" do
           let(:message) { /Firefox Version \d\d does not support Marionette/ }
 
-          it "Raises Wires Exception when initialized with :desired_capabilities" do
-            caps = Selenium::WebDriver::Remote::W3CCapabilities.firefox
+          it "Raises Wires Exception when setting mariontte option in capabilities" do
+            caps = Selenium::WebDriver::Remote::Capabilities.firefox(:marionette => true)
             opt = {:desired_capabilities => caps}
             expect { Selenium::WebDriver.for :firefox, opt }.to raise_exception ArgumentError, message
           end
 
-          it "Raises Wires Exception when initialized with marionette option" do
-            expect{Selenium::WebDriver.for :firefox, {marionette: true}}.to raise_exception ArgumentError, message
-          end
-
-          it "Raises Wires Exception when initialized with marionette option" do
+          it "Raises Wires Exception when setting marionette option in driver initialization" do
             expect{Selenium::WebDriver.for :firefox, {marionette: true}}.to raise_exception ArgumentError, message
           end
         end

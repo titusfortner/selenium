@@ -36,7 +36,11 @@ end
 RSpec.configure do |c|
   c.include(WebDriver::SpecSupport::Helpers)
   c.before(:suite) do
-    Selenium::WebDriver::Firefox::Binary.path = ENV['MARIONETTE_PATH'] if GlobalTestEnv.browser == :marionette
+    if GlobalTestEnv.browser == :marionette
+      @default_path = Selenium::WebDriver::Firefox::Binary.path
+      Selenium::WebDriver::Firefox::Binary.path = ENV['MARIONETTE_PATH']
+    end
+
     if GlobalTestEnv.driver == :remote && !ENV['SAUCE_USERNAME']
       server = GlobalTestEnv.remote_server
       if GlobalTestEnv.browser == :marionette
@@ -54,6 +58,7 @@ RSpec.configure do |c|
   end
 
   c.after(:suite) do
+    Selenium::WebDriver::Firefox::Binary.path = @default_path if GlobalTestEnv.browser == :marionette
     SauceWhisk::Jobs.change_status(driver.session_id, !@exception) if ENV['SAUCE_USERNAME']
     GlobalTestEnv.quit_driver
   end
