@@ -31,21 +31,23 @@ module Selenium
             driver.mouse.click driver.find_element(:id, "imageButton")
           end
 
-          it "can drag and drop" do
-            driver.navigate.to url_for("droppableItems.html")
+          not_compliant_on "Does not work on Sauce", :browser => :ie, :saucelabs => true do
+            it "can drag and drop" do
+              driver.navigate.to url_for("droppableItems.html")
 
-            draggable = long_wait.until {
-              driver.find_element(:id => "draggable")
-            }
+              draggable = long_wait.until {
+                driver.find_element(:id => "draggable")
+              }
 
-            droppable = driver.find_element(:id => "droppable")
+              droppable = driver.find_element(:id => "droppable")
 
-            driver.mouse.down draggable
-            driver.mouse.move_to droppable
-            driver.mouse.up droppable
+              driver.mouse.down draggable
+              driver.mouse.move_to droppable
+              driver.mouse.up droppable
 
-            text = droppable.find_element(:tag_name => "p").text
-            expect(text).to eq("Dropped!")
+              text = droppable.find_element(:tag_name => "p").text
+              expect(text).to eq("Dropped!")
+            end
           end
 
           not_compliant_on "https://connect.microsoft.com/IE/Feedback/Details/1850023", :browser => :edge do

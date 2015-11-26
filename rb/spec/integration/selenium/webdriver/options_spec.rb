@@ -29,7 +29,10 @@ module Selenium
             compliant_on :driver => :remote do
               not_compliant_on "Phantomjs includes har not driver", :browser => :phantomjs do
                 it 'can fetch available log types' do
-                  expect(driver.manage.logs.available_types).to include(:browser, :driver, :server, :client)
+                  expect(driver.manage.logs.available_types).to include(:browser, :driver)
+                  not_compliant_on :saucelabs => true do
+                    expect(driver.manage.logs.available_types).to include(:server, :client)
+                  end
                 end
               end
             end

@@ -62,23 +62,25 @@ describe "Element" do
     expect(key_reporter.attribute('value')).to eq("Test")
   end
 
-  not_compliant_on "File Edge Bug", :browser => :edge do
-    not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
-      not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs do
-        not_compliant_on "Unable to get attribute value on that input element", :browser => :marionette do
-          it "should handle file uploads" do
-            driver.navigate.to url_for("formPage.html")
+  not_compliant_on "Absolute path issues", :saucelabs => true,
+                                           :platform => :windows do
+    not_compliant_on "File Edge Bug", :browser => :edge do
+      not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4220", :browser => :safari do
+        not_compliant_on "https://github.com/ariya/phantomjs/issues/10993", :browser => :phantomjs do
+          not_compliant_on "Unable to get attribute value on that input element", :browser => :marionette do
+            it "should handle file uploads" do
+              driver.navigate.to url_for("formPage.html")
 
-            element = driver.find_element(:id, 'upload')
-            expect(element.attribute('value')).to be_empty
+              element = driver.find_element(:id, 'upload')
+              expect(element.attribute('value')).to be_empty
 
-            file = Tempfile.new('file-upload')
-            path = file.path
-            path.gsub!("/", "\\") if WebDriver::Platform.windows?
+              file = Tempfile.new('file-upload')
+              path = file.path
+              path.gsub!("/", "\\") if WebDriver::Platform.windows?
+              element.send_keys path
 
-            element.send_keys path
-
-            expect(element.attribute('value')).to include(File.basename(path))
+              expect(element.attribute('value')).to include(File.basename(path))
+            end
           end
         end
       end
@@ -158,17 +160,19 @@ describe "Element" do
 
   not_compliant_on "https://code.google.com/p/selenium/issues/detail?id=4136", :browser => :safari do
     not_compliant_on "Interactions not yet supported", :browser => :marionette do
-      it "should drag and drop" do
-        driver.navigate.to url_for("dragAndDropTest.html")
+      not_compliant_on "Does not work on Sauce", :browser => :ie, :saucelabs => true do
+        it "should drag and drop" do
+          driver.navigate.to url_for("dragAndDropTest.html")
 
-        img1 = driver.find_element(:id, "test1")
-        img2 = driver.find_element(:id, "test2")
+          img1 = driver.find_element(:id, "test1")
+          img2 = driver.find_element(:id, "test2")
 
-        driver.action.drag_and_drop_by(img1, 100, 100).
-            drag_and_drop(img2, img1).
-            perform
+          driver.action.drag_and_drop_by(img1, 200, 200).
+              drag_and_drop(img2, img1).
+              perform
 
-        expect(img1.location).to eq(img2.location)
+          expect(img1.location).to eq(img2.location)
+        end
       end
     end
   end
