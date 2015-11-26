@@ -24,15 +24,16 @@ module Selenium
       # @api private
       class Bridge < Remote::W3CBridge
 
-        # These are commands Edge is still using from JSON Wire Protocol
-        %i(executeScript executeAsyncScript submitElement doubleClick mouseDown mouseUp mouseMoveTo
+        def initialize(opts = {})
+
+          # These are commands Edge is still using from JSON Wire Protocol
+          %i(executeScript executeAsyncScript submitElement doubleClick mouseDown mouseUp mouseMoveTo
            click sendKeysToActiveElement getWindowHandles getCurrentWindowHandle getWindowSize
            setWindowSize getWindowPosition setWindowPosition maximizeWindow).each do |cmd|
-          jwp = Selenium::WebDriver::Remote::Bridge::COMMANDS[cmd]
-          self.command(cmd, jwp.first, jwp.last)
-        end
+            jwp = Selenium::WebDriver::Remote::Bridge::COMMANDS[cmd]
+            self.class.command(cmd, jwp.first, jwp.last)
+          end
 
-        def initialize(opts = {})
           http_client = opts.delete(:http_client)
 
           if opts.has_key?(:url)
