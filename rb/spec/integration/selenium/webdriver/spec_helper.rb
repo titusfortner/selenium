@@ -58,7 +58,7 @@ RSpec.configure do |c|
   end
 
   c.after(:suite) do
-    Selenium::WebDriver::Firefox::Binary.path = @default_path if GlobalTestEnv.browser == :marionette
+    Selenium::WebDriver::Firefox::Binary.path = @default_path if GlobalTestEnv.browser == :marionette && @default_path
     SauceWhisk::Jobs.change_status(driver.session_id, !@exception) if ENV['SAUCE_USERNAME']
     GlobalTestEnv.quit_driver
   end

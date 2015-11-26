@@ -60,6 +60,11 @@ module Selenium
         #
 
         def initialize(opts = {})
+          if opts.key?(:desired_capabilities) && opts[:desired_capabilities][:browser_name] == 'MicrosoftEdge'
+            require_relative '../edge/legacy_support'
+            extend Edge::LegacySupport
+          end
+
           opts = opts.dup
 
           http_client          = opts.delete(:http_client) { Http::Default.new }

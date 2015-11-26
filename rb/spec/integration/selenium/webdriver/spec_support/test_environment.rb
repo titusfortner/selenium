@@ -47,6 +47,7 @@ module Selenium
 
         def reset_driver!
           quit_driver
+          sleep 2
           @driver_instance = new_driver_instance
         end
 
@@ -168,8 +169,10 @@ module Selenium
           else
             caps = WebDriver::Remote::Capabilities.send(browser)
 
-            caps.javascript_enabled = true
-            caps.css_selectors_enabled = true
+            unless caps.is_a? WebDriver::Remote::W3CCapabilities
+              caps.javascript_enabled = true
+              caps.css_selectors_enabled = true
+            end
           end
 
           caps
