@@ -37,16 +37,24 @@ RSpec.configure do |c|
   c.include(WebDriver::SpecSupport::Helpers)
   c.before(:suite) do
     Selenium::WebDriver::Firefox::Binary.path = ENV['MARIONETTE_PATH'] if GlobalTestEnv.browser == :marionette
-    if GlobalTestEnv.driver == :remote
+    if GlobalTestEnv.driver == :remote && !ENV['SAUCE_USERNAME']
       server = GlobalTestEnv.remote_server
       if GlobalTestEnv.browser == :marionette
         server << "-Dwebdriver.firefox.bin=#{ENV['MARIONETTE_PATH']}"
       end
       server.start
+    elsif GlobalTestEnv.driver == :remote
+      require 'sauce'
+      ENV['WD_REMOTE_URL'] = "http://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:80/wd/hub"
     end
   end
 
+  c.after(:each) do
+    @exception ||= !example.exception.nil?
+  end
+
   c.after(:suite) do
+    SauceWhisk::Jobs.change_status(driver.session_id, !@exception) if ENV['SAUCE_USERNAME']
     GlobalTestEnv.quit_driver
   end
 

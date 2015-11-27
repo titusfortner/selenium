@@ -71,12 +71,14 @@ module Selenium
           end
 
           def current_env
+            platform = ENV['SELENIUM_PLATFORM'][/^\w+/].downcase.gsub('os', 'macosx').to_sym if ENV['SELENIUM_PLATFORM']
             {
               :browser        => GlobalTestEnv.browser,
               :driver         => GlobalTestEnv.driver,
-              :platform       => Platform.os,
+              :platform       => platform || Platform.os,
               :native         => GlobalTestEnv.native_events?,
-              :window_manager => !Selenium::WebDriver::Platform.linux? || !!ENV['DESKTOP_SESSION'] || GlobalTestEnv.browser == :phantomjs
+              :window_manager => !Selenium::WebDriver::Platform.linux? || !!ENV['DESKTOP_SESSION'] || GlobalTestEnv.browser == :phantomjs,
+              :saucelabs      => !!ENV['SAUCE_USERNAME']
             }
           end
 

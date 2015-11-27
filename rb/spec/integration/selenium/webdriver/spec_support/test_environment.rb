@@ -156,7 +156,12 @@ module Selenium
         end
 
         def remote_capabilities
-          if browser == :marionette
+          if ENV['SAUCE_USERNAME']
+            caps = WebDriver::Remote::Capabilities.send(browser,
+              :version => ENV['SELENIUM_VERSION'],
+              :platform => ENV['SELENIUM_PLATFORM'],
+              :build => "#{browser} #{ENV['SELENIUM_VERSION']} on #{ENV['SELENIUM_PLATFORM']} (#{ENV['BUILD_NUMBER']})")
+          elsif browser == :marionette
             caps = WebDriver::Remote::Capabilities.firefox(:marionette => true)
           else
             caps = WebDriver::Remote::Capabilities.send(browser)
