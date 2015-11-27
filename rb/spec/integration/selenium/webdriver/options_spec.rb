@@ -27,12 +27,9 @@ module Selenium
         not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/468#issuecomment-94301391", :browser => :ie do
           describe 'logs' do
             compliant_on :driver => :remote do
-              not_compliant_on "Phantomjs includes har not driver", :browser => :phantomjs do
-                it 'can fetch available log types' do
-                  expect(driver.manage.logs.available_types).to include(:browser, :driver)
-                  not_compliant_on :saucelabs => true do
-                    expect(driver.manage.logs.available_types).to include(:server, :client)
-                  end
+              not_compliant_on "Not showing up", :saucelabs => true, :browser => :chrome do
+                it 'can fetch remote log types' do
+                  expect(driver.manage.logs.available_types).to include(:server, :client)
                 end
               end
             end
