@@ -91,6 +91,10 @@ module Selenium
           )
         end
 
+        def remote_server?
+          !@remote_server.nil?
+        end
+
         def remote_server_jar
           @remote_server_jar ||= root.join("build/java/server/test/org/openqa/selenium/server-with-tests-standalone.jar").to_s
         end

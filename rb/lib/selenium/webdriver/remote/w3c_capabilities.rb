@@ -69,14 +69,15 @@ module Selenium
             opts[:platform_name] = opts.delete :platform
 
             new({
-              :browser_name => "firefox"
+              :browser_name => "firefox",
+              :marionette => true
                 }.merge(opts))
           end
 
           alias_method :ff, :firefox
 
           def w3c?(opts = {})
-            opts[:desired_capabilities].is_a?(W3CCapabilities) || !!opts.delete(:marionette)
+            opts[:desired_capabilities].is_a?(W3CCapabilities) || opts[:marionette]
           end
 
           #
@@ -85,22 +86,34 @@ module Selenium
 
           def json_create(data)
             data = data.dup
-
             caps = new
             caps.browser_name = data.delete("browserName")
             caps.browser_version = data.delete("browserVersion")
-            caps.platform_name = data.delete("platformName").downcase.to_sym if data.has_key?('platformName')
+            caps.platform_name = data.delete("platformName")
             caps.platform_version = data.delete("platformVersion")
             caps.accept_ssl_certs = data.delete("acceptSslCerts")
-            caps.takes_screenshot = data.delete("takesScreenshot  ")
+            caps.takes_screenshot = data.delete("takesScreenshot")
             caps.takes_element_screenshot = data.delete("takesElementScreenshot")
             caps.page_load_strategy = data.delete("pageLoadStrategy")
             caps.proxy = Proxy.json_create(data['proxy']) if data.has_key?('proxy')
 
+            # Remote Server Specific
+            caps[:remote_session_id] = data.delete('webdriver.remote.sessionid')
+
+            # obsolete capabilities returned by Remote Server
+            data.delete("javascriptEnabled")
+            data.delete('cssSelectorsEnabled')
+
+            # Marionette Specific
+            caps[:specification_level] = data.delete("specificaionLevel")
+            caps[:xul_app_id] = data.delete("XULappId")
+            caps[:raise_accessibility_exceptions] = data.delete('raisesAccessibilityExceptions')
+            caps[:rotatable] = data.delete('rotatable')
+            caps[:app_build_id] = data.delete('appBuildId')
+            caps[:device] = data.delete('device')
+
             # any remaining pairs will be added as is, with no conversion
             caps.merge!(data)
-
-            caps
           end
         end
 

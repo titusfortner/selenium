@@ -29,6 +29,7 @@ module Selenium
         def initialize(opts = {})
           http_client = opts.delete(:http_client)
 
+          opts.delete(:marionette)
           caps = opts.delete(:desired_capabilities) { Remote::W3CCapabilities.firefox }
 
           if opts.has_key?(:url)
