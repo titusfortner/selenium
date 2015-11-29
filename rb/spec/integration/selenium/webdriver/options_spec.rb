@@ -21,11 +21,13 @@ require_relative 'spec_helper'
 
 module Selenium
   module WebDriver
+
     describe Options do
 
       not_compliant_on "Logging not implemented in w3c", :browser => [:marionette, :edge] do
         not_compliant_on "https://github.com/SeleniumHQ/selenium/issues/468#issuecomment-94301391", :browser => :ie do
           describe 'logs' do
+
             compliant_on :driver => :remote do
               not_compliant_on "Not showing up", :saucelabs => true, :browser => :chrome do
                 it 'can fetch remote log types' do
@@ -66,6 +68,7 @@ module Selenium
 
       not_compliant_on "https://bugzilla.mozilla.org/show_bug.cgi?id=1223907", :browser => :marionette do
         describe "cookie management" do
+
           it "should get all" do
             driver.navigate.to url_for("xhtmlTest.html")
             driver.manage.add_cookie :name => "foo", :value => "bar"

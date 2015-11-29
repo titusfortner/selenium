@@ -20,8 +20,7 @@
 require_relative 'spec_helper'
 
 describe "Selenium::WebDriver::TargetLocator" do
-
-  after(:each) do
+  after do
     compliant_on :browser => :edge do #https://connect.microsoft.com/IE/Feedback/Details/1853708
       driver.switch_to.default_content
     end

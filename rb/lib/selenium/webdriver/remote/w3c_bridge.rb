@@ -120,9 +120,8 @@ module Selenium
             DriverExtensions::HasSessionId,
             DriverExtensions::Rotatable,
             DriverExtensions::HasTouchScreen,
-            DriverExtensions::HasLocation,
-            DriverExtensions::HasNetworkConnection,
-            DriverExtensions::HasRemoteStatus
+            DriverExtensions::HasRemoteStatus,
+            DriverExtensions::HasWebStorage
           ]
         end
 
@@ -213,7 +212,6 @@ module Selenium
           execute :switchToWindow, {}, :handle => name
         end
 
-        # W3C only supports index number and Element
         def switchToFrame(id)
           id = find_element_by('id', id) if id.is_a? String
           execute :switchToFrame, {}, :id => id
@@ -257,7 +255,7 @@ module Selenium
 
         def setWindowSize(width, height, handle = :current)
           unless handle == :current
-            raise Error::WebDriverError, 'The W3C standard does not support setting window size of a window that isn\'t the current window; Switch to desired window before setting its size'
+            raise Error::WebDriverError, 'Switch to desired window before changing its size'
           end
           execute :setWindowSize, {}, {:width  => width,
                                    :height => height}
@@ -265,7 +263,7 @@ module Selenium
 
         def maximizeWindow(handle = :current)
           unless handle == :current
-            raise Error::WebDriverError, 'The W3C standard does not support maximizing window size of a window that isn\'t the current window; Switch to desired window before maximizing its size'
+            raise Error::WebDriverError, 'Switch to desired window before changing its size'
           end
           execute :maximizeWindow
         end
@@ -276,19 +274,19 @@ module Selenium
 
         def getWindowSize(handle = :current)
           unless handle == :current
-            raise Error::WebDriverError, 'The W3C standard does not support getting window size of a window that isn\'t the current window; Switch to desired window before getting its size'
+            raise Error::WebDriverError, 'Switch to desired window before getting its size'
           end
           data = execute :getWindowSize
 
           Dimension.new data['width'], data['height']
         end
 
-        def setWindowPosition(_x, _y, _handle = :current)
-          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support setting the Window Position'
+        def setWindowPosition(_x, _y, _handle = nil)
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not currently support setting the Window Position'
         end
 
-        def getWindowPosition(handle = :current)
-          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support getting the Window Position'
+        def getWindowPosition(_handle = nil)
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not currently support getting the Window Position'
         end
 
         def getScreenshot
@@ -348,19 +346,19 @@ module Selenium
         end
 
         def getLocation
-          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support getting location'
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not currently support getting location'
         end
 
         def setLocation(_lat, _lon, _alt)
-          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support setting location'
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not currently support setting location'
         end
 
         def getNetworkConnection
-          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support getting network connection'
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not currently support getting network connection'
         end
 
         def setNetworkConnection(_type)
-          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not support setting network connection'
+          raise Error::WebDriverError::UnsupportedOperationError, 'The W3C standard does not currently support setting network connection'
         end
 
         #
@@ -464,6 +462,7 @@ module Selenium
           sendKeysToElement(getActiveElement, keys)
         end
 
+        # TODO - Implement file verification
         def sendKeysToElement(element, keys)
           execute :elementSendKeys, {:id => element}, {:value => keys.join('').split(//)}
         end

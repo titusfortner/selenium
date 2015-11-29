@@ -18,15 +18,17 @@
 # under the License.
 
 require_relative '../spec_helper'
+
 module Selenium
   module WebDriver
+
     describe Firefox do
-      before(:each) do
+      before do
         @opt = GlobalTestEnv.remote_server? ? {:url => GlobalTestEnv.remote_server.webdriver_url} : {}
       end
 
       context "when designated firefox binary includes Marionette" do
-        before(:each) do
+        before do
           unless ENV['MARIONETTE_PATH']
             pending "Set ENV['MARIONETTE_PATH'] to test Marionette enabled Firefox installations"
           end

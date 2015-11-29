@@ -20,9 +20,10 @@
 require_relative 'spec_helper'
 
 module Selenium::WebDriver::DriverExtensions
+
   describe HasWebStorage do
 
-    compliant_on :driver => [:chrome, :marionette] do
+    compliant_on :browser => [:chrome, :marionette] do
       shared_examples_for 'web storage' do
         before {
           driver.navigate.to url_for("clicks.html")
@@ -110,6 +111,5 @@ module Selenium::WebDriver::DriverExtensions
         it_behaves_like 'web storage'
       end
     end
-
   end
 end

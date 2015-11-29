@@ -23,7 +23,7 @@ module Selenium
   module WebDriver
     module Firefox
 
-      compliant_on :driver => :firefox do
+      compliant_on :browser => :firefox do
         describe Driver do
           describe ".new" do
 

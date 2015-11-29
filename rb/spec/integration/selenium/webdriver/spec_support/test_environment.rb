@@ -216,8 +216,7 @@ module Selenium
         end
 
         def create_marionette_driver
-          caps = WebDriver::Remote::W3CCapabilities.firefox
-          WebDriver.for :firefox, :desired_capabilities => caps
+          WebDriver.for :firefox, :marionette => true
         end
 
         def create_edge_driver

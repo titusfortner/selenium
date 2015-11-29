@@ -35,8 +35,8 @@ describe "Element" do
     it "should raise if different element receives click" do
       driver.navigate.to url_for("click_tests/overlapping_elements.html")
       expect { driver.find_element(:id, "contents").click }
-          .to raise_error(Selenium::WebDriver::Error::UnknownError,
-                          /Element is not clickable at point \(\d+, \d+\)\. Other element would receive the click: <div id="over"><\/div>/)
+        .to raise_error(Selenium::WebDriver::Error::UnknownError,
+          /Element is not clickable at point \(\d+, \d+\)\. Other element would receive the click: <div id="over"><\/div>/)
     end
   end
 
@@ -167,9 +167,9 @@ describe "Element" do
           img1 = driver.find_element(:id, "test1")
           img2 = driver.find_element(:id, "test2")
 
-          driver.action.drag_and_drop_by(img1, 200, 200).
-              drag_and_drop(img2, img1).
-              perform
+          driver.action.drag_and_drop_by(img1, 100, 100).
+                        drag_and_drop(img2, img1).
+                        perform
 
           expect(img1.location).to eq(img2.location)
         end

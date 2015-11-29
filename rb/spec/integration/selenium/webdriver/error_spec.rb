@@ -30,8 +30,7 @@ describe Selenium::WebDriver::Error do
   end
 
   compliant_on({:browser => :firefox},
-               {:driver => :remote,
-                :browser => :marionette}) do
+               {:driver => :remote, :browser => :marionette}) do
     it "should show stack trace information" do
       driver.navigate.to url_for("xhtmlTest.html")
 

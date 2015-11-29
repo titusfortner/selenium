@@ -86,6 +86,7 @@ module Selenium
 
           def json_create(data)
             data = data.dup
+
             caps = new
             caps.browser_name = data.delete("browserName")
             caps.browser_version = data.delete("browserVersion")

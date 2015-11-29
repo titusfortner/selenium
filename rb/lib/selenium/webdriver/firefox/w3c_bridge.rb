@@ -24,8 +24,6 @@ module Selenium
       # @api private
       class W3CBridge < Remote::W3CBridge
 
-        COMMANDS = {}
-
         def initialize(opts = {})
           http_client = opts.delete(:http_client)
 
