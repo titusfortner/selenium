@@ -24,7 +24,7 @@ module Selenium
 
     describe Options do
 
-      not_compliant_on :browser => [:marionette, :ie] do
+      not_compliant_on :browser => [:marionette, :ie, :edge] do
         describe 'logs' do
 
           compliant_on :driver => :remote do
