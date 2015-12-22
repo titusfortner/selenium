@@ -28,7 +28,7 @@ module Selenium
           describe ".new" do
 
             it "should take a binary path as an argument" do
-              pending unless ENV['MARIONETTE_PATH']
+              pending "Set ENV['ALTERNATE_FIREFOX_PATH'] to test this" unless ENV['ALTERNATE_FIREFOX_PATH']
 
               begin
                 default_path = Firefox::Binary.path
@@ -37,7 +37,7 @@ module Selenium
                 default_version = driver1.capabilities[:version]
                 driver1.quit
 
-                caps = Remote::Capabilities.firefox(firefox_binary: ENV['MARIONETTE_PATH'])
+                caps = Remote::Capabilities.firefox(firefox_binary: ENV['ALTERNATE_FIREFOX_PATH'])
                 driver2 = Selenium::WebDriver.for :firefox, :desired_capabilities => caps
 
                 expect(driver2.capabilities[:version]).to_not be == default_version

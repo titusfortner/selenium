@@ -84,20 +84,28 @@ module Selenium
       end
 
       compliant_on :browser => :firefox do
-        # TODO - Adjust specs when default Firefox version includes Marionette
+
+        before do
+          unless ENV['PRE_MARIONETTE_PATH']
+            pending "Set ENV['PRE_MARIONETTE_PATH'] to test features on firefox versions without marionette"
+          end
+        end
+
         # TODO - File bug for Unhandled error for remote / firefox
         not_compliant_on :driver => :remote do
           context "when designated firefox binary does not include Marionette" do
             let(:message) { /does not support Marionette/ }
 
             it "Raises Wires Exception when setting marionette option in capabilities" do
-              caps = Selenium::WebDriver::Remote::Capabilities.firefox(:marionette => true)
+              caps = Selenium::WebDriver::Remote::Capabilities.firefox(:marionette => true,
+                                                                       :firefox_binary => ENV['PRE_MARIONETTE_PATH'])
               @opt.merge!(:desired_capabilities => caps)
               expect { Selenium::WebDriver.for GlobalTestEnv.driver, @opt }.to raise_exception ArgumentError, message
             end
 
             it "Raises Wires Exception when setting marionette option in driver initialization" do
-              @opt.merge!(:marionette => true)
+              caps = Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_binary => ENV['PRE_MARIONETTE_PATH'])
+              @opt.merge!(:marionette => true, :remote_capabilities => caps)
               expect{ Selenium::WebDriver.for GlobalTestEnv.driver, @opt}.to raise_exception ArgumentError, message
             end
           end

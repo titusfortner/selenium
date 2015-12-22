@@ -134,7 +134,19 @@ module Selenium
         end
 
         def create_session(desired_capabilities)
-          resp = raw_execute :newSession, {}, :desiredCapabilities => desired_capabilities
+          begin
+            resp = raw_execute :newSession, {}, :desiredCapabilities => desired_capabilities
+          rescue Selenium::WebDriver::Error::WebDriverError => ex
+            mismatch = ex.message.match /Unsupported marionette protocol version (\d+), required (\d+)/
+            if mismatch.nil?
+              raise
+            elsif mismatch[1] < mismatch[2]
+              raise Selenium::WebDriver::Error::WebDriverError, "The version of Marionette executable installed requires that you upgrade your Firefox version"
+            else
+              raise Selenium::WebDriver::Error::WebDriverError, "This version of Firefox requires you to upgrade your Marionette executable per https://developer.mozilla.org/Mozilla/QA/Marionette/WebDriver"
+            end
+           end
+
           @session_id = resp['sessionId'] or raise Error::WebDriverError, 'no sessionId in returned payload'
 
           W3CCapabilities.json_create resp['value']
