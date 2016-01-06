@@ -62,7 +62,7 @@ module Selenium
         #
 
         def initialize(opts = {})
-          if opts.key?(:desired_capabilities) && opts[:desired_capabilities][:browser_name] == 'MicrosoftEdge'
+          if opts.fetch(:desired_capabilities, {})[:browser_name] == 'MicrosoftEdge'
             require_relative '../edge/legacy_support'
             extend Edge::LegacySupport
           end
