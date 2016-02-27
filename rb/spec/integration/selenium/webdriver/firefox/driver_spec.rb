@@ -28,7 +28,7 @@ module Selenium
           describe ".new" do
 
             it "takes a binary path as an argument" do
-              pending "Set ENV['ALTERNATE_FIREFOX_PATH'] to test this" unless ENV['ALTERNATE_FIREFOX_PATH']
+              skip "Set ENV['ALTERNATE_FIREFOX_PATH'] to test this" unless ENV['ALTERNATE_FIREFOX_PATH']
 
               begin
                 default_path = Firefox::Binary.path
