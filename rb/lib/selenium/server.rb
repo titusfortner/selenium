@@ -83,7 +83,7 @@ module Selenium
                 segment_count = 0
 
                 response.read_body do |segment|
-                  progress += segment.length
+                  progress += segment.size
                   segment_count += 1
 
                   if segment_count % 15 == 0

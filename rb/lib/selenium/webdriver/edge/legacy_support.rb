@@ -69,7 +69,8 @@ module Selenium
           params = { element: element }
 
           if x && y
-            params.merge! xoffset: x, yoffset: y
+            params[:xoffset] = x
+            params[:yoffset] = y
           end
 
           execute :mouseMoveTo, {}, params

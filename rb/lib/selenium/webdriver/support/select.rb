@@ -29,7 +29,7 @@ module Selenium
         def initialize(element)
           tag_name = element.tag_name
 
-          unless tag_name.downcase == "select"
+          unless tag_name.casecmp("select").zero?
             raise ArgumentError, "unexpected tag name #{tag_name.inspect}"
           end
 
@@ -253,7 +253,7 @@ module Selenium
           opts = @element.find_elements(:xpath, xpath)
 
           if opts.empty? && text =~ /\s+/
-            longest_word = text.split(/\s+/).max_by { |item| item.length }
+            longest_word = text.split(/\s+/).max_by { |item| item.size }
 
             if longest_word.empty?
               candidates = options
