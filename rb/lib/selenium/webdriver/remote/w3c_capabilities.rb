@@ -27,15 +27,15 @@ module Selenium
       class W3CCapabilities
 
         DEFAULTS = {
-          :browser_name => '',
-          :browser_version => :any,
-          :platform_name => :any,
-          :platform_version => :any,
-          :accept_ssl_certs => false,
-          :takes_screenshot => false,
-          :takes_element_screenshot => false,
-          :page_load_strategy => 'normal',
-          :proxy => nil
+          browser_name: '',
+          browser_version: :any,
+          platform_name: :any,
+          platform_version: :any,
+          accept_ssl_certs: false,
+          takes_screenshot: false,
+          takes_element_screenshot: false,
+          page_load_strategy: 'normal',
+          proxy: nil
         }
 
         DEFAULTS.each_key do |key|
@@ -59,8 +59,8 @@ module Selenium
 
           def edge(opts = {})
             new({
-              :browser_name => "MicrosoftEdge",
-              :platform => :windows,
+              browser_name: "MicrosoftEdge",
+              platform: :windows,
             }.merge(opts))
           end
 
@@ -69,8 +69,8 @@ module Selenium
             opts[:platform_name] = opts.delete :platform
 
             new({
-              :browser_name => "firefox",
-              :marionette => true
+              browser_name: "firefox",
+              marionette: true
             }.merge(opts))
           end
 

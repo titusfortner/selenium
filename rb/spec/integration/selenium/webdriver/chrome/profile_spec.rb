@@ -23,7 +23,7 @@ module Selenium
   module WebDriver
     module Chrome
 
-      compliant_on :browser => :chrome do
+      compliant_on browser: :chrome do
         describe Profile do
           let(:profile) { Profile.new }
 

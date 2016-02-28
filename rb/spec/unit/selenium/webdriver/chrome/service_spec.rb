@@ -25,14 +25,14 @@ module Selenium
 
       describe Service do
         let(:mock_process) do
-          double("ChildProcess", :io => double.as_null_object, :start => true)
+          double("ChildProcess", io: double.as_null_object, start: true)
         end
 
         # ugh.
         before { Service.instance_variable_set("@executable_path", nil) }
 
         it "uses the user-provided path if set" do
-          Platform.stub(:os => :unix)
+          Platform.stub(os: :unix)
           allow(Platform).to receive(:assert_executable).with("/some/path")
           Chrome.driver_path = "/some/path"
 
@@ -45,7 +45,7 @@ module Selenium
         end
 
         it "finds the Chrome server binary by searching PATH" do
-          Platform.stub(:os => :unix)
+          Platform.stub(os: :unix)
           expect(Platform).to receive(:find_binary).once.and_return("/some/path")
           expect(Platform).to receive(:assert_executable).with("/some/path")
 
