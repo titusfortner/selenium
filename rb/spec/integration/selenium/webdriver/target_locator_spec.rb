@@ -21,10 +21,10 @@ require_relative 'spec_helper'
 
 describe "Selenium::WebDriver::TargetLocator" do
   after do
-    compliant_on browser: :edge do #https://connect.microsoft.com/IE/Feedback/Details/1853708
+    compliant_on browser: :edge do # https://connect.microsoft.com/IE/Feedback/Details/1853708
       driver.switch_to.default_content
     end
-    not_compliant_on browser: :edge do #https://connect.microsoft.com/IE/Feedback/Details/1850028
+    not_compliant_on browser: :edge do # https://connect.microsoft.com/IE/Feedback/Details/1850028
       ensure_single_window
     end
   end
@@ -242,7 +242,6 @@ describe "Selenium::WebDriver::TargetLocator" do
   # Edge BUG - https://connect.microsoft.com/IE/feedback/details/1850030
   not_compliant_on browser: [:iphone, :safari, :phantomjs, :edge] do
     describe "alerts" do
-
       it "allows the user to accept an alert" do
         driver.navigate.to url_for("alerts.html")
         driver.find_element(id: "alert").click

@@ -19,13 +19,11 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api private
     #
 
     module FileReaper
-
       class << self
         attr_writer :reap
 
@@ -64,7 +62,6 @@ module Selenium
 
       # we *do* want child process reaping, so not using Platform.exit_hook here.
       at_exit { reap! }
-
     end # FileReaper
   end # WebDriver
 end # Selenium

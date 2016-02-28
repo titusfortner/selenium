@@ -22,7 +22,6 @@ require File.expand_path("../../spec_helper", __FILE__)
 module Selenium
   module WebDriver
     module Chrome
-
       describe Service do
         let(:mock_process) do
           double("ChildProcess", io: double.as_null_object, start: true)
@@ -57,7 +56,6 @@ module Selenium
 
           expect { Service.executable_path }.to raise_error(Error::WebDriverError, %r{github.com\/SeleniumHQ})
         end
-
       end
     end # Chrome
   end # WebDriver

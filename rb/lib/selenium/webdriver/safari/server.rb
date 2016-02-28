@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Safari
-
       class Server
         SOCKET_LOCK_TIMEOUT = 45
 
@@ -173,7 +172,6 @@ Server: safaridriver-ruby
         def socket_lock
           @socket_lock ||= SocketLock.new(@port - 1, SOCKET_LOCK_TIMEOUT)
         end
-
       end # Server
     end # Safari
   end # WebDriver

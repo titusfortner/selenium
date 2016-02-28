@@ -22,7 +22,7 @@ require_relative 'spec_helper'
 module Selenium
   module WebDriver
     describe SocketPoller do
-      let(:poller)         { Selenium::WebDriver::SocketPoller.new("localhost", 1234, 5, 0.05)  }
+      let(:poller)         { Selenium::WebDriver::SocketPoller.new("localhost", 1234, 5, 0.05) }
       let(:socket)         { double Socket, close: true }
 
       def setup_connect(*states)
@@ -81,7 +81,6 @@ module Selenium
           expect(poller).not_to be_closed
         end
       end
-
     end
   end
 end

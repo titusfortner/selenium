@@ -21,7 +21,6 @@ module Selenium
   module WebDriver
     module SpecSupport
       module Helpers
-
         def driver
           GlobalTestEnv.driver_instance
         end
@@ -77,7 +76,6 @@ module Selenium
         def wait(timeout = 10)
           Wait.new(timeout: timeout)
         end
-
       end # Helpers
     end # SpecSupport
   end # WebDriver

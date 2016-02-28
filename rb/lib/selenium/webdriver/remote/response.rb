@@ -20,10 +20,8 @@
 module Selenium
   module WebDriver
     module Remote
-
       # @api private
       class Response
-
         attr_reader :code, :payload
         attr_writer :payload
 
@@ -109,7 +107,6 @@ module Selenium
         def value
           @payload['value'] || @payload['message']
         end
-
       end # Response
     end # Remote
   end # WebDriver

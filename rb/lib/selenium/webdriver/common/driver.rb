@@ -19,7 +19,6 @@
 
 module Selenium
   module WebDriver
-
     #
     # The main class through which you control the browser.
     #
@@ -33,7 +32,6 @@ module Selenium
       include SearchContext
 
       class << self
-
         #
         # @api private
         #
@@ -99,7 +97,7 @@ module Selenium
       end
 
       def inspect
-        '#<%s:0x%x browser=%s>' % [self.class, hash*2, bridge.browser.inspect]
+        '#<%s:0x%x browser=%s>' % [self.class, hash * 2, bridge.browser.inspect]
       end
 
       #
@@ -239,7 +237,6 @@ module Selenium
         bridge.executeAsyncScript(script, *args)
       end
 
-
       #-------------------------------- sugar  --------------------------------
 
       #
@@ -300,7 +297,6 @@ module Selenium
       private
 
       attr_reader :bridge
-
     end # Driver
   end # WebDriver
 end # Selenium

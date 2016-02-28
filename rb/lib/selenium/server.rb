@@ -22,7 +22,6 @@ require 'selenium/webdriver/common/socket_poller'
 require 'net/http'
 
 module Selenium
-
   #
   # Wraps the remote server jar
   #
@@ -59,7 +58,6 @@ module Selenium
     CL_RESET = WebDriver::Platform.windows? ? '' : "\r\e[0K"
 
     class << self
-
       def get(required_version, opts = {})
         new(download(required_version), opts)
       end
@@ -136,7 +134,6 @@ module Selenium
           Net::HTTP
         end
       end
-
     end
     #
     # The server port
@@ -265,6 +262,5 @@ module Selenium
     def socket
       @socket ||= WebDriver::SocketPoller.new(@host, @port, @timeout)
     end
-
   end # Server
 end # Selenium

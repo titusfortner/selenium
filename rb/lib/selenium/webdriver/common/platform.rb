@@ -22,10 +22,8 @@ require 'socket'
 
 module Selenium
   module WebDriver
-
     # @api private
     module Platform
-
       module_function
 
       def home
@@ -214,7 +212,6 @@ module Selenium
 
         interfaces.compact.uniq
       end
-
     end # Platform
   end # WebDriver
 end # Selenium

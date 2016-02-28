@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     class Alert
-
       def initialize(bridge)
         @bridge = bridge
 
@@ -43,7 +42,6 @@ module Selenium
       def text
         @bridge.getAlertText
       end
-
     end # Alert
   end # WebDriver
 end # Selenium

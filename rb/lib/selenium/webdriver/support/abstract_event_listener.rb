@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Support
-
       #
       # Subclass and override methods from this class
       # to implement your own event listener.
@@ -65,7 +64,6 @@ module Selenium
         def after_quit(driver) end
         def before_close(driver) end
         def after_close(driver) end
-
       end # AbstractEventListener
     end # Support
   end # WebDriver

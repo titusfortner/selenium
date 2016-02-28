@@ -20,13 +20,11 @@
 module Selenium
   module WebDriver
     module IE
-
       #
       # @api private
       #
 
       class Server
-
         STOP_TIMEOUT        = 5
         SOCKET_LOCK_TIMEOUT = 45
         MISSING_TEXT        = "Unable to find standalone executable. Please download the IEDriverServer from http://selenium-release.storage.googleapis.com/index.html and place the executable on your PATH."
@@ -124,7 +122,6 @@ module Selenium
         def socket_lock
           @socket_lock ||= SocketLock.new(@port - 1, SOCKET_LOCK_TIMEOUT)
         end
-
       end # Server
     end # IE
   end # WebDriver

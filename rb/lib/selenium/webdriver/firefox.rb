@@ -35,7 +35,6 @@ require 'selenium/webdriver/firefox/service'
 module Selenium
   module WebDriver
     module Firefox
-
       DEFAULT_PORT                    = 7055
       DEFAULT_ENABLE_NATIVE_EVENTS    = Platform.os == :windows
       DEFAULT_SECURE_SSL              = false
@@ -45,7 +44,6 @@ module Selenium
       def self.path=(path)
         Binary.path = path
       end
-
     end # Firefox
   end # WebDriver
 end # Selenium

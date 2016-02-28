@@ -24,7 +24,6 @@ module Selenium
   module WebDriver
     module Remote
       module Http
-
         # @api private
         class Default < Common
           attr_accessor :proxy
@@ -147,7 +146,6 @@ module Selenium
                     false
                   end
                 )
-
               end
 
               !ignored
@@ -155,7 +153,6 @@ module Selenium
               true
             end
           end
-
         end # Default
       end # Http
     end # Remote

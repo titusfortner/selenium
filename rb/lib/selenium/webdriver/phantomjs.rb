@@ -24,9 +24,7 @@ require 'selenium/webdriver/phantomjs/bridge'
 
 module Selenium
   module WebDriver
-
     module PhantomJS
-
       def self.path=(path)
         Platform.assert_executable path
         @path = path
@@ -35,7 +33,6 @@ module Selenium
       def self.path
         @path ||= Platform.find_binary("phantomjs")
       end
-
     end # PhantomJS
   end # WebDriver
 end # Selenium

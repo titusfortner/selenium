@@ -19,14 +19,13 @@
 
 require File.expand_path("../../spec_helper", __FILE__)
 
-
 module Selenium
   module WebDriver
     module IPhone
       describe Bridge do
         let(:default_url) { URI.parse(IPhone::Bridge::DEFAULT_URL) }
         let(:resp)        { {"sessionId" => "foo", "value" => Remote::Capabilities.iphone.as_json } }
-        let(:http)        { double(Remote::Http::Default, call: resp).as_null_object   }
+        let(:http)        { double(Remote::Http::Default, call: resp).as_null_object }
 
         it "uses the default iPhone driver URL" do
           expect(http).to receive(:server_url=).with default_url
@@ -55,7 +54,6 @@ module Selenium
           Bridge.new(http_client: http, desired_capabilities: custom_caps)
         end
       end
-
     end # IPhone
   end # WebDriver
 end # Selenium

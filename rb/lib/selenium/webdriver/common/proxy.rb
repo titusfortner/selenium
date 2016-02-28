@@ -23,9 +23,9 @@ module Selenium
       TYPES = {
         direct: "DIRECT",     # Direct connection, no proxy (default on Windows).
         manual: "MANUAL",     # Manual proxy settings (e.g., for httpProxy).
-        pac: "PAC",        # Proxy autoconfiguration from URL.
+        pac: "PAC", # Proxy autoconfiguration from URL.
         auto_detect: "AUTODETECT", # Proxy autodetection (presumably with WPAD).
-        system: "SYSTEM"      # Use system settings (default on Linux).
+        system: "SYSTEM" # Use system settings (default on Linux).
       }
 
       attr_reader :type,
@@ -161,7 +161,6 @@ module Selenium
           proxy
         end
       end # class << self
-
     end # Proxy
   end # WebDriver
 end # Selenium

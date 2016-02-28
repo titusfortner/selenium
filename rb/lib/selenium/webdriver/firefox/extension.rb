@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Firefox
-
       # @api private
       class Extension
         def initialize(path)
@@ -76,7 +75,6 @@ module Selenium
             attr_node.value
           end
         end
-
       end # Extension
     end # Firefox
   end # WebDriver

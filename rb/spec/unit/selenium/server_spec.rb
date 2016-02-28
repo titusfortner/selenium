@@ -120,7 +120,7 @@ describe Selenium::Server do
 
   it "should know what the latest version available is" do
     latest_version = '2.42.2'
-    example_xml ="<?xml version='1.0' encoding='UTF-8'?><ListBucketResult xmlns='http://doc.s3.amazonaws.com/2006-03-01'><Name>selenium-release</Name><Contents><Key>2.39/selenium-server-2.39.0.zip</Key></Contents><Contents><Key>2.42/selenium-server-standalone-#{latest_version}.jar</Key></Contents></ListBucketResult>"
+    example_xml = "<?xml version='1.0' encoding='UTF-8'?><ListBucketResult xmlns='http://doc.s3.amazonaws.com/2006-03-01'><Name>selenium-release</Name><Contents><Key>2.39/selenium-server-2.39.0.zip</Key></Contents><Contents><Key>2.42/selenium-server-standalone-#{latest_version}.jar</Key></Contents></ListBucketResult>"
     stub_request(:get, "http://selenium-release.storage.googleapis.com/").to_return(body: example_xml)
 
     expect(Selenium::Server.latest).to eq(latest_version)

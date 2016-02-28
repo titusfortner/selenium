@@ -90,7 +90,6 @@ module Selenium
           new (r * 255).round, (g * 255).round, (b * 255).round, a
         end
 
-
         def initialize(red, green, blue, alpha = 1)
           @red   = Integer(red)
           @green = Integer(green)
@@ -122,7 +121,6 @@ module Selenium
         def hex
           "#%02x%02x%02x" % [red, green, blue]
         end
-
       end # Color
     end # Support
   end # WebDriver

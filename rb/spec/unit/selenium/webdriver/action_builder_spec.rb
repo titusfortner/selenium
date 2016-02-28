@@ -23,7 +23,7 @@ describe Selenium::WebDriver::ActionBuilder do
   let(:bridge)      { double("Bridge").as_null_object }
   let(:keyboard)    { double(Selenium::WebDriver::Keyboard) }
   let(:mouse)       { double(Selenium::WebDriver::Mouse)    }
-  let(:element)     { Selenium::WebDriver::Element.new(bridge, 'element')  }
+  let(:element)     { Selenium::WebDriver::Element.new(bridge, 'element') }
   let(:builder)     { Selenium::WebDriver::ActionBuilder.new(mouse, keyboard) }
 
   it "should create all keyboard actions" do
@@ -112,5 +112,4 @@ describe Selenium::WebDriver::ActionBuilder do
 
     builder.click_and_hold.release.perform
   end
-
 end

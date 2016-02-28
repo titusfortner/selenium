@@ -88,7 +88,6 @@ module Selenium
               raise Error::WebDriverError, msg
             end
           end
-
         end # Common
       end # Http
     end # Remote
