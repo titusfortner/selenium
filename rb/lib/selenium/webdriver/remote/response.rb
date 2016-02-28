@@ -67,7 +67,8 @@ module Selenium
         def assert_ok
           e = error
           raise e if e
-          return if !@code.nil? && @code > 400
+          return if !@code.nil? && @code < 400
+
           raise Error::ServerError, self
         end
 
