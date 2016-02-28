@@ -63,10 +63,8 @@ module Selenium
       MODIFIERS = [:control, :shift, :alt, :command, :meta]
 
       def assert_modifier(key)
-        unless MODIFIERS.include? key
-          raise ArgumentError,
-            "#{key.inspect} is not a modifier key, expected one of #{MODIFIERS.inspect}"
-        end
+        return if MODIFIERS.include? key
+        raise ArgumentError, "#{key.inspect} is not a modifier key, expected one of #{MODIFIERS.inspect}"
       end
 
     end # Keyboard

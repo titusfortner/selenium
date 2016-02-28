@@ -105,9 +105,8 @@ module Selenium
         def connect_until_stable
           @socket_poller = SocketPoller.new @host, @port, START_TIMEOUT
 
-          unless @socket_poller.connected?
-            raise Error::WebDriverError, "unable to connect to Mozilla Wires #{@host}:#{@port}"
-          end
+          return if @socket_poller.connected?
+          raise Error::WebDriverError, "unable to connect to Mozilla Wires #{@host}:#{@port}"
         end
 
         def socket_lock

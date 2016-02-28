@@ -29,7 +29,7 @@ module Selenium
 
         def initialize(path, port = nil)
           @path = path
-          @app  = TestApp.new(path)
+          @app = TestApp.new(path)
 
           @host = ENV['localhost'] || 'localhost'
           @port = Integer(port || PortProber.above(8180))
@@ -44,9 +44,8 @@ module Selenium
             start_forked
           end
 
-          unless SocketPoller.new(@host, @port, START_TIMEOUT).connected?
-            raise "rack server not launched in #{START_TIMEOUT} seconds"
-          end
+          return if SocketPoller.new(@host, @port, START_TIMEOUT).connected?
+          raise "rack server not launched in #{START_TIMEOUT} seconds"
         end
 
         def run
@@ -123,7 +122,7 @@ module Selenium
 
               status = 200
               header = {"Content-Type" => "text/html"}
-              body   = req['upload'][:tempfile].read
+              body = req['upload'][:tempfile].read
 
               [status, header, [body]]
             else

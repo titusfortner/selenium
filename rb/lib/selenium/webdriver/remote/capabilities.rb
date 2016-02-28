@@ -77,7 +77,7 @@ module Selenium
               :css_selectors_enabled => true,
               :loggingPrefs => {:browser => "ALL",
                                 :driver => "ALL"}
-                }.merge(opts))
+            }.merge(opts))
           end
 
           def edge(opts = {})

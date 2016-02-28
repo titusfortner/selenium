@@ -61,7 +61,7 @@ module Selenium
             new({
               :browser_name => "MicrosoftEdge",
               :platform => :windows,
-                }.merge(opts))
+            }.merge(opts))
           end
 
           def firefox(opts = {})
@@ -71,7 +71,7 @@ module Selenium
             new({
               :browser_name => "firefox",
               :marionette => true
-                }.merge(opts))
+            }.merge(opts))
           end
 
           alias_method :ff, :firefox
