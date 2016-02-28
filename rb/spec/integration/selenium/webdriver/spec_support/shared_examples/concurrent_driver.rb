@@ -23,10 +23,10 @@ shared_examples_for "driver that can be started concurrently" do |browser_name|
       # start 5 drivers concurrently
       threads, drivers = [], []
 
-      opt = GlobalTestEnv.remote_server? ? {:url => GlobalTestEnv.remote_server.webdriver_url} : {}
+      opt = GlobalTestEnv.remote_server? ? {url: GlobalTestEnv.remote_server.webdriver_url} : {}
       if browser_name == :marionette
-        caps = Selenium::WebDriver::Remote::Capabilities.firefox(:marionette => true, :firefox_binary => ENV['MARIONETTE_PATH'])
-        opt.merge!(:desired_capabilities => caps)
+        caps = Selenium::WebDriver::Remote::Capabilities.firefox(marionette: true, firefox_binary: ENV['MARIONETTE_PATH'])
+        opt.merge!(desired_capabilities: caps)
       end
 
       5.times do

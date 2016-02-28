@@ -83,10 +83,10 @@ module Selenium
         def remote_server
           @remote_server ||= (
             Selenium::Server.new(remote_server_jar,
-              :port       => PortProber.above(4444),
-              :log        => !!$DEBUG,
-              :background => true,
-              :timeout    => 60
+              port: PortProber.above(4444),
+              log: !!$DEBUG,
+              background: true,
+              timeout: 60
             )
           )
         end
@@ -164,7 +164,7 @@ module Selenium
 
         def remote_capabilities
           if browser == :marionette
-            caps = WebDriver::Remote::Capabilities.firefox(:marionette => true)
+            caps = WebDriver::Remote::Capabilities.firefox(marionette: true)
           else
             caps = WebDriver::Remote::Capabilities.send(browser)
 
@@ -193,9 +193,9 @@ module Selenium
 
         def create_remote_driver
           WebDriver::Driver.for(:remote,
-            :desired_capabilities => remote_capabilities,
-            :url                  => ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
-            :http_client          => keep_alive_client || http_client
+            desired_capabilities: remote_capabilities,
+            url: ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
+            http_client: keep_alive_client || http_client
           )
         end
 
@@ -209,12 +209,12 @@ module Selenium
         end
 
         def create_marionette_driver
-          WebDriver.for :firefox, :marionette => true
+          WebDriver.for :firefox, marionette: true
         end
 
         def create_edge_driver
           caps = WebDriver::Remote::W3CCapabilities.edge
-          WebDriver.for :edge, :desired_capabilities => caps
+          WebDriver.for :edge, desired_capabilities: caps
         end
 
         def create_chrome_driver
@@ -232,8 +232,8 @@ module Selenium
           args << "--no-sandbox" if ENV['TRAVIS']
 
           WebDriver::Driver.for :chrome,
-                                :native_events => native_events?,
-                                :args          => args
+                                native_events: native_events?,
+                                args: args
         end
 
         def create_phantomjs_driver
@@ -248,7 +248,7 @@ module Selenium
         def create_iphone_driver
           url = ENV['iphone_url']
           if url
-            WebDriver::Driver.for :iphone, :url => url
+            WebDriver::Driver.for :iphone, url: url
           else
             WebDriver::Driver.for :iphone
           end
@@ -256,7 +256,7 @@ module Selenium
 
         def create_safari_driver
           if ENV['timeout']
-            WebDriver::Driver.for :safari, :timeout => Integer(ENV['timeout'])
+            WebDriver::Driver.for :safari, timeout: Integer(ENV['timeout'])
           else
             WebDriver::Driver.for :safari
           end

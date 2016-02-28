@@ -23,7 +23,7 @@ module Selenium
   module WebDriver
 
     # Marionette BUG - Interactions Not Supported
-    not_compliant_on :browser => [:android, :iphone, :safari, :marionette] do
+    not_compliant_on browser: [:android, :iphone, :safari, :marionette] do
       describe Keyboard do
 
         it "sends keys to the active element" do
@@ -31,17 +31,17 @@ module Selenium
 
           driver.keyboard.send_keys "ab"
 
-          text = driver.find_element(:id => "body_result").text.strip
+          text = driver.find_element(id: "body_result").text.strip
           expect(text).to eq("keypress keypress")
 
-          expect(driver.find_element(:id => "result").text.strip).to be_empty
+          expect(driver.find_element(id: "result").text.strip).to be_empty
         end
 
         it "can send keys with shift pressed" do
           driver.navigate.to url_for("javascriptPage.html")
 
-          event_input = driver.find_element(:id => "theworks")
-          keylogger = driver.find_element(:id => "result")
+          event_input = driver.find_element(id: "theworks")
+          keylogger = driver.find_element(id: "result")
 
           driver.mouse.click event_input
 
@@ -60,8 +60,8 @@ module Selenium
         it "can press and release modifier keys" do
           driver.navigate.to url_for("javascriptPage.html")
 
-          event_input = driver.find_element(:id => "theworks")
-          keylogger = driver.find_element(:id => "result")
+          event_input = driver.find_element(id: "theworks")
+          keylogger = driver.find_element(id: "result")
 
           driver.mouse.click event_input
 

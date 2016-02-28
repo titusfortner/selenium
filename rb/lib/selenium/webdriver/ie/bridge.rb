@@ -40,7 +40,7 @@ module Selenium
           native_events  = opts.delete(:native_events) != false
           implementation = opts.delete(:implementation)
 
-          @server = Server.get(:implementation => implementation)
+          @server = Server.get(implementation: implementation)
 
           @server.log_level = opts.delete(:log_level) if opts[:log_level]
           @server.log_file  = opts.delete(:log_file) if opts[:log_file]
@@ -58,8 +58,8 @@ module Selenium
           caps['nativeEvents'] = native_events
 
           remote_opts = {
-            :url => @server.uri,
-            :desired_capabilities => caps
+            url: @server.uri,
+            desired_capabilities: caps
           }
 
           remote_opts[:http_client] = http_client if http_client
