@@ -120,8 +120,6 @@ module Selenium
         end
       end
 
-      private
-
       def net_http
         http_proxy = ENV['http_proxy'] || ENV['HTTP_PROXY']
 
