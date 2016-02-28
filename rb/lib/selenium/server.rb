@@ -94,7 +94,7 @@ module Selenium
                 end
               end
 
-              unless resp.kind_of? Net::HTTPSuccess
+              unless resp.is_a? Net::HTTPSuccess
                 raise Error, "#{resp.code} for #{download_file_name}"
               end
             end
@@ -206,7 +206,7 @@ module Selenium
     end
 
     def <<(arg)
-      if arg.kind_of?(Array)
+      if arg.is_a?(Array)
         @additional_args += arg
       else
         @additional_args << arg.to_s
@@ -234,7 +234,7 @@ module Selenium
         cp = ChildProcess.build("java", "-jar", @jar, "-port", @port.to_s, *@additional_args)
         io = cp.io
 
-        if @log.kind_of?(String)
+        if @log.is_a?(String)
           @log_file = File.open(@log, "w")
           io.stdout = io.stderr = @log_file
         elsif @log

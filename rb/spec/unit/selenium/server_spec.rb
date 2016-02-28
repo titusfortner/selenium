@@ -34,8 +34,8 @@ describe Selenium::Server do
     expect(File).to receive(:exist?).with("selenium-server-test.jar").and_return(true)
 
     expect(ChildProcess).to receive(:build).
-                 with("java", "-jar", "selenium-server-test.jar", "-port", "1234").
-                 and_return(mock_process)
+      with("java", "-jar", "selenium-server-test.jar", "-port", "1234").
+      and_return(mock_process)
 
     server = Selenium::Server.new("selenium-server-test.jar", port: 1234, background: true)
     allow(server).to receive(:socket).and_return(mock_poller)
@@ -47,8 +47,8 @@ describe Selenium::Server do
     expect(File).to receive(:exist?).with("selenium-server-test.jar").and_return(true)
 
     expect(ChildProcess).to receive(:build).
-                 with("java", "-jar", "selenium-server-test.jar", "-port", "4444").
-                 and_return(mock_process)
+      with("java", "-jar", "selenium-server-test.jar", "-port", "4444").
+      and_return(mock_process)
 
     server = Selenium::Server.new("selenium-server-test.jar")
     allow(server).to receive(:socket).and_return(mock_poller)
@@ -61,8 +61,8 @@ describe Selenium::Server do
     expect(File).to receive(:exist?).with("selenium-server-test.jar").and_return(true)
 
     expect(ChildProcess).to receive(:build).
-                 with("java", "-jar", "selenium-server-test.jar", "-port", "4444", "foo", "bar").
-                 and_return(mock_process)
+      with("java", "-jar", "selenium-server-test.jar", "-port", "4444", "foo", "bar").
+      and_return(mock_process)
 
     server = Selenium::Server.new("selenium-server-test.jar", background: true)
     allow(server).to receive(:socket).and_return(mock_poller)

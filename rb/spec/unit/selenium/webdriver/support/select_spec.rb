@@ -65,9 +65,9 @@ module Selenium
           options = []
 
           expect(multi_select).to receive(:find_elements).
-                         with(:tag_name, 'option').
-                         once.
-                         and_return(options)
+            with(:tag_name, 'option').
+            once.
+            and_return(options)
 
           expect(Select.new(multi_select).options).to eql(options)
         end
@@ -77,9 +77,9 @@ module Selenium
           good_option = double(Element, selected?: true)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:tag_name, 'option').
-                         once.
-                         and_return([bad_option, good_option])
+            with(:tag_name, 'option').
+            once.
+            and_return([bad_option, good_option])
 
           opts = Select.new(multi_select).selected_options
 
@@ -92,9 +92,9 @@ module Selenium
           second_option = double(Element, selected?: true)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:tag_name, 'option').
-                         once.
-                         and_return([first_option, second_option])
+            with(:tag_name, 'option').
+            once.
+            and_return([first_option, second_option])
 
           option = Select.new(multi_select).first_selected_option
           expect(option).to eq(first_option)
@@ -104,9 +104,9 @@ module Selenium
           option = double(Element, selected?: false)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:tag_name, 'option').
-                         once.
-                         and_return([option])
+            with(:tag_name, 'option').
+            once.
+            and_return([option])
 
           expect do
             Select.new(multi_select).first_selected_option
@@ -117,9 +117,9 @@ module Selenium
           option = double(Element, selected?: false)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:xpath, './/option[normalize-space(.) = "fish"]').
-                         once.
-                         and_return([option])
+            with(:xpath, './/option[normalize-space(.) = "fish"]').
+            once.
+            and_return([option])
 
           expect(option).to receive(:click).once
 
@@ -137,8 +137,8 @@ module Selenium
           expect(second_option).to receive(:click).once
 
           expect(multi_select).to receive(:find_elements).
-                       with(:tag_name, 'option').
-                       and_return([first_option, second_option])
+            with(:tag_name, 'option').
+            and_return([first_option, second_option])
 
           Select.new(multi_select).select_by(:index, 1)
         end
@@ -146,8 +146,8 @@ module Selenium
         it 'allows options to be selected by returned value' do
           first_option = double(Element, selected?: false)
           expect(multi_select).to receive(:find_elements).
-                         with(:xpath, './/option[@value = "b"]').
-                         and_return([first_option])
+            with(:xpath, './/option[@value = "b"]').
+            and_return([first_option])
 
           expect(first_option).to receive(:click).once
 
@@ -159,9 +159,9 @@ module Selenium
           second_option = double(Element, selected?: false)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:tag_name, 'option').
-                         once.
-                         and_return([first_option, second_option])
+            with(:tag_name, 'option').
+            once.
+            and_return([first_option, second_option])
 
           expect(first_option).to receive(:click).once
           expect(second_option).to receive(:click).never
@@ -182,8 +182,8 @@ module Selenium
           second_option = double(Element, selected?: false)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:xpath, './/option[normalize-space(.) = "b"]').
-                         and_return([first_option, second_option])
+            with(:xpath, './/option[normalize-space(.) = "b"]').
+            and_return([first_option, second_option])
 
           expect(first_option).to receive(:click).once
           expect(second_option).to receive(:click).never
@@ -196,8 +196,8 @@ module Selenium
           second_option = double(Element)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:tag_name, 'option').
-                         and_return([first_option, second_option])
+            with(:tag_name, 'option').
+            and_return([first_option, second_option])
 
           expect(first_option).to receive(:attribute).with(:index).and_return("2")
           expect(second_option).to receive(:attribute).with(:index).and_return("1")
@@ -213,8 +213,8 @@ module Selenium
           second_option = double(Element, selected?: false)
 
           expect(multi_select).to receive(:find_elements).
-                         with(:xpath, './/option[@value = "b"]').
-                         and_return([first_option, second_option])
+            with(:xpath, './/option[@value = "b"]').
+            and_return([first_option, second_option])
 
           expect(first_option).to receive(:click).once
           expect(second_option).to receive(:click).never

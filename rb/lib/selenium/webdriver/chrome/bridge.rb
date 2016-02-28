@@ -88,7 +88,7 @@ module Selenium
           chrome_options = caps['chromeOptions'] || {}
 
           if args
-            unless args.kind_of? Array
+            unless args.is_a? Array
               raise ArgumentError, ":args must be an Array of Strings"
             end
 

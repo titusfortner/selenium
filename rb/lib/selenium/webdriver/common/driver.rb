@@ -91,9 +91,8 @@ module Selenium
         @bridge = bridge
 
         # TODO: refactor this away
-        unless bridge.driver_extensions.empty?
-          extend(*bridge.driver_extensions)
-        end
+        return if bridge.driver_extensions.empty?
+        extend(*bridge.driver_extensions)
       end
 
       def inspect
@@ -270,9 +269,7 @@ module Selenium
       #
 
       def [](sel)
-        if sel.kind_of?(String) || sel.kind_of?(Symbol)
-          sel = { id: sel }
-        end
+        sel = { id: sel } if sel.is_a?(String) || sel.is_a?(Symbol)
 
         find_element sel
       end

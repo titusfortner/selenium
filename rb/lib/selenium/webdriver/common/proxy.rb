@@ -58,7 +58,7 @@ module Selenium
       end
 
       def ==(other)
-        other.kind_of?(self.class) && as_json == other.as_json
+        other.is_a?(self.class) && as_json == other.as_json
       end
       alias_method :eql?, :==
 

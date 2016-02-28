@@ -48,7 +48,7 @@ module Selenium
           case val
           when Hash
             msg = val['message'] or return "unknown error"
-            msg << ": #{val['alert']['text'].inspect}" if val['alert'].kind_of?(Hash) && val['alert']['text']
+            msg << ": #{val['alert']['text'].inspect}" if val['alert'].is_a?(Hash) && val['alert']['text']
             msg << " (#{val['class']})" if val['class']
             msg
           when String
@@ -65,22 +65,19 @@ module Selenium
         private
 
         def assert_ok
-          if e = error
-            raise e
-          elsif @code.nil? || @code >= 400
-            raise Error::ServerError, self
-          end
+          e = error
+          raise e if e
+          return if !@code.nil? && @code > 400
+          raise Error::ServerError, self
         end
 
         def add_backtrace(ex)
-          unless value.kind_of?(Hash) && value['stackTrace']
-            return
-          end
+          return unless value.is_a?(Hash) && value['stackTrace']
 
           server_trace = value['stackTrace']
 
           backtrace = server_trace.map do |frame|
-            next unless frame.kind_of?(Hash)
+            next unless frame.is_a?(Hash)
 
             file = frame['fileName']
             line = frame['lineNumber']
@@ -90,9 +87,7 @@ module Selenium
               file = "#{class_name}(#{file})"
             end
 
-            if meth.nil? || meth.empty?
-              meth = 'unknown'
-            end
+            meth = 'unknown' if meth.nil? || meth.empty?
 
             "[remote server] #{file}:#{line}:in `#{meth}'"
           end.compact

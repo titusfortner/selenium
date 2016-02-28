@@ -35,17 +35,17 @@ module Selenium
         def self.from_string(str)
           case str
           when RGB_PATTERN
-            new $1, $2, $3
+            new Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3)
           when RGB_PCT_PATTERN
-            new(*[$1, $2, $3].map { |e| Float(e) / 100 * 255 })
+            new(*[Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3)].map { |e| Float(e) / 100 * 255 })
           when RGBA_PATTERN
-            new $1, $2, $3, $4
+            new Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3), Regexp.last_match(4)
           when RGBA_PCT_PATTERN
-            new(*[$1, $2, $3].map { |e| Float(e) / 100 * 255 } << $4)
+            new(*[Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3)].map { |e| Float(e) / 100 * 255 } << Regexp.last_match(4))
           when HEX_PATTERN
-            new(*[$1, $2, $3].map { |e| e.to_i(16) })
+            new(*[Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3)].map { |e| e.to_i(16) })
           when HEX3_PATTERN
-            new(*[$1, $2, $3].map { |e| (e * 2).to_i(16) })
+            new(*[Regexp.last_match(1), Regexp.last_match(2), Regexp.last_match(3)].map { |e| (e * 2).to_i(16) })
           when HSL_PATTERN, HSLA_PATTERN
             from_hsl($1, $2, $3, $4)
           else
@@ -72,9 +72,9 @@ module Selenium
               hue -= 1 if hue > 1.0
 
               if hue < 1.0 / 6.0
-                 (lum1 + (lum2 - lum1) * 6.0 * hue)
+                (lum1 + (lum2 - lum1) * 6.0 * hue)
               elsif  hue < 1.0 / 2.0
-                 lum2
+                lum2
               elsif hue < 2.0 / 3.0
                 lum1 + (lum2 - lum1) * ((2.0 / 3.0) - hue) * 6.0
               else
@@ -99,7 +99,7 @@ module Selenium
 
         def ==(other)
           return true if equal?(other)
-          return false unless other.kind_of?(self.class)
+          return false unless other.is_a?(self.class)
 
           [red, green, blue, alpha] == [other.red, other.green, other.blue, other.alpha]
         end

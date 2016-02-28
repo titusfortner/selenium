@@ -32,8 +32,8 @@ describe Selenium::WebDriver::ActionBuilder do
     expect(keyboard).to receive(:release).with(:control)
 
     builder.key_down(:shift).
-            send_keys("abc").
-            key_up(:control).perform
+      send_keys("abc").
+      key_up(:control).perform
   end
 
   it "should pass an element to keyboard actions" do
@@ -55,8 +55,8 @@ describe Selenium::WebDriver::ActionBuilder do
     expect(keyboard).to receive(:release).with(:control)
 
     builder.key_down(element, :shift).
-            send_keys(element2, "abc").
-            key_up(element3, :control).perform
+      send_keys(element2, "abc").
+      key_up(element3, :control).perform
   end
 
   it "should create all mouse actions" do
@@ -68,11 +68,11 @@ describe Selenium::WebDriver::ActionBuilder do
     expect(mouse).to receive(:context_click).with(element)
 
     builder.click_and_hold(element).
-            release(element).
-            click(element).
-            double_click(element).
-            move_to(element).
-            context_click(element).perform
+      release(element).
+      click(element).
+      double_click(element).
+      move_to(element).
+      context_click(element).perform
   end
 
   it "should drag and drop" do
@@ -102,8 +102,8 @@ describe Selenium::WebDriver::ActionBuilder do
     expect(mouse).to receive(:up)
 
     builder.click_and_hold(element).
-            move_by(-300, 400).
-            release.perform
+      move_by(-300, 400).
+      release.perform
   end
 
   it 'can click, hold and release at the current location' do

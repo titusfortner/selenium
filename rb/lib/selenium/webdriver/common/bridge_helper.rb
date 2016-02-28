@@ -62,7 +62,7 @@ module Selenium
               result['name']  = key
               result['value'] = value
             elsif key == 'domain' && value.strip =~ /^\.(.+)/
-              result['domain'] = $1
+              result['domain'] = Regexp.last_match(1)
             elsif key && value
               result[key] = value
             end

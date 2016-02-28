@@ -81,11 +81,11 @@ module Selenium
         def remote_server
           @remote_server ||=
             Selenium::Server.new(remote_server_jar,
-              port: PortProber.above(4444),
-              log: $DEBUG,
-              background: true,
-              timeout: 60
-            )
+                                 port: PortProber.above(4444),
+                                 log: $DEBUG,
+                                 background: true,
+                                 timeout: 60
+                                )
         end
 
         def remote_server?
@@ -99,9 +99,7 @@ module Selenium
         def quit
           app_server.stop
 
-          if defined?(@remote_server)
-            @remote_server.stop
-          end
+          @remote_server.stop if defined?(@remote_server)
 
           @driver_instance = @app_server = @remote_server = nil
         ensure
@@ -190,17 +188,15 @@ module Selenium
 
         def create_remote_driver
           WebDriver::Driver.for(:remote,
-            desired_capabilities: remote_capabilities,
-            url: ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
-            http_client: keep_alive_client || http_client
-          )
+                                desired_capabilities: remote_capabilities,
+                                url: ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
+                                http_client: keep_alive_client || http_client
+                               )
         end
 
         def create_firefox_driver
           binary = ENV['FIREFOX_BINARY']
-          if binary
-            WebDriver::Firefox.path = binary
-          end
+          WebDriver::Firefox.path = binary if binary
 
           WebDriver::Driver.for :firefox
         end
@@ -216,14 +212,10 @@ module Selenium
 
         def create_chrome_driver
           binary = ENV['chrome_binary']
-          if binary
-            WebDriver::Chrome.path = binary
-          end
+          WebDriver::Chrome.path = binary if binary
 
           server = ENV['chromedriver'] || ENV['chrome_server']
-          if server
-            WebDriver::Chrome.driver_path = server
-          end
+          WebDriver::Chrome.driver_path = server if server
 
           args = []
           args << "--no-sandbox" if ENV['TRAVIS']
@@ -235,9 +227,7 @@ module Selenium
 
         def create_phantomjs_driver
           binary = ENV['phantomjs_binary']
-          if binary
-            WebDriver::PhantomJS.path = binary
-          end
+          WebDriver::PhantomJS.path = binary if binary
 
           WebDriver::Driver.for :phantomjs
         end
@@ -265,7 +255,7 @@ module Selenium
 
           Selenium::WebDriver::Remote::Http::Persistent.new
         rescue LoadError
-           # net-http-persistent not available
+          # net-http-persistent not available
         end
 
         def http_client

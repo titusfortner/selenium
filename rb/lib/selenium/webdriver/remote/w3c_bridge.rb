@@ -77,14 +77,14 @@ module Selenium
           desired_capabilities[:marionette] = opts.delete(:marionette) unless opts[:marionette].nil?
 
           if desired_capabilities[:marionette] && Firefox::Binary.version < 45
-              raise Error::WebDriverError, "Marionette is not supported in Firefox Version #{Firefox::Binary.version}"
+            raise Error::WebDriverError, "Marionette is not supported in Firefox Version #{Firefox::Binary.version}"
           end
 
           unless opts.empty?
             raise ArgumentError, "unknown option#{'s' if opts.size != 1}: #{opts.inspect}"
           end
 
-          uri = url.kind_of?(URI) ? url : URI.parse(url)
+          uri = url.is_a?(URI) ? url : URI.parse(url)
           uri.path += "/" unless uri.path =~ %r{\/$}
 
           http_client.server_url = uri
@@ -376,7 +376,7 @@ module Selenium
           execute :deleteCookie, name: name
         end
 
-        # TODO - write specs
+        # TODO: - write specs
         def getCookie(name)
           execute :getCookie, name: name
         end
@@ -432,7 +432,7 @@ module Selenium
           sendKeysToElement(getActiveElement, keys)
         end
 
-        # TODO - Implement file verification
+        # TODO: - Implement file verification
         def sendKeysToElement(element, keys)
           execute :elementSendKeys, {id: element}, {value: keys.join('').split(//)}
         end
@@ -478,8 +478,8 @@ module Selenium
         def touchScroll(element, x, y)
           if element
             execute :touchScroll, {}, {element: element,
-                                      xoffset: x,
-                                      yoffset: y}
+                                       xoffset: x,
+                                       yoffset: y}
           else
             execute :touchScroll, {}, {xoffset: x, yoffset: y}
           end
@@ -491,9 +491,9 @@ module Selenium
 
         def touchElementFlick(element, right_by, down_by, speed)
           execute :touchFlick, {}, {element: element,
-                                   xoffset: right_by,
-                                   yoffset: down_by,
-                                   speed: speed}
+                                    xoffset: right_by,
+                                    yoffset: down_by,
+                                    speed: speed}
         end
 
         def setScreenOrientation(orientation)

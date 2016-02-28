@@ -152,9 +152,9 @@ module Selenium
         end
 
         def merge!(other)
-          if other.respond_to?(:capabilities, true) && other.capabilities.kind_of?(Hash)
+          if other.respond_to?(:capabilities, true) && other.capabilities.is_a?(Hash)
             @capabilities.merge! other.capabilities
-          elsif other.kind_of? Hash
+          elsif other.is_a? Hash
             @capabilities.merge! other
           else
             raise ArgumentError, "argument should be a Hash or implement #capabilities"
@@ -201,7 +201,7 @@ module Selenium
         end
 
         def ==(other)
-          return false unless other.kind_of? self.class
+          return false unless other.is_a? self.class
           as_json == other.as_json
         end
 
@@ -214,7 +214,7 @@ module Selenium
         private
 
         def camel_case(str)
-          str.gsub(/_([a-z])/) { $1.upcase }
+          str.gsub(/_([a-z])/) { Regexp.last_match(1).upcase }
         end
       end # W3CCapabilities
     end # Remote

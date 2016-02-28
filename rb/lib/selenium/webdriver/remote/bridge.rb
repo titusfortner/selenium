@@ -69,7 +69,7 @@ module Selenium
             raise ArgumentError, "unknown option#{'s' if opts.size != 1}: #{opts.inspect}"
           end
 
-          if desired_capabilities.kind_of?(Symbol)
+          if desired_capabilities.is_a?(Symbol)
             unless Capabilities.respond_to?(desired_capabilities)
               raise Error::WebDriverError, "invalid desired capability: #{desired_capabilities.inspect}"
             end
@@ -77,7 +77,7 @@ module Selenium
             desired_capabilities = Capabilities.send(desired_capabilities)
           end
 
-          uri = url.kind_of?(URI) ? url : URI.parse(url)
+          uri = url.is_a?(URI) ? url : URI.parse(url)
           uri.path += "/" unless uri.path =~ %r{\/$}
 
           http_client.server_url = uri
@@ -239,8 +239,8 @@ module Selenium
 
         def setWindowSize(width, height, handle = :current)
           execute :setWindowSize, {window_handle: handle},
-                                   {width: width,
-                                    height: height}
+                  {width: width,
+                   height: height}
         end
 
         def maximizeWindow(handle = :current)
@@ -255,7 +255,7 @@ module Selenium
 
         def setWindowPosition(x, y, handle = :current)
           execute :setWindowPosition, {window_handle: handle},
-                                       {x: x, y: y}
+                  {x: x, y: y}
         end
 
         def getWindowPosition(handle = :current)

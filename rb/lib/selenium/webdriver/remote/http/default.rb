@@ -72,17 +72,14 @@ module Selenium
               raise if retries >= MAX_RETRIES
               retries += 1
               sleep 2
-              retry
 
+              retry
             rescue Errno::ECONNREFUSED => ex
-              if use_proxy?
-                raise ex.class, "using proxy: #{proxy.http}"
-              else
-                raise
-              end
+              raise ex.class, "using proxy: #{proxy.http}" if use_proxy?
+              raise
             end
 
-            if response.kind_of? Net::HTTPRedirection
+            if response.is_a? Net::HTTPRedirection
               raise Error::WebDriverError, "too many redirects" if redirects >= MAX_REDIRECTS
               request(:get, URI.parse(response['Location']), DEFAULT_HEADERS.dup, nil, redirects + 1)
             else
@@ -139,13 +136,13 @@ module Selenium
             if proxy.no_proxy
               ignored = proxy.no_proxy.split(",").any? do |host|
                 host == "*" ||
-                host == server_url.host || (
+                  host == server_url.host || (
                   begin
                     IPAddr.new(host).include?(server_url.host)
                   rescue ArgumentError
                     false
                   end
-                )
+                  )
               end
 
               !ignored

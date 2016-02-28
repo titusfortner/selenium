@@ -49,9 +49,7 @@ module Selenium
 
           @port = @server.start Integer(port), timeout
 
-          if ignore_mode
-            caps['ignoreProtectedModeSettings'] = true
-          end
+          caps['ignoreProtectedModeSettings'] = true if ignore_mode
 
           caps['nativeEvents'] = native_events
 
