@@ -65,7 +65,7 @@ module Selenium
             @server_url or raise Error::WebDriverError, "server_url not set"
           end
 
-          def request(verb, url, headers, payload)
+          def request(_verb, _url, _headers, _payload)
             raise NotImplementedError, "subclass responsibility"
           end
 

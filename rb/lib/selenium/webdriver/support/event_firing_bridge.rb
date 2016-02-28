@@ -113,7 +113,7 @@ module Selenium
           @driver ||= Driver.new(self)
         end
 
-        def dispatch(name, *args, &blk)
+        def dispatch(name, *args, &_blk)
           @listener.__send__("before_#{name}", *args)
           returned = yield
           @listener.__send__("after_#{name}", *args)

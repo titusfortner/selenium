@@ -144,7 +144,7 @@ module Selenium
         raise Error::WebDriverError, "not executable: #{path.inspect}"
       end
 
-      def exit_hook(&blk)
+      def exit_hook(&_blk)
         pid = Process.pid
 
         at_exit do

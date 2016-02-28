@@ -30,7 +30,7 @@ module Selenium
         alias_method :member?, :key?
         alias_method :has_key?, :key?
 
-        def fetch(key, &blk)
+        def fetch(key, &_blk)
           if self.key? key
             return self[key]
           end
@@ -46,7 +46,7 @@ module Selenium
           size == 0
         end
 
-        def each(&blk)
+        def each(&_blk)
           return enum_for(:each) unless block_given?
 
           keys.each do |k|

@@ -36,7 +36,7 @@ module Selenium
       # execution block if the lock could be successfully obtained.
       #
 
-      def locked(&blk)
+      def locked(&_blk)
         lock
 
         begin

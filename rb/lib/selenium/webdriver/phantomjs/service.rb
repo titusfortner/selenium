@@ -42,7 +42,7 @@ module Selenium
           )
         end
 
-        def self.default_service(port = nil)
+        def self.default_service(_port = nil)
           new executable_path, DEFAULT_PORT
         end
 

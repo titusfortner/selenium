@@ -96,7 +96,7 @@ module Selenium
         end
       end
 
-      def with_timeout(&blk)
+      def with_timeout(&_blk)
         max_time = time_now + @timeout
 
         (

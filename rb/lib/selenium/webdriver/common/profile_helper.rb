@@ -33,11 +33,11 @@ module Selenium
         base.extend ClassMethods
       end
 
-      def as_json(opts = nil)
+      def as_json(_opts = nil)
         {'zip' => Zipper.zip(layout_on_disk)}
       end
 
-      def to_json(*args)
+      def to_json(*)
         JSON.generate as_json
       end
 

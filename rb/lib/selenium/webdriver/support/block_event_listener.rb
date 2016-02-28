@@ -26,7 +26,7 @@ module Selenium
           @callback = callback
         end
 
-        def method_missing(meth, *args, &blk)
+        def method_missing(meth, *args, &_blk)
           @callback.call meth, *args
         end
 
