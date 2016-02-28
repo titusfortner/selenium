@@ -66,16 +66,14 @@ module Selenium
             expect(profile).to receive(:layout_on_disk).and_return "ignored"
             expect(Zipper).to receive(:zip).and_return "ignored"
 
-            expect(profile.as_json).to eq({
-              'zip' => "ignored",
-              'extensions' => [Base64.strict_encode64("test")]
-            })
+            expect(profile.as_json).to eq('zip' => "ignored",
+                                          'extensions' => [Base64.strict_encode64("test")])
           end
 
           it "raises an error if the extension doesn't exist" do
-            expect {
+            expect do
               profile.add_extension("/not/likely/to/exist.crx")
-            }.to raise_error
+            end.to raise_error
           end
         end
       end

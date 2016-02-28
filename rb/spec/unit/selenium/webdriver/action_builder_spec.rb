@@ -54,7 +54,7 @@ describe Selenium::WebDriver::ActionBuilder do
     expect(mouse).to receive(:click).with(element3)
     expect(keyboard).to receive(:release).with(:control)
 
-    builder.key_down(element, :shift ).
+    builder.key_down(element, :shift).
             send_keys(element2, "abc").
             key_up(element3, :control).perform
   end

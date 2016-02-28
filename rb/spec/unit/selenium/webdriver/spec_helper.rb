@@ -31,7 +31,7 @@ module Selenium
     module UnitSpecHelper
 
       def with_env(hash, &_blk)
-        hash.each { |k,v| ENV[k.to_s] = v.to_s }
+        hash.each { |k, v| ENV[k.to_s] = v.to_s }
         yield
       ensure
         hash.each_key { |k| ENV.delete(k) }

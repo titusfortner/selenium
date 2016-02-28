@@ -60,7 +60,7 @@ module Selenium
         private
 
         def create_session(desired_capabilities)
-          resp = raw_execute :newSession, {}, desiredCapabilities: desired_capabilities
+          resp = raw_execute :newSession, {}, {desiredCapabilities: desired_capabilities}
           Remote::Capabilities.json_create resp.fetch('value')
         end
 

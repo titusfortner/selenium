@@ -31,7 +31,7 @@ module Selenium
       end
 
       def scroll(*args)
-        unless [2,3].include? args.size
+        unless [2, 3].include? args.size
           raise ArgumentError, "wrong number of arguments, expected 2..3, got #{args.size}"
         end
 
@@ -40,7 +40,7 @@ module Selenium
       end
 
       def flick(*args)
-        unless [2,4].include? args.size
+        unless [2, 4].include? args.size
           raise ArgumentError, "wrong number of arguments, expected 2 or 4, got #{args.size}"
         end
 

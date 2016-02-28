@@ -25,7 +25,7 @@ module Selenium
     module Chrome
 
       describe Bridge do
-        let(:resp)    { {"sessionId" => "foo", "value" => @default_capabilities }}
+        let(:resp)    { {"sessionId" => "foo", "value" => @default_capabilities } }
         let(:service) { double(Service, start: true, uri: "http://example.com") }
         let(:caps)    { {} }
         let(:http)    { double(Remote::Http::Default, call: resp).as_null_object   }
@@ -75,8 +75,8 @@ module Selenium
         it "sets the prefs capability" do
           Bridge.new(http_client: http, prefs: {foo: "bar"})
 
-          expect(caps['chromeOptions']['prefs']).to eq({foo: "bar"})
-          expect(caps['chrome.prefs']).to eq({foo: "bar"})
+          expect(caps['chromeOptions']['prefs']).to eq(foo: "bar")
+          expect(caps['chrome.prefs']).to eq(foo: "bar")
         end
 
         it "lets the user override chrome.detach" do
@@ -101,7 +101,7 @@ module Selenium
         end
 
         it "raises an ArgumentError if args is not an Array" do
-          expect { Bridge.new(args: "--foo=bar")}.to raise_error(ArgumentError)
+          expect { Bridge.new(args: "--foo=bar") }.to raise_error(ArgumentError)
         end
 
         it "uses the given profile" do

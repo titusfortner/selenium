@@ -124,7 +124,7 @@ module Selenium
         end
 
         def create_session(desired_capabilities)
-          resp = raw_execute :newSession, {}, desiredCapabilities: desired_capabilities
+          resp = raw_execute :newSession, {}, {desiredCapabilities: desired_capabilities}
           @session_id = resp['sessionId'] or raise Error::WebDriverError, 'no sessionId in returned payload'
 
           W3CCapabilities.json_create resp['value']
@@ -137,7 +137,7 @@ module Selenium
         end
 
         def get(url)
-          execute :get, {}, url: url
+          execute :get, {}, {url: url}
         end
 
         def setImplicitWaitTimeout(milliseconds)
@@ -149,7 +149,7 @@ module Selenium
         end
 
         def setTimeout(type, milliseconds)
-          execute :setTimeout, {}, type: type, ms: milliseconds
+          execute :setTimeout, {}, {type: type, ms: milliseconds}
         end
 
         #
@@ -199,12 +199,12 @@ module Selenium
         end
 
         def switchToWindow(name)
-          execute :switchToWindow, {}, handle: name
+          execute :switchToWindow, {}, {handle: name}
         end
 
         def switchToFrame(id)
           id = find_element_by('id', id) if id.is_a? String
-          execute :switchToFrame, {}, id: id
+          execute :switchToFrame, {}, {id: id}
         end
 
         def switchToParentFrame
@@ -248,7 +248,7 @@ module Selenium
             raise Error::WebDriverError, 'Switch to desired window before changing its size'
           end
           execute :setWindowSize, {}, {width: width,
-                                   height: height}
+                                       height: height}
         end
 
         def maximizeWindow(handle = :current)
@@ -356,12 +356,12 @@ module Selenium
         #
 
         def executeScript(script, *args)
-          result = execute :executeScript, {}, script: script, args: args
+          result = execute :executeScript, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
         def executeAsyncScript(script, *args)
-          result = execute :executeAsyncScript, {}, script: script, args: args
+          result = execute :executeAsyncScript, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
@@ -370,7 +370,7 @@ module Selenium
         #
 
         def addCookie(cookie)
-          execute :addCookie, {}, cookie: cookie
+          execute :addCookie, {}, {cookie: cookie}
         end
 
         def deleteCookie(name)
@@ -387,7 +387,7 @@ module Selenium
         end
 
         def deleteAllCookies
-          getAllCookies.each { |cookie| deleteCookie(cookie['name'])}
+          getAllCookies.each { |cookie| deleteCookie(cookie['name']) }
         end
 
         #
@@ -399,7 +399,7 @@ module Selenium
         end
 
         def click
-          execute :click, {}, button: 0
+          execute :click, {}, {button: 0}
         end
 
         def doubleClick
@@ -407,7 +407,7 @@ module Selenium
         end
 
         def contextClick
-          execute :click, {}, button: 2
+          execute :click, {}, {button: 2}
         end
 
         def mouseDown
@@ -449,57 +449,57 @@ module Selenium
         end
 
         def dragElement(element, right_by, down_by)
-          execute :dragElement, {id: element}, x: right_by, y: down_by
+          execute :dragElement, {id: element}, {x: right_by, y: down_by}
         end
 
         def touchSingleTap(element)
-          execute :touchSingleTap, {}, element: element
+          execute :touchSingleTap, {}, {element: element}
         end
 
         def touchDoubleTap(element)
-          execute :touchDoubleTap, {}, element: element
+          execute :touchDoubleTap, {}, {element: element}
         end
 
         def touchLongPress(element)
-          execute :touchLongPress, {}, element: element
+          execute :touchLongPress, {}, {element: element}
         end
 
         def touchDown(x, y)
-          execute :touchDown, {}, x: x, y: y
+          execute :touchDown, {}, {x: x, y: y}
         end
 
         def touchUp(x, y)
-          execute :touchUp, {}, x: x, y: y
+          execute :touchUp, {}, {x: x, y: y}
         end
 
         def touchMove(x, y)
-          execute :touchMove, {}, x: x, y: y
+          execute :touchMove, {}, {x: x, y: y}
         end
 
         def touchScroll(element, x, y)
           if element
-            execute :touchScroll, {}, element: element,
+            execute :touchScroll, {}, {element: element,
                                       xoffset: x,
-                                      yoffset: y
+                                      yoffset: y}
           else
-            execute :touchScroll, {}, xoffset: x, yoffset: y
+            execute :touchScroll, {}, {xoffset: x, yoffset: y}
           end
         end
 
         def touchFlick(xspeed, yspeed)
-          execute :touchFlick, {}, xspeed: xspeed, yspeed: yspeed
+          execute :touchFlick, {}, {xspeed: xspeed, yspeed: yspeed}
         end
 
         def touchElementFlick(element, right_by, down_by, speed)
-          execute :touchFlick, {}, element: element,
+          execute :touchFlick, {}, {element: element,
                                    xoffset: right_by,
                                    yoffset: down_by,
-                                   speed: speed
+                                   speed: speed}
 
         end
 
         def setScreenOrientation(orientation)
-          execute :setScreenOrientation, {}, orientation: orientation
+          execute :setScreenOrientation, {}, {orientation: orientation}
         end
 
         def getScreenOrientation
@@ -638,9 +638,9 @@ module Selenium
           path[':session_id'] = @session_id if path.include?(":session_id")
 
           begin
-            opts.each { |key, value|
+            opts.each do |key, value|
               path[key.inspect] = escaper.escape(value.to_s)
-            }
+            end
           rescue IndexError
             raise ArgumentError, "#{opts.inspect} invalid for #{command.inspect}"
           end
