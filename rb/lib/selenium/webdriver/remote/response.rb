@@ -67,11 +67,11 @@ module Selenium
         private
 
         def assert_ok
-          if e = error()
-            raise e
-          elsif @code.nil? || @code >= 400
-            raise Error::ServerError, self
-          end
+          e = error
+          raise e if e
+          return if !@code.nil? && @code < 400
+
+          raise Error::ServerError, self
         end
 
         def add_backtrace(ex)

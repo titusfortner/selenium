@@ -93,9 +93,7 @@ module Selenium
         @bridge = bridge
 
         # TODO: refactor this away
-        unless bridge.driver_extensions.empty?
-          extend(*bridge.driver_extensions)
-        end
+        extend(*bridge.driver_extensions) unless bridge.driver_extensions.empty?
       end
 
       def inspect

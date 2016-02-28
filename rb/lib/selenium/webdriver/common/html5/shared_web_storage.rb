@@ -35,11 +35,8 @@ module Selenium
             return self[key]
           end
 
-          if block_given?
-            yield key
-          else
-            raise KeyError, "missing key #{key.inspect}"
-          end
+          return yield key if block_given?
+          raise KeyError, "missing key #{key.inspect}"
         end
 
         def empty?

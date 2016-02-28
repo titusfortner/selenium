@@ -336,7 +336,7 @@ describe "Selenium::WebDriver::TargetLocator" do
         driver.navigate.to url_for("basicAuth")
         driver.switch_to.alert.authenticate("invalid", "invalid")
 
-        wait = Selenium::WebDriver::Wait.new(:timeout => 5, :ignore => Selenium::WebDriver::Error::NoSuchAlertError)
+        wait = Selenium::WebDriver::Wait.new(timeout: 5, ignore: Selenium::WebDriver::Error::NoSuchAlertError)
         wait.until { driver.switch_to.alert }
 
         expect { driver.switch_to.alert.dismiss }.to_not raise_error

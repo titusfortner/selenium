@@ -34,11 +34,8 @@ module Selenium
         def self.get(opts = {})
           binary = IE.driver_path || Platform.find_binary("IEDriverServer")
 
-          if binary
-            new binary, opts
-          else
-            raise Error::WebDriverError, MISSING_TEXT
-          end
+          return new(binary, opts) if binary
+          raise Error::WebDriverError, MISSING_TEXT
         end
 
         attr_accessor :log_level, :log_file
@@ -55,9 +52,8 @@ module Selenium
           @log_file       = opts.delete(:log_file)
           @implementation = opts.delete(:implementation)
 
-          unless opts.empty?
-            raise ArgumentError, "invalid option#{'s' if opts.size != 1}: #{opts.inspect}"
-          end
+          return if opts.empty?
+          raise ArgumentError, "invalid option#{'s' if opts.size != 1}: #{opts.inspect}"
         end
 
         def start(port, timeout)
@@ -76,9 +72,7 @@ module Selenium
         end
 
         def stop
-          if running?
-            @process.stop STOP_TIMEOUT
-          end
+          @process.stop STOP_TIMEOUT if running?
         end
 
         def port
@@ -118,9 +112,8 @@ module Selenium
         def connect_until_stable(timeout)
           socket_poller = SocketPoller.new Platform.localhost, @port, timeout
 
-          unless socket_poller.connected?
-            raise Error::WebDriverError, "unable to connect to IE server within #{timeout} seconds"
-          end
+          return if socket_poller.connected?
+          raise Error::WebDriverError, "unable to connect to IE server within #{timeout} seconds"
         end
 
         def socket_lock
