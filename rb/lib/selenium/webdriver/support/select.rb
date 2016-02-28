@@ -224,8 +224,6 @@ module Selenium
           deselect_options opts
         end
 
-        private
-
         def select_option(option)
           option.click unless option.selected?
         end

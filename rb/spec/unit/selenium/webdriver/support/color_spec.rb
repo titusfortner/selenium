@@ -94,7 +94,7 @@ module Selenium
           hsl = "hsl(100, 0%, 50%)"
           rgba = "rgba(128, 128, 128, 1)"
 
-          expect(Color.from_string(hsl).rgba).to eq("rgba(128, 128, 128, 1)")
+          expect(Color.from_string(hsl).rgba).to eq(rgba)
         end
 
         it "converts hsla to rgba" do

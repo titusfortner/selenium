@@ -91,7 +91,6 @@ module Selenium::WebDriver::DriverExtensions
           link = driver.find_element(id: "link3")
           expect(link.location.y).to be > 4200
 
-          to_flick = driver.find_element(id: "imagestart")
           driver.touch.flick(0, 750).perform
 
           expect(link.location.y).to be < 4200
@@ -116,7 +115,7 @@ module Selenium::WebDriver::DriverExtensions
         compliant_on browser: nil do
           it "can scroll vertically from element" do
             link = driver.find_element(id: "link3")
-            link.location.y > 4200
+            expect(link.location.y).to be > 4200
 
             to_scroll = driver.find_element(id: "imagestart")
             driver.touch.scroll(to_scroll, 0, -800).perform
@@ -127,7 +126,7 @@ module Selenium::WebDriver::DriverExtensions
 
         it "can scroll vertically" do
           link = driver.find_element(id: "link3")
-          link.location.y > 4200
+          expect(link.location.y).to be > 4200
 
           driver.touch.scroll(0, 800).perform
 
@@ -141,7 +140,7 @@ module Selenium::WebDriver::DriverExtensions
           to_scroll = driver.find_element(id: "imagestart")
           driver.touch.scroll(to_scroll, -1000, 0).perform
 
-          link.location.x < 1500
+          expect(link.location.x).to be < 1500
         end
 
         it "can scroll horizontally" do
@@ -150,7 +149,7 @@ module Selenium::WebDriver::DriverExtensions
 
           driver.touch.scroll(400, 0).perform
 
-          link.location.x < 1500
+          expect(link.location.x).to be < 1500
         end
       end
 

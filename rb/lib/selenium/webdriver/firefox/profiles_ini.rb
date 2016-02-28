@@ -72,7 +72,7 @@ module Selenium
 
         def path_for(name, is_relative, path)
           return unless [name, path].any?
-          path = is_relative ? File.join(Util.app_data_path, path) : path
+          is_relative ? File.join(Util.app_data_path, path) : path
         end
 
       end # ProfilesIni
