@@ -97,7 +97,7 @@ module Selenium
       #
 
       def self.[](key)
-        KEYS[key] or raise Error::UnsupportedOperationError, "no such key #{key.inspect}"
+        KEYS[key] || raise(Error::UnsupportedOperationError, "no such key #{key.inspect}")
       end
 
       #

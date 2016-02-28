@@ -76,7 +76,7 @@ module Selenium
 
         def first_selected_option
           option = options.find { |e| e.selected? }
-          option or raise Error::NoSuchElementError, 'no options are selected'
+          option || raise(Error::NoSuchElementError, 'no options are selected')
         end
 
         #
