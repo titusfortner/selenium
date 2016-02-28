@@ -30,7 +30,7 @@ module Selenium
 
     module Zipper
 
-      EXTENSIONS = %w[.zip .xpi]
+      EXTENSIONS = %w(.zip .xpi)
 
       class << self
 

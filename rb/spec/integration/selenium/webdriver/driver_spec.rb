@@ -28,7 +28,7 @@ describe "Driver" do
 
   it "should get the page source" do
     driver.navigate.to url_for("xhtmlTest.html")
-    expect(driver.page_source).to match(%r[<title>XHTML Test Page</title>]i)
+    expect(driver.page_source).to match(%r{<title>XHTML Test Page</title>}i)
   end
 
   it "should refresh the page" do
@@ -214,7 +214,7 @@ describe "Driver" do
 
     it "should return arrays" do
       driver.navigate.to url_for("xhtmlTest.html")
-      expect(driver.execute_script('return ["zero", "one", "two"];')).to eq(%w[zero one two])
+      expect(driver.execute_script('return ["zero", "one", "two"];')).to eq(%w(zero one two))
     end
 
     # Marionette BUG - Not finding local javascript for execution

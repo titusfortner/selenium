@@ -45,10 +45,10 @@ module Selenium
         end
 
         it "sets the args capability" do
-          Bridge.new(http_client: http, args: %w[--foo=bar])
+          Bridge.new(http_client: http, args: %w(--foo=bar))
 
-          expect(caps['chromeOptions']['args']).to eq(%w[--foo=bar])
-          expect(caps['chrome.switches']).to eq(%w[--foo=bar])
+          expect(caps['chromeOptions']['args']).to eq(%w(--foo=bar))
+          expect(caps['chrome.switches']).to eq(%w(--foo=bar))
         end
 
         it "sets the proxy capabilitiy" do
@@ -134,14 +134,14 @@ module Selenium
 
         it 'lets direct arguments take presedence over capabilities' do
           custom_caps = Remote::Capabilities.new
-          custom_caps['chromeOptions'] = {'args' => %w[foo bar]}
+          custom_caps['chromeOptions'] = {'args' => %w(foo bar)}
 
           expect(http).to receive(:call) do |_, _, payload|
             expect(payload[:desiredCapabilities]['chromeOptions']['args']).to eq(['baz'])
             resp
           end
 
-          Bridge.new(http_client: http, desired_capabilities: custom_caps, args: %w[baz])
+          Bridge.new(http_client: http, desired_capabilities: custom_caps, args: %w(baz))
         end
 
         it 'accepts :service_log_path' do

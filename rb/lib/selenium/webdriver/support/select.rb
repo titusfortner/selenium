@@ -288,9 +288,9 @@ module Selenium
         module Escaper
           def self.escape(str)
             if str.include?('"') && str.include?("'")
-              parts = str.split('"', -1).map { |part| %{"#{part}"} }
+              parts = str.split('"', -1).map { |part| %("#{part}") }
 
-              quoted = parts.join(%{, '"', }).
+              quoted = parts.join(%(, '"', )).
                              gsub(/^"", |, ""$/, '')
 
               "concat(#{quoted})"
@@ -299,7 +299,7 @@ module Selenium
               "'#{str}'"
             else
               # otherwise return the quoted string
-              %{"#{str}"}
+              %("#{str}")
             end
           end
 

@@ -307,7 +307,7 @@ module Selenium
         tn = tag_name.downcase
         type = attribute(:type).to_s.downcase
 
-        tn == "option" || (tn == "input" && %w[radio checkbox].include?(type))
+        tn == "option" || (tn == "input" && %w(radio checkbox).include?(type))
       end
 
     end # Element

@@ -116,7 +116,7 @@ module Selenium
 
           # legacy options - for chromedriver < 17.0.963.0
           caps["chrome.switches"] = chrome_options['args'] if chrome_options.member?('args')
-          %w[binary detach extensions nativeEvents noWebsiteTestingDefaults prefs profile verbose].each do |key|
+          %w(binary detach extensions nativeEvents noWebsiteTestingDefaults prefs profile verbose).each do |key|
             caps["chrome.#{key}"] = chrome_options[key] if chrome_options.member?(key)
           end
 

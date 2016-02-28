@@ -34,15 +34,15 @@ module Selenium
         end
 
         it 'starts the server with the given arguments' do
-          expect(service).to receive(:start).with(%w[--foo --bar])
-          Bridge.new(http_client: http, args: %w[--foo --bar])
+          expect(service).to receive(:start).with(%w(--foo --bar))
+          Bridge.new(http_client: http, args: %w(--foo --bar))
         end
 
         it 'reads server arguments from desired capabilities if not given directly' do
-          expect(service).to receive(:start).with(%w[--foo --bar])
+          expect(service).to receive(:start).with(%w(--foo --bar))
 
           caps = Remote::Capabilities.phantomjs
-          caps['phantomjs.cli.args'] = %w[--foo --bar]
+          caps['phantomjs.cli.args'] = %w(--foo --bar)
 
           Bridge.new(http_client: http, desired_capabilities: caps)
         end
@@ -59,12 +59,12 @@ module Selenium
         end
 
         it 'lets direct arguments take presedence over capabilities' do
-          expect(service).to receive(:start).with(%w[--foo --bar])
+          expect(service).to receive(:start).with(%w(--foo --bar))
 
           caps = Remote::Capabilities.phantomjs
-          caps['phantomjs.cli.args'] = %w[--baz]
+          caps['phantomjs.cli.args'] = %w(--baz)
 
-          Bridge.new(http_client: http, desired_capabilities: caps, args: %w[--foo --bar])
+          Bridge.new(http_client: http, desired_capabilities: caps, args: %w(--foo --bar))
         end
 
       end

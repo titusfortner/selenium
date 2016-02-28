@@ -71,7 +71,7 @@ module Selenium
 
       #
       # Occurs if the given session id is not in the list of active sessions,
-      # meaning the session either does not exist or that it’s not active.
+      # meaning the session either does not exist or that it's not active.
       #
 
       class InvalidSessionIdError < WebDriverError; end
@@ -83,7 +83,7 @@ module Selenium
       class JavascriptError < WebDriverError; end
 
       #
-      # The target for mouse interaction is not in the browser’s viewport and
+      # The target for mouse interaction is not in the browser's viewport and
       # cannot be brought into that viewport.
       #
 
@@ -142,7 +142,7 @@ module Selenium
       class TimeoutError < WebDriverError; end
 
       #
-      # A request to set a cookie’s value could not be satisfied.
+      # A request to set a cookie's value could not be satisfied.
       #
 
       class UnableToSetCookieError < WebDriverError; end

@@ -50,7 +50,7 @@ module Selenium
             @path
           else
             unless Zipper::EXTENSIONS.include? File.extname(@path)
-              raise Error::WebDriverError, "expected #{Zipper::EXTENSIONS.join(" or ")}, got #{@path.inspect}"
+              raise Error::WebDriverError, "expected #{Zipper::EXTENSIONS.join(' or ')}, got #{@path.inspect}"
             end
 
             @should_reap_root = true

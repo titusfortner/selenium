@@ -72,9 +72,9 @@ module Selenium
         def handler
           # can't use Platform here since it's being run as a file on Windows + IE.
           if RUBY_PLATFORM =~ /mswin|msys|mingw32/
-            handlers = %w[mongrel webrick]
+            handlers = %w(mongrel webrick)
           else
-            handlers = %w[thin mongrel webrick]
+            handlers = %w(thin mongrel webrick)
           end
 
           handler = handlers.find { |h| load_handler h }
@@ -100,7 +100,7 @@ module Selenium
         end
 
         def start_windows
-          if %w[ie internet_explorer].include? ENV['WD_SPEC_DRIVER']
+          if %w(ie internet_explorer).include? ENV['WD_SPEC_DRIVER']
             # For IE, the combination of Windows + FFI + MRI seems to cause a
             # deadlock with the get() call and the server thread.
             # Workaround by running this file in a subprocess.

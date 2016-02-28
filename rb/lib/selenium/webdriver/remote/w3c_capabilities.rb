@@ -60,7 +60,7 @@ module Selenium
           def edge(opts = {})
             new({
               browser_name: "MicrosoftEdge",
-              platform: :windows,
+              platform: :windows
             }.merge(opts))
           end
 

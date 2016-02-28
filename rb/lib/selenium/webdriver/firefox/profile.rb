@@ -224,7 +224,7 @@ module Selenium
         end
 
         def delete_lock_files(directory)
-          %w[.parentlock parent.lock].each do |name|
+          %w(.parentlock parent.lock).each do |name|
             FileUtils.rm_f File.join(directory, name)
           end
         end

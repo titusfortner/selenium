@@ -51,7 +51,7 @@ module Selenium
       end
 
       it "will use the message from any NoSuchElementError raised while waiting" do
-        block = lambda { raise Error::NoSuchElementError, "foo" }
+        block = -> { raise Error::NoSuchElementError, "foo" }
 
         expect {
           wait(timeout: 0.5).until(&block)

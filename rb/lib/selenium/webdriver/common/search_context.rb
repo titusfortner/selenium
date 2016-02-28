@@ -32,7 +32,7 @@ module Selenium
         name: 'name',
         partial_link_text: 'partial link text',
         tag_name: 'tag name',
-        xpath: 'xpath',
+        xpath: 'xpath'
       }
 
       #
