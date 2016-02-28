@@ -30,7 +30,9 @@ module Selenium
 
         let(:extension) {
           ext = Extension.new('/foo')
-          def ext.read_id(dir); read_id_from_install_rdf(dir); end
+          def ext.read_id(dir)
+            read_id_from_install_rdf(dir)
+          end
 
           ext
         }

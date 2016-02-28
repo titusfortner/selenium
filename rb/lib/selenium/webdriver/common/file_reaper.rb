@@ -27,13 +27,10 @@ module Selenium
     module FileReaper
 
       class << self
-        def reap=(bool)
-          @reap = bool
-        end
+        attr_writer :reap
 
         def reap?
-          @reap = true unless defined?(@reap)
-          !!@reap
+          @reap = defined?(@reap) ? @reap : true
         end
 
         def tmp_files

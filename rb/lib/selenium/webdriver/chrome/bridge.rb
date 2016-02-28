@@ -27,7 +27,7 @@ module Selenium
         def initialize(opts = {})
           http_client = opts.delete(:http_client)
 
-          if opts.has_key?(:url)
+          if opts.key?(:url)
             url = opts.delete(:url)
           else
             @service = Service.default_service(*extract_service_args(opts))
@@ -94,7 +94,7 @@ module Selenium
               raise ArgumentError, ":args must be an Array of Strings"
             end
 
-            chrome_options['args'] = args.map { |e| e.to_s }
+            chrome_options['args'] = args.map(&:to_s)
           end
 
           if profile
@@ -107,7 +107,7 @@ module Selenium
           chrome_options['binary']                   = Chrome.path if Chrome.path
           chrome_options['nativeEvents']             = true if native_events
           chrome_options['verbose']                  = true if verbose
-          chrome_options['detach']                   = detach.nil? || !!detach
+          chrome_options['detach']                   = detach != false
           chrome_options['noWebsiteTestingDefaults'] = true if no_website_testing_defaults
           chrome_options['prefs']                    = prefs if prefs
 
@@ -126,7 +126,7 @@ module Selenium
         def extract_service_args(opts)
           args = []
 
-          if opts.has_key?(:service_log_path)
+          if opts.key?(:service_log_path)
             args << "--log-path=#{opts.delete(:service_log_path)}"
           end
 

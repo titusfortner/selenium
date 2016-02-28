@@ -31,7 +31,7 @@ module Selenium
         alias_method :has_key?, :key?
 
         def fetch(key, &_blk)
-          if self.key? key
+          if key? key
             return self[key]
           end
 

@@ -80,14 +80,13 @@ module Selenium
         end
 
         def remote_server
-          @remote_server ||= (
+          @remote_server ||=
             Selenium::Server.new(remote_server_jar,
               port: PortProber.above(4444),
-              log: !!$DEBUG,
+              log: $DEBUG,
               background: true,
               timeout: 60
             )
-          )
         end
 
         def remote_server?

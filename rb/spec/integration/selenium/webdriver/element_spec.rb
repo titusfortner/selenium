@@ -34,8 +34,8 @@ describe "Element" do
   compliant_on browser: [:chrome, :firefox] do
     it "should raise if different element receives click" do
       driver.navigate.to url_for("click_tests/overlapping_elements.html")
-      expect { driver.find_element(:id, "contents").click }
-        .to raise_error(Selenium::WebDriver::Error::UnknownError,
+      expect { driver.find_element(:id, "contents").click }.
+        to raise_error(Selenium::WebDriver::Error::UnknownError,
           %r{Element is not clickable at point \(\d+, \d+\)\. Other element would receive the click: <div id="over"><\/div>/})
     end
   end

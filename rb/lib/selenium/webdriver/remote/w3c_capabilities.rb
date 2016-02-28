@@ -211,9 +211,7 @@ module Selenium
 
         protected
 
-        def capabilities
-          @capabilities
-        end
+        attr_reader :capabilities
 
         private
 

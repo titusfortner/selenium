@@ -64,7 +64,7 @@ module Selenium
         #
 
         def selected_options
-          options.select { |e| e.selected? }
+          options.select(&:selected?)
         end
 
         #
@@ -75,7 +75,7 @@ module Selenium
         #
 
         def first_selected_option
-          option = options.find { |e| e.selected? }
+          option = options.find(&:selected?)
           option || raise(Error::NoSuchElementError, 'no options are selected')
         end
 
@@ -253,7 +253,7 @@ module Selenium
           opts = @element.find_elements(:xpath, xpath)
 
           if opts.empty? && text =~ /\s+/
-            longest_word = text.split(/\s+/).max_by { |item| item.size }
+            longest_word = text.split(/\s+/).max_by(&:size)
 
             if longest_word.empty?
               candidates = options

@@ -81,9 +81,7 @@ module Selenium
           end
         end
 
-        def port
-          @port
-        end
+        attr_reader :port
 
         def uri
           "http://#{Platform.localhost}:#{port}"

@@ -109,9 +109,7 @@ Server: safaridriver-ruby
           http = @server.accept
 
           req = ''
-          until req.include?("\r\n\r\n")
-            req << http.read(1)
-          end
+          req << http.read(1) until req.include?("\r\n\r\n")
 
           if !req.include?("?url=")
             http << HEADERS % [302, 'Moved Temporarily']

@@ -51,9 +51,7 @@ module Selenium
       def lock
         max_time = Time.now + @timeout
 
-        until can_lock? || Time.now >= max_time
-          sleep 0.1
-        end
+        sleep 0.1 until can_lock? || Time.now >= max_time
 
         return if did_lock?
         raise Error::WebDriverError, "unable to bind to locking port #{@port} within #{@timeout} seconds"
@@ -74,7 +72,7 @@ module Selenium
       end
 
       def did_lock?
-        !!@server
+        @server
       end
 
     end # SocketLock

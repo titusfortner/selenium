@@ -25,7 +25,7 @@ module Selenium
       before { FileReaper.reap = true }
 
       let(:tmp_file) do
-        Pathname.new(Dir.tmpdir).join(SecureRandom.uuid).tap { |f| f.mkpath }
+        Pathname.new(Dir.tmpdir).join(SecureRandom.uuid).tap(&:mkpath)
       end
 
       it 'reaps files that have been added' do

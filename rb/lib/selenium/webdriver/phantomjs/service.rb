@@ -82,7 +82,11 @@ module Selenium
           @process.stop STOP_TIMEOUT
 
           if Platform.jruby? && !$DEBUG
-            @process.io.close rescue nil
+            begin
+              @process.io.close
+            rescue
+              nil
+            end
           end
         end
 
@@ -100,7 +104,7 @@ module Selenium
           server_command = [@executable, "--webdriver=#{@port}", *args]
           @process = ChildProcess.build(*server_command.compact)
 
-          if $DEBUG == true
+          if $DEBUG
             @process.io.inherit!
           elsif Platform.jruby?
             # apparently we need to read the output for phantomjs to work on jruby

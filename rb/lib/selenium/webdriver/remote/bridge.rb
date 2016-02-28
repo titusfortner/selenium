@@ -508,7 +508,7 @@ module Selenium
 
         def getAvailableLogTypes
           types = execute :getAvailableLogTypes
-          Array(types).map { |e| e.to_sym }
+          Array(types).map(&:to_sym)
         end
 
         def getLog(type)

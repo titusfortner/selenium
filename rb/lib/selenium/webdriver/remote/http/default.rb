@@ -150,7 +150,7 @@ module Selenium
 
               end
 
-              not ignored
+              !ignored
             else
               true
             end

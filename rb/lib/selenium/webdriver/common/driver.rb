@@ -299,9 +299,7 @@ module Selenium
 
       private
 
-      def bridge
-        @bridge
-      end
+      attr_reader :bridge
 
     end # Driver
   end # WebDriver

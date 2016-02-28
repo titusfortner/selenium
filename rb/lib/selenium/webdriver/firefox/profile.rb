@@ -130,7 +130,7 @@ module Selenium
         end
 
         def add_webdriver_extension
-          return if @extensions.has_key?(:webdriver)
+          return if @extensions.key?(:webdriver)
           add_extension(WEBDRIVER_EXTENSION_PATH, :webdriver)
         end
 
@@ -256,12 +256,12 @@ module Selenium
           return prefs unless File.exist?(path)
 
           File.read(path).split("\n").each do |line|
-            if line =~ /user_pref\("([^"]+)"\s*,\s*(.+?)\);/
-              key, value = $1.strip, $2.strip
+            next unless line =~ /user_pref\("([^"]+)"\s*,\s*(.+?)\);/
+            key = $1.strip
+            value = $2.strip
 
-              # wrap the value in an array to make it a valid JSON string.
-              prefs[key] = JSON.parse("[#{value}]").first
-            end
+            # wrap the value in an array to make it a valid JSON string.
+            prefs[key] = JSON.parse("[#{value}]").first
           end
 
           prefs

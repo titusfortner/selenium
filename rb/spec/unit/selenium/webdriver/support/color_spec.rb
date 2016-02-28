@@ -71,7 +71,7 @@ module Selenium
 
           expect(Color.from_string(hex).rgba).to eq(rgba)
 
-          hex = "#00ff33";
+          hex = "#00ff33"
           rgba = "rgba(0, 255, 51, 1)"
 
           expect(Color.from_string(hex).rgba).to eq(rgba)
