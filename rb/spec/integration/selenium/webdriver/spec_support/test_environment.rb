@@ -231,7 +231,7 @@ module Selenium
           end
 
           args = []
-          args << "--no-sandbox" if ENV['TRAVIS']
+          args << "--no-sandbox" #if ENV['TRAVIS']
 
           WebDriver::Driver.for :chrome,
                                 :native_events => native_events?,
