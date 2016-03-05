@@ -220,12 +220,13 @@ module Selenium
         end
 
         def create_chrome_driver
-          binary = ENV['chrome_binary']
+          $DEBUG = true
+          binary = ENV['CHROME_BINARY']
           if binary
             WebDriver::Chrome.path = binary
           end
 
-          server = ENV['chromedriver'] || ENV['chrome_server']
+          server = ENV['CHROMEDRIVER'] || ENV['chrome_server']
           if server
             WebDriver::Chrome.driver_path = server
           end
