@@ -1,14 +1,14 @@
 language: java
 sudo: required
 
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+
 script:
   - rvm install ruby-2.2.3
   - rvm use 2.2.3
   - |
-    set -e
-    set -x
-
-    sh -e /etc/init.d/xvfb start
 
     export CHROME_REVISION=354250
     export CHROMEDRIVER_VERSION=`curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE`
