@@ -1,31 +1,26 @@
 language: java
 sudo: false
 
-notifications:
-  email: false
-  irc:
-    channels:
-      - "chat.freenode.org#selenium"
-    on_success: never
-    on_failure: always
-    use_notice: true
-    skip_join: true
-
 script:
-  - ./go clean build
   - |
-    export PY_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^py/`
-    if [[ $PY_FILES_CHANGED == py/* ]]; then
-      pip install --user virtualenv
-      export PATH=$PATH:$HOME/.local/bin
-      ./go py_prep_for_install_release //py:phantomjs_test:run
-    else
-      echo 'no Python files changed - skipping Python test suite'
-    fi
-  - |
-    export RB_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^rb/`
-    if [[ $RB_FILES_CHANGED == rb/* ]]; then
-      ./go //rb:unit-test //rb:phantomjs-test
-    else
-      echo 'no Ruby files changed - skipping Ruby test suite'
-    fi
+    set -e
+    set -x
+
+    sh -e /etc/init.d/xvfb start
+
+    export CHROME_REVISION=354250
+    export CHROMEDRIVER_VERSION=`curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE`
+
+    curl -L -O "http://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/354250/chrome-linux.zip"
+    unzip chrome-linux.zip
+
+    curl -L -O "http://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip"
+    unzip chromedriver_linux64.zip
+
+    mv chromedriver chrome-linux/chromedriver
+    chmod +x chrome-linux/chromedriver
+
+    export chrome_binary=$PWD/chrome-linux/chrome
+    export chromedriver=$PWD/chrome-linux/chromedriver
+
+  - ./go //rb:chrome-test
