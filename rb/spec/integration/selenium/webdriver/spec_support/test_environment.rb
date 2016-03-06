@@ -220,7 +220,6 @@ module Selenium
         end
 
         def create_chrome_driver
-          $DEBUG = true
           binary = ENV['CHROME_BINARY']
           if binary
             WebDriver::Chrome.path = binary

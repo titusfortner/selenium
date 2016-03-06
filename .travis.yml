@@ -6,8 +6,6 @@ before_script:
 
 script:
 
-  - chromium-browser --version
-
   -  export CHROME_REVISION=`curl -s http://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/LAST_CHANGE`
   -  export CHROMEDRIVER_VERSION=`curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE`
 
@@ -19,9 +17,12 @@ script:
 
   -  mv chromedriver chrome-linux/chromedriver
   -  chmod +x chrome-linux/chromedriver
-
   -  export PATH=$PATH:$PWD/chrome-linux
+
   -  export CHROME_BINARY=$PWD/chrome-linux/chrome
   -  export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
+
+  - rvm install 2.2.3
+  - rvm use 2.2.3
 
   - ./go //rb:chrome-test
