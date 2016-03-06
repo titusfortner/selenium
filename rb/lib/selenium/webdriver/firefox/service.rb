@@ -34,7 +34,7 @@ module Selenium
         def self.executable_path
           @executable_path ||= (
             path = Platform.find_binary "wires"
-            path or raise Error::WebDriverError, MISSING_TEXT
+            raise Error::WebDriverError, MISSING_TEXT unless path
             Platform.assert_executable path
 
             path

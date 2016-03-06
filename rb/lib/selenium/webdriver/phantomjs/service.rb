@@ -35,7 +35,7 @@ module Selenium
         def self.executable_path
           @executable_path ||= (
             path = PhantomJS.path
-            path or raise Error::WebDriverError, MISSING_TEXT
+            raise Error::WebDriverError, MISSING_TEXT unless path
             Platform.assert_executable path
 
             path
@@ -96,7 +96,7 @@ module Selenium
           server_command = [@executable, "--webdriver=#{@port}", *args]
           @process = ChildProcess.build(*server_command.compact)
 
-          if $DEBUG == true
+          if $DEBUG
             @process.io.inherit!
           elsif Platform.jruby?
             # apparently we need to read the output for phantomjs to work on jruby

@@ -49,7 +49,8 @@ module Selenium
 
           case val
           when Hash
-            msg = val['message'] or return "unknown error"
+            return "unknown error" unless val['message']
+            msg = val['message']
             msg << ": #{val['alert']['text'].inspect}" if val['alert'].kind_of?(Hash) && val['alert']['text']
             msg << " (#{ val['class'] })" if val['class']
             msg
@@ -75,9 +76,7 @@ module Selenium
         end
 
         def add_backtrace(ex)
-          unless value.kind_of?(Hash) && value['stackTrace']
-            return
-          end
+          return unless value.kind_of?(Hash) && value['stackTrace']
 
           server_trace = value['stackTrace']
 
@@ -92,9 +91,7 @@ module Selenium
               file = "#{class_name}(#{file})"
             end
 
-            if meth.nil? || meth.empty?
-              meth = 'unknown'
-            end
+            meth = 'unknown' if meth.nil? || meth.empty?
 
             "[remote server] #{file}:#{line}:in `#{meth}'"
           end.compact

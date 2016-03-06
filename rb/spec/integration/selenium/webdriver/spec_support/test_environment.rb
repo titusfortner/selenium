@@ -83,7 +83,7 @@ module Selenium
           @remote_server ||= (
             Selenium::Server.new(remote_server_jar,
               port: PortProber.above(4444),
-              log: !!$DEBUG,
+              log: $DEBUG,
               background: true,
               timeout: 60
             )
@@ -101,9 +101,7 @@ module Selenium
         def quit
           app_server.stop
 
-          if defined?(@remote_server)
-            @remote_server.stop
-          end
+          @remote_server.stop if defined?(@remote_server)
 
           @driver_instance = @app_server = @remote_server = nil
         ensure
@@ -115,7 +113,7 @@ module Selenium
         end
 
         def native_events?
-          @native_events ||= !!ENV['native']
+          @native_events ||= ENV['native']
         end
 
         def url_for(filename)
@@ -200,9 +198,7 @@ module Selenium
 
         def create_firefox_driver
           binary = ENV['FIREFOX_BINARY']
-          if binary
-            WebDriver::Firefox.path = binary
-          end
+          WebDriver::Firefox.path = binary if binary
 
           WebDriver::Driver.for :firefox
         end
@@ -218,14 +214,10 @@ module Selenium
 
         def create_chrome_driver
           binary = ENV['CHROME_BINARY']
-          if binary
-            WebDriver::Chrome.path = binary
-          end
+          WebDriver::Chrome.path = binary if binary
 
           server = ENV['CHROMEDRIVER'] || ENV['chrome_server']
-          if server
-            WebDriver::Chrome.driver_path = server
-          end
+          WebDriver::Chrome.driver_path = server if server
 
           args = []
           args << "--no-sandbox" if ENV['TRAVIS']
@@ -237,9 +229,7 @@ module Selenium
 
         def create_phantomjs_driver
           binary = ENV['PHANTOMJS_BINARY']
-          if binary
-            WebDriver::PhantomJS.path = binary
-          end
+          WebDriver::PhantomJS.path = binary if binary
 
           WebDriver::Driver.for :phantomjs
         end

@@ -35,7 +35,7 @@ module Selenium
         def self.executable_path
           @executable_path ||= (
             path = Platform.find_binary "chromedriver"
-            path or raise Error::WebDriverError, MISSING_TEXT
+            raise Error::WebDriverError, MISSING_TEXT unless path
             Platform.assert_executable path
 
             path
@@ -98,7 +98,7 @@ module Selenium
           server_command = [@executable_path, "--port=#{@port}", *@extra_args]
           @process       = ChildProcess.build(*server_command)
 
-          @process.io.inherit! if $DEBUG == true
+          @process.io.inherit! if $DEBUG
           @process.start
         end
 
