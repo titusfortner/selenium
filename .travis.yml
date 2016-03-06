@@ -21,7 +21,6 @@ script:
     mv chromedriver chrome-linux/chromedriver
     chmod +x chrome-linux/chromedriver
 
-    export CHROME_BINARY=$PWD/chrome-linux/chrome
     export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
 
   - ./go //rb:chrome-test
