@@ -25,7 +25,12 @@ script:
   -  export CHROME_BINARY=$PWD/chrome-linux/chrome
   -  export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
 
-  - rvm install 2.2.3
-  - rvm use 2.2.3
-
-  - ./go //rb:chrome-test
+  - |
+    export RB_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^rb/`
+    if [[ $RB_FILES_CHANGED == rb/* ]]; then
+      rvm install 2.2.3
+      rvm use 2.2.3
+      ./go //rb:unit-test //rb:firefox-test //rb:chrome-test
+    else
+      echo 'no Ruby files changed - skipping Ruby test suite'
+    fi

@@ -239,7 +239,7 @@ module Selenium
         end
 
         def create_phantomjs_driver
-          binary = ENV['phantomjs_binary']
+          binary = ENV['PHANTOMJS_BINARY']
           if binary
             WebDriver::PhantomJS.path = binary
           end
