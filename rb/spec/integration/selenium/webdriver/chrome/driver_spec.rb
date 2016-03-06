@@ -25,8 +25,9 @@ module Selenium
 
       compliant_on :browser => :chrome do
         describe Driver do
+          before(:all) { quit_driver! }
+
           it "should accept an array of custom command line arguments" do
-            $DEBUG = true
             begin
               driver = Selenium::WebDriver.for :chrome, :args => ["--user-agent=foo;bar"]
               driver.navigate.to url_for("click_jacker.html")
