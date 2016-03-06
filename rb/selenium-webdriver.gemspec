@@ -7,10 +7,10 @@ end
 
 Gem::Specification.new do |s|
   s.name    = "selenium-webdriver"
-  s.version = "2.53.0dev"
+  s.version = "3.0.0dev"
 
-  s.authors     = ["Jari Bakken"]
-  s.email       = "jari.bakken@gmail.com"
+  s.authors     = ['Alex Rodionov', 'Titus Fortner']
+  s.email       = ['p0deje@gmail.com', 'titusfortner@gmail.com']
   s.description = "WebDriver is a tool for writing automated tests of websites. It aims to mimic the behaviour of a real user, and as such interacts with the HTML of the application."
   s.summary     = "The next generation developer focused tool for automated testing of webapps"
   s.homepage    = "https://github.com/seleniumhq/selenium"
