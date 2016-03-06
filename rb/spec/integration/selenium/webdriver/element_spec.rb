@@ -22,6 +22,7 @@ require_relative 'spec_helper'
 describe "Element" do
 
   it "should click" do
+    $DEBUG = true
     driver.navigate.to url_for("formPage.html")
     driver.find_element(:id, "imageButton").click
   end
