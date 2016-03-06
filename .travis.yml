@@ -40,7 +40,7 @@ script:
     if [[ $PY_FILES_CHANGED == py/* ]]; then
       pip install --user virtualenv
       export PATH=$PATH:$HOME/.local/bin
-      ./go py_prep_for_install_release //py:phantomjs_test:run //py:firefox_test:run
+      ./go py_prep_for_install_release //py:phantomjs_test:run
     else
       echo 'no Python files changed - skipping Python test suite'
     fi
@@ -54,7 +54,7 @@ script:
       export PHANTOMJS_BINARY=$PWD/chrome-linux/phantomjs
       rvm install 2.2.3
       rvm use 2.2.3
-      ./go //rb:chrome-test
+      ./go //rb:unit-test //rb:firefox-test //rb:phantomjs-test //rb:chrome-test
     else
       echo 'no Ruby files changed - skipping Ruby test suite'
     fi
