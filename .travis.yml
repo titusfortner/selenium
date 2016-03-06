@@ -23,10 +23,12 @@ script:
   -  export CHROME_BINARY=$PWD/chrome-linux/chrome
   -  export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
 
-  - file ./*
+  - file *
   - file chrome-linux/*
   - type chromedriver
   - type chromium-browser
   - chromium-browser --version
   - type google-chrome
   - declare -xp
+
+  - ./go //rb:chrome-test
