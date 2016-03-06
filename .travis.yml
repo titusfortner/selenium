@@ -7,6 +7,8 @@ before_script:
 script:
 
   - |
+    - chromium-browser --version
+
     export CHROMEDRIVER_VERSION=`curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE`
 
     curl -L -O "http://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/354250/chrome-linux.zip"
@@ -19,11 +21,13 @@ script:
     chmod +x chrome-linux/chromedriver
 
     export CHROME_BINARY=$PWD/chrome-linux/chrome
+    # /usr/bin/chromium-browser
     export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
 
   - file ./*
   - file chrome-linux/*
   - type chromedriver
   - type chromium-browser
+  - chromium-browser --version
   - type google-chrome
   - declare -xp
