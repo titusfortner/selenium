@@ -8,9 +8,7 @@ before_script:
 script:
 
   -  export CHROME_REVISION=`curl -s http://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/LAST_CHANGE`
-  - echo $CHROME_REVISION
   -  export CHROMEDRIVER_VERSION=`curl -s http://chromedriver.storage.googleapis.com/LATEST_RELEASE`
-  - echo $CHROMEDRIVER_VERSION
 
   -  curl -L -O "http://commondatastorage.googleapis.com/chromium-browser-snapshots/Linux_x64/${CHROME_REVISION}/chrome-linux.zip"
   -  unzip chrome-linux.zip
@@ -25,6 +23,14 @@ script:
   -  export CHROME_BINARY=$PWD/chrome-linux/chrome
   -  export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
 
+    export PY_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^py/`
+    if [[ $PY_FILES_CHANGED == py/* ]]; then
+      pip install --user virtualenv
+      export PATH=$PATH:$HOME/.local/bin
+      ./go py_prep_for_install_release //py:phantomjs_test:run
+    else
+      echo 'no Python files changed - skipping Python test suite'
+    fi
   - |
     export RB_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^rb/`
     if [[ $RB_FILES_CHANGED == rb/* ]]; then
@@ -35,11 +41,9 @@ script:
       cp $PHANTOMJS_NAME/bin/phantomjs chrome-linux/phantomjs
       export PHANTOMJS_BINARY=$PWD/chrome-linux/phantomjs
 
-      phantomjs --version
-
       rvm install 2.2.3
       rvm use 2.2.3
-      ./go //rb:phantomjs-test
+      ./go //rb:unit-test //rb:firefox-test //rb:chrome-test //rb:phantomjs-test
     else
       echo 'no Ruby files changed - skipping Ruby test suite'
     fi
