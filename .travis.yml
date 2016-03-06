@@ -5,14 +5,8 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
 
 script:
-  - rvm install ruby-2.2.3
-  - rvm use 2.2.3
-
-  - |
-
-    ls -al
-    ls -al chrome-linux
-
-    export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
-
-  - ./go //rb:chrome-test
+  - "sh ls -al"
+  - "sh which chromedriver"
+  - "sh which chromium-browser"
+  - "sh which google-chrome"
+  - declare -xp
