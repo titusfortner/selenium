@@ -25,8 +25,6 @@ script:
   - export PY_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^py/`
   - export RB_FILES_CHANGED=`git diff --name-only $TRAVIS_COMMIT_RANGE | grep ^rb/`
 
-  - ./go clean
-
   - |
     if [[ $PY_FILES_CHANGED == py/* ]]; then
       pip install --user virtualenv
@@ -37,12 +35,6 @@ script:
     fi
   - |
     if [[ $RB_FILES_CHANGED == rb/* ]]; then
-      export PHANTOMJS_NAME=phantomjs-2.1.1-linux-x86_64
-      curl -L -O "https://bitbucket.org/ariya/phantomjs/downloads/${PHANTOMJS_NAME}.tar.bz2"
-      tar -xvjf $PHANTOMJS_NAME.tar.bz2
-      chmod +x $PHANTOMJS_NAME/bin/phantomjs
-      mv $PHANTOMJS_NAME/bin/phantomjs chrome-linux/phantomjs
-      export PHANTOMJS_BINARY=$PWD/chrome-linux/phantomjs
       rvm install 2.2.3
       rvm use 2.2.3
       ./go //rb:chrome-test
