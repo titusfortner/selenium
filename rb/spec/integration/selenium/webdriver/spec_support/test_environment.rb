@@ -248,7 +248,7 @@ module Selenium
         end
 
         def create_iphone_driver
-          url = ENV['iphone_url']
+          url = ENV['IPHONE_URL']
           if url
             WebDriver::Driver.for :iphone, :url => url
           else
