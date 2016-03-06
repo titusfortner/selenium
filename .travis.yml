@@ -20,8 +20,8 @@ script:
     mv chromedriver chrome-linux/chromedriver
     chmod +x chrome-linux/chromedriver
 
+    export PATH=$PATH:$PWD/chrome-linux
     export CHROME_BINARY=$PWD/chrome-linux/chrome
-    # /usr/bin/chromium-browser
     export CHROMEDRIVER=$PWD/chrome-linux/chromedriver
 
   - file ./*
