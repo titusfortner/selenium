@@ -32,7 +32,7 @@ module Selenium
 
           remote_opts = {
             url: opts.fetch(:url, DEFAULT_URL),
-            desired_capabilities: opts.fetch(:desired_capabilities, capabilities),
+            desired_capabilities: opts.fetch(:desired_capabilities, capabilities)
           }
 
           remote_opts[:http_client] = opts[:http_client] if opts.key?(:http_client)

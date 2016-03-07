@@ -6,10 +6,19 @@ AllCops:
 Style/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
+Style/DotPosition:
+  EnforcedStyle: trailing
+
 Style/BracesAroundHashParameters:
   EnforcedStyle: context_dependent
 
+Style/Alias:
+  EnforcedStyle: prefer_alias_method
+
 Lint/AssignmentInCondition:
+  Enabled: false
+
+Lint/HandleExceptions:
   Enabled: false
 
 Style/PercentLiteralDelimiters:
@@ -25,3 +34,14 @@ Style/DoubleNegation:
 # Can't disable just for blocks
 Lint/UnusedMethodArgument:
   Enabled: false
+
+Style/ZeroLengthPredicate:
+  Exclude:
+    - 'lib/selenium/webdriver/common/html5/shared_web_storage.rb'
+
+Style/Semicolon:
+  Exclude:
+    - 'spec/unit/selenium/webdriver/file_reaper_spec.rb'
+
+Style/NumericLiterals:
+  MinDigits: 10

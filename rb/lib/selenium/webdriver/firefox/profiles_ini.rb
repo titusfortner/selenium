@@ -55,11 +55,11 @@ module Selenium
                 name, path = nil
               end
             when /^Name=(.+)$/
-              name = $1.strip
+              name = Regexp.last_match(1).strip
             when /^IsRelative=(.+)$/
-              is_relative = $1.strip == "1"
+              is_relative = Regexp.last_match(1).strip == "1"
             when /^Path=(.+)$/
-              path = $1.strip
+              path = Regexp.last_match(1).strip
             end
           end
 
@@ -69,7 +69,7 @@ module Selenium
 
         def path_for(name, is_relative, path)
           return unless [name, path].any?
-          path = is_relative ? File.join(Util.app_data_path, path) : path
+          is_relative ? File.join(Util.app_data_path, path) : path
         end
       end # ProfilesIni
     end # Firefox

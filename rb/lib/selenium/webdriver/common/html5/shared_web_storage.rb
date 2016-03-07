@@ -30,7 +30,7 @@ module Selenium
         alias_method :has_key?, :key?
 
         def fetch(key, &blk)
-          return self[key] if self.key? key
+          return self[key] if key? key
           return yield key if block_given?
           raise KeyError, "missing key #{key.inspect}"
         end

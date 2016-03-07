@@ -111,7 +111,8 @@ module Selenium
         end
 
         it "can merge capabilities" do
-          a, b = Capabilities.chrome, Capabilities.htmlunit
+          a = Capabilities.chrome
+          b = Capabilities.htmlunit
           a.merge!(b)
 
           expect(a.browser_name).to eq("htmlunit")

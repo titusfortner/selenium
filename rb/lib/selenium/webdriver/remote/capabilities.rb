@@ -270,14 +270,12 @@ module Selenium
 
         protected
 
-        def capabilities
-          @capabilities
-        end
+        attr_reader :capabilities
 
         private
 
         def camel_case(str)
-          str.gsub(/_([a-z])/) { $1.upcase }
+          str.gsub(/_([a-z])/) { Regexp.last_match(1).upcase }
         end
       end # Capabilities
     end # Remote

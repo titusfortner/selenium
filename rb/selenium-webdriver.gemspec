@@ -17,8 +17,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new("> 1.3.1") if s.respond_to? :required_rubygems_version=
   s.required_ruby_version     = Gem::Requirement.new(">= 2.0")
 
-  s.files         = Dir[root + '/**/*'].reject { |e| e =~ /ruby\.iml|build\.desc/ }.map { |e| e.sub(root + '/', '') }
-  s.require_paths = ["lib"]
+  s.files = Dir[root + '/**/*'].reject { |e| e =~ /ruby\.iml|build\.desc/ }.map { |e| e.sub(root + '/', '') }
 
   s.add_runtime_dependency "rubyzip", ["~> 1.0"]
   s.add_runtime_dependency "childprocess", ["~> 0.5"]

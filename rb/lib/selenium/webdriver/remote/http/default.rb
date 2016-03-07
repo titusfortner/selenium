@@ -136,16 +136,16 @@ module Selenium
             if proxy.no_proxy
               ignored = proxy.no_proxy.split(",").any? do |host|
                 host == "*" ||
-                host == server_url.host || (
+                  host == server_url.host || (
                   begin
                     IPAddr.new(host).include?(server_url.host)
                   rescue ArgumentError
                     false
                   end
-                )
+                  )
               end
 
-              not ignored
+              !ignored
             else
               true
             end

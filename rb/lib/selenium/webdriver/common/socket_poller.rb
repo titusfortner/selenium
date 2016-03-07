@@ -49,7 +49,7 @@ module Selenium
       #
 
       def closed?
-        with_timeout { not listening? }
+        with_timeout { !listening? }
       end
 
       private

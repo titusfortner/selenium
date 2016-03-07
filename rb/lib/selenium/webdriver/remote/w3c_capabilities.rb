@@ -64,7 +64,7 @@ module Selenium
           def edge(opts = {})
             new({
               browser_name: "MicrosoftEdge",
-              platform: :windows,
+              platform: :windows
             }.merge(opts))
           end
 
@@ -215,14 +215,12 @@ module Selenium
 
         protected
 
-        def capabilities
-          @capabilities
-        end
+        attr_reader :capabilities
 
         private
 
         def camel_case(str)
-          str.gsub(/_([a-z])/) { $1.upcase }
+          str.gsub(/_([a-z])/) { Regexp.last_match(1).upcase }
         end
       end # W3CCapabilities
     end # Remote

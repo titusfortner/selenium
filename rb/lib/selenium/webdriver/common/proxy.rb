@@ -134,7 +134,7 @@ module Selenium
         json_result["socksUsername"]      = socks_username if socks_username
         json_result["socksPassword"]      = socks_password if socks_password
 
-        json_result if json_result.length > 1
+        json_result if json_result.size > 1
       end
 
       def to_json(*)

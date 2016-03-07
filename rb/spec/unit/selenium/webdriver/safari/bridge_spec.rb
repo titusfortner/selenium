@@ -33,7 +33,7 @@ module Selenium
             'response' => {
               'sessionId' => 'opaque', "value" => @default_capabilities,
               'status'    => 0
-            },
+            }
           }
         end
 

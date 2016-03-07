@@ -234,8 +234,6 @@ module Selenium
           deselect_option opts.first
         end
 
-        private
-
         def select_option(option)
           option.click unless option.selected?
         end
@@ -265,7 +263,7 @@ module Selenium
           opts = @element.find_elements(:xpath, xpath)
 
           if opts.empty? && text =~ /\s+/
-            longest_word = text.split(/\s+/).max_by(&:length)
+            longest_word = text.split(/\s+/).max_by(&:size)
 
             if longest_word.empty?
               candidates = options

@@ -73,9 +73,7 @@ module Selenium
           @process.stop STOP_TIMEOUT if running?
         end
 
-        def port
-          @port
-        end
+        attr_reader :port
 
         def uri
           "http://#{Platform.localhost}:#{port}"

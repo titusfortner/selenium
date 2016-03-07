@@ -29,7 +29,8 @@ module Selenium
       #
 
       def initialize(bridge, id)
-        @bridge, @id = bridge, id
+        @bridge = bridge
+        @id = id
       end
 
       def inspect
@@ -299,9 +300,7 @@ module Selenium
 
       private
 
-      def bridge
-        @bridge
-      end
+      attr_reader :bridge
 
       def selectable?
         tn = tag_name.downcase

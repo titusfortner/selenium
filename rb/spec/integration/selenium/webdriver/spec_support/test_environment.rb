@@ -79,14 +79,13 @@ module Selenium
         end
 
         def remote_server
-          @remote_server ||= (
+          @remote_server ||=
             Selenium::Server.new(remote_server_jar,
                                  port: PortProber.above(4444),
                                  log: $DEBUG,
                                  background: true,
                                  timeout: 60
                                 )
-          )
         end
 
         def remote_server?
@@ -112,7 +111,7 @@ module Selenium
         end
 
         def native_events?
-          @native_events ||= ENV['native']
+          @native_events ||= ENV['NATIVE']
         end
 
         def url_for(filename)
@@ -215,7 +214,7 @@ module Selenium
           binary = ENV['CHROME_BINARY']
           WebDriver::Chrome.path = binary if binary
 
-          server = ENV['CHROMEDRIVER'] || ENV['chrome_server']
+          server = ENV['CHROMEDRIVER'] || ENV['CHROME_SERVER']
           WebDriver::Chrome.driver_path = server if server
 
           args = []
@@ -234,7 +233,7 @@ module Selenium
         end
 
         def create_iphone_driver
-          url = ENV['iphone_url']
+          url = ENV['IPHONE_URL']
           if url
             WebDriver::Driver.for :iphone, url: url
           else
@@ -243,7 +242,7 @@ module Selenium
         end
 
         def create_safari_driver
-          if ENV['timeout']
+          if ENV['TIMEOUT']
             WebDriver::Driver.for :safari, timeout: Integer(ENV['timeout'])
           else
             WebDriver::Driver.for :safari

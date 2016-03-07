@@ -193,8 +193,8 @@ module Selenium
         end
 
         def getPageSource
-          executeScript("var source = document.documentElement.outerHTML;" +
-                            "if (!source) { source = new XMLSerializer().serializeToString(document); }" +
+          executeScript("var source = document.documentElement.outerHTML;" \
+                            "if (!source) { source = new XMLSerializer().serializeToString(document); }" \
                             "return source;")
         end
 
@@ -377,7 +377,7 @@ module Selenium
           execute :deleteCookie, name: name
         end
 
-        # TODO - write specs
+        # TODO: write specs
         def getCookie(name)
           execute :getCookie, name: name
         end
@@ -433,7 +433,7 @@ module Selenium
           sendKeysToElement(getActiveElement, keys)
         end
 
-        # TODO - Implement file verification
+        # TODO: Implement file verification
         def sendKeysToElement(element, keys)
           execute :elementSendKeys, {id: element}, {value: keys.join('').split(//)}
         end
@@ -443,8 +443,8 @@ module Selenium
         end
 
         def submitElement(element)
-          executeScript("var e = arguments[0].ownerDocument.createEvent('Event');" +
-                            "e.initEvent('submit', true, true);" +
+          executeScript("var e = arguments[0].ownerDocument.createEvent('Event');" \
+                            "e.initEvent('submit', true, true);" \
                             "if (arguments[0].dispatchEvent(e)) { arguments[0].submit() }", element)
         end
 
@@ -609,7 +609,7 @@ module Selenium
           when 'tag name'
             how = 'css selector'
           end
-          return how, what
+          [how, what]
         end
 
         #
