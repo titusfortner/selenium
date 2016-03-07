@@ -54,7 +54,7 @@ module Selenium
         it "raises a nice error if the server binary can't be found" do
           allow(Platform).to receive(:find_binary).and_return(nil)
 
-          expect { Service.executable_path }.to raise_error(Error::WebDriverError, /github.com\/SeleniumHQ/)
+          expect { Service.executable_path }.to raise_error(Error::WebDriverError, %r{github.com\/SeleniumHQ})
         end
       end
     end # Chrome
