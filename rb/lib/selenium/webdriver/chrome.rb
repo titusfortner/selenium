@@ -25,7 +25,6 @@ require 'selenium/webdriver/chrome/profile'
 
 module Selenium
   module WebDriver
-
     module Chrome
       def self.driver_path=(path)
         Service.executable_path = path
@@ -39,7 +38,6 @@ module Selenium
       def self.path
         @path ||= nil
       end
-
     end # Chrome
   end # WebDriver
 end # Selenium

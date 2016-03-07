@@ -19,11 +19,9 @@
 
 require File.expand_path("../../spec_helper", __FILE__)
 
-
 module Selenium
   module WebDriver
     module Chrome
-
       describe Profile do
         let(:profile) { Profile.new }
         let(:model) { "/some/path" }
@@ -69,8 +67,6 @@ module Selenium
           expect(result['some']['other']['pref']).to eq(123)
         end
       end
-
     end # Chrome
   end # WebDriver
 end # Selenium
-

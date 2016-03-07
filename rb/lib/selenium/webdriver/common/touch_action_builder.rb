@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     class TouchActionBuilder < ActionBuilder
-
       #
       # @api private
       #
@@ -77,7 +76,6 @@ module Selenium
         @actions << [:touch_screen, :move, [x, y]]
         self
       end
-
     end # TouchActionBuilder
   end # WebDriver
 end # Selenium

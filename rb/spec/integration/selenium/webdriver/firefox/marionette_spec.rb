@@ -21,7 +21,6 @@ require_relative '../spec_helper'
 
 module Selenium
   module WebDriver
-
     describe Firefox do
       before do
         @opt = GlobalTestEnv.remote_server? ? {url: GlobalTestEnv.remote_server.webdriver_url} : {}

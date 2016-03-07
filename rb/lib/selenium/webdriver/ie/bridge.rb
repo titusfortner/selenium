@@ -20,13 +20,11 @@
 module Selenium
   module WebDriver
     module IE
-
       #
       # @api private
       #
 
       class Bridge < Remote::Bridge
-
         HOST            = Platform.localhost
         DEFAULT_PORT    = 5555
         DEFAULT_TIMEOUT = 30
@@ -79,7 +77,6 @@ module Selenium
         ensure
           @server.stop
         end
-
       end # Bridge
     end # IE
   end # WebDriver

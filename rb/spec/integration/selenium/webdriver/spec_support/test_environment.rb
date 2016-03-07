@@ -21,7 +21,6 @@ module Selenium
   module WebDriver
     module SpecSupport
       class TestEnvironment
-
         attr_accessor :unguarded
         attr_reader :driver
 
@@ -263,7 +262,6 @@ module Selenium
         def http_client
           Selenium::WebDriver::Remote::Http::Default.new
         end
-
       end # TestEnvironment
     end # SpecSupport
   end # WebDriver

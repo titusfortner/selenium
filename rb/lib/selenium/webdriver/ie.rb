@@ -19,7 +19,6 @@
 
 module Selenium
   module WebDriver
-
     # @api private
     module IE
       def self.driver_path=(path)
@@ -30,7 +29,6 @@ module Selenium
       def self.driver_path
         @driver_path ||= nil
       end
-
     end # IE
   end # WebDriver
 end # Selenium

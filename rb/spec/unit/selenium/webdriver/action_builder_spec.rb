@@ -112,5 +112,4 @@ describe Selenium::WebDriver::ActionBuilder do
 
     builder.click_and_hold.release.perform
   end
-
 end

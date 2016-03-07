@@ -19,11 +19,9 @@
 
 require File.expand_path("../../spec_helper", __FILE__)
 
-
 module Selenium
   module WebDriver
     module IE
-
       describe Bridge do
         let(:resp)    { {"sessionId" => "foo", "value" => @default_capabilities.as_json} }
         let(:server)  { double(Server, start: 5555, uri: "http://example.com") }
@@ -111,9 +109,7 @@ module Selenium
             introduce_flakiness_by_ignoring_security_domains: true
           )
         end
-
       end
-
     end
   end
 end

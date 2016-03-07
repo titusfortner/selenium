@@ -19,7 +19,6 @@
 
 module Selenium
   module WebDriver
-
     #
     # The ActionBuilder provides the user a way to set up and perform
     # complex user interactions.
@@ -39,7 +38,6 @@ module Selenium
     #
 
     class ActionBuilder
-
       #
       # @api private
       #
@@ -353,7 +351,6 @@ module Selenium
         self
       end
 
-
       #
       # Executes the actions added to the builder.
       #
@@ -365,7 +362,6 @@ module Selenium
 
         nil
       end
-
     end # ActionBuilder
   end # WebDriver
 end # Selenium

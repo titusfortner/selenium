@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Error
-
       class WebDriverError < StandardError; end
       class UnsupportedOperationError < WebDriverError; end
 
@@ -45,7 +44,6 @@ module Selenium
 
       class NoSuchFrameError < WebDriverError; end               # 8
       class UnknownCommandError < WebDriverError; end            # 9
-
 
       #
       # Indicates that a reference to an element is now "stale" - the element
@@ -222,7 +220,6 @@ module Selenium
           WebDriverError
         end
       end
-
     end # Error
   end # WebDriver
 end # Selenium

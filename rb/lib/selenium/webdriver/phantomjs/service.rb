@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module PhantomJS
-
       #
       # @api private
       #
@@ -122,7 +121,6 @@ module Selenium
         def socket_lock
           @socket_lock ||= SocketLock.new(@port - 1, SOCKET_LOCK_TIMEOUT)
         end
-
       end # Service
     end # PhantomJS
   end # WebDriver

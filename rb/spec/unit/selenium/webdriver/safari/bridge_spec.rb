@@ -45,7 +45,6 @@ module Selenium
           allow(Browser).to receive(:new).and_return(browser)
         end
 
-
         it 'takes desired capabilities' do
           custom_caps = Remote::Capabilities.new
           custom_caps['foo'] = 'bar'
@@ -67,7 +66,6 @@ module Selenium
 
           Bridge.new(clean_session: true)
         end
-
       end
     end
   end

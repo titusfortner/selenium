@@ -18,7 +18,6 @@
 # under the License.
 
 class Selenium::WebDriver::Remote::Bridge
-
   #
   # https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol#command-reference
   #

@@ -81,7 +81,6 @@ module Selenium
           expect(poller).not_to be_closed
         end
       end
-
     end
   end
 end

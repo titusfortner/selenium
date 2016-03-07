@@ -22,7 +22,6 @@ require 'json'
 module Selenium
   module WebDriver
     module Remote
-
       #
       # Low level bridge to the remote server, through which the rest of the API works.
       #
@@ -496,7 +495,6 @@ module Selenium
                                     xoffset: right_by,
                                     yoffset: down_by,
                                     speed: speed}
-
         end
 
         def setScreenOrientation(orientation)
@@ -653,7 +651,6 @@ module Selenium
         def escaper
           @escaper ||= defined?(URI::Parser) ? URI::Parser.new : URI
         end
-
       end # W3CBridge
     end # Remote
   end # WebDriver

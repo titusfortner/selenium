@@ -22,7 +22,6 @@ require File.expand_path("../../spec_helper", __FILE__)
 module Selenium
   module WebDriver
     module Support
-
       describe Select do
         let(:select) do
           double(Element, tag_name: 'select')
@@ -321,7 +320,6 @@ module Selenium
           expect(Select::Escaper.escape(%{'"})).to eq(%{concat("'", '"')})
         end
       end # Select::Escaper
-
     end # Support
   end # WebDriver
 end # Selenium

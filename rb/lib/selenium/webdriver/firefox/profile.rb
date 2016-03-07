@@ -100,7 +100,6 @@ module Selenium
           profile_dir
         end
 
-
         #
         # Set a preference for this particular profile.
         #
@@ -269,7 +268,6 @@ module Selenium
             end
           end
         end
-
       end # Profile
     end # Firefox
   end # WebDriver

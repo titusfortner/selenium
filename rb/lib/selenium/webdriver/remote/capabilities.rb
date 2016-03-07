@@ -25,7 +25,6 @@ module Selenium
       # server is being asked to create.
       #
       class Capabilities
-
         DEFAULTS = {
           browser_name: "",
           version: "",
@@ -280,7 +279,6 @@ module Selenium
         def camel_case(str)
           str.gsub(/_([a-z])/) { $1.upcase }
         end
-
       end # Capabilities
     end # Remote
   end # WebDriver

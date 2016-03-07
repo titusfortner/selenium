@@ -19,7 +19,6 @@
 
 module Selenium
   module WebDriver
-
     #
     # The main class through which you control the browser.
     #
@@ -33,7 +32,6 @@ module Selenium
       include SearchContext
 
       class << self
-
         #
         # @api private
         #
@@ -237,7 +235,6 @@ module Selenium
         bridge.executeAsyncScript(script, *args)
       end
 
-
       #-------------------------------- sugar  --------------------------------
 
       #
@@ -298,7 +295,6 @@ module Selenium
       def bridge
         @bridge
       end
-
     end # Driver
   end # WebDriver
 end # Selenium

@@ -21,7 +21,6 @@ module Selenium
   module WebDriver
     module SpecSupport
       module Guards
-
         class << self
           def print_env
             puts "\nRunning Ruby specs:\n\n"
@@ -123,7 +122,6 @@ module Selenium
 
         alias_method :not_compliant_when, :not_compliant_on
         alias_method :compliant_when,     :compliant_on
-
       end # Guards
     end # SpecSupport
   end # WebDriver

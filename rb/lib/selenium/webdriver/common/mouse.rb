@@ -19,14 +19,12 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api private
     # @see ActionBuilder
     #
 
     class Mouse
-
       def initialize(bridge)
         @bridge = bridge
       end

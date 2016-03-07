@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Chrome
-
       #
       # @private
       #
@@ -103,7 +102,6 @@ module Selenium
           File.join dir, 'Default', 'Preferences'
         end
       end # Profile
-
     end # Chrome
   end # WebDriver
 end # Selenium

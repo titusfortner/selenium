@@ -19,7 +19,6 @@
 
 require File.expand_path("../../spec_helper", __FILE__)
 
-
 module Selenium
   module WebDriver
     module IPhone
@@ -55,7 +54,6 @@ module Selenium
           Bridge.new(http_client: http, desired_capabilities: custom_caps)
         end
       end
-
     end # IPhone
   end # WebDriver
 end # Selenium

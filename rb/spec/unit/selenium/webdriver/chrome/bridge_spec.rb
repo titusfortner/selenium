@@ -19,11 +19,9 @@
 
 require File.expand_path("../../spec_helper", __FILE__)
 
-
 module Selenium
   module WebDriver
     module Chrome
-
       describe Bridge do
         let(:resp)    { {"sessionId" => "foo", "value" => @default_capabilities} }
         let(:service) { double(Service, start: true, uri: "http://example.com") }
@@ -149,8 +147,6 @@ module Selenium
           Bridge.new(http_client: http, service_log_path: "/foo/bar")
         end
       end
-
     end # Chrome
   end # WebDriver
 end # Selenium
-

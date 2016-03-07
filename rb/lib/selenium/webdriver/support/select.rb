@@ -21,7 +21,6 @@ module Selenium
   module WebDriver
     module Support
       class Select
-
         #
         # @param [Element] element The select element to use
         #
@@ -315,7 +314,6 @@ module Selenium
               %{"#{str}"}
             end
           end
-
         end # Escaper
       end # Select
     end # Support

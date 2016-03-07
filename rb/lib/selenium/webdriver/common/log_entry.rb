@@ -43,7 +43,6 @@ module Selenium
       def time
         Time.at timestamp / 1000
       end
-
     end # LogEntry
   end # WebDriver
 end # Selenium

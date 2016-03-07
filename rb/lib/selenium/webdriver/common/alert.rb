@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     class Alert
-
       def initialize(bridge)
         @bridge = bridge
 
@@ -48,8 +47,6 @@ module Selenium
         @bridge.setAuthentication username: username, password: password
         accept
       end
-
     end # Alert
   end # WebDriver
 end # Selenium
-

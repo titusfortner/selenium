@@ -22,12 +22,10 @@ require 'curb'
 module Selenium
   module WebDriver
     module Remote
-
       # added for rescue
       Bridge::QUIT_ERRORS << Curl::Err::RecvError
 
       module Http
-
         #
         # An alternative to the default Net::HTTP client.
         #
@@ -42,7 +40,6 @@ module Selenium
         #
 
         class Curb < Common
-
           private
 
           def request(verb, url, headers, payload)
@@ -90,7 +87,6 @@ module Selenium
               c
             )
           end
-
         end # Curb
       end # Http
     end # Remote

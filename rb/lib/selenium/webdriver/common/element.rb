@@ -309,7 +309,6 @@ module Selenium
 
         tn == "option" || (tn == "input" && %w[radio checkbox].include?(type))
       end
-
     end # Element
   end # WebDriver
 end # Selenium
