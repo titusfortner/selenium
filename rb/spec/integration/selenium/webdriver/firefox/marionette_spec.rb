@@ -64,9 +64,9 @@ module Selenium
           not_compliant_on driver: :remote do
             it "Uses Wires when setting marionette option in capabilities" do
               cap_opts = {marionette: true}
-              cap_opts.merge!(firefox_binary: ENV['MARIONETTE_PATH']) unless GlobalTestEnv.driver == :remote
+              cap_opts[:firefox_binary] = ENV['MARIONETTE_PATH'] unless GlobalTestEnv.driver == :remote
               caps = Selenium::WebDriver::Remote::Capabilities.firefox cap_opts
-              @opt.merge!(desired_capabilities: caps)
+              @opt[:desired_capabilities] = caps
               expect {@driver = Selenium::WebDriver.for GlobalTestEnv.driver, @opt}.to_not raise_exception
               @driver.quit
             end
@@ -80,7 +80,8 @@ module Selenium
             it "Uses Wires when setting marionette option in driver initialization" do
               cap_opts = GlobalTestEnv.driver == :remote ? {} : {firefox_binary: ENV['MARIONETTE_PATH']}
               caps = Selenium::WebDriver::Remote::Capabilities.firefox cap_opts
-              @opt.merge!(marionette: true, desired_capabilities: caps)
+              @opt[:marionette] = true
+              @opt[:desired_capabilities] = caps
               @driver = Selenium::WebDriver.for GlobalTestEnv.driver, @opt
 
               expect(@driver.capabilities[:takes_element_screenshot]).to_not be_nil
@@ -122,13 +123,14 @@ module Selenium
             it "Raises Wires Exception when setting marionette option in capabilities" do
               caps = Selenium::WebDriver::Remote::Capabilities.firefox(marionette: true,
                                                                        firefox_binary: ENV['PRE_MARIONETTE_PATH'])
-              @opt.merge!(desired_capabilities: caps)
+              @opt[:desired_capabilities] = caps
               expect { Selenium::WebDriver.for GlobalTestEnv.driver, @opt }.to raise_exception Error::WebDriverError, message
             end
 
             it "Raises Wires Exception when setting marionette option in driver initialization" do
               caps = Selenium::WebDriver::Remote::Capabilities.firefox(firefox_binary: ENV['PRE_MARIONETTE_PATH'])
-              @opt.merge!(marionette: true, desired_capabilities: caps)
+              @opt[:marionette] = true
+              @opt[:desired_capabilities] = caps
               expect{ Selenium::WebDriver.for GlobalTestEnv.driver, @opt}.to raise_exception Error::WebDriverError, message
             end
           end
