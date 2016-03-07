@@ -25,7 +25,7 @@ module Selenium
         def initialize(opts = {})
           http_client = opts.delete(:http_client)
 
-          if opts.has_key?(:url)
+          if opts.key?(:url)
             url = opts.delete(:url)
           else
             @service = Service.default_service(*extract_service_args(opts))
@@ -89,7 +89,7 @@ module Selenium
         def extract_service_args(opts)
           args = []
 
-          if opts.has_key?(:service_log_path)
+          if opts.key?(:service_log_path)
             args << "--log-path=#{opts.delete(:service_log_path)}"
           end
 
