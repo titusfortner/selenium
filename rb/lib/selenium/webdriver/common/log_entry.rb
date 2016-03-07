@@ -23,9 +23,9 @@ module Selenium
       attr_reader :level, :timestamp, :message
 
       def initialize(level, timestamp, message)
-        @level      = level
+        @level = level
         @timestamp = timestamp
-        @message    = message
+        @message = message
       end
 
       def as_json(opts = nil)

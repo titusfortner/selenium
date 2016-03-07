@@ -43,12 +43,12 @@ module Selenium
       #
 
       def initialize(mouse, keyboard)
-        @devices    = {
+        @devices = {
           mouse: mouse,
           keyboard: keyboard
         }
 
-        @actions  = []
+        @actions = []
       end
 
       #

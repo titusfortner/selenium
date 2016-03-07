@@ -95,7 +95,7 @@ module Selenium
       end
 
       def inspect
-        '#<%s:0x%x browser=%s>' % [self.class, hash*2, bridge.browser.inspect]
+        '#<%s:0x%x browser=%s>' % [self.class, hash * 2, bridge.browser.inspect]
       end
 
       #

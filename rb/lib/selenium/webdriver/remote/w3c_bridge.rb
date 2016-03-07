@@ -77,7 +77,7 @@ module Selenium
           desired_capabilities[:marionette] = opts.delete(:marionette) unless opts[:marionette].nil?
 
           if desired_capabilities[:marionette] && Firefox::Binary.version < 45
-              raise Error::WebDriverError, "Marionette is not supported in Firefox Version #{Firefox::Binary.version}"
+            raise Error::WebDriverError, "Marionette is not supported in Firefox Version #{Firefox::Binary.version}"
           end
 
           unless opts.empty?
@@ -573,9 +573,9 @@ module Selenium
           how, what = convert_locators(how, what)
 
           id = if parent
-            execute :findChildElement, {id: parent}, {using: how, value: what}
+                 execute :findChildElement, {id: parent}, {using: how, value: what}
                else
-            execute :findElement, {}, {using: how, value: what}
+                 execute :findElement, {}, {using: how, value: what}
                end
 
           Element.new self, element_id_from(id)
@@ -585,9 +585,9 @@ module Selenium
           how, what = convert_locators(how, what)
 
           ids = if parent
-            execute :findChildElements, {id: parent}, {using: how, value: what}
+                  execute :findChildElements, {id: parent}, {using: how, value: what}
                 else
-            execute :findElements, {}, {using: how, value: what}
+                  execute :findElements, {}, {using: how, value: what}
                 end
 
           ids.map { |id| Element.new self, element_id_from(id) }

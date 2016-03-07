@@ -129,7 +129,7 @@ module Selenium
 
       def cygwin_path(path, opts = {})
         flags = []
-        opts.each { |k,v| flags << "--#{k}" if v }
+        opts.each { |k, v| flags << "--#{k}" if v }
 
         `cygpath #{flags.join ' '} "#{path}"`.strip
       end

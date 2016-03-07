@@ -84,7 +84,7 @@ module Selenium::WebDriver::DriverExtensions
                                   %w[foo1 bar1],
                                   %w[foo2 bar2],
                                   %w[foo3 bar3]
-                                 )
+          )
         end
 
         it "can fetch an item" do

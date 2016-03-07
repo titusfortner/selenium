@@ -72,9 +72,9 @@ module Selenium
               hue -= 1 if hue > 1.0
 
               if hue < 1.0 / 6.0
-                 (lum1 + (lum2 - lum1) * 6.0 * hue)
+                (lum1 + (lum2 - lum1) * 6.0 * hue)
               elsif  hue < 1.0 / 2.0
-                 lum2
+                lum2
               elsif hue < 2.0 / 3.0
                 lum1 + (lum2 - lum1) * ((2.0 / 3.0) - hue) * 6.0
               else

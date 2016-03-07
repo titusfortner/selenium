@@ -28,7 +28,7 @@ module Selenium
 
         def initialize(path, port = nil)
           @path = path
-          @app  = TestApp.new(path)
+          @app = TestApp.new(path)
 
           @host = ENV['localhost'] || 'localhost'
           @port = Integer(port || PortProber.above(8180))

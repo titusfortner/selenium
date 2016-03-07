@@ -108,4 +108,4 @@ module Selenium
       end
     end # TargetLocator
   end # WebDriver
-end  # Selenium
+end # Selenium

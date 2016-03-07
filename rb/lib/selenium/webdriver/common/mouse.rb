@@ -85,4 +85,4 @@ module Selenium
       end
     end # Mouse
   end # WebDriver
-end  # Selenium
+end # Selenium

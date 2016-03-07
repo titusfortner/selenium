@@ -303,7 +303,7 @@ module Selenium
               parts = str.split('"', -1).map { |part| %("#{part}") }
 
               quoted = parts.join(%(, '"', )).
-                             gsub(/^"", |, ""$/, '')
+                       gsub(/^"", |, ""$/, '')
 
               "concat(#{quoted})"
             elsif str.include?('"')

@@ -66,4 +66,4 @@ module Selenium
       end
     end # Keyboard
   end # WebDriver
-end  # Selenium
+end # Selenium

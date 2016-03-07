@@ -26,7 +26,7 @@ module Selenium
         let(:resp)    { {"sessionId" => "foo", "value" => @default_capabilities.as_json} }
         let(:server)  { double(Server, start: 5555, uri: "http://example.com") }
         let(:caps)    { {} }
-        let(:http)    { double(Remote::Http::Default, call: resp).as_null_object   }
+        let(:http)    { double(Remote::Http::Default, call: resp).as_null_object }
 
         before do
           Server.stub(get: server)

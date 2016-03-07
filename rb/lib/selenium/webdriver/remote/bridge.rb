@@ -244,8 +244,8 @@ module Selenium
 
         def setWindowSize(width, height, handle = :current)
           execute :setWindowSize, {window_handle: handle},
-                                   {width: width,
-                                    height: height}
+                  {width: width,
+                   height: height}
         end
 
         def maximizeWindow(handle = :current)
@@ -260,7 +260,7 @@ module Selenium
 
         def setWindowPosition(x, y, handle = :current)
           execute :setWindowPosition, {window_handle: handle},
-                                       {x: x, y: y}
+                  {x: x, y: y}
         end
 
         def getWindowPosition(handle = :current)

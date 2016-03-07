@@ -85,7 +85,7 @@ module Selenium
             @additional_prefs  = model_prefs
           end
 
-          @extensions        = {}
+          @extensions = {}
         end
 
         def layout_on_disk

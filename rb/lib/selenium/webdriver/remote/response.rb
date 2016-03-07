@@ -50,7 +50,7 @@ module Selenium
             return "unknown error" unless val['message']
             msg = val['message']
             msg << ": #{val['alert']['text'].inspect}" if val['alert'].is_a?(Hash) && val['alert']['text']
-            msg << " (#{ val['class'] })" if val['class']
+            msg << " (#{val['class']})" if val['class']
             msg
           when String
             val

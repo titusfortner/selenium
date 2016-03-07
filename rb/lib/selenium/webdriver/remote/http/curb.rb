@@ -43,7 +43,7 @@ module Selenium
           private
 
           def request(verb, url, headers, payload)
-            client.url     = url.to_s
+            client.url = url.to_s
 
             # workaround for http://github.com/taf2/curb/issues/issue/40
             # curb will handle this for us anyway

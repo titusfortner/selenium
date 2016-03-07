@@ -60,7 +60,7 @@ module Selenium
             print "\n\nSpec guards for this implementation: "
 
             if gs.empty?
-             puts "none."
+              puts "none."
             else
               puts
               gs.each do |guard_name, data|

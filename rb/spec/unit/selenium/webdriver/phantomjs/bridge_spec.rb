@@ -25,7 +25,7 @@ module Selenium
       describe Bridge do
         let(:resp)    { {"sessionId" => "foo", "value" => Remote::Capabilities.phantomjs.as_json} }
         let(:service) { double(Service, start: true, uri: "http://example.com") }
-        let(:http)    { double(Remote::Http::Default, call: resp).as_null_object   }
+        let(:http)    { double(Remote::Http::Default, call: resp).as_null_object }
 
         before do
           allow(Service).to receive(:default_service).and_return(service)
