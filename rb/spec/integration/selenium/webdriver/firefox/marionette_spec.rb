@@ -67,7 +67,7 @@ module Selenium
               cap_opts[:firefox_binary] = ENV['MARIONETTE_PATH'] unless GlobalTestEnv.driver == :remote
               caps = Selenium::WebDriver::Remote::Capabilities.firefox cap_opts
               @opt[:desired_capabilities] = caps
-              expect {@driver = Selenium::WebDriver.for GlobalTestEnv.driver, @opt}.to_not raise_exception
+              expect { @driver = Selenium::WebDriver.for GlobalTestEnv.driver, @opt }.to_not raise_exception
               @driver.quit
             end
           end
@@ -131,7 +131,7 @@ module Selenium
               caps = Selenium::WebDriver::Remote::Capabilities.firefox(firefox_binary: ENV['PRE_MARIONETTE_PATH'])
               @opt[:marionette] = true
               @opt[:desired_capabilities] = caps
-              expect{ Selenium::WebDriver.for GlobalTestEnv.driver, @opt}.to raise_exception Error::WebDriverError, message
+              expect { Selenium::WebDriver.for GlobalTestEnv.driver, @opt }.to raise_exception Error::WebDriverError, message
             end
           end
         end

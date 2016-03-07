@@ -263,11 +263,11 @@ module Selenium
         end
 
         def write_prefs(prefs, path)
-          File.open(path, "w") { |file|
+          File.open(path, "w") do |file|
             prefs.each do |key, value|
               file.puts %{user_pref("#{key}", #{value.to_json});}
             end
-          }
+          end
         end
 
       end # Profile
