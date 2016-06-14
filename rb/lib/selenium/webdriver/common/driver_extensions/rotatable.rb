@@ -19,15 +19,13 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api private
     #
 
     module DriverExtensions
       module Rotatable
-
-        ORIENTATIONS = [:landscape, :portrait]
+        ORIENTATIONS = [:landscape, :portrait].freeze
 
         #
         # Change the screen orientation
@@ -57,7 +55,6 @@ module Selenium
         def orientation
           bridge.getScreenOrientation.to_sym.downcase
         end
-
       end # Rotatable
     end # DriverExtensions
   end # WebDriver

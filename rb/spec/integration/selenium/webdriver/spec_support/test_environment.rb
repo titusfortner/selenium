@@ -21,12 +21,11 @@ module Selenium
   module WebDriver
     module SpecSupport
       class TestEnvironment
-
         attr_accessor :unguarded
         attr_reader :driver
 
         def initialize
-          @create_driver_error       = nil
+          @create_driver_error = nil
           @create_driver_error_count = 0
 
           @driver = (ENV['WD_SPEC_DRIVER'] || :chrome).to_sym
@@ -59,10 +58,9 @@ module Selenium
         end
 
         def quit_driver
-          if @driver_instance
-            @driver_instance.quit
-            @driver_instance = nil
-          end
+          return unless @driver_instance
+          @driver_instance.quit
+          @driver_instance = nil
         end
 
         def new_driver_instance
@@ -72,7 +70,7 @@ module Selenium
 
         def app_server
           @app_server ||= (
-            s = RackServer.new(root.join("common/src/web").to_s)
+            s = RackServer.new(root.join('common/src/web').to_s)
             s.start
 
             s
@@ -80,20 +78,17 @@ module Selenium
         end
 
         def remote_server
-          @remote_server ||= (
-            Selenium::Server.new(remote_server_jar,
-              :port       => PortProber.above(4444),
-              :log        => !!$DEBUG,
-              :background => true,
-              :timeout    => 60
-            )
-          )
+          @remote_server ||= Selenium::Server.new(
+                               remote_server_jar,
+                               port: PortProber.above(4444),
+                               log: $DEBUG,
+                               background: true,
+                               timeout: 60
+                             )
         end
 
         def reset_remote_server
-          if defined?(@remote_server)
-            @remote_server.stop
-          end
+          @remote_server.stop if defined? @remote_server
           @remote_server = nil
           remote_server
         end
@@ -103,15 +98,13 @@ module Selenium
         end
 
         def remote_server_jar
-          @remote_server_jar ||= root.join("buck-out/gen/java/server/src/org/openqa/grid/selenium/selenium.jar").to_s
+          @remote_server_jar ||= root.join('buck-out/gen/java/server/src/org/openqa/grid/selenium/selenium.jar').to_s
         end
 
         def quit
           app_server.stop
 
-          if defined?(@remote_server)
-            @remote_server.stop
-          end
+          @remote_server.stop if defined? @remote_server
 
           @driver_instance = @app_server = @remote_server = nil
         ensure
@@ -123,42 +116,28 @@ module Selenium
         end
 
         def native_events?
-          @native_events ||= !!ENV['native']
+          @native_events ||= ENV['native'] == 'true'
         end
 
         def url_for(filename)
           url = app_server.where_is filename
-          url.sub!("127.0.0.1", "10.0.2.2") if browser == :android
+          url.sub!('127.0.0.1', '10.0.2.2') if browser == :android
 
           url
         end
 
         def root
-          @root ||= Pathname.new("../../../../../../../").expand_path(__FILE__)
+          @root ||= Pathname.new('../../../../../../../').expand_path(__FILE__)
         end
 
         private
 
         def create_driver
-          instance = case driver
-                     when :remote
-                       create_remote_driver
-                     when :edge
-                       create_edge_driver
-                     when :firefox
-                       create_firefox_driver
-                     when :marionette
-                       create_marionette_driver
-                     when :chrome
-                       create_chrome_driver
-                     when :iphone
-                       create_iphone_driver
-                     when :safari
-                       create_safari_driver
-                     when :phantomjs
-                       create_phantomjs_driver
+          instance = if driver == :marionette
+                       create_firefox_driver(true)
                      else
-                       WebDriver::Driver.for driver
+                       method = "create_#{driver}_driver"
+                       defined?(method) ? send(method) : WebDriver::Driver.for(driver)
                      end
 
           @create_driver_error_count -= 1 unless @create_driver_error_count == 0
@@ -171,7 +150,7 @@ module Selenium
 
         def remote_capabilities
           if browser == :marionette
-            caps = WebDriver::Remote::Capabilities.firefox(:marionette => true)
+            caps = WebDriver::Remote::Capabilities.firefox(marionette: true)
           else
             caps = WebDriver::Remote::Capabilities.send(browser)
 
@@ -199,91 +178,65 @@ module Selenium
         end
 
         def create_remote_driver
-          WebDriver::Driver.for(:remote,
-            :desired_capabilities => remote_capabilities,
-            :url                  => ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
-            :http_client          => keep_alive_client || http_client
+          WebDriver::Driver.for(
+            :remote,
+            desired_capabilities: remote_capabilities,
+            url: ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
+            http_client: keep_alive_client || http_client
           )
         end
 
-        def create_firefox_driver
+        def create_firefox_driver(marionette = false)
+          opt = marionette ? {marionette: true} : {}
           binary = ENV['FIREFOX_BINARY']
           WebDriver::Firefox.path = binary if binary
 
-          WebDriver::Driver.for :firefox
-        end
-
-        def create_marionette_driver
-          binary = ENV['FIREFOX_BINARY']
-          WebDriver::Firefox.path = binary if binary
-
-          WebDriver.for :firefox, :marionette => true
+          WebDriver::Driver.for :firefox, opt
         end
 
         def create_edge_driver
           caps = WebDriver::Remote::W3CCapabilities.edge
-          WebDriver.for :edge, :desired_capabilities => caps
+          WebDriver.for :edge, desired_capabilities: caps
         end
 
         def create_chrome_driver
           binary = ENV['CHROME_BINARY']
-          if binary
-            WebDriver::Chrome.path = binary
-          end
+          WebDriver::Chrome.path = binary if binary
 
           server = ENV['CHROMEDRIVER'] || ENV['chrome_server']
-          if server
-            WebDriver::Chrome.driver_path = server
-          end
+          WebDriver::Chrome.driver_path = server if server
 
-          args = []
-          args << "--no-sandbox" if ENV['TRAVIS']
+          args = ENV['TRAVIS'] ? ['--no-sandbox'] : []
 
           WebDriver::Driver.for :chrome,
-                                :native_events => native_events?,
-                                :args          => args
+                                native_events: native_events?,
+                                args: args
         end
 
         def create_phantomjs_driver
           binary = ENV['PHANTOMJS_BINARY']
-          if binary
-            WebDriver::PhantomJS.path = binary
-          end
-
+          WebDriver::PhantomJS.path = binary if binary
           WebDriver::Driver.for :phantomjs
         end
 
-        def create_iphone_driver
-          url = ENV['iphone_url']
-          if url
-            WebDriver::Driver.for :iphone, :url => url
-          else
-            WebDriver::Driver.for :iphone
-          end
-        end
-
         def create_safari_driver
-          if ENV['timeout']
-            WebDriver::Driver.for :safari, :timeout => Integer(ENV['timeout'])
-          else
-            WebDriver::Driver.for :safari
-          end
+          return WebDriver::Driver.for :safari unless ENV['timeout']
+          WebDriver::Driver.for :safari, timeout: Integer(ENV['timeout'])
         end
 
         def keep_alive_client
           require 'selenium/webdriver/remote/http/persistent'
-          STDERR.puts "INFO: using net-http-persistent"
+          STDERR.puts 'INFO: using net-http-persistent'
 
           Selenium::WebDriver::Remote::Http::Persistent.new
         rescue LoadError
-           # net-http-persistent not available
+          # net-http-persistent not available
         end
 
         def http_client
           Selenium::WebDriver::Remote::Http::Default.new
         end
-
-      end # TestEnvironment
+      end
     end # SpecSupport
   end # WebDriver
 end # Selenium

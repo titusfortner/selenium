@@ -20,10 +20,8 @@
 module Selenium
   module WebDriver
     module Edge
-
       module LegacySupport
-
-          # These are commands Edge is still using from JSON Wire Protocol
+        # These are commands Edge is still using from JSON Wire Protocol
         [:executeScript, :executeAsyncScript, :submitElement, :doubleClick, :mouseDown, :mouseUp, :mouseMoveTo, :click,
          :sendKeysToActiveElement, :getWindowHandles, :getCurrentWindowHandle, :getWindowSize, :setWindowSize, :getWindowPosition,
          :setWindowPosition, :maximizeWindow, :getAlertText, :acceptAlert, :dismissAlert].each do |cmd|
@@ -32,17 +30,17 @@ module Selenium
         end
 
         def executeScript(script, *args)
-          result = execute :executeScript, {}, :script => script, :args => args
+          result = execute :executeScript, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
         def executeAsyncScript(script, *args)
-          result = execute :executeAsyncScript, {}, :script => script, :args => args
+          result = execute :executeAsyncScript, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
         def submitElement(element)
-          execute :submitElement, :id => element
+          execute :submitElement, id: element
         end
 
         def doubleClick
@@ -50,11 +48,11 @@ module Selenium
         end
 
         def click
-          execute :click, {}, :button => 0
+          execute :click, {}, {button: 0}
         end
 
         def contextClick
-          execute :click, {}, :button => 2
+          execute :click, {}, {button: 2}
         end
 
         def mouseDown
@@ -66,17 +64,18 @@ module Selenium
         end
 
         def mouseMoveTo(element, x = nil, y = nil)
-          params = { :element => element }
+          params = {element: element}
 
           if x && y
-            params.merge! :xoffset => x, :yoffset => y
+            params[:xoffset] = x
+            params[:yoffset] = y
           end
 
           execute :mouseMoveTo, {}, params
         end
 
         def sendKeysToActiveElement(key)
-          execute :sendKeysToActiveElement, {}, :value => key
+          execute :sendKeysToActiveElement, {}, {value: key}
         end
 
         def getCurrentWindowHandle
@@ -84,33 +83,31 @@ module Selenium
         end
 
         def getWindowSize(handle = :current)
-          data = execute :getWindowSize, :window_handle => handle
+          data = execute :getWindowSize, window_handle: handle
 
           Dimension.new data['width'], data['height']
         end
 
         def setWindowSize(width, height, handle = :current)
-          execute :setWindowSize, {:window_handle => handle},
-                  :width  => width,
-                  :height => height
+          execute :setWindowSize, {window_handle: handle},
+                  {width: width,
+                   height: height}
         end
 
         def getWindowPosition(handle = :current)
-          data = execute :getWindowPosition, :window_handle => handle
+          data = execute :getWindowPosition, window_handle: handle
 
           Point.new data['x'], data['y']
         end
 
         def setWindowPosition(x, y, handle = :current)
-          execute :setWindowPosition, {:window_handle => handle},
-                  :x => x, :y => y
+          execute :setWindowPosition, {window_handle: handle},
+                  {x: x, y: y}
         end
 
         def maximizeWindow(handle = :current)
-          execute :maximizeWindow, :window_handle => handle
+          execute :maximizeWindow, window_handle: handle
         end
-
-
       end # LegacySupport
     end # Edge
   end # WebDriver

@@ -19,7 +19,6 @@
 
 module Selenium
   module WebDriver
-
     #
     # The main class through which you control the browser.
     #
@@ -33,7 +32,6 @@ module Selenium
       include SearchContext
 
       class << self
-
         #
         # @api private
         #
@@ -93,13 +91,12 @@ module Selenium
         @bridge = bridge
 
         # TODO: refactor this away
-        unless bridge.driver_extensions.empty?
-          extend(*bridge.driver_extensions)
-        end
+        return if bridge.driver_extensions.empty?
+        extend(*bridge.driver_extensions)
       end
 
       def inspect
-        '#<%s:0x%x browser=%s>' % [self.class, hash*2, bridge.browser.inspect]
+        format '#<%s:0x%x browser=%s>', self.class, hash * 2, bridge.browser.inspect
       end
 
       #
@@ -239,7 +236,6 @@ module Selenium
         bridge.executeAsyncScript(script, *args)
       end
 
-
       #-------------------------------- sugar  --------------------------------
 
       #
@@ -273,9 +269,7 @@ module Selenium
       #
 
       def [](sel)
-        if sel.kind_of?(String) || sel.kind_of?(Symbol)
-          sel = { :id => sel }
-        end
+        sel = {id: sel} if sel.is_a?(String) || sel.is_a?(Symbol)
 
         find_element sel
       end
@@ -299,10 +293,7 @@ module Selenium
 
       private
 
-      def bridge
-        @bridge
-      end
-
+      attr_reader :bridge
     end # Driver
   end # WebDriver
 end # Selenium

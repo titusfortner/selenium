@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Chrome
-
       #
       # @api private
       #
@@ -34,18 +33,17 @@ module Selenium
           server_command = [@executable_path, "--port=#{@port}", *@extra_args]
           @process       = ChildProcess.build(*server_command)
 
-          @process.io.inherit! if $DEBUG == true
+          @process.io.inherit! if $DEBUG
           @process.start
         end
 
         def stop_server
-          connect_to_server { |http| http.get("/shutdown") }
+          connect_to_server { |http| http.get('/shutdown') }
         end
 
         def cannot_connect_error_text
           "unable to connect to chromedriver #{@host}:#{@port}"
         end
-
       end # Service
     end # Chrome
   end # WebDriver

@@ -19,14 +19,12 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api private
     #
 
     module DriverExtensions
       module TakesScreenshot
-
         #
         # Save a PNG screenshot to the given path
         #
@@ -50,12 +48,11 @@ module Selenium
           when :base64
             bridge.getScreenshot
           when :png
-            bridge.getScreenshot.unpack("m")[0]
+            bridge.getScreenshot.unpack('m')[0]
           else
             raise Error::UnsupportedOperationError, "unsupported format: #{format.inspect}"
           end
         end
-
       end # TakesScreenshot
     end # DriverExtensions
   end # WebDriver

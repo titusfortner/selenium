@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Support
-
       #
       # @api private
       #
@@ -29,69 +28,69 @@ module Selenium
         def initialize(delegate, listener)
           @delegate = delegate
 
-          if listener.respond_to? :call
-            @listener = BlockEventListener.new(listener)
-          else
-            @listener = listener
-          end
+          @listener = if listener.respond_to? :call
+                        BlockEventListener.new(listener)
+                      else
+                        listener
+                      end
         end
 
         def get(url)
-          dispatch(:navigate_to, url, driver) {
+          dispatch(:navigate_to, url, driver) do
             @delegate.get(url)
-          }
+          end
         end
 
         def goForward
-          dispatch(:navigate_forward, driver) {
+          dispatch(:navigate_forward, driver) do
             @delegate.goForward
-          }
+          end
         end
 
         def goBack
-          dispatch(:navigate_back, driver) {
+          dispatch(:navigate_back, driver) do
             @delegate.goBack
-          }
+          end
         end
 
         def clickElement(ref)
-          dispatch(:click, create_element(ref), driver) {
+          dispatch(:click, create_element(ref), driver) do
             @delegate.clickElement(ref)
-          }
+          end
         end
 
         def clearElement(ref)
-          dispatch(:change_value_of, create_element(ref), driver) {
+          dispatch(:change_value_of, create_element(ref), driver) do
             @delegate.clearElement(ref)
-          }
+          end
         end
 
         def sendKeysToElement(ref, keys)
-          dispatch(:change_value_of, create_element(ref), driver) {
+          dispatch(:change_value_of, create_element(ref), driver) do
             @delegate.sendKeysToElement(ref, keys)
-          }
+          end
         end
 
         def find_element_by(how, what, parent = nil)
-          e = dispatch(:find, how, what, driver) {
+          e = dispatch(:find, how, what, driver) do
             @delegate.find_element_by how, what, parent
-          }
+          end
 
           Element.new self, e.ref
         end
 
         def find_elements_by(how, what, parent = nil)
-          es = dispatch(:find, how, what, driver) {
+          es = dispatch(:find, how, what, driver) do
             @delegate.find_elements_by(how, what, parent)
-          }
+          end
 
           es.map { |e| Element.new self, e.ref }
         end
 
         def executeScript(script, *args)
-          dispatch(:execute_script, script, driver) {
+          dispatch(:execute_script, script, driver) do
             @delegate.executeScript(script, *args)
-          }
+          end
         end
 
         def quit
@@ -113,7 +112,7 @@ module Selenium
           @driver ||= Driver.new(self)
         end
 
-        def dispatch(name, *args, &blk)
+        def dispatch(name, *args)
           @listener.__send__("before_#{name}", *args)
           returned = yield
           @listener.__send__("after_#{name}", *args)
@@ -125,7 +124,6 @@ module Selenium
           @delegate.__send__(meth, *args, &blk)
         end
       end # EventFiringBridge
-
     end # Support
   end # WebDriver
 end # Selenium

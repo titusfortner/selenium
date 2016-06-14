@@ -22,7 +22,6 @@ require 'json'
 module Selenium
   module WebDriver
     module Remote
-
       #
       # Low level bridge to the remote server, through which the rest of the API works.
       #
@@ -32,6 +31,7 @@ module Selenium
       class W3CBridge
         include BridgeHelper
 
+        # TODO: constant shouldn't be modified in class
         COMMANDS = {}
 
         #
@@ -62,10 +62,7 @@ module Selenium
         #
 
         def initialize(opts = {})
-          if opts.fetch(:desired_capabilities, {})[:browser_name] == 'MicrosoftEdge'
-            require_relative '../edge/legacy_support'
-            extend Edge::LegacySupport
-          end
+          edge_check(opts)
 
           opts = opts.dup
 
@@ -78,15 +75,15 @@ module Selenium
           desired_capabilities[:marionette] = opts.delete(:marionette) unless opts[:marionette].nil?
 
           if desired_capabilities[:marionette] && Firefox::Binary.version < 45
-              raise Error::WebDriverError, "Marionette is not supported in Firefox Version #{Firefox::Binary.version}"
+            raise Error::WebDriverError, "Marionette is not supported in Firefox Version #{Firefox::Binary.version}"
           end
 
           unless opts.empty?
             raise ArgumentError, "unknown option#{'s' if opts.size != 1}: #{opts.inspect}"
           end
 
-          uri = url.kind_of?(URI) ? url : URI.parse(url)
-          uri.path += "/" unless uri.path =~ /\/$/
+          uri = url.is_a?(URI) ? url : URI.parse(url)
+          uri.path += '/' unless uri.path =~ %r{\/$}
 
           http_client.server_url = uri
 
@@ -98,8 +95,14 @@ module Selenium
         def browser
           @browser ||= (
             name = @capabilities.browser_name
-            name ? name.gsub(" ", "_").to_sym : 'unknown'
+            name ? name.tr(' ', '_').to_sym : 'unknown'
           )
+        end
+
+        def edge_check(opts)
+          return unless opts[:browser_name] && opts[:browser_name] == 'MicrosoftEdge'
+          require_relative '../edge/legacy_support'
+          extend Edge::LegacySupport
         end
 
         def driver_extensions
@@ -120,14 +123,15 @@ module Selenium
         #
 
         def session_id
-          @session_id || raise(Error::WebDriverError, "no current session exists")
+          @session_id || raise(Error::WebDriverError, 'no current session exists')
         end
 
         def create_session(desired_capabilities)
-          resp = raw_execute :newSession, {}, :desiredCapabilities => desired_capabilities
-          @session_id = resp['sessionId'] or raise Error::WebDriverError, 'no sessionId in returned payload'
+          resp = raw_execute :newSession, {}, {desiredCapabilities: desired_capabilities}
+          @session_id = resp['sessionId']
+          return W3CCapabilities.json_create resp['value'] if @session_id
 
-          W3CCapabilities.json_create resp['value']
+          raise Error::WebDriverError, 'no sessionId in returned payload'
         end
 
         def status
@@ -137,7 +141,7 @@ module Selenium
         end
 
         def get(url)
-          execute :get, {}, :url => url
+          execute :get, {}, {url: url}
         end
 
         def setImplicitWaitTimeout(milliseconds)
@@ -149,7 +153,7 @@ module Selenium
         end
 
         def setTimeout(type, milliseconds)
-          execute :setTimeout, {}, :type => type, :ms => milliseconds
+          execute :setTimeout, {}, {type: type, ms: milliseconds}
         end
 
         #
@@ -165,7 +169,7 @@ module Selenium
         end
 
         def setAlertValue(keys)
-          execute :sendAlertText, {}, {:handler => 'prompt', :message => keys}
+          execute :sendAlertText, {}, {handler: 'prompt', message: keys}
         end
 
         def getAlertText
@@ -193,18 +197,18 @@ module Selenium
         end
 
         def getPageSource
-          executeScript("var source = document.documentElement.outerHTML;" +
-                            "if (!source) { source = new XMLSerializer().serializeToString(document); }" +
-                            "return source;")
+          executeScript('var source = document.documentElement.outerHTML;' \
+                            'if (!source) { source = new XMLSerializer().serializeToString(document); }' \
+                            'return source;')
         end
 
         def switchToWindow(name)
-          execute :switchToWindow, {}, :handle => name
+          execute :switchToWindow, {}, {handle: name}
         end
 
         def switchToFrame(id)
           id = find_element_by('id', id) if id.is_a? String
-          execute :switchToFrame, {}, :id => id
+          execute :switchToFrame, {}, {id: id}
         end
 
         def switchToParentFrame
@@ -215,7 +219,7 @@ module Selenium
           switchToFrame nil
         end
 
-        QUIT_ERRORS = [IOError]
+        QUIT_ERRORS = [IOError].freeze
 
         def quit
           execute :deleteSession
@@ -247,8 +251,8 @@ module Selenium
           unless handle == :current
             raise Error::WebDriverError, 'Switch to desired window before changing its size'
           end
-          execute :setWindowSize, {}, {:width  => width,
-                                   :height => height}
+          execute :setWindowSize, {}, {width: width,
+                                       height: height}
         end
 
         def maximizeWindow(handle = :current)
@@ -296,7 +300,7 @@ module Selenium
         end
 
         def getLocalStorageKeys
-          executeScript("return Object.keys(localStorage)")
+          executeScript('return Object.keys(localStorage)')
         end
 
         def setLocalStorageItem(key, value)
@@ -304,11 +308,11 @@ module Selenium
         end
 
         def clearLocalStorage
-          executeScript("localStorage.clear()")
+          executeScript('localStorage.clear()')
         end
 
         def getLocalStorageSize
-          executeScript("return localStorage.length")
+          executeScript('return localStorage.length')
         end
 
         def getSessionStorageItem(key)
@@ -320,7 +324,7 @@ module Selenium
         end
 
         def getSessionStorageKeys
-          executeScript("return Object.keys(sessionStorage)")
+          executeScript('return Object.keys(sessionStorage)')
         end
 
         def setSessionStorageItem(key, value)
@@ -328,11 +332,11 @@ module Selenium
         end
 
         def clearSessionStorage
-          executeScript("sessionStorage.clear()")
+          executeScript('sessionStorage.clear()')
         end
 
         def getSessionStorageSize
-          executeScript("return sessionStorage.length")
+          executeScript('return sessionStorage.length')
         end
 
         def getLocation
@@ -356,12 +360,12 @@ module Selenium
         #
 
         def executeScript(script, *args)
-          result = execute :executeScript, {}, :script => script, :args => args
+          result = execute :executeScript, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
         def executeAsyncScript(script, *args)
-          result = execute :executeAsyncScript, {}, :script => script, :args => args
+          result = execute :executeAsyncScript, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
@@ -370,16 +374,16 @@ module Selenium
         #
 
         def addCookie(cookie)
-          execute :addCookie, {}, :cookie => cookie
+          execute :addCookie, {}, {cookie: cookie}
         end
 
         def deleteCookie(name)
-          execute :deleteCookie, :name => name
+          execute :deleteCookie, name: name
         end
 
-        # TODO - write specs
+        # TODO: - write specs
         def getCookie(name)
-          execute :getCookie, :name => name
+          execute :getCookie, name: name
         end
 
         def getAllCookies
@@ -387,7 +391,7 @@ module Selenium
         end
 
         def deleteAllCookies
-          getAllCookies.each { |cookie| deleteCookie(cookie['name'])}
+          getAllCookies.each { |cookie| deleteCookie(cookie['name']) }
         end
 
         #
@@ -395,11 +399,11 @@ module Selenium
         #
 
         def clickElement(element)
-          execute :elementClick, :id => element
+          execute :elementClick, id: element
         end
 
         def click
-          execute :click, {}, :button => 0
+          execute :click, {}, {button: 0}
         end
 
         def doubleClick
@@ -407,7 +411,7 @@ module Selenium
         end
 
         def contextClick
-          execute :click, {}, :button => 2
+          execute :click, {}, {button: 2}
         end
 
         def mouseDown
@@ -419,10 +423,11 @@ module Selenium
         end
 
         def mouseMoveTo(element, x = nil, y = nil)
-          params = { :element => element }
+          params = {element: element}
 
           if x && y
-            params.merge! :xoffset => x, :yoffset => y
+            params[:xoffset] = x
+            params[:yoffset] = y
           end
 
           execute :mouseMoveTo, {}, params
@@ -432,73 +437,72 @@ module Selenium
           sendKeysToElement(getActiveElement, keys)
         end
 
-        # TODO - Implement file verification
+        # TODO: - Implement file verification
         def sendKeysToElement(element, keys)
-          execute :elementSendKeys, {:id => element}, {:value => keys.join('').split(//)}
+          execute :elementSendKeys, {id: element}, {value: keys.join('').split(//)}
         end
 
         def clearElement(element)
-          execute :elementClear, :id => element
+          execute :elementClear, id: element
         end
 
         def submitElement(element)
-          executeScript("var e = arguments[0].ownerDocument.createEvent('Event');" +
-                            "e.initEvent('submit', true, true);" +
-                            "if (arguments[0].dispatchEvent(e)) { arguments[0].submit() }", element)
+          executeScript("var e = arguments[0].ownerDocument.createEvent('Event');" \
+                            "e.initEvent('submit', true, true);" \
+                            'if (arguments[0].dispatchEvent(e)) { arguments[0].submit() }', element)
         end
 
         def dragElement(element, right_by, down_by)
-          execute :dragElement, {:id => element}, :x => right_by, :y => down_by
+          execute :dragElement, {id: element}, {x: right_by, y: down_by}
         end
 
         def touchSingleTap(element)
-          execute :touchSingleTap, {}, :element => element
+          execute :touchSingleTap, {}, {element: element}
         end
 
         def touchDoubleTap(element)
-          execute :touchDoubleTap, {}, :element => element
+          execute :touchDoubleTap, {}, {element: element}
         end
 
         def touchLongPress(element)
-          execute :touchLongPress, {}, :element => element
+          execute :touchLongPress, {}, {element: element}
         end
 
         def touchDown(x, y)
-          execute :touchDown, {}, :x => x, :y => y
+          execute :touchDown, {}, {x: x, y: y}
         end
 
         def touchUp(x, y)
-          execute :touchUp, {}, :x => x, :y => y
+          execute :touchUp, {}, {x: x, y: y}
         end
 
         def touchMove(x, y)
-          execute :touchMove, {}, :x => x, :y => y
+          execute :touchMove, {}, {x: x, y: y}
         end
 
         def touchScroll(element, x, y)
           if element
-            execute :touchScroll, {}, :element => element,
-                                      :xoffset => x,
-                                      :yoffset => y
+            execute :touchScroll, {}, {element: element,
+                                       xoffset: x,
+                                       yoffset: y}
           else
-            execute :touchScroll, {}, :xoffset => x, :yoffset => y
+            execute :touchScroll, {}, {xoffset: x, yoffset: y}
           end
         end
 
         def touchFlick(xspeed, yspeed)
-          execute :touchFlick, {}, :xspeed => xspeed, :yspeed => yspeed
+          execute :touchFlick, {}, {xspeed: xspeed, yspeed: yspeed}
         end
 
         def touchElementFlick(element, right_by, down_by, speed)
-          execute :touchFlick, {}, :element => element,
-                                   :xoffset => right_by,
-                                   :yoffset => down_by,
-                                   :speed   => speed
-
+          execute :touchFlick, {}, {element: element,
+                                    xoffset: right_by,
+                                    yoffset: down_by,
+                                    speed: speed}
         end
 
         def setScreenOrientation(orientation)
-          execute :setScreenOrientation, {}, :orientation => orientation
+          execute :setScreenOrientation, {}, {orientation: orientation}
         end
 
         def getScreenOrientation
@@ -510,23 +514,23 @@ module Selenium
         #
 
         def getElementTagName(element)
-          execute :getElementTagName, :id => element
+          execute :getElementTagName, id: element
         end
 
         def getElementAttribute(element, name)
-          execute :getElementAttribute, :id => element, :name => name
+          execute :getElementAttribute, id: element, name: name
         end
 
         def getElementValue(element)
-          execute :getElementProperty, :id => element, :name => 'value'
+          execute :getElementProperty, id: element, name: 'value'
         end
 
         def getElementText(element)
-          execute :getElementText, :id => element
+          execute :getElementText, id: element
         end
 
         def getElementLocation(element)
-          data = execute :getElementRect, :id => element
+          data = execute :getElementRect, id: element
 
           Point.new data['x'], data['y']
         end
@@ -537,27 +541,27 @@ module Selenium
         end
 
         def getElementSize(element)
-          data = execute :getElementRect, :id => element
+          data = execute :getElementRect, id: element
 
           Dimension.new data['width'], data['height']
         end
 
         def isElementEnabled(element)
-          execute :isElementEnabled, :id => element
+          execute :isElementEnabled, id: element
         end
 
         def isElementSelected(element)
-          execute :isElementSelected, :id => element
+          execute :isElementSelected, id: element
         end
 
         def isElementDisplayed(element)
           jwp = Selenium::WebDriver::Remote::Bridge::COMMANDS[:isElementDisplayed]
           self.class.command(:isElementDisplayed, jwp.first, jwp.last)
-          execute :isElementDisplayed, :id => element
+          execute :isElementDisplayed, id: element
         end
 
         def getElementValueOfCssProperty(element, prop)
-          execute :getElementCssValue, :id => element, :property_name => prop
+          execute :getElementCssValue, id: element, property_name: prop
         end
 
         #
@@ -572,11 +576,11 @@ module Selenium
         def find_element_by(how, what, parent = nil)
           how, what = convert_locators(how, what)
 
-          if parent
-            id = execute :findChildElement, {:id => parent}, {:using => how, :value => what}
-          else
-            id = execute :findElement, {}, {:using => how, :value => what}
-          end
+          id = if parent
+                 execute :findChildElement, {id: parent}, {using: how, value: what}
+               else
+                 execute :findElement, {}, {using: how, value: what}
+               end
 
           Element.new self, element_id_from(id)
         end
@@ -584,11 +588,11 @@ module Selenium
         def find_elements_by(how, what, parent = nil)
           how, what = convert_locators(how, what)
 
-          if parent
-            ids = execute :findChildElements, {:id => parent}, {:using => how, :value => what}
-          else
-            ids = execute :findElements, {}, {:using => how, :value => what}
-          end
+          ids = if parent
+                  execute :findChildElements, {id: parent}, {using: how, value: what}
+                else
+                  execute :findElements, {}, {using: how, value: what}
+                end
 
           ids.map { |id| Element.new self, element_id_from(id) }
         end
@@ -609,7 +613,7 @@ module Selenium
           when 'tag name'
             how = 'css selector'
           end
-          return how, what
+          [how, what]
         end
 
         #
@@ -634,12 +638,12 @@ module Selenium
           verb, path = COMMANDS[command] || raise(ArgumentError, "unknown command: #{command.inspect}")
           path       = path.dup
 
-          path[':session_id'] = @session_id if path.include?(":session_id")
+          path[':session_id'] = @session_id if path.include?(':session_id')
 
           begin
-            opts.each { |key, value|
+            opts.each do |key, value|
               path[key.inspect] = escaper.escape(value.to_s)
-            }
+            end
           rescue IndexError
             raise ArgumentError, "#{opts.inspect} invalid for #{command.inspect}"
           end
@@ -665,7 +669,6 @@ module Selenium
 
           string
         end
-
       end # W3CBridge
     end # Remote
   end # WebDriver

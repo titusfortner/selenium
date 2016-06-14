@@ -20,24 +20,22 @@
 module Selenium
   module WebDriver
     module Android
-
       #
       # @api private
       #
 
       class Bridge < Remote::Bridge
-
-        DEFAULT_URL = "http://#{Platform.localhost}:8080/wd/hub/"
+        DEFAULT_URL = "http://#{Platform.localhost}:8080/wd/hub/".freeze
 
         def initialize(opts = {})
           warn 'The Android driver is deprecated - please use either http://selendroid.io or http://appium.io instead.'
 
           remote_opts = {
-            :url                  => opts.fetch(:url, DEFAULT_URL),
-            :desired_capabilities => opts.fetch(:desired_capabilities, capabilities),
+            url: opts.fetch(:url, DEFAULT_URL),
+            desired_capabilities: opts.fetch(:desired_capabilities, capabilities)
           }
 
-          remote_opts[:http_client] = opts[:http_client] if opts.has_key?(:http_client)
+          remote_opts[:http_client] = opts[:http_client] if opts.key?(:http_client)
 
           super remote_opts
         end
@@ -61,7 +59,6 @@ module Selenium
         def capabilities
           @capabilities ||= Remote::Capabilities.android
         end
-
       end # Bridge
     end # Android
   end # WebDriver

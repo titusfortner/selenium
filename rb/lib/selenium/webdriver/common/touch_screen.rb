@@ -20,8 +20,7 @@
 module Selenium
   module WebDriver
     class TouchScreen
-      FLICK_SPEED = { :normal => 0, :fast => 1}
-
+      FLICK_SPEED = {normal: 0, fast: 1}.freeze
 
       #
       # @api private
@@ -94,7 +93,6 @@ module Selenium
         else
           raise ArgumentError, "wrong number of arguments, expected 2 or 4, got #{args.size}"
         end
-
       end
 
       private
@@ -107,18 +105,17 @@ module Selenium
             raise ArgumentError, "expected #{point.inspect} to respond to :x and :y"
           end
 
-          x, y = point.x, point.y
+          x = point.x
+          y = point.y
         end
 
         [Integer(x), Integer(y)]
       end
 
       def assert_element(element)
-        unless element.kind_of? Element
-          raise TypeError, "expected #{Element}, got #{element.inspect}:#{element.class}"
-        end
+        return if element.is_a? Element
+        raise TypeError, "expected #{Element}, got #{element.inspect}:#{element.class}"
       end
-
     end # TouchScreen
   end # WebDriver
 end # Selenium

@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module PhantomJS
-
       #
       # @api private
       #
@@ -34,7 +33,7 @@ module Selenium
           server_command = [@executable_path, "--webdriver=#{@port}", *@extra_args]
           @process = ChildProcess.build(*server_command.compact)
 
-          if $DEBUG == true
+          if $DEBUG
             @process.io.inherit!
           elsif Platform.jruby?
             # apparently we need to read the output for phantomjs to work on jruby
@@ -46,19 +45,21 @@ module Selenium
 
         def stop_process
           super
-          if Platform.jruby? && !$DEBUG
-            @process.io.close rescue nil
+          return unless Platform.jruby? && !$DEBUG
+          begin
+            @process.io.close
+          rescue
+            nil
           end
         end
 
         def stop_server
-          connect_to_server { |http| http.get("/shutdown") }
+          connect_to_server { |http| http.get('/shutdown') }
         end
 
         def cannot_connect_error_text
           "unable to connect to phantomjs @ #{uri} after #{START_TIMEOUT} seconds"
         end
-
       end # Service
     end # PhantomJS
   end # WebDriver

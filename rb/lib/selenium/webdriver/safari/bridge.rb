@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Safari
-
       class Bridge < Remote::Bridge
         COMMAND_TIMEOUT = 60
 
@@ -60,7 +59,7 @@ module Selenium
         private
 
         def create_session(desired_capabilities)
-          resp = raw_execute :newSession, {}, :desiredCapabilities => desired_capabilities
+          resp = raw_execute :newSession, {}, {desiredCapabilities: desired_capabilities}
           Remote::Capabilities.json_create resp.fetch('value')
         end
 
@@ -75,9 +74,9 @@ module Selenium
           params.merge!(command_hash) if command_hash
 
           @server.send(
-            :origin  => "webdriver",
-            :type    => "command",
-            :command => { :id => @command_id.to_s, :name => command, :parameters => params}
+            origin: 'webdriver',
+            type: 'command',
+            command: {id: @command_id.to_s, name: command, parameters: params}
           )
 
           raw = @server.receive
@@ -97,7 +96,7 @@ module Selenium
 
         def camel_case(str)
           parts = str.split('_')
-          parts[1..-1].map { |e| e.capitalize! }
+          parts[1..-1].map(&:capitalize!)
 
           parts.join
         end
@@ -111,7 +110,7 @@ module Selenium
           end
 
           FileReaper << path
-          path.gsub! "/", "\\" if Platform.windows?
+          path.tr! '/', '\\' if Platform.windows?
 
           path
         end
@@ -128,7 +127,6 @@ module Selenium
 
           caps
         end
-
       end # Bridge
     end # Safari
   end # WebDriver

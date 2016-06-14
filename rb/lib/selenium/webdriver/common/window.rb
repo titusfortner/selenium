@@ -19,13 +19,11 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api beta This API may be changed or removed in a future release.
     #
 
     class Window
-
       #
       # @api private
       #
@@ -42,8 +40,8 @@ module Selenium
 
       def size=(dimension)
         unless dimension.respond_to?(:width) && dimension.respond_to?(:height)
-          raise ArgumentError, "expected #{dimension.inspect}:#{dimension.class}" +
-                                " to respond to #width and #height"
+          raise ArgumentError, "expected #{dimension.inspect}:#{dimension.class}" \
+                               ' to respond to #width and #height'
         end
 
         @bridge.setWindowSize dimension.width, dimension.height
@@ -67,8 +65,8 @@ module Selenium
 
       def position=(point)
         unless point.respond_to?(:x) && point.respond_to?(:y)
-          raise ArgumentError, "expected #{point.inspect}:#{point.class}" +
-                                " to respond to #x and #y"
+          raise ArgumentError, "expected #{point.inspect}:#{point.class}" \
+                               ' to respond to #x and #y'
         end
 
         @bridge.setWindowPosition point.x, point.y
@@ -124,7 +122,6 @@ module Selenium
       def full_screen
         @bridge.fullscreenWindow
       end
-
     end # Window
   end # WebDriver
 end # Selenium

@@ -29,15 +29,16 @@ module Selenium
       #
 
       def initialize(bridge, id)
-        @bridge, @id = bridge, id
+        @bridge = bridge
+        @id = id
       end
 
       def inspect
-        '#<%s:0x%x id=%s>' % [self.class, hash*2, @id.inspect]
+        format '#<%s:0x%x id=%s>', self.class, hash * 2, @id.inspect
       end
 
       def ==(other)
-        other.kind_of?(self.class) && ref == other.ref
+        other.is_a?(self.class) && ref == other.ref
       end
       alias_method :eql?, :==
 
@@ -280,7 +281,7 @@ module Selenium
       # @api private
       #
 
-      def to_json(*args)
+      def to_json(*)
         JSON.generate as_json
       end
 
@@ -290,26 +291,23 @@ module Selenium
       # @api private
       #
 
-      def as_json(opts = nil)
+      def as_json(*)
         {
           :ELEMENT => @id,
-          "element-6066-11e4-a52e-4f735466cecf" => @id
+          'element-6066-11e4-a52e-4f735466cecf' => @id
         }
       end
 
       private
 
-      def bridge
-        @bridge
-      end
+      attr_reader :bridge
 
       def selectable?
         tn = tag_name.downcase
         type = attribute(:type).to_s.downcase
 
-        tn == "option" || (tn == "input" && %w[radio checkbox].include?(type))
+        tn == 'option' || (tn == 'input' && %w[radio checkbox].include?(type))
       end
-
     end # Element
   end # WebDriver
 end # Selenium

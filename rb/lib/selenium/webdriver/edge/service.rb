@@ -20,7 +20,6 @@
 module Selenium
   module WebDriver
     module Edge
-
       #
       # @api private
       #
@@ -31,21 +30,20 @@ module Selenium
         private
 
         def stop_server
-          connect_to_server { |http| http.head("/shutdown") }
+          connect_to_server { |http| http.head('/shutdown') }
         end
 
         def start_process
           server_command = [@executable_path, "--port=#{@port}", *@extra_args]
           @process       = ChildProcess.build(*server_command)
 
-          @process.io.inherit! if $DEBUG == true
+          @process.io.inherit! if $DEBUG
           @process.start
         end
 
         def cannot_connect_error_text
           "unable to connect to MicrosoftWebDriver #{@host}:#{@port}"
         end
-
       end # Service
     end # Edge
   end # WebDriver

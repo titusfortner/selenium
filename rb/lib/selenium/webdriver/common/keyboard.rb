@@ -19,13 +19,11 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api private
     # @see ActionBuilder
 
     class Keyboard
-
       def initialize(bridge)
         @bridge = bridge
       end
@@ -60,15 +58,12 @@ module Selenium
 
       private
 
-      MODIFIERS = [:control, :shift, :alt, :command, :meta]
+      MODIFIERS = [:control, :shift, :alt, :command, :meta].freeze
 
       def assert_modifier(key)
-        unless MODIFIERS.include? key
-          raise ArgumentError,
-            "#{key.inspect} is not a modifier key, expected one of #{MODIFIERS.inspect}"
-        end
+        return if MODIFIERS.include? key
+        raise ArgumentError, "#{key.inspect} is not a modifier key, expected one of #{MODIFIERS.inspect}"
       end
-
     end # Keyboard
   end # WebDriver
-end  # Selenium
+end # Selenium

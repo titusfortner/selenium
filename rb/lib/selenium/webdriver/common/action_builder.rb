@@ -19,7 +19,6 @@
 
 module Selenium
   module WebDriver
-
     #
     # The ActionBuilder provides the user a way to set up and perform
     # complex user interactions.
@@ -39,18 +38,17 @@ module Selenium
     #
 
     class ActionBuilder
-
       #
       # @api private
       #
 
       def initialize(mouse, keyboard)
-        @devices    = {
-          :mouse    => mouse,
-          :keyboard => keyboard
+        @devices = {
+          mouse: mouse,
+          keyboard: keyboard
         }
 
-        @actions  = []
+        @actions = []
       end
 
       #
@@ -80,9 +78,7 @@ module Selenium
       #
 
       def key_down(*args)
-        if args.first.kind_of? Element
-          @actions << [:mouse, :click, [args.shift]]
-        end
+        @actions << [:mouse, :click, [args.shift]] if args.first.is_a? Element
 
         @actions << [:keyboard, :press, args]
         self
@@ -108,9 +104,7 @@ module Selenium
       #
 
       def key_up(*args)
-        if args.first.kind_of? Element
-          @actions << [:mouse, :click, [args.shift]]
-        end
+        @actions << [:mouse, :click, [args.shift]] if args.first.is_a? Element
 
         @actions << [:keyboard, :release, args]
         self
@@ -138,9 +132,7 @@ module Selenium
       #
 
       def send_keys(*args)
-        if args.first.kind_of? Element
-          @actions << [:mouse, :click, [args.shift]]
-        end
+        @actions << [:mouse, :click, [args.shift]] if args.first.is_a? Element
 
         @actions << [:keyboard, :send_keys, args]
         self
@@ -252,11 +244,11 @@ module Selenium
       #
 
       def move_to(element, right_by = nil, down_by = nil)
-        if right_by && down_by
-          @actions << [:mouse, :move_to, [element, Integer(right_by), Integer(down_by)]]
-        else
-          @actions << [:mouse, :move_to, [element]]
-        end
+        @actions << if right_by && down_by
+                      [:mouse, :move_to, [element, Integer(right_by), Integer(down_by)]]
+                    else
+                      [:mouse, :move_to, [element]]
+                    end
 
         self
       end
@@ -353,19 +345,17 @@ module Selenium
         self
       end
 
-
       #
       # Executes the actions added to the builder.
       #
 
       def perform
-        @actions.each { |receiver, method, args|
+        @actions.each do |receiver, method, args|
           @devices.fetch(receiver).__send__(method, *args)
-        }
+        end
 
         nil
       end
-
     end # ActionBuilder
   end # WebDriver
 end # Selenium

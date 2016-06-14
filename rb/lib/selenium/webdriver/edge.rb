@@ -25,7 +25,11 @@ require 'selenium/webdriver/edge/bridge'
 module Selenium
   module WebDriver
     module Edge
-      MISSING_TEXT = "Unable to find MicrosoftWebDriver. Please download the server from https://www.microsoft.com/en-us/download/details.aspx?id=48212. More info at https://github.com/SeleniumHQ/selenium/wiki/MicrosoftWebDriver."
+      MISSING_TEXT = <<-ERROR.tr("\n", '').freeze
+        Unable to find MicrosoftWebDriver. Please download the server from
+        https://www.microsoft.com/en-us/download/details.aspx?id=48212 and place it
+        somewhere on your PATH. More info at https://github.com/SeleniumHQ/selenium/wiki/MicrosoftWebDriver.
+      ERROR
 
       def self.driver_path=(path)
         Platform.assert_executable path
@@ -34,8 +38,8 @@ module Selenium
 
       def self.driver_path
         @driver_path ||= begin
-          path = Platform.find_binary("MicrosoftWebDriver")
-          path or raise Error::WebDriverError, MISSING_TEXT
+          path = Platform.find_binary('MicrosoftWebDriver')
+          raise Error::WebDriverError, MISSING_TEXT unless path
           Platform.assert_executable path
 
           path
@@ -50,7 +54,6 @@ module Selenium
       def self.path
         @path ||= nil
       end
-
     end # Edge
   end # WebDriver
 end # Selenium

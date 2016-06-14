@@ -25,18 +25,19 @@ module Selenium
       #
 
       class Bridge < Remote::Bridge
-
-        DEFAULT_URL = "http://#{Platform.localhost}:3001/wd/hub/"
+        DEFAULT_URL = "http://#{Platform.localhost}:3001/wd/hub/".freeze
 
         def initialize(opts = {})
-          warn 'The iPhone driver is deprecated - please use either http://appium.io/ or http://ios-driver.github.io/ios-driver/ instead'
+          warning = 'The iPhone driver is deprecated - please use either'
+          warning << 'http://appium.io/ or http://ios-driver.github.io/ios-driver/ instead'
+          warn warning
 
           remote_opts = {
-            :url                  => opts.fetch(:url, DEFAULT_URL),
-            :desired_capabilities => opts.fetch(:desired_capabilities, capabilities),
+            url: opts.fetch(:url, DEFAULT_URL),
+            desired_capabilities: opts.fetch(:desired_capabilities, capabilities)
           }
 
-          remote_opts[:http_client] = opts[:http_client] if opts.has_key?(:http_client)
+          remote_opts[:http_client] = opts[:http_client] if opts.key?(:http_client)
 
           super remote_opts
         end
@@ -57,7 +58,6 @@ module Selenium
         def capabilities
           @capabilities ||= Remote::Capabilities.iphone
         end
-
       end # Bridge
     end # IPhone
   end # WebDriver

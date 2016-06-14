@@ -19,14 +19,12 @@
 
 module Selenium
   module WebDriver
-
     #
     # @api private
     # @see ActionBuilder
     #
 
     class Mouse
-
       def initialize(bridge)
         @bridge = bridge
       end
@@ -82,10 +80,9 @@ module Selenium
       end
 
       def assert_element(element)
-        unless element.kind_of? Element
-          raise TypeError, "expected #{Element}, got #{element.inspect}:#{element.class}"
-        end
+        return if element.is_a? Element
+        raise TypeError, "expected #{Element}, got #{element.inspect}:#{element.class}"
       end
     end # Mouse
   end # WebDriver
-end  # Selenium
+end # Selenium

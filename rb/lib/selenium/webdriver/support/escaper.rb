@@ -17,3 +17,27 @@
 # specific language governing permissions and limitations
 # under the License.
 
+module Selenium
+  module WebDriver
+    module Support
+      module Escaper
+        def self.escape(str)
+          if str.include?('"') && str.include?("'")
+            parts = str.split('"', -1).map { |part| %("#{part}") }
+
+            quoted = parts.join(%(, '"', ))
+                          .gsub(/^"", |, ""$/, '')
+
+            "concat(#{quoted})"
+          elsif str.include?('"')
+            # escape string with just a quote into being single quoted: f"oo -> 'f"oo'
+            "'#{str}'"
+          else
+            # otherwise return the quoted string
+            %("#{str}")
+          end
+        end
+      end # Escaper
+    end # Support
+  end # WebDriver
+end # Selenium

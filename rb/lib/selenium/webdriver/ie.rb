@@ -23,7 +23,11 @@ require 'selenium/webdriver/ie/service'
 module Selenium
   module WebDriver
     module IE
-      MISSING_TEXT = "Unable to find standalone executable. Please download the IEDriverServer from http://selenium-release.storage.googleapis.com/index.html and place the executable on your PATH."
+      MISSING_TEXT = <<-ERROR.tr("\n", '').freeze
+        Unable to find IEDriverServer. Please download the server from
+        http://selenium-release.storage.googleapis.com/index.html and place it
+        somewhere on your PATH. More info at https://github.com/SeleniumHQ/selenium/wiki/InternetExplorerDriver.
+      ERROR
 
       def self.driver_path=(path)
         Platform.assert_executable path
@@ -32,8 +36,8 @@ module Selenium
 
       def self.driver_path
         @driver_path ||= begin
-          path = Platform.find_binary("IEDriverServer")
-          path or raise Error::WebDriverError, MISSING_TEXT
+          path = Platform.find_binary('IEDriverServer')
+          raise Error::WebDriverError, MISSING_TEXT unless path
           Platform.assert_executable path
 
           path
