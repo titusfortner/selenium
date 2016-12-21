@@ -34,10 +34,13 @@ module Selenium
         def browser
           if driver == :remote
             (ENV['WD_REMOTE_BROWSER'] || :chrome).to_sym
+          elsif driver == :sauce
+            (ENV['WD_REMOTE_BROWSER'] || :chrome).to_sym
           else
             driver
           end
         end
+
 
         def driver_instance
           @driver_instance ||= new_driver_instance
@@ -70,20 +73,20 @@ module Selenium
 
         def app_server
           @app_server ||= (
-            s = RackServer.new(root.join('common/src/web').to_s)
-            s.start
+          s = RackServer.new(root.join('common/src/web').to_s)
+          s.start
 
-            s
+          s
           )
         end
 
         def remote_server
           @remote_server ||= Selenium::Server.new(
-            remote_server_jar,
-            port: PortProber.above(4444),
-            log: $DEBUG,
-            background: true,
-            timeout: 60
+              remote_server_jar,
+              port: PortProber.above(4444),
+              log: $DEBUG,
+              background: true,
+              timeout: 60
           )
         end
 
@@ -120,7 +123,8 @@ module Selenium
         end
 
         def url_for(filename)
-          app_server.where_is filename
+#          app_server.where_is filename
+          "https://cdn.rawgit.com/SeleniumHQ/selenium/master/common/src/web/#{filename}"
         end
 
         def root
@@ -184,11 +188,25 @@ module Selenium
 
         def create_remote_driver
           WebDriver::Driver.for(
-            :remote,
-            desired_capabilities: remote_capabilities,
-            url: ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
-            http_client: keep_alive_client || http_client
+              :remote,
+              desired_capabilities: remote_capabilities,
+              url: ENV['WD_REMOTE_URL'] || remote_server.webdriver_url,
+              http_client: keep_alive_client || http_client
           )
+        end
+
+        def create_sauce_driver
+          @driver = :remote
+          caps = {
+              browserName: browser,
+          }
+          caps[:build] = ENV['BUILD_NAME'] if ENV['BUILD_NAME']
+          caps[:version] = ENV['VERSION'] if ENV['VERSION']
+          caps[:platform] = ENV['PLATFORM'] || "Windows 10"
+
+          url = "https://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:443/wd/hub".strip
+          WebDriver::Driver.for :remote, {url: url,
+                                          desired_capabilities: caps}
         end
 
         def create_firefox_driver

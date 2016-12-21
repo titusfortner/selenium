@@ -1,0 +1,87 @@
+require_relative "lib/selenium-webdriver"
+require "bundler/gem_tasks"
+require "rspec/core/rake_task"
+
+desc 'Set up localSelenium files'
+task :setup_local do
+  Dir.chdir '../'
+  exec "./go //rb:gem:build"
+  FileUtils.cp_r("build/rb/lib", "rb/")
+end
+
+desc 'Build remote server'
+task :build_remote do
+  Dir.chdir '../'
+  exec "./go selenium-server-standalone"
+end
+
+desc 'Run on Saucelaps'
+task :saucelabs do
+  system("platform=\"#{platform}\" browserName=\"#{browser}\" version=\"#{version}\" JUNIT_DIR=\"#{junit_dir}\" parallel_split_test spec")
+end
+
+desc 'Run unit tests'
+RSpec::Core::RakeTask.new(:unit_tests) do |spec|
+  spec.pattern = 'spec/unit/**/*_spec.rb'
+end
+
+desc 'Run integration tests'
+RSpec::Core::RakeTask.new(:integration_tests) do |spec|
+  spec.pattern = 'spec/integration/**/*_spec.rb'
+end
+
+
+desc 'Run specs in all browsers'
+task all_browsers: [:browsers, :remote_browsers]
+
+desc 'Run specs locally for all browsers'
+task browsers: [:setup_local,
+                :chrome,
+                :firefox,
+                :ff_legacy,
+                :phantomjs,
+                (:safari if Selenium::WebDriver::Platform.mac?),
+                (:ie if Selenium::WebDriver::Platform.windows?),
+                (:edge if Selenium::WebDriver::Platform.windows?)].compact
+
+desc 'Run specs remotely for all browsers'
+task remote_browsers: [:build_remote,
+                       :remote_chrome,
+                       :remote_firefox,
+                       :remote_ff_legacy,
+                       :remote_phantomjs,
+                       (:remote_safari if Selenium::WebDriver::Platform.mac?),
+                       (:remote_ie if Selenium::WebDriver::Platform.windows?),
+                       (:remote_edge if Selenium::WebDriver::Platform.windows?)].compact
+
+desc 'Run specs remotely for all browsers'
+task sauce_browsers_windows: [:sauce_chrome,
+                              :sauce_firefox,
+                              :sauce_phantomjs,
+                              :sauce_ie,
+                              :sauce_edge]
+
+%w(firefox ff_legacy chrome safari phantomjs ie edge).each do |browser|
+  desc "Run specs in #{browser}"
+  task browser do
+    ENV['WD_SPEC_DRIVER'] = browser
+    Rake::Task[:integration_tests].execute
+  end
+
+  desc "Run specs in Remote #{browser}"
+  task "remote_#{browser}" do
+    ENV['WD_SPEC_DRIVER'] = 'remote'
+    ENV['WD_REMOTE_BROWSER'] = browser
+    Rake::Task[:integration_tests].execute
+  end
+
+  desc "Run specs on Sauce with #{browser}"
+  task "sauce_#{browser}" do
+    ENV['BUILD_NAME'] = "Time.now.to_i.to_s-#{browser}"
+    ENV['WD_SPEC_DRIVER'] = 'sauce'
+    ENV['WD_REMOTE_BROWSER'] = browser
+#    Rake::Task[:integration_tests].execute
+    ENV['PARALLEL_SPLIT_TEST_PROCESSES'] = '100'
+    system "parallel_split_test spec/integration"
+  end
+end
