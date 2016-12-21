@@ -9,6 +9,7 @@ env:
   before_script:
 script:
   - cd rb
+  - bundle install
   - bundle exec rake $RAKE_TASK
 addons:
   sauce_connect: true
