@@ -6,7 +6,22 @@ before_install:
 env:
   global:
   - SAUCE_USERNAME=titusfortner
+  before_script:
+    - cd rb
+script: bundle exec rake $RAKE_TASK
 addons:
   sauce_connect: true
   jwt:
     secure: CRgxAqWgpN3wXLDuu0/5RCZw97js426LbBGGPccfAntT6nr6bVHMczvAAl7M5DFb6fBsO1OdkFn3Oc0T4P+bAaHcC1SMVkvejE59HJAUHcCkkxQ1Z/ly1mJJsg+77AdcsF4l6gyoBWBIGCO0+rdWGyBaTtbQF7RUtiHE8WRGuqY=
+env:
+  - RAKE_TASK=sauce_chrome PLATFORM="Windows 10"
+  - RAKE_TASK=sauce_firefox PLATFORM="Windows 10"
+  - RAKE_TASK=sauce_ff_legacy PLATFORM="Windows 10"
+  - RAKE_TASK=sauce_phantomjs PLATFORM="Windows 10"
+  - RAKE_TASK=sauce_ie PLATFORM="Windows 10"
+  - RAKE_TASK=sauce_edge PLATFORM="Windows 10"
+  - RAKE_TASK=sauce_chrome PLATFORM="macOS 10.12"
+  - RAKE_TASK=sauce_firefox PLATFORM="macOS 10.12"
+  - RAKE_TASK=sauce_ff_legacy PLATFORM="macOS 10.12"
+  - RAKE_TASK=sauce_phantomjs PLATFORM="macOS 10.12"
+  - RAKE_TASK=sauce_safari PLATFORM="macOS 10.12"
