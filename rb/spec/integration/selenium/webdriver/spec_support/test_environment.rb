@@ -201,7 +201,7 @@ module Selenium
               browserName: browser,
           }
           caps[:build] = ENV['BUILD_NAME'] if ENV['BUILD_NAME']
-          caps[:version] = ENV['VERSION'] if ENV['VERSION']
+          caps[:version] = ENV['VERSION'] || "latest"
           caps[:platform] = ENV['PLATFORM'] || "Windows 10"
           caps['tunnel-identifier'] = ENV['TRAVIS_JOB_NUMBER']
 
