@@ -206,7 +206,7 @@ module Selenium
           caps['tunnel-identifier'] = ENV['TRAVIS_JOB_NUMBER']
 
 
-          url = "https://titusfortner:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:443/wd/hub".strip
+          url = "https://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:443/wd/hub".strip
           WebDriver::Driver.for :remote, {url: url,
                                           desired_capabilities: caps}
         end
