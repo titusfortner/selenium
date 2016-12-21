@@ -7,8 +7,9 @@ env:
   global:
   - SAUCE_USERNAME=titusfortner
   before_script:
-    - cd rb
-script: bundle exec rake $RAKE_TASK
+script:
+  - cd rb
+  - bundle exec rake $RAKE_TASK
 addons:
   sauce_connect: true
   jwt:
