@@ -1,12 +1,9 @@
 language: ruby
 rvm:
-- 2.3.3
+  - 2.3.3
 before_install:
-- export | grep SAUCE_
-env:
-  global:
   - SAUCE_USERNAME=titusfortner
-  before_script:
+  - export | grep SAUCE_
 script:
   - cd rb
   - bundle install
