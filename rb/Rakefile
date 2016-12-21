@@ -80,7 +80,7 @@ task sauce_browsers_windows: [:sauce_chrome,
     ENV['BUILD_NAME'] = "#{ENV['TRAVIS_JOB_NUMBER']}-#{browser}"
     ENV['WD_SPEC_DRIVER'] = 'sauce'
     ENV['WD_REMOTE_BROWSER'] = browser
-    ENV['PARALLEL_SPLIT_TEST_PROCESSES'] = '100'
+    ENV['PARALLEL_SPLIT_TEST_PROCESSES'] = '20'
     system "parallel_split_test spec/integration"
   end
 end
