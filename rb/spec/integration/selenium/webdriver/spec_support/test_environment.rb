@@ -123,8 +123,8 @@ module Selenium
         end
 
         def url_for(filename)
-#          app_server.where_is filename
-          "https://cdn.rawgit.com/SeleniumHQ/selenium/master/common/src/web/#{filename}"
+          app_server.where_is filename
+#          "https://cdn.rawgit.com/SeleniumHQ/selenium/master/common/src/web/#{filename}"
         end
 
         def root
@@ -203,6 +203,8 @@ module Selenium
           caps[:build] = ENV['BUILD_NAME'] if ENV['BUILD_NAME']
           caps[:version] = ENV['VERSION'] if ENV['VERSION']
           caps[:platform] = ENV['PLATFORM'] || "Windows 10"
+          caps['tunnel-identifier'] = ENV['TRAVIS_JOB_NUMBER']
+
 
           url = "https://#{ENV['SAUCE_USERNAME']}:#{ENV['SAUCE_ACCESS_KEY']}@ondemand.saucelabs.com:443/wd/hub".strip
           WebDriver::Driver.for :remote, {url: url,
