@@ -43,58 +43,40 @@ module Selenium
         def initialize(opts = {})
           opts = opts.dup
 
-          port = opts.delete(:port) || 4444
-          http_client = opts.delete(:http_client) { Http::Default.new }
-          desired_capabilities = opts.delete(:desired_capabilities) { Capabilities.firefox }
-          url = opts.delete(:url) { "http://#{Platform.localhost}:#{port}/wd/hub" }
-
-          unless opts.empty?
-            raise ArgumentError, "unknown option#{'s' if opts.size != 1}: #{opts.inspect}"
-          end
-
-          if desired_capabilities.is_a?(Symbol)
-            unless Capabilities.respond_to?(desired_capabilities)
-              raise Error::WebDriverError, "invalid desired capability: #{desired_capabilities.inspect}"
-            end
-
-            desired_capabilities = Capabilities.send(desired_capabilities)
-          end
-
-          uri = url.is_a?(URI) ? url : URI.parse(url)
-          uri.path += '/' unless uri.path =~ %r{\/$}
-
-          http_client.server_url = uri
-
-          @http = http_client
-          @capabilities = create_session(desired_capabilities)
+          process_capabilities(opts)
 
           @file_detector = nil
+          @http = create_http_client(opts)
+
+          desired_capabilities = opts.delete :desired_capabilities
+
+          raise ArgumentError, "unknown options: #{opts.inspect}" unless opts.empty?
+
+          @capabilities = create_session(desired_capabilities)
         end
 
         def browser
-          @browser ||= (
-            name = @capabilities.browser_name
-            name ? name.tr(' ', '_').to_sym : 'unknown'
-          )
+          @browser ||= @capabilities.browser_name ? @capabilities.browser_name.tr(' ', '_') : 'unknown'
         end
 
         def driver_extensions
-          [
-            DriverExtensions::HasInputDevices,
-            DriverExtensions::UploadsFiles,
-            DriverExtensions::TakesScreenshot,
-            DriverExtensions::HasSessionId,
-            DriverExtensions::Rotatable,
-            DriverExtensions::HasTouchScreen,
-            DriverExtensions::HasLocation,
-            DriverExtensions::HasNetworkConnection,
-            DriverExtensions::HasRemoteStatus,
-            DriverExtensions::HasWebStorage
-          ]
+          [DriverExtensions::HasInputDevices,
+           DriverExtensions::UploadsFiles,
+           DriverExtensions::TakesScreenshot,
+           DriverExtensions::HasSessionId,
+           DriverExtensions::Rotatable,
+           DriverExtensions::HasTouchScreen,
+           DriverExtensions::HasRemoteStatus,
+           DriverExtensions::HasWebStorage]
         end
 
         def commands(command)
-          COMMANDS[command]
+          case command
+          when :status, :is_element_displayed
+            OSSBridge::COMMANDS[command]
+          else
+            W3CBridge::COMMANDS[command]
+          end
         end
 
         #
@@ -108,7 +90,7 @@ module Selenium
         def create_session(desired_capabilities)
           resp = raw_execute :new_session, {}, {desiredCapabilities: desired_capabilities}
           @session_id = resp['sessionId']
-          return Capabilities.json_create resp['value'] if @session_id
+          return capabilities_class.json_create resp['value'] if @session_id
 
           raise Error::WebDriverError, 'no sessionId in returned payload'
         end
@@ -121,16 +103,12 @@ module Selenium
           execute :get, {}, {url: url}
         end
 
-        def session_capabilities
-          Capabilities.json_create execute(:get_capabilities)
-        end
-
         def implicit_wait_timeout=(milliseconds)
-          execute :implicitly_wait, {}, {ms: milliseconds}
+          timeout('implicit', milliseconds)
         end
 
         def script_timeout=(milliseconds)
-          execute :set_script_timeout, {}, {ms: milliseconds}
+          timeout('script', milliseconds)
         end
 
         def timeout(type, milliseconds)
@@ -149,16 +127,8 @@ module Selenium
           execute :dismiss_alert
         end
 
-        def alert=(keys)
-          execute :set_alert_value, {}, {text: keys.to_s}
-        end
-
         def alert_text
           execute :get_alert_text
-        end
-
-        def authentication(credentials)
-          execute :set_authentication, {}, credentials
         end
 
         #
@@ -166,11 +136,11 @@ module Selenium
         #
 
         def go_back
-          execute :go_back
+          execute :back
         end
 
         def go_forward
-          execute :go_forward
+          execute :forward
         end
 
         def url
@@ -182,14 +152,17 @@ module Selenium
         end
 
         def page_source
-          execute :get_page_source
+          execute_script('var source = document.documentElement.outerHTML;' \
+                            'if (!source) { source = new XMLSerializer().serializeToString(document); }' \
+                            'return source;')
         end
 
         def switch_to_window(name)
-          execute :switch_to_window, {}, {name: name}
+          execute :switch_to_window, {}, {handle: name}
         end
 
         def switch_to_frame(id)
+          id = find_element_by('id', id) if id.is_a? String
           execute :switch_to_frame, {}, {id: id}
         end
 
@@ -198,17 +171,19 @@ module Selenium
         end
 
         def switch_to_default_content
-          switch_to_frame(nil)
+          switch_to_frame nil
         end
 
         def quit
-          execute :quit
+          execute :delete_session
           http.close
         rescue *http.quit_errors
+        ensure
+          @service.stop if @service
         end
 
         def close
-          execute :close
+          execute :close_window
         end
 
         def refresh
@@ -224,38 +199,44 @@ module Selenium
         end
 
         def window_handle
-          execute :get_current_window_handle
+          execute :get_window_handle
         end
 
         def resize_window(width, height, handle = :current)
-          execute :set_window_size, {window_handle: handle},
-                  {width: width,
-                   height: height}
+          unless handle == :current
+            raise Error::WebDriverError, 'Switch to desired window before changing its size'
+          end
+          execute :set_window_size, {}, {width: width,
+                                         height: height}
         end
 
         def maximize_window(handle = :current)
-          execute :maximize_window, window_handle: handle
+          unless handle == :current
+            raise Error::UnsupportedOperationError, 'Switch to desired window before changing its size'
+          end
+          execute :maximize_window
         end
 
         def window_size(handle = :current)
-          data = execute :get_window_size, window_handle: handle
+          unless handle == :current
+            raise Error::UnsupportedOperationError, 'Switch to desired window before getting its size'
+          end
+          data = execute :get_window_size
 
           Dimension.new data['width'], data['height']
         end
 
-        def reposition_window(x, y, handle = :current)
-          execute :set_window_position, {window_handle: handle},
-                  {x: x, y: y}
+        def reposition_window(x, y)
+          execute :set_window_position, {}, {x: x, y: y}
         end
 
-        def window_position(handle = :current)
-          data = execute :get_window_position, window_handle: handle
-
+        def window_position
+          data = execute :get_window_position
           Point.new data['x'], data['y']
         end
 
         def screenshot
-          execute :screenshot
+          execute :take_screenshot
         end
 
         #
@@ -264,68 +245,66 @@ module Selenium
 
         def local_storage_item(key, value = nil)
           if value
-            execute :set_local_storage_item, {}, {key: key, value: value}
+            execute_script("localStorage.setItem('#{key}', '#{value}')")
           else
-            execute :get_local_storage_item, key: key
+            execute_script("return localStorage.getItem('#{key}')")
           end
         end
 
         def remove_local_storage_item(key)
-          execute :remove_local_storage_item, key: key
+          execute_script("localStorage.removeItem('#{key}')")
         end
 
         def local_storage_keys
-          execute :get_local_storage_keys
+          execute_script('return Object.keys(localStorage)')
         end
 
         def clear_local_storage
-          execute :clear_local_storage
+          execute_script('localStorage.clear()')
         end
 
         def local_storage_size
-          execute :get_local_storage_size
+          execute_script('return localStorage.length')
         end
 
         def session_storage_item(key, value = nil)
           if value
-            execute :set_session_storage_item, {}, {key: key, value: value}
+            execute_script("sessionStorage.setItem('#{key}', '#{value}')")
           else
-            execute :get_session_storage_item, key: key
+            execute_script("return sessionStorage.getItem('#{key}')")
           end
         end
 
         def remove_session_storage_item(key)
-          execute :remove_session_storage_item, key: key
+          execute_script("sessionStorage.removeItem('#{key}')")
         end
 
         def session_storage_keys
-          execute :get_session_storage_keys
+          execute_script('return Object.keys(sessionStorage)')
         end
 
         def clear_session_storage
-          execute :clear_session_storage
+          execute_script('sessionStorage.clear()')
         end
 
         def session_storage_size
-          execute :get_session_storage_size
+          execute_script('return sessionStorage.length')
         end
 
         def location
-          obj = execute(:get_location) || {}
-          Location.new obj['latitude'], obj['longitude'], obj['altitude']
+          raise Error::UnsupportedOperationError, 'The W3C standard does not currently support getting location'
         end
 
-        def set_location(lat, lon, alt)
-          loc = {latitude: lat, longitude: lon, altitude: alt}
-          execute :set_location, {}, {location: loc}
+        def set_location(_lat, _lon, _alt)
+          raise Error::UnsupportedOperationError, 'The W3C standard does not currently support setting location'
         end
 
         def network_connection
-          execute :get_network_connection
+          raise Error::UnsupportedOperationError, 'The W3C standard does not currently support getting network connection'
         end
 
-        def network_connection=(type)
-          execute :set_network_connection, {}, {parameters: {type: type}}
+        def network_connection=(_type)
+          raise Error::UnsupportedOperationError, 'The W3C standard does not currently support setting network connection'
         end
 
         #
@@ -333,15 +312,11 @@ module Selenium
         #
 
         def execute_script(script, *args)
-          assert_javascript_enabled
-
           result = execute :execute_script, {}, {script: script, args: args}
           unwrap_script_result result
         end
 
         def execute_async_script(script, *args)
-          assert_javascript_enabled
-
           result = execute :execute_async_script, {}, {script: script, args: args}
           unwrap_script_result result
         end
@@ -351,7 +326,7 @@ module Selenium
         #
 
         def options
-          @options ||= WebDriver::Options.new(self)
+          @options ||= WebDriver::W3COptions.new(self)
         end
 
         def add_cookie(cookie)
@@ -363,7 +338,7 @@ module Selenium
         end
 
         def cookies
-          execute :get_cookies
+          execute :get_all_cookies
         end
 
         def delete_all_cookies
@@ -375,7 +350,7 @@ module Selenium
         #
 
         def click_element(element)
-          execute :click_element, id: element
+          execute :element_click, id: element
         end
 
         def click
@@ -409,33 +384,24 @@ module Selenium
           execute :mouse_move_to, {}, params
         end
 
-        def send_keys_to_active_element(key)
-          execute :send_keys_to_active_element, {}, {value: key}
+        def send_keys_to_active_element(keys)
+          send_keys_to_element(active_element, keys)
         end
 
+        # TODO: - Implement file verification
         def send_keys_to_element(element, keys)
-          if @file_detector
-            local_file = @file_detector.call(keys)
-            keys = upload(local_file) if local_file
-          end
-
-          execute :send_keys_to_element, {id: element}, {value: Array(keys)}
-        end
-
-        def upload(local_file)
-          unless File.file?(local_file)
-            raise Error::WebDriverError, "you may only upload files: #{local_file.inspect}"
-          end
-
-          execute :upload_file, {}, {file: Zipper.zip_file(local_file)}
+          execute :element_send_keys, {id: element}, {value: keys.join('').split(//)}
         end
 
         def clear_element(element)
-          execute :clear_element, id: element
+          execute :element_clear, id: element
         end
 
         def submit_element(element)
-          execute :submit_element, id: element
+          form = find_element_by('xpath', "./ancestor-or-self::form", element)
+          execute_script("var e = arguments[0].ownerDocument.createEvent('Event');" \
+                            "e.initEvent('submit', true, true);" \
+                            'if (arguments[0].dispatchEvent(e)) { arguments[0].submit() }', form.as_json)
         end
 
         def drag_element(element, right_by, down_by)
@@ -469,8 +435,8 @@ module Selenium
         def touch_scroll(element, x, y)
           if element
             execute :touch_scroll, {}, {element: element,
-                                       xoffset: x,
-                                       yoffset: y}
+                                        xoffset: x,
+                                        yoffset: y}
           else
             execute :touch_scroll, {}, {xoffset: x, yoffset: y}
           end
@@ -482,9 +448,9 @@ module Selenium
 
         def touch_element_flick(element, right_by, down_by, speed)
           execute :touch_flick, {}, {element: element,
-                                    xoffset: right_by,
-                                    yoffset: down_by,
-                                    speed: speed}
+                                     xoffset: right_by,
+                                     yoffset: down_by,
+                                     speed: speed}
         end
 
         def screen_orientation=(orientation)
@@ -496,27 +462,6 @@ module Selenium
         end
 
         #
-        # logs
-        #
-
-        def available_log_types
-          types = execute :get_available_log_types
-          Array(types).map(&:to_sym)
-        end
-
-        def log(type)
-          data = execute :get_log, {}, {type: type.to_s}
-
-          Array(data).map do |l|
-            begin
-              LogEntry.new l.fetch('level', 'UNKNOWN'), l.fetch('timestamp'), l.fetch('message')
-            rescue KeyError
-              next
-            end
-          end
-        end
-
-        #
         # element properties
         #
 
@@ -525,16 +470,15 @@ module Selenium
         end
 
         def element_attribute(element, name)
-          execute :get_element_attribute, id: element.ref, name: name
+          execute_atom :getAttribute, element, name
         end
 
-        # Backwards compatibility for w3c
         def element_property(element, name)
-          execute_script 'return arguments[0][arguments[1]]', element, name
+          execute :get_element_property, id: element.ref, name: name
         end
 
         def element_value(element)
-          execute :get_element_value, id: element
+          element_property element, 'value'
         end
 
         def element_text(element)
@@ -542,19 +486,18 @@ module Selenium
         end
 
         def element_location(element)
-          data = execute :get_element_location, id: element
+          data = execute :get_element_rect, id: element
 
           Point.new data['x'], data['y']
         end
 
         def element_location_once_scrolled_into_view(element)
-          data = execute :get_element_location_once_scrolled_into_view, id: element
-
-          Point.new data['x'], data['y']
+          send_keys_to_element(element, [''])
+          element_location(element)
         end
 
         def element_size(element)
-          data = execute :get_element_size, id: element
+          data = execute :get_element_rect, id: element
 
           Dimension.new data['width'], data['height']
         end
@@ -572,7 +515,7 @@ module Selenium
         end
 
         def element_value_of_css_property(element, prop)
-          execute :get_element_value_of_css_property, id: element, property_name: prop
+          execute :get_element_css_value, id: element, property_name: prop
         end
 
         #
@@ -586,6 +529,8 @@ module Selenium
         alias_method :switch_to_active_element, :active_element
 
         def find_element_by(how, what, parent = nil)
+          how, what = convert_locators(how, what)
+
           id = if parent
                  execute :find_child_element, {id: parent}, {using: how, value: what}
                else
@@ -596,6 +541,8 @@ module Selenium
         end
 
         def find_elements_by(how, what, parent = nil)
+          how, what = convert_locators(how, what)
+
           ids = if parent
                   execute :find_child_elements, {id: parent}, {using: how, value: what}
                 else
@@ -605,11 +552,58 @@ module Selenium
           ids.map { |id| Element.new self, element_id_from(id) }
         end
 
+        protected
+
+        def capabilities_class
+          W3CCapabilities
+        end
+
+        def default_capabilities
+          capabilities_class.firefox
+        end
+
         private
 
-        def assert_javascript_enabled
-          return if capabilities.javascript_enabled?
-          raise Error::UnsupportedOperationError, 'underlying webdriver instance does not support javascript'
+        def bridge_module
+          Module.nesting[1]
+        end
+
+        def process_capabilities(opts)
+          capabilities = opts.delete(:desired_capabilities) || default_capabilities
+          capabilities = Capabilities.send(capabilities) if capabilities.is_a?(Symbol)
+
+          capabilities.options = opts.delete(:options) if opts.key?(:options)
+          capabilities.profile = opts.delete(:profile) if opts.key?(:profile)
+          opts[:desired_capabilities] = capabilities
+        end
+
+        def create_http_client(opts)
+          http_client = opts.delete(:http_client) || Http::Default.new
+
+          url = if opts.key? :url
+                  opts.delete :url
+                elsif bridge_module != Module.nesting[1]
+                  @service = start_service(opts)
+                  @service.uri
+                else
+                  "http://#{Platform.localhost}:4444/wd/hub"
+                end
+          uri = url.is_a?(URI) ? url : URI.parse(url)
+          uri.path += '/' unless uri.path =~ %r{\/$}
+
+          http_client.server_url = uri
+          http_client
+        end
+
+        def start_service(opts)
+          path = opts.delete(:driver_path) || bridge_module.driver_path
+          port = opts.delete(:port) || bridge_module::Service::DEFAULT_PORT
+          service_args = process_service_args(opts.delete(:service_args))
+          bridge_module::Service.new(path, port, *service_args).tap { |s| s.start }
+        end
+
+        def process_service_args(service_args)
+          service_args || []
         end
 
         #
@@ -619,8 +613,10 @@ module Selenium
         # Returns the 'value' of the returned payload
         #
 
+        # TODO - update this when spec is complete
         def execute(*args)
-          raw_execute(*args)['value']
+          result = raw_execute(*args)
+          result.payload.key?('value') ? result['value'] : result
         end
 
         #

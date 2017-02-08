@@ -21,30 +21,16 @@ module Selenium
   module WebDriver
     module Safari
       # @api private
-      class Bridge < Remote::Bridge
-        def initialize(opts = {})
-          opts[:desired_capabilities] ||= Remote::Capabilities.safari
-          port = opts.delete(:port) || Service::DEFAULT_PORT
-          service_args = opts.delete(:service_args) || {}
-
-          driver_path = opts.delete(:driver_path) || Safari.driver_path(false)
-          @service = Service.new(driver_path, port, *extract_service_args(service_args))
-          @service.start
-          opts[:url] = @service.uri
-
-          super(opts)
-        end
-
-        def quit
-          super
-        ensure
-          @service.stop if @service
-        end
+      class Bridge < Remote::OSSBridge
 
         private
 
-        def extract_service_args(args = {})
-          args.key?(:port) ? ["--port=#{args[:port]}"] : []
+        def bridge_module
+          Module.nesting[1]
+        end
+
+        def default_capabilities
+          Remote::Capabilities.safari
         end
       end # Bridge
     end # Safari

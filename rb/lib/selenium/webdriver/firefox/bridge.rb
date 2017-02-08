@@ -21,49 +21,36 @@ module Selenium
   module WebDriver
     module Firefox
       # @api private
-      class Bridge < Remote::Bridge
+      class Bridge < Remote::OSSBridge
         def initialize(opts = {})
-          port = opts.delete(:port) || DEFAULT_PORT
-          profile = opts.delete(:profile)
-
-          @launcher = create_launcher(port, profile)
-          @launcher.launch
-          opts[:url] = @launcher.url
-
-          caps = opts[:desired_capabilities] ||= Remote::Capabilities.firefox
-          caps.proxy = opts.delete(:proxy) if opts.key?(:proxy)
-          Binary.path = caps[:firefox_binary] if caps[:firefox_binary]
-
-          begin
-            super(opts)
-          rescue
-            @launcher.quit
-            raise
-          end
-        end
-
-        def browser
-          :firefox
+          super
+        rescue
+          @service.quit
+          raise
         end
 
         def driver_extensions
-          [
-            DriverExtensions::TakesScreenshot,
-            DriverExtensions::HasInputDevices
-          ]
-        end
-
-        def quit
-          super
-          nil
-        ensure
-          @launcher.quit
+          [DriverExtensions::TakesScreenshot, DriverExtensions::HasInputDevices]
         end
 
         private
 
-        def create_launcher(port, profile)
-          Launcher.new Binary.new, port, profile
+        def bridge_module
+          Module.nesting[1]
+        end
+
+        def default_capabilities
+          Remote::Capabilities.firefox
+        end
+
+        def start_service(opts)
+          if opts[:desired_capabilities] && opts[:desired_capabilities][:firefox_binary]
+            Binary.path = opts[:desired_capabilities][:firefox_binary]
+          end
+
+          profile = opts.delete(:profile) || opts[:desired_capabilities].firefox_profile
+          port = opts.delete(:port) || DEFAULT_PORT
+          Launcher.new(Binary.new, port, profile).tap { |l| l.launch }
         end
       end # Bridge
     end # Firefox
