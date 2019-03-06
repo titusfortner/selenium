@@ -31,7 +31,8 @@ module Selenium
           include DriverExtensions::TakesScreenshot
 
           def initialize(opts = {})
-            opts[:desired_capabilities] = create_capabilities(opts)
+            options = opts.delete(:options) { Options.new }
+            options = Array[options].map(&:as_json).reduce({}, :merge)
 
             unless opts.key?(:url)
               driver_path = opts.delete(:driver_path) || Firefox.driver_path
@@ -45,9 +46,9 @@ module Selenium
 
             listener = opts.delete(:listener)
             WebDriver.logger.info 'Skipping handshake as we know it is W3C.'
-            desired_capabilities = opts.delete(:desired_capabilities)
+
             bridge = Remote::Bridge.new(opts)
-            capabilities = bridge.create_session(desired_capabilities)
+            capabilities = bridge.create_session(options.as_json)
             @bridge = Remote::W3C::Bridge.new(capabilities, bridge.session_id, opts)
             @bridge.extend Marionette::Bridge
 
@@ -62,32 +63,6 @@ module Selenium
             super
           ensure
             @service.stop if @service
-          end
-
-          private
-
-          def create_capabilities(opts)
-            caps = opts.delete(:desired_capabilities) { Remote::W3C::Capabilities.firefox }
-            options = opts.delete(:options) { Options.new }
-
-            firefox_options = opts.delete(:firefox_options)
-            if firefox_options
-              WebDriver.logger.deprecate ':firefox_options', 'Selenium::WebDriver::Firefox::Options'
-              firefox_options.each do |key, value|
-                options.add_option(key, value)
-              end
-            end
-
-            profile = opts.delete(:profile)
-            if profile
-              WebDriver.logger.deprecate ':profile', 'Selenium::WebDriver::Firefox::Options#profile='
-              options.profile = profile
-            end
-
-            options = options.as_json
-            caps.merge!(options) unless options.empty?
-
-            caps
           end
         end # Driver
       end # Marionette
