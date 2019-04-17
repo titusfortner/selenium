@@ -35,6 +35,7 @@ module Selenium
         include DriverExtensions::DownloadsFiles
 
         def initialize(opts = {})
+          opts = opts.dup
           opts[:desired_capabilities] = create_capabilities(opts)
 
           opts[:url] ||= service_url(opts)
@@ -63,12 +64,18 @@ module Selenium
         private
 
         def create_capabilities(opts)
-          caps = opts.delete(:desired_capabilities) { Remote::Capabilities.chrome }
           options = opts.delete(:options) { Options.new }
+
+          caps = opts.delete(:desired_capabilities)
+          if caps
+            WebDriver.logger.deprecate ':desired_capabilities to initialize a driver',
+                                        'options: <Selenium::WebDriver::Chrome::Options>'
+          end
 
           args = opts.delete(:args) || opts.delete(:switches)
           if args
-            WebDriver.logger.deprecate ':args or :switches', 'Selenium::WebDriver::Chrome::Options#add_argument'
+            WebDriver.logger.deprecate ':args or :switches',
+                                       'Selenium::WebDriver::Chrome::Options#initialize or #args='
             raise ArgumentError, ':args must be an Array of Strings' unless args.is_a? Array
 
             args.each { |arg| options.add_argument(arg.to_s) }
@@ -82,7 +89,7 @@ module Selenium
 
             if profile['extensions']
               WebDriver.logger.deprecate 'Using Selenium::WebDriver::Chrome::Profile#extensions',
-                                         'Selenium::WebDriver::Chrome::Options#add_extension'
+                                         'Selenium::WebDriver::Chrome::Options#initialize or #extensions='
               profile['extensions'].each do |extension|
                 options.add_encoded_extension(extension)
               end
@@ -90,23 +97,27 @@ module Selenium
           end
 
           detach = opts.delete(:detach)
-          options.add_option(:detach, true) if detach
+          if detach
+            WebDriver.logger.deprecate ':detach to initialize a driver',
+                                       'Selenium::WebDriver::Chrome::Options#initialize or #detach'
+            options.add_option(:detach, true)
+          end
 
           prefs = opts.delete(:prefs)
           if prefs
-            WebDriver.logger.deprecate ':prefs', 'Selenium::WebDriver::Chrome::Options#add_preference'
+            WebDriver.logger.deprecate ':prefs to initialize a driver',
+                                       'Selenium::WebDriver::Chrome::Options#initialize or #prefs='
             prefs.each do |key, value|
               options.add_preference(key, value)
             end
           end
 
-          options = options.as_json
-          caps.merge!(options) unless options[Options::KEY].empty?
+          options = caps.merge!(options) if caps
 
-          caps[:proxy] = opts.delete(:proxy) if opts.key?(:proxy)
-          caps[:proxy] ||= opts.delete('proxy') if opts.key?('proxy')
+          options[:proxy] = opts.delete(:proxy) if opts.key?(:proxy)
+          options[:proxy] ||= opts.delete('proxy') if opts.key?('proxy')
 
-          caps
+          options.as_json
         end
       end # Driver
     end # Chrome
