@@ -116,11 +116,7 @@ module Selenium
         expect(new_size.height).to be > old_size.height
       end
 
-      # Edge: Not Yet - https://dev.windows.com/en-us/microsoft-edge/platform/status/webdriver/details/
-      # https://github.com/mozilla/geckodriver/issues/1281
-      it 'can make window full screen', only: {window_manager: true},
-                                        exclude: [{driver: :remote, browser: :firefox, platform: :linux},
-                                                  {browser: %i[chrome edge]}] do
+      it 'can make window full screen' do
         window.size = old_size = Dimension.new(700, 700)
 
         window.full_screen
@@ -131,11 +127,7 @@ module Selenium
         expect(new_size.height).to be > old_size.height
       end
 
-      # Edge: Not Yet - https://dev.windows.com/en-us/microsoft-edge/platform/status/webdriver/details/
-      # https://github.com/mozilla/geckodriver/issues/1281
-      it 'can minimize the window', only: {window_manager: true},
-                                    exclude: [{driver: :remote, browser: :firefox, platform: :linux},
-                                              {driver: :remote, browser: :safari}] do
+      it 'can minimize the window', except: {browser: :safari, message: :safari_minimize} do
         window.minimize
         expect(driver.execute_script('return document.hidden;')).to be true
       end
