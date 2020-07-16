@@ -24,7 +24,7 @@ module Selenium
     describe Manager do
       describe 'logs', except: [{browser: %i[firefox ie safari safari_preview]},
                                 {driver: :remote, browser: %i[chrome edge]}] do
-        it 'can fetch remote log types', only: {driver: :remote} do
+        it 'can fetch remote log types', exclusive: {driver: :remote} do
           expect(driver.manage.logs.available_types).to include(:server, :browser, :driver)
         end
 

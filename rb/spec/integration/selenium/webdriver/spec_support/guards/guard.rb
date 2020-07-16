@@ -43,7 +43,7 @@ module Selenium
                       when Integer
                         "Bug Filed: https://github.com/SeleniumHQ/selenium/issues/#{@reason}"
                       when Symbol
-                        Guards::MESSAGES[@reason]
+                        Guards::REASONS[@reason]
                       when String
                         @reason
                       else
