@@ -43,7 +43,7 @@ module Selenium
         end
 
         # Chrome - turned off by default
-        it 'can get the driver log', except: {browser: %i[chrome edge]} do
+        it 'can get the driver log', except: {browser: :chrome} do
           driver.navigate.to url_for('simpleTest.html')
 
           entries = driver.manage.logs.get(:driver)
