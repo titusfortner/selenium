@@ -26,6 +26,7 @@ require_relative 'spec_support'
 require_relative '../../../rspec_matchers'
 
 include Selenium # rubocop:disable Style/MixinUsage
+WebDriver.logger.level = :debug
 
 GlobalTestEnv = WebDriver::SpecSupport::TestEnvironment.new
 
