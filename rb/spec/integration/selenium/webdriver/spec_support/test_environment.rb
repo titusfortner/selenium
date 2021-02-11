@@ -27,7 +27,7 @@ module Selenium
           @create_driver_error = nil
           @create_driver_error_count = 0
 
-          @driver = (ENV['WD_SPEC_DRIVER'] || :chrome).to_sym
+          @driver = (ENV['WD_SPEC_DRIVER'] || :remote).to_sym
         end
 
         def print_env
@@ -84,7 +84,8 @@ module Selenium
             port: PortProber.above(4444),
             log: $DEBUG,
             background: true,
-            timeout: 60
+            timeout: 60,
+            args: ['--max-sessions 4']
           )
         end
 

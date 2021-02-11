@@ -153,7 +153,7 @@ module Selenium
     # @raise [Errno::ENOENT] if the jar file does not exist
     #
 
-    def initialize(jar, opts = {})
+    def initialize(jar, **opts)
       raise Errno::ENOENT, jar unless File.exist?(jar)
 
       @jar        = jar
@@ -164,7 +164,7 @@ module Selenium
       @background = opts.fetch(:background, false)
       @log        = opts[:log]
       @log_file   = nil
-      @additional_args = []
+      @additional_args = opts.fetch(:args, [])
     end
 
     def start
