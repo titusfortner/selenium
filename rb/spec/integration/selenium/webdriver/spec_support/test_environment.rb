@@ -85,7 +85,7 @@ module Selenium
             log: $DEBUG,
             background: true,
             timeout: 60,
-            args: ['--max-sessions 4']
+            args: ['--max-sessions', '4']
           )
         end
 
