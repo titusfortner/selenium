@@ -50,6 +50,22 @@ module Selenium
                 end
       end
 
+      def processors
+        case os
+        when :macosx
+          (`which hwprefs` != '' ? `hwprefs thread_count` : `sysctl -n hw.ncpu`).to_i
+        when :linux
+          `cat /proc/cpuinfo | grep processor | wc -l`.to_i
+        when :unix
+          `sysctl -n hw.ncpu`.to_i
+        when :windows
+          require 'win32ole'
+          wmi = WIN32OLE.connect("winmgmts://")
+          cpu = wmi.ExecQuery("select NumberOfCores from Win32_Processor")
+          cpu.to_enum.first.NumberOfCores
+        end
+      end
+
       def ci
         if ENV['TRAVIS']
           :travis
