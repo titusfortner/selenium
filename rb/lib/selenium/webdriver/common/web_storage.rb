@@ -23,16 +23,14 @@ module Selenium
     # @api private
     #
 
-    module DriverExtensions
-      module HasWebStorage
-        def local_storage
-          HTML5::LocalStorage.new @bridge
-        end
+    module WebStorage
+      def local_storage
+        HTML5::LocalStorage.new @bridge
+      end
 
-        def session_storage
-          HTML5::SessionStorage.new @bridge
-        end
-      end # HasWebStorage
-    end # DriverExtensions
+      def session_storage
+        HTML5::SessionStorage.new @bridge
+      end
+    end # WebStorage
   end # WebDriver
 end # Selenium

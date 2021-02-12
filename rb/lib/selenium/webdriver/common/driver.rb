@@ -31,6 +31,7 @@ module Selenium
     class Driver
       include SearchContext
       include TakesScreenshot
+      include WebStorage
 
       class << self
         #

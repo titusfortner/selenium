@@ -29,7 +29,6 @@ module Selenium
       class Driver < WebDriver::Driver
         include DriverExtensions::HasDebugger
         include DriverExtensions::HasPermissions
-        include DriverExtensions::HasWebStorage
 
         def browser
           :safari

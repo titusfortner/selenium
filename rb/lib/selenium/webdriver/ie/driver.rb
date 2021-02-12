@@ -28,7 +28,6 @@ module Selenium
       #
 
       class Driver < WebDriver::Driver
-        include DriverExtensions::HasWebStorage
 
         def browser
           :internet_explorer

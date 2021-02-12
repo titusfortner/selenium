@@ -28,7 +28,6 @@ module Selenium
 
       class Driver < WebDriver::Driver
         include DriverExtensions::HasAddons
-        include DriverExtensions::HasWebStorage
         include DriverExtensions::PrintsPage
 
         def browser
