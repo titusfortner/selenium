@@ -33,10 +33,6 @@ module Selenium
           :edge
         end
 
-        def bridge_class
-          Bridge
-        end
-
         private
 
         def debugger_address

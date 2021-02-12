@@ -35,9 +35,6 @@ module Selenium
           :firefox
         end
 
-        def bridge_class
-          Bridge
-        end
       end # Driver
     end # Firefox
   end # WebDriver
