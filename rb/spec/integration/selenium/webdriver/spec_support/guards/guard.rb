@@ -31,11 +31,13 @@ module Selenium
             @drivers = []
             @browsers = []
             @platforms = []
+            @ci = []
 
             expand_window_manager(guard)
             expand_drivers(guard)
             expand_browsers(guard)
             expand_platforms(guard)
+            expand_ci(guard)
           end
 
           def message
@@ -81,7 +83,7 @@ module Selenium
           end
 
           def satisfied?
-            satisfies_driver? && satisfies_browser? && satisfies_platform? && satisfies_window_manager?
+            satisfies_driver? && satisfies_browser? && satisfies_platform? && satisfies_window_manager? && satisfies_ci?
           end
 
           private
@@ -98,6 +100,12 @@ module Selenium
             @drivers += Array(guard[:driver])
           end
 
+          def expand_ci(guard)
+            return unless guard[:ci]
+
+            @ci += Array(guard[:ci])
+          end
+
           def expand_browsers(guard)
             return unless guard[:browser]
 
@@ -112,6 +120,10 @@ module Selenium
 
           def satisfies_driver?
             @drivers.empty? || @drivers.include?(GlobalTestEnv.driver)
+          end
+
+          def satisfies_ci?
+            @ci.empty? || WebDriver::Platform.ci
           end
 
           def satisfies_browser?
