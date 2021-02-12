@@ -25,9 +25,8 @@ module Selenium
       let(:username) { SpecSupport::RackServer::TestApp::BASIC_AUTH_CREDENTIALS.first }
       let(:password) { SpecSupport::RackServer::TestApp::BASIC_AUTH_CREDENTIALS.last }
 
-      after do
-        quit_driver
-      end
+      before(:all) { quit_driver }
+      after { reset_driver! }
 
       it 'sends commands' do
         driver.devtools.page.navigate(url: url_for('xhtmlTest.html'))
