@@ -40,6 +40,7 @@ module Selenium
         driver.devtools.page.enable
         driver.devtools.page.on(:load_event_fired) { callback.call }
         driver.navigate.to url_for('xhtmlTest.html')
+        sleep 0.5
 
         expect(callback).to have_received(:call)
       end
@@ -68,11 +69,15 @@ module Selenium
         driver.navigate.to url_for('javascriptPage.html')
 
         driver.execute_script("console.log('I like cheese');")
+        sleep 0.5
         driver.execute_script("console.log(true);")
+        sleep 0.5
         driver.execute_script("console.log(null);")
+        sleep 0.5
         driver.execute_script("console.log(undefined);")
+        sleep 0.5
         driver.execute_script("console.log(document);")
-        wait.until { logs.size == 5 }
+        sleep 0.5
 
         expect(logs).to include(
           an_object_having_attributes(type: :log, args: ['I like cheese']),
