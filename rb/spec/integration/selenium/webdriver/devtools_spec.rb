@@ -26,6 +26,7 @@ module Selenium
       let(:password) { SpecSupport::RackServer::TestApp::BASIC_AUTH_CREDENTIALS.last }
 
       before(:all) { quit_driver }
+
       after { reset_driver! }
 
       it 'sends commands' do
