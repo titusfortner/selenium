@@ -28,6 +28,7 @@ module Selenium
       #
 
       class Driver < WebDriver::Driver
+        EXTENSIONS = []
 
         def browser
           :internet_explorer

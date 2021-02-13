@@ -32,12 +32,6 @@ module Selenium
         def browser
           :edge
         end
-
-        private
-
-        def debugger_address
-          capabilities['ms:edgeOptions']['debuggerAddress']
-        end
       end # Driver
     end # Edge
   end # WebDriver

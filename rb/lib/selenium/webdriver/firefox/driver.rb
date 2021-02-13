@@ -27,13 +27,12 @@ module Selenium
       #
 
       class Driver < WebDriver::Driver
-        include DriverExtensions::HasAddons
-        include DriverExtensions::PrintsPage
+        EXTENSIONS = [DriverExtensions::HasAddons,
+                     DriverExtensions::PrintsPage].freeze
 
         def browser
           :firefox
         end
-
       end # Driver
     end # Firefox
   end # WebDriver

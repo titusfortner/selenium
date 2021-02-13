@@ -30,10 +30,15 @@ module Selenium
 
         def devtools
           version = Integer(capabilities.browser_version.split('.').first)
-          WebDriver.logger.info "Using devtools version: #{version}"
+          key = browser == :chrome ? 'goog:chromeOptions' : 'ms:edgeOptions'
+          debugger_address = capabilities[key]['debuggerAddress']
+
           @devtools ||= DevTools.new(url: debugger_address, version: version)
         end
 
+        def execute_cdp(cmd, **params)
+          @bridge.send_command(cmd: cmd, params: params)
+        end
       end # HasDevTools
     end # DriverExtensions
   end # WebDriver

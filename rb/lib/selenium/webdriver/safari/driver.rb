@@ -27,8 +27,8 @@ module Selenium
       #
 
       class Driver < WebDriver::Driver
-        include DriverExtensions::HasDebugger
-        include DriverExtensions::HasPermissions
+        EXTENSIONS = [DriverExtensions::HasDebugger,
+                      DriverExtensions::HasPermissions].freeze
 
         def browser
           :safari
