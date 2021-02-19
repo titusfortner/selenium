@@ -92,11 +92,13 @@ module Selenium
       end
 
       #
-      # Get the value of a the given attribute of the element. Will return the current value, even if
-      # this has been modified after the page has been loaded. More exactly, this method will return
-      # the value of the given attribute, unless that attribute is not present, in which case the
-      # value of the property with the same name is returned. If neither value is set, nil is
-      # returned. The "style" attribute is converted as best can be to a text representation with a
+      # This is a legacy method that attempts to provide the most likely desired value between
+      # the element's attribute and property. Because it is a legacy method, it is implemented with an
+      # atom. To request the exact attribute or the property, use #dom_attribute or #property respectfully.
+      #
+      # Specifically, this method will return the value of the given attribute, unless that attribute is not present,
+      # in which case the value of the property with the same name is returned. If neither value is set,
+      # nil is returned. The "style" attribute is converted as best can be to a text representation with a
       # trailing semi-colon. The following are deemed to be "boolean" attributes, and will
       # return either "true" or "false":
       #
@@ -114,9 +116,24 @@ module Selenium
       # @param [String] name attribute name
       # @return [String, nil] attribute value
       #
+      # @see #dom_attribute
+      # @see #property
+      #
 
       def attribute(name)
         bridge.element_attribute self, name
+      end
+
+      #
+      # Get the value of a the given attribute with the same name of the element.
+      # If the attribute is not set, nil is returned.
+      #
+      # @param [String] name attribute name
+      # @return [String, nil] attribute value
+      #
+
+      def dom_attribute(name)
+        bridge.element_dom_attribute self, name
       end
 
       #
