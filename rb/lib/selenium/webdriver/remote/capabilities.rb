@@ -128,18 +128,18 @@ module Selenium
             data = data.dup
 
             caps = new
-            caps.browser_name = data.delete('browserName') if data.key?('browserName')
-            caps.browser_version = data.delete('browserVersion') if data.key?('browserVersion')
-            caps.platform_name = data.delete('platformName') if data.key?('platformName')
-            caps.accept_insecure_certs = data.delete('acceptInsecureCerts') if data.key?('acceptInsecureCerts')
-            caps.page_load_strategy = data.delete('pageLoadStrategy') if data.key?('pageLoadStrategy')
+            caps.browser_name = data.delete('browserName')
+            caps.browser_version = data.delete('browserVersion')
+            caps.platform_name = data.delete('platformName')
+            caps.accept_insecure_certs = data.delete('acceptInsecureCerts')
+            caps.page_load_strategy = data.delete('pageLoadStrategy')
+            caps.strict_file_interactability = data.delete('strictFileInteractability')
+            caps.unhandled_prompt_behavior = data.delete('unhandledPromptBehavior')
 
             process_timeouts(caps, data.delete('timeouts'))
 
-            if data.key?('proxy')
-              proxy = data.delete('proxy')
-              caps.proxy = Proxy.json_create(proxy) unless proxy.nil? || proxy.empty?
-            end
+            proxy = data.delete('proxy')
+            caps.proxy = Proxy.json_create(proxy) unless proxy.nil? || proxy.empty?
 
             # Remote Server Specific
             caps[:remote_session_id] = data.delete('webdriver.remote.sessionid') if data.key?('webdriver.remote.sessionid')
@@ -153,8 +153,6 @@ module Selenium
           private
 
           def process_timeouts(caps, timeouts)
-            return if timeouts.nil?
-
             caps.implicit_timeout = timeouts['implicit']
             caps.page_load_timeout = timeouts['pageLoad']
             caps.script_timeout = timeouts['script']
