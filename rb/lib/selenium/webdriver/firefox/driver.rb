@@ -28,6 +28,7 @@ module Selenium
 
       class Driver < WebDriver::Driver
         EXTENSIONS = [DriverExtensions::HasAddons,
+                      DriverExtensions::FullPageScreenshot,
                       DriverExtensions::HasDevTools,
                       DriverExtensions::HasLogEvents,
                       DriverExtensions::HasNetworkInterception,
@@ -40,8 +41,15 @@ module Selenium
 
         private
 
-        def devtools_address
-          "http://#{capabilities['moz:debuggerAddress']}"
+        def devtools_url
+          uri = URI("http://#{capabilities['moz:debuggerAddress']}")
+          response = Net::HTTP.get(uri.hostname, '/json/version', uri.port)
+
+          JSON.parse(response)['webSocketDebuggerUrl']
+        end
+
+        def devtools_version
+          Firefox::DEVTOOLS_VERSION
         end
       end # Driver
     end # Firefox

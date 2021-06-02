@@ -49,7 +49,7 @@ module Selenium
         #
 
         def create_session(capabilities)
-          response = execute(:new_session, {}, {capabilities: {firstMatch: [capabilities]}})
+          response = execute(:new_session, {}, prepare_capabilities_payload(capabilities))
 
           @session_id = response['sessionId']
           capabilities = response['capabilities']
@@ -458,6 +458,14 @@ module Selenium
           execute :get_element_property, id: element.ref, name: name
         end
 
+        def element_aria_role(element)
+          execute :get_element_aria_role, id: element.ref
+        end
+
+        def element_aria_label(element)
+          execute :get_element_aria_label, id: element.ref
+        end
+
         def element_value(element)
           element_property element, 'value'
         end
@@ -592,6 +600,11 @@ module Selenium
 
         def element_id_from(id)
           id['ELEMENT'] || id['element-6066-11e4-a52e-4f735466cecf']
+        end
+
+        def prepare_capabilities_payload(capabilities)
+          capabilities = {alwaysMatch: capabilities} if !capabilities['alwaysMatch'] && !capabilities['firstMatch']
+          {capabilities: capabilities}
         end
 
         def convert_locator(how, what)

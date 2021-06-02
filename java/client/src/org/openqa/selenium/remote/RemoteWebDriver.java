@@ -25,10 +25,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.Dimension;
-import org.openqa.selenium.HasCapabilities;
 import org.openqa.selenium.ImmutableCapabilities;
 import org.openqa.selenium.InvalidArgumentException;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.NoSuchFrameException;
@@ -37,16 +35,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Pdf;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.PrintsPage;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.SessionNotCreatedException;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.interactions.HasInputDevices;
-import org.openqa.selenium.interactions.Interactive;
 import org.openqa.selenium.interactions.Keyboard;
 import org.openqa.selenium.interactions.Mouse;
 import org.openqa.selenium.interactions.Sequence;
@@ -65,7 +59,6 @@ import org.openqa.selenium.remote.tracing.TracedHttpClient;
 import org.openqa.selenium.remote.tracing.Tracer;
 import org.openqa.selenium.remote.tracing.opentelemetry.OpenTelemetryTracer;
 import org.openqa.selenium.virtualauthenticator.Credential;
-import org.openqa.selenium.virtualauthenticator.HasVirtualAuthenticator;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticator;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions;
 
@@ -88,7 +81,7 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static java.nio.charset.StandardCharsets.UTF_8;
+import static java.util.Collections.singleton;
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.openqa.selenium.remote.CapabilityType.LOGGING_PREFS;
 import static org.openqa.selenium.remote.CapabilityType.PLATFORM;
@@ -96,9 +89,7 @@ import static org.openqa.selenium.remote.CapabilityType.PLATFORM_NAME;
 import static org.openqa.selenium.remote.CapabilityType.SUPPORTS_JAVASCRIPT;
 
 @Augmentable
-public class RemoteWebDriver implements WebDriver, JavascriptExecutor, HasInputDevices,
-                                        HasCapabilities, Interactive, TakesScreenshot,
-                                        HasVirtualAuthenticator, PrintsPage {
+public class RemoteWebDriver implements IsRemoteWebDriver {
 
   // TODO: This static logger should be unified with the per-instance localLogs
   private static final Logger logger = Logger.getLogger(RemoteWebDriver.class.getName());
@@ -240,6 +231,7 @@ public class RemoteWebDriver implements WebDriver, JavascriptExecutor, HasInputD
     fileDetector = detector;
   }
 
+  @Override
   public SessionId getSessionId() {
     return sessionId;
   }
@@ -249,7 +241,7 @@ public class RemoteWebDriver implements WebDriver, JavascriptExecutor, HasInputD
   }
 
   protected void startSession(Capabilities capabilities) {
-    Response response = execute(DriverCommand.NEW_SESSION(capabilities));
+    Response response = execute(DriverCommand.NEW_SESSION(singleton(capabilities)));
 
     if (response == null) {
       throw new SessionNotCreatedException(
@@ -270,7 +262,7 @@ public class RemoteWebDriver implements WebDriver, JavascriptExecutor, HasInputD
         response.toString());
     }
 
-    Map<String, Object> rawCapabilities = (Map<String, Object>) responseValue;
+    @SuppressWarnings("unchecked") Map<String, Object> rawCapabilities = (Map<String, Object>) responseValue;
     MutableCapabilities returnedCapabilities = new MutableCapabilities(rawCapabilities);
     String platformString = (String) rawCapabilities.getOrDefault(
       PLATFORM,
@@ -358,8 +350,7 @@ public class RemoteWebDriver implements WebDriver, JavascriptExecutor, HasInputD
       String base64EncodedPng = (String) result;
       return outputType.convertFromBase64Png(base64EncodedPng);
     } else if (result instanceof byte[]) {
-      String base64EncodedPng = new String((byte[]) result, UTF_8);
-      return outputType.convertFromBase64Png(base64EncodedPng);
+      return outputType.convertFromPngBytes((byte[]) result);
     } else {
       throw new RuntimeException(String.format("Unexpected result for %s command: %s",
           DriverCommand.SCREENSHOT,
@@ -605,6 +596,7 @@ public class RemoteWebDriver implements WebDriver, JavascriptExecutor, HasInputD
    */
   public void setLogLevel(Level level) {
     this.level = level;
+    logger.setLevel(level);
   }
 
   protected Response execute(CommandPayload payload) {
