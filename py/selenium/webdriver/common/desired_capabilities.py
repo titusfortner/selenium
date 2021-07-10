@@ -55,32 +55,27 @@ class DesiredCapabilities(object):
 
     INTERNETEXPLORER = {
         "browserName": "internet explorer",
-        "version": "",
-        "platform": "WINDOWS",
+        "platformName": "WINDOWS",
     }
 
     EDGE = {
         "browserName": "MicrosoftEdge",
-        "version": "",
-        "platform": "ANY"
+        "platformName": "ANY"
     }
 
     CHROME = {
         "browserName": "chrome",
-        "version": "",
-        "platform": "ANY",
+        "platformName": "ANY",
     }
 
     OPERA = {
         "browserName": "opera",
-        "version": "",
-        "platform": "ANY",
+        "platformName": "ANY",
     }
 
     SAFARI = {
         "browserName": "safari",
-        "version": "",
-        "platform": "MAC",
+        "platformName": "MAC",
     }
 
     HTMLUNIT = {
