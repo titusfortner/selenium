@@ -87,8 +87,7 @@ def test_always_match_if_2_of_the_same_options():
             "alwaysMatch": {
                 "browserName": "chrome",
                 "pageLoadStrategy": "normal",
-                "platform": "ANY",
-                "version": ""
+                "platformName": "ANY"
             },
             "firstMatch": [
                 {"goog:chromeOptions": {"args": ["foo"], "extensions": []}},
@@ -109,8 +108,7 @@ def test_first_match_when_2_different_option_types():
             "alwaysMatch": {"pageLoadStrategy": "normal"},
             "firstMatch": [
                 {"browserName": "chrome",
-                 "platform": "ANY",
-                 "version": "",
+                 "platformName": "ANY",
                  "goog:chromeOptions": {"extensions": [], "args": []}},
                 {"browserName": "firefox",
                  "acceptInsecureCerts": True,
