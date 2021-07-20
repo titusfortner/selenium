@@ -21,7 +21,6 @@ import static org.openqa.selenium.remote.CapabilityType.ACCEPT_INSECURE_CERTS;
 import static org.openqa.selenium.remote.CapabilityType.PAGE_LOAD_STRATEGY;
 import static org.openqa.selenium.remote.CapabilityType.PROXY;
 import static org.openqa.selenium.remote.CapabilityType.STRICT_FILE_INTERACTABILITY;
-import static org.openqa.selenium.remote.CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR;
 import static org.openqa.selenium.remote.CapabilityType.UNHANDLED_PROMPT_BEHAVIOUR;
 
 import org.openqa.selenium.MutableCapabilities;
@@ -49,7 +48,6 @@ public abstract class AbstractDriverOptions<DO extends AbstractDriverOptions> ex
     setCapability(
         UNHANDLED_PROMPT_BEHAVIOUR,
         Require.nonNull("Unhandled prompt behavior", behaviour));
-    setCapability(UNEXPECTED_ALERT_BEHAVIOUR, behaviour);
     return (DO) this;
   }
 
