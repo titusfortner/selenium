@@ -113,7 +113,7 @@ module Selenium
         require 'rexml/document'
         net_http_start('selenium-release.storage.googleapis.com') do |http|
           versions = REXML::Document.new(http.get('/').body).root.get_elements('//Contents/Key').map do |e|
-            e.text[/selenium-server-standalone-(\d+\.\d+\.\d+)\.jar/, 1]
+            e.text[/selenium-server-(4.*)\.jar/, 1]
           end
 
           versions.compact.map { |version| Gem::Version.new(version) }.max.version
