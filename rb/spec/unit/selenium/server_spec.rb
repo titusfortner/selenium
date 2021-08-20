@@ -163,11 +163,12 @@ module Selenium
     end
 
     it 'should know what the latest version available is' do
-      latest_version = '2.42.2'
+      latest_version = '4.0.0.pre.beta.pre.2'
       example_xml = +"<?xml version='1.0' encoding='UTF-8'?><ListBucketResult "
       example_xml << "xmlns='http://doc.s3.amazonaws.com/2006-03-01'><Name>"
       example_xml << 'selenium-release</Name><Contents><Key>2.39/'
       example_xml << 'selenium-server-2.39.0.zip</Key></Contents><Contents>'
+      example_xml << '<Key>4.0-beta-2/selenium-server-4.0.0-beta-2.jar</Key>'
       example_xml << "<Key>2.42/selenium-server-standalone-#{latest_version}.jar"
       example_xml << '</Key></Contents></ListBucketResult>'
       stub_request(:get, 'http://selenium-release.storage.googleapis.com/').to_return(body: example_xml)
