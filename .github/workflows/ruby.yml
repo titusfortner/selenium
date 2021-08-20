@@ -61,7 +61,7 @@ jobs:
       - uses: bazelbuild/setup-bazelisk@v1.0.1
       - uses: ./.github/actions/bazel
         with:
-          command: test --test_output=all //rb:${{ matrix.target }}
+          command: test --test_output=all rb:${{ matrix.target }}
 
   lint:
     runs-on: ubuntu-latest
