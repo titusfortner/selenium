@@ -57,6 +57,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rubocop', ['~> 1.8.0']
   s.add_development_dependency 'rubocop-performance'
   s.add_development_dependency 'rubocop-rspec'
+  s.add_development_dependency 'webdrivers', ['~> 4.6.1']
   s.add_development_dependency 'webmock', ['~> 3.5']
   s.add_development_dependency 'webrick', ['~> 1.7']
   s.add_development_dependency 'yard', ['~> 0.9.11']
