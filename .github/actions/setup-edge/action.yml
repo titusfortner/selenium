@@ -1,0 +1,13 @@
+name: 'Setup Chrome and chromedriver'
+runs:
+  using: "composite"
+  steps:
+    - run: |
+        MS_STORAGE=https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver
+        EDGE_STABLE="$( wget -qO - ${MS_STORAGE}/LATEST_STABLE - | LC_CTYPE=C tr -cd [.0-9])"
+        EDGE_LINUX="$(wget -qO - ${MS_STORAGE}/LATEST_RELEASE_${EDGE_MAJOR%%.*}_LINUX - | LC_CTYPE=C tr -cd [.0-9])"
+        curl -LO ${MS_STORAGE}/${EDGE_LINUX}/edgedriver_linux64.zip
+
+        unzip edgedriver_linux64.zip && chmod +x chromedriver && sudo mv chromedriver /usr/local/bin
+        edgedriver -version
+      shell: bash

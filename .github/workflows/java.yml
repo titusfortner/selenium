@@ -105,7 +105,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: [ chrome, firefox ]
+        browser: [ chrome, firefox, edge ]
         version: [ latest ]
         include:
           - browser: 'firefox'
@@ -143,6 +143,14 @@ jobs:
         uses: ./.github/actions/setup-chrome
         if: |
           matrix.browser == 'chrome'
+      - name: Setup Edge
+        uses: browser-actions/setup-edge@latest
+        if: |
+          matrix.browser == 'edge'
+      - name: Setup EdgeDriver
+        uses: ./.github/actions/setup-edge
+        if: |
+          matrix.browser == 'edge'
       - name: Start XVFB
         run: Xvfb :99 &
       - name: Run browser tests in ${{ matrix.browser }}
@@ -159,7 +167,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        browser: [ chrome, firefox ]
+        browser: [ chrome, firefox, edge ]
         version: [ latest ]
         include:
           - browser: 'firefox'
@@ -198,6 +206,14 @@ jobs:
         uses: ./.github/actions/setup-chrome
         if: |
           matrix.browser == 'chrome'
+      - name: Setup Edge
+        uses: browser-actions/setup-edge@latest
+        if: |
+          matrix.browser == 'edge'
+      - name: Setup EdgeDriver
+        uses: ./.github/actions/setup-edge
+        if: |
+          matrix.browser == 'edge'
       - name: Start XVFB
         run: Xvfb :99 &
       - name: Run server tests
