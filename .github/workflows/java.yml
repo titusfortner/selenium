@@ -143,10 +143,6 @@ jobs:
         uses: ./.github/actions/setup-chrome
         if: |
           matrix.browser == 'chrome'
-      - name: Setup Edge
-        uses: browser-actions/setup-edge@latest
-        if: |
-          matrix.browser == 'edge'
       - name: Setup EdgeDriver
         uses: ./.github/actions/setup-edge
         if: |
@@ -206,10 +202,6 @@ jobs:
         uses: ./.github/actions/setup-chrome
         if: |
           matrix.browser == 'chrome'
-      - name: Setup Edge
-        uses: browser-actions/setup-edge@latest
-        if: |
-          matrix.browser == 'edge'
       - name: Setup EdgeDriver
         uses: ./.github/actions/setup-edge
         if: |
