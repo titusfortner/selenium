@@ -13,10 +13,10 @@ runs:
 
         MS_STORAGE=https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver
         echo $MS_STORAGE
-        EDGEDRIVER_VERSION="$(wget -qO - ${MS_STORAGE}/LATEST_RELEASE_${EDGE_MAJOR_VERSION%%.*}_LINUX - | LC_CTYPE=C tr -cd [.0-9])"
+        EDGEDRIVER_VERSION="$(wget -qO - ${MS_STORAGE}/LATEST_RELEASE_${EDGE_MAJOR_VERSION}_LINUX - | LC_CTYPE=C tr -cd [.0-9])"
         echo EDGEDRIVER_VERSION
-        echo ${MS_STORAGE}/${EDGE_FULL_VERSION}/edgedriver_linux64.zip
-        curl -LO ${MS_STORAGE}/${EDGE_FULL_VERSION}/edgedriver_linux64.zip
+        echo ${MS_STORAGE}/${EDGEDRIVER_VERSION}/edgedriver_linux64.zip
+        curl -LO ${MS_STORAGE}/${EDGEDRIVER_VERSION}/edgedriver_linux64.zip
 
         unzip edgedriver_linux64.zip && chmod +x edgedriver && sudo mv edgedriver /usr/local/bin
         edgedriver -version
