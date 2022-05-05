@@ -21,6 +21,25 @@ namespace OpenQA.Selenium.Interactions
         }
 
         [Test]
+        public void OutputsPointerEventsToDictionary()
+        {
+            var pointerInputDevice = new PointerInputDevice(PointerKind.Mouse);
+            var pointerEventProperties = new PointerInputDevice.PointerEventProperties();
+            pointerEventProperties.Height = 10;
+            pointerEventProperties.Width = 10;
+            pointerEventProperties.Pressure = 0.5;
+            pointerEventProperties.TangentialPressure = 0.1;
+            pointerEventProperties.TiltX = 15;
+            pointerEventProperties.TiltY = 15;
+            pointerEventProperties.Twist = 30;
+            pointerEventProperties.AltitudeAngle = 0.1;
+            pointerEventProperties.AzimuthAngle = 0.1;
+            pointerInputDevice.CreatePointerDown(MouseButton.Left, pointerEventProperties);
+            var dictionary = pointerInputDevice.ToDictionary();
+            Console.WriteLine(dictionary);
+        }
+
+        [Test]
         public void ShouldAllowDraggingElementWithMouseMovesItToAnotherList()
         {
             PerformDragAndDropWithMouse();
