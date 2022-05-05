@@ -91,7 +91,22 @@ namespace OpenQA.Selenium.Interactions
         /// <summary>
         /// The button used is the secondary button.
         /// </summary>
-        Right = 2
+        Right = 2,
+
+        /// <summary>
+        /// The X1 button used for navigating back.
+        /// </summary>
+        Back = 3,
+
+        /// <summary>
+        /// The X2 button used for navigating forward.
+        /// </summary>
+        Forward = 4,
+
+        /// <summary>
+        /// The button used by Pen pointers to erase.
+        /// </summary>
+        Eraser = 5
     }
 
     /// <summary>
@@ -168,6 +183,9 @@ namespace OpenQA.Selenium.Interactions
         /// <summary>
         /// Creates a pointer down action.
         /// </summary>
+        /// <remarks>
+        /// MouseButton value applies to Pen types for primary, secondary and erase functionality (0, 2, and 5 respectively)
+        /// </remarks>
         /// <param name="button">The button of the pointer that should be pressed.</param>
         /// <param name="properties">The specifications for the pointer event interaction</param>
         /// <returns>The action representing the pointer down gesture.</returns>
@@ -189,6 +207,9 @@ namespace OpenQA.Selenium.Interactions
         /// <summary>
         /// Creates a pointer down action.
         /// </summary>
+        /// <remarks>
+        /// MouseButton value applies to Pen types for primary, secondary and erase functionality (0, 2, and 5 respectively)
+        /// </remarks>
         /// <param name="button">The button of the pointer that should be pressed.</param>
         /// <param name="properties">The specifications for the pointer event interaction</param>
         /// <returns>The action representing the pointer down gesture.</returns>
