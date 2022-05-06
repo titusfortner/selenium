@@ -38,7 +38,7 @@ jobs:
       - name: Run unit tests
         uses: ./.github/actions/bazel
         with:
-          command: build //dotnet/src/webdriver:package
+          command: build //dotnet/test/common:chrome
 
   browser_tests:
     needs: [ build ]
