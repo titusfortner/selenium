@@ -1,13 +1,9 @@
 # Configuration for Java CI
 # To force the execution of this workflow, add [run java] to your commit message
-name: 'CI - .NET'
+name: 'CI - Dotnet'
 
 on:
   workflow_dispatch:
-
-#  schedule:
-#    - cron: '15 9,21 * * *'
-
   push:
     branches:
       - trunk
@@ -24,8 +20,6 @@ jobs:
       bazel-target-prefix: '//dotnet'
 
   build:
-#    if: ${{ needs.check_workflow.outputs.result == 'true' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || contains(toJson(github.event.commits), '[run dotnet]') == true }}
-#    needs: check_workflow
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source tree
