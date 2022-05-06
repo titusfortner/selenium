@@ -11,13 +11,6 @@ on:
       - trunk
 
 jobs:
-  check_workflow:
-    permissions:
-      contents: none
-    uses: ./.github/workflows/should-workflow-run.yml
-    with:
-      bazel-target-prefix: '//dotnet'
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -78,7 +71,7 @@ jobs:
       - name: Start XVFB
         run: Xvfb :99 &
       - name: Run browser tests in Chrome
-      - run: dotnet test
+        run: dotnet test
         env:
           DISPLAY: :99
 
