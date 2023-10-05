@@ -78,7 +78,7 @@ jobs:
         if: inputs.java-version != ''
         uses: actions/setup-java@v3
         with:
-          java-version: ${{ inputs.java-version }}
+          java-version: 11
           distribution: 'temurin'
       - name: Setup Bazel
         uses: p0deje/setup-bazel@0.2.0
