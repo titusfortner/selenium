@@ -29,11 +29,13 @@ jobs:
       browser: ${{ matrix.browser }}
       cache-key: rb-remote-${{ matrix.browser }}-test
       os: ${{ matrix.os }}
+      java-version: 11
       run: >
         bazel test
         --define browser=${{ matrix.browser }}
         --define remote=true
         --flaky_test_attempts 3
+        --test_output streamed
         --local_test_jobs 1
         --test_env=DEBUG=1
         //rb/spec/integration/...
