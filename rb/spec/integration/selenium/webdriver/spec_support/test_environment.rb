@@ -106,10 +106,15 @@ module Selenium
         end
 
         def remote_server_jar
-          jar = if ENV['DOWNLOAD_SERVER']
-                  Selenium::Server.download
+          jar = 'java/src/org/openqa/selenium/grid/selenium_server_deploy.jar'
+          test_jar = Pathname.new(Dir.pwd).join(jar)
+          built_jar = root.join("bazel-bin/#{jar}")
+          jar = if File.exist?(test_jar) && ENV['DOWNLOAD_SERVER'].nil?
+                  test_jar
+                elsif File.exist?(built_jar) && ENV['DOWNLOAD_SERVER'].nil?
+                  built_jar
                 else
-                  root.join("bazel-bin/java/src/org/openqa/selenium/grid/selenium_server_deploy.jar")
+                  Selenium::Server.download
                 end
 
           WebDriver.logger.info "Server Location: #{jar}"
