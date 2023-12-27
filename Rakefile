@@ -8,6 +8,7 @@ require 'net/telnet'
 require 'stringio'
 require 'fileutils'
 require 'open-uri'
+require 'git'
 
 include Rake::DSL
 
@@ -50,6 +51,7 @@ $DEBUG = orig_verbose != Rake::FileUtilsExt::DEFAULT
 $DEBUG = true if ENV['debug'] == 'true'
 
 verbose($DEBUG)
+@git = Git.open(__dir__)
 
 def java_version
   File.foreach('java/version.bzl') do |line|
@@ -842,10 +844,36 @@ end
 namespace :all do
   desc 'Update all API Documentation'
   task :docs do
-    Rake::Task['java:docs'].invoke
-    Rake::Task['py:docs'].invoke
+    # Rake::Task['java:docs'].invoke
+    # Rake::Task['py:docs'].invoke
     Rake::Task['rb:docs'].invoke
-    Rake::Task['dotnet:docs'].invoke
+    # Rake::Task['dotnet:docs'].invoke
+    puts 'Docs built'
+    begin
+      @git.checkout('gh-pages')
+    rescue Git::FailedError => ex
+      line = ex.message.lines[2].gsub("output: \"error: ", '')
+      puts line.gsub('\t', "\t").split('\n')[0...-2].join("\n")
+      print "Fix and Retry? (Y/n):"
+      response = STDIN.gets.chomp.downcase
+      break unless response == 'y' || response == 'yes'
+      retry
+    end
+    @git.pull
+    FileUtils.rm_rf('docs/api/java') if Dir.exist?('build/docs/api/java')
+    FileUtils.rm_rf('docs/api/rb') if Dir.exist?('build/docs/api/rb')
+    FileUtils.rm_rf('docs/api/py') if Dir.exist?('build/docs/api/py')
+    FileUtils.rm_rf('docs/api/dotnet') if Dir.exist?('build/docs/api/dotnet')
+    FileUtils.cp_r('build/docs/api/', 'docs/')
+    @git.add('docs/api', all: true)
+
+    print 'Do you want to commit the changes? (Y/n): '
+    response = STDIN.gets.chomp.downcase
+    break unless response == 'y' || response == 'yes'
+
+    @git.commit('updating all API docs')
+    # @git.push
+    @git.checkout("trunk")
   end
 
   desc 'Build all artifacts for all language bindings'
