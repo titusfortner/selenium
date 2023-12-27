@@ -850,6 +850,7 @@ namespace :all do
     # Rake::Task['py:docs'].invoke
     Rake::Task['rb:docs'].invoke
     # Rake::Task['dotnet:docs'].invoke
+    # TODO - USE TAG????
     original_branch = @git.current_branch
 
     begin
@@ -866,7 +867,7 @@ namespace :all do
       retry
     end
     begin
-      puts "Updating gh-pages branch from upstream repository" 
+      puts "Updating gh-pages branch from upstream repository"
       @git.pull
     rescue Git::FailedError => ex
       # This happens when upstream is not already set
@@ -883,7 +884,7 @@ namespace :all do
       end
       retry
     end
-    puts "deleting destination directories as applicable"
+    puts "Deleting destination directories as applicable"
     FileUtils.rm_rf('docs/api/java') if Dir.exist?('build/docs/api/java')
     FileUtils.rm_rf('docs/api/rb') if Dir.exist?('build/docs/api/rb')
     FileUtils.rm_rf('docs/api/py') if Dir.exist?('build/docs/api/py')
@@ -901,9 +902,9 @@ namespace :all do
     @git.commit('updating all API docs')
     puts "Pushing changes to upstream repository"
     @git.push
-    puts "Checking out #{original_branch}"
+    puts "Checking out originating branch — #{original_branch}"
     @git.checkout(original_branch)
-    puts "Documentation updated"
+    puts "All API Docs updated!"
   end
 
   desc 'Build all artifacts for all language bindings'
