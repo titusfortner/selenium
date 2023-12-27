@@ -853,44 +853,57 @@ namespace :all do
     original_branch = @git.current_branch
 
     begin
+      puts "Checking out gh-pages"
       @git.checkout('gh-pages-temp')
     rescue Git::FailedError => ex
+      # This happens when the working directory is not clean and things need to be stashed or committed
       line = ex.message.lines[2].gsub("output: \"error: ", '')
       puts line.gsub('\t', "\t").split('\n')[0...-2].join("\n")
-      print "Fix and Retry? (Y/n):"
+      # TODO: we could offer to automatically fix with a stash, but there may be edge cases
+      print "Manually Fix and Retry? (Y/n):"
       response = STDIN.gets.chomp.downcase
       break unless response == 'y' || response == 'yes'
       retry
     end
     begin
+      puts "Updating gh-pages branch from upstream repository" 
       @git.pull
     rescue Git::FailedError => ex
+      # This happens when upstream is not already set
       line = ex.message.lines[2].gsub("output: \"error: ", '')
       puts line.gsub('\t', "\t").split('\n').delete_if(&:empty?)[-2...-1].join("\n")
-      print "Fix and Retry? (Y/n):"
+      print "Manually Fix and Retry? (Y/n):"
       response = STDIN.gets.chomp.downcase
       unless response == 'y' || response == 'yes'
         puts "Stashing docs changes for gh-pages"
         Git::Stash.new(@git, "docs changes for gh-pages")
         puts "Checking out #{original_branch}"
         @git.checkout(original_branch)
+        break
       end
       retry
     end
+    puts "deleting destination directories as applicable"
     FileUtils.rm_rf('docs/api/java') if Dir.exist?('build/docs/api/java')
     FileUtils.rm_rf('docs/api/rb') if Dir.exist?('build/docs/api/rb')
     FileUtils.rm_rf('docs/api/py') if Dir.exist?('build/docs/api/py')
     FileUtils.rm_rf('docs/api/dotnet') if Dir.exist?('build/docs/api/dotnet')
+    puts "Copying files from untracked build directory to tracked docs directory"
     FileUtils.cp_r('build/docs/api/', 'docs/')
+    puts "Staging changes for commit"
     @git.add('docs/api', all: true)
 
     print 'Do you want to commit the changes? (Y/n): '
     response = STDIN.gets.chomp.downcase
     break unless response == 'y' || response == 'yes'
 
+    puts "Committing changes"
     @git.commit('updating all API docs')
+    puts "Pushing changes to upstream repository"
     @git.push
+    puts "Checking out #{original_branch}"
     @git.checkout(original_branch)
+    puts "Documentation updated"
   end
 
   desc 'Build all artifacts for all language bindings'
