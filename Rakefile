@@ -869,7 +869,12 @@ namespace :all do
       puts line.gsub('\t', "\t").split('\n').delete_if(&:empty?)[-2...-1].join("\n")
       print "Fix and Retry? (Y/n):"
       response = STDIN.gets.chomp.downcase
-      break unless response == 'y' || response == 'yes'
+      unless response == 'y' || response == 'yes'
+        puts "Stashing local changes"
+        @git.stash_save("stash local changes in ")
+        puts "Checking out #{original_branch}"
+        @git.checkout(original_branch)
+      end
       retry
     end
     FileUtils.rm_rf('docs/api/java') if Dir.exist?('build/docs/api/java')
@@ -884,7 +889,7 @@ namespace :all do
     break unless response == 'y' || response == 'yes'
 
     @git.commit('updating all API docs')
-    # @git.push
+    @git.push
     @git.checkout(original_branch)
   end
 
