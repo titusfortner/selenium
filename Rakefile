@@ -649,7 +649,6 @@ namespace :rb do
   desc 'Generate Ruby documentation'
   task :docs, [:skip_update] do |_task, arguments|
     FileUtils.rm_rf('build/docs/api/rb/')
-    # FileUtils.mkdir_p('build/docs/api/rb')
     Bazel.execute('run', [], '//rb:docs')
     FileUtils.cp_r('bazel-bin/rb/docs.rb.sh.runfiles/selenium/docs/api/rb/.', 'build/docs/api/rb')
     unless arguments[:skip_update]
