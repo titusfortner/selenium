@@ -862,7 +862,16 @@ namespace :all do
       break unless response == 'y' || response == 'yes'
       retry
     end
-    @git.pull
+    begin
+      @git.pull
+    rescue Git::FailedError => ex
+      line = ex.message.lines[2].gsub("output: \"error: ", '')
+      puts line.gsub('\t', "\t").split('\n').delete_if(&:empty?)[-2...-1].join("\n")
+      print "Fix and Retry? (Y/n):"
+      response = STDIN.gets.chomp.downcase
+      break unless response == 'y' || response == 'yes'
+      retry
+    end
     FileUtils.rm_rf('docs/api/java') if Dir.exist?('build/docs/api/java')
     FileUtils.rm_rf('docs/api/rb') if Dir.exist?('build/docs/api/rb')
     FileUtils.rm_rf('docs/api/py') if Dir.exist?('build/docs/api/py')
