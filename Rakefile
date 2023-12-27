@@ -649,12 +649,13 @@ namespace :rb do
   desc 'Generate Ruby documentation'
   task :docs, [:skip_update] do |_task, arguments|
     FileUtils.rm_rf('build/docs/api/rb/')
-    FileUtils.mkdir_p('build/docs/api/rb')
+    # FileUtils.mkdir_p('build/docs/api/rb')
     Bazel.execute('run', [], '//rb:docs')
     FileUtils.cp_r('bazel-bin/rb/docs.rb.sh.runfiles/selenium/docs/api/rb/.', 'build/docs/api/rb')
     unless arguments[:skip_update]
       puts "Updating Ruby documentation"
       update_gh_pages
+      puts "Ruby Docs updated!"
     end
   end
 
@@ -857,6 +858,7 @@ namespace :all do
 
     puts "Updating All API Docs"
     update_gh_pages
+    puts "API Docs updated!"
   end
 
   desc 'Build all artifacts for all language bindings'
@@ -982,15 +984,13 @@ def update_gh_pages
   puts "Pushing changes to upstream repository"
   @git.push
 
-  puts "Checking out originating branch — #{origin_reference}"
+  puts "Checking out originating branch/tag — #{origin_reference}"
   @git.checkout(origin_reference)
-
-  puts "API Docs updated!"
 end
 
 def restore_git(origin_reference)
   puts "Stashing docs changes for gh-pages"
   Git::Stash.new(@git, "docs changes for gh-pages")
-  puts "Checking out originating branch — #{origin_reference}"
+  puts "Checking out originating branch/tag — #{origin_reference}"
   @git.checkout(origin_reference)
 end
