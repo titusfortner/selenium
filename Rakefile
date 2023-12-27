@@ -647,11 +647,15 @@ namespace :rb do
   end
 
   desc 'Generate Ruby documentation'
-  task :docs do
+  task :docs, [:skip_update] do |_task, arguments|
     FileUtils.rm_rf('build/docs/api/rb/')
     FileUtils.mkdir_p('build/docs/api/rb')
     Bazel.execute('run', [], '//rb:docs')
     FileUtils.cp_r('bazel-bin/rb/docs.rb.sh.runfiles/selenium/docs/api/rb/.', 'build/docs/api/rb')
+    break if arguments[:skip_update]
+    
+    puts "Updating Ruby documentation"
+    update_gh_pages 
   end
 
   desc 'Update Ruby version'
@@ -848,9 +852,10 @@ namespace :all do
     FileUtils.rm_rf('build/docs/api') if Dir.exist?('build/docs/api')
     # Rake::Task['java:docs'].invoke
     # Rake::Task['py:docs'].invoke
-    Rake::Task['rb:docs'].invoke
+    Rake::Task['rb:docs'].invoke(false)
     # Rake::Task['dotnet:docs'].invoke
 
+    puts "Updating All API Docs"
     update_gh_pages
   end
 
@@ -926,8 +931,8 @@ def update_gh_pages
     @git.tags.detect { |tag| @git.object(tag.name).sha == @git.object('HEAD').sha } ||
     raise(StandardError, "Must be on a tagged commit or at the HEAD of a branch")
 
+  puts "Checking out gh-pages"
   begin
-    puts "Checking out gh-pages"
     @git.checkout('gh-pages-temp')
   rescue Git::FailedError => ex
     # This happens when the working directory is not clean and things need to be stashed or committed
@@ -937,10 +942,12 @@ def update_gh_pages
     print "Manually Fix and Retry? (Y/n):"
     response = STDIN.gets.chomp.downcase
     return unless response == 'y' || response == 'yes'
+
     retry
   end
+
+  puts "Updating gh-pages branch from upstream repository"
   begin
-    puts "Updating gh-pages branch from upstream repository"
     @git.pull
   rescue Git::FailedError => ex
     # This happens when upstream is not already set
@@ -948,34 +955,40 @@ def update_gh_pages
     puts line.gsub('\t', "\t").split('\n').delete_if(&:empty?)[-2...-1].join("\n")
     print "Manually Fix and Retry? (Y/n):"
     response = STDIN.gets.chomp.downcase
-    unless response == 'y' || response == 'yes'
-      puts "Stashing docs changes for gh-pages"
-      Git::Stash.new(@git, "docs changes for gh-pages")
-      puts "Checking out originating branch — #{origin_reference}"
-      @git.checkout(origin_reference)
-      return
-    end
+    return restore_git(origin_reference) unless response == 'y' || response == 'yes'
+
     retry
   end
+
+  puts "Moving documentation files from untracked build directory to tracked docs directory"
   puts "Deleting all directories in target docs/api directory with corresponding directories in build/docs/api"
-  FileUtils.rm_rf('docs/api/java') if Dir.exist?('build/docs/api/java')
-  FileUtils.rm_rf('docs/api/rb') if Dir.exist?('build/docs/api/rb')
-  FileUtils.rm_rf('docs/api/py') if Dir.exist?('build/docs/api/py')
-  FileUtils.rm_rf('docs/api/dotnet') if Dir.exist?('build/docs/api/dotnet')
-  puts "Copying files from untracked build directory to tracked docs directory"
-  FileUtils.mv('build/docs/api/', 'docs/')
+  %w[java rb py dotnet].each do |language|
+    FileUtils.rm_rf("docs/api/#{language}") if Dir.exist?("build/docs/api/#{language}")
+    FileUtils.mv("build/docs/api/#{language}", "docs/api/#{language}")
+  end
+
   puts "Staging changes for commit"
   @git.add('docs/api', all: true)
 
   print 'Do you want to commit the changes? (Y/n): '
   response = STDIN.gets.chomp.downcase
-  return unless response == 'y' || response == 'yes'
+  return restore_git(origin_reference) unless response == 'y' || response == 'yes'
 
   puts "Committing changes"
   @git.commit('updating all API docs')
+
   puts "Pushing changes to upstream repository"
   @git.push
+
   puts "Checking out originating branch — #{origin_reference}"
   @git.checkout(origin_reference)
+
   puts "API Docs updated!"
+end
+
+def restore_git(origin_reference)
+  puts "Stashing docs changes for gh-pages"
+  Git::Stash.new(@git, "docs changes for gh-pages")
+  puts "Checking out originating branch — #{origin_reference}"
+  @git.checkout(origin_reference)
 end
