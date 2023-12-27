@@ -850,10 +850,10 @@ namespace :all do
   desc 'Update all API Documentation'
   task :docs do
     FileUtils.rm_rf('build/docs/api') if Dir.exist?('build/docs/api')
-    # Rake::Task['java:docs'].invoke
-    # Rake::Task['py:docs'].invoke
-    Rake::Task['rb:docs'].invoke(false)
-    # Rake::Task['dotnet:docs'].invoke
+    # Rake::Task['java:docs'].invoke(true)
+    # Rake::Task['py:docs'].invoke(true)
+    Rake::Task['rb:docs'].invoke(true)
+    # Rake::Task['dotnet:docs'].invoke(true)
 
     puts "Updating All API Docs"
     update_gh_pages
