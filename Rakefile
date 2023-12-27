@@ -649,6 +649,7 @@ namespace :rb do
   desc 'Generate Ruby documentation'
   task :docs do
     FileUtils.rm_rf('build/docs/api/rb/')
+    FileUtils.mkdir_p('build/docs/api/rb')
     Bazel.execute('run', [], '//rb:docs')
     FileUtils.cp_r('bazel-bin/rb/docs.rb.sh.runfiles/selenium/docs/api/rb/.', 'build/docs/api/rb')
   end
@@ -844,13 +845,15 @@ end
 namespace :all do
   desc 'Update all API Documentation'
   task :docs do
+    FileUtils.rm_rf('build/docs/api') if Dir.exist?('build/docs/api')
     # Rake::Task['java:docs'].invoke
     # Rake::Task['py:docs'].invoke
     Rake::Task['rb:docs'].invoke
     # Rake::Task['dotnet:docs'].invoke
-    puts 'Docs built'
+    original_branch = @git.current_branch
+
     begin
-      @git.checkout('gh-pages')
+      @git.checkout('gh-pages-temp')
     rescue Git::FailedError => ex
       line = ex.message.lines[2].gsub("output: \"error: ", '')
       puts line.gsub('\t', "\t").split('\n')[0...-2].join("\n")
@@ -873,7 +876,7 @@ namespace :all do
 
     @git.commit('updating all API docs')
     # @git.push
-    @git.checkout("trunk")
+    @git.checkout(original_branch)
   end
 
   desc 'Build all artifacts for all language bindings'
