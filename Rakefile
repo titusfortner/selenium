@@ -652,10 +652,10 @@ namespace :rb do
     FileUtils.mkdir_p('build/docs/api/rb')
     Bazel.execute('run', [], '//rb:docs')
     FileUtils.cp_r('bazel-bin/rb/docs.rb.sh.runfiles/selenium/docs/api/rb/.', 'build/docs/api/rb')
-    break if arguments[:skip_update]
-
-    puts "Updating Ruby documentation"
-    update_gh_pages
+    unless arguments[:skip_update]
+      puts "Updating Ruby documentation"
+      update_gh_pages
+    end
   end
 
   desc 'Update Ruby version'
