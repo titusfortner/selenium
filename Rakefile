@@ -870,8 +870,8 @@ namespace :all do
       print "Fix and Retry? (Y/n):"
       response = STDIN.gets.chomp.downcase
       unless response == 'y' || response == 'yes'
-        puts "Stashing local changes"
-        @git.stash_save("stash local changes in ")
+        puts "Stashing docs changes for gh-pages"
+        Git::Stash.new(@git, "docs changes for gh-pages")
         puts "Checking out #{original_branch}"
         @git.checkout(original_branch)
       end
