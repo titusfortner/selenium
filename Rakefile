@@ -928,9 +928,12 @@ end
 
 def update_gh_pages
   # This allows returning to a tagged commit instead of a branch
-  origin_reference = @git.current_branch ||
-    @git.tags.detect {|tag| tag.sha == @git.revparse("HEAD") } ||
-    raise(StandardError, "Must be on a tagged commit or at the HEAD of a branch")
+  origin_reference = @git.current_branch
+  origin_reference ||= begin
+    puts "commit is not at HEAD, checking for matching tag"
+    @git.tags.detect {|tag| tag.sha == @git.revparse("HEAD") }.name
+  end
+    # raise(StandardError, "Must be on a tagged commit or at the HEAD of a branch")
 
   puts "Checking out gh-pages"
   begin
