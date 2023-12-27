@@ -653,9 +653,9 @@ namespace :rb do
     Bazel.execute('run', [], '//rb:docs')
     FileUtils.cp_r('bazel-bin/rb/docs.rb.sh.runfiles/selenium/docs/api/rb/.', 'build/docs/api/rb')
     break if arguments[:skip_update]
-    
+
     puts "Updating Ruby documentation"
-    update_gh_pages 
+    update_gh_pages
   end
 
   desc 'Update Ruby version'
@@ -960,11 +960,13 @@ def update_gh_pages
     retry
   end
 
-  puts "Moving documentation files from untracked build directory to tracked docs directory"
-  puts "Deleting all directories in target docs/api directory with corresponding directories in build/docs/api"
   %w[java rb py dotnet].each do |language|
-    FileUtils.rm_rf("docs/api/#{language}") if Dir.exist?("build/docs/api/#{language}")
-    FileUtils.mv("build/docs/api/#{language}", "docs/api/#{language}")
+    if Dir.exist?("build/docs/api/#{language}") && !Dir.empty?("build/docs/api/#{language}")
+      puts "Deleting #{language} directory in docs/api since corresponding directory in build/docs/api is not empty"
+      FileUtils.rm_rf("docs/api/#{language}")
+      puts "Moving documentation files from untracked build directory to tracked docs directory"
+      FileUtils.mv("build/docs/api/#{language}", "docs/api/#{language}")
+    end
   end
 
   puts "Staging changes for commit"
