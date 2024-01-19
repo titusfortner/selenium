@@ -126,6 +126,8 @@ jobs:
         run: sudo safaridriver --enable
       - name: Run Bazel
         run: ${{ inputs.run }}
+      - name: Echo Git Status
+        run: git status
       - name: Start SSH session
         if: failure() && runner.debug == '1'
         uses: mxschmitt/action-tmate@v3
@@ -140,3 +142,12 @@ jobs:
           title: "Nightly"
           prerelease: true
           files: ${{ inputs.nightly-release-files }}
+      - name: Save changes
+        run: |
+          git diff > changes.patch
+      - name: "Upload changes"
+        uses: actions/upload-artifact@v3
+        with:
+          name: patch-file
+          path: changes.patch
+          retention-days: 6
