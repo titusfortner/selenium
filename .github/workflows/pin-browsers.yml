@@ -28,24 +28,18 @@ jobs:
       - name: Apply Patch
         run: |
           git apply changes.patch
+          rm changes.patch
       - name: Check Changes
         run: |
           if [[ -n $(git status --porcelain common/repositories.bzl) ]]; then
           echo "CHANGES_FOUND=true" >> $GITHUB_ENV
           fi
-      - name: Commit Files
-        if: env.CHANGES_FOUND == 'true'
-        run: |
-          git config --local user.email "selenium-ci@users.noreply.github.com"
-          git config --local user.name "Selenium CI Bot"
-          git checkout -b update-pinned-browsers-${{ github.run_number }}
-          git add common/repositories.bzl
-          git commit -m "Update pinned browser versions"
       - name: Create Pull Request
         if: env.CHANGES_FOUND == 'true'
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.SELENIUM_CI_TOKEN }}
+          add-paths: common/repositories.bzl
           commit-message: Update pinned browser versions
           committer: Selenium CI Bot <selenium-ci@users.noreply.github.com>
           author: Selenium CI Bot <selenium-ci@users.noreply.github.com>
