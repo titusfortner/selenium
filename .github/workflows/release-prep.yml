@@ -21,8 +21,6 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
           fetch-tags: true
-      - name: "Tag check"
-        run: git tag
       - name: "Prep git"
         run: |
           git config --local user.email "selenium-ci@users.noreply.github.com"
