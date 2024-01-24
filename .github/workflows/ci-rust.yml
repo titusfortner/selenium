@@ -6,6 +6,11 @@ on:
       release:
         required: false
         type: boolean
+        default: false
+      branch:
+        required: false
+        type: string
+        default: trunk
     secrets:
       SELENIUM_CI_TOKEN:
         required: true
@@ -47,6 +52,8 @@ jobs:
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: "Update Rust"
         run: |
           rustup update
@@ -75,6 +82,8 @@ jobs:
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: "Update Rust"
         run: |
           rustup update
@@ -101,6 +110,8 @@ jobs:
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: "Update Rust"
         run: |
           rustup update
@@ -129,6 +140,8 @@ jobs:
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: "Update Rust"
         run: |
           rustup update
@@ -160,6 +173,8 @@ jobs:
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: "Update Rust"
         run: |
           rustup update
@@ -190,6 +205,8 @@ jobs:
     steps:
       - name: "Checkout project"
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.branch }}
       - name: "Update Rust"
         run: |
           rustup update

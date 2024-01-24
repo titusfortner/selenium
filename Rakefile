@@ -1005,8 +1005,7 @@ namespace :rust do
       # @git.checkout(branch)
       commit!("update Rust version to #{rust_version}",
              ['rust/BUILD.bazel', 'rust/Cargo.Bazel.lock', 'rust/Cargo.lock', 'rust/Cargo.toml'])
-      @git.add('rust/CHANGELOG.md')
-      @git.branch.stashes.save('Rust Changelog')
+      commit!('Rust Changelog', ['rust/CHANGELOG.md'])
     end
   end
 end
