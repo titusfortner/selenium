@@ -44,7 +44,8 @@ jobs:
     with:
         release: true
         branch: release-${{ github.event.inputs.version }}
-
+    secrets:
+      SELENIUM_CI_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
   update-files:
     name: Update Files
     runs-on: ubuntu-latest
