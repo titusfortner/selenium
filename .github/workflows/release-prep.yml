@@ -30,7 +30,7 @@ jobs:
           ./go rust:version
           ./go rust:version:commit
       - name: Build and Release Rust
-        uses: ./.github/workflows/ci_rust.yml
+        uses: ./.github/workflows/ci-rust.yml
         with:
           release: true
       - name: Update everything including early release CDP
