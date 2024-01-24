@@ -525,7 +525,7 @@ namespace :node do
 
   desc 'Build Node npm package'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Bazel.execute('build', args, '//javascript/node/selenium-webdriver')
   end
 
@@ -573,14 +573,14 @@ end
 namespace :py do
   desc 'Build Python wheel and sdist with optional arguments'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Bazel.execute('build', args, '//py:selenium-wheel')
     Bazel.execute('build', args, '//py:selenium-sdist')
   end
 
   desc 'Release Python wheel and sdist to pypi'
   task :release, [:args] do |_task, arguments|
-    args = arguments[:args] || ['--stamp']
+    args = Array(arguments[:args]) || ['--stamp']
     Bazel.execute('run', args, '//py:selenium-release')
   end
 
@@ -663,6 +663,7 @@ namespace :py do
      'py/docs/source/conf.py'].each do |file|
         text = File.read(file).gsub(old_version, new_version)
         File.open(file, "w") { |f| f.puts text }
+        @git.add(file)
     end
 
     old_short_version = old_version.split('.')[0..1].join('.')
@@ -711,9 +712,11 @@ end
 namespace :rb do
   desc 'Generate Ruby gems'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
-    Bazel.execute('build', args, '//rb:selenium-webdriver')
-    Bazel.execute('build', args, '//rb:selenium-devtools')
+    args = Array(arguments[:args]) || []
+    webdriver = args.reject! { |item| item == 'webdriver' }
+    devtools = args.reject! { |item| item == 'devtools' }
+    Bazel.execute('build', args, '//rb:selenium-webdriver') if webdriver
+    Bazel.execute('build', args, '//rb:selenium-devtools') if devtools
   end
 
   desc 'Update generated Ruby files for local development'
@@ -725,7 +728,7 @@ namespace :rb do
 
   desc 'Push Ruby gems to rubygems'
   task :release, [:args] do |_task, arguments|
-    args = arguments[:args] || ['--stamp']
+    args = Array(arguments[:args]) || ['--stamp']
     Bazel.execute('run', args, '//rb:selenium-webdriver-release')
     Bazel.execute('run', args, '//rb:selenium-devtools-release')
   end
@@ -776,13 +779,13 @@ end
 namespace :dotnet do
   desc 'Build nupkg files'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Bazel.execute('build', args, '//dotnet:all')
   end
 
   desc 'Create zipped assets for .NET for uploading to GitHub'
   task :zip_assets, [:args] do |_task, arguments|
-    args = arguments[:args] || ['--stamp']
+    args = Array(arguments[:args]) || ['--stamp']
     Rake::Task['dotnet:build'].invoke(args)
     mkdir_p 'build/dist'
     FileUtils.rm_f('build/dist/*dotnet*')
@@ -795,7 +798,7 @@ namespace :dotnet do
 
   desc 'Upload nupkg files to Nuget'
   task :release, [:args] do |_task, arguments|
-    args = arguments[:args] || ['--stamp']
+    args = Array(arguments[:args]) || ['--stamp']
     Rake::Task['dotnet:build'].invoke(args)
     Rake::Task['dotnet:zip_assets'].invoke(args)
 
@@ -856,26 +859,26 @@ end
 namespace :java do
   desc 'Build Java Client Jars'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Bazel.execute('build', args, '//java/src/org/openqa/selenium:client-combined')
   end
 
   desc 'Build Grid Jar'
   task :grid, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Bazel.execute('build', args, '//java/src/org/openqa/selenium/grid:grid')
   end
 
   desc 'Package Java bindings and grid into releasable packages'
   task :package, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Rake::Task['java:build'].invoke(args)
     Rake::Task['java-release-zip'].invoke
   end
 
   desc 'Deploy all jars to Maven'
   task :release, [:args] do |_task, arguments|
-    args = arguments[:args] || ['--stamp']
+    args = Array(arguments[:args]) || ['--stamp']
     Rake::Task['java:package'].invoke(args)
     Rake::Task['publish-maven'].invoke
   end
@@ -951,7 +954,7 @@ end
 namespace :rust do
   desc 'Build Selenium Manager'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Bazel.execute('build', args, '//rust:selenium-manager')
   end
 
@@ -967,6 +970,8 @@ namespace :rust do
     update_changelog(version, 'rust', 'rust/src', 'rust/CHANGELOG.md', header)
   end
 
+  # Rust versioning is currently difficult compared to the others because we are using the 0.4.x pattern
+  # until Selenium Manager comes out of beta
   desc 'Update Rust version'
   task :version, [:version] do |_task, arguments|
     old_version = rust_version.dup
@@ -987,6 +992,23 @@ namespace :rust do
     Rake::Task['rust:changelog'].invoke unless new_version.include?('nightly')
     Rake::Task['rust:update'].invoke
   end
+
+  namespace :version do
+    # Creating a special task for this because Rust version needs to be managed at a different place than
+    # everything else; want to save changelog updates until later
+    desc 'Commits updates from Rust version changes and stashes changelog'
+    task :commit do
+      @git.reset
+      # branch = @git.branch
+      # @git.checkout('rust_changelog', new_branch: true)
+      # commit!("update Rust changelog", ['rust/CHANGELOG.md'])
+      # @git.checkout(branch)
+      commit!("update Rust version to #{rust_version}",
+             ['rust/BUILD.bazel', 'rust/Cargo.Bazel.lock', 'rust/Cargo.lock', 'rust/Cargo.toml'])
+      @git.add('rust/CHANGELOG.md')
+      @git.branch.stashes.save('Rust Changelog')
+    end
+  end
 end
 
 namespace :all do
@@ -1006,7 +1028,7 @@ namespace :all do
 
   desc 'Build all artifacts for all language bindings'
   task :build, [:args] do |_task, arguments|
-    args = arguments[:args] || []
+    args = Array(arguments[:args]) || []
     Rake::Task['java:build'].invoke(args)
     Rake::Task['py:build'].invoke(args)
     Rake::Task['rb:build'].invoke(args)
@@ -1020,7 +1042,7 @@ namespace :all do
     tag = @git.add_tag("selenium-#{java_version}")
     @git.push('origin', tag.name)
 
-    args = arguments[:args] || ['--stamp']
+    args = Array(arguments[:args]) || ['--stamp']
     Rake::Task['java:release'].invoke(args)
     Rake::Task['py:release'].invoke(args)
     Rake::Task['rb:release'].invoke(args)
@@ -1049,15 +1071,43 @@ namespace :all do
   end
 
   desc 'Update everything in preparation for a release'
-    task :prepare, [:channel] do |_task, arguments|
-      args = arguments[:channel] ? ['--', "--chrome_channel=#{arguments[:channel].capitalize}"] : []
-      Bazel.execute('run', args, '//scripts:update_cdp')
-      Bazel.execute('run', args, '//scripts:pinned_browsers')
-      Bazel.execute('run', args, '//scripts:selenium_manager')
-      Rake::Task['java:update'].invoke
-      Rake::Task['authors'].invoke
-      Rake::Task['copyright:update'].invoke
-    end
+  task :prepare, [:channel] do |_task, arguments|
+    args = arguments[:channel] ? ['--', "--chrome_channel=#{arguments[:channel].capitalize}"] : []
+
+    Bazel.execute('run', args, '//scripts:pinned_browsers')
+    commit!('Update pinned browser versions', ['common/repositories.bzl'])
+
+    Bazel.execute('run', args, '//scripts:update_cdp')
+    commit!('Update supported versions for Chrome DevTools',
+           ['common/devtools/*',
+            'dotnet/src/webdriver/DevTools/*',
+            'dotnet/src/webdriver/WebDriver.csproj',
+            'dotnet/test/common/DevTools/*',
+            'dotnet/test/common/CustomDriverConfigs/*',
+            'dotnet/selenium-dotnet-version.bzl',
+            'java/src/org/openqa/selenium/devtools/*',
+            '**/BUILD.bazel',
+            'rb/lib/selenium/devtools/*',
+            'rb/Gemfile.lock',
+            'Rakefile'])
+
+    Bazel.execute('run', args, '//scripts:selenium_manager')
+    commit!('Update selenium manager version', ['common/selenium_manager.bzl'])
+
+    Rake::Task['java:update'].invoke
+    commit!('Update Maven Dependencies', ['java/maven_deps.bzl', 'java/maven_install.json'])
+
+    Rake::Task['authors'].invoke
+    commit!('Update authors file', ['AUTHORS'])
+
+    Rake::Task['copyright:update'].invoke
+    commit!('Update copyright notice on files', all: true)
+
+    @git.branch.stashes.apply
+    Rake::Task['all:version'].invoke
+    commit!("FIX CHANGELOGS BEFORE MERGING!\n\nUpdate versions and change logs to release Selenium #{java_version}",
+            all: true)
+  end
 
   desc 'Update all versions'
   task :version, [:version] do |_task, arguments|
@@ -1245,4 +1295,14 @@ def update_changelog(version, language, path, changelog, header)
     file.write(new_content)
     file.truncate(file.pos)
   end
+end
+
+def commit!(message, files = [], all: false)
+  files.each do |file|
+    puts "adding: #{file}"
+    @git.add(file)
+  end
+  all ? @git.commit_all(message) : @git.commit(message)
+rescue Git::FailedError => ex
+  puts ex.message
 end
