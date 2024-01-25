@@ -39,7 +39,7 @@ jobs:
 
   selenium-manager:
     name: Release Selenium Manager
-    needs: prepare-release
+    needs: update-rust
     uses: ./.github/workflows/ci-rust.yml
     with:
         release: true
