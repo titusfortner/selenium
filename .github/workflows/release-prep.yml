@@ -21,8 +21,10 @@ jobs:
         run: |
           echo "Version: ${{ github.event.inputs.version }}"
           echo "Early Release: ${{ github.event.inputs.early_release }}"
-          echo "Early Release String? ${{ github.event.inputs.early_release == 'true' }}"
-          echo "Early Release Bool? ${{ github.event.inputs.early_release == true }}"
+          echo "Early Release true String? ${{ github.event.inputs.early_release == 'true' }}"
+          echo "Early Release false String? ${{ github.event.inputs.early_release == 'false' }}"
+          echo "Early Release true Bool? ${{ github.event.inputs.early_release == true }}"
+          echo "Early Release false Bool? ${{ github.event.inputs.early_release == false }}"
 #  update-rust:
 #    name: Update Rust Version
 #    runs-on: ubuntu-latest
