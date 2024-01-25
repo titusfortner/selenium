@@ -13,6 +13,14 @@ on:
         type: boolean
 
 jobs:
+  print-input:
+    name: Print Input
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Input
+        run: |
+          echo "Version: ${{ github.event.inputs.version }}"
+          echo "Early Release: ${{ github.event.inputs.early_release }}"
 #  update-rust:
 #    name: Update Rust Version
 #    runs-on: ubuntu-latest
