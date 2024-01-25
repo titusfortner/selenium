@@ -74,7 +74,7 @@ jobs:
       if: ${{ github.event.inputs.early_release == 'true' }}
       run: ./go all:prepare['Beta']
     - name: Update everything including released CDP
-      if: ${{ !github.event.inputs.early_release == 'false' }}
+      if: ${{ github.event.inputs.early_release == 'false' }}
       run: ./go all:prepare
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v5
