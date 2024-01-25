@@ -39,6 +39,7 @@ jobs:
         with:
           github_token: ${{ secrets.SELENIUM_CI_TOKEN }}
           branch: release-${{ github.event.inputs.version }}
+          force: true
 
   selenium-manager:
     name: Release Selenium Manager
