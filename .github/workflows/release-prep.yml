@@ -71,7 +71,7 @@ jobs:
     - name: Undo rust changelog commit
       run: git reset HEAD~1
     - name: Update everything including early release CDP
-      if: ${{ github.event.inputs.early_release == 'true }}
+      if: ${{ github.event.inputs.early_release == 'true' }}
       run: ./go all:prepare['Beta']
     - name: Update everything including released CDP
       if: ${{ !github.event.inputs.early_release == 'false' }}
