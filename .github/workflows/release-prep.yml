@@ -13,49 +13,49 @@ on:
         type: boolean
 
 jobs:
-#  update-rust:
-#    name: Update Rust Version
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: "Checkout repo"
-#        uses: actions/checkout@v4
-#        with:
-#          persist-credentials: false
-#          fetch-depth: 0
-#          fetch-tags: true
-#      - name: "Prep git"
-#        run: |
-#          git config --local user.email "selenium-ci@users.noreply.github.com"
-#          git config --local user.name "Selenium CI Bot"
-#          if git rev-parse --verify release-${{ github.event.inputs.version }} >/dev/null 2>&1; then
-#          git branch -D release-${{ github.event.inputs.version }}
-#          fi
-#          git checkout -b release-${{ github.event.inputs.version }}
-#      - name: Update Rust Version
-#        run: |
-#          ./go rust:version
-#          ./go rust:version:commit
-#      - name: Push changes
-#        uses: ad-m/github-push-action@master
-#        with:
-#          github_token: ${{ secrets.SELENIUM_CI_TOKEN }}
-#          branch: release-${{ github.event.inputs.version }}
-#          force: true
-#
-#  selenium-manager:
-#    name: Release Selenium Manager
-#    needs: update-rust
-#    uses: ./.github/workflows/ci-rust.yml
-#    with:
-#        release: true
-#        branch: release-${{ github.event.inputs.version }}
-#    secrets:
-#      SELENIUM_CI_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
+  update-rust:
+    name: Update Rust Version
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout repo"
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+          fetch-tags: true
+      - name: "Prep git"
+        run: |
+          git config --local user.email "selenium-ci@users.noreply.github.com"
+          git config --local user.name "Selenium CI Bot"
+          if git rev-parse --verify release-${{ github.event.inputs.version }} >/dev/null 2>&1; then
+          git branch -D release-${{ github.event.inputs.version }}
+          fi
+          git checkout -b release-${{ github.event.inputs.version }}
+      - name: Update Rust Version
+        run: |
+          ./go rust:version
+          ./go rust:version:commit
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.SELENIUM_CI_TOKEN }}
+          branch: release-${{ github.event.inputs.version }}
+          force: true
+
+  selenium-manager:
+    name: Release Selenium Manager
+    needs: update-rust
+    uses: ./.github/workflows/ci-rust.yml
+    with:
+        release: true
+        branch: release-${{ github.event.inputs.version }}
+    secrets:
+      SELENIUM_CI_TOKEN: ${{ secrets.SELENIUM_CI_TOKEN }}
 
   update-files:
     name: Update Files
     runs-on: ubuntu-latest
-#    needs: selenium-manager
+    needs: selenium-manager
     steps:
     - name: "Checkout project"
       uses: actions/checkout@v4

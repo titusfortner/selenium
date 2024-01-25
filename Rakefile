@@ -996,7 +996,7 @@ namespace :rust do
   namespace :version do
     # Creating a special task for this because Rust version needs to be managed at a different place than
     # everything else; want to save changelog updates until later
-    desc 'Commits updates from Rust version changes and stashes changelog'
+    desc 'Commits updates from Rust version changes'
     task :commit do
       @git.reset
       # branch = @git.branch
@@ -1102,7 +1102,6 @@ namespace :all do
     Rake::Task['copyright:update'].invoke
     commit!('Update copyright notice on files', all: true)
 
-    @git.branch.stashes.apply
     Rake::Task['all:version'].invoke
     commit!("FIX CHANGELOGS BEFORE MERGING!\n\nUpdate versions and change logs to release Selenium #{java_version}",
             all: true)
