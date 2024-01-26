@@ -1,3 +1,15 @@
+## 4.18.0
+
+>>> [js] Fix running the casting related methods in chromium (#13479)
+Casting methods call "this.schedule", but it does not exist in the class. Updating the methods to actually execute the commands.
+>>> [js] Enabling virtual authenticator tests for Firefox
+@whimboo mentioned this is supported now
+>>> [bidi] Add browsing context destroyed event
+>>> [bidi][js] Add test for basic auth network event
+>>> [bidi] [js] Add realm destroyed event
+>>> [build] update version in package-lock for node
+>>> Update supported versions for Chrome DevTools
+
 ## 4.17.0
 
 * Add javascript to Selenium Manager input for tracking (see #13288)
