@@ -20,8 +20,13 @@ jobs:
         id: extract_version
         run: |
           BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
-          VERSION="${BASH_REMATCH[1]}"
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          if [[ "$BRANCH_NAME" =~ ([0-9]+\.[0-9]+\.[0-9]+) ]]; then
+            VERSION="${BASH_REMATCH[1]}"
+            echo "VERSION=$VERSION" >> $GITHUB_ENV
+          else
+            echo "No version found in branch name"
+            exit 1
+          fi
       - name: Setup Java
         uses: actions/setup-java@v3
         with:
