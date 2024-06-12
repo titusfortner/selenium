@@ -8,7 +8,7 @@ jobs:
   generate-packages:
     if: >
       github.event.pull_request.merged == true &&
-      startsWith(github.event.pull_request.base.ref, 'release-preparation-')
+      startsWith(github.event.pull_request.head.ref, 'release-preparation-')
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
@@ -16,7 +16,7 @@ jobs:
       - name: Extract version from branch name
         id: extract_version
         run: |
-          BRANCH_NAME="${{ github.event.pull_request.base.ref }}"
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
           VERSION="${BASH_REMATCH[1]}"
           echo "VERSION=$VERSION" >> $GITHUB_ENV
       - name: Setup Java
