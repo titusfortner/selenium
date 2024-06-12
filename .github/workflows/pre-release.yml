@@ -65,7 +65,14 @@ jobs:
           persist-credentials: false
           fetch-depth: 0
           fetch-tags: true
-          ref: release-${{ github.event.inputs.version }}
+      - name: "Prep git"
+        run: |
+          git config --local user.email "selenium-ci@users.noreply.github.com"
+          git config --local user.name "Selenium CI Bot"
+          if git rev-parse --verify release-${{ github.event.inputs.version }} >/dev/null 2>&1; then
+          git branch -D release-${{ github.event.inputs.version }}
+          fi
+          git checkout -b release-${{ github.event.inputs.version }}
       - name: Install Ruby
         uses: ruby/setup-ruby@d5fb7a202fc07872cb44f00ba8e6197b70cb0c55
         with:
