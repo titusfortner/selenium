@@ -74,6 +74,8 @@ jobs:
           fi
           git checkout -b release-${{ github.event.inputs.version }}
           git push origin release-${{ github.event.inputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use the GITHUB_TOKEN for authentication
       - name: Install Ruby
         uses: ruby/setup-ruby@d5fb7a202fc07872cb44f00ba8e6197b70cb0c55
         with:
