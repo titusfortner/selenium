@@ -479,7 +479,7 @@ namespace :node do
 
   desc 'Build Node npm package'
   task :build, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Bazel.execute('build', args, '//javascript/node/selenium-webdriver')
   end
 
@@ -546,7 +546,7 @@ end
 namespace :py do
   desc 'Build Python wheel and sdist with optional arguments'
   task :build, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Bazel.execute('build', args, '//py:selenium-wheel')
     Bazel.execute('build', args, '//py:selenium-sdist')
   end
@@ -781,7 +781,7 @@ end
 namespace :dotnet do
   desc 'Build nupkg files'
   task :build, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Bazel.execute('build', args, '//dotnet:all')
   end
 
@@ -880,13 +880,13 @@ end
 namespace :java do
   desc 'Build Java Client Jars'
   task :build, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Bazel.execute('build', args, '//java/src/org/openqa/selenium:client-combined')
   end
 
   desc 'Build Grid Jar'
   task :grid, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Bazel.execute('build', args, '//java/src/org/openqa/selenium/grid:grid')
   end
 
@@ -988,7 +988,7 @@ end
 namespace :rust do
   desc 'Build Selenium Manager'
   task :build, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Bazel.execute('build', args, '//rust:selenium-manager')
   end
 
@@ -1056,11 +1056,21 @@ namespace :all do
 
   desc 'Build all artifacts for all language bindings'
   task :build, [:args] do |_task, arguments|
-    args = Array(arguments[:args]) || []
+    args = Array(arguments[:args])
     Rake::Task['java:build'].invoke(args)
     Rake::Task['py:build'].invoke(args)
     Rake::Task['rb:build'].invoke(args)
     Rake::Task['dotnet:build'].invoke(args)
+    Rake::Task['node:build'].invoke(args)
+  end
+
+  desc 'Package or build stamped artifacts for all language bindings'
+  task :package, [:args] do |_task, arguments|
+    args = Array(arguments[:args] || ['--stamp'])
+    Rake::Task['java:package'].invoke(args)
+    Rake::Task['dotnet:package'].invoke(args)
+    Rake::Task['py:build'].invoke(args)
+    Rake::Task['rb:build'].invoke(args)
     Rake::Task['node:build'].invoke(args)
   end
 

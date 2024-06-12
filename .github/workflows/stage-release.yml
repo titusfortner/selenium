@@ -1,4 +1,4 @@
-name: Stage Release
+name: Release Staging
 
 on:
   pull_request:
@@ -27,16 +27,8 @@ jobs:
         with:
           java-version: 17
           distribution: 'temurin'
-      - name: Stage Java packages
-        run: ./go java:package['--config=release']
-      - name: Stage .NET packages
-        run: ./go dotnet:package['--config=release']
-      - name: Build Ruby
-        run: ./go rb:build['--config=release']
-      - name: Build Python
-        run: ./go py:build['--config=release']
-      - name: Build Node
-        run: ./go node:build['--config=release']
+      - name: Build and Stage Packages
+        run: ./go all:package
       - name: "Upload releases"
         uses: actions/upload-artifact@v4
         with:
