@@ -145,7 +145,7 @@ jobs:
     with:
       name: Nightly Grid Release
       cache-key: grid-nightly
-      run: ./go java:package[--config=release]
+      run: ./go java:package
       nightly-release-files: build/dist/*.*
   on-grid-failure:
     name: On Grid Failure
