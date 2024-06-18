@@ -27,6 +27,20 @@ jobs:
         with:
           java-version: 17
           distribution: 'temurin'
+      - name: Set up Python 3.8
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install tox
+      - name: Install specific version of DocFX tool
+        run: |
+          dotnet tool uninstall --global docfx
+          dotnet tool install --global --version 2.75.3 docfx
+      - name: Install npm dependencies
+        run: npm install --prefix javascript/node/selenium-webdriver
       - name: Build and Stage Packages
         run: ./go all:package
       - name: Prep git

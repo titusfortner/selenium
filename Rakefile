@@ -463,7 +463,7 @@ namespace :node do
       sh 'npm run generate-docs --prefix javascript/node/selenium-webdriver || true', verbose: true
     rescue StandardError
       puts 'Ensure that npm is installed on your system'
-      raise
+      raise unless arguments[:skip_update]
     end
 
     update_gh_pages unless arguments[:skip_update]
@@ -557,7 +557,7 @@ namespace :py do
       sh 'tox -c py/tox.ini -e docs', verbose: true
     rescue StandardError
       puts 'Ensure that tox is installed on your system'
-      raise
+      raise unless arguments[:skip_update]
     end
 
     update_gh_pages unless arguments[:skip_update]
@@ -785,7 +785,7 @@ namespace :dotnet do
       # sh 'dotnet tool update -g docfx'
     rescue StandardError
       puts 'Please ensure that .NET SDK is installed.'
-      raise
+      raise unless arguments[:skip_update]
     end
 
     begin
