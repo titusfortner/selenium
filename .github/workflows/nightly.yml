@@ -21,6 +21,10 @@ on:
           - grid
           - dotnet
           - javascript
+  workflow_run:
+    workflows: ["Release Staging"]
+    types:
+      - completed
 
 jobs:
   ruby:
@@ -139,7 +143,10 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   grid:
-    if: (github.repository_owner == 'seleniumhq') && (inputs.language == 'grid' || github.event_name == 'schedule')
+    if: |
+      github.repository_owner == 'seleniumhq' &&
+      (inputs.language == 'grid' || github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'))
     name: Grid
     uses: ./.github/workflows/bazel.yml
     with:
