@@ -37,7 +37,6 @@ jobs:
           pip install tox
       - name: Install specific version of DocFX tool
         run: |
-          dotnet tool uninstall --global docfx
           dotnet tool install --global --version 2.75.3 docfx
       - name: Install npm dependencies
         run: npm install --prefix javascript/node/selenium-webdriver
