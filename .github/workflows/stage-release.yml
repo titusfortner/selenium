@@ -42,7 +42,7 @@ jobs:
           git fetch --tags
           git tag -d nightly || echo "Nightly tag not found"
           git tag nightly
-          git push origin refs/tags/nightly
+          git push origin refs/tags/nightly --force
       - name: Generate Draft Release
         uses: softprops/action-gh-release@v2
         with:
