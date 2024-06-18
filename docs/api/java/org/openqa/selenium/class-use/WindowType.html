@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../script.js"></script>
-<script type="text/javascript" src="../../../../script-dir/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../../script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-use-page">
@@ -61,6 +61,8 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="#org.openqa.selenium.remote">org.openqa.selenium.remote</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="#org.openqa.selenium.support.events">org.openqa.selenium.support.events</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 <section class="class-uses">
 <ul class="block-list">
@@ -117,7 +119,12 @@ the order they are declared.</div>
 <div class="col-second odd-row-color"><code><a href="../bidi/browsingcontext/BrowsingContext.html#%3Cinit%3E(org.openqa.selenium.WebDriver,org.openqa.selenium.WindowType,java.lang.String)" class="member-name-link">BrowsingContext</a><wbr>(<a href="../WebDriver.html" title="interface in org.openqa.selenium">WebDriver</a>&nbsp;driver,
  <a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a>&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;referenceContextId)</code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block"><span class="deprecated-label">Deprecated.</span></div>
+</div>
+<div class="col-first even-row-color"><code>&nbsp;</code></div>
+<div class="col-second even-row-color"><code><a href="../bidi/browsingcontext/CreateContextParameters.html#%3Cinit%3E(org.openqa.selenium.WindowType)" class="member-name-link">CreateContextParameters</a><wbr>(<a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a>&nbsp;type)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -135,6 +142,30 @@ the order they are declared.</div>
 <div class="col-first odd-row-color"><code>static <a href="../remote/CommandPayload.html" title="class in org.openqa.selenium.remote">CommandPayload</a></code></div>
 <div class="col-second odd-row-color"><span class="type-name-label">DriverCommand.</span><code><a href="../remote/DriverCommand.html#SWITCH_TO_NEW_WINDOW(org.openqa.selenium.WindowType)" class="member-name-link">SWITCH_TO_NEW_WINDOW</a><wbr>(<a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a>&nbsp;typeHint)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="org.openqa.selenium.support.events">
+<h2>Uses of <a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a> in <a href="../support/events/package-summary.html">org.openqa.selenium.support.events</a></h2>
+<div class="caption"><span>Methods in <a href="../support/events/package-summary.html">org.openqa.selenium.support.events</a> with parameters of type <a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a></span></div>
+<div class="summary-table three-column-summary">
+<div class="table-header col-first">Modifier and Type</div>
+<div class="table-header col-second">Method</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><code>default void</code></div>
+<div class="col-second even-row-color"><span class="type-name-label">WebDriverListener.</span><code><a href="../support/events/WebDriverListener.html#afterNewWindow(org.openqa.selenium.WebDriver.TargetLocator,org.openqa.selenium.WindowType,org.openqa.selenium.WebDriver)" class="member-name-link">afterNewWindow</a><wbr>(<a href="../WebDriver.TargetLocator.html" title="interface in org.openqa.selenium">WebDriver.TargetLocator</a>&nbsp;targetLocator,
+ <a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a>&nbsp;typeHint,
+ <a href="../WebDriver.html" title="interface in org.openqa.selenium">WebDriver</a>&nbsp;driver)</code></div>
+<div class="col-last even-row-color">
+<div class="block">This action will be performed each time after <a href="../WebDriver.TargetLocator.html#newWindow(org.openqa.selenium.WindowType)"><code>WebDriver.TargetLocator.newWindow(WindowType)</code></a> is called.</div>
+</div>
+<div class="col-first odd-row-color"><code>default void</code></div>
+<div class="col-second odd-row-color"><span class="type-name-label">WebDriverListener.</span><code><a href="../support/events/WebDriverListener.html#beforeNewWindow(org.openqa.selenium.WebDriver.TargetLocator,org.openqa.selenium.WindowType)" class="member-name-link">beforeNewWindow</a><wbr>(<a href="../WebDriver.TargetLocator.html" title="interface in org.openqa.selenium">WebDriver.TargetLocator</a>&nbsp;targetLocator,
+ <a href="../WindowType.html" title="enum class in org.openqa.selenium">WindowType</a>&nbsp;typeHint)</code></div>
+<div class="col-last odd-row-color">
+<div class="block">This action will be performed each time before <a href="../WebDriver.TargetLocator.html#newWindow(org.openqa.selenium.WindowType)"><code>WebDriver.TargetLocator.newWindow(WindowType)</code></a> is called.</div>
+</div>
 </div>
 </section>
 </li>

@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -81,8 +81,14 @@ loadScripts(document, 'script');</script>
 <dd><a href="LocateNodeParameters.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters</a></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public static class </span><span class="element-name type-name-label">LocateNodeParameters.Builder</span>
+<div class="type-signature"><span class="annotations"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html" title="class or interface in java.lang" class="external-link">@Deprecated</a>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#since()" title="class or interface in java.lang" class="external-link">since</a>="4.20",
+            <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Deprecated.html#forRemoval()" title="class or interface in java.lang" class="external-link">forRemoval</a>=true)
+</span><span class="modifiers">public static class </span><span class="element-name type-name-label">LocateNodeParameters.Builder</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span>
+<div class="deprecation-comment">Use the chaining of LocateNodeParameters methods to add optional parameters. This
+     is in favor of keeping the usage pattern consistent for BiDi parameters. Use the <a href="LocateNodeParameters.html#%3Cinit%3E(org.openqa.selenium.bidi.browsingcontext.Locator)"><code>LocateNodeParameters(Locator locator)</code></a> constructor and chain methods.</div>
+</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -95,7 +101,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.openqa.selenium.bidi.browsingcontext.Locator)" class="member-name-link">Builder</a><wbr>(<a href="Locator.html" title="class in org.openqa.selenium.bidi.browsingcontext">Locator</a>&nbsp;locator)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
+&nbsp;</div>
 </div>
 </section>
 </li>
@@ -104,30 +112,37 @@ loadScripts(document, 'script');</script>
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button><button id="method-summary-table-tab6" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab6', 3)" class="table-tab">Deprecated Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel">
 <div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocateNodeParameters.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMaxNodeCount(long)" class="member-name-link">setMaxNodeCount</a><wbr>(long&nbsp;maxNodeCount)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setOwnership(org.openqa.selenium.bidi.script.ResultOwnership)" class="member-name-link">setOwnership</a><wbr>(<a href="../script/ResultOwnership.html" title="enum class in org.openqa.selenium.bidi.script">ResultOwnership</a>&nbsp;ownership)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSandbox(java.lang.String)" class="member-name-link">setSandbox</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sandbox)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSerializationOptions(org.openqa.selenium.bidi.script.SerializationOptions)" class="member-name-link">setSerializationOptions</a><wbr>(<a href="../script/SerializationOptions.html" title="class in org.openqa.selenium.bidi.script">SerializationOptions</a>&nbsp;options)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStartNodes(java.util.List)" class="member-name-link">setStartNodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../script/RemoteReference.html" title="class in org.openqa.selenium.bidi.script">RemoteReference</a>&gt;&nbsp;startNodes)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="LocateNodeParameters.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setMaxNodeCount(long)" class="member-name-link">setMaxNodeCount</a><wbr>(long&nbsp;maxNodeCount)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setSandbox(java.lang.String)" class="member-name-link">setSandbox</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sandbox)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
+&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setSerializationOptions(org.openqa.selenium.bidi.script.SerializationOptions)" class="member-name-link">setSerializationOptions</a><wbr>(<a href="../script/SerializationOptions.html" title="class in org.openqa.selenium.bidi.script">SerializationOptions</a>&nbsp;options)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
+&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6"><code><a href="#setStartNodes(java.util.List)" class="member-name-link">setStartNodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../script/RemoteReference.html" title="class in org.openqa.selenium.bidi.script">RemoteReference</a>&gt;&nbsp;startNodes)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4 method-summary-table-tab6">
+<div class="block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
+&nbsp;</div>
 </div>
 </div>
 </div>
@@ -149,6 +164,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(org.openqa.selenium.bidi.browsingcontext.Locator)">
 <h3>Builder</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Builder</span><wbr><span class="parameters">(<a href="Locator.html" title="class in org.openqa.selenium.bidi.browsingcontext">Locator</a>&nbsp;locator)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 </ul>
@@ -163,36 +179,35 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setMaxNodeCount(long)">
 <h3>setMaxNodeCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></span>&nbsp;<span class="element-name">setMaxNodeCount</span><wbr><span class="parameters">(long&nbsp;maxNodeCount)</span></div>
-</section>
-</li>
-<li>
-<section class="detail" id="setOwnership(org.openqa.selenium.bidi.script.ResultOwnership)">
-<h3>setOwnership</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></span>&nbsp;<span class="element-name">setOwnership</span><wbr><span class="parameters">(<a href="../script/ResultOwnership.html" title="enum class in org.openqa.selenium.bidi.script">ResultOwnership</a>&nbsp;ownership)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSandbox(java.lang.String)">
 <h3>setSandbox</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></span>&nbsp;<span class="element-name">setSandbox</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sandbox)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setSerializationOptions(org.openqa.selenium.bidi.script.SerializationOptions)">
 <h3>setSerializationOptions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></span>&nbsp;<span class="element-name">setSerializationOptions</span><wbr><span class="parameters">(<a href="../script/SerializationOptions.html" title="class in org.openqa.selenium.bidi.script">SerializationOptions</a>&nbsp;options)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="setStartNodes(java.util.List)">
 <h3>setStartNodes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocateNodeParameters.Builder.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters.Builder</a></span>&nbsp;<span class="element-name">setStartNodes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../script/RemoteReference.html" title="class in org.openqa.selenium.bidi.script">RemoteReference</a>&gt;&nbsp;startNodes)</span></div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 <li>
 <section class="detail" id="build()">
 <h3>build</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LocateNodeParameters.html" title="class in org.openqa.selenium.bidi.browsingcontext">LocateNodeParameters</a></span>&nbsp;<span class="element-name">build</span>()</div>
+<div class="deprecation-block"><span class="deprecated-label">Deprecated, for removal: This API element is subject to removal in a future version.</span></div>
 </section>
 </li>
 </ul>
