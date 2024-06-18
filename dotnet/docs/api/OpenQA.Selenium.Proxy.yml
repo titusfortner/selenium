@@ -1,0 +1,1562 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Proxy
+  commentId: T:OpenQA.Selenium.Proxy
+  id: Proxy
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.Proxy.#ctor
+  - OpenQA.Selenium.Proxy.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.Proxy.AddBypassAddress(System.String)
+  - OpenQA.Selenium.Proxy.AddBypassAddresses(System.Collections.Generic.IEnumerable{System.String})
+  - OpenQA.Selenium.Proxy.AddBypassAddresses(System.String[])
+  - OpenQA.Selenium.Proxy.BypassProxyAddresses
+  - OpenQA.Selenium.Proxy.FtpProxy
+  - OpenQA.Selenium.Proxy.HttpProxy
+  - OpenQA.Selenium.Proxy.IsAutoDetect
+  - OpenQA.Selenium.Proxy.Kind
+  - OpenQA.Selenium.Proxy.ProxyAutoConfigUrl
+  - OpenQA.Selenium.Proxy.SerializableProxyKind
+  - OpenQA.Selenium.Proxy.SocksPassword
+  - OpenQA.Selenium.Proxy.SocksProxy
+  - OpenQA.Selenium.Proxy.SocksUserName
+  - OpenQA.Selenium.Proxy.SocksVersion
+  - OpenQA.Selenium.Proxy.SslProxy
+  langs:
+  - csharp
+  - vb
+  name: Proxy
+  nameWithType: Proxy
+  fullName: OpenQA.Selenium.Proxy
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Proxy
+    path: ../src/webdriver/Proxy.cs
+    startLine: 69
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Describes proxy settings to be used with a driver instance.
+  example: []
+  syntax:
+    content: >-
+      [JsonObject(MemberSerialization.OptIn)]
+
+      public class Proxy
+    content.vb: >-
+      <JsonObject(MemberSerialization.OptIn)>
+
+      Public Class Proxy
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor(Newtonsoft.Json.MemberSerialization)
+    arguments:
+    - type: Newtonsoft.Json.MemberSerialization
+      value: 1
+- uid: OpenQA.Selenium.Proxy.#ctor
+  commentId: M:OpenQA.Selenium.Proxy.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: Proxy()
+  nameWithType: Proxy.Proxy()
+  fullName: OpenQA.Selenium.Proxy.Proxy()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Proxy.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Proxy" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Proxy()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Proxy.#ctor*
+  nameWithType.vb: Proxy.New()
+  fullName.vb: OpenQA.Selenium.Proxy.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Proxy.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.Proxy.#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: '#ctor(System.Collections.Generic.Dictionary{System.String,System.Object})'
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: Proxy(Dictionary<string, object>)
+  nameWithType: Proxy.Proxy(Dictionary<string, object>)
+  fullName: OpenQA.Selenium.Proxy.Proxy(System.Collections.Generic.Dictionary<string, object>)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Proxy.cs
+    startLine: 95
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Proxy" data-throw-if-not-resolved="false"></xref> class with the given proxy settings.
+  example: []
+  syntax:
+    content: public Proxy(Dictionary<string, object> settings)
+    parameters:
+    - id: settings
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: A dictionary of settings to use with the proxy.
+    content.vb: Public Sub New(settings As Dictionary(Of String, Object))
+  overload: OpenQA.Selenium.Proxy.#ctor*
+  nameWithType.vb: Proxy.New(Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.Proxy.New(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: New(Dictionary(Of String, Object))
+- uid: OpenQA.Selenium.Proxy.Kind
+  commentId: P:OpenQA.Selenium.Proxy.Kind
+  id: Kind
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: Kind
+  nameWithType: Proxy.Kind
+  fullName: OpenQA.Selenium.Proxy.Kind
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Kind
+    path: ../src/webdriver/Proxy.cs
+    startLine: 188
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the type of proxy.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public ProxyKind Kind { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.ProxyKind
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property Kind As ProxyKind
+  overload: OpenQA.Selenium.Proxy.Kind*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.Proxy.SerializableProxyKind
+  commentId: P:OpenQA.Selenium.Proxy.SerializableProxyKind
+  id: SerializableProxyKind
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: SerializableProxyKind
+  nameWithType: Proxy.SerializableProxyKind
+  fullName: OpenQA.Selenium.Proxy.SerializableProxyKind
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SerializableProxyKind
+    path: ../src/webdriver/Proxy.cs
+    startLine: 206
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the type of proxy as a string for JSON serialization.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("proxyType")]
+
+      public string SerializableProxyKind { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("proxyType")>
+
+      Public ReadOnly Property SerializableProxyKind As String
+  overload: OpenQA.Selenium.Proxy.SerializableProxyKind*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: proxyType
+- uid: OpenQA.Selenium.Proxy.IsAutoDetect
+  commentId: P:OpenQA.Selenium.Proxy.IsAutoDetect
+  id: IsAutoDetect
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: IsAutoDetect
+  nameWithType: Proxy.IsAutoDetect
+  fullName: OpenQA.Selenium.Proxy.IsAutoDetect
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsAutoDetect
+    path: ../src/webdriver/Proxy.cs
+    startLine: 223
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets a value indicating whether the proxy uses automatic detection.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public bool IsAutoDetect { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property IsAutoDetect As Boolean
+  overload: OpenQA.Selenium.Proxy.IsAutoDetect*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.Proxy.FtpProxy
+  commentId: P:OpenQA.Selenium.Proxy.FtpProxy
+  id: FtpProxy
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: FtpProxy
+  nameWithType: Proxy.FtpProxy
+  fullName: OpenQA.Selenium.Proxy.FtpProxy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FtpProxy
+    path: ../src/webdriver/Proxy.cs
+    startLine: 247
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the value of the proxy for the FTP protocol.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("ftpProxy", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string FtpProxy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("ftpProxy", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property FtpProxy As String
+  overload: OpenQA.Selenium.Proxy.FtpProxy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ftpProxy
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.HttpProxy
+  commentId: P:OpenQA.Selenium.Proxy.HttpProxy
+  id: HttpProxy
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: HttpProxy
+  nameWithType: Proxy.HttpProxy
+  fullName: OpenQA.Selenium.Proxy.HttpProxy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HttpProxy
+    path: ../src/webdriver/Proxy.cs
+    startLine: 266
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the value of the proxy for the HTTP protocol.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("httpProxy", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string HttpProxy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("httpProxy", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property HttpProxy As String
+  overload: OpenQA.Selenium.Proxy.HttpProxy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: httpProxy
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.BypassProxyAddresses
+  commentId: P:OpenQA.Selenium.Proxy.BypassProxyAddresses
+  id: BypassProxyAddresses
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: BypassProxyAddresses
+  nameWithType: Proxy.BypassProxyAddresses
+  fullName: OpenQA.Selenium.Proxy.BypassProxyAddresses
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BypassProxyAddresses
+    path: ../src/webdriver/Proxy.cs
+    startLine: 285
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the list of address for which to bypass the proxy as an array.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("noProxy", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public ReadOnlyCollection<string> BypassProxyAddresses { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+    content.vb: >-
+      <JsonProperty("noProxy", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public ReadOnly Property BypassProxyAddresses As ReadOnlyCollection(Of String)
+  overload: OpenQA.Selenium.Proxy.BypassProxyAddresses*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: noProxy
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.ProxyAutoConfigUrl
+  commentId: P:OpenQA.Selenium.Proxy.ProxyAutoConfigUrl
+  id: ProxyAutoConfigUrl
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: ProxyAutoConfigUrl
+  nameWithType: Proxy.ProxyAutoConfigUrl
+  fullName: OpenQA.Selenium.Proxy.ProxyAutoConfigUrl
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ProxyAutoConfigUrl
+    path: ../src/webdriver/Proxy.cs
+    startLine: 302
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the URL used for proxy automatic configuration.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("proxyAutoconfigUrl", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string ProxyAutoConfigUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("proxyAutoconfigUrl", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property ProxyAutoConfigUrl As String
+  overload: OpenQA.Selenium.Proxy.ProxyAutoConfigUrl*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: proxyAutoconfigUrl
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.SslProxy
+  commentId: P:OpenQA.Selenium.Proxy.SslProxy
+  id: SslProxy
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: SslProxy
+  nameWithType: Proxy.SslProxy
+  fullName: OpenQA.Selenium.Proxy.SslProxy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SslProxy
+    path: ../src/webdriver/Proxy.cs
+    startLine: 321
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the value of the proxy for the SSL protocol.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sslProxy", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string SslProxy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("sslProxy", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property SslProxy As String
+  overload: OpenQA.Selenium.Proxy.SslProxy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sslProxy
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.SocksProxy
+  commentId: P:OpenQA.Selenium.Proxy.SocksProxy
+  id: SocksProxy
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: SocksProxy
+  nameWithType: Proxy.SocksProxy
+  fullName: OpenQA.Selenium.Proxy.SocksProxy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SocksProxy
+    path: ../src/webdriver/Proxy.cs
+    startLine: 340
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the value of the proxy for the SOCKS protocol.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("socksProxy", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string SocksProxy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("socksProxy", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property SocksProxy As String
+  overload: OpenQA.Selenium.Proxy.SocksProxy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: socksProxy
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.SocksUserName
+  commentId: P:OpenQA.Selenium.Proxy.SocksUserName
+  id: SocksUserName
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: SocksUserName
+  nameWithType: Proxy.SocksUserName
+  fullName: OpenQA.Selenium.Proxy.SocksUserName
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SocksUserName
+    path: ../src/webdriver/Proxy.cs
+    startLine: 359
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the value of username for the SOCKS proxy.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("socksUsername", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string SocksUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("socksUsername", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property SocksUserName As String
+  overload: OpenQA.Selenium.Proxy.SocksUserName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: socksUsername
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.SocksVersion
+  commentId: P:OpenQA.Selenium.Proxy.SocksVersion
+  id: SocksVersion
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: SocksVersion
+  nameWithType: Proxy.SocksVersion
+  fullName: OpenQA.Selenium.Proxy.SocksVersion
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SocksVersion
+    path: ../src/webdriver/Proxy.cs
+    startLine: 379
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the value of the protocol version for the SOCKS proxy.
+
+    Value can be <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if not set.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("socksVersion", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public int? SocksVersion { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: >-
+      <JsonProperty("socksVersion", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property SocksVersion As Integer?
+  overload: OpenQA.Selenium.Proxy.SocksVersion*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: socksVersion
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.SocksPassword
+  commentId: P:OpenQA.Selenium.Proxy.SocksPassword
+  id: SocksPassword
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: SocksPassword
+  nameWithType: Proxy.SocksPassword
+  fullName: OpenQA.Selenium.Proxy.SocksPassword
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SocksPassword
+    path: ../src/webdriver/Proxy.cs
+    startLine: 410
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the value of password for the SOCKS proxy.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("socksPassword", DefaultValueHandling = DefaultValueHandling.Ignore, NullValueHandling = NullValueHandling.Ignore)]
+
+      public string SocksPassword { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("socksPassword", DefaultValueHandling:=DefaultValueHandling.Ignore, NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Property SocksPassword As String
+  overload: OpenQA.Selenium.Proxy.SocksPassword*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: socksPassword
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Proxy.AddBypassAddress(System.String)
+  commentId: M:OpenQA.Selenium.Proxy.AddBypassAddress(System.String)
+  id: AddBypassAddress(System.String)
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: AddBypassAddress(string)
+  nameWithType: Proxy.AddBypassAddress(string)
+  fullName: OpenQA.Selenium.Proxy.AddBypassAddress(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddBypassAddress
+    path: ../src/webdriver/Proxy.cs
+    startLine: 430
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Adds a single address to the list of addresses against which the proxy will not be used.
+  example: []
+  syntax:
+    content: public void AddBypassAddress(string address)
+    parameters:
+    - id: address
+      type: System.String
+      description: The address to add.
+    content.vb: Public Sub AddBypassAddress(address As String)
+  overload: OpenQA.Selenium.Proxy.AddBypassAddress*
+  nameWithType.vb: Proxy.AddBypassAddress(String)
+  fullName.vb: OpenQA.Selenium.Proxy.AddBypassAddress(String)
+  name.vb: AddBypassAddress(String)
+- uid: OpenQA.Selenium.Proxy.AddBypassAddresses(System.String[])
+  commentId: M:OpenQA.Selenium.Proxy.AddBypassAddresses(System.String[])
+  id: AddBypassAddresses(System.String[])
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: AddBypassAddresses(params string[])
+  nameWithType: Proxy.AddBypassAddresses(params string[])
+  fullName: OpenQA.Selenium.Proxy.AddBypassAddresses(params string[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddBypassAddresses
+    path: ../src/webdriver/Proxy.cs
+    startLine: 444
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Adds addresses to the list of addresses against which the proxy will not be used.
+  example: []
+  syntax:
+    content: public void AddBypassAddresses(params string[] addressesToAdd)
+    parameters:
+    - id: addressesToAdd
+      type: System.String[]
+      description: An array of addresses to add.
+    content.vb: Public Sub AddBypassAddresses(ParamArray addressesToAdd As String())
+  overload: OpenQA.Selenium.Proxy.AddBypassAddresses*
+  nameWithType.vb: Proxy.AddBypassAddresses(ParamArray String())
+  fullName.vb: OpenQA.Selenium.Proxy.AddBypassAddresses(ParamArray String())
+  name.vb: AddBypassAddresses(ParamArray String())
+- uid: OpenQA.Selenium.Proxy.AddBypassAddresses(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:OpenQA.Selenium.Proxy.AddBypassAddresses(System.Collections.Generic.IEnumerable{System.String})
+  id: AddBypassAddresses(System.Collections.Generic.IEnumerable{System.String})
+  parent: OpenQA.Selenium.Proxy
+  langs:
+  - csharp
+  - vb
+  name: AddBypassAddresses(IEnumerable<string>)
+  nameWithType: Proxy.AddBypassAddresses(IEnumerable<string>)
+  fullName: OpenQA.Selenium.Proxy.AddBypassAddresses(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddBypassAddresses
+    path: ../src/webdriver/Proxy.cs
+    startLine: 453
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Adds addresses to the list of addresses against which the proxy will not be used.
+  example: []
+  syntax:
+    content: public void AddBypassAddresses(IEnumerable<string> addressesToAdd)
+    parameters:
+    - id: addressesToAdd
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: An <xref href="System.Collections.Generic.IEnumerable%601" data-throw-if-not-resolved="false"></xref> object of arguments to add.
+    content.vb: Public Sub AddBypassAddresses(addressesToAdd As IEnumerable(Of String))
+  overload: OpenQA.Selenium.Proxy.AddBypassAddresses*
+  nameWithType.vb: Proxy.AddBypassAddresses(IEnumerable(Of String))
+  fullName.vb: OpenQA.Selenium.Proxy.AddBypassAddresses(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: AddBypassAddresses(IEnumerable(Of String))
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Proxy
+  commentId: T:OpenQA.Selenium.Proxy
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Proxy.html
+  name: Proxy
+  nameWithType: Proxy
+  fullName: OpenQA.Selenium.Proxy
+- uid: OpenQA.Selenium.Proxy.#ctor*
+  commentId: Overload:OpenQA.Selenium.Proxy.#ctor
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy__ctor
+  name: Proxy
+  nameWithType: Proxy.Proxy
+  fullName: OpenQA.Selenium.Proxy.Proxy
+  nameWithType.vb: Proxy.New
+  fullName.vb: OpenQA.Selenium.Proxy.New
+  name.vb: New
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.Proxy.Kind*
+  commentId: Overload:OpenQA.Selenium.Proxy.Kind
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_Kind
+  name: Kind
+  nameWithType: Proxy.Kind
+  fullName: OpenQA.Selenium.Proxy.Kind
+- uid: OpenQA.Selenium.ProxyKind
+  commentId: T:OpenQA.Selenium.ProxyKind
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ProxyKind.html
+  name: ProxyKind
+  nameWithType: ProxyKind
+  fullName: OpenQA.Selenium.ProxyKind
+- uid: OpenQA.Selenium.Proxy.SerializableProxyKind*
+  commentId: Overload:OpenQA.Selenium.Proxy.SerializableProxyKind
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_SerializableProxyKind
+  name: SerializableProxyKind
+  nameWithType: Proxy.SerializableProxyKind
+  fullName: OpenQA.Selenium.Proxy.SerializableProxyKind
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Proxy.IsAutoDetect*
+  commentId: Overload:OpenQA.Selenium.Proxy.IsAutoDetect
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_IsAutoDetect
+  name: IsAutoDetect
+  nameWithType: Proxy.IsAutoDetect
+  fullName: OpenQA.Selenium.Proxy.IsAutoDetect
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.Proxy.FtpProxy*
+  commentId: Overload:OpenQA.Selenium.Proxy.FtpProxy
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_FtpProxy
+  name: FtpProxy
+  nameWithType: Proxy.FtpProxy
+  fullName: OpenQA.Selenium.Proxy.FtpProxy
+- uid: OpenQA.Selenium.Proxy.HttpProxy*
+  commentId: Overload:OpenQA.Selenium.Proxy.HttpProxy
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_HttpProxy
+  name: HttpProxy
+  nameWithType: Proxy.HttpProxy
+  fullName: OpenQA.Selenium.Proxy.HttpProxy
+- uid: OpenQA.Selenium.Proxy.BypassProxyAddresses*
+  commentId: Overload:OpenQA.Selenium.Proxy.BypassProxyAddresses
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_BypassProxyAddresses
+  name: BypassProxyAddresses
+  nameWithType: Proxy.BypassProxyAddresses
+  fullName: OpenQA.Selenium.Proxy.BypassProxyAddresses
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<string>
+  nameWithType: ReadOnlyCollection<string>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<string>
+  nameWithType.vb: ReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of String)
+  name.vb: ReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: OpenQA.Selenium.Proxy.ProxyAutoConfigUrl*
+  commentId: Overload:OpenQA.Selenium.Proxy.ProxyAutoConfigUrl
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_ProxyAutoConfigUrl
+  name: ProxyAutoConfigUrl
+  nameWithType: Proxy.ProxyAutoConfigUrl
+  fullName: OpenQA.Selenium.Proxy.ProxyAutoConfigUrl
+- uid: OpenQA.Selenium.Proxy.SslProxy*
+  commentId: Overload:OpenQA.Selenium.Proxy.SslProxy
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_SslProxy
+  name: SslProxy
+  nameWithType: Proxy.SslProxy
+  fullName: OpenQA.Selenium.Proxy.SslProxy
+- uid: OpenQA.Selenium.Proxy.SocksProxy*
+  commentId: Overload:OpenQA.Selenium.Proxy.SocksProxy
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_SocksProxy
+  name: SocksProxy
+  nameWithType: Proxy.SocksProxy
+  fullName: OpenQA.Selenium.Proxy.SocksProxy
+- uid: OpenQA.Selenium.Proxy.SocksUserName*
+  commentId: Overload:OpenQA.Selenium.Proxy.SocksUserName
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_SocksUserName
+  name: SocksUserName
+  nameWithType: Proxy.SocksUserName
+  fullName: OpenQA.Selenium.Proxy.SocksUserName
+- uid: OpenQA.Selenium.Proxy.SocksVersion*
+  commentId: Overload:OpenQA.Selenium.Proxy.SocksVersion
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_SocksVersion
+  name: SocksVersion
+  nameWithType: Proxy.SocksVersion
+  fullName: OpenQA.Selenium.Proxy.SocksVersion
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Proxy.SocksPassword*
+  commentId: Overload:OpenQA.Selenium.Proxy.SocksPassword
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_SocksPassword
+  name: SocksPassword
+  nameWithType: Proxy.SocksPassword
+  fullName: OpenQA.Selenium.Proxy.SocksPassword
+- uid: OpenQA.Selenium.Proxy.AddBypassAddress*
+  commentId: Overload:OpenQA.Selenium.Proxy.AddBypassAddress
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_AddBypassAddress_System_String_
+  name: AddBypassAddress
+  nameWithType: Proxy.AddBypassAddress
+  fullName: OpenQA.Selenium.Proxy.AddBypassAddress
+- uid: OpenQA.Selenium.Proxy.AddBypassAddresses*
+  commentId: Overload:OpenQA.Selenium.Proxy.AddBypassAddresses
+  href: OpenQA.Selenium.Proxy.html#OpenQA_Selenium_Proxy_AddBypassAddresses_System_String___
+  name: AddBypassAddresses
+  nameWithType: Proxy.AddBypassAddresses
+  fullName: OpenQA.Selenium.Proxy.AddBypassAddresses
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )

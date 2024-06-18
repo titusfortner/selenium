@@ -1,0 +1,277 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  commentId: T:OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  id: StyleSheetOrigin
+  parent: OpenQA.Selenium.DevTools.V125.CSS
+  children:
+  - OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Injected
+  - OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Inspector
+  - OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Regular
+  - OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.UserAgent
+  langs:
+  - csharp
+  - vb
+  name: StyleSheetOrigin
+  nameWithType: StyleSheetOrigin
+  fullName: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StyleSheetOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+    startLine: 12
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.CSS
+  summary: >-
+    Stylesheet type: "injected" for stylesheets injected via extension, "user-agent" for user-agent
+
+    stylesheets, "inspector" for stylesheets created by the inspector (i.e. those holding the "via
+
+    inspector" rules), "regular" for regular stylesheets.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum StyleSheetOrigin
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum StyleSheetOrigin
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Injected
+  commentId: F:OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Injected
+  id: Injected
+  parent: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  langs:
+  - csharp
+  - vb
+  name: Injected
+  nameWithType: StyleSheetOrigin.Injected
+  fullName: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Injected
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Injected
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+    startLine: 18
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.CSS
+  summary: Enumerated member for the injected value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "injected")]
+
+      Injected = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+    content.vb: >-
+      <EnumMember(Value:="injected")>
+
+      Injected = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: injected
+- uid: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.UserAgent
+  commentId: F:OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.UserAgent
+  id: UserAgent
+  parent: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: StyleSheetOrigin.UserAgent
+  fullName: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.UserAgent
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserAgent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.CSS
+  summary: Enumerated member for the user-agent value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "user-agent")]
+
+      UserAgent = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+    content.vb: >-
+      <EnumMember(Value:="user-agent")>
+
+      UserAgent = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: user-agent
+- uid: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Inspector
+  commentId: F:OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Inspector
+  id: Inspector
+  parent: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  langs:
+  - csharp
+  - vb
+  name: Inspector
+  nameWithType: StyleSheetOrigin.Inspector
+  fullName: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Inspector
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Inspector
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+    startLine: 28
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.CSS
+  summary: Enumerated member for the inspector value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "inspector")]
+
+      Inspector = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+    content.vb: >-
+      <EnumMember(Value:="inspector")>
+
+      Inspector = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: inspector
+- uid: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Regular
+  commentId: F:OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Regular
+  id: Regular
+  parent: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  langs:
+  - csharp
+  - vb
+  name: Regular
+  nameWithType: StyleSheetOrigin.Regular
+  fullName: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.Regular
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Regular
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/CSS/StyleSheetOrigin.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.CSS
+  summary: Enumerated member for the regular value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "regular")]
+
+      Regular = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+    content.vb: >-
+      <EnumMember(Value:="regular")>
+
+      Regular = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: regular
+references:
+- uid: OpenQA.Selenium.DevTools.V125.CSS
+  commentId: N:OpenQA.Selenium.DevTools.V125.CSS
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.CSS
+  nameWithType: OpenQA.Selenium.DevTools.V125.CSS
+  fullName: OpenQA.Selenium.DevTools.V125.CSS
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V125.CSS.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V125.CSS.html
+- uid: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  commentId: T:OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin
+  parent: OpenQA.Selenium.DevTools.V125.CSS
+  href: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin.html
+  name: StyleSheetOrigin
+  nameWithType: StyleSheetOrigin
+  fullName: OpenQA.Selenium.DevTools.V125.CSS.StyleSheetOrigin

@@ -1,0 +1,823 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  id: DevToolsVersionInfo
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash
+  - OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl
+  langs:
+  - csharp
+  - vb
+  name: DevToolsVersionInfo
+  nameWithType: DevToolsVersionInfo
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DevToolsVersionInfo
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Provides information about the version of DevTools components being automated.
+  example: []
+  syntax:
+    content: public class DevToolsVersionInfo
+    content.vb: Public Class DevToolsVersionInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser
+  id: Browser
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: Browser
+  nameWithType: DevToolsVersionInfo.Browser
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Browser
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets or sets the browser name, usually expressed as "Browser/Version" (e.g., "Chrome/86.0.0.1234".
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "Browser")]
+
+      public string Browser { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty(PropertyName:="Browser")>
+
+      Public Property Browser As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: Browser
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion
+  id: BrowserVersion
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: BrowserVersion
+  nameWithType: DevToolsVersionInfo.BrowserVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BrowserVersion
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the browser version without the preceding browser name.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string BrowserVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property BrowserVersion As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion
+  id: BrowserMajorVersion
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: BrowserMajorVersion
+  nameWithType: DevToolsVersionInfo.BrowserMajorVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BrowserMajorVersion
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the browser major version number without the preceding browser name.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string BrowserMajorVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property BrowserMajorVersion As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion
+  id: ProtocolVersion
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: ProtocolVersion
+  nameWithType: DevToolsVersionInfo.ProtocolVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ProtocolVersion
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version of the Developer Tools Protocol.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "Protocol-Version")]
+
+      public string ProtocolVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty(PropertyName:="Protocol-Version")>
+
+      Public Property ProtocolVersion As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: Protocol-Version
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent
+  id: UserAgent
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: DevToolsVersionInfo.UserAgent
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserAgent
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the user agent string.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "User-Agent")]
+
+      public string UserAgent { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty(PropertyName:="User-Agent")>
+
+      Public Property UserAgent As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: User-Agent
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version
+  id: V8Version
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: V8Version
+  nameWithType: DevToolsVersionInfo.V8Version
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: V8Version
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version string for the V8 script engine in use by this version of the browser.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "V8-Version")]
+
+      public string V8Version { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty(PropertyName:="V8-Version")>
+
+      Public Property V8Version As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: V8-Version
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl
+  id: WebSocketDebuggerUrl
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: WebSocketDebuggerUrl
+  nameWithType: DevToolsVersionInfo.WebSocketDebuggerUrl
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WebSocketDebuggerUrl
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the URL for the WebSocket connection used for communicating via the DevTools Protocol.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "webSocketDebuggerUrl")]
+
+      public string WebSocketDebuggerUrl { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty(PropertyName:="webSocketDebuggerUrl")>
+
+      Public Property WebSocketDebuggerUrl As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: webSocketDebuggerUrl
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber
+  id: V8VersionNumber
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: V8VersionNumber
+  nameWithType: DevToolsVersionInfo.V8VersionNumber
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: V8VersionNumber
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version number of the V8 script engine, stripping values other than the version number.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string V8VersionNumber { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property V8VersionNumber As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion
+  id: WebKitVersion
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: WebKitVersion
+  nameWithType: DevToolsVersionInfo.WebKitVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WebKitVersion
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 98
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version string for the version of WebKit used to build this version of the browser.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty(PropertyName = "WebKit-Version")]
+
+      public string WebKitVersion { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty(PropertyName:="WebKit-Version")>
+
+      Public Property WebKitVersion As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: PropertyName
+      type: System.String
+      value: WebKit-Version
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash
+  id: WebKitVersionHash
+  parent: OpenQA.Selenium.DevTools.DevToolsVersionInfo
+  langs:
+  - csharp
+  - vb
+  name: WebKitVersionHash
+  nameWithType: DevToolsVersionInfo.WebKitVersionHash
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsVersionInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WebKitVersionHash
+    path: ../src/webdriver/DevTools/DevToolsVersionInfo.cs
+    startLine: 104
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the hash of the version of WebKit, stripping values other than the hash.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string WebKitVersionHash { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property WebKitVersionHash As String
+  overload: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_Browser
+  name: Browser
+  nameWithType: DevToolsVersionInfo.Browser
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.Browser
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_BrowserVersion
+  name: BrowserVersion
+  nameWithType: DevToolsVersionInfo.BrowserVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserVersion
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_BrowserMajorVersion
+  name: BrowserMajorVersion
+  nameWithType: DevToolsVersionInfo.BrowserMajorVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.BrowserMajorVersion
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_ProtocolVersion
+  name: ProtocolVersion
+  nameWithType: DevToolsVersionInfo.ProtocolVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.ProtocolVersion
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_UserAgent
+  name: UserAgent
+  nameWithType: DevToolsVersionInfo.UserAgent
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.UserAgent
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_V8Version
+  name: V8Version
+  nameWithType: DevToolsVersionInfo.V8Version
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8Version
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_WebSocketDebuggerUrl
+  name: WebSocketDebuggerUrl
+  nameWithType: DevToolsVersionInfo.WebSocketDebuggerUrl
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebSocketDebuggerUrl
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_V8VersionNumber
+  name: V8VersionNumber
+  nameWithType: DevToolsVersionInfo.V8VersionNumber
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.V8VersionNumber
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_WebKitVersion
+  name: WebKitVersion
+  nameWithType: DevToolsVersionInfo.WebKitVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersion
+- uid: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash
+  href: OpenQA.Selenium.DevTools.DevToolsVersionInfo.html#OpenQA_Selenium_DevTools_DevToolsVersionInfo_WebKitVersionHash
+  name: WebKitVersionHash
+  nameWithType: DevToolsVersionInfo.WebKitVersionHash
+  fullName: OpenQA.Selenium.DevTools.DevToolsVersionInfo.WebKitVersionHash

@@ -1,0 +1,696 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse
+  id: GetSnapshotCommandResponse
+  parent: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  children:
+  - OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles
+  - OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes
+  - OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes
+  langs:
+  - csharp
+  - vb
+  name: GetSnapshotCommandResponse
+  nameWithType: GetSnapshotCommandResponse
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetSnapshotCommandResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  summary: >-
+    Response for Returns a document snapshot, including the full DOM tree of the root node (including iframes,
+
+    template contents, and imported documents) in a flattened array, as well as layout and
+
+    white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
+
+    flattened.
+  example: []
+  syntax:
+    content: 'public sealed class GetSnapshotCommandResponse : ICommandResponse<GetSnapshotCommandSettings>, ICommandResponse'
+    content.vb: Public NotInheritable Class GetSnapshotCommandResponse Implements ICommandResponse(Of GetSnapshotCommandSettings), ICommandResponse
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings}
+  - OpenQA.Selenium.DevTools.ICommandResponse
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes
+  id: DomNodes
+  parent: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: DomNodes
+  nameWithType: GetSnapshotCommandResponse.DomNodes
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DomNodes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  summary: The nodes in the DOM tree. The DOMNode at index 0 corresponds to the root document.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("domNodes")]
+
+      public DOMNode[] DomNodes { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode[]
+    content.vb: >-
+      <JsonProperty("domNodes")>
+
+      Public Property DomNodes As DOMNode()
+  overload: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: domNodes
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes
+  id: LayoutTreeNodes
+  parent: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: LayoutTreeNodes
+  nameWithType: GetSnapshotCommandResponse.LayoutTreeNodes
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayoutTreeNodes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+    startLine: 82
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  summary: The nodes in the layout tree.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("layoutTreeNodes")]
+
+      public LayoutTreeNode[] LayoutTreeNodes { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode[]
+    content.vb: >-
+      <JsonProperty("layoutTreeNodes")>
+
+      Public Property LayoutTreeNodes As LayoutTreeNode()
+  overload: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: layoutTreeNodes
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles
+  id: ComputedStyles
+  parent: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: ComputedStyles
+  nameWithType: GetSnapshotCommandResponse.ComputedStyles
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ComputedStyles
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOMSnapshot/GetSnapshotCommand.cs
+    startLine: 91
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  summary: Whitelisted ComputedStyle properties for each node in the layout tree.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("computedStyles")]
+
+      public ComputedStyle[] ComputedStyles { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle[]
+    content.vb: >-
+      <JsonProperty("computedStyles")>
+
+      Public Property ComputedStyles As ComputedStyle()
+  overload: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: computedStyles
+references:
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  commentId: N:OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  nameWithType: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings}
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<GetSnapshotCommandSettings>
+  nameWithType: ICommandResponse<GetSnapshotCommandSettings>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings>
+  nameWithType.vb: ICommandResponse(Of GetSnapshotCommandSettings)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings)
+  name.vb: ICommandResponse(Of GetSnapshotCommandSettings)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings
+    name: GetSnapshotCommandSettings
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings
+    name: GetSnapshotCommandSettings
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandSettings.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  name: ICommandResponse
+  nameWithType: ICommandResponse
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  parent: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  definition: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<T>
+  nameWithType: ICommandResponse<T>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<T>
+  nameWithType.vb: ICommandResponse(Of T)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of T)
+  name.vb: ICommandResponse(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html
+  name: ICommandResponseExtensions
+  nameWithType: ICommandResponseExtensions
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes
+  href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.html#OpenQA_Selenium_DevTools_V125_DOMSnapshot_GetSnapshotCommandResponse_DomNodes
+  name: DomNodes
+  nameWithType: GetSnapshotCommandResponse.DomNodes
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.DomNodes
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode.html
+  name: DOMNode[]
+  nameWithType: DOMNode[]
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode[]
+  nameWithType.vb: DOMNode()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode()
+  name.vb: DOMNode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode
+    name: DOMNode
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode
+    name: DOMNode
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.DOMNode.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes
+  href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.html#OpenQA_Selenium_DevTools_V125_DOMSnapshot_GetSnapshotCommandResponse_LayoutTreeNodes
+  name: LayoutTreeNodes
+  nameWithType: GetSnapshotCommandResponse.LayoutTreeNodes
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.LayoutTreeNodes
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode.html
+  name: LayoutTreeNode[]
+  nameWithType: LayoutTreeNode[]
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode[]
+  nameWithType.vb: LayoutTreeNode()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode()
+  name.vb: LayoutTreeNode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode
+    name: LayoutTreeNode
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode
+    name: LayoutTreeNode
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.LayoutTreeNode.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles
+  href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.html#OpenQA_Selenium_DevTools_V125_DOMSnapshot_GetSnapshotCommandResponse_ComputedStyles
+  name: ComputedStyles
+  nameWithType: GetSnapshotCommandResponse.ComputedStyles
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.GetSnapshotCommandResponse.ComputedStyles
+- uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle.html
+  name: ComputedStyle[]
+  nameWithType: ComputedStyle[]
+  fullName: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle[]
+  nameWithType.vb: ComputedStyle()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle()
+  name.vb: ComputedStyle()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle
+    name: ComputedStyle
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle
+    name: ComputedStyle
+    href: OpenQA.Selenium.DevTools.V125.DOMSnapshot.ComputedStyle.html
+  - name: (
+  - name: )

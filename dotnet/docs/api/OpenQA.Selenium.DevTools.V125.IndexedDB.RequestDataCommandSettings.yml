@@ -1,0 +1,946 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  id: RequestDataCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB
+  children:
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket
+  - OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey
+  langs:
+  - csharp
+  - vb
+  name: RequestDataCommandSettings
+  nameWithType: RequestDataCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestDataCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Requests data from object store or index.
+  example: []
+  syntax:
+    content: 'public sealed class RequestDataCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class RequestDataCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: RequestDataCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 15
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin
+  id: SecurityOrigin
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: SecurityOrigin
+  nameWithType: RequestDataCommandSettings.SecurityOrigin
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: >-
+    At least and at most one of securityOrigin, storageKey, or storageBucket must be specified.
+
+    Security origin.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("securityOrigin", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string SecurityOrigin { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("securityOrigin", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SecurityOrigin As String
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: securityOrigin
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey
+  id: StorageKey
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: StorageKey
+  nameWithType: RequestDataCommandSettings.StorageKey
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StorageKey
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Storage key.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("storageKey", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string StorageKey { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("storageKey", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StorageKey As String
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: storageKey
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket
+  id: StorageBucket
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: StorageBucket
+  nameWithType: RequestDataCommandSettings.StorageBucket
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StorageBucket
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Storage bucket. If not specified, it uses the default bucket.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("storageBucket", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StorageBucket StorageBucket { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Storage.StorageBucket
+    content.vb: >-
+      <JsonProperty("storageBucket", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StorageBucket As StorageBucket
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: storageBucket
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName
+  id: DatabaseName
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: DatabaseName
+  nameWithType: RequestDataCommandSettings.DatabaseName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DatabaseName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Database name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("databaseName")]
+
+      public string DatabaseName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("databaseName")>
+
+      Public Property DatabaseName As String
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: databaseName
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName
+  id: ObjectStoreName
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ObjectStoreName
+  nameWithType: RequestDataCommandSettings.ObjectStoreName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ObjectStoreName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Object store name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("objectStoreName")]
+
+      public string ObjectStoreName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("objectStoreName")>
+
+      Public Property ObjectStoreName As String
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: objectStoreName
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName
+  id: IndexName
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: IndexName
+  nameWithType: RequestDataCommandSettings.IndexName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IndexName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 70
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Index name, empty string for object store data requests.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("indexName")]
+
+      public string IndexName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("indexName")>
+
+      Public Property IndexName As String
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: indexName
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount
+  id: SkipCount
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: SkipCount
+  nameWithType: RequestDataCommandSettings.SkipCount
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SkipCount
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 79
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Number of records to skip.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("skipCount")]
+
+      public long SkipCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("skipCount")>
+
+      Public Property SkipCount As Long
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: skipCount
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize
+  id: PageSize
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: PageSize
+  nameWithType: RequestDataCommandSettings.PageSize
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PageSize
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 88
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Number of records to fetch.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("pageSize")]
+
+      public long PageSize { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("pageSize")>
+
+      Public Property PageSize As Long
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pageSize
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange
+  commentId: P:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange
+  id: KeyRange
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: KeyRange
+  nameWithType: RequestDataCommandSettings.KeyRange
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: KeyRange
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/IndexedDB/RequestDataCommand.cs
+    startLine: 97
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.IndexedDB
+  summary: Key range.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("keyRange", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public KeyRange KeyRange { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.IndexedDB.KeyRange
+    content.vb: >-
+      <JsonProperty("keyRange", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property KeyRange As KeyRange
+  overload: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: keyRange
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB
+  commentId: N:OpenQA.Selenium.DevTools.V125.IndexedDB
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.IndexedDB
+  nameWithType: OpenQA.Selenium.DevTools.V125.IndexedDB
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.IndexedDB
+    name: IndexedDB
+    href: OpenQA.Selenium.DevTools.V125.IndexedDB.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.IndexedDB
+    name: IndexedDB
+    href: OpenQA.Selenium.DevTools.V125.IndexedDB.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_CommandName
+  name: CommandName
+  nameWithType: RequestDataCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_SecurityOrigin
+  name: SecurityOrigin
+  nameWithType: RequestDataCommandSettings.SecurityOrigin
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SecurityOrigin
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_StorageKey
+  name: StorageKey
+  nameWithType: RequestDataCommandSettings.StorageKey
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageKey
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_StorageBucket
+  name: StorageBucket
+  nameWithType: RequestDataCommandSettings.StorageBucket
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.StorageBucket
+- uid: OpenQA.Selenium.DevTools.V125.Storage.StorageBucket
+  commentId: T:OpenQA.Selenium.DevTools.V125.Storage.StorageBucket
+  parent: OpenQA.Selenium.DevTools.V125.Storage
+  href: OpenQA.Selenium.DevTools.V125.Storage.StorageBucket.html
+  name: StorageBucket
+  nameWithType: StorageBucket
+  fullName: OpenQA.Selenium.DevTools.V125.Storage.StorageBucket
+- uid: OpenQA.Selenium.DevTools.V125.Storage
+  commentId: N:OpenQA.Selenium.DevTools.V125.Storage
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Storage
+  nameWithType: OpenQA.Selenium.DevTools.V125.Storage
+  fullName: OpenQA.Selenium.DevTools.V125.Storage
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Storage
+    name: Storage
+    href: OpenQA.Selenium.DevTools.V125.Storage.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Storage
+    name: Storage
+    href: OpenQA.Selenium.DevTools.V125.Storage.html
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_DatabaseName
+  name: DatabaseName
+  nameWithType: RequestDataCommandSettings.DatabaseName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.DatabaseName
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_ObjectStoreName
+  name: ObjectStoreName
+  nameWithType: RequestDataCommandSettings.ObjectStoreName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.ObjectStoreName
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_IndexName
+  name: IndexName
+  nameWithType: RequestDataCommandSettings.IndexName
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.IndexName
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_SkipCount
+  name: SkipCount
+  nameWithType: RequestDataCommandSettings.SkipCount
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.SkipCount
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_PageSize
+  name: PageSize
+  nameWithType: RequestDataCommandSettings.PageSize
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.PageSize
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.html#OpenQA_Selenium_DevTools_V125_IndexedDB_RequestDataCommandSettings_KeyRange
+  name: KeyRange
+  nameWithType: RequestDataCommandSettings.KeyRange
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.RequestDataCommandSettings.KeyRange
+- uid: OpenQA.Selenium.DevTools.V125.IndexedDB.KeyRange
+  commentId: T:OpenQA.Selenium.DevTools.V125.IndexedDB.KeyRange
+  parent: OpenQA.Selenium.DevTools.V125.IndexedDB
+  href: OpenQA.Selenium.DevTools.V125.IndexedDB.KeyRange.html
+  name: KeyRange
+  nameWithType: KeyRange
+  fullName: OpenQA.Selenium.DevTools.V125.IndexedDB.KeyRange

@@ -1,0 +1,1408 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.Network
+  commentId: T:OpenQA.Selenium.DevTools.Network
+  id: Network
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.Network.AddResponseBody(OpenQA.Selenium.HttpResponseData)
+  - OpenQA.Selenium.DevTools.Network.AuthRequired
+  - OpenQA.Selenium.DevTools.Network.CancelAuth(System.String)
+  - OpenQA.Selenium.DevTools.Network.ContinueRequest(OpenQA.Selenium.HttpRequestData)
+  - OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse(OpenQA.Selenium.HttpRequestData,OpenQA.Selenium.HttpResponseData)
+  - OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification(OpenQA.Selenium.HttpRequestData)
+  - OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification(OpenQA.Selenium.HttpResponseData)
+  - OpenQA.Selenium.DevTools.Network.ContinueWithAuth(System.String,System.String,System.String)
+  - OpenQA.Selenium.DevTools.Network.DisableFetch
+  - OpenQA.Selenium.DevTools.Network.DisableNetwork
+  - OpenQA.Selenium.DevTools.Network.DisableNetworkCaching
+  - OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns
+  - OpenQA.Selenium.DevTools.Network.EnableNetwork
+  - OpenQA.Selenium.DevTools.Network.EnableNetworkCaching
+  - OpenQA.Selenium.DevTools.Network.OnAuthRequired(OpenQA.Selenium.DevTools.AuthRequiredEventArgs)
+  - OpenQA.Selenium.DevTools.Network.OnRequestPaused(OpenQA.Selenium.DevTools.RequestPausedEventArgs)
+  - OpenQA.Selenium.DevTools.Network.OnResponsePaused(OpenQA.Selenium.DevTools.ResponsePausedEventArgs)
+  - OpenQA.Selenium.DevTools.Network.RequestPaused
+  - OpenQA.Selenium.DevTools.Network.ResponsePaused
+  - OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(OpenQA.Selenium.DevTools.UserAgent)
+  - OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Network
+  nameWithType: Network
+  fullName: OpenQA.Selenium.DevTools.Network
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Network
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Class providing functionality for manipulating network calls using DevTools Protocol commands
+  example: []
+  syntax:
+    content: public abstract class Network
+    content.vb: Public MustInherit Class Network
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.DevTools.V124.V124Network
+  - OpenQA.Selenium.DevTools.V125.V125Network
+  - OpenQA.Selenium.DevTools.V126.V126Network
+  - OpenQA.Selenium.DevTools.V85.V85Network
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.Network.AuthRequired
+  commentId: E:OpenQA.Selenium.DevTools.Network.AuthRequired
+  id: AuthRequired
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: AuthRequired
+  nameWithType: Network.AuthRequired
+  fullName: OpenQA.Selenium.DevTools.Network.AuthRequired
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AuthRequired
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a network request requires authorization.
+  example: []
+  syntax:
+    content: public event Network.AsyncEventHandler<AuthRequiredEventArgs> AuthRequired
+    return:
+      type: OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.AuthRequiredEventArgs}
+    content.vb: Public Event AuthRequired As Network.AsyncEventHandler(Of AuthRequiredEventArgs)
+- uid: OpenQA.Selenium.DevTools.Network.RequestPaused
+  commentId: E:OpenQA.Selenium.DevTools.Network.RequestPaused
+  id: RequestPaused
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: RequestPaused
+  nameWithType: Network.RequestPaused
+  fullName: OpenQA.Selenium.DevTools.Network.RequestPaused
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestPaused
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a network request is intercepted.
+  example: []
+  syntax:
+    content: public event Network.AsyncEventHandler<RequestPausedEventArgs> RequestPaused
+    return:
+      type: OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.RequestPausedEventArgs}
+    content.vb: Public Event RequestPaused As Network.AsyncEventHandler(Of RequestPausedEventArgs)
+- uid: OpenQA.Selenium.DevTools.Network.ResponsePaused
+  commentId: E:OpenQA.Selenium.DevTools.Network.ResponsePaused
+  id: ResponsePaused
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: ResponsePaused
+  nameWithType: Network.ResponsePaused
+  fullName: OpenQA.Selenium.DevTools.Network.ResponsePaused
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponsePaused
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a network response is received.
+  example: []
+  syntax:
+    content: public event Network.AsyncEventHandler<ResponsePausedEventArgs> ResponsePaused
+    return:
+      type: OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.ResponsePausedEventArgs}
+    content.vb: Public Event ResponsePaused As Network.AsyncEventHandler(Of ResponsePausedEventArgs)
+- uid: OpenQA.Selenium.DevTools.Network.DisableNetworkCaching
+  commentId: M:OpenQA.Selenium.DevTools.Network.DisableNetworkCaching
+  id: DisableNetworkCaching
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: DisableNetworkCaching()
+  nameWithType: Network.DisableNetworkCaching()
+  fullName: OpenQA.Selenium.DevTools.Network.DisableNetworkCaching()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisableNetworkCaching
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously disables network caching.
+  example: []
+  syntax:
+    content: public abstract Task DisableNetworkCaching()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function DisableNetworkCaching() As Task
+  overload: OpenQA.Selenium.DevTools.Network.DisableNetworkCaching*
+- uid: OpenQA.Selenium.DevTools.Network.EnableNetworkCaching
+  commentId: M:OpenQA.Selenium.DevTools.Network.EnableNetworkCaching
+  id: EnableNetworkCaching
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: EnableNetworkCaching()
+  nameWithType: Network.EnableNetworkCaching()
+  fullName: OpenQA.Selenium.DevTools.Network.EnableNetworkCaching()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableNetworkCaching
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 53
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously enables network caching.
+  example: []
+  syntax:
+    content: public abstract Task EnableNetworkCaching()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function EnableNetworkCaching() As Task
+  overload: OpenQA.Selenium.DevTools.Network.EnableNetworkCaching*
+- uid: OpenQA.Selenium.DevTools.Network.EnableNetwork
+  commentId: M:OpenQA.Selenium.DevTools.Network.EnableNetwork
+  id: EnableNetwork
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: EnableNetwork()
+  nameWithType: Network.EnableNetwork()
+  fullName: OpenQA.Selenium.DevTools.Network.EnableNetwork()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableNetwork
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously enables the network domain.
+  example: []
+  syntax:
+    content: public abstract Task EnableNetwork()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function EnableNetwork() As Task
+  overload: OpenQA.Selenium.DevTools.Network.EnableNetwork*
+- uid: OpenQA.Selenium.DevTools.Network.DisableNetwork
+  commentId: M:OpenQA.Selenium.DevTools.Network.DisableNetwork
+  id: DisableNetwork
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: DisableNetwork()
+  nameWithType: Network.DisableNetwork()
+  fullName: OpenQA.Selenium.DevTools.Network.DisableNetwork()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisableNetwork
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 65
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously diables the fetch domain.
+  example: []
+  syntax:
+    content: public abstract Task DisableNetwork()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function DisableNetwork() As Task
+  overload: OpenQA.Selenium.DevTools.Network.DisableNetwork*
+- uid: OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns
+  commentId: M:OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns
+  id: EnableFetchForAllPatterns
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: EnableFetchForAllPatterns()
+  nameWithType: Network.EnableFetchForAllPatterns()
+  fullName: OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableFetchForAllPatterns
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously enables the fetch domain for all URL patterns.
+  example: []
+  syntax:
+    content: public abstract Task EnableFetchForAllPatterns()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function EnableFetchForAllPatterns() As Task
+  overload: OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns*
+- uid: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(System.String)
+  id: SetUserAgentOverride(System.String)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: SetUserAgentOverride(string)
+  nameWithType: Network.SetUserAgentOverride(string)
+  fullName: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetUserAgentOverride
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously sets the override of the user agent string.
+  example: []
+  syntax:
+    content: public Task SetUserAgentOverride(string userAgent)
+    parameters:
+    - id: userAgent
+      type: System.String
+      description: The user agent string to set.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function SetUserAgentOverride(userAgent As String) As Task
+  overload: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride*
+  nameWithType.vb: Network.SetUserAgentOverride(String)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(String)
+  name.vb: SetUserAgentOverride(String)
+- uid: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(OpenQA.Selenium.DevTools.UserAgent)
+  commentId: M:OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(OpenQA.Selenium.DevTools.UserAgent)
+  id: SetUserAgentOverride(OpenQA.Selenium.DevTools.UserAgent)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: SetUserAgentOverride(UserAgent)
+  nameWithType: Network.SetUserAgentOverride(UserAgent)
+  fullName: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride(OpenQA.Selenium.DevTools.UserAgent)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetUserAgentOverride
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 88
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously sets the override of the user agent settings.
+  example: []
+  syntax:
+    content: public abstract Task SetUserAgentOverride(UserAgent userAgent)
+    parameters:
+    - id: userAgent
+      type: OpenQA.Selenium.DevTools.UserAgent
+      description: A <xref href="OpenQA.Selenium.DevTools.UserAgent" data-throw-if-not-resolved="false"></xref> object containing the user agent values to override.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function SetUserAgentOverride(userAgent As UserAgent) As Task
+  overload: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride*
+- uid: OpenQA.Selenium.DevTools.Network.DisableFetch
+  commentId: M:OpenQA.Selenium.DevTools.Network.DisableFetch
+  id: DisableFetch
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: DisableFetch()
+  nameWithType: Network.DisableFetch()
+  fullName: OpenQA.Selenium.DevTools.Network.DisableFetch()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisableFetch
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously diables the fetch domain.
+  example: []
+  syntax:
+    content: public abstract Task DisableFetch()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function DisableFetch() As Task
+  overload: OpenQA.Selenium.DevTools.Network.DisableFetch*
+- uid: OpenQA.Selenium.DevTools.Network.ContinueRequest(OpenQA.Selenium.HttpRequestData)
+  commentId: M:OpenQA.Selenium.DevTools.Network.ContinueRequest(OpenQA.Selenium.HttpRequestData)
+  id: ContinueRequest(OpenQA.Selenium.HttpRequestData)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: ContinueRequest(HttpRequestData)
+  nameWithType: Network.ContinueRequest(HttpRequestData)
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueRequest(OpenQA.Selenium.HttpRequestData)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueRequest
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 101
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously continues an intercepted network request.
+  example: []
+  syntax:
+    content: public abstract Task ContinueRequest(HttpRequestData requestData)
+    parameters:
+    - id: requestData
+      type: OpenQA.Selenium.HttpRequestData
+      description: The <xref href="OpenQA.Selenium.HttpRequestData" data-throw-if-not-resolved="false"></xref> of the request.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function ContinueRequest(requestData As HttpRequestData) As Task
+  overload: OpenQA.Selenium.DevTools.Network.ContinueRequest*
+- uid: OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse(OpenQA.Selenium.HttpRequestData,OpenQA.Selenium.HttpResponseData)
+  commentId: M:OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse(OpenQA.Selenium.HttpRequestData,OpenQA.Selenium.HttpResponseData)
+  id: ContinueRequestWithResponse(OpenQA.Selenium.HttpRequestData,OpenQA.Selenium.HttpResponseData)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: ContinueRequestWithResponse(HttpRequestData, HttpResponseData)
+  nameWithType: Network.ContinueRequestWithResponse(HttpRequestData, HttpResponseData)
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse(OpenQA.Selenium.HttpRequestData, OpenQA.Selenium.HttpResponseData)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueRequestWithResponse
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 109
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously continues an intercepted network request and returns the specified response.
+  example: []
+  syntax:
+    content: public abstract Task ContinueRequestWithResponse(HttpRequestData requestData, HttpResponseData responseData)
+    parameters:
+    - id: requestData
+      type: OpenQA.Selenium.HttpRequestData
+      description: The <xref href="OpenQA.Selenium.HttpRequestData" data-throw-if-not-resolved="false"></xref> of the request.
+    - id: responseData
+      type: OpenQA.Selenium.HttpResponseData
+      description: The <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> with which to respond to the request
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function ContinueRequestWithResponse(requestData As HttpRequestData, responseData As HttpResponseData) As Task
+  overload: OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse*
+- uid: OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification(OpenQA.Selenium.HttpRequestData)
+  commentId: M:OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification(OpenQA.Selenium.HttpRequestData)
+  id: ContinueRequestWithoutModification(OpenQA.Selenium.HttpRequestData)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: ContinueRequestWithoutModification(HttpRequestData)
+  nameWithType: Network.ContinueRequestWithoutModification(HttpRequestData)
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification(OpenQA.Selenium.HttpRequestData)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueRequestWithoutModification
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 116
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously contines an intercepted network request without modification.
+  example: []
+  syntax:
+    content: public abstract Task ContinueRequestWithoutModification(HttpRequestData requestData)
+    parameters:
+    - id: requestData
+      type: OpenQA.Selenium.HttpRequestData
+      description: The <xref href="OpenQA.Selenium.HttpRequestData" data-throw-if-not-resolved="false"></xref> of the network request.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function ContinueRequestWithoutModification(requestData As HttpRequestData) As Task
+  overload: OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification*
+- uid: OpenQA.Selenium.DevTools.Network.ContinueWithAuth(System.String,System.String,System.String)
+  commentId: M:OpenQA.Selenium.DevTools.Network.ContinueWithAuth(System.String,System.String,System.String)
+  id: ContinueWithAuth(System.String,System.String,System.String)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: ContinueWithAuth(string, string, string)
+  nameWithType: Network.ContinueWithAuth(string, string, string)
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueWithAuth(string, string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueWithAuth
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 125
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously continues an intercepted network call using authentication.
+  example: []
+  syntax:
+    content: public abstract Task ContinueWithAuth(string requestId, string userName, string password)
+    parameters:
+    - id: requestId
+      type: System.String
+      description: The ID of the network request for which to continue with authentication.
+    - id: userName
+      type: System.String
+      description: The user name with which to authenticate.
+    - id: password
+      type: System.String
+      description: The password with which to authenticate.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function ContinueWithAuth(requestId As String, userName As String, password As String) As Task
+  overload: OpenQA.Selenium.DevTools.Network.ContinueWithAuth*
+  nameWithType.vb: Network.ContinueWithAuth(String, String, String)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.ContinueWithAuth(String, String, String)
+  name.vb: ContinueWithAuth(String, String, String)
+- uid: OpenQA.Selenium.DevTools.Network.CancelAuth(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.Network.CancelAuth(System.String)
+  id: CancelAuth(System.String)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: CancelAuth(string)
+  nameWithType: Network.CancelAuth(string)
+  fullName: OpenQA.Selenium.DevTools.Network.CancelAuth(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CancelAuth
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 132
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously cancels authorization of an intercepted network request.
+  example: []
+  syntax:
+    content: public abstract Task CancelAuth(string requestId)
+    parameters:
+    - id: requestId
+      type: System.String
+      description: The ID of the network request for which to cancel authentication.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function CancelAuth(requestId As String) As Task
+  overload: OpenQA.Selenium.DevTools.Network.CancelAuth*
+  nameWithType.vb: Network.CancelAuth(String)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.CancelAuth(String)
+  name.vb: CancelAuth(String)
+- uid: OpenQA.Selenium.DevTools.Network.AddResponseBody(OpenQA.Selenium.HttpResponseData)
+  commentId: M:OpenQA.Selenium.DevTools.Network.AddResponseBody(OpenQA.Selenium.HttpResponseData)
+  id: AddResponseBody(OpenQA.Selenium.HttpResponseData)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: AddResponseBody(HttpResponseData)
+  nameWithType: Network.AddResponseBody(HttpResponseData)
+  fullName: OpenQA.Selenium.DevTools.Network.AddResponseBody(OpenQA.Selenium.HttpResponseData)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddResponseBody
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 139
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously adds the response body to the provided <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> object.
+  example: []
+  syntax:
+    content: public abstract Task AddResponseBody(HttpResponseData responseData)
+    parameters:
+    - id: responseData
+      type: OpenQA.Selenium.HttpResponseData
+      description: The <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> object to which to add the response body.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function AddResponseBody(responseData As HttpResponseData) As Task
+  overload: OpenQA.Selenium.DevTools.Network.AddResponseBody*
+- uid: OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification(OpenQA.Selenium.HttpResponseData)
+  commentId: M:OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification(OpenQA.Selenium.HttpResponseData)
+  id: ContinueResponseWithoutModification(OpenQA.Selenium.HttpResponseData)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: ContinueResponseWithoutModification(HttpResponseData)
+  nameWithType: Network.ContinueResponseWithoutModification(HttpResponseData)
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification(OpenQA.Selenium.HttpResponseData)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueResponseWithoutModification
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 146
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously continues an intercepted network response without modification.
+  example: []
+  syntax:
+    content: public abstract Task ContinueResponseWithoutModification(HttpResponseData responseData)
+    parameters:
+    - id: responseData
+      type: OpenQA.Selenium.HttpResponseData
+      description: The <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> of the network response.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function ContinueResponseWithoutModification(responseData As HttpResponseData) As Task
+  overload: OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification*
+- uid: OpenQA.Selenium.DevTools.Network.OnAuthRequired(OpenQA.Selenium.DevTools.AuthRequiredEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.Network.OnAuthRequired(OpenQA.Selenium.DevTools.AuthRequiredEventArgs)
+  id: OnAuthRequired(OpenQA.Selenium.DevTools.AuthRequiredEventArgs)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: OnAuthRequired(AuthRequiredEventArgs)
+  nameWithType: Network.OnAuthRequired(AuthRequiredEventArgs)
+  fullName: OpenQA.Selenium.DevTools.Network.OnAuthRequired(OpenQA.Selenium.DevTools.AuthRequiredEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnAuthRequired
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 152
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the AuthRequired event.
+  example: []
+  syntax:
+    content: protected virtual void OnAuthRequired(AuthRequiredEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.AuthRequiredEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.AuthRequiredEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnAuthRequired(e As AuthRequiredEventArgs)
+  overload: OpenQA.Selenium.DevTools.Network.OnAuthRequired*
+- uid: OpenQA.Selenium.DevTools.Network.OnRequestPaused(OpenQA.Selenium.DevTools.RequestPausedEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.Network.OnRequestPaused(OpenQA.Selenium.DevTools.RequestPausedEventArgs)
+  id: OnRequestPaused(OpenQA.Selenium.DevTools.RequestPausedEventArgs)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: OnRequestPaused(RequestPausedEventArgs)
+  nameWithType: Network.OnRequestPaused(RequestPausedEventArgs)
+  fullName: OpenQA.Selenium.DevTools.Network.OnRequestPaused(OpenQA.Selenium.DevTools.RequestPausedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnRequestPaused
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 169
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the RequestPaused event.
+  example: []
+  syntax:
+    content: protected virtual void OnRequestPaused(RequestPausedEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.RequestPausedEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.RequestPausedEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnRequestPaused(e As RequestPausedEventArgs)
+  overload: OpenQA.Selenium.DevTools.Network.OnRequestPaused*
+- uid: OpenQA.Selenium.DevTools.Network.OnResponsePaused(OpenQA.Selenium.DevTools.ResponsePausedEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.Network.OnResponsePaused(OpenQA.Selenium.DevTools.ResponsePausedEventArgs)
+  id: OnResponsePaused(OpenQA.Selenium.DevTools.ResponsePausedEventArgs)
+  parent: OpenQA.Selenium.DevTools.Network
+  langs:
+  - csharp
+  - vb
+  name: OnResponsePaused(ResponsePausedEventArgs)
+  nameWithType: Network.OnResponsePaused(ResponsePausedEventArgs)
+  fullName: OpenQA.Selenium.DevTools.Network.OnResponsePaused(OpenQA.Selenium.DevTools.ResponsePausedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Network.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnResponsePaused
+    path: ../src/webdriver/DevTools/Network.cs
+    startLine: 186
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the ResponseReceived event.
+  example: []
+  syntax:
+    content: protected virtual void OnResponsePaused(ResponsePausedEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.ResponsePausedEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.ResponsePausedEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnResponsePaused(e As ResponsePausedEventArgs)
+  overload: OpenQA.Selenium.DevTools.Network.OnResponsePaused*
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.AuthRequiredEventArgs}
+  commentId: T:OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.AuthRequiredEventArgs}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+  href: OpenQA.Selenium.DevTools.Network.html
+  name: Network.AsyncEventHandler<AuthRequiredEventArgs>
+  nameWithType: Network.AsyncEventHandler<AuthRequiredEventArgs>
+  fullName: OpenQA.Selenium.DevTools.Network.AsyncEventHandler<OpenQA.Selenium.DevTools.AuthRequiredEventArgs>
+  nameWithType.vb: Network.AsyncEventHandler(Of AuthRequiredEventArgs)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.AsyncEventHandler(Of OpenQA.Selenium.DevTools.AuthRequiredEventArgs)
+  name.vb: Network.AsyncEventHandler(Of AuthRequiredEventArgs)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.AuthRequiredEventArgs
+    name: AuthRequiredEventArgs
+    href: OpenQA.Selenium.DevTools.AuthRequiredEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.AuthRequiredEventArgs
+    name: AuthRequiredEventArgs
+    href: OpenQA.Selenium.DevTools.AuthRequiredEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+  commentId: T:OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+  href: OpenQA.Selenium.DevTools.Network.html
+  name: Network.AsyncEventHandler<TEventArgs>
+  nameWithType: Network.AsyncEventHandler<TEventArgs>
+  fullName: OpenQA.Selenium.DevTools.Network.AsyncEventHandler<TEventArgs>
+  nameWithType.vb: Network.AsyncEventHandler(Of TEventArgs)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.AsyncEventHandler(Of TEventArgs)
+  name.vb: Network.AsyncEventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.RequestPausedEventArgs}
+  commentId: T:OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.RequestPausedEventArgs}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+  href: OpenQA.Selenium.DevTools.Network.html
+  name: Network.AsyncEventHandler<RequestPausedEventArgs>
+  nameWithType: Network.AsyncEventHandler<RequestPausedEventArgs>
+  fullName: OpenQA.Selenium.DevTools.Network.AsyncEventHandler<OpenQA.Selenium.DevTools.RequestPausedEventArgs>
+  nameWithType.vb: Network.AsyncEventHandler(Of RequestPausedEventArgs)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.AsyncEventHandler(Of OpenQA.Selenium.DevTools.RequestPausedEventArgs)
+  name.vb: Network.AsyncEventHandler(Of RequestPausedEventArgs)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.RequestPausedEventArgs
+    name: RequestPausedEventArgs
+    href: OpenQA.Selenium.DevTools.RequestPausedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.RequestPausedEventArgs
+    name: RequestPausedEventArgs
+    href: OpenQA.Selenium.DevTools.RequestPausedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.ResponsePausedEventArgs}
+  commentId: T:OpenQA.Selenium.DevTools.Network.AsyncEventHandler{OpenQA.Selenium.DevTools.ResponsePausedEventArgs}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+  href: OpenQA.Selenium.DevTools.Network.html
+  name: Network.AsyncEventHandler<ResponsePausedEventArgs>
+  nameWithType: Network.AsyncEventHandler<ResponsePausedEventArgs>
+  fullName: OpenQA.Selenium.DevTools.Network.AsyncEventHandler<OpenQA.Selenium.DevTools.ResponsePausedEventArgs>
+  nameWithType.vb: Network.AsyncEventHandler(Of ResponsePausedEventArgs)
+  fullName.vb: OpenQA.Selenium.DevTools.Network.AsyncEventHandler(Of OpenQA.Selenium.DevTools.ResponsePausedEventArgs)
+  name.vb: Network.AsyncEventHandler(Of ResponsePausedEventArgs)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.ResponsePausedEventArgs
+    name: ResponsePausedEventArgs
+    href: OpenQA.Selenium.DevTools.ResponsePausedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.Network.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.Network.AsyncEventHandler`1
+    name: AsyncEventHandler
+    href: OpenQA.Selenium.DevTools.Network.AsyncEventHandler-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.ResponsePausedEventArgs
+    name: ResponsePausedEventArgs
+    href: OpenQA.Selenium.DevTools.ResponsePausedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.Network.DisableNetworkCaching*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.DisableNetworkCaching
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_DisableNetworkCaching
+  name: DisableNetworkCaching
+  nameWithType: Network.DisableNetworkCaching
+  fullName: OpenQA.Selenium.DevTools.Network.DisableNetworkCaching
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.Network.EnableNetworkCaching*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.EnableNetworkCaching
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_EnableNetworkCaching
+  name: EnableNetworkCaching
+  nameWithType: Network.EnableNetworkCaching
+  fullName: OpenQA.Selenium.DevTools.Network.EnableNetworkCaching
+- uid: OpenQA.Selenium.DevTools.Network.EnableNetwork*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.EnableNetwork
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_EnableNetwork
+  name: EnableNetwork
+  nameWithType: Network.EnableNetwork
+  fullName: OpenQA.Selenium.DevTools.Network.EnableNetwork
+- uid: OpenQA.Selenium.DevTools.Network.DisableNetwork*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.DisableNetwork
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_DisableNetwork
+  name: DisableNetwork
+  nameWithType: Network.DisableNetwork
+  fullName: OpenQA.Selenium.DevTools.Network.DisableNetwork
+- uid: OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_EnableFetchForAllPatterns
+  name: EnableFetchForAllPatterns
+  nameWithType: Network.EnableFetchForAllPatterns
+  fullName: OpenQA.Selenium.DevTools.Network.EnableFetchForAllPatterns
+- uid: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.SetUserAgentOverride
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_SetUserAgentOverride_System_String_
+  name: SetUserAgentOverride
+  nameWithType: Network.SetUserAgentOverride
+  fullName: OpenQA.Selenium.DevTools.Network.SetUserAgentOverride
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.UserAgent
+  commentId: T:OpenQA.Selenium.DevTools.UserAgent
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.UserAgent.html
+  name: UserAgent
+  nameWithType: UserAgent
+  fullName: OpenQA.Selenium.DevTools.UserAgent
+- uid: OpenQA.Selenium.DevTools.Network.DisableFetch*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.DisableFetch
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_DisableFetch
+  name: DisableFetch
+  nameWithType: Network.DisableFetch
+  fullName: OpenQA.Selenium.DevTools.Network.DisableFetch
+- uid: OpenQA.Selenium.HttpRequestData
+  commentId: T:OpenQA.Selenium.HttpRequestData
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.HttpRequestData.html
+  name: HttpRequestData
+  nameWithType: HttpRequestData
+  fullName: OpenQA.Selenium.HttpRequestData
+- uid: OpenQA.Selenium.DevTools.Network.ContinueRequest*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.ContinueRequest
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_ContinueRequest_OpenQA_Selenium_HttpRequestData_
+  name: ContinueRequest
+  nameWithType: Network.ContinueRequest
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueRequest
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.HttpResponseData
+  commentId: T:OpenQA.Selenium.HttpResponseData
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.HttpResponseData.html
+  name: HttpResponseData
+  nameWithType: HttpResponseData
+  fullName: OpenQA.Selenium.HttpResponseData
+- uid: OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_ContinueRequestWithResponse_OpenQA_Selenium_HttpRequestData_OpenQA_Selenium_HttpResponseData_
+  name: ContinueRequestWithResponse
+  nameWithType: Network.ContinueRequestWithResponse
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueRequestWithResponse
+- uid: OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_ContinueRequestWithoutModification_OpenQA_Selenium_HttpRequestData_
+  name: ContinueRequestWithoutModification
+  nameWithType: Network.ContinueRequestWithoutModification
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueRequestWithoutModification
+- uid: OpenQA.Selenium.DevTools.Network.ContinueWithAuth*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.ContinueWithAuth
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_ContinueWithAuth_System_String_System_String_System_String_
+  name: ContinueWithAuth
+  nameWithType: Network.ContinueWithAuth
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueWithAuth
+- uid: OpenQA.Selenium.DevTools.Network.CancelAuth*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.CancelAuth
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_CancelAuth_System_String_
+  name: CancelAuth
+  nameWithType: Network.CancelAuth
+  fullName: OpenQA.Selenium.DevTools.Network.CancelAuth
+- uid: OpenQA.Selenium.DevTools.Network.AddResponseBody*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.AddResponseBody
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_AddResponseBody_OpenQA_Selenium_HttpResponseData_
+  name: AddResponseBody
+  nameWithType: Network.AddResponseBody
+  fullName: OpenQA.Selenium.DevTools.Network.AddResponseBody
+- uid: OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_ContinueResponseWithoutModification_OpenQA_Selenium_HttpResponseData_
+  name: ContinueResponseWithoutModification
+  nameWithType: Network.ContinueResponseWithoutModification
+  fullName: OpenQA.Selenium.DevTools.Network.ContinueResponseWithoutModification
+- uid: OpenQA.Selenium.DevTools.AuthRequiredEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.AuthRequiredEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.AuthRequiredEventArgs.html
+  name: AuthRequiredEventArgs
+  nameWithType: AuthRequiredEventArgs
+  fullName: OpenQA.Selenium.DevTools.AuthRequiredEventArgs
+- uid: OpenQA.Selenium.DevTools.Network.OnAuthRequired*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.OnAuthRequired
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_OnAuthRequired_OpenQA_Selenium_DevTools_AuthRequiredEventArgs_
+  name: OnAuthRequired
+  nameWithType: Network.OnAuthRequired
+  fullName: OpenQA.Selenium.DevTools.Network.OnAuthRequired
+- uid: OpenQA.Selenium.DevTools.RequestPausedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.RequestPausedEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.RequestPausedEventArgs.html
+  name: RequestPausedEventArgs
+  nameWithType: RequestPausedEventArgs
+  fullName: OpenQA.Selenium.DevTools.RequestPausedEventArgs
+- uid: OpenQA.Selenium.DevTools.Network.OnRequestPaused*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.OnRequestPaused
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_OnRequestPaused_OpenQA_Selenium_DevTools_RequestPausedEventArgs_
+  name: OnRequestPaused
+  nameWithType: Network.OnRequestPaused
+  fullName: OpenQA.Selenium.DevTools.Network.OnRequestPaused
+- uid: OpenQA.Selenium.DevTools.ResponsePausedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.ResponsePausedEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ResponsePausedEventArgs.html
+  name: ResponsePausedEventArgs
+  nameWithType: ResponsePausedEventArgs
+  fullName: OpenQA.Selenium.DevTools.ResponsePausedEventArgs
+- uid: OpenQA.Selenium.DevTools.Network.OnResponsePaused*
+  commentId: Overload:OpenQA.Selenium.DevTools.Network.OnResponsePaused
+  href: OpenQA.Selenium.DevTools.Network.html#OpenQA_Selenium_DevTools_Network_OnResponsePaused_OpenQA_Selenium_DevTools_ResponsePausedEventArgs_
+  name: OnResponsePaused
+  nameWithType: Network.OnResponsePaused
+  fullName: OpenQA.Selenium.DevTools.Network.OnResponsePaused

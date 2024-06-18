@@ -1,0 +1,699 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  id: MixedContentIssueDetails
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  children:
+  - OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame
+  - OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL
+  - OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL
+  - OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request
+  - OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus
+  - OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType
+  langs:
+  - csharp
+  - vb
+  name: MixedContentIssueDetails
+  nameWithType: MixedContentIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MixedContentIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: MixedContentIssueDetails
+  example: []
+  syntax:
+    content: public sealed class MixedContentIssueDetails
+    content.vb: Public NotInheritable Class MixedContentIssueDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType
+  id: ResourceType
+  parent: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: ResourceType
+  nameWithType: MixedContentIssueDetails.ResourceType
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResourceType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: >-
+    The type of resource causing the mixed content issue (css, js, iframe,
+
+    form,...). Marked as optional because it is mapped to from
+
+    blink::mojom::RequestContextType, which will be replaced
+
+    by network::mojom::RequestDestination
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("resourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public MixedContentResourceType? ResourceType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType}
+    content.vb: >-
+      <JsonProperty("resourceType", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResourceType As MixedContentResourceType?
+  overload: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: resourceType
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus
+  id: ResolutionStatus
+  parent: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: ResolutionStatus
+  nameWithType: MixedContentIssueDetails.ResolutionStatus
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResolutionStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: The way the mixed content issue is being resolved.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("resolutionStatus")]
+
+      public MixedContentResolutionStatus ResolutionStatus { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResolutionStatus
+    content.vb: >-
+      <JsonProperty("resolutionStatus")>
+
+      Public Property ResolutionStatus As MixedContentResolutionStatus
+  overload: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: resolutionStatus
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL
+  id: InsecureURL
+  parent: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: InsecureURL
+  nameWithType: MixedContentIssueDetails.InsecureURL
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InsecureURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: The unsafe http url causing the mixed content issue.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("insecureURL")]
+
+      public string InsecureURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("insecureURL")>
+
+      Public Property InsecureURL As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: insecureURL
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL
+  id: MainResourceURL
+  parent: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: MainResourceURL
+  nameWithType: MixedContentIssueDetails.MainResourceURL
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MainResourceURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: The url responsible for the call to an unsafe url.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("mainResourceURL")]
+
+      public string MainResourceURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("mainResourceURL")>
+
+      Public Property MainResourceURL As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: mainResourceURL
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request
+  id: Request
+  parent: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: Request
+  nameWithType: MixedContentIssueDetails.Request
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Request
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 53
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: >-
+    The mixed content request.
+
+    Does not always exist (e.g. for unsafe form submission urls).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("request", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AffectedRequest Request { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+    content.vb: >-
+      <JsonProperty("request", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Request As AffectedRequest
+  overload: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: request
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame
+  id: Frame
+  parent: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: Frame
+  nameWithType: MixedContentIssueDetails.Frame
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Frame
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/MixedContentIssueDetails.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: Optional because not every mixed content issue is necessarily linked to a frame.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("frame", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AffectedFrame Frame { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+    content.vb: >-
+      <JsonProperty("frame", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Frame As AffectedFrame
+  overload: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: frame
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Audits
+  commentId: N:OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Audits
+  nameWithType: OpenQA.Selenium.DevTools.V126.Audits
+  fullName: OpenQA.Selenium.DevTools.V126.Audits
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V126.Audits.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V126.Audits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_MixedContentIssueDetails_ResourceType
+  name: ResourceType
+  nameWithType: MixedContentIssueDetails.ResourceType
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResourceType
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType.html
+  name: MixedContentResourceType?
+  nameWithType: MixedContentResourceType?
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType
+    name: MixedContentResourceType
+    href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType
+    name: MixedContentResourceType
+    href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResourceType.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_MixedContentIssueDetails_ResolutionStatus
+  name: ResolutionStatus
+  nameWithType: MixedContentIssueDetails.ResolutionStatus
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.ResolutionStatus
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResolutionStatus
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.MixedContentResolutionStatus
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResolutionStatus.html
+  name: MixedContentResolutionStatus
+  nameWithType: MixedContentResolutionStatus
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentResolutionStatus
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_MixedContentIssueDetails_InsecureURL
+  name: InsecureURL
+  nameWithType: MixedContentIssueDetails.InsecureURL
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.InsecureURL
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_MixedContentIssueDetails_MainResourceURL
+  name: MainResourceURL
+  nameWithType: MixedContentIssueDetails.MainResourceURL
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.MainResourceURL
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_MixedContentIssueDetails_Request
+  name: Request
+  nameWithType: MixedContentIssueDetails.Request
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Request
+- uid: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest.html
+  name: AffectedRequest
+  nameWithType: AffectedRequest
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+- uid: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame
+  href: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_MixedContentIssueDetails_Frame
+  name: Frame
+  nameWithType: MixedContentIssueDetails.Frame
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.MixedContentIssueDetails.Frame
+- uid: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame.html
+  name: AffectedFrame
+  nameWithType: AffectedFrame
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame

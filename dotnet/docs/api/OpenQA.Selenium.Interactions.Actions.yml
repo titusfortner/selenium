@@ -1,0 +1,2199 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Interactions.Actions
+  commentId: T:OpenQA.Selenium.Interactions.Actions
+  id: Actions
+  parent: OpenQA.Selenium.Interactions
+  children:
+  - OpenQA.Selenium.Interactions.Actions.#ctor(OpenQA.Selenium.IWebDriver)
+  - OpenQA.Selenium.Interactions.Actions.#ctor(OpenQA.Selenium.IWebDriver,System.TimeSpan)
+  - OpenQA.Selenium.Interactions.Actions.ActionExecutor
+  - OpenQA.Selenium.Interactions.Actions.Build
+  - OpenQA.Selenium.Interactions.Actions.Click
+  - OpenQA.Selenium.Interactions.Actions.Click(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.ClickAndHold
+  - OpenQA.Selenium.Interactions.Actions.ClickAndHold(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.ContextClick
+  - OpenQA.Selenium.Interactions.Actions.ContextClick(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.DoubleClick
+  - OpenQA.Selenium.Interactions.Actions.DoubleClick(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.DragAndDrop(OpenQA.Selenium.IWebElement,OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  - OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard
+  - OpenQA.Selenium.Interactions.Actions.GetActivePointer
+  - OpenQA.Selenium.Interactions.Actions.GetActiveWheel
+  - OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.KeyDown(OpenQA.Selenium.IWebElement,System.String)
+  - OpenQA.Selenium.Interactions.Actions.KeyDown(System.String)
+  - OpenQA.Selenium.Interactions.Actions.KeyUp(OpenQA.Selenium.IWebElement,System.String)
+  - OpenQA.Selenium.Interactions.Actions.KeyUp(System.String)
+  - OpenQA.Selenium.Interactions.Actions.MoveByOffset(System.Int32,System.Int32)
+  - OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  - OpenQA.Selenium.Interactions.Actions.MoveToLocation(System.Int32,System.Int32)
+  - OpenQA.Selenium.Interactions.Actions.Pause(System.TimeSpan)
+  - OpenQA.Selenium.Interactions.Actions.Perform
+  - OpenQA.Selenium.Interactions.Actions.Release
+  - OpenQA.Selenium.Interactions.Actions.Release(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.Reset
+  - OpenQA.Selenium.Interactions.Actions.ScrollByAmount(System.Int32,System.Int32)
+  - OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin(OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin,System.Int32,System.Int32)
+  - OpenQA.Selenium.Interactions.Actions.ScrollToElement(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.Interactions.Actions.SendKeys(OpenQA.Selenium.IWebElement,System.String)
+  - OpenQA.Selenium.Interactions.Actions.SendKeys(System.String)
+  - OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard(System.String)
+  - OpenQA.Selenium.Interactions.Actions.SetActivePointer(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  - OpenQA.Selenium.Interactions.Actions.SetActiveWheel(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: Actions
+  fullName: OpenQA.Selenium.Interactions.Actions
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Actions
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Provides a mechanism for building advanced interactions with the browser.
+  example: []
+  syntax:
+    content: 'public class Actions : IAction'
+    content.vb: Public Class Actions Implements IAction
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.Interactions.IAction
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Interactions.Actions.#ctor(OpenQA.Selenium.IWebDriver)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.#ctor(OpenQA.Selenium.IWebDriver)
+  id: '#ctor(OpenQA.Selenium.IWebDriver)'
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Actions(IWebDriver)
+  nameWithType: Actions.Actions(IWebDriver)
+  fullName: OpenQA.Selenium.Interactions.Actions.Actions(OpenQA.Selenium.IWebDriver)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Actions(IWebDriver driver)
+    parameters:
+    - id: driver
+      type: OpenQA.Selenium.IWebDriver
+      description: The <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> object on which the actions built will be performed.
+    content.vb: Public Sub New(driver As IWebDriver)
+  overload: OpenQA.Selenium.Interactions.Actions.#ctor*
+  nameWithType.vb: Actions.New(IWebDriver)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.New(OpenQA.Selenium.IWebDriver)
+  name.vb: New(IWebDriver)
+- uid: OpenQA.Selenium.Interactions.Actions.#ctor(OpenQA.Selenium.IWebDriver,System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.#ctor(OpenQA.Selenium.IWebDriver,System.TimeSpan)
+  id: '#ctor(OpenQA.Selenium.IWebDriver,System.TimeSpan)'
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Actions(IWebDriver, TimeSpan)
+  nameWithType: Actions.Actions(IWebDriver, TimeSpan)
+  fullName: OpenQA.Selenium.Interactions.Actions.Actions(OpenQA.Selenium.IWebDriver, System.TimeSpan)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Actions(IWebDriver driver, TimeSpan duration)
+    parameters:
+    - id: driver
+      type: OpenQA.Selenium.IWebDriver
+      description: The <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> object on which the actions built will be performed.
+    - id: duration
+      type: System.TimeSpan
+      description: How long durable action is expected to take.
+    content.vb: Public Sub New(driver As IWebDriver, duration As TimeSpan)
+  overload: OpenQA.Selenium.Interactions.Actions.#ctor*
+  nameWithType.vb: Actions.New(IWebDriver, TimeSpan)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.New(OpenQA.Selenium.IWebDriver, System.TimeSpan)
+  name.vb: New(IWebDriver, TimeSpan)
+- uid: OpenQA.Selenium.Interactions.Actions.ActionExecutor
+  commentId: P:OpenQA.Selenium.Interactions.Actions.ActionExecutor
+  id: ActionExecutor
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ActionExecutor
+  nameWithType: Actions.ActionExecutor
+  fullName: OpenQA.Selenium.Interactions.Actions.ActionExecutor
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ActionExecutor
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Returns the <xref href="OpenQA.Selenium.IActionExecutor" data-throw-if-not-resolved="false"></xref> for the driver.
+  example: []
+  syntax:
+    content: protected IActionExecutor ActionExecutor { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.IActionExecutor
+    content.vb: Protected ReadOnly Property ActionExecutor As IActionExecutor
+  overload: OpenQA.Selenium.Interactions.Actions.ActionExecutor*
+- uid: OpenQA.Selenium.Interactions.Actions.SetActivePointer(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.SetActivePointer(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  id: SetActivePointer(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: SetActivePointer(PointerKind, string)
+  nameWithType: Actions.SetActivePointer(PointerKind, string)
+  fullName: OpenQA.Selenium.Interactions.Actions.SetActivePointer(OpenQA.Selenium.Interactions.PointerKind, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetActivePointer
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sets the active pointer device for this Actions class.
+  example: []
+  syntax:
+    content: public Actions SetActivePointer(PointerKind kind, string name)
+    parameters:
+    - id: kind
+      type: OpenQA.Selenium.Interactions.PointerKind
+      description: The kind of pointer device to set as active.
+    - id: name
+      type: System.String
+      description: The name of the pointer device to set as active.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this Actions class.
+    content.vb: Public Function SetActivePointer(kind As PointerKind, name As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.SetActivePointer*
+  nameWithType.vb: Actions.SetActivePointer(PointerKind, String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.SetActivePointer(OpenQA.Selenium.Interactions.PointerKind, String)
+  name.vb: SetActivePointer(PointerKind, String)
+- uid: OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard(System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard(System.String)
+  id: SetActiveKeyboard(System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: SetActiveKeyboard(string)
+  nameWithType: Actions.SetActiveKeyboard(string)
+  fullName: OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetActiveKeyboard
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 113
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sets the active keyboard device for this Actions class.
+  example: []
+  syntax:
+    content: public Actions SetActiveKeyboard(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the keyboard device to set as active.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this Actions class.
+    content.vb: Public Function SetActiveKeyboard(name As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard*
+  nameWithType.vb: Actions.SetActiveKeyboard(String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard(String)
+  name.vb: SetActiveKeyboard(String)
+- uid: OpenQA.Selenium.Interactions.Actions.SetActiveWheel(System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.SetActiveWheel(System.String)
+  id: SetActiveWheel(System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: SetActiveWheel(string)
+  nameWithType: Actions.SetActiveWheel(string)
+  fullName: OpenQA.Selenium.Interactions.Actions.SetActiveWheel(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetActiveWheel
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 149
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sets the active wheel device for this Actions class.
+  example: []
+  syntax:
+    content: public Actions SetActiveWheel(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the wheel device to set as active.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this Actions class.
+    content.vb: Public Function SetActiveWheel(name As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.SetActiveWheel*
+  nameWithType.vb: Actions.SetActiveWheel(String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.SetActiveWheel(String)
+  name.vb: SetActiveWheel(String)
+- uid: OpenQA.Selenium.Interactions.Actions.GetActivePointer
+  commentId: M:OpenQA.Selenium.Interactions.Actions.GetActivePointer
+  id: GetActivePointer
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: GetActivePointer()
+  nameWithType: Actions.GetActivePointer()
+  fullName: OpenQA.Selenium.Interactions.Actions.GetActivePointer()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetActivePointer
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 184
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the active pointer device for this Actions class.
+  example: []
+  syntax:
+    content: public PointerInputDevice GetActivePointer()
+    return:
+      type: OpenQA.Selenium.Interactions.PointerInputDevice
+      description: The active pointer device for this Actions class.
+    content.vb: Public Function GetActivePointer() As PointerInputDevice
+  overload: OpenQA.Selenium.Interactions.Actions.GetActivePointer*
+- uid: OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard
+  commentId: M:OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard
+  id: GetActiveKeyboard
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: GetActiveKeyboard()
+  nameWithType: Actions.GetActiveKeyboard()
+  fullName: OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetActiveKeyboard
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 198
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the active keyboard device for this Actions class.
+  example: []
+  syntax:
+    content: public KeyInputDevice GetActiveKeyboard()
+    return:
+      type: OpenQA.Selenium.Interactions.KeyInputDevice
+      description: The active keyboard device for this Actions class.
+    content.vb: Public Function GetActiveKeyboard() As KeyInputDevice
+  overload: OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard*
+- uid: OpenQA.Selenium.Interactions.Actions.GetActiveWheel
+  commentId: M:OpenQA.Selenium.Interactions.Actions.GetActiveWheel
+  id: GetActiveWheel
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: GetActiveWheel()
+  nameWithType: Actions.GetActiveWheel()
+  fullName: OpenQA.Selenium.Interactions.Actions.GetActiveWheel()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetActiveWheel
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 212
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the active wheel device for this Actions class.
+  example: []
+  syntax:
+    content: public WheelInputDevice GetActiveWheel()
+    return:
+      type: OpenQA.Selenium.Interactions.WheelInputDevice
+      description: The active wheel device for this Actions class.
+    content.vb: Public Function GetActiveWheel() As WheelInputDevice
+  overload: OpenQA.Selenium.Interactions.Actions.GetActiveWheel*
+- uid: OpenQA.Selenium.Interactions.Actions.KeyDown(System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.KeyDown(System.String)
+  id: KeyDown(System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: KeyDown(string)
+  nameWithType: Actions.KeyDown(string)
+  fullName: OpenQA.Selenium.Interactions.Actions.KeyDown(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: KeyDown
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 231
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sends a modifier key down message to the browser.
+  example: []
+  syntax:
+    content: public Actions KeyDown(string theKey)
+    parameters:
+    - id: theKey
+      type: System.String
+      description: The key to be sent.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function KeyDown(theKey As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.KeyDown*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the key sent is not is not one
+          of <xref href="OpenQA.Selenium.Keys.Shift" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Control" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Alt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.Meta" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Command" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftAlt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.LeftControl" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftShift" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Actions.KeyDown(String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.KeyDown(String)
+  name.vb: KeyDown(String)
+- uid: OpenQA.Selenium.Interactions.Actions.KeyDown(OpenQA.Selenium.IWebElement,System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.KeyDown(OpenQA.Selenium.IWebElement,System.String)
+  id: KeyDown(OpenQA.Selenium.IWebElement,System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: KeyDown(IWebElement, string)
+  nameWithType: Actions.KeyDown(IWebElement, string)
+  fullName: OpenQA.Selenium.Interactions.Actions.KeyDown(OpenQA.Selenium.IWebElement, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: KeyDown
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 246
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sends a modifier key down message to the specified element in the browser.
+  example: []
+  syntax:
+    content: public Actions KeyDown(IWebElement element, string theKey)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to which to send the key command.
+    - id: theKey
+      type: System.String
+      description: The key to be sent.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function KeyDown(element As IWebElement, theKey As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.KeyDown*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the key sent is not is not one
+          of <xref href="OpenQA.Selenium.Keys.Shift" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Control" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Alt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.Meta" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Command" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftAlt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.LeftControl" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftShift" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Actions.KeyDown(IWebElement, String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.KeyDown(OpenQA.Selenium.IWebElement, String)
+  name.vb: KeyDown(IWebElement, String)
+- uid: OpenQA.Selenium.Interactions.Actions.KeyUp(System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.KeyUp(System.String)
+  id: KeyUp(System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: KeyUp(string)
+  nameWithType: Actions.KeyUp(string)
+  fullName: OpenQA.Selenium.Interactions.Actions.KeyUp(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: KeyUp
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 275
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sends a modifier key up message to the browser.
+  example: []
+  syntax:
+    content: public Actions KeyUp(string theKey)
+    parameters:
+    - id: theKey
+      type: System.String
+      description: The key to be sent.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function KeyUp(theKey As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.KeyUp*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the key sent is not is not one
+          of <xref href="OpenQA.Selenium.Keys.Shift" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Control" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Alt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.Meta" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Command" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftAlt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.LeftControl" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftShift" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Actions.KeyUp(String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.KeyUp(String)
+  name.vb: KeyUp(String)
+- uid: OpenQA.Selenium.Interactions.Actions.KeyUp(OpenQA.Selenium.IWebElement,System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.KeyUp(OpenQA.Selenium.IWebElement,System.String)
+  id: KeyUp(OpenQA.Selenium.IWebElement,System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: KeyUp(IWebElement, string)
+  nameWithType: Actions.KeyUp(IWebElement, string)
+  fullName: OpenQA.Selenium.Interactions.Actions.KeyUp(OpenQA.Selenium.IWebElement, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: KeyUp
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 290
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sends a modifier up down message to the specified element in the browser.
+  example: []
+  syntax:
+    content: public Actions KeyUp(IWebElement element, string theKey)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to which to send the key command.
+    - id: theKey
+      type: System.String
+      description: The key to be sent.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function KeyUp(element As IWebElement, theKey As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.KeyUp*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the key sent is not is not one
+          of <xref href="OpenQA.Selenium.Keys.Shift" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Control" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Alt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.Meta" data-throw-if-not-resolved="false"></xref>, <xref href="OpenQA.Selenium.Keys.Command" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftAlt" data-throw-if-not-resolved="false"></xref>,
+          <xref href="OpenQA.Selenium.Keys.LeftControl" data-throw-if-not-resolved="false"></xref>,<xref href="OpenQA.Selenium.Keys.LeftShift" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: Actions.KeyUp(IWebElement, String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.KeyUp(OpenQA.Selenium.IWebElement, String)
+  name.vb: KeyUp(IWebElement, String)
+- uid: OpenQA.Selenium.Interactions.Actions.SendKeys(System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.SendKeys(System.String)
+  id: SendKeys(System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: SendKeys(string)
+  nameWithType: Actions.SendKeys(string)
+  fullName: OpenQA.Selenium.Interactions.Actions.SendKeys(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendKeys
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 314
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sends a sequence of keystrokes to the browser.
+  example: []
+  syntax:
+    content: public Actions SendKeys(string keysToSend)
+    parameters:
+    - id: keysToSend
+      type: System.String
+      description: The keystrokes to send to the browser.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function SendKeys(keysToSend As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.SendKeys*
+  nameWithType.vb: Actions.SendKeys(String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.SendKeys(String)
+  name.vb: SendKeys(String)
+- uid: OpenQA.Selenium.Interactions.Actions.SendKeys(OpenQA.Selenium.IWebElement,System.String)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.SendKeys(OpenQA.Selenium.IWebElement,System.String)
+  id: SendKeys(OpenQA.Selenium.IWebElement,System.String)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: SendKeys(IWebElement, string)
+  nameWithType: Actions.SendKeys(IWebElement, string)
+  fullName: OpenQA.Selenium.Interactions.Actions.SendKeys(OpenQA.Selenium.IWebElement, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendKeys
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 325
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Sends a sequence of keystrokes to the specified element in the browser.
+  example: []
+  syntax:
+    content: public Actions SendKeys(IWebElement element, string keysToSend)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to which to send the keystrokes.
+    - id: keysToSend
+      type: System.String
+      description: The keystrokes to send to the browser.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function SendKeys(element As IWebElement, keysToSend As String) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.SendKeys*
+  nameWithType.vb: Actions.SendKeys(IWebElement, String)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.SendKeys(OpenQA.Selenium.IWebElement, String)
+  name.vb: SendKeys(IWebElement, String)
+- uid: OpenQA.Selenium.Interactions.Actions.ClickAndHold(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ClickAndHold(OpenQA.Selenium.IWebElement)
+  id: ClickAndHold(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ClickAndHold(IWebElement)
+  nameWithType: Actions.ClickAndHold(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.ClickAndHold(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClickAndHold
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 354
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Clicks and holds the mouse button down on the specified element.
+  example: []
+  syntax:
+    content: public Actions ClickAndHold(IWebElement onElement)
+    parameters:
+    - id: onElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which to click and hold.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ClickAndHold(onElement As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ClickAndHold*
+- uid: OpenQA.Selenium.Interactions.Actions.ClickAndHold
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ClickAndHold
+  id: ClickAndHold
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ClickAndHold()
+  nameWithType: Actions.ClickAndHold()
+  fullName: OpenQA.Selenium.Interactions.Actions.ClickAndHold()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClickAndHold
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 364
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Clicks and holds the mouse button at the last known mouse coordinates.
+  example: []
+  syntax:
+    content: public Actions ClickAndHold()
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ClickAndHold() As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ClickAndHold*
+- uid: OpenQA.Selenium.Interactions.Actions.Release(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Release(OpenQA.Selenium.IWebElement)
+  id: Release(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Release(IWebElement)
+  nameWithType: Actions.Release(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.Release(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Release
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 375
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Releases the mouse button on the specified element.
+  example: []
+  syntax:
+    content: public Actions Release(IWebElement onElement)
+    parameters:
+    - id: onElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which to release the button.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Release(onElement As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.Release*
+- uid: OpenQA.Selenium.Interactions.Actions.Release
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Release
+  id: Release
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Release()
+  nameWithType: Actions.Release()
+  fullName: OpenQA.Selenium.Interactions.Actions.Release()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Release
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 385
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Releases the mouse button at the last known mouse coordinates.
+  example: []
+  syntax:
+    content: public Actions Release()
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Release() As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.Release*
+- uid: OpenQA.Selenium.Interactions.Actions.Click(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Click(OpenQA.Selenium.IWebElement)
+  id: Click(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Click(IWebElement)
+  nameWithType: Actions.Click(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.Click(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Click
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 396
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Clicks the mouse on the specified element.
+  example: []
+  syntax:
+    content: public Actions Click(IWebElement onElement)
+    parameters:
+    - id: onElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which to click.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Click(onElement As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.Click*
+- uid: OpenQA.Selenium.Interactions.Actions.Click
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Click
+  id: Click
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Click()
+  nameWithType: Actions.Click()
+  fullName: OpenQA.Selenium.Interactions.Actions.Click()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Click
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 406
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Clicks the mouse at the last known mouse coordinates.
+  example: []
+  syntax:
+    content: public Actions Click()
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Click() As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.Click*
+- uid: OpenQA.Selenium.Interactions.Actions.DoubleClick(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.DoubleClick(OpenQA.Selenium.IWebElement)
+  id: DoubleClick(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: DoubleClick(IWebElement)
+  nameWithType: Actions.DoubleClick(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.DoubleClick(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DoubleClick
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 418
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Double-clicks the mouse on the specified element.
+  example: []
+  syntax:
+    content: public Actions DoubleClick(IWebElement onElement)
+    parameters:
+    - id: onElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which to double-click.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function DoubleClick(onElement As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.DoubleClick*
+- uid: OpenQA.Selenium.Interactions.Actions.DoubleClick
+  commentId: M:OpenQA.Selenium.Interactions.Actions.DoubleClick
+  id: DoubleClick
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: DoubleClick()
+  nameWithType: Actions.DoubleClick()
+  fullName: OpenQA.Selenium.Interactions.Actions.DoubleClick()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DoubleClick
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 428
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Double-clicks the mouse at the last known mouse coordinates.
+  example: []
+  syntax:
+    content: public Actions DoubleClick()
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function DoubleClick() As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.DoubleClick*
+- uid: OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement)
+  id: MoveToElement(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: MoveToElement(IWebElement)
+  nameWithType: Actions.MoveToElement(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MoveToElement
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 442
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Moves the mouse to the specified element.
+  example: []
+  syntax:
+    content: public Actions MoveToElement(IWebElement toElement)
+    parameters:
+    - id: toElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element to which to move the mouse.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function MoveToElement(toElement As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.MoveToElement*
+- uid: OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  id: MoveToElement(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: MoveToElement(IWebElement, int, int)
+  nameWithType: Actions.MoveToElement(IWebElement, int, int)
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement, int, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MoveToElement
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 460
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: >-
+    Moves the mouse to the specified offset of the top-left corner of the specified element.
+
+    In Selenium 4.3 the origin for the offset will be the in-view center point of the element.
+  example: []
+  syntax:
+    content: public Actions MoveToElement(IWebElement toElement, int offsetX, int offsetY)
+    parameters:
+    - id: toElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element to which to move the mouse.
+    - id: offsetX
+      type: System.Int32
+      description: The horizontal offset to which to move the mouse.
+    - id: offsetY
+      type: System.Int32
+      description: The vertical offset to which to move the mouse.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function MoveToElement(toElement As IWebElement, offsetX As Integer, offsetY As Integer) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.MoveToElement*
+  nameWithType.vb: Actions.MoveToElement(IWebElement, Integer, Integer)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.MoveToElement(OpenQA.Selenium.IWebElement, Integer, Integer)
+  name.vb: MoveToElement(IWebElement, Integer, Integer)
+- uid: OpenQA.Selenium.Interactions.Actions.MoveByOffset(System.Int32,System.Int32)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.MoveByOffset(System.Int32,System.Int32)
+  id: MoveByOffset(System.Int32,System.Int32)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: MoveByOffset(int, int)
+  nameWithType: Actions.MoveByOffset(int, int)
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveByOffset(int, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MoveByOffset
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 472
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Moves the mouse to the specified offset of the last known mouse coordinates.
+  example: []
+  syntax:
+    content: public Actions MoveByOffset(int offsetX, int offsetY)
+    parameters:
+    - id: offsetX
+      type: System.Int32
+      description: The horizontal offset to which to move the mouse.
+    - id: offsetY
+      type: System.Int32
+      description: The vertical offset to which to move the mouse.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function MoveByOffset(offsetX As Integer, offsetY As Integer) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.MoveByOffset*
+  nameWithType.vb: Actions.MoveByOffset(Integer, Integer)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.MoveByOffset(Integer, Integer)
+  name.vb: MoveByOffset(Integer, Integer)
+- uid: OpenQA.Selenium.Interactions.Actions.MoveToLocation(System.Int32,System.Int32)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.MoveToLocation(System.Int32,System.Int32)
+  id: MoveToLocation(System.Int32,System.Int32)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: MoveToLocation(int, int)
+  nameWithType: Actions.MoveToLocation(int, int)
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveToLocation(int, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MoveToLocation
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 484
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Moves the mouse from the upper left corner of the current viewport by the provided offset.
+  example: []
+  syntax:
+    content: public Actions MoveToLocation(int offsetX, int offsetY)
+    parameters:
+    - id: offsetX
+      type: System.Int32
+      description: The horizontal offset to which to move the mouse.
+    - id: offsetY
+      type: System.Int32
+      description: The vertical offset to which to move the mouse.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function MoveToLocation(offsetX As Integer, offsetY As Integer) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.MoveToLocation*
+  nameWithType.vb: Actions.MoveToLocation(Integer, Integer)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.MoveToLocation(Integer, Integer)
+  name.vb: MoveToLocation(Integer, Integer)
+- uid: OpenQA.Selenium.Interactions.Actions.ContextClick(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ContextClick(OpenQA.Selenium.IWebElement)
+  id: ContextClick(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ContextClick(IWebElement)
+  nameWithType: Actions.ContextClick(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.ContextClick(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContextClick
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 495
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Right-clicks the mouse on the specified element.
+  example: []
+  syntax:
+    content: public Actions ContextClick(IWebElement onElement)
+    parameters:
+    - id: onElement
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which to right-click.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ContextClick(onElement As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ContextClick*
+- uid: OpenQA.Selenium.Interactions.Actions.ContextClick
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ContextClick
+  id: ContextClick
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ContextClick()
+  nameWithType: Actions.ContextClick()
+  fullName: OpenQA.Selenium.Interactions.Actions.ContextClick()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContextClick
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 505
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Right-clicks the mouse at the last known mouse coordinates.
+  example: []
+  syntax:
+    content: public Actions ContextClick()
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ContextClick() As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ContextClick*
+- uid: OpenQA.Selenium.Interactions.Actions.DragAndDrop(OpenQA.Selenium.IWebElement,OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.DragAndDrop(OpenQA.Selenium.IWebElement,OpenQA.Selenium.IWebElement)
+  id: DragAndDrop(OpenQA.Selenium.IWebElement,OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: DragAndDrop(IWebElement, IWebElement)
+  nameWithType: Actions.DragAndDrop(IWebElement, IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.DragAndDrop(OpenQA.Selenium.IWebElement, OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DragAndDrop
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 518
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Performs a drag-and-drop operation from one element to another.
+  example: []
+  syntax:
+    content: public Actions DragAndDrop(IWebElement source, IWebElement target)
+    parameters:
+    - id: source
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which the drag operation is started.
+    - id: target
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which the drop is performed.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function DragAndDrop(source As IWebElement, target As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.DragAndDrop*
+- uid: OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  id: DragAndDropToOffset(OpenQA.Selenium.IWebElement,System.Int32,System.Int32)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: DragAndDropToOffset(IWebElement, int, int)
+  nameWithType: Actions.DragAndDropToOffset(IWebElement, int, int)
+  fullName: OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset(OpenQA.Selenium.IWebElement, int, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DragAndDropToOffset
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 531
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Performs a drag-and-drop operation on one element to a specified offset.
+  example: []
+  syntax:
+    content: public Actions DragAndDropToOffset(IWebElement source, int offsetX, int offsetY)
+    parameters:
+    - id: source
+      type: OpenQA.Selenium.IWebElement
+      description: The element on which the drag operation is started.
+    - id: offsetX
+      type: System.Int32
+      description: The horizontal offset to which to move the mouse.
+    - id: offsetY
+      type: System.Int32
+      description: The vertical offset to which to move the mouse.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function DragAndDropToOffset(source As IWebElement, offsetX As Integer, offsetY As Integer) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset*
+  nameWithType.vb: Actions.DragAndDropToOffset(IWebElement, Integer, Integer)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset(OpenQA.Selenium.IWebElement, Integer, Integer)
+  name.vb: DragAndDropToOffset(IWebElement, Integer, Integer)
+- uid: OpenQA.Selenium.Interactions.Actions.ScrollToElement(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ScrollToElement(OpenQA.Selenium.IWebElement)
+  id: ScrollToElement(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ScrollToElement(IWebElement)
+  nameWithType: Actions.ScrollToElement(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.ScrollToElement(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScrollToElement
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 542
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: If the element is outside the viewport, scrolls the bottom of the element to the bottom of the viewport.
+  example: []
+  syntax:
+    content: public Actions ScrollToElement(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: Which element to scroll into the viewport.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ScrollToElement(element As IWebElement) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ScrollToElement*
+- uid: OpenQA.Selenium.Interactions.Actions.ScrollByAmount(System.Int32,System.Int32)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ScrollByAmount(System.Int32,System.Int32)
+  id: ScrollByAmount(System.Int32,System.Int32)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ScrollByAmount(int, int)
+  nameWithType: Actions.ScrollByAmount(int, int)
+  fullName: OpenQA.Selenium.Interactions.Actions.ScrollByAmount(int, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScrollByAmount
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 555
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Scrolls by provided amounts with the origin in the top left corner of the viewport.
+  example: []
+  syntax:
+    content: public Actions ScrollByAmount(int deltaX, int deltaY)
+    parameters:
+    - id: deltaX
+      type: System.Int32
+      description: Distance along X axis to scroll using the wheel. A negative value scrolls left.
+    - id: deltaY
+      type: System.Int32
+      description: Distance along Y axis to scroll using the wheel. A negative value scrolls up.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ScrollByAmount(deltaX As Integer, deltaY As Integer) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ScrollByAmount*
+  nameWithType.vb: Actions.ScrollByAmount(Integer, Integer)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.ScrollByAmount(Integer, Integer)
+  name.vb: ScrollByAmount(Integer, Integer)
+- uid: OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin(OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin,System.Int32,System.Int32)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin(OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin,System.Int32,System.Int32)
+  id: ScrollFromOrigin(OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin,System.Int32,System.Int32)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: ScrollFromOrigin(ScrollOrigin, int, int)
+  nameWithType: Actions.ScrollFromOrigin(WheelInputDevice.ScrollOrigin, int, int)
+  fullName: OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin(OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin, int, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScrollFromOrigin
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 575
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Scrolls by provided amount based on a provided origin.
+  remarks: >-
+    The scroll origin is either the center of an element or the upper left of the viewport plus any offsets.
+
+    If the origin is an element, and the element is not in the viewport, the bottom of the element will first
+
+    be scrolled to the bottom of the viewport.
+  example: []
+  syntax:
+    content: public Actions ScrollFromOrigin(WheelInputDevice.ScrollOrigin scrollOrigin, int deltaX, int deltaY)
+    parameters:
+    - id: scrollOrigin
+      type: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin
+      description: Where scroll originates (viewport or element center) plus provided offsets.
+    - id: deltaX
+      type: System.Int32
+      description: Distance along X axis to scroll using the wheel. A negative value scrolls left.
+    - id: deltaY
+      type: System.Int32
+      description: Distance along Y axis to scroll using the wheel. A negative value scrolls up.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function ScrollFromOrigin(scrollOrigin As WheelInputDevice.ScrollOrigin, deltaX As Integer, deltaY As Integer) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin*
+  exceptions:
+  - type: OpenQA.Selenium.MoveTargetOutOfBoundsException
+    commentId: T:OpenQA.Selenium.MoveTargetOutOfBoundsException
+    description: If the origin with offset is outside the viewport.
+  nameWithType.vb: Actions.ScrollFromOrigin(WheelInputDevice.ScrollOrigin, Integer, Integer)
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin(OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin, Integer, Integer)
+  name.vb: ScrollFromOrigin(ScrollOrigin, Integer, Integer)
+- uid: OpenQA.Selenium.Interactions.Actions.Pause(System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Pause(System.TimeSpan)
+  id: Pause(System.TimeSpan)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Pause(TimeSpan)
+  nameWithType: Actions.Pause(TimeSpan)
+  fullName: OpenQA.Selenium.Interactions.Actions.Pause(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Pause
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 601
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Performs a Pause.
+  example: []
+  syntax:
+    content: public Actions Pause(TimeSpan duration)
+    parameters:
+    - id: duration
+      type: System.TimeSpan
+      description: How long to pause the action chain.
+    return:
+      type: OpenQA.Selenium.Interactions.Actions
+      description: A self-reference to this <xref href="OpenQA.Selenium.Interactions.Actions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function Pause(duration As TimeSpan) As Actions
+  overload: OpenQA.Selenium.Interactions.Actions.Pause*
+- uid: OpenQA.Selenium.Interactions.Actions.Build
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Build
+  id: Build
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Build()
+  nameWithType: Actions.Build()
+  fullName: OpenQA.Selenium.Interactions.Actions.Build()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Build
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 611
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Builds the sequence of actions.
+  example: []
+  syntax:
+    content: public IAction Build()
+    return:
+      type: OpenQA.Selenium.Interactions.IAction
+      description: A composite <xref href="OpenQA.Selenium.Interactions.IAction" data-throw-if-not-resolved="false"></xref> which can be used to perform the actions.
+    content.vb: Public Function Build() As IAction
+  overload: OpenQA.Selenium.Interactions.Actions.Build*
+- uid: OpenQA.Selenium.Interactions.Actions.Perform
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Perform
+  id: Perform
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Perform()
+  nameWithType: Actions.Perform()
+  fullName: OpenQA.Selenium.Interactions.Actions.Perform()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Perform
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 619
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Performs the currently built action.
+  example: []
+  syntax:
+    content: public void Perform()
+    content.vb: Public Sub Perform()
+  overload: OpenQA.Selenium.Interactions.Actions.Perform*
+  implements:
+  - OpenQA.Selenium.Interactions.IAction.Perform
+- uid: OpenQA.Selenium.Interactions.Actions.Reset
+  commentId: M:OpenQA.Selenium.Interactions.Actions.Reset
+  id: Reset
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: Actions.Reset()
+  fullName: OpenQA.Selenium.Interactions.Actions.Reset()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Reset
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 628
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Clears the list of actions to be performed.
+  example: []
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset()
+  overload: OpenQA.Selenium.Interactions.Actions.Reset*
+- uid: OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement(OpenQA.Selenium.IWebElement)
+  id: GetLocatableFromElement(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.Interactions.Actions
+  langs:
+  - csharp
+  - vb
+  name: GetLocatableFromElement(IWebElement)
+  nameWithType: Actions.GetLocatableFromElement(IWebElement)
+  fullName: OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Actions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetLocatableFromElement
+    path: ../src/webdriver/Interactions/Actions.cs
+    startLine: 638
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the <xref href="OpenQA.Selenium.ILocatable" data-throw-if-not-resolved="false"></xref> instance of the specified <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected static ILocatable GetLocatableFromElement(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref> to get the location of.
+    return:
+      type: OpenQA.Selenium.ILocatable
+      description: The <xref href="OpenQA.Selenium.ILocatable" data-throw-if-not-resolved="false"></xref> of the <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Protected Shared Function GetLocatableFromElement(element As IWebElement) As ILocatable
+  overload: OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement*
+references:
+- uid: OpenQA.Selenium.Interactions
+  commentId: N:OpenQA.Selenium.Interactions
+  href: OpenQA.html
+  name: OpenQA.Selenium.Interactions
+  nameWithType: OpenQA.Selenium.Interactions
+  fullName: OpenQA.Selenium.Interactions
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.Interactions.IAction
+  commentId: T:OpenQA.Selenium.Interactions.IAction
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.IAction.html
+  name: IAction
+  nameWithType: IAction
+  fullName: OpenQA.Selenium.Interactions.IAction
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Interactions.Actions
+  commentId: T:OpenQA.Selenium.Interactions.Actions
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.Actions.html
+  name: Actions
+  nameWithType: Actions
+  fullName: OpenQA.Selenium.Interactions.Actions
+- uid: OpenQA.Selenium.IWebDriver
+  commentId: T:OpenQA.Selenium.IWebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebDriver.html
+  name: IWebDriver
+  nameWithType: IWebDriver
+  fullName: OpenQA.Selenium.IWebDriver
+- uid: OpenQA.Selenium.Interactions.Actions.#ctor*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.#ctor
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions__ctor_OpenQA_Selenium_IWebDriver_
+  name: Actions
+  nameWithType: Actions.Actions
+  fullName: OpenQA.Selenium.Interactions.Actions.Actions
+  nameWithType.vb: Actions.New
+  fullName.vb: OpenQA.Selenium.Interactions.Actions.New
+  name.vb: New
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium.IActionExecutor
+  commentId: T:OpenQA.Selenium.IActionExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IActionExecutor.html
+  name: IActionExecutor
+  nameWithType: IActionExecutor
+  fullName: OpenQA.Selenium.IActionExecutor
+- uid: OpenQA.Selenium.Interactions.Actions.ActionExecutor*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.ActionExecutor
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_ActionExecutor
+  name: ActionExecutor
+  nameWithType: Actions.ActionExecutor
+  fullName: OpenQA.Selenium.Interactions.Actions.ActionExecutor
+- uid: OpenQA.Selenium.Interactions.Actions.SetActivePointer*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.SetActivePointer
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_SetActivePointer_OpenQA_Selenium_Interactions_PointerKind_System_String_
+  name: SetActivePointer
+  nameWithType: Actions.SetActivePointer
+  fullName: OpenQA.Selenium.Interactions.Actions.SetActivePointer
+- uid: OpenQA.Selenium.Interactions.PointerKind
+  commentId: T:OpenQA.Selenium.Interactions.PointerKind
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.PointerKind.html
+  name: PointerKind
+  nameWithType: PointerKind
+  fullName: OpenQA.Selenium.Interactions.PointerKind
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_SetActiveKeyboard_System_String_
+  name: SetActiveKeyboard
+  nameWithType: Actions.SetActiveKeyboard
+  fullName: OpenQA.Selenium.Interactions.Actions.SetActiveKeyboard
+- uid: OpenQA.Selenium.Interactions.Actions.SetActiveWheel*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.SetActiveWheel
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_SetActiveWheel_System_String_
+  name: SetActiveWheel
+  nameWithType: Actions.SetActiveWheel
+  fullName: OpenQA.Selenium.Interactions.Actions.SetActiveWheel
+- uid: OpenQA.Selenium.Interactions.Actions.GetActivePointer*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.GetActivePointer
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_GetActivePointer
+  name: GetActivePointer
+  nameWithType: Actions.GetActivePointer
+  fullName: OpenQA.Selenium.Interactions.Actions.GetActivePointer
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.PointerInputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html
+  name: PointerInputDevice
+  nameWithType: PointerInputDevice
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice
+- uid: OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_GetActiveKeyboard
+  name: GetActiveKeyboard
+  nameWithType: Actions.GetActiveKeyboard
+  fullName: OpenQA.Selenium.Interactions.Actions.GetActiveKeyboard
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.KeyInputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html
+  name: KeyInputDevice
+  nameWithType: KeyInputDevice
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice
+- uid: OpenQA.Selenium.Interactions.Actions.GetActiveWheel*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.GetActiveWheel
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_GetActiveWheel
+  name: GetActiveWheel
+  nameWithType: Actions.GetActiveWheel
+  fullName: OpenQA.Selenium.Interactions.Actions.GetActiveWheel
+- uid: OpenQA.Selenium.Interactions.WheelInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.WheelInputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.WheelInputDevice.html
+  name: WheelInputDevice
+  nameWithType: WheelInputDevice
+  fullName: OpenQA.Selenium.Interactions.WheelInputDevice
+- uid: OpenQA.Selenium.Keys.Shift
+  commentId: F:OpenQA.Selenium.Keys.Shift
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_Shift
+  name: Shift
+  nameWithType: Keys.Shift
+  fullName: OpenQA.Selenium.Keys.Shift
+- uid: OpenQA.Selenium.Keys.Control
+  commentId: F:OpenQA.Selenium.Keys.Control
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_Control
+  name: Control
+  nameWithType: Keys.Control
+  fullName: OpenQA.Selenium.Keys.Control
+- uid: OpenQA.Selenium.Keys.Alt
+  commentId: F:OpenQA.Selenium.Keys.Alt
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_Alt
+  name: Alt
+  nameWithType: Keys.Alt
+  fullName: OpenQA.Selenium.Keys.Alt
+- uid: OpenQA.Selenium.Keys.Meta
+  commentId: F:OpenQA.Selenium.Keys.Meta
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_Meta
+  name: Meta
+  nameWithType: Keys.Meta
+  fullName: OpenQA.Selenium.Keys.Meta
+- uid: OpenQA.Selenium.Keys.Command
+  commentId: F:OpenQA.Selenium.Keys.Command
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_Command
+  name: Command
+  nameWithType: Keys.Command
+  fullName: OpenQA.Selenium.Keys.Command
+- uid: OpenQA.Selenium.Keys.LeftAlt
+  commentId: F:OpenQA.Selenium.Keys.LeftAlt
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_LeftAlt
+  name: LeftAlt
+  nameWithType: Keys.LeftAlt
+  fullName: OpenQA.Selenium.Keys.LeftAlt
+- uid: OpenQA.Selenium.Keys.LeftControl
+  commentId: F:OpenQA.Selenium.Keys.LeftControl
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_LeftControl
+  name: LeftControl
+  nameWithType: Keys.LeftControl
+  fullName: OpenQA.Selenium.Keys.LeftControl
+- uid: OpenQA.Selenium.Keys.LeftShift
+  commentId: F:OpenQA.Selenium.Keys.LeftShift
+  href: OpenQA.Selenium.Keys.html#OpenQA_Selenium_Keys_LeftShift
+  name: LeftShift
+  nameWithType: Keys.LeftShift
+  fullName: OpenQA.Selenium.Keys.LeftShift
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OpenQA.Selenium.Interactions.Actions.KeyDown*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.KeyDown
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_KeyDown_System_String_
+  name: KeyDown
+  nameWithType: Actions.KeyDown
+  fullName: OpenQA.Selenium.Interactions.Actions.KeyDown
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebElement.html
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+- uid: OpenQA.Selenium.Interactions.Actions.KeyUp*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.KeyUp
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_KeyUp_System_String_
+  name: KeyUp
+  nameWithType: Actions.KeyUp
+  fullName: OpenQA.Selenium.Interactions.Actions.KeyUp
+- uid: OpenQA.Selenium.Interactions.Actions.SendKeys*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.SendKeys
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_SendKeys_System_String_
+  name: SendKeys
+  nameWithType: Actions.SendKeys
+  fullName: OpenQA.Selenium.Interactions.Actions.SendKeys
+- uid: OpenQA.Selenium.Interactions.Actions.ClickAndHold*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.ClickAndHold
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_ClickAndHold_OpenQA_Selenium_IWebElement_
+  name: ClickAndHold
+  nameWithType: Actions.ClickAndHold
+  fullName: OpenQA.Selenium.Interactions.Actions.ClickAndHold
+- uid: OpenQA.Selenium.Interactions.Actions.Release*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.Release
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_Release_OpenQA_Selenium_IWebElement_
+  name: Release
+  nameWithType: Actions.Release
+  fullName: OpenQA.Selenium.Interactions.Actions.Release
+- uid: OpenQA.Selenium.Interactions.Actions.Click*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.Click
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_Click_OpenQA_Selenium_IWebElement_
+  name: Click
+  nameWithType: Actions.Click
+  fullName: OpenQA.Selenium.Interactions.Actions.Click
+- uid: OpenQA.Selenium.Interactions.Actions.DoubleClick*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.DoubleClick
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_DoubleClick_OpenQA_Selenium_IWebElement_
+  name: DoubleClick
+  nameWithType: Actions.DoubleClick
+  fullName: OpenQA.Selenium.Interactions.Actions.DoubleClick
+- uid: OpenQA.Selenium.Interactions.Actions.MoveToElement*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.MoveToElement
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_MoveToElement_OpenQA_Selenium_IWebElement_
+  name: MoveToElement
+  nameWithType: Actions.MoveToElement
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveToElement
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OpenQA.Selenium.Interactions.Actions.MoveByOffset*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.MoveByOffset
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_MoveByOffset_System_Int32_System_Int32_
+  name: MoveByOffset
+  nameWithType: Actions.MoveByOffset
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveByOffset
+- uid: OpenQA.Selenium.Interactions.Actions.MoveToLocation*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.MoveToLocation
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_MoveToLocation_System_Int32_System_Int32_
+  name: MoveToLocation
+  nameWithType: Actions.MoveToLocation
+  fullName: OpenQA.Selenium.Interactions.Actions.MoveToLocation
+- uid: OpenQA.Selenium.Interactions.Actions.ContextClick*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.ContextClick
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_ContextClick_OpenQA_Selenium_IWebElement_
+  name: ContextClick
+  nameWithType: Actions.ContextClick
+  fullName: OpenQA.Selenium.Interactions.Actions.ContextClick
+- uid: OpenQA.Selenium.Interactions.Actions.DragAndDrop*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.DragAndDrop
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_DragAndDrop_OpenQA_Selenium_IWebElement_OpenQA_Selenium_IWebElement_
+  name: DragAndDrop
+  nameWithType: Actions.DragAndDrop
+  fullName: OpenQA.Selenium.Interactions.Actions.DragAndDrop
+- uid: OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_DragAndDropToOffset_OpenQA_Selenium_IWebElement_System_Int32_System_Int32_
+  name: DragAndDropToOffset
+  nameWithType: Actions.DragAndDropToOffset
+  fullName: OpenQA.Selenium.Interactions.Actions.DragAndDropToOffset
+- uid: OpenQA.Selenium.Interactions.Actions.ScrollToElement*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.ScrollToElement
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_ScrollToElement_OpenQA_Selenium_IWebElement_
+  name: ScrollToElement
+  nameWithType: Actions.ScrollToElement
+  fullName: OpenQA.Selenium.Interactions.Actions.ScrollToElement
+- uid: OpenQA.Selenium.Interactions.Actions.ScrollByAmount*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.ScrollByAmount
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_ScrollByAmount_System_Int32_System_Int32_
+  name: ScrollByAmount
+  nameWithType: Actions.ScrollByAmount
+  fullName: OpenQA.Selenium.Interactions.Actions.ScrollByAmount
+- uid: OpenQA.Selenium.MoveTargetOutOfBoundsException
+  commentId: T:OpenQA.Selenium.MoveTargetOutOfBoundsException
+  href: OpenQA.Selenium.MoveTargetOutOfBoundsException.html
+  name: MoveTargetOutOfBoundsException
+  nameWithType: MoveTargetOutOfBoundsException
+  fullName: OpenQA.Selenium.MoveTargetOutOfBoundsException
+- uid: OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_ScrollFromOrigin_OpenQA_Selenium_Interactions_WheelInputDevice_ScrollOrigin_System_Int32_System_Int32_
+  name: ScrollFromOrigin
+  nameWithType: Actions.ScrollFromOrigin
+  fullName: OpenQA.Selenium.Interactions.Actions.ScrollFromOrigin
+- uid: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin
+  commentId: T:OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.WheelInputDevice.html
+  name: WheelInputDevice.ScrollOrigin
+  nameWithType: WheelInputDevice.ScrollOrigin
+  fullName: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.WheelInputDevice
+    name: WheelInputDevice
+    href: OpenQA.Selenium.Interactions.WheelInputDevice.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin
+    name: ScrollOrigin
+    href: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin.html
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.WheelInputDevice
+    name: WheelInputDevice
+    href: OpenQA.Selenium.Interactions.WheelInputDevice.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin
+    name: ScrollOrigin
+    href: OpenQA.Selenium.Interactions.WheelInputDevice.ScrollOrigin.html
+- uid: OpenQA.Selenium.Interactions.Actions.Pause*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.Pause
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_Pause_System_TimeSpan_
+  name: Pause
+  nameWithType: Actions.Pause
+  fullName: OpenQA.Selenium.Interactions.Actions.Pause
+- uid: OpenQA.Selenium.Interactions.Actions.Build*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.Build
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_Build
+  name: Build
+  nameWithType: Actions.Build
+  fullName: OpenQA.Selenium.Interactions.Actions.Build
+- uid: OpenQA.Selenium.Interactions.Actions.Perform*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.Perform
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_Perform
+  name: Perform
+  nameWithType: Actions.Perform
+  fullName: OpenQA.Selenium.Interactions.Actions.Perform
+- uid: OpenQA.Selenium.Interactions.IAction.Perform
+  commentId: M:OpenQA.Selenium.Interactions.IAction.Perform
+  parent: OpenQA.Selenium.Interactions.IAction
+  href: OpenQA.Selenium.Interactions.IAction.html#OpenQA_Selenium_Interactions_IAction_Perform
+  name: Perform()
+  nameWithType: IAction.Perform()
+  fullName: OpenQA.Selenium.Interactions.IAction.Perform()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.IAction.Perform
+    name: Perform
+    href: OpenQA.Selenium.Interactions.IAction.html#OpenQA_Selenium_Interactions_IAction_Perform
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.IAction.Perform
+    name: Perform
+    href: OpenQA.Selenium.Interactions.IAction.html#OpenQA_Selenium_Interactions_IAction_Perform
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.Actions.Reset*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.Reset
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_Reset
+  name: Reset
+  nameWithType: Actions.Reset
+  fullName: OpenQA.Selenium.Interactions.Actions.Reset
+- uid: OpenQA.Selenium.ILocatable
+  commentId: T:OpenQA.Selenium.ILocatable
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ILocatable.html
+  name: ILocatable
+  nameWithType: ILocatable
+  fullName: OpenQA.Selenium.ILocatable
+- uid: OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement*
+  commentId: Overload:OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement
+  href: OpenQA.Selenium.Interactions.Actions.html#OpenQA_Selenium_Interactions_Actions_GetLocatableFromElement_OpenQA_Selenium_IWebElement_
+  name: GetLocatableFromElement
+  nameWithType: Actions.GetLocatableFromElement
+  fullName: OpenQA.Selenium.Interactions.Actions.GetLocatableFromElement

@@ -1,0 +1,920 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request
+  commentId: T:OpenQA.Selenium.DevTools.V85.Network.Request
+  id: Request
+  parent: OpenQA.Selenium.DevTools.V85.Network
+  children:
+  - OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData
+  - OpenQA.Selenium.DevTools.V85.Network.Request.Headers
+  - OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority
+  - OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload
+  - OpenQA.Selenium.DevTools.V85.Network.Request.Method
+  - OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType
+  - OpenQA.Selenium.DevTools.V85.Network.Request.PostData
+  - OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy
+  - OpenQA.Selenium.DevTools.V85.Network.Request.Url
+  - OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment
+  langs:
+  - csharp
+  - vb
+  name: Request
+  nameWithType: Request
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Request
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: HTTP request data.
+  example: []
+  syntax:
+    content: public sealed class Request
+    content.vb: Public NotInheritable Class Request
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.Url
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: Request.Url
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: Request URL (without fragment).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment
+  id: UrlFragment
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: UrlFragment
+  nameWithType: Request.UrlFragment
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UrlFragment
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: Fragment of the requested URL starting with hash, if present.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("urlFragment", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string UrlFragment { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("urlFragment", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UrlFragment As String
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: urlFragment
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.Method
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.Method
+  id: Method
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: Method
+  nameWithType: Request.Method
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.Method
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Method
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: HTTP request method.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("method")]
+
+      public string Method { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("method")>
+
+      Public Property Method As String
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.Method*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: method
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.Headers
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.Headers
+  id: Headers
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: Request.Headers
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.Headers
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Headers
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: HTTP request headers.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("headers")]
+
+      public Headers Headers { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Network.Headers
+    content.vb: >-
+      <JsonProperty("headers")>
+
+      Public Property Headers As Headers
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.Headers*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: headers
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.PostData
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.PostData
+  id: PostData
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: PostData
+  nameWithType: Request.PostData
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.PostData
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PostData
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: HTTP POST request data.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("postData", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string PostData { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("postData", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PostData As String
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.PostData*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: postData
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData
+  id: HasPostData
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: HasPostData
+  nameWithType: Request.HasPostData
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasPostData
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: True when the request has POST data. Note that postData might still be omitted when this flag is true when the data is too long.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasPostData", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasPostData { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasPostData", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasPostData As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasPostData
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType
+  id: MixedContentType
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: MixedContentType
+  nameWithType: Request.MixedContentType
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MixedContentType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: The mixed content type of the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("mixedContentType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public MixedContentType? MixedContentType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V85.Security.MixedContentType}
+    content.vb: >-
+      <JsonProperty("mixedContentType", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property MixedContentType As MixedContentType?
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: mixedContentType
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority
+  id: InitialPriority
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: InitialPriority
+  nameWithType: Request.InitialPriority
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InitialPriority
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: Priority of the resource request at the time request is sent.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("initialPriority")]
+
+      public ResourcePriority InitialPriority { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Network.ResourcePriority
+    content.vb: >-
+      <JsonProperty("initialPriority")>
+
+      Public Property InitialPriority As ResourcePriority
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: initialPriority
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy
+  id: ReferrerPolicy
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: ReferrerPolicy
+  nameWithType: Request.ReferrerPolicy
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReferrerPolicy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 85
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: The referrer policy of the request, as defined in https://www.w3.org/TR/referrer-policy/
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("referrerPolicy")]
+
+      public RequestReferrerPolicyValues ReferrerPolicy { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Network.RequestReferrerPolicyValues
+    content.vb: >-
+      <JsonProperty("referrerPolicy")>
+
+      Public Property ReferrerPolicy As RequestReferrerPolicyValues
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: referrerPolicy
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload
+  commentId: P:OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload
+  id: IsLinkPreload
+  parent: OpenQA.Selenium.DevTools.V85.Network.Request
+  langs:
+  - csharp
+  - vb
+  name: IsLinkPreload
+  nameWithType: Request.IsLinkPreload
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsLinkPreload
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Network/Request.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Network
+  summary: Whether is loaded via link preload.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isLinkPreload", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IsLinkPreload { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("isLinkPreload", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IsLinkPreload As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isLinkPreload
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Network
+  commentId: N:OpenQA.Selenium.DevTools.V85.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Network
+  nameWithType: OpenQA.Selenium.DevTools.V85.Network
+  fullName: OpenQA.Selenium.DevTools.V85.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V85.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V85.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.Url
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_Url
+  name: Url
+  nameWithType: Request.Url
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_UrlFragment
+  name: UrlFragment
+  nameWithType: Request.UrlFragment
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.UrlFragment
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.Method*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.Method
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_Method
+  name: Method
+  nameWithType: Request.Method
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.Method
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.Headers*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.Headers
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_Headers
+  name: Headers
+  nameWithType: Request.Headers
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.Headers
+- uid: OpenQA.Selenium.DevTools.V85.Network.Headers
+  commentId: T:OpenQA.Selenium.DevTools.V85.Network.Headers
+  parent: OpenQA.Selenium.DevTools.V85.Network
+  href: OpenQA.Selenium.DevTools.V85.Network.Headers.html
+  name: Headers
+  nameWithType: Headers
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Headers
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.PostData*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.PostData
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_PostData
+  name: PostData
+  nameWithType: Request.PostData
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.PostData
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_HasPostData
+  name: HasPostData
+  nameWithType: Request.HasPostData
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.HasPostData
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_MixedContentType
+  name: MixedContentType
+  nameWithType: Request.MixedContentType
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.MixedContentType
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V85.Security.MixedContentType}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V85.Security.MixedContentType}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V85.Security.MixedContentType.html
+  name: MixedContentType?
+  nameWithType: MixedContentType?
+  fullName: OpenQA.Selenium.DevTools.V85.Security.MixedContentType?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.Security.MixedContentType
+    name: MixedContentType
+    href: OpenQA.Selenium.DevTools.V85.Security.MixedContentType.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.Security.MixedContentType
+    name: MixedContentType
+    href: OpenQA.Selenium.DevTools.V85.Security.MixedContentType.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_InitialPriority
+  name: InitialPriority
+  nameWithType: Request.InitialPriority
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.InitialPriority
+- uid: OpenQA.Selenium.DevTools.V85.Network.ResourcePriority
+  commentId: T:OpenQA.Selenium.DevTools.V85.Network.ResourcePriority
+  parent: OpenQA.Selenium.DevTools.V85.Network
+  href: OpenQA.Selenium.DevTools.V85.Network.ResourcePriority.html
+  name: ResourcePriority
+  nameWithType: ResourcePriority
+  fullName: OpenQA.Selenium.DevTools.V85.Network.ResourcePriority
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_ReferrerPolicy
+  name: ReferrerPolicy
+  nameWithType: Request.ReferrerPolicy
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.ReferrerPolicy
+- uid: OpenQA.Selenium.DevTools.V85.Network.RequestReferrerPolicyValues
+  commentId: T:OpenQA.Selenium.DevTools.V85.Network.RequestReferrerPolicyValues
+  parent: OpenQA.Selenium.DevTools.V85.Network
+  href: OpenQA.Selenium.DevTools.V85.Network.RequestReferrerPolicyValues.html
+  name: RequestReferrerPolicyValues
+  nameWithType: RequestReferrerPolicyValues
+  fullName: OpenQA.Selenium.DevTools.V85.Network.RequestReferrerPolicyValues
+- uid: OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload
+  href: OpenQA.Selenium.DevTools.V85.Network.Request.html#OpenQA_Selenium_DevTools_V85_Network_Request_IsLinkPreload
+  name: IsLinkPreload
+  nameWithType: Request.IsLinkPreload
+  fullName: OpenQA.Selenium.DevTools.V85.Network.Request.IsLinkPreload

@@ -1,0 +1,908 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Safari.SafariDriverService
+  commentId: T:OpenQA.Selenium.Safari.SafariDriverService
+  id: SafariDriverService
+  parent: OpenQA.Selenium.Safari
+  children:
+  - OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments
+  - OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService
+  - OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(System.String)
+  - OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(System.String,System.String)
+  - OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions
+  - OpenQA.Selenium.Safari.SafariDriverService.HasShutdown
+  - OpenQA.Selenium.Safari.SafariDriverService.IsInitialized
+  - OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout
+  langs:
+  - csharp
+  - vb
+  name: SafariDriverService
+  nameWithType: SafariDriverService
+  fullName: OpenQA.Selenium.Safari.SafariDriverService
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SafariDriverService
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Exposes the service provided by the native SafariDriver executable.
+  example: []
+  syntax:
+    content: 'public sealed class SafariDriverService : DriverService, ICommandServer, IDisposable'
+    content.vb: Public NotInheritable Class SafariDriverService Inherits DriverService Implements ICommandServer, IDisposable
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.DriverService
+  implements:
+  - OpenQA.Selenium.Remote.ICommandServer
+  - System.IDisposable
+  inheritedMembers:
+  - OpenQA.Selenium.DriverService.DriverProcessStarting
+  - OpenQA.Selenium.DriverService.DriverProcessStarted
+  - OpenQA.Selenium.DriverService.ServiceUrl
+  - OpenQA.Selenium.DriverService.HostName
+  - OpenQA.Selenium.DriverService.Port
+  - OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  - OpenQA.Selenium.DriverService.IsRunning
+  - OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  - OpenQA.Selenium.DriverService.ProcessId
+  - OpenQA.Selenium.DriverService.InitializationTimeout
+  - OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  - OpenQA.Selenium.DriverService.DriverServicePath
+  - OpenQA.Selenium.DriverService.Dispose
+  - OpenQA.Selenium.DriverService.Start
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions
+  commentId: M:OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions
+  id: GetDefaultDriverOptions
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultDriverOptions()
+  nameWithType: SafariDriverService.GetDefaultDriverOptions()
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDefaultDriverOptions
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: The browser options instance that corresponds to the driver service
+  example: []
+  syntax:
+    content: protected override DriverOptions GetDefaultDriverOptions()
+    return:
+      type: OpenQA.Selenium.DriverOptions
+      description: ''
+    content.vb: Protected Overrides Function GetDefaultDriverOptions() As DriverOptions
+  overridden: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  overload: OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions*
+- uid: OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments
+  commentId: P:OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments
+  id: CommandLineArguments
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArguments
+  nameWithType: SafariDriverService.CommandLineArguments
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandLineArguments
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Gets the command-line arguments for the driver service.
+  example: []
+  syntax:
+    content: protected override string CommandLineArguments { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Protected Overrides ReadOnly Property CommandLineArguments As String
+  overridden: OpenQA.Selenium.DriverService.CommandLineArguments
+  overload: OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments*
+- uid: OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout
+  commentId: P:OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout
+  id: TerminationTimeout
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: TerminationTimeout
+  nameWithType: SafariDriverService.TerminationTimeout
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TerminationTimeout
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Gets a value indicating the time to wait for the service to terminate before forcing it to terminate.
+
+    For the Safari driver, there is no time for termination
+  example: []
+  syntax:
+    content: protected override TimeSpan TerminationTimeout { get; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Protected Overrides ReadOnly Property TerminationTimeout As TimeSpan
+  overridden: OpenQA.Selenium.DriverService.TerminationTimeout
+  overload: OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout*
+- uid: OpenQA.Selenium.Safari.SafariDriverService.HasShutdown
+  commentId: P:OpenQA.Selenium.Safari.SafariDriverService.HasShutdown
+  id: HasShutdown
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: HasShutdown
+  nameWithType: SafariDriverService.HasShutdown
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.HasShutdown
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasShutdown
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Gets a value indicating whether the service has a shutdown API that can be called to terminate
+
+    it gracefully before forcing a termination.
+  example: []
+  syntax:
+    content: protected override bool HasShutdown { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides ReadOnly Property HasShutdown As Boolean
+  overridden: OpenQA.Selenium.DriverService.HasShutdown
+  overload: OpenQA.Selenium.Safari.SafariDriverService.HasShutdown*
+- uid: OpenQA.Selenium.Safari.SafariDriverService.IsInitialized
+  commentId: P:OpenQA.Selenium.Safari.SafariDriverService.IsInitialized
+  id: IsInitialized
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: IsInitialized
+  nameWithType: SafariDriverService.IsInitialized
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.IsInitialized
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsInitialized
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Gets a value indicating whether the service is responding to HTTP requests.
+  example: []
+  syntax:
+    content: protected override bool IsInitialized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides ReadOnly Property IsInitialized As Boolean
+  overridden: OpenQA.Selenium.DriverService.IsInitialized
+  overload: OpenQA.Selenium.Safari.SafariDriverService.IsInitialized*
+- uid: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService
+  commentId: M:OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService
+  id: CreateDefaultService
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService()
+  nameWithType: SafariDriverService.CreateDefaultService()
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 148
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Creates a default instance of the SafariDriverService.
+  example: []
+  syntax:
+    content: public static SafariDriverService CreateDefaultService()
+    return:
+      type: OpenQA.Selenium.Safari.SafariDriverService
+      description: A SafariDriverService that implements default settings.
+    content.vb: Public Shared Function CreateDefaultService() As SafariDriverService
+  overload: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService*
+- uid: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(System.String)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(System.String)
+  id: CreateDefaultService(System.String)
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService(string)
+  nameWithType: SafariDriverService.CreateDefaultService(string)
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 158
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Creates a default instance of the SafariDriverService using a specified path to the SafariDriver executable.
+  example: []
+  syntax:
+    content: public static SafariDriverService CreateDefaultService(string driverPath)
+    parameters:
+    - id: driverPath
+      type: System.String
+      description: The path to the executable or the directory containing the SafariDriver executable.
+    return:
+      type: OpenQA.Selenium.Safari.SafariDriverService
+      description: A SafariDriverService using a random port.
+    content.vb: Public Shared Function CreateDefaultService(driverPath As String) As SafariDriverService
+  overload: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService*
+  nameWithType.vb: SafariDriverService.CreateDefaultService(String)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(String)
+  name.vb: CreateDefaultService(String)
+- uid: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(System.String,System.String)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(System.String,System.String)
+  id: CreateDefaultService(System.String,System.String)
+  parent: OpenQA.Selenium.Safari.SafariDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService(string, string)
+  nameWithType: SafariDriverService.CreateDefaultService(string, string)
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/Safari/SafariDriverService.cs
+    startLine: 180
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Creates a default instance of the SafariDriverService using a specified path to the SafariDriver executable with the given name.
+  example: []
+  syntax:
+    content: public static SafariDriverService CreateDefaultService(string driverPath, string driverExecutableFileName)
+    parameters:
+    - id: driverPath
+      type: System.String
+      description: The directory containing the SafariDriver executable.
+    - id: driverExecutableFileName
+      type: System.String
+      description: The name of the SafariDriver executable file.
+    return:
+      type: OpenQA.Selenium.Safari.SafariDriverService
+      description: A SafariDriverService using a random port.
+    content.vb: Public Shared Function CreateDefaultService(driverPath As String, driverExecutableFileName As String) As SafariDriverService
+  overload: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService*
+  nameWithType.vb: SafariDriverService.CreateDefaultService(String, String)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService(String, String)
+  name.vb: CreateDefaultService(String, String)
+references:
+- uid: OpenQA.Selenium.Safari
+  commentId: N:OpenQA.Selenium.Safari
+  href: OpenQA.html
+  name: OpenQA.Selenium.Safari
+  nameWithType: OpenQA.Selenium.Safari
+  fullName: OpenQA.Selenium.Safari
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Safari
+    name: Safari
+    href: OpenQA.Selenium.Safari.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Safari
+    name: Safari
+    href: OpenQA.Selenium.Safari.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DriverService
+  commentId: T:OpenQA.Selenium.DriverService
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverService.html
+  name: DriverService
+  nameWithType: DriverService
+  fullName: OpenQA.Selenium.DriverService
+- uid: OpenQA.Selenium.Remote.ICommandServer
+  commentId: T:OpenQA.Selenium.Remote.ICommandServer
+  parent: OpenQA.Selenium.Remote
+  href: OpenQA.Selenium.Remote.ICommandServer.html
+  name: ICommandServer
+  nameWithType: ICommandServer
+  fullName: OpenQA.Selenium.Remote.ICommandServer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OpenQA.Selenium.DriverService.DriverProcessStarting
+  commentId: E:OpenQA.Selenium.DriverService.DriverProcessStarting
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverProcessStarting
+  name: DriverProcessStarting
+  nameWithType: DriverService.DriverProcessStarting
+  fullName: OpenQA.Selenium.DriverService.DriverProcessStarting
+- uid: OpenQA.Selenium.DriverService.DriverProcessStarted
+  commentId: E:OpenQA.Selenium.DriverService.DriverProcessStarted
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverProcessStarted
+  name: DriverProcessStarted
+  nameWithType: DriverService.DriverProcessStarted
+  fullName: OpenQA.Selenium.DriverService.DriverProcessStarted
+- uid: OpenQA.Selenium.DriverService.ServiceUrl
+  commentId: P:OpenQA.Selenium.DriverService.ServiceUrl
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_ServiceUrl
+  name: ServiceUrl
+  nameWithType: DriverService.ServiceUrl
+  fullName: OpenQA.Selenium.DriverService.ServiceUrl
+- uid: OpenQA.Selenium.DriverService.HostName
+  commentId: P:OpenQA.Selenium.DriverService.HostName
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HostName
+  name: HostName
+  nameWithType: DriverService.HostName
+  fullName: OpenQA.Selenium.DriverService.HostName
+- uid: OpenQA.Selenium.DriverService.Port
+  commentId: P:OpenQA.Selenium.DriverService.Port
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Port
+  name: Port
+  nameWithType: DriverService.Port
+  fullName: OpenQA.Selenium.DriverService.Port
+- uid: OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  commentId: P:OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_SuppressInitialDiagnosticInformation
+  name: SuppressInitialDiagnosticInformation
+  nameWithType: DriverService.SuppressInitialDiagnosticInformation
+  fullName: OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+- uid: OpenQA.Selenium.DriverService.IsRunning
+  commentId: P:OpenQA.Selenium.DriverService.IsRunning
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_IsRunning
+  name: IsRunning
+  nameWithType: DriverService.IsRunning
+  fullName: OpenQA.Selenium.DriverService.IsRunning
+- uid: OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  commentId: P:OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HideCommandPromptWindow
+  name: HideCommandPromptWindow
+  nameWithType: DriverService.HideCommandPromptWindow
+  fullName: OpenQA.Selenium.DriverService.HideCommandPromptWindow
+- uid: OpenQA.Selenium.DriverService.ProcessId
+  commentId: P:OpenQA.Selenium.DriverService.ProcessId
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_ProcessId
+  name: ProcessId
+  nameWithType: DriverService.ProcessId
+  fullName: OpenQA.Selenium.DriverService.ProcessId
+- uid: OpenQA.Selenium.DriverService.InitializationTimeout
+  commentId: P:OpenQA.Selenium.DriverService.InitializationTimeout
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_InitializationTimeout
+  name: InitializationTimeout
+  nameWithType: DriverService.InitializationTimeout
+  fullName: OpenQA.Selenium.DriverService.InitializationTimeout
+- uid: OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  commentId: P:OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverServiceExecutableName
+  name: DriverServiceExecutableName
+  nameWithType: DriverService.DriverServiceExecutableName
+  fullName: OpenQA.Selenium.DriverService.DriverServiceExecutableName
+- uid: OpenQA.Selenium.DriverService.DriverServicePath
+  commentId: P:OpenQA.Selenium.DriverService.DriverServicePath
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverServicePath
+  name: DriverServicePath
+  nameWithType: DriverService.DriverServicePath
+  fullName: OpenQA.Selenium.DriverService.DriverServicePath
+- uid: OpenQA.Selenium.DriverService.Dispose
+  commentId: M:OpenQA.Selenium.DriverService.Dispose
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  name: Dispose()
+  nameWithType: DriverService.Dispose()
+  fullName: OpenQA.Selenium.DriverService.Dispose()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DriverService.Start
+  commentId: M:OpenQA.Selenium.DriverService.Start
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  name: Start()
+  nameWithType: DriverService.Start()
+  fullName: OpenQA.Selenium.DriverService.Start()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.Start
+    name: Start
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.Start
+    name: Start
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Remote
+  commentId: N:OpenQA.Selenium.Remote
+  href: OpenQA.html
+  name: OpenQA.Selenium.Remote
+  nameWithType: OpenQA.Selenium.Remote
+  fullName: OpenQA.Selenium.Remote
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+- uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  commentId: M:OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  name: GetDefaultDriverOptions()
+  nameWithType: DriverService.GetDefaultDriverOptions()
+  fullName: OpenQA.Selenium.DriverService.GetDefaultDriverOptions()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+    name: GetDefaultDriverOptions
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+    name: GetDefaultDriverOptions
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions
+  href: OpenQA.Selenium.Safari.SafariDriverService.html#OpenQA_Selenium_Safari_SafariDriverService_GetDefaultDriverOptions
+  name: GetDefaultDriverOptions
+  nameWithType: SafariDriverService.GetDefaultDriverOptions
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.GetDefaultDriverOptions
+- uid: OpenQA.Selenium.DriverOptions
+  commentId: T:OpenQA.Selenium.DriverOptions
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverOptions.html
+  name: DriverOptions
+  nameWithType: DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions
+- uid: OpenQA.Selenium.DriverService.CommandLineArguments
+  commentId: P:OpenQA.Selenium.DriverService.CommandLineArguments
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_CommandLineArguments
+  name: CommandLineArguments
+  nameWithType: DriverService.CommandLineArguments
+  fullName: OpenQA.Selenium.DriverService.CommandLineArguments
+- uid: OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments
+  href: OpenQA.Selenium.Safari.SafariDriverService.html#OpenQA_Selenium_Safari_SafariDriverService_CommandLineArguments
+  name: CommandLineArguments
+  nameWithType: SafariDriverService.CommandLineArguments
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.CommandLineArguments
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DriverService.TerminationTimeout
+  commentId: P:OpenQA.Selenium.DriverService.TerminationTimeout
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_TerminationTimeout
+  name: TerminationTimeout
+  nameWithType: DriverService.TerminationTimeout
+  fullName: OpenQA.Selenium.DriverService.TerminationTimeout
+- uid: OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout
+  href: OpenQA.Selenium.Safari.SafariDriverService.html#OpenQA_Selenium_Safari_SafariDriverService_TerminationTimeout
+  name: TerminationTimeout
+  nameWithType: SafariDriverService.TerminationTimeout
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.TerminationTimeout
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium.DriverService.HasShutdown
+  commentId: P:OpenQA.Selenium.DriverService.HasShutdown
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HasShutdown
+  name: HasShutdown
+  nameWithType: DriverService.HasShutdown
+  fullName: OpenQA.Selenium.DriverService.HasShutdown
+- uid: OpenQA.Selenium.Safari.SafariDriverService.HasShutdown*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriverService.HasShutdown
+  href: OpenQA.Selenium.Safari.SafariDriverService.html#OpenQA_Selenium_Safari_SafariDriverService_HasShutdown
+  name: HasShutdown
+  nameWithType: SafariDriverService.HasShutdown
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.HasShutdown
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DriverService.IsInitialized
+  commentId: P:OpenQA.Selenium.DriverService.IsInitialized
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_IsInitialized
+  name: IsInitialized
+  nameWithType: DriverService.IsInitialized
+  fullName: OpenQA.Selenium.DriverService.IsInitialized
+- uid: OpenQA.Selenium.Safari.SafariDriverService.IsInitialized*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriverService.IsInitialized
+  href: OpenQA.Selenium.Safari.SafariDriverService.html#OpenQA_Selenium_Safari_SafariDriverService_IsInitialized
+  name: IsInitialized
+  nameWithType: SafariDriverService.IsInitialized
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.IsInitialized
+- uid: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService
+  href: OpenQA.Selenium.Safari.SafariDriverService.html#OpenQA_Selenium_Safari_SafariDriverService_CreateDefaultService
+  name: CreateDefaultService
+  nameWithType: SafariDriverService.CreateDefaultService
+  fullName: OpenQA.Selenium.Safari.SafariDriverService.CreateDefaultService
+- uid: OpenQA.Selenium.Safari.SafariDriverService
+  commentId: T:OpenQA.Selenium.Safari.SafariDriverService
+  parent: OpenQA.Selenium.Safari
+  href: OpenQA.Selenium.Safari.SafariDriverService.html
+  name: SafariDriverService
+  nameWithType: SafariDriverService
+  fullName: OpenQA.Selenium.Safari.SafariDriverService

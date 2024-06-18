@@ -1,0 +1,859 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  commentId: T:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  id: ExceptionDetails
+  parent: OpenQA.Selenium.DevTools.V85.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text
+  - OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url
+  langs:
+  - csharp
+  - vb
+  name: ExceptionDetails
+  nameWithType: ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExceptionDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    Detailed information about exception (or error) that was thrown during script compilation or
+
+    execution.
+  example: []
+  syntax:
+    content: public sealed class ExceptionDetails
+    content.vb: Public NotInheritable Class ExceptionDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId
+  id: ExceptionId
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: ExceptionId
+  nameWithType: ExceptionDetails.ExceptionId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExceptionId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Exception id.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("exceptionId")]
+
+      public long ExceptionId { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("exceptionId")>
+
+      Public Property ExceptionId As Long
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exceptionId
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text
+  id: Text
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: ExceptionDetails.Text
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Text
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Exception text, which should be used together with exception object when available.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("text")]
+
+      public string Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("text")>
+
+      Public Property Text As String
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: text
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber
+  id: LineNumber
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: LineNumber
+  nameWithType: ExceptionDetails.LineNumber
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LineNumber
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Line number of the exception location (0-based).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("lineNumber")]
+
+      public long LineNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("lineNumber")>
+
+      Public Property LineNumber As Long
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: lineNumber
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber
+  id: ColumnNumber
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: ColumnNumber
+  nameWithType: ExceptionDetails.ColumnNumber
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ColumnNumber
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Column number of the exception location (0-based).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("columnNumber")]
+
+      public long ColumnNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("columnNumber")>
+
+      Public Property ColumnNumber As Long
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: columnNumber
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId
+  id: ScriptId
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: ScriptId
+  nameWithType: ExceptionDetails.ScriptId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScriptId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Script ID of the exception location.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("scriptId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ScriptId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("scriptId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ScriptId As String
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: scriptId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: ExceptionDetails.Url
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: URL of the exception location, to be used when the script was not reported.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace
+  id: StackTrace
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: StackTrace
+  nameWithType: ExceptionDetails.StackTrace
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StackTrace
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: JavaScript stack trace if available.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("stackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StackTrace StackTrace { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Runtime.StackTrace
+    content.vb: >-
+      <JsonProperty("stackTrace", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StackTrace As StackTrace
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stackTrace
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception
+  id: Exception
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: Exception
+  nameWithType: ExceptionDetails.Exception
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Exception
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Exception object if available.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("exception", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RemoteObject Exception { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Runtime.RemoteObject
+    content.vb: >-
+      <JsonProperty("exception", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Exception As RemoteObject
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exception
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId
+  id: ExecutionContextId
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: ExecutionContextId
+  nameWithType: ExceptionDetails.ExecutionContextId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecutionContextId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/ExceptionDetails.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Identifier of the context where exception happened.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ExecutionContextId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("executionContextId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ExecutionContextId As Long?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: executionContextId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V85.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V85.Runtime
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V85.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V85.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_ExceptionId
+  name: ExceptionId
+  nameWithType: ExceptionDetails.ExceptionId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExceptionId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_Text
+  name: Text
+  nameWithType: ExceptionDetails.Text
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_LineNumber
+  name: LineNumber
+  nameWithType: ExceptionDetails.LineNumber
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.LineNumber
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_ColumnNumber
+  name: ColumnNumber
+  nameWithType: ExceptionDetails.ColumnNumber
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ColumnNumber
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_ScriptId
+  name: ScriptId
+  nameWithType: ExceptionDetails.ScriptId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ScriptId
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_Url
+  name: Url
+  nameWithType: ExceptionDetails.Url
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Url
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_StackTrace
+  name: StackTrace
+  nameWithType: ExceptionDetails.StackTrace
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.StackTrace
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.StackTrace
+  commentId: T:OpenQA.Selenium.DevTools.V85.Runtime.StackTrace
+  parent: OpenQA.Selenium.DevTools.V85.Runtime
+  href: OpenQA.Selenium.DevTools.V85.Runtime.StackTrace.html
+  name: StackTrace
+  nameWithType: StackTrace
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.StackTrace
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_Exception
+  name: Exception
+  nameWithType: ExceptionDetails.Exception
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.Exception
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.RemoteObject
+  commentId: T:OpenQA.Selenium.DevTools.V85.Runtime.RemoteObject
+  parent: OpenQA.Selenium.DevTools.V85.Runtime
+  href: OpenQA.Selenium.DevTools.V85.Runtime.RemoteObject.html
+  name: RemoteObject
+  nameWithType: RemoteObject
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.RemoteObject
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId
+  href: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.html#OpenQA_Selenium_DevTools_V85_Runtime_ExceptionDetails_ExecutionContextId
+  name: ExecutionContextId
+  nameWithType: ExceptionDetails.ExecutionContextId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.ExceptionDetails.ExecutionContextId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

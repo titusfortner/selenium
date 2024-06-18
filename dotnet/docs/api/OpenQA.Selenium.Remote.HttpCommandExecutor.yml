@@ -1,0 +1,1288 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor
+  commentId: T:OpenQA.Selenium.Remote.HttpCommandExecutor
+  id: HttpCommandExecutor
+  parent: OpenQA.Selenium.Remote
+  children:
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor(System.Uri,System.TimeSpan)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor(System.Uri,System.TimeSpan,System.Boolean)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose(System.Boolean)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(OpenQA.Selenium.Command)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest(OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  - OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent
+  langs:
+  - csharp
+  - vb
+  name: HttpCommandExecutor
+  nameWithType: HttpCommandExecutor
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HttpCommandExecutor
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Provides a way of executing Commands over HTTP
+  example: []
+  syntax:
+    content: 'public class HttpCommandExecutor : ICommandExecutor, IDisposable'
+    content.vb: Public Class HttpCommandExecutor Implements ICommandExecutor, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.ICommandExecutor
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor(System.Uri,System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor(System.Uri,System.TimeSpan)
+  id: '#ctor(System.Uri,System.TimeSpan)'
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: HttpCommandExecutor(Uri, TimeSpan)
+  nameWithType: HttpCommandExecutor.HttpCommandExecutor(Uri, TimeSpan)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.HttpCommandExecutor(System.Uri, System.TimeSpan)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> class
+  example: []
+  syntax:
+    content: public HttpCommandExecutor(Uri addressOfRemoteServer, TimeSpan timeout)
+    parameters:
+    - id: addressOfRemoteServer
+      type: System.Uri
+      description: Address of the WebDriver Server
+    - id: timeout
+      type: System.TimeSpan
+      description: The timeout within which the server must respond.
+    content.vb: Public Sub New(addressOfRemoteServer As Uri, timeout As TimeSpan)
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor*
+  nameWithType.vb: HttpCommandExecutor.New(Uri, TimeSpan)
+  fullName.vb: OpenQA.Selenium.Remote.HttpCommandExecutor.New(System.Uri, System.TimeSpan)
+  name.vb: New(Uri, TimeSpan)
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor(System.Uri,System.TimeSpan,System.Boolean)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor(System.Uri,System.TimeSpan,System.Boolean)
+  id: '#ctor(System.Uri,System.TimeSpan,System.Boolean)'
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: HttpCommandExecutor(Uri, TimeSpan, bool)
+  nameWithType: HttpCommandExecutor.HttpCommandExecutor(Uri, TimeSpan, bool)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.HttpCommandExecutor(System.Uri, System.TimeSpan, bool)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> class
+  example: []
+  syntax:
+    content: public HttpCommandExecutor(Uri addressOfRemoteServer, TimeSpan timeout, bool enableKeepAlive)
+    parameters:
+    - id: addressOfRemoteServer
+      type: System.Uri
+      description: Address of the WebDriver Server
+    - id: timeout
+      type: System.TimeSpan
+      description: The timeout within which the server must respond.
+    - id: enableKeepAlive
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the KeepAlive header should be sent
+            with HTTP requests; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Sub New(addressOfRemoteServer As Uri, timeout As TimeSpan, enableKeepAlive As Boolean)
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor*
+  nameWithType.vb: HttpCommandExecutor.New(Uri, TimeSpan, Boolean)
+  fullName.vb: OpenQA.Selenium.Remote.HttpCommandExecutor.New(System.Uri, System.TimeSpan, Boolean)
+  name.vb: New(Uri, TimeSpan, Boolean)
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+  commentId: E:OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+  id: SendingRemoteHttpRequest
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: SendingRemoteHttpRequest
+  nameWithType: HttpCommandExecutor.SendingRemoteHttpRequest
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendingRemoteHttpRequest
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 93
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: >-
+    Occurs when the <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> is sending an HTTP
+
+    request to the remote end WebDriver implementation.
+  example: []
+  syntax:
+    content: public event EventHandler<SendingRemoteHttpRequestEventArgs> SendingRemoteHttpRequest
+    return:
+      type: System.EventHandler{OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs}
+    content.vb: Public Event SendingRemoteHttpRequest As EventHandler(Of SendingRemoteHttpRequestEventArgs)
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy
+  commentId: P:OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy
+  id: Proxy
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: Proxy
+  nameWithType: HttpCommandExecutor.Proxy
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Proxy
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 100
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: >-
+    Gets or sets an <xref href="System.Net.IWebProxy" data-throw-if-not-resolved="false"></xref> object to be used to proxy requests
+
+    between this <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> and the remote end WebDriver
+
+    implementation.
+  example: []
+  syntax:
+    content: public IWebProxy Proxy { get; set; }
+    parameters: []
+    return:
+      type: System.Net.IWebProxy
+    content.vb: Public Property Proxy As IWebProxy
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy*
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled
+  commentId: P:OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled
+  id: IsKeepAliveEnabled
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: IsKeepAliveEnabled
+  nameWithType: HttpCommandExecutor.IsKeepAliveEnabled
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsKeepAliveEnabled
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 111
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: >-
+    Gets or sets a value indicating whether keep-alive is enabled for HTTP
+
+    communication between this <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> and the
+
+    remote end WebDriver implementation.
+  example: []
+  syntax:
+    content: public bool IsKeepAliveEnabled { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsKeepAliveEnabled As Boolean
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled*
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent
+  commentId: P:OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent
+  id: UserAgent
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: HttpCommandExecutor.UserAgent
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserAgent
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 122
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: >-
+    Gets or sets the user agent string used for HTTP communication
+
+    batween this <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> and the remote end
+
+    WebDriver implementation
+  example: []
+  syntax:
+    content: public string UserAgent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserAgent As String
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent*
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository
+  commentId: P:OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository
+  id: CommandInfoRepository
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: CommandInfoRepository
+  nameWithType: HttpCommandExecutor.CommandInfoRepository
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandInfoRepository
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 131
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Gets the repository of objects containing information about commands.
+  example: []
+  syntax:
+    content: protected CommandInfoRepository CommandInfoRepository { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.CommandInfoRepository
+    content.vb: Protected Property CommandInfoRepository As CommandInfoRepository
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository*
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  id: TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: TryAddCommand(string, CommandInfo)
+  nameWithType: HttpCommandExecutor.TryAddCommand(string, CommandInfo)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand(string, OpenQA.Selenium.CommandInfo)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TryAddCommand
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 143
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Attempts to add a command to the repository of commands known to this executor.
+  example: []
+  syntax:
+    content: public bool TryAddCommand(string commandName, CommandInfo info)
+    parameters:
+    - id: commandName
+      type: System.String
+      description: The name of the command to attempt to add.
+    - id: info
+      type: OpenQA.Selenium.CommandInfo
+      description: The <xref href="OpenQA.Selenium.CommandInfo" data-throw-if-not-resolved="false"></xref> describing the commnd to add.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the new command has been added successfully; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Function TryAddCommand(commandName As String, info As CommandInfo) As Boolean
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand*
+  implements:
+  - OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  nameWithType.vb: HttpCommandExecutor.TryAddCommand(String, CommandInfo)
+  fullName.vb: OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand(String, OpenQA.Selenium.CommandInfo)
+  name.vb: TryAddCommand(String, CommandInfo)
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(OpenQA.Selenium.Command)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(OpenQA.Selenium.Command)
+  id: Execute(OpenQA.Selenium.Command)
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: Execute(Command)
+  nameWithType: HttpCommandExecutor.Execute(Command)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(OpenQA.Selenium.Command)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Execute
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 159
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Executes a command
+  example: []
+  syntax:
+    content: public virtual Response Execute(Command commandToExecute)
+    parameters:
+    - id: commandToExecute
+      type: OpenQA.Selenium.Command
+      description: The command you wish to execute
+    return:
+      type: OpenQA.Selenium.Response
+      description: A response from the browser
+    content.vb: Public Overridable Function Execute(commandToExecute As Command) As Response
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.Execute*
+  implements:
+  - OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  id: ExecuteAsync(OpenQA.Selenium.Command)
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(Command)
+  nameWithType: HttpCommandExecutor.ExecuteAsync(Command)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecuteAsync
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 169
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Executes a command as an asynchronous task.
+  example: []
+  syntax:
+    content: public virtual Task<Response> ExecuteAsync(Command commandToExecute)
+    parameters:
+    - id: commandToExecute
+      type: OpenQA.Selenium.Command
+      description: The command you wish to execute
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.Response}
+      description: A task object representing the asynchronous operation
+    content.vb: Public Overridable Function ExecuteAsync(commandToExecute As Command) As Task(Of Response)
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync*
+  implements:
+  - OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest(OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest(OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs)
+  id: OnSendingRemoteHttpRequest(OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs)
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: OnSendingRemoteHttpRequest(SendingRemoteHttpRequestEventArgs)
+  nameWithType: HttpCommandExecutor.OnSendingRemoteHttpRequest(SendingRemoteHttpRequestEventArgs)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest(OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnSendingRemoteHttpRequest
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 223
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Raises the <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest" data-throw-if-not-resolved="false"></xref> event.
+  example: []
+  syntax:
+    content: protected virtual void OnSendingRemoteHttpRequest(SendingRemoteHttpRequestEventArgs eventArgs)
+    parameters:
+    - id: eventArgs
+      type: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs
+      description: A <xref href="OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnSendingRemoteHttpRequest(eventArgs As SendingRemoteHttpRequestEventArgs)
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest*
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose
+  id: Dispose
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: HttpCommandExecutor.Dispose()
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Dispose
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 353
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Releases all resources used by the <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose(System.Boolean)
+  commentId: M:OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: OpenQA.Selenium.Remote.HttpCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: HttpCommandExecutor.Dispose(bool)
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/HttpCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Dispose
+    path: ../src/webdriver/Remote/HttpCommandExecutor.cs
+    startLine: 364
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: >-
+    Releases the unmanaged resources used by the <xref href="OpenQA.Selenium.Remote.HttpCommandExecutor" data-throw-if-not-resolved="false"></xref> and
+
+    optionally releases the managed resources.
+  example: []
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to release managed and resources;
+            <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a> to only release unmanaged resources.
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose*
+  nameWithType.vb: HttpCommandExecutor.Dispose(Boolean)
+  fullName.vb: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: OpenQA.Selenium.Remote
+  commentId: N:OpenQA.Selenium.Remote
+  href: OpenQA.html
+  name: OpenQA.Selenium.Remote
+  nameWithType: OpenQA.Selenium.Remote
+  fullName: OpenQA.Selenium.Remote
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.ICommandExecutor
+  commentId: T:OpenQA.Selenium.ICommandExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ICommandExecutor.html
+  name: ICommandExecutor
+  nameWithType: ICommandExecutor
+  fullName: OpenQA.Selenium.ICommandExecutor
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor
+  commentId: T:OpenQA.Selenium.Remote.HttpCommandExecutor
+  parent: OpenQA.Selenium.Remote
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html
+  name: HttpCommandExecutor
+  nameWithType: HttpCommandExecutor
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.#ctor
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor__ctor_System_Uri_System_TimeSpan_
+  name: HttpCommandExecutor
+  nameWithType: HttpCommandExecutor.HttpCommandExecutor
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.HttpCommandExecutor
+  nameWithType.vb: HttpCommandExecutor.New
+  fullName.vb: OpenQA.Selenium.Remote.HttpCommandExecutor.New
+  name.vb: New
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.EventHandler{OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SendingRemoteHttpRequestEventArgs>
+  nameWithType: EventHandler<SendingRemoteHttpRequestEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs>
+  nameWithType.vb: EventHandler(Of SendingRemoteHttpRequestEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs)
+  name.vb: EventHandler(Of SendingRemoteHttpRequestEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs
+    name: SendingRemoteHttpRequestEventArgs
+    href: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs
+    name: SendingRemoteHttpRequestEventArgs
+    href: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.Net.IWebProxy
+  commentId: T:System.Net.IWebProxy
+  parent: System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.iwebproxy
+  name: IWebProxy
+  nameWithType: IWebProxy
+  fullName: System.Net.IWebProxy
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_Proxy
+  name: Proxy
+  nameWithType: HttpCommandExecutor.Proxy
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Proxy
+- uid: System.Net
+  commentId: N:System.Net
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net
+  nameWithType: System.Net
+  fullName: System.Net
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_IsKeepAliveEnabled
+  name: IsKeepAliveEnabled
+  nameWithType: HttpCommandExecutor.IsKeepAliveEnabled
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.IsKeepAliveEnabled
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_UserAgent
+  name: UserAgent
+  nameWithType: HttpCommandExecutor.UserAgent
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.UserAgent
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_CommandInfoRepository
+  name: CommandInfoRepository
+  nameWithType: HttpCommandExecutor.CommandInfoRepository
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.CommandInfoRepository
+- uid: OpenQA.Selenium.CommandInfoRepository
+  commentId: T:OpenQA.Selenium.CommandInfoRepository
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.CommandInfoRepository.html
+  name: CommandInfoRepository
+  nameWithType: CommandInfoRepository
+  fullName: OpenQA.Selenium.CommandInfoRepository
+- uid: OpenQA.Selenium.CommandInfo
+  commentId: T:OpenQA.Selenium.CommandInfo
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.CommandInfo.html
+  name: CommandInfo
+  nameWithType: CommandInfo
+  fullName: OpenQA.Selenium.CommandInfo
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_TryAddCommand_System_String_OpenQA_Selenium_CommandInfo_
+  name: TryAddCommand
+  nameWithType: HttpCommandExecutor.TryAddCommand
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.TryAddCommand
+- uid: OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.ICommandExecutor
+  isExternal: true
+  href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_TryAddCommand_System_String_OpenQA_Selenium_CommandInfo_
+  name: TryAddCommand(string, CommandInfo)
+  nameWithType: ICommandExecutor.TryAddCommand(string, CommandInfo)
+  fullName: OpenQA.Selenium.ICommandExecutor.TryAddCommand(string, OpenQA.Selenium.CommandInfo)
+  nameWithType.vb: ICommandExecutor.TryAddCommand(String, CommandInfo)
+  fullName.vb: OpenQA.Selenium.ICommandExecutor.TryAddCommand(String, OpenQA.Selenium.CommandInfo)
+  name.vb: TryAddCommand(String, CommandInfo)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+    name: TryAddCommand
+    href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_TryAddCommand_System_String_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+    name: TryAddCommand
+    href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_TryAddCommand_System_String_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Execute*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.Execute
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_Execute_OpenQA_Selenium_Command_
+  name: Execute
+  nameWithType: HttpCommandExecutor.Execute
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Execute
+- uid: OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  commentId: M:OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  parent: OpenQA.Selenium.ICommandExecutor
+  href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_Execute_OpenQA_Selenium_Command_
+  name: Execute(Command)
+  nameWithType: ICommandExecutor.Execute(Command)
+  fullName: OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+    name: Execute
+    href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_Execute_OpenQA_Selenium_Command_
+  - name: (
+  - uid: OpenQA.Selenium.Command
+    name: Command
+    href: OpenQA.Selenium.Command.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+    name: Execute
+    href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_Execute_OpenQA_Selenium_Command_
+  - name: (
+  - uid: OpenQA.Selenium.Command
+    name: Command
+    href: OpenQA.Selenium.Command.html
+  - name: )
+- uid: OpenQA.Selenium.Command
+  commentId: T:OpenQA.Selenium.Command
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Command.html
+  name: Command
+  nameWithType: Command
+  fullName: OpenQA.Selenium.Command
+- uid: OpenQA.Selenium.Response
+  commentId: T:OpenQA.Selenium.Response
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Response.html
+  name: Response
+  nameWithType: Response
+  fullName: OpenQA.Selenium.Response
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_ExecuteAsync_OpenQA_Selenium_Command_
+  name: ExecuteAsync
+  nameWithType: HttpCommandExecutor.ExecuteAsync
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.ExecuteAsync
+- uid: OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  commentId: M:OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  parent: OpenQA.Selenium.ICommandExecutor
+  href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_ExecuteAsync_OpenQA_Selenium_Command_
+  name: ExecuteAsync(Command)
+  nameWithType: ICommandExecutor.ExecuteAsync(Command)
+  fullName: OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+    name: ExecuteAsync
+    href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_ExecuteAsync_OpenQA_Selenium_Command_
+  - name: (
+  - uid: OpenQA.Selenium.Command
+    name: Command
+    href: OpenQA.Selenium.Command.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+    name: ExecuteAsync
+    href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_ExecuteAsync_OpenQA_Selenium_Command_
+  - name: (
+  - uid: OpenQA.Selenium.Command
+    name: Command
+    href: OpenQA.Selenium.Command.html
+  - name: )
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.Response}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.Response}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Response>
+  nameWithType: Task<Response>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.Response>
+  nameWithType.vb: Task(Of Response)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.Response)
+  name.vb: Task(Of Response)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.Response
+    name: Response
+    href: OpenQA.Selenium.Response.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.Response
+    name: Response
+    href: OpenQA.Selenium.Response.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+  commentId: E:OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_SendingRemoteHttpRequest
+  name: SendingRemoteHttpRequest
+  nameWithType: HttpCommandExecutor.SendingRemoteHttpRequest
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.SendingRemoteHttpRequest
+- uid: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs
+  commentId: T:OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs
+  parent: OpenQA.Selenium.Remote
+  href: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs.html
+  name: SendingRemoteHttpRequestEventArgs
+  nameWithType: SendingRemoteHttpRequestEventArgs
+  fullName: OpenQA.Selenium.Remote.SendingRemoteHttpRequestEventArgs
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_OnSendingRemoteHttpRequest_OpenQA_Selenium_Remote_SendingRemoteHttpRequestEventArgs_
+  name: OnSendingRemoteHttpRequest
+  nameWithType: HttpCommandExecutor.OnSendingRemoteHttpRequest
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.OnSendingRemoteHttpRequest
+- uid: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose*
+  commentId: Overload:OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose
+  href: OpenQA.Selenium.Remote.HttpCommandExecutor.html#OpenQA_Selenium_Remote_HttpCommandExecutor_Dispose
+  name: Dispose
+  nameWithType: HttpCommandExecutor.Dispose
+  fullName: OpenQA.Selenium.Remote.HttpCommandExecutor.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

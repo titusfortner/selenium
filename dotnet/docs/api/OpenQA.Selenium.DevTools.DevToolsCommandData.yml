@@ -1,0 +1,857 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsCommandData
+  id: DevToolsCommandData
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor(System.Int64,System.String,Newtonsoft.Json.Linq.JToken)
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor(System.Int64,System.String,System.String,Newtonsoft.Json.Linq.JToken)
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.IsError
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.Result
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId
+  - OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent
+  langs:
+  - csharp
+  - vb
+  name: DevToolsCommandData
+  nameWithType: DevToolsCommandData
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DevToolsCommandData
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: The information for each DevTools command
+  example: []
+  syntax:
+    content: public class DevToolsCommandData
+    content.vb: Public Class DevToolsCommandData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor(System.Int64,System.String,Newtonsoft.Json.Linq.JToken)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor(System.Int64,System.String,Newtonsoft.Json.Linq.JToken)
+  id: '#ctor(System.Int64,System.String,Newtonsoft.Json.Linq.JToken)'
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: DevToolsCommandData(long, string, JToken)
+  nameWithType: DevToolsCommandData.DevToolsCommandData(long, string, JToken)
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.DevToolsCommandData(long, string, Newtonsoft.Json.Linq.JToken)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Initializes a new instance of the DevToolsCommandData class.
+  example: []
+  syntax:
+    content: public DevToolsCommandData(long commandId, string commandName, JToken commandParameters)
+    parameters:
+    - id: commandId
+      type: System.Int64
+      description: The ID of the commmand execution.
+    - id: commandName
+      type: System.String
+      description: The method name of the DevTools command.
+    - id: commandParameters
+      type: Newtonsoft.Json.Linq.JToken
+      description: The parameters of the DevTools command.
+    content.vb: Public Sub New(commandId As Long, commandName As String, commandParameters As JToken)
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor*
+  nameWithType.vb: DevToolsCommandData.New(Long, String, JToken)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsCommandData.New(Long, String, Newtonsoft.Json.Linq.JToken)
+  name.vb: New(Long, String, JToken)
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor(System.Int64,System.String,System.String,Newtonsoft.Json.Linq.JToken)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor(System.Int64,System.String,System.String,Newtonsoft.Json.Linq.JToken)
+  id: '#ctor(System.Int64,System.String,System.String,Newtonsoft.Json.Linq.JToken)'
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: DevToolsCommandData(long, string, string, JToken)
+  nameWithType: DevToolsCommandData.DevToolsCommandData(long, string, string, JToken)
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.DevToolsCommandData(long, string, string, Newtonsoft.Json.Linq.JToken)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Initializes a new instance of the DevToolsCommandData class.
+  example: []
+  syntax:
+    content: public DevToolsCommandData(long commandId, string sessionId, string commandName, JToken commandParameters)
+    parameters:
+    - id: commandId
+      type: System.Int64
+      description: The ID of the commmand execution.
+    - id: sessionId
+      type: System.String
+      description: The session ID of the current command execution.
+    - id: commandName
+      type: System.String
+      description: The method name of the DevTools command.
+    - id: commandParameters
+      type: Newtonsoft.Json.Linq.JToken
+      description: The parameters of the DevTools command.
+    content.vb: Public Sub New(commandId As Long, sessionId As String, commandName As String, commandParameters As JToken)
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor*
+  nameWithType.vb: DevToolsCommandData.New(Long, String, String, JToken)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsCommandData.New(Long, String, String, Newtonsoft.Json.Linq.JToken)
+  name.vb: New(Long, String, String, JToken)
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId
+  id: SessionId
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: DevToolsCommandData.SessionId
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SessionId
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the session ID of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sessionId", NullValueHandling = NullValueHandling.Ignore)]
+
+      public string SessionId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("sessionId", NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public ReadOnly Property SessionId As String
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sessionId
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId
+  id: CommandId
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: CommandId
+  nameWithType: DevToolsCommandData.CommandId
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandId
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 65
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the numeric ID of the command execution.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("id")]
+
+      public long CommandId { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("id")>
+
+      Public ReadOnly Property CommandId As Long
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: id
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: DevToolsCommandData.CommandName
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the method name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("method")]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("method")>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: method
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters
+  id: CommandParameters
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: CommandParameters
+  nameWithType: DevToolsCommandData.CommandParameters
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandParameters
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the parameters for the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("params")]
+
+      public JToken CommandParameters { get; }
+    parameters: []
+    return:
+      type: Newtonsoft.Json.Linq.JToken
+    content.vb: >-
+      <JsonProperty("params")>
+
+      Public ReadOnly Property CommandParameters As JToken
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: params
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent
+  id: SyncEvent
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: SyncEvent
+  nameWithType: DevToolsCommandData.SyncEvent
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SyncEvent
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets a ManualResetEventSlim on which execution of the command can be synchronized.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public ManualResetEventSlim SyncEvent { get; }
+    parameters: []
+    return:
+      type: System.Threading.ManualResetEventSlim
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property SyncEvent As ManualResetEventSlim
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.Result
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.Result
+  id: Result
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: DevToolsCommandData.Result
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.Result
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Result
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 89
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Get or sets the result of the command execution.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public JToken Result { get; set; }
+    parameters: []
+    return:
+      type: Newtonsoft.Json.Linq.JToken
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property Result As JToken
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.Result*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.IsError
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsCommandData.IsError
+  id: IsError
+  parent: OpenQA.Selenium.DevTools.DevToolsCommandData
+  langs:
+  - csharp
+  - vb
+  name: IsError
+  nameWithType: DevToolsCommandData.IsError
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.IsError
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsCommandData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsError
+    path: ../src/webdriver/DevTools/DevToolsCommandData.cs
+    startLine: 95
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets or sets a value indicating whether the command resulted in an error response.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public bool IsError { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonIgnore>
+
+      Public Property IsError As Boolean
+  overload: OpenQA.Selenium.DevTools.DevToolsCommandData.IsError*
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.#ctor
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData__ctor_System_Int64_System_String_Newtonsoft_Json_Linq_JToken_
+  name: DevToolsCommandData
+  nameWithType: DevToolsCommandData.DevToolsCommandData
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.DevToolsCommandData
+  nameWithType.vb: DevToolsCommandData.New
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsCommandData.New
+  name.vb: New
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Newtonsoft.Json.Linq.JToken
+  commentId: T:Newtonsoft.Json.Linq.JToken
+  parent: Newtonsoft.Json.Linq
+  isExternal: true
+  name: JToken
+  nameWithType: JToken
+  fullName: Newtonsoft.Json.Linq.JToken
+- uid: Newtonsoft.Json.Linq
+  commentId: N:Newtonsoft.Json.Linq
+  isExternal: true
+  name: Newtonsoft.Json.Linq
+  nameWithType: Newtonsoft.Json.Linq
+  fullName: Newtonsoft.Json.Linq
+  spec.csharp:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json.Linq
+    name: Linq
+    isExternal: true
+  spec.vb:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json.Linq
+    name: Linq
+    isExternal: true
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_SessionId
+  name: SessionId
+  nameWithType: DevToolsCommandData.SessionId
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.SessionId
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_CommandId
+  name: CommandId
+  nameWithType: DevToolsCommandData.CommandId
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandId
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_CommandName
+  name: CommandName
+  nameWithType: DevToolsCommandData.CommandName
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandName
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_CommandParameters
+  name: CommandParameters
+  nameWithType: DevToolsCommandData.CommandParameters
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.CommandParameters
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_SyncEvent
+  name: SyncEvent
+  nameWithType: DevToolsCommandData.SyncEvent
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.SyncEvent
+- uid: System.Threading.ManualResetEventSlim
+  commentId: T:System.Threading.ManualResetEventSlim
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.manualreseteventslim
+  name: ManualResetEventSlim
+  nameWithType: ManualResetEventSlim
+  fullName: System.Threading.ManualResetEventSlim
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.Result*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.Result
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_Result
+  name: Result
+  nameWithType: DevToolsCommandData.Result
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.Result
+- uid: OpenQA.Selenium.DevTools.DevToolsCommandData.IsError*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsCommandData.IsError
+  href: OpenQA.Selenium.DevTools.DevToolsCommandData.html#OpenQA_Selenium_DevTools_DevToolsCommandData_IsError
+  name: IsError
+  nameWithType: DevToolsCommandData.IsError
+  fullName: OpenQA.Selenium.DevTools.DevToolsCommandData.IsError
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

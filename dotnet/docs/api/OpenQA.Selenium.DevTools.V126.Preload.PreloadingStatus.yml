@@ -1,0 +1,363 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  commentId: T:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  id: PreloadingStatus
+  parent: OpenQA.Selenium.DevTools.V126.Preload
+  children:
+  - OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Failure
+  - OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.NotSupported
+  - OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Pending
+  - OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Ready
+  - OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Running
+  - OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Success
+  langs:
+  - csharp
+  - vb
+  name: PreloadingStatus
+  nameWithType: PreloadingStatus
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PreloadingStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: >-
+    Preloading status values, see also PreloadingTriggeringOutcome. This
+
+    status is shared by prefetchStatusUpdated and prerenderStatusUpdated.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum PreloadingStatus
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum PreloadingStatus
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Pending
+  commentId: F:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Pending
+  id: Pending
+  parent: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  langs:
+  - csharp
+  - vb
+  name: Pending
+  nameWithType: PreloadingStatus.Pending
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Pending
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Pending
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 17
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: Enumerated member for the Pending value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Pending")]
+
+      Pending = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+    content.vb: >-
+      <EnumMember(Value:="Pending")>
+
+      Pending = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Pending
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Running
+  commentId: F:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Running
+  id: Running
+  parent: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  langs:
+  - csharp
+  - vb
+  name: Running
+  nameWithType: PreloadingStatus.Running
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Running
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Running
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: Enumerated member for the Running value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Running")]
+
+      Running = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+    content.vb: >-
+      <EnumMember(Value:="Running")>
+
+      Running = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Running
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Ready
+  commentId: F:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Ready
+  id: Ready
+  parent: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  langs:
+  - csharp
+  - vb
+  name: Ready
+  nameWithType: PreloadingStatus.Ready
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Ready
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Ready
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: Enumerated member for the Ready value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Ready")]
+
+      Ready = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+    content.vb: >-
+      <EnumMember(Value:="Ready")>
+
+      Ready = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Ready
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Success
+  commentId: F:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Success
+  id: Success
+  parent: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: PreloadingStatus.Success
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Success
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Success
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: Enumerated member for the Success value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Success")]
+
+      Success = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+    content.vb: >-
+      <EnumMember(Value:="Success")>
+
+      Success = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Success
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Failure
+  commentId: F:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Failure
+  id: Failure
+  parent: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  langs:
+  - csharp
+  - vb
+  name: Failure
+  nameWithType: PreloadingStatus.Failure
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.Failure
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Failure
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: Enumerated member for the Failure value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Failure")]
+
+      Failure = 4
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+    content.vb: >-
+      <EnumMember(Value:="Failure")>
+
+      Failure = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Failure
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.NotSupported
+  commentId: F:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.NotSupported
+  id: NotSupported
+  parent: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  langs:
+  - csharp
+  - vb
+  name: NotSupported
+  nameWithType: PreloadingStatus.NotSupported
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.NotSupported
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NotSupported
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Preload/PreloadingStatus.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Preload
+  summary: Enumerated member for the NotSupported value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "NotSupported")]
+
+      NotSupported = 5
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+    content.vb: >-
+      <EnumMember(Value:="NotSupported")>
+
+      NotSupported = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: NotSupported
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Preload
+  commentId: N:OpenQA.Selenium.DevTools.V126.Preload
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Preload
+  nameWithType: OpenQA.Selenium.DevTools.V126.Preload
+  fullName: OpenQA.Selenium.DevTools.V126.Preload
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V126.Preload.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V126.Preload.html
+- uid: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  commentId: T:OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus
+  parent: OpenQA.Selenium.DevTools.V126.Preload
+  href: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus.html
+  name: PreloadingStatus
+  nameWithType: PreloadingStatus
+  fullName: OpenQA.Selenium.DevTools.V126.Preload.PreloadingStatus

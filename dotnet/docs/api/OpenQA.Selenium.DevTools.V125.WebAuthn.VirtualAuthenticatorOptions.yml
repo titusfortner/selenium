@@ -1,0 +1,1112 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  commentId: T:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  id: VirtualAuthenticatorOptions
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn
+  children:
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol
+  - OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport
+  langs:
+  - csharp
+  - vb
+  name: VirtualAuthenticatorOptions
+  nameWithType: VirtualAuthenticatorOptions
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VirtualAuthenticatorOptions
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: VirtualAuthenticatorOptions
+  example: []
+  syntax:
+    content: public sealed class VirtualAuthenticatorOptions
+    content.vb: Public NotInheritable Class VirtualAuthenticatorOptions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol
+  id: Protocol
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: Protocol
+  nameWithType: VirtualAuthenticatorOptions.Protocol
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Protocol
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: protocol
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("protocol")]
+
+      public AuthenticatorProtocol Protocol { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorProtocol
+    content.vb: >-
+      <JsonProperty("protocol")>
+
+      Public Property Protocol As AuthenticatorProtocol
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: protocol
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version
+  id: Ctap2Version
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: Ctap2Version
+  nameWithType: VirtualAuthenticatorOptions.Ctap2Version
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Ctap2Version
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: Defaults to ctap2_0. Ignored if |protocol| == u2f.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("ctap2Version", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Ctap2Version? Ctap2Version { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version}
+    content.vb: >-
+      <JsonProperty("ctap2Version", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Ctap2Version As Ctap2Version?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ctap2Version
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport
+  id: Transport
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: Transport
+  nameWithType: VirtualAuthenticatorOptions.Transport
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Transport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: transport
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("transport")]
+
+      public AuthenticatorTransport Transport { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorTransport
+    content.vb: >-
+      <JsonProperty("transport")>
+
+      Public Property Transport As AuthenticatorTransport
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: transport
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey
+  id: HasResidentKey
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: HasResidentKey
+  nameWithType: VirtualAuthenticatorOptions.HasResidentKey
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasResidentKey
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasResidentKey", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasResidentKey { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasResidentKey", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasResidentKey As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasResidentKey
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification
+  id: HasUserVerification
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: HasUserVerification
+  nameWithType: VirtualAuthenticatorOptions.HasUserVerification
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasUserVerification
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasUserVerification", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasUserVerification { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasUserVerification", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasUserVerification As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasUserVerification
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob
+  id: HasLargeBlob
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: HasLargeBlob
+  nameWithType: VirtualAuthenticatorOptions.HasLargeBlob
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasLargeBlob
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    If set to true, the authenticator will support the largeBlob extension.
+
+    https://w3c.github.io/webauthn#largeBlob
+
+    Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasLargeBlob", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasLargeBlob { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasLargeBlob", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasLargeBlob As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasLargeBlob
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob
+  id: HasCredBlob
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: HasCredBlob
+  nameWithType: VirtualAuthenticatorOptions.HasCredBlob
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasCredBlob
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    If set to true, the authenticator will support the credBlob extension.
+
+    https://fidoalliance.org/specs/fido-v2.1-rd-20201208/fido-client-to-authenticator-protocol-v2.1-rd-20201208.html#sctn-credBlob-extension
+
+    Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasCredBlob", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasCredBlob { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasCredBlob", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasCredBlob As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasCredBlob
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength
+  id: HasMinPinLength
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: HasMinPinLength
+  nameWithType: VirtualAuthenticatorOptions.HasMinPinLength
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasMinPinLength
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 82
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    If set to true, the authenticator will support the minPinLength extension.
+
+    https://fidoalliance.org/specs/fido-v2.1-ps-20210615/fido-client-to-authenticator-protocol-v2.1-ps-20210615.html#sctn-minpinlength-extension
+
+    Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasMinPinLength", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasMinPinLength { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasMinPinLength", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasMinPinLength As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasMinPinLength
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf
+  id: HasPrf
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: HasPrf
+  nameWithType: VirtualAuthenticatorOptions.HasPrf
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasPrf
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 93
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    If set to true, the authenticator will support the prf extension.
+
+    https://w3c.github.io/webauthn/#prf-extension
+
+    Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasPrf", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasPrf { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasPrf", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasPrf As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasPrf
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  id: AutomaticPresenceSimulation
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: AutomaticPresenceSimulation
+  nameWithType: VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AutomaticPresenceSimulation
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 103
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    If set to true, tests of user presence will succeed immediately.
+
+    Otherwise, they will not be resolved. Defaults to true.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("automaticPresenceSimulation", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? AutomaticPresenceSimulation { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("automaticPresenceSimulation", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AutomaticPresenceSimulation As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: automaticPresenceSimulation
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified
+  id: IsUserVerified
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: IsUserVerified
+  nameWithType: VirtualAuthenticatorOptions.IsUserVerified
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsUserVerified
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 113
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    Sets whether User Verification succeeds or fails for an authenticator.
+
+    Defaults to false.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isUserVerified", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IsUserVerified { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("isUserVerified", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IsUserVerified As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isUserVerified
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility
+  id: DefaultBackupEligibility
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: DefaultBackupEligibility
+  nameWithType: VirtualAuthenticatorOptions.DefaultBackupEligibility
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DefaultBackupEligibility
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 124
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    Credentials created by this authenticator will have the backup
+
+    eligibility (BE) flag set to this value. Defaults to false.
+
+    https://w3c.github.io/webauthn/#sctn-credential-backup
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("defaultBackupEligibility", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? DefaultBackupEligibility { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("defaultBackupEligibility", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property DefaultBackupEligibility As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: defaultBackupEligibility
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState
+  commentId: P:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState
+  id: DefaultBackupState
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions
+  langs:
+  - csharp
+  - vb
+  name: DefaultBackupState
+  nameWithType: VirtualAuthenticatorOptions.DefaultBackupState
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DefaultBackupState
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/WebAuthn/VirtualAuthenticatorOptions.cs
+    startLine: 135
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.WebAuthn
+  summary: >-
+    Credentials created by this authenticator will have the backup state
+
+    (BS) flag set to this value. Defaults to false.
+
+    https://w3c.github.io/webauthn/#sctn-credential-backup
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("defaultBackupState", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? DefaultBackupState { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("defaultBackupState", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property DefaultBackupState As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: defaultBackupState
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn
+  commentId: N:OpenQA.Selenium.DevTools.V125.WebAuthn
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.WebAuthn
+  nameWithType: OpenQA.Selenium.DevTools.V125.WebAuthn
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.WebAuthn
+    name: WebAuthn
+    href: OpenQA.Selenium.DevTools.V125.WebAuthn.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.WebAuthn
+    name: WebAuthn
+    href: OpenQA.Selenium.DevTools.V125.WebAuthn.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_Protocol
+  name: Protocol
+  nameWithType: VirtualAuthenticatorOptions.Protocol
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Protocol
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorProtocol
+  commentId: T:OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorProtocol
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorProtocol.html
+  name: AuthenticatorProtocol
+  nameWithType: AuthenticatorProtocol
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorProtocol
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_Ctap2Version
+  name: Ctap2Version
+  nameWithType: VirtualAuthenticatorOptions.Ctap2Version
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Ctap2Version
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version.html
+  name: Ctap2Version?
+  nameWithType: Ctap2Version?
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version
+    name: Ctap2Version
+    href: OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version
+    name: Ctap2Version
+    href: OpenQA.Selenium.DevTools.V125.WebAuthn.Ctap2Version.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_Transport
+  name: Transport
+  nameWithType: VirtualAuthenticatorOptions.Transport
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.Transport
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorTransport
+  commentId: T:OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorTransport
+  parent: OpenQA.Selenium.DevTools.V125.WebAuthn
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorTransport.html
+  name: AuthenticatorTransport
+  nameWithType: AuthenticatorTransport
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.AuthenticatorTransport
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_HasResidentKey
+  name: HasResidentKey
+  nameWithType: VirtualAuthenticatorOptions.HasResidentKey
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasResidentKey
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_HasUserVerification
+  name: HasUserVerification
+  nameWithType: VirtualAuthenticatorOptions.HasUserVerification
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasUserVerification
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_HasLargeBlob
+  name: HasLargeBlob
+  nameWithType: VirtualAuthenticatorOptions.HasLargeBlob
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasLargeBlob
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_HasCredBlob
+  name: HasCredBlob
+  nameWithType: VirtualAuthenticatorOptions.HasCredBlob
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasCredBlob
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_HasMinPinLength
+  name: HasMinPinLength
+  nameWithType: VirtualAuthenticatorOptions.HasMinPinLength
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasMinPinLength
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_HasPrf
+  name: HasPrf
+  nameWithType: VirtualAuthenticatorOptions.HasPrf
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.HasPrf
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_AutomaticPresenceSimulation
+  name: AutomaticPresenceSimulation
+  nameWithType: VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.AutomaticPresenceSimulation
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_IsUserVerified
+  name: IsUserVerified
+  nameWithType: VirtualAuthenticatorOptions.IsUserVerified
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.IsUserVerified
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_DefaultBackupEligibility
+  name: DefaultBackupEligibility
+  nameWithType: VirtualAuthenticatorOptions.DefaultBackupEligibility
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupEligibility
+- uid: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState
+  href: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.html#OpenQA_Selenium_DevTools_V125_WebAuthn_VirtualAuthenticatorOptions_DefaultBackupState
+  name: DefaultBackupState
+  nameWithType: VirtualAuthenticatorOptions.DefaultBackupState
+  fullName: OpenQA.Selenium.DevTools.V125.WebAuthn.VirtualAuthenticatorOptions.DefaultBackupState

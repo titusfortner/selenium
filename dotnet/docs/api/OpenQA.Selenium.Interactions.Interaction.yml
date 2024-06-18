@@ -1,0 +1,623 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Interactions.Interaction
+  commentId: T:OpenQA.Selenium.Interactions.Interaction
+  id: Interaction
+  parent: OpenQA.Selenium.Interactions
+  children:
+  - OpenQA.Selenium.Interactions.Interaction.#ctor(OpenQA.Selenium.Interactions.InputDevice)
+  - OpenQA.Selenium.Interactions.Interaction.IsValidFor(OpenQA.Selenium.Interactions.InputDeviceKind)
+  - OpenQA.Selenium.Interactions.Interaction.SourceDevice
+  - OpenQA.Selenium.Interactions.Interaction.ToDictionary
+  langs:
+  - csharp
+  - vb
+  name: Interaction
+  nameWithType: Interaction
+  fullName: OpenQA.Selenium.Interactions.Interaction
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Interaction.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Interaction
+    path: ../src/webdriver/Interactions/Interaction.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Represents a single interaction for a given input device.
+  example: []
+  syntax:
+    content: public abstract class Interaction
+    content.vb: Public MustInherit Class Interaction
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Interactions.Interaction.#ctor(OpenQA.Selenium.Interactions.InputDevice)
+  commentId: M:OpenQA.Selenium.Interactions.Interaction.#ctor(OpenQA.Selenium.Interactions.InputDevice)
+  id: '#ctor(OpenQA.Selenium.Interactions.InputDevice)'
+  parent: OpenQA.Selenium.Interactions.Interaction
+  langs:
+  - csharp
+  - vb
+  name: Interaction(InputDevice)
+  nameWithType: Interaction.Interaction(InputDevice)
+  fullName: OpenQA.Selenium.Interactions.Interaction.Interaction(OpenQA.Selenium.Interactions.InputDevice)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Interaction.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/Interaction.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.Interaction" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: protected Interaction(InputDevice sourceDevice)
+    parameters:
+    - id: sourceDevice
+      type: OpenQA.Selenium.Interactions.InputDevice
+      description: The input device which performs this action.
+    content.vb: Protected Sub New(sourceDevice As InputDevice)
+  overload: OpenQA.Selenium.Interactions.Interaction.#ctor*
+  nameWithType.vb: Interaction.New(InputDevice)
+  fullName.vb: OpenQA.Selenium.Interactions.Interaction.New(OpenQA.Selenium.Interactions.InputDevice)
+  name.vb: New(InputDevice)
+- uid: OpenQA.Selenium.Interactions.Interaction.SourceDevice
+  commentId: P:OpenQA.Selenium.Interactions.Interaction.SourceDevice
+  id: SourceDevice
+  parent: OpenQA.Selenium.Interactions.Interaction
+  langs:
+  - csharp
+  - vb
+  name: SourceDevice
+  nameWithType: Interaction.SourceDevice
+  fullName: OpenQA.Selenium.Interactions.Interaction.SourceDevice
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Interaction.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SourceDevice
+    path: ../src/webdriver/Interactions/Interaction.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the device for which this action is intended.
+  example: []
+  syntax:
+    content: public InputDevice SourceDevice { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Interactions.InputDevice
+    content.vb: Public ReadOnly Property SourceDevice As InputDevice
+  overload: OpenQA.Selenium.Interactions.Interaction.SourceDevice*
+- uid: OpenQA.Selenium.Interactions.Interaction.ToDictionary
+  commentId: M:OpenQA.Selenium.Interactions.Interaction.ToDictionary
+  id: ToDictionary
+  parent: OpenQA.Selenium.Interactions.Interaction
+  langs:
+  - csharp
+  - vb
+  name: ToDictionary()
+  nameWithType: Interaction.ToDictionary()
+  fullName: OpenQA.Selenium.Interactions.Interaction.ToDictionary()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Interaction.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToDictionary
+    path: ../src/webdriver/Interactions/Interaction.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Returns a value for this action that can be transmitted across the wire to a remote end.
+  example: []
+  syntax:
+    content: public abstract Dictionary<string, object> ToDictionary()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> representing this action.
+    content.vb: Public MustOverride Function ToDictionary() As Dictionary(Of String, Object)
+  overload: OpenQA.Selenium.Interactions.Interaction.ToDictionary*
+- uid: OpenQA.Selenium.Interactions.Interaction.IsValidFor(OpenQA.Selenium.Interactions.InputDeviceKind)
+  commentId: M:OpenQA.Selenium.Interactions.Interaction.IsValidFor(OpenQA.Selenium.Interactions.InputDeviceKind)
+  id: IsValidFor(OpenQA.Selenium.Interactions.InputDeviceKind)
+  parent: OpenQA.Selenium.Interactions.Interaction
+  langs:
+  - csharp
+  - vb
+  name: IsValidFor(InputDeviceKind)
+  nameWithType: Interaction.IsValidFor(InputDeviceKind)
+  fullName: OpenQA.Selenium.Interactions.Interaction.IsValidFor(OpenQA.Selenium.Interactions.InputDeviceKind)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/Interaction.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsValidFor
+    path: ../src/webdriver/Interactions/Interaction.cs
+    startLine: 64
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets a value indicating whether this action is valid for the specified type of input device.
+  example: []
+  syntax:
+    content: public virtual bool IsValidFor(InputDeviceKind sourceDeviceKind)
+    parameters:
+    - id: sourceDeviceKind
+      type: OpenQA.Selenium.Interactions.InputDeviceKind
+      description: The type of device to check.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the action is valid for the specified type of input device;
+            otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overridable Function IsValidFor(sourceDeviceKind As InputDeviceKind) As Boolean
+  overload: OpenQA.Selenium.Interactions.Interaction.IsValidFor*
+references:
+- uid: OpenQA.Selenium.Interactions
+  commentId: N:OpenQA.Selenium.Interactions
+  href: OpenQA.html
+  name: OpenQA.Selenium.Interactions
+  nameWithType: OpenQA.Selenium.Interactions
+  fullName: OpenQA.Selenium.Interactions
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Interactions.Interaction
+  commentId: T:OpenQA.Selenium.Interactions.Interaction
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.Interaction.html
+  name: Interaction
+  nameWithType: Interaction
+  fullName: OpenQA.Selenium.Interactions.Interaction
+- uid: OpenQA.Selenium.Interactions.Interaction.#ctor*
+  commentId: Overload:OpenQA.Selenium.Interactions.Interaction.#ctor
+  href: OpenQA.Selenium.Interactions.Interaction.html#OpenQA_Selenium_Interactions_Interaction__ctor_OpenQA_Selenium_Interactions_InputDevice_
+  name: Interaction
+  nameWithType: Interaction.Interaction
+  fullName: OpenQA.Selenium.Interactions.Interaction.Interaction
+  nameWithType.vb: Interaction.New
+  fullName.vb: OpenQA.Selenium.Interactions.Interaction.New
+  name.vb: New
+- uid: OpenQA.Selenium.Interactions.InputDevice
+  commentId: T:OpenQA.Selenium.Interactions.InputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.InputDevice.html
+  name: InputDevice
+  nameWithType: InputDevice
+  fullName: OpenQA.Selenium.Interactions.InputDevice
+- uid: OpenQA.Selenium.Interactions.Interaction.SourceDevice*
+  commentId: Overload:OpenQA.Selenium.Interactions.Interaction.SourceDevice
+  href: OpenQA.Selenium.Interactions.Interaction.html#OpenQA_Selenium_Interactions_Interaction_SourceDevice
+  name: SourceDevice
+  nameWithType: Interaction.SourceDevice
+  fullName: OpenQA.Selenium.Interactions.Interaction.SourceDevice
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: OpenQA.Selenium.Interactions.Interaction.ToDictionary*
+  commentId: Overload:OpenQA.Selenium.Interactions.Interaction.ToDictionary
+  href: OpenQA.Selenium.Interactions.Interaction.html#OpenQA_Selenium_Interactions_Interaction_ToDictionary
+  name: ToDictionary
+  nameWithType: Interaction.ToDictionary
+  fullName: OpenQA.Selenium.Interactions.Interaction.ToDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.Interactions.Interaction.IsValidFor*
+  commentId: Overload:OpenQA.Selenium.Interactions.Interaction.IsValidFor
+  href: OpenQA.Selenium.Interactions.Interaction.html#OpenQA_Selenium_Interactions_Interaction_IsValidFor_OpenQA_Selenium_Interactions_InputDeviceKind_
+  name: IsValidFor
+  nameWithType: Interaction.IsValidFor
+  fullName: OpenQA.Selenium.Interactions.Interaction.IsValidFor
+- uid: OpenQA.Selenium.Interactions.InputDeviceKind
+  commentId: T:OpenQA.Selenium.Interactions.InputDeviceKind
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.InputDeviceKind.html
+  name: InputDeviceKind
+  nameWithType: InputDeviceKind
+  fullName: OpenQA.Selenium.Interactions.InputDeviceKind
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

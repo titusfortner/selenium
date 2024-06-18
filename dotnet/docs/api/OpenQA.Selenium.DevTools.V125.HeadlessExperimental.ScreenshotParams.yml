@@ -1,0 +1,553 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams
+  commentId: T:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams
+  id: ScreenshotParams
+  parent: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  children:
+  - OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format
+  - OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed
+  - OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality
+  langs:
+  - csharp
+  - vb
+  name: ScreenshotParams
+  nameWithType: ScreenshotParams
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScreenshotParams
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  summary: Encoding options for a screenshot.
+  example: []
+  syntax:
+    content: public sealed class ScreenshotParams
+    content.vb: Public NotInheritable Class ScreenshotParams
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format
+  commentId: P:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format
+  id: Format
+  parent: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams
+  langs:
+  - csharp
+  - vb
+  name: Format
+  nameWithType: ScreenshotParams.Format
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Format
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  summary: Image compression format (defaults to png).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("format", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ScreenshotParamsFormatValues? Format { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues}
+    content.vb: >-
+      <JsonProperty("format", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Format As ScreenshotParamsFormatValues?
+  overload: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: format
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality
+  commentId: P:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality
+  id: Quality
+  parent: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams
+  langs:
+  - csharp
+  - vb
+  name: Quality
+  nameWithType: ScreenshotParams.Quality
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Quality
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  summary: Compression quality from range [0..100] (jpeg and webp only).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("quality", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? Quality { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("quality", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Quality As Long?
+  overload: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: quality
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed
+  commentId: P:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed
+  id: OptimizeForSpeed
+  parent: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams
+  langs:
+  - csharp
+  - vb
+  name: OptimizeForSpeed
+  nameWithType: ScreenshotParams.OptimizeForSpeed
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OptimizeForSpeed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/HeadlessExperimental/ScreenshotParams.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  summary: Optimize image encoding for speed, not for resulting size (defaults to false)
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("optimizeForSpeed", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? OptimizeForSpeed { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("optimizeForSpeed", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property OptimizeForSpeed As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: optimizeForSpeed
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  commentId: N:OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  nameWithType: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+    name: HeadlessExperimental
+    href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental
+    name: HeadlessExperimental
+    href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format
+  href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.html#OpenQA_Selenium_DevTools_V125_HeadlessExperimental_ScreenshotParams_Format
+  name: Format
+  nameWithType: ScreenshotParams.Format
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Format
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues.html
+  name: ScreenshotParamsFormatValues?
+  nameWithType: ScreenshotParamsFormatValues?
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues
+    name: ScreenshotParamsFormatValues
+    href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues
+    name: ScreenshotParamsFormatValues
+    href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParamsFormatValues.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality
+  href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.html#OpenQA_Selenium_DevTools_V125_HeadlessExperimental_ScreenshotParams_Quality
+  name: Quality
+  nameWithType: ScreenshotParams.Quality
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.Quality
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed
+  href: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.html#OpenQA_Selenium_DevTools_V125_HeadlessExperimental_ScreenshotParams_OptimizeForSpeed
+  name: OptimizeForSpeed
+  nameWithType: ScreenshotParams.OptimizeForSpeed
+  fullName: OpenQA.Selenium.DevTools.V125.HeadlessExperimental.ScreenshotParams.OptimizeForSpeed
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'

@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  id: CookieExemptionReason
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  children:
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.CorsOptIn
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.EnterprisePolicy
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.None
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.StorageAccess
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDDeprecationTrial
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDHeuristics
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDMetadata
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TopLevelStorageAccess
+  - OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.UserSetting
+  langs:
+  - csharp
+  - vb
+  name: CookieExemptionReason
+  nameWithType: CookieExemptionReason
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CookieExemptionReason
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Types of reasons why a cookie should have been blocked by 3PCD but is exempted for the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum CookieExemptionReason
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum CookieExemptionReason
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.None
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.None
+  id: None
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: CookieExemptionReason.None
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.None
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: None
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the None value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "None")]
+
+      None = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="None")>
+
+      None = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: None
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.UserSetting
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.UserSetting
+  id: UserSetting
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: UserSetting
+  nameWithType: CookieExemptionReason.UserSetting
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.UserSetting
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserSetting
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the UserSetting value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "UserSetting")]
+
+      UserSetting = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="UserSetting")>
+
+      UserSetting = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: UserSetting
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDMetadata
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDMetadata
+  id: TPCDMetadata
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: TPCDMetadata
+  nameWithType: CookieExemptionReason.TPCDMetadata
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDMetadata
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TPCDMetadata
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the TPCDMetadata value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "TPCDMetadata")]
+
+      TPCDMetadata = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="TPCDMetadata")>
+
+      TPCDMetadata = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: TPCDMetadata
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDDeprecationTrial
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDDeprecationTrial
+  id: TPCDDeprecationTrial
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: TPCDDeprecationTrial
+  nameWithType: CookieExemptionReason.TPCDDeprecationTrial
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDDeprecationTrial
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TPCDDeprecationTrial
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the TPCDDeprecationTrial value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "TPCDDeprecationTrial")]
+
+      TPCDDeprecationTrial = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="TPCDDeprecationTrial")>
+
+      TPCDDeprecationTrial = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: TPCDDeprecationTrial
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDHeuristics
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDHeuristics
+  id: TPCDHeuristics
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: TPCDHeuristics
+  nameWithType: CookieExemptionReason.TPCDHeuristics
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TPCDHeuristics
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TPCDHeuristics
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the TPCDHeuristics value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "TPCDHeuristics")]
+
+      TPCDHeuristics = 4
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="TPCDHeuristics")>
+
+      TPCDHeuristics = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: TPCDHeuristics
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.EnterprisePolicy
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.EnterprisePolicy
+  id: EnterprisePolicy
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: EnterprisePolicy
+  nameWithType: CookieExemptionReason.EnterprisePolicy
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.EnterprisePolicy
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnterprisePolicy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the EnterprisePolicy value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "EnterprisePolicy")]
+
+      EnterprisePolicy = 5
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="EnterprisePolicy")>
+
+      EnterprisePolicy = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: EnterprisePolicy
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.StorageAccess
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.StorageAccess
+  id: StorageAccess
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: StorageAccess
+  nameWithType: CookieExemptionReason.StorageAccess
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.StorageAccess
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StorageAccess
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the StorageAccess value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "StorageAccess")]
+
+      StorageAccess = 6
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="StorageAccess")>
+
+      StorageAccess = 6
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: StorageAccess
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TopLevelStorageAccess
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TopLevelStorageAccess
+  id: TopLevelStorageAccess
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: TopLevelStorageAccess
+  nameWithType: CookieExemptionReason.TopLevelStorageAccess
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.TopLevelStorageAccess
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TopLevelStorageAccess
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the TopLevelStorageAccess value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "TopLevelStorageAccess")]
+
+      TopLevelStorageAccess = 7
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="TopLevelStorageAccess")>
+
+      TopLevelStorageAccess = 7
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: TopLevelStorageAccess
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.CorsOptIn
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.CorsOptIn
+  id: CorsOptIn
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  langs:
+  - csharp
+  - vb
+  name: CorsOptIn
+  nameWithType: CookieExemptionReason.CorsOptIn
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.CorsOptIn
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CorsOptIn
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieExemptionReason.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the CorsOptIn value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "CorsOptIn")]
+
+      CorsOptIn = 8
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+    content.vb: >-
+      <EnumMember(Value:="CorsOptIn")>
+
+      CorsOptIn = 8
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: CorsOptIn
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Network
+  commentId: N:OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Network
+  nameWithType: OpenQA.Selenium.DevTools.V125.Network
+  fullName: OpenQA.Selenium.DevTools.V125.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason.html
+  name: CookieExemptionReason
+  nameWithType: CookieExemptionReason
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieExemptionReason

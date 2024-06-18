@@ -1,0 +1,759 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Command
+  commentId: T:OpenQA.Selenium.Command
+  id: Command
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.Command.#ctor(OpenQA.Selenium.SessionId,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.Command.#ctor(System.String,System.String)
+  - OpenQA.Selenium.Command.Name
+  - OpenQA.Selenium.Command.Parameters
+  - OpenQA.Selenium.Command.ParametersAsJsonString
+  - OpenQA.Selenium.Command.SessionId
+  - OpenQA.Selenium.Command.ToString
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: Command
+  fullName: OpenQA.Selenium.Command
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Command
+    path: ../src/webdriver/Command.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides a way to send commands to the remote server
+  example: []
+  syntax:
+    content: public class Command
+    content.vb: Public Class Command
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.Command.#ctor(System.String,System.String)
+  commentId: M:OpenQA.Selenium.Command.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: Command(string, string)
+  nameWithType: Command.Command(string, string)
+  fullName: OpenQA.Selenium.Command.Command(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Command.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Command" data-throw-if-not-resolved="false"></xref> class using a command name and a JSON-encoded string for the parameters.
+  example: []
+  syntax:
+    content: public Command(string name, string jsonParameters)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name of the command
+    - id: jsonParameters
+      type: System.String
+      description: Parameters for the command as a JSON-encoded string.
+    content.vb: Public Sub New(name As String, jsonParameters As String)
+  overload: OpenQA.Selenium.Command.#ctor*
+  nameWithType.vb: Command.New(String, String)
+  fullName.vb: OpenQA.Selenium.Command.New(String, String)
+  name.vb: New(String, String)
+- uid: OpenQA.Selenium.Command.#ctor(OpenQA.Selenium.SessionId,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.Command.#ctor(OpenQA.Selenium.SessionId,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: '#ctor(OpenQA.Selenium.SessionId,System.String,System.Collections.Generic.Dictionary{System.String,System.Object})'
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: Command(SessionId, string, Dictionary<string, object>)
+  nameWithType: Command.Command(SessionId, string, Dictionary<string, object>)
+  fullName: OpenQA.Selenium.Command.Command(OpenQA.Selenium.SessionId, string, System.Collections.Generic.Dictionary<string, object>)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Command.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Command" data-throw-if-not-resolved="false"></xref> class for a Session
+  example: []
+  syntax:
+    content: public Command(SessionId sessionId, string name, Dictionary<string, object> parameters)
+    parameters:
+    - id: sessionId
+      type: OpenQA.Selenium.SessionId
+      description: Session ID the driver is using
+    - id: name
+      type: System.String
+      description: Name of the command
+    - id: parameters
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: Parameters for that command
+    content.vb: Public Sub New(sessionId As SessionId, name As String, parameters As Dictionary(Of String, Object))
+  overload: OpenQA.Selenium.Command.#ctor*
+  nameWithType.vb: Command.New(SessionId, String, Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.Command.New(OpenQA.Selenium.SessionId, String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: New(SessionId, String, Dictionary(Of String, Object))
+- uid: OpenQA.Selenium.Command.SessionId
+  commentId: P:OpenQA.Selenium.Command.SessionId
+  id: SessionId
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: Command.SessionId
+  fullName: OpenQA.Selenium.Command.SessionId
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SessionId
+    path: ../src/webdriver/Command.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the SessionID of the command
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sessionId")]
+
+      public SessionId SessionId { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.SessionId
+    content.vb: >-
+      <JsonProperty("sessionId")>
+
+      Public ReadOnly Property SessionId As SessionId
+  overload: OpenQA.Selenium.Command.SessionId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sessionId
+- uid: OpenQA.Selenium.Command.Name
+  commentId: P:OpenQA.Selenium.Command.Name
+  id: Name
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Command.Name
+  fullName: OpenQA.Selenium.Command.Name
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../src/webdriver/Command.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the command name
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public ReadOnly Property Name As String
+  overload: OpenQA.Selenium.Command.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OpenQA.Selenium.Command.Parameters
+  commentId: P:OpenQA.Selenium.Command.Parameters
+  id: Parameters
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: Command.Parameters
+  fullName: OpenQA.Selenium.Command.Parameters
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Parameters
+    path: ../src/webdriver/Command.cs
+    startLine: 81
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the parameters of the command
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parameters")]
+
+      public Dictionary<string, object> Parameters { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+    content.vb: >-
+      <JsonProperty("parameters")>
+
+      Public ReadOnly Property Parameters As Dictionary(Of String, Object)
+  overload: OpenQA.Selenium.Command.Parameters*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parameters
+- uid: OpenQA.Selenium.Command.ParametersAsJsonString
+  commentId: P:OpenQA.Selenium.Command.ParametersAsJsonString
+  id: ParametersAsJsonString
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: ParametersAsJsonString
+  nameWithType: Command.ParametersAsJsonString
+  fullName: OpenQA.Selenium.Command.ParametersAsJsonString
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ParametersAsJsonString
+    path: ../src/webdriver/Command.cs
+    startLine: 90
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the parameters of the command as a JSON-encoded string.
+  example: []
+  syntax:
+    content: public string ParametersAsJsonString { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ParametersAsJsonString As String
+  overload: OpenQA.Selenium.Command.ParametersAsJsonString*
+- uid: OpenQA.Selenium.Command.ToString
+  commentId: M:OpenQA.Selenium.Command.ToString
+  id: ToString
+  parent: OpenQA.Selenium.Command
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Command.ToString()
+  fullName: OpenQA.Selenium.Command.ToString()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Command.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToString
+    path: ../src/webdriver/Command.cs
+    startLine: 113
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Returns a string of the Command object
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representation of the Command Object
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OpenQA.Selenium.Command.ToString*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Command
+  commentId: T:OpenQA.Selenium.Command
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Command.html
+  name: Command
+  nameWithType: Command
+  fullName: OpenQA.Selenium.Command
+- uid: OpenQA.Selenium.Command.#ctor*
+  commentId: Overload:OpenQA.Selenium.Command.#ctor
+  href: OpenQA.Selenium.Command.html#OpenQA_Selenium_Command__ctor_System_String_System_String_
+  name: Command
+  nameWithType: Command.Command
+  fullName: OpenQA.Selenium.Command.Command
+  nameWithType.vb: Command.New
+  fullName.vb: OpenQA.Selenium.Command.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.SessionId
+  commentId: T:OpenQA.Selenium.SessionId
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.SessionId.html
+  name: SessionId
+  nameWithType: SessionId
+  fullName: OpenQA.Selenium.SessionId
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.Command.SessionId*
+  commentId: Overload:OpenQA.Selenium.Command.SessionId
+  href: OpenQA.Selenium.Command.html#OpenQA_Selenium_Command_SessionId
+  name: SessionId
+  nameWithType: Command.SessionId
+  fullName: OpenQA.Selenium.Command.SessionId
+- uid: OpenQA.Selenium.Command.Name*
+  commentId: Overload:OpenQA.Selenium.Command.Name
+  href: OpenQA.Selenium.Command.html#OpenQA_Selenium_Command_Name
+  name: Name
+  nameWithType: Command.Name
+  fullName: OpenQA.Selenium.Command.Name
+- uid: OpenQA.Selenium.Command.Parameters*
+  commentId: Overload:OpenQA.Selenium.Command.Parameters
+  href: OpenQA.Selenium.Command.html#OpenQA_Selenium_Command_Parameters
+  name: Parameters
+  nameWithType: Command.Parameters
+  fullName: OpenQA.Selenium.Command.Parameters
+- uid: OpenQA.Selenium.Command.ParametersAsJsonString*
+  commentId: Overload:OpenQA.Selenium.Command.ParametersAsJsonString
+  href: OpenQA.Selenium.Command.html#OpenQA_Selenium_Command_ParametersAsJsonString
+  name: ParametersAsJsonString
+  nameWithType: Command.ParametersAsJsonString
+  fullName: OpenQA.Selenium.Command.ParametersAsJsonString
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Command.ToString*
+  commentId: Overload:OpenQA.Selenium.Command.ToString
+  href: OpenQA.Selenium.Command.html#OpenQA_Selenium_Command_ToString
+  name: ToString
+  nameWithType: Command.ToString
+  fullName: OpenQA.Selenium.Command.ToString

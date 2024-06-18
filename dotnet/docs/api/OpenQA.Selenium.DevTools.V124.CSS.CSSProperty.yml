@@ -1,0 +1,870 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  commentId: T:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  id: CSSProperty
+  parent: OpenQA.Selenium.DevTools.V124.CSS
+  children:
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value
+  langs:
+  - csharp
+  - vb
+  name: CSSProperty
+  nameWithType: CSSProperty
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CSSProperty
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: CSS property declaration data.
+  example: []
+  syntax:
+    content: public sealed class CSSProperty
+    content.vb: Public NotInheritable Class CSSProperty
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name
+  id: Name
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CSSProperty.Name
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: The property name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public Property Name As String
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value
+  id: Value
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CSSProperty.Value
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Value
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: The property value.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("value")]
+
+      public string Value { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("value")>
+
+      Public Property Value As String
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: value
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important
+  id: Important
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Important
+  nameWithType: CSSProperty.Important
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Important
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: Whether the property has "!important" annotation (implies `false` if absent).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("important", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Important { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("important", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Important As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: important
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit
+  id: Implicit
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Implicit
+  nameWithType: CSSProperty.Implicit
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Implicit
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: Whether the property is implicit (implies `false` if absent).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("implicit", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Implicit { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("implicit", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Implicit As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: implicit
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text
+  id: Text
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: CSSProperty.Text
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Text
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: The full property text as specified in the style.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("text", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("text", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Text As String
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: text
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk
+  id: ParsedOk
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: ParsedOk
+  nameWithType: CSSProperty.ParsedOk
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ParsedOk
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: Whether the property is understood by the browser (implies `true` if absent).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parsedOk", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ParsedOk { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("parsedOk", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ParsedOk As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parsedOk
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled
+  id: Disabled
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Disabled
+  nameWithType: CSSProperty.Disabled
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disabled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: Whether the property is disabled by the user (present for source-based properties only).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disabled", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Disabled { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("disabled", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Disabled As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disabled
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range
+  id: Range
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: CSSProperty.Range
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Range
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: The entire property range in the enclosing style declaration (if available).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("range", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SourceRange Range { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.CSS.SourceRange
+    content.vb: >-
+      <JsonProperty("range", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Range As SourceRange
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: range
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties
+  id: LonghandProperties
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+  langs:
+  - csharp
+  - vb
+  name: LonghandProperties
+  nameWithType: CSSProperty.LonghandProperties
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LonghandProperties
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSProperty.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: >-
+    Parsed longhand components of this property if it is a shorthand.
+
+    This field will be empty if the given property is not a shorthand.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("longhandProperties", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public CSSProperty[] LonghandProperties { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty[]
+    content.vb: >-
+      <JsonProperty("longhandProperties", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property LonghandProperties As CSSProperty()
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: longhandProperties
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.CSS
+  commentId: N:OpenQA.Selenium.DevTools.V124.CSS
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.CSS
+  nameWithType: OpenQA.Selenium.DevTools.V124.CSS
+  fullName: OpenQA.Selenium.DevTools.V124.CSS
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V124.CSS.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V124.CSS.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Name
+  name: Name
+  nameWithType: CSSProperty.Name
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Value
+  name: Value
+  nameWithType: CSSProperty.Value
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Value
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Important
+  name: Important
+  nameWithType: CSSProperty.Important
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Important
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Implicit
+  name: Implicit
+  nameWithType: CSSProperty.Implicit
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Implicit
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Text
+  name: Text
+  nameWithType: CSSProperty.Text
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Text
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_ParsedOk
+  name: ParsedOk
+  nameWithType: CSSProperty.ParsedOk
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.ParsedOk
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Disabled
+  name: Disabled
+  nameWithType: CSSProperty.Disabled
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Disabled
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_Range
+  name: Range
+  nameWithType: CSSProperty.Range
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.Range
+- uid: OpenQA.Selenium.DevTools.V124.CSS.SourceRange
+  commentId: T:OpenQA.Selenium.DevTools.V124.CSS.SourceRange
+  parent: OpenQA.Selenium.DevTools.V124.CSS
+  href: OpenQA.Selenium.DevTools.V124.CSS.SourceRange.html
+  name: SourceRange
+  nameWithType: SourceRange
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.SourceRange
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html#OpenQA_Selenium_DevTools_V124_CSS_CSSProperty_LonghandProperties
+  name: LonghandProperties
+  nameWithType: CSSProperty.LonghandProperties
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.LonghandProperties
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html
+  name: CSSProperty[]
+  nameWithType: CSSProperty[]
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty[]
+  nameWithType.vb: CSSProperty()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty()
+  name.vb: CSSProperty()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+    name: CSSProperty
+    href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty
+    name: CSSProperty
+    href: OpenQA.Selenium.DevTools.V124.CSS.CSSProperty.html
+  - name: (
+  - name: )

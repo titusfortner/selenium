@@ -1,0 +1,587 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.INetwork
+  commentId: T:OpenQA.Selenium.INetwork
+  id: INetwork
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.INetwork.AddAuthenticationHandler(OpenQA.Selenium.NetworkAuthenticationHandler)
+  - OpenQA.Selenium.INetwork.AddRequestHandler(OpenQA.Selenium.NetworkRequestHandler)
+  - OpenQA.Selenium.INetwork.AddResponseHandler(OpenQA.Selenium.NetworkResponseHandler)
+  - OpenQA.Selenium.INetwork.ClearAuthenticationHandlers
+  - OpenQA.Selenium.INetwork.ClearRequestHandlers
+  - OpenQA.Selenium.INetwork.ClearResponseHandlers
+  - OpenQA.Selenium.INetwork.NetworkRequestSent
+  - OpenQA.Selenium.INetwork.NetworkResponseReceived
+  - OpenQA.Selenium.INetwork.StartMonitoring
+  - OpenQA.Selenium.INetwork.StopMonitoring
+  langs:
+  - csharp
+  - vb
+  name: INetwork
+  nameWithType: INetwork
+  fullName: OpenQA.Selenium.INetwork
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: INetwork
+    path: ../src/webdriver/INetwork.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines an interface allowing the user to manage network communication by the browser.
+  example: []
+  syntax:
+    content: public interface INetwork
+    content.vb: Public Interface INetwork
+- uid: OpenQA.Selenium.INetwork.NetworkRequestSent
+  commentId: E:OpenQA.Selenium.INetwork.NetworkRequestSent
+  id: NetworkRequestSent
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: NetworkRequestSent
+  nameWithType: INetwork.NetworkRequestSent
+  fullName: OpenQA.Selenium.INetwork.NetworkRequestSent
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NetworkRequestSent
+    path: ../src/webdriver/INetwork.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Occurs when a browser sends a network request.
+  example: []
+  syntax:
+    content: event EventHandler<NetworkRequestSentEventArgs> NetworkRequestSent
+    return:
+      type: System.EventHandler{OpenQA.Selenium.NetworkRequestSentEventArgs}
+    content.vb: Event NetworkRequestSent As EventHandler(Of NetworkRequestSentEventArgs)
+- uid: OpenQA.Selenium.INetwork.NetworkResponseReceived
+  commentId: E:OpenQA.Selenium.INetwork.NetworkResponseReceived
+  id: NetworkResponseReceived
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: NetworkResponseReceived
+  nameWithType: INetwork.NetworkResponseReceived
+  fullName: OpenQA.Selenium.INetwork.NetworkResponseReceived
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NetworkResponseReceived
+    path: ../src/webdriver/INetwork.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Occurs when a browser receives a network response.
+  example: []
+  syntax:
+    content: event EventHandler<NetworkResponseReceivedEventArgs> NetworkResponseReceived
+    return:
+      type: System.EventHandler{OpenQA.Selenium.NetworkResponseReceivedEventArgs}
+    content.vb: Event NetworkResponseReceived As EventHandler(Of NetworkResponseReceivedEventArgs)
+- uid: OpenQA.Selenium.INetwork.AddRequestHandler(OpenQA.Selenium.NetworkRequestHandler)
+  commentId: M:OpenQA.Selenium.INetwork.AddRequestHandler(OpenQA.Selenium.NetworkRequestHandler)
+  id: AddRequestHandler(OpenQA.Selenium.NetworkRequestHandler)
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: AddRequestHandler(NetworkRequestHandler)
+  nameWithType: INetwork.AddRequestHandler(NetworkRequestHandler)
+  fullName: OpenQA.Selenium.INetwork.AddRequestHandler(OpenQA.Selenium.NetworkRequestHandler)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddRequestHandler
+    path: ../src/webdriver/INetwork.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Adds a <xref href="OpenQA.Selenium.NetworkRequestHandler" data-throw-if-not-resolved="false"></xref> to examine incoming network requests,
+
+    and optionally modify the request or provide a response.
+  example: []
+  syntax:
+    content: void AddRequestHandler(NetworkRequestHandler handler)
+    parameters:
+    - id: handler
+      type: OpenQA.Selenium.NetworkRequestHandler
+      description: The <xref href="OpenQA.Selenium.NetworkRequestHandler" data-throw-if-not-resolved="false"></xref> to add.
+    content.vb: Sub AddRequestHandler(handler As NetworkRequestHandler)
+  overload: OpenQA.Selenium.INetwork.AddRequestHandler*
+- uid: OpenQA.Selenium.INetwork.ClearRequestHandlers
+  commentId: M:OpenQA.Selenium.INetwork.ClearRequestHandlers
+  id: ClearRequestHandlers
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: ClearRequestHandlers()
+  nameWithType: INetwork.ClearRequestHandlers()
+  fullName: OpenQA.Selenium.INetwork.ClearRequestHandlers()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearRequestHandlers
+    path: ../src/webdriver/INetwork.cs
+    startLine: 48
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Clears all added <xref href="OpenQA.Selenium.NetworkRequestHandler" data-throw-if-not-resolved="false"></xref> instances.
+  example: []
+  syntax:
+    content: void ClearRequestHandlers()
+    content.vb: Sub ClearRequestHandlers()
+  overload: OpenQA.Selenium.INetwork.ClearRequestHandlers*
+- uid: OpenQA.Selenium.INetwork.AddAuthenticationHandler(OpenQA.Selenium.NetworkAuthenticationHandler)
+  commentId: M:OpenQA.Selenium.INetwork.AddAuthenticationHandler(OpenQA.Selenium.NetworkAuthenticationHandler)
+  id: AddAuthenticationHandler(OpenQA.Selenium.NetworkAuthenticationHandler)
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: AddAuthenticationHandler(NetworkAuthenticationHandler)
+  nameWithType: INetwork.AddAuthenticationHandler(NetworkAuthenticationHandler)
+  fullName: OpenQA.Selenium.INetwork.AddAuthenticationHandler(OpenQA.Selenium.NetworkAuthenticationHandler)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddAuthenticationHandler
+    path: ../src/webdriver/INetwork.cs
+    startLine: 55
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Adds a <xref href="OpenQA.Selenium.NetworkAuthenticationHandler" data-throw-if-not-resolved="false"></xref> to supply authentication
+
+    credentials for network requests.
+  example: []
+  syntax:
+    content: void AddAuthenticationHandler(NetworkAuthenticationHandler handler)
+    parameters:
+    - id: handler
+      type: OpenQA.Selenium.NetworkAuthenticationHandler
+      description: The <xref href="OpenQA.Selenium.NetworkAuthenticationHandler" data-throw-if-not-resolved="false"></xref> to add.
+    content.vb: Sub AddAuthenticationHandler(handler As NetworkAuthenticationHandler)
+  overload: OpenQA.Selenium.INetwork.AddAuthenticationHandler*
+- uid: OpenQA.Selenium.INetwork.ClearAuthenticationHandlers
+  commentId: M:OpenQA.Selenium.INetwork.ClearAuthenticationHandlers
+  id: ClearAuthenticationHandlers
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: ClearAuthenticationHandlers()
+  nameWithType: INetwork.ClearAuthenticationHandlers()
+  fullName: OpenQA.Selenium.INetwork.ClearAuthenticationHandlers()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearAuthenticationHandlers
+    path: ../src/webdriver/INetwork.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Clears all added <xref href="OpenQA.Selenium.NetworkAuthenticationHandler" data-throw-if-not-resolved="false"></xref> instances.
+  example: []
+  syntax:
+    content: void ClearAuthenticationHandlers()
+    content.vb: Sub ClearAuthenticationHandlers()
+  overload: OpenQA.Selenium.INetwork.ClearAuthenticationHandlers*
+- uid: OpenQA.Selenium.INetwork.AddResponseHandler(OpenQA.Selenium.NetworkResponseHandler)
+  commentId: M:OpenQA.Selenium.INetwork.AddResponseHandler(OpenQA.Selenium.NetworkResponseHandler)
+  id: AddResponseHandler(OpenQA.Selenium.NetworkResponseHandler)
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: AddResponseHandler(NetworkResponseHandler)
+  nameWithType: INetwork.AddResponseHandler(NetworkResponseHandler)
+  fullName: OpenQA.Selenium.INetwork.AddResponseHandler(OpenQA.Selenium.NetworkResponseHandler)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddResponseHandler
+    path: ../src/webdriver/INetwork.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Adds a <xref href="OpenQA.Selenium.NetworkResponseHandler" data-throw-if-not-resolved="false"></xref> to examine received network responses,
+
+    and optionally modify the response.
+  example: []
+  syntax:
+    content: void AddResponseHandler(NetworkResponseHandler handler)
+    parameters:
+    - id: handler
+      type: OpenQA.Selenium.NetworkResponseHandler
+      description: The <xref href="OpenQA.Selenium.NetworkResponseHandler" data-throw-if-not-resolved="false"></xref> to add.
+    content.vb: Sub AddResponseHandler(handler As NetworkResponseHandler)
+  overload: OpenQA.Selenium.INetwork.AddResponseHandler*
+- uid: OpenQA.Selenium.INetwork.ClearResponseHandlers
+  commentId: M:OpenQA.Selenium.INetwork.ClearResponseHandlers
+  id: ClearResponseHandlers
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: ClearResponseHandlers()
+  nameWithType: INetwork.ClearResponseHandlers()
+  fullName: OpenQA.Selenium.INetwork.ClearResponseHandlers()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearResponseHandlers
+    path: ../src/webdriver/INetwork.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Clears all added <xref href="OpenQA.Selenium.NetworkResponseHandler" data-throw-if-not-resolved="false"></xref> instances.
+  example: []
+  syntax:
+    content: void ClearResponseHandlers()
+    content.vb: Sub ClearResponseHandlers()
+  overload: OpenQA.Selenium.INetwork.ClearResponseHandlers*
+- uid: OpenQA.Selenium.INetwork.StartMonitoring
+  commentId: M:OpenQA.Selenium.INetwork.StartMonitoring
+  id: StartMonitoring
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: StartMonitoring()
+  nameWithType: INetwork.StartMonitoring()
+  fullName: OpenQA.Selenium.INetwork.StartMonitoring()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartMonitoring
+    path: ../src/webdriver/INetwork.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously starts monitoring for network traffic.
+  example: []
+  syntax:
+    content: Task StartMonitoring()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function StartMonitoring() As Task
+  overload: OpenQA.Selenium.INetwork.StartMonitoring*
+- uid: OpenQA.Selenium.INetwork.StopMonitoring
+  commentId: M:OpenQA.Selenium.INetwork.StopMonitoring
+  id: StopMonitoring
+  parent: OpenQA.Selenium.INetwork
+  langs:
+  - csharp
+  - vb
+  name: StopMonitoring()
+  nameWithType: INetwork.StopMonitoring()
+  fullName: OpenQA.Selenium.INetwork.StopMonitoring()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INetwork.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StopMonitoring
+    path: ../src/webdriver/INetwork.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously stops monitoring for network traffic.
+  example: []
+  syntax:
+    content: Task StopMonitoring()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Function StopMonitoring() As Task
+  overload: OpenQA.Selenium.INetwork.StopMonitoring*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.EventHandler{OpenQA.Selenium.NetworkRequestSentEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.NetworkRequestSentEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<NetworkRequestSentEventArgs>
+  nameWithType: EventHandler<NetworkRequestSentEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.NetworkRequestSentEventArgs>
+  nameWithType.vb: EventHandler(Of NetworkRequestSentEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.NetworkRequestSentEventArgs)
+  name.vb: EventHandler(Of NetworkRequestSentEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.NetworkRequestSentEventArgs
+    name: NetworkRequestSentEventArgs
+    href: OpenQA.Selenium.NetworkRequestSentEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.NetworkRequestSentEventArgs
+    name: NetworkRequestSentEventArgs
+    href: OpenQA.Selenium.NetworkRequestSentEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{OpenQA.Selenium.NetworkResponseReceivedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.NetworkResponseReceivedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<NetworkResponseReceivedEventArgs>
+  nameWithType: EventHandler<NetworkResponseReceivedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.NetworkResponseReceivedEventArgs>
+  nameWithType.vb: EventHandler(Of NetworkResponseReceivedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.NetworkResponseReceivedEventArgs)
+  name.vb: EventHandler(Of NetworkResponseReceivedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.NetworkResponseReceivedEventArgs
+    name: NetworkResponseReceivedEventArgs
+    href: OpenQA.Selenium.NetworkResponseReceivedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.NetworkResponseReceivedEventArgs
+    name: NetworkResponseReceivedEventArgs
+    href: OpenQA.Selenium.NetworkResponseReceivedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.NetworkRequestHandler
+  commentId: T:OpenQA.Selenium.NetworkRequestHandler
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.NetworkRequestHandler.html
+  name: NetworkRequestHandler
+  nameWithType: NetworkRequestHandler
+  fullName: OpenQA.Selenium.NetworkRequestHandler
+- uid: OpenQA.Selenium.INetwork.AddRequestHandler*
+  commentId: Overload:OpenQA.Selenium.INetwork.AddRequestHandler
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_AddRequestHandler_OpenQA_Selenium_NetworkRequestHandler_
+  name: AddRequestHandler
+  nameWithType: INetwork.AddRequestHandler
+  fullName: OpenQA.Selenium.INetwork.AddRequestHandler
+- uid: OpenQA.Selenium.INetwork.ClearRequestHandlers*
+  commentId: Overload:OpenQA.Selenium.INetwork.ClearRequestHandlers
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_ClearRequestHandlers
+  name: ClearRequestHandlers
+  nameWithType: INetwork.ClearRequestHandlers
+  fullName: OpenQA.Selenium.INetwork.ClearRequestHandlers
+- uid: OpenQA.Selenium.NetworkAuthenticationHandler
+  commentId: T:OpenQA.Selenium.NetworkAuthenticationHandler
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.NetworkAuthenticationHandler.html
+  name: NetworkAuthenticationHandler
+  nameWithType: NetworkAuthenticationHandler
+  fullName: OpenQA.Selenium.NetworkAuthenticationHandler
+- uid: OpenQA.Selenium.INetwork.AddAuthenticationHandler*
+  commentId: Overload:OpenQA.Selenium.INetwork.AddAuthenticationHandler
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_AddAuthenticationHandler_OpenQA_Selenium_NetworkAuthenticationHandler_
+  name: AddAuthenticationHandler
+  nameWithType: INetwork.AddAuthenticationHandler
+  fullName: OpenQA.Selenium.INetwork.AddAuthenticationHandler
+- uid: OpenQA.Selenium.INetwork.ClearAuthenticationHandlers*
+  commentId: Overload:OpenQA.Selenium.INetwork.ClearAuthenticationHandlers
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_ClearAuthenticationHandlers
+  name: ClearAuthenticationHandlers
+  nameWithType: INetwork.ClearAuthenticationHandlers
+  fullName: OpenQA.Selenium.INetwork.ClearAuthenticationHandlers
+- uid: OpenQA.Selenium.NetworkResponseHandler
+  commentId: T:OpenQA.Selenium.NetworkResponseHandler
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.NetworkResponseHandler.html
+  name: NetworkResponseHandler
+  nameWithType: NetworkResponseHandler
+  fullName: OpenQA.Selenium.NetworkResponseHandler
+- uid: OpenQA.Selenium.INetwork.AddResponseHandler*
+  commentId: Overload:OpenQA.Selenium.INetwork.AddResponseHandler
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_AddResponseHandler_OpenQA_Selenium_NetworkResponseHandler_
+  name: AddResponseHandler
+  nameWithType: INetwork.AddResponseHandler
+  fullName: OpenQA.Selenium.INetwork.AddResponseHandler
+- uid: OpenQA.Selenium.INetwork.ClearResponseHandlers*
+  commentId: Overload:OpenQA.Selenium.INetwork.ClearResponseHandlers
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_ClearResponseHandlers
+  name: ClearResponseHandlers
+  nameWithType: INetwork.ClearResponseHandlers
+  fullName: OpenQA.Selenium.INetwork.ClearResponseHandlers
+- uid: OpenQA.Selenium.INetwork.StartMonitoring*
+  commentId: Overload:OpenQA.Selenium.INetwork.StartMonitoring
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_StartMonitoring
+  name: StartMonitoring
+  nameWithType: INetwork.StartMonitoring
+  fullName: OpenQA.Selenium.INetwork.StartMonitoring
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.INetwork.StopMonitoring*
+  commentId: Overload:OpenQA.Selenium.INetwork.StopMonitoring
+  href: OpenQA.Selenium.INetwork.html#OpenQA_Selenium_INetwork_StopMonitoring
+  name: StopMonitoring
+  nameWithType: INetwork.StopMonitoring
+  fullName: OpenQA.Selenium.INetwork.StopMonitoring

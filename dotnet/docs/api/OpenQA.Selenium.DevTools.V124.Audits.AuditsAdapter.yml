@@ -1,0 +1,1154 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  id: AuditsAdapter
+  parent: OpenQA.Selenium.DevTools.V124.Audits
+  children:
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast(OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues(OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable(OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable(OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse(OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.IssueAdded
+  - OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session
+  langs:
+  - csharp
+  - vb
+  name: AuditsAdapter
+  nameWithType: AuditsAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AuditsAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: Represents an adapter for the Audits domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class AuditsAdapter
+    content.vb: Public Class AuditsAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: AuditsAdapter(IDevToolsSession)
+  nameWithType: AuditsAdapter.AuditsAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.AuditsAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: Initializes a new instance of the AuditsAdapter class.
+  example: []
+  syntax:
+    content: public AuditsAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.#ctor*
+  nameWithType.vb: AuditsAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: AuditsAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.IssueAdded
+  commentId: E:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.IssueAdded
+  id: IssueAdded
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: IssueAdded
+  nameWithType: AuditsAdapter.IssueAdded
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.IssueAdded
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IssueAdded
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: issueAdded
+  example: []
+  syntax:
+    content: public event EventHandler<IssueAddedEventArgs> IssueAdded
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs}
+    content.vb: Public Event IssueAdded As EventHandler(Of IssueAddedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse(OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse(OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetEncodedResponse(OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetEncodedResponse(GetEncodedResponseCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AuditsAdapter.GetEncodedResponse(GetEncodedResponseCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse(OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetEncodedResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: >-
+    Returns the response body and size if it were re-encoded with the specified settings. Only
+
+    applies to images.
+  example: []
+  syntax:
+    content: public Task<GetEncodedResponseCommandResponse> GetEncodedResponse(GetEncodedResponseCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse}
+    content.vb: Public Function GetEncodedResponse(command As GetEncodedResponseCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetEncodedResponseCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse*
+  nameWithType.vb: AuditsAdapter.GetEncodedResponse(GetEncodedResponseCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse(OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetEncodedResponse(GetEncodedResponseCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable(OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable(OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AuditsAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable(OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: Disables issues domain, prevents further issues from being reported to the client.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable*
+  nameWithType.vb: AuditsAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable(OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable(OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable(OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AuditsAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable(OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: >-
+    Enables issues domain, sends the issues collected so far to the client by means of the
+
+    `issueAdded` event.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable*
+  nameWithType.vb: AuditsAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable(OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast(OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast(OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: CheckContrast(OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: CheckContrast(CheckContrastCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AuditsAdapter.CheckContrast(CheckContrastCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast(OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CheckContrast
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: >-
+    Runs the contrast check for the target page. Found issues are reported
+
+    using Audits.issueAdded event.
+  example: []
+  syntax:
+    content: public Task<CheckContrastCommandResponse> CheckContrast(CheckContrastCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse}
+    content.vb: Public Function CheckContrast(command As CheckContrastCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of CheckContrastCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast*
+  nameWithType.vb: AuditsAdapter.CheckContrast(CheckContrastCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast(OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: CheckContrast(CheckContrastCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues(OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues(OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: CheckFormsIssues(OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter
+  langs:
+  - csharp
+  - vb
+  name: CheckFormsIssues(CheckFormsIssuesCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AuditsAdapter.CheckFormsIssues(CheckFormsIssuesCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues(OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CheckFormsIssues
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Audits/AuditsAdapter.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Audits
+  summary: >-
+    Runs the form issues check for the target page. Found issues are reported
+
+    using Audits.issueAdded event.
+  example: []
+  syntax:
+    content: public Task<CheckFormsIssuesCommandResponse> CheckFormsIssues(CheckFormsIssuesCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse}
+    content.vb: Public Function CheckFormsIssues(command As CheckFormsIssuesCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of CheckFormsIssuesCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues*
+  nameWithType.vb: AuditsAdapter.CheckFormsIssues(CheckFormsIssuesCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues(OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: CheckFormsIssues(CheckFormsIssuesCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Audits
+  commentId: N:OpenQA.Selenium.DevTools.V124.Audits
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Audits
+  nameWithType: OpenQA.Selenium.DevTools.V124.Audits
+  fullName: OpenQA.Selenium.DevTools.V124.Audits
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V124.Audits.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V124.Audits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: AuditsAdapter
+  nameWithType: AuditsAdapter.AuditsAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.AuditsAdapter
+  nameWithType.vb: AuditsAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter_Session
+  name: Session
+  nameWithType: AuditsAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<IssueAddedEventArgs>
+  nameWithType: EventHandler<IssueAddedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs>
+  nameWithType.vb: EventHandler(Of IssueAddedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs)
+  name.vb: EventHandler(Of IssueAddedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs
+    name: IssueAddedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs
+    name: IssueAddedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Audits.IssueAddedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter_GetEncodedResponse_OpenQA_Selenium_DevTools_V124_Audits_GetEncodedResponseCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetEncodedResponse
+  nameWithType: AuditsAdapter.GetEncodedResponse
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.GetEncodedResponse
+- uid: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Audits
+  href: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings.html
+  name: GetEncodedResponseCommandSettings
+  nameWithType: GetEncodedResponseCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetEncodedResponseCommandResponse>
+  nameWithType: Task<GetEncodedResponseCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse>
+  nameWithType.vb: Task(Of GetEncodedResponseCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse)
+  name.vb: Task(Of GetEncodedResponseCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse
+    name: GetEncodedResponseCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse
+    name: GetEncodedResponseCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.GetEncodedResponseCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter_Disable_OpenQA_Selenium_DevTools_V124_Audits_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: AuditsAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Audits
+  href: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.DisableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter_Enable_OpenQA_Selenium_DevTools_V124_Audits_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: AuditsAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Audits
+  href: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter_CheckContrast_OpenQA_Selenium_DevTools_V124_Audits_CheckContrastCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: CheckContrast
+  nameWithType: AuditsAdapter.CheckContrast
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckContrast
+- uid: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Audits
+  href: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings.html
+  name: CheckContrastCommandSettings
+  nameWithType: CheckContrastCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CheckContrastCommandResponse>
+  nameWithType: Task<CheckContrastCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse>
+  nameWithType.vb: Task(Of CheckContrastCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse)
+  name.vb: Task(Of CheckContrastCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse
+    name: CheckContrastCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse
+    name: CheckContrastCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.CheckContrastCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues
+  href: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.html#OpenQA_Selenium_DevTools_V124_Audits_AuditsAdapter_CheckFormsIssues_OpenQA_Selenium_DevTools_V124_Audits_CheckFormsIssuesCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: CheckFormsIssues
+  nameWithType: AuditsAdapter.CheckFormsIssues
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.AuditsAdapter.CheckFormsIssues
+- uid: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Audits
+  href: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings.html
+  name: CheckFormsIssuesCommandSettings
+  nameWithType: CheckFormsIssuesCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CheckFormsIssuesCommandResponse>
+  nameWithType: Task<CheckFormsIssuesCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse>
+  nameWithType.vb: Task(Of CheckFormsIssuesCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse)
+  name.vb: Task(Of CheckFormsIssuesCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse
+    name: CheckFormsIssuesCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse
+    name: CheckFormsIssuesCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Audits.CheckFormsIssuesCommandResponse.html
+  - name: )

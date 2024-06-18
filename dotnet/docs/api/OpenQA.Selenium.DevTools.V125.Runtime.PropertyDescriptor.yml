@@ -1,0 +1,919 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  commentId: T:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  id: PropertyDescriptor
+  parent: OpenQA.Selenium.DevTools.V125.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown
+  - OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable
+  langs:
+  - csharp
+  - vb
+  name: PropertyDescriptor
+  nameWithType: PropertyDescriptor
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PropertyDescriptor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Object property descriptor.
+  example: []
+  syntax:
+    content: public sealed class PropertyDescriptor
+    content.vb: Public NotInheritable Class PropertyDescriptor
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name
+  id: Name
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PropertyDescriptor.Name
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Property name or symbol description.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public Property Name As String
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value
+  id: Value
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PropertyDescriptor.Value
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Value
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: The value associated with the property.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RemoteObject Value { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+    content.vb: >-
+      <JsonProperty("value", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Value As RemoteObject
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: value
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable
+  id: Writable
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Writable
+  nameWithType: PropertyDescriptor.Writable
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Writable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: True if the value associated with the property may be changed (data descriptors only).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("writable", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Writable { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("writable", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Writable As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: writable
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get
+  id: Get
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Get
+  nameWithType: PropertyDescriptor.Get
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Get
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    A function which serves as a getter for the property, or `undefined` if there is no getter
+
+    (accessor descriptors only).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("get", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RemoteObject Get { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+    content.vb: >-
+      <JsonProperty("get", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property [Get] As RemoteObject
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: get
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set
+  id: Set
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Set
+  nameWithType: PropertyDescriptor.Set
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Set
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    A function which serves as a setter for the property, or `undefined` if there is no setter
+
+    (accessor descriptors only).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("set", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RemoteObject Set { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+    content.vb: >-
+      <JsonProperty("set", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property [Set] As RemoteObject
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: set
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable
+  id: Configurable
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Configurable
+  nameWithType: PropertyDescriptor.Configurable
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Configurable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    True if the type of this property descriptor may be changed and if the property may be
+
+    deleted from the corresponding object.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("configurable")]
+
+      public bool Configurable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("configurable")>
+
+      Public Property Configurable As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: configurable
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable
+  id: Enumerable
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Enumerable
+  nameWithType: PropertyDescriptor.Enumerable
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enumerable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    True if this property shows up during enumeration of the properties on the corresponding
+
+    object.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("enumerable")]
+
+      public bool Enumerable { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("enumerable")>
+
+      Public Property Enumerable As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: enumerable
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown
+  id: WasThrown
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: WasThrown
+  nameWithType: PropertyDescriptor.WasThrown
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WasThrown
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 80
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: True if the result was thrown during the evaluation.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("wasThrown", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? WasThrown { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("wasThrown", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property WasThrown As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: wasThrown
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn
+  id: IsOwn
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: IsOwn
+  nameWithType: PropertyDescriptor.IsOwn
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsOwn
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 89
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: True if the property is owned for the object.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isOwn", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IsOwn { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("isOwn", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IsOwn As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isOwn
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol
+  id: Symbol
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Symbol
+  nameWithType: PropertyDescriptor.Symbol
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Symbol
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/PropertyDescriptor.cs
+    startLine: 98
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Property symbol object, if the property is of the `symbol` type.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("symbol", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RemoteObject Symbol { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+    content.vb: >-
+      <JsonProperty("symbol", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Symbol As RemoteObject
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: symbol
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V125.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V125.Runtime
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V125.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V125.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Name
+  name: Name
+  nameWithType: PropertyDescriptor.Name
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Value
+  name: Value
+  nameWithType: PropertyDescriptor.Value
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Value
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+  commentId: T:OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+  parent: OpenQA.Selenium.DevTools.V125.Runtime
+  href: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject.html
+  name: RemoteObject
+  nameWithType: RemoteObject
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.RemoteObject
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Writable
+  name: Writable
+  nameWithType: PropertyDescriptor.Writable
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Writable
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Get
+  name: Get
+  nameWithType: PropertyDescriptor.Get
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Get
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Set
+  name: Set
+  nameWithType: PropertyDescriptor.Set
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Set
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Configurable
+  name: Configurable
+  nameWithType: PropertyDescriptor.Configurable
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Configurable
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Enumerable
+  name: Enumerable
+  nameWithType: PropertyDescriptor.Enumerable
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Enumerable
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_WasThrown
+  name: WasThrown
+  nameWithType: PropertyDescriptor.WasThrown
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.WasThrown
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_IsOwn
+  name: IsOwn
+  nameWithType: PropertyDescriptor.IsOwn
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.IsOwn
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol
+  href: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.html#OpenQA_Selenium_DevTools_V125_Runtime_PropertyDescriptor_Symbol
+  name: Symbol
+  nameWithType: PropertyDescriptor.Symbol
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.PropertyDescriptor.Symbol

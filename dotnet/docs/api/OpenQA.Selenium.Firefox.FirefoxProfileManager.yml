@@ -1,0 +1,561 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxProfileManager
+  id: FirefoxProfileManager
+  parent: OpenQA.Selenium.Firefox
+  children:
+  - OpenQA.Selenium.Firefox.FirefoxProfileManager.#ctor
+  - OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles
+  - OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile(System.String)
+  langs:
+  - csharp
+  - vb
+  name: FirefoxProfileManager
+  nameWithType: FirefoxProfileManager
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxProfileManager.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FirefoxProfileManager
+    path: ../src/webdriver/Firefox/FirefoxProfileManager.cs
+    startLine: 29
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Allows the user to enumerate and access existing named Firefox profiles.
+  example: []
+  syntax:
+    content: public class FirefoxProfileManager
+    content.vb: Public Class FirefoxProfileManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager.#ctor
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxProfileManager.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Firefox.FirefoxProfileManager
+  langs:
+  - csharp
+  - vb
+  name: FirefoxProfileManager()
+  nameWithType: FirefoxProfileManager.FirefoxProfileManager()
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager.FirefoxProfileManager()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxProfileManager.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Firefox/FirefoxProfileManager.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Firefox.FirefoxProfileManager" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public FirefoxProfileManager()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Firefox.FirefoxProfileManager.#ctor*
+  nameWithType.vb: FirefoxProfileManager.New()
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxProfileManager.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles
+  id: ExistingProfiles
+  parent: OpenQA.Selenium.Firefox.FirefoxProfileManager
+  langs:
+  - csharp
+  - vb
+  name: ExistingProfiles
+  nameWithType: FirefoxProfileManager.ExistingProfiles
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxProfileManager.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExistingProfiles
+    path: ../src/webdriver/Firefox/FirefoxProfileManager.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: >-
+    Gets a <xref href="System.Collections.ObjectModel.ReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> containing <xref href="OpenQA.Selenium.Firefox.FirefoxProfile?text=FirefoxProfiles" data-throw-if-not-resolved="false"></xref>
+
+    representing the existing named profiles for Firefox.
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<string> ExistingProfiles { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+    content.vb: Public ReadOnly Property ExistingProfiles As ReadOnlyCollection(Of String)
+  overload: OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles*
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile(System.String)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile(System.String)
+  id: GetProfile(System.String)
+  parent: OpenQA.Selenium.Firefox.FirefoxProfileManager
+  langs:
+  - csharp
+  - vb
+  name: GetProfile(string)
+  nameWithType: FirefoxProfileManager.GetProfile(string)
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxProfileManager.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetProfile
+    path: ../src/webdriver/Firefox/FirefoxProfileManager.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets a <xref href="OpenQA.Selenium.Firefox.FirefoxProfile" data-throw-if-not-resolved="false"></xref> with a given name.
+  example: []
+  syntax:
+    content: public FirefoxProfile GetProfile(string profileName)
+    parameters:
+    - id: profileName
+      type: System.String
+      description: The name of the profile to get.
+    return:
+      type: OpenQA.Selenium.Firefox.FirefoxProfile
+      description: >-
+        A <xref href="OpenQA.Selenium.Firefox.FirefoxProfile" data-throw-if-not-resolved="false"></xref> with a given name.
+            Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if no profile with the given name exists.
+    content.vb: Public Function GetProfile(profileName As String) As FirefoxProfile
+  overload: OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile*
+  nameWithType.vb: FirefoxProfileManager.GetProfile(String)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile(String)
+  name.vb: GetProfile(String)
+references:
+- uid: OpenQA.Selenium.Firefox
+  commentId: N:OpenQA.Selenium.Firefox
+  href: OpenQA.html
+  name: OpenQA.Selenium.Firefox
+  nameWithType: OpenQA.Selenium.Firefox
+  fullName: OpenQA.Selenium.Firefox
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Firefox
+    name: Firefox
+    href: OpenQA.Selenium.Firefox.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Firefox
+    name: Firefox
+    href: OpenQA.Selenium.Firefox.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxProfileManager
+  href: OpenQA.Selenium.Firefox.FirefoxProfileManager.html
+  name: FirefoxProfileManager
+  nameWithType: FirefoxProfileManager
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager.#ctor*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxProfileManager.#ctor
+  href: OpenQA.Selenium.Firefox.FirefoxProfileManager.html#OpenQA_Selenium_Firefox_FirefoxProfileManager__ctor
+  name: FirefoxProfileManager
+  nameWithType: FirefoxProfileManager.FirefoxProfileManager
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager.FirefoxProfileManager
+  nameWithType.vb: FirefoxProfileManager.New
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxProfileManager.New
+  name.vb: New
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Firefox.FirefoxProfile
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxProfile
+  parent: OpenQA.Selenium.Firefox
+  href: OpenQA.Selenium.Firefox.FirefoxProfile.html
+  name: FirefoxProfile
+  nameWithType: FirefoxProfile
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfile
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles
+  href: OpenQA.Selenium.Firefox.FirefoxProfileManager.html#OpenQA_Selenium_Firefox_FirefoxProfileManager_ExistingProfiles
+  name: ExistingProfiles
+  nameWithType: FirefoxProfileManager.ExistingProfiles
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager.ExistingProfiles
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<string>
+  nameWithType: ReadOnlyCollection<string>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<string>
+  nameWithType.vb: ReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of String)
+  name.vb: ReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile
+  href: OpenQA.Selenium.Firefox.FirefoxProfileManager.html#OpenQA_Selenium_Firefox_FirefoxProfileManager_GetProfile_System_String_
+  name: GetProfile
+  nameWithType: FirefoxProfileManager.GetProfile
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfileManager.GetProfile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

@@ -1,0 +1,103 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IRotatable
+  commentId: T:OpenQA.Selenium.IRotatable
+  id: IRotatable
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IRotatable.Orientation
+  langs:
+  - csharp
+  - vb
+  name: IRotatable
+  nameWithType: IRotatable
+  fullName: OpenQA.Selenium.IRotatable
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IRotatable.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IRotatable
+    path: ../src/webdriver/IRotatable.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Represents rotation of the browser view for orientation-sensitive devices.
+
+    When using this with a real device, the device should not be moved so that
+
+    the built-in sensors do not interfere.
+  example: []
+  syntax:
+    content: public interface IRotatable
+    content.vb: Public Interface IRotatable
+- uid: OpenQA.Selenium.IRotatable.Orientation
+  commentId: P:OpenQA.Selenium.IRotatable.Orientation
+  id: Orientation
+  parent: OpenQA.Selenium.IRotatable
+  langs:
+  - csharp
+  - vb
+  name: Orientation
+  nameWithType: IRotatable.Orientation
+  fullName: OpenQA.Selenium.IRotatable.Orientation
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IRotatable.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Orientation
+    path: ../src/webdriver/IRotatable.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the screen orientation of the browser on the device.
+  example: []
+  syntax:
+    content: ScreenOrientation Orientation { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.ScreenOrientation
+    content.vb: Property Orientation As ScreenOrientation
+  overload: OpenQA.Selenium.IRotatable.Orientation*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IRotatable.Orientation*
+  commentId: Overload:OpenQA.Selenium.IRotatable.Orientation
+  href: OpenQA.Selenium.IRotatable.html#OpenQA_Selenium_IRotatable_Orientation
+  name: Orientation
+  nameWithType: IRotatable.Orientation
+  fullName: OpenQA.Selenium.IRotatable.Orientation
+- uid: OpenQA.Selenium.ScreenOrientation
+  commentId: T:OpenQA.Selenium.ScreenOrientation
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ScreenOrientation.html
+  name: ScreenOrientation
+  nameWithType: ScreenOrientation
+  fullName: OpenQA.Selenium.ScreenOrientation

@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ICapabilities
+  commentId: T:OpenQA.Selenium.ICapabilities
+  id: ICapabilities
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+  - OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+  - OpenQA.Selenium.ICapabilities.Item(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ICapabilities
+  nameWithType: ICapabilities
+  fullName: OpenQA.Selenium.ICapabilities
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ICapabilities
+    path: ../src/webdriver/ICapabilities.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Capabilities of the browser that you are going to use
+  example: []
+  syntax:
+    content: public interface ICapabilities
+    content.vb: Public Interface ICapabilities
+- uid: OpenQA.Selenium.ICapabilities.Item(System.String)
+  commentId: P:OpenQA.Selenium.ICapabilities.Item(System.String)
+  id: Item(System.String)
+  parent: OpenQA.Selenium.ICapabilities
+  langs:
+  - csharp
+  - vb
+  name: this[string]
+  nameWithType: ICapabilities.this[string]
+  fullName: OpenQA.Selenium.ICapabilities.this[string]
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: this[]
+    path: ../src/webdriver/ICapabilities.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the capability value with the specified name.
+  example: []
+  syntax:
+    content: object this[string capabilityName] { get; }
+    parameters:
+    - id: capabilityName
+      type: System.String
+      description: The name of the capability to get.
+    return:
+      type: System.Object
+      description: The value of the capability.
+    content.vb: ReadOnly Default Property this[](capabilityName As String) As Object
+  overload: OpenQA.Selenium.ICapabilities.Item*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: The specified capability name is not in the set of capabilities.
+  nameWithType.vb: ICapabilities.this[](String)
+  fullName.vb: OpenQA.Selenium.ICapabilities.this[](String)
+  name.vb: this[](String)
+- uid: OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+  commentId: M:OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+  id: HasCapability(System.String)
+  parent: OpenQA.Selenium.ICapabilities
+  langs:
+  - csharp
+  - vb
+  name: HasCapability(string)
+  nameWithType: ICapabilities.HasCapability(string)
+  fullName: OpenQA.Selenium.ICapabilities.HasCapability(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasCapability
+    path: ../src/webdriver/ICapabilities.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether the browser has a given capability.
+  example: []
+  syntax:
+    content: bool HasCapability(string capability)
+    parameters:
+    - id: capability
+      type: System.String
+      description: The capability to get.
+    return:
+      type: System.Boolean
+      description: Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the browser has the capability; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Function HasCapability(capability As String) As Boolean
+  overload: OpenQA.Selenium.ICapabilities.HasCapability*
+  nameWithType.vb: ICapabilities.HasCapability(String)
+  fullName.vb: OpenQA.Selenium.ICapabilities.HasCapability(String)
+  name.vb: HasCapability(String)
+- uid: OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+  commentId: M:OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+  id: GetCapability(System.String)
+  parent: OpenQA.Selenium.ICapabilities
+  langs:
+  - csharp
+  - vb
+  name: GetCapability(string)
+  nameWithType: ICapabilities.GetCapability(string)
+  fullName: OpenQA.Selenium.ICapabilities.GetCapability(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCapability
+    path: ../src/webdriver/ICapabilities.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a capability of the browser.
+  example: []
+  syntax:
+    content: object GetCapability(string capability)
+    parameters:
+    - id: capability
+      type: System.String
+      description: The capability to get.
+    return:
+      type: System.Object
+      description: >-
+        An object associated with the capability, or <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+            if the capability is not set on the browser.
+    content.vb: Function GetCapability(capability As String) As Object
+  overload: OpenQA.Selenium.ICapabilities.GetCapability*
+  nameWithType.vb: ICapabilities.GetCapability(String)
+  fullName.vb: OpenQA.Selenium.ICapabilities.GetCapability(String)
+  name.vb: GetCapability(String)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OpenQA.Selenium.ICapabilities.Item*
+  commentId: Overload:OpenQA.Selenium.ICapabilities.Item
+  href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_Item_System_String_
+  name: this
+  nameWithType: ICapabilities.this
+  fullName: OpenQA.Selenium.ICapabilities.this
+  nameWithType.vb: ICapabilities.this[]
+  fullName.vb: OpenQA.Selenium.ICapabilities.this[]
+  name.vb: this[]
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.ICapabilities.HasCapability*
+  commentId: Overload:OpenQA.Selenium.ICapabilities.HasCapability
+  href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_HasCapability_System_String_
+  name: HasCapability
+  nameWithType: ICapabilities.HasCapability
+  fullName: OpenQA.Selenium.ICapabilities.HasCapability
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.ICapabilities.GetCapability*
+  commentId: Overload:OpenQA.Selenium.ICapabilities.GetCapability
+  href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_GetCapability_System_String_
+  name: GetCapability
+  nameWithType: ICapabilities.GetCapability
+  fullName: OpenQA.Selenium.ICapabilities.GetCapability

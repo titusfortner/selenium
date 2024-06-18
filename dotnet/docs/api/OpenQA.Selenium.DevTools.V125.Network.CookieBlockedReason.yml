@@ -1,0 +1,800 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  id: CookieBlockedReason
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  children:
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.DomainMismatch
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NameValuePairExceedsMaxSize
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NotOnPath
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SamePartyFromCrossPartyContext
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteLax
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteNoneInsecure
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteStrict
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteUnspecifiedTreatedAsLax
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteLax
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteStrict
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteUnspecifiedTreatedAsLax
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SecureOnly
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyBlockedInFirstPartySet
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyPhaseout
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UnknownError
+  - OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UserPreferences
+  langs:
+  - csharp
+  - vb
+  name: CookieBlockedReason
+  nameWithType: CookieBlockedReason
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CookieBlockedReason
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Types of reasons why a cookie may not be sent with a request.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum CookieBlockedReason
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum CookieBlockedReason
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SecureOnly
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SecureOnly
+  id: SecureOnly
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SecureOnly
+  nameWithType: CookieBlockedReason.SecureOnly
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SecureOnly
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecureOnly
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SecureOnly value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SecureOnly")]
+
+      SecureOnly = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SecureOnly")>
+
+      SecureOnly = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SecureOnly
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NotOnPath
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NotOnPath
+  id: NotOnPath
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: NotOnPath
+  nameWithType: CookieBlockedReason.NotOnPath
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NotOnPath
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NotOnPath
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the NotOnPath value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "NotOnPath")]
+
+      NotOnPath = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="NotOnPath")>
+
+      NotOnPath = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: NotOnPath
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.DomainMismatch
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.DomainMismatch
+  id: DomainMismatch
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: DomainMismatch
+  nameWithType: CookieBlockedReason.DomainMismatch
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.DomainMismatch
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DomainMismatch
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the DomainMismatch value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "DomainMismatch")]
+
+      DomainMismatch = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="DomainMismatch")>
+
+      DomainMismatch = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: DomainMismatch
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteStrict
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteStrict
+  id: SameSiteStrict
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SameSiteStrict
+  nameWithType: CookieBlockedReason.SameSiteStrict
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteStrict
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSiteStrict
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SameSiteStrict value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SameSiteStrict")]
+
+      SameSiteStrict = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SameSiteStrict")>
+
+      SameSiteStrict = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SameSiteStrict
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteLax
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteLax
+  id: SameSiteLax
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SameSiteLax
+  nameWithType: CookieBlockedReason.SameSiteLax
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteLax
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSiteLax
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SameSiteLax value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SameSiteLax")]
+
+      SameSiteLax = 4
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SameSiteLax")>
+
+      SameSiteLax = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SameSiteLax
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteUnspecifiedTreatedAsLax
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteUnspecifiedTreatedAsLax
+  id: SameSiteUnspecifiedTreatedAsLax
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SameSiteUnspecifiedTreatedAsLax
+  nameWithType: CookieBlockedReason.SameSiteUnspecifiedTreatedAsLax
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteUnspecifiedTreatedAsLax
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSiteUnspecifiedTreatedAsLax
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SameSiteUnspecifiedTreatedAsLax value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SameSiteUnspecifiedTreatedAsLax")]
+
+      SameSiteUnspecifiedTreatedAsLax = 5
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SameSiteUnspecifiedTreatedAsLax")>
+
+      SameSiteUnspecifiedTreatedAsLax = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SameSiteUnspecifiedTreatedAsLax
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteNoneInsecure
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteNoneInsecure
+  id: SameSiteNoneInsecure
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SameSiteNoneInsecure
+  nameWithType: CookieBlockedReason.SameSiteNoneInsecure
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SameSiteNoneInsecure
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSiteNoneInsecure
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SameSiteNoneInsecure value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SameSiteNoneInsecure")]
+
+      SameSiteNoneInsecure = 6
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SameSiteNoneInsecure")>
+
+      SameSiteNoneInsecure = 6
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SameSiteNoneInsecure
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UserPreferences
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UserPreferences
+  id: UserPreferences
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: UserPreferences
+  nameWithType: CookieBlockedReason.UserPreferences
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UserPreferences
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserPreferences
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the UserPreferences value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "UserPreferences")]
+
+      UserPreferences = 7
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="UserPreferences")>
+
+      UserPreferences = 7
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: UserPreferences
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyPhaseout
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyPhaseout
+  id: ThirdPartyPhaseout
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: ThirdPartyPhaseout
+  nameWithType: CookieBlockedReason.ThirdPartyPhaseout
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyPhaseout
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ThirdPartyPhaseout
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the ThirdPartyPhaseout value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "ThirdPartyPhaseout")]
+
+      ThirdPartyPhaseout = 8
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="ThirdPartyPhaseout")>
+
+      ThirdPartyPhaseout = 8
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: ThirdPartyPhaseout
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyBlockedInFirstPartySet
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyBlockedInFirstPartySet
+  id: ThirdPartyBlockedInFirstPartySet
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: ThirdPartyBlockedInFirstPartySet
+  nameWithType: CookieBlockedReason.ThirdPartyBlockedInFirstPartySet
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.ThirdPartyBlockedInFirstPartySet
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ThirdPartyBlockedInFirstPartySet
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the ThirdPartyBlockedInFirstPartySet value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "ThirdPartyBlockedInFirstPartySet")]
+
+      ThirdPartyBlockedInFirstPartySet = 9
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="ThirdPartyBlockedInFirstPartySet")>
+
+      ThirdPartyBlockedInFirstPartySet = 9
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: ThirdPartyBlockedInFirstPartySet
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UnknownError
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UnknownError
+  id: UnknownError
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: UnknownError
+  nameWithType: CookieBlockedReason.UnknownError
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.UnknownError
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UnknownError
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the UnknownError value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "UnknownError")]
+
+      UnknownError = 10
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="UnknownError")>
+
+      UnknownError = 10
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: UnknownError
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteStrict
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteStrict
+  id: SchemefulSameSiteStrict
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SchemefulSameSiteStrict
+  nameWithType: CookieBlockedReason.SchemefulSameSiteStrict
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteStrict
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SchemefulSameSiteStrict
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SchemefulSameSiteStrict value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SchemefulSameSiteStrict")]
+
+      SchemefulSameSiteStrict = 11
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SchemefulSameSiteStrict")>
+
+      SchemefulSameSiteStrict = 11
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SchemefulSameSiteStrict
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteLax
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteLax
+  id: SchemefulSameSiteLax
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SchemefulSameSiteLax
+  nameWithType: CookieBlockedReason.SchemefulSameSiteLax
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteLax
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SchemefulSameSiteLax
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SchemefulSameSiteLax value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SchemefulSameSiteLax")]
+
+      SchemefulSameSiteLax = 12
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SchemefulSameSiteLax")>
+
+      SchemefulSameSiteLax = 12
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SchemefulSameSiteLax
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteUnspecifiedTreatedAsLax
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteUnspecifiedTreatedAsLax
+  id: SchemefulSameSiteUnspecifiedTreatedAsLax
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SchemefulSameSiteUnspecifiedTreatedAsLax
+  nameWithType: CookieBlockedReason.SchemefulSameSiteUnspecifiedTreatedAsLax
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SchemefulSameSiteUnspecifiedTreatedAsLax
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SchemefulSameSiteUnspecifiedTreatedAsLax
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 81
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SchemefulSameSiteUnspecifiedTreatedAsLax value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SchemefulSameSiteUnspecifiedTreatedAsLax")]
+
+      SchemefulSameSiteUnspecifiedTreatedAsLax = 13
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SchemefulSameSiteUnspecifiedTreatedAsLax")>
+
+      SchemefulSameSiteUnspecifiedTreatedAsLax = 13
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SchemefulSameSiteUnspecifiedTreatedAsLax
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SamePartyFromCrossPartyContext
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SamePartyFromCrossPartyContext
+  id: SamePartyFromCrossPartyContext
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SamePartyFromCrossPartyContext
+  nameWithType: CookieBlockedReason.SamePartyFromCrossPartyContext
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.SamePartyFromCrossPartyContext
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SamePartyFromCrossPartyContext
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the SamePartyFromCrossPartyContext value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SamePartyFromCrossPartyContext")]
+
+      SamePartyFromCrossPartyContext = 14
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="SamePartyFromCrossPartyContext")>
+
+      SamePartyFromCrossPartyContext = 14
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SamePartyFromCrossPartyContext
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NameValuePairExceedsMaxSize
+  commentId: F:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NameValuePairExceedsMaxSize
+  id: NameValuePairExceedsMaxSize
+  parent: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  langs:
+  - csharp
+  - vb
+  name: NameValuePairExceedsMaxSize
+  nameWithType: CookieBlockedReason.NameValuePairExceedsMaxSize
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.NameValuePairExceedsMaxSize
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NameValuePairExceedsMaxSize
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/CookieBlockedReason.cs
+    startLine: 91
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Enumerated member for the NameValuePairExceedsMaxSize value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "NameValuePairExceedsMaxSize")]
+
+      NameValuePairExceedsMaxSize = 15
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+    content.vb: >-
+      <EnumMember(Value:="NameValuePairExceedsMaxSize")>
+
+      NameValuePairExceedsMaxSize = 15
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: NameValuePairExceedsMaxSize
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Network
+  commentId: N:OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Network
+  nameWithType: OpenQA.Selenium.DevTools.V125.Network
+  fullName: OpenQA.Selenium.DevTools.V125.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+- uid: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason.html
+  name: CookieBlockedReason
+  nameWithType: CookieBlockedReason
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CookieBlockedReason

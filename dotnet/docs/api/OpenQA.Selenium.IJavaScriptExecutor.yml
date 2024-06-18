@@ -1,0 +1,394 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IJavaScriptExecutor
+  commentId: T:OpenQA.Selenium.IJavaScriptExecutor
+  id: IJavaScriptExecutor
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  - OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  - OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(System.String,System.Object[])
+  langs:
+  - csharp
+  - vb
+  name: IJavaScriptExecutor
+  nameWithType: IJavaScriptExecutor
+  fullName: OpenQA.Selenium.IJavaScriptExecutor
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IJavascriptExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IJavaScriptExecutor
+    path: ../src/webdriver/IJavascriptExecutor.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines the interface through which the user can execute JavaScript.
+  example: []
+  syntax:
+    content: public interface IJavaScriptExecutor
+    content.vb: Public Interface IJavaScriptExecutor
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(System.String,System.Object[])
+  id: ExecuteScript(System.String,System.Object[])
+  parent: OpenQA.Selenium.IJavaScriptExecutor
+  langs:
+  - csharp
+  - vb
+  name: ExecuteScript(string, params object[])
+  nameWithType: IJavaScriptExecutor.ExecuteScript(string, params object[])
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(string, params object[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IJavascriptExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecuteScript
+    path: ../src/webdriver/IJavascriptExecutor.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Executes JavaScript in the context of the currently selected frame or window.
+  remarks: >-
+    <p>
+
+    The ExecuteScript method executes JavaScript
+
+    in the context of the currently selected frame or window. This means that "document"
+
+    will refer to the current document. If the script has a return value, then the following
+
+    steps will be taken:
+
+    </p>
+
+    <p>
+
+    <ul><li>For an HTML element, this method returns a <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref></li><li>For a number, a <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> is returned</li><li>For a boolean, a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> is returned</li><li>For all other cases a <xref href="System.String" data-throw-if-not-resolved="false"></xref> is returned.</li><li>For an array,we check the first element, and attempt to return a
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> of that type, following the rules above. Nested lists are not
+
+    supported.</li><li>If the value is null or there is no return value,
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> is returned.</li></ul>
+
+    </p>
+
+    <p>
+
+    Arguments must be a number (which will be converted to a <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>),
+
+    a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>, a <xref href="System.String" data-throw-if-not-resolved="false"></xref> or a <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref>,
+
+    or a <xref href="OpenQA.Selenium.IWrapsElement" data-throw-if-not-resolved="false"></xref>.
+
+    An exception will be thrown if the arguments do not meet these criteria.
+
+    The arguments will be made available to the JavaScript via the "arguments" magic
+
+    variable, as if the function were called via "Function.apply"
+
+    </p>
+  example: []
+  syntax:
+    content: object ExecuteScript(string script, params object[] args)
+    parameters:
+    - id: script
+      type: System.String
+      description: The JavaScript code to execute.
+    - id: args
+      type: System.Object[]
+      description: The arguments to the script.
+    return:
+      type: System.Object
+      description: The value returned by the script.
+    content.vb: Function ExecuteScript(script As String, ParamArray args As Object()) As Object
+  overload: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript*
+  nameWithType.vb: IJavaScriptExecutor.ExecuteScript(String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(String, ParamArray Object())
+  name.vb: ExecuteScript(String, ParamArray Object())
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  commentId: M:OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  id: ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  parent: OpenQA.Selenium.IJavaScriptExecutor
+  langs:
+  - csharp
+  - vb
+  name: ExecuteScript(PinnedScript, params object[])
+  nameWithType: IJavaScriptExecutor.ExecuteScript(PinnedScript, params object[])
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(OpenQA.Selenium.PinnedScript, params object[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IJavascriptExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecuteScript
+    path: ../src/webdriver/IJavascriptExecutor.cs
+    startLine: 99
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Executes JavaScript in the context of the currently selected frame or window.
+  remarks: >-
+    <p>
+
+    The ExecuteScript method executes JavaScript
+
+    in the context of the currently selected frame or window. This means that "document"
+
+    will refer to the current document. If the script has a return value, then the following
+
+    steps will be taken:
+
+    </p>
+
+    <p>
+
+    <ul><li>For an HTML element, this method returns a <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref></li><li>For a number, a <xref href="System.Int64" data-throw-if-not-resolved="false"></xref> is returned</li><li>For a boolean, a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref> is returned</li><li>For all other cases a <xref href="System.String" data-throw-if-not-resolved="false"></xref> is returned.</li><li>For an array,we check the first element, and attempt to return a
+
+    <xref href="System.Collections.Generic.List%601" data-throw-if-not-resolved="false"></xref> of that type, following the rules above. Nested lists are not
+
+    supported.</li><li>If the value is null or there is no return value,
+
+    <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> is returned.</li></ul>
+
+    </p>
+
+    <p>
+
+    Arguments must be a number (which will be converted to a <xref href="System.Int64" data-throw-if-not-resolved="false"></xref>),
+
+    a <xref href="System.Boolean" data-throw-if-not-resolved="false"></xref>, a <xref href="System.String" data-throw-if-not-resolved="false"></xref> or a <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref>,
+
+    or a <xref href="OpenQA.Selenium.IWrapsElement" data-throw-if-not-resolved="false"></xref>.
+
+    An exception will be thrown if the arguments do not meet these criteria.
+
+    The arguments will be made available to the JavaScript via the "arguments" magic
+
+    variable, as if the function were called via "Function.apply"
+
+    </p>
+  example: []
+  syntax:
+    content: object ExecuteScript(PinnedScript script, params object[] args)
+    parameters:
+    - id: script
+      type: OpenQA.Selenium.PinnedScript
+      description: A <xref href="OpenQA.Selenium.PinnedScript" data-throw-if-not-resolved="false"></xref> object containing the code to execute.
+    - id: args
+      type: System.Object[]
+      description: The arguments to the script.
+    return:
+      type: System.Object
+      description: The value returned by the script.
+    content.vb: Function ExecuteScript(script As PinnedScript, ParamArray args As Object()) As Object
+  overload: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript*
+  nameWithType.vb: IJavaScriptExecutor.ExecuteScript(PinnedScript, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript(OpenQA.Selenium.PinnedScript, ParamArray Object())
+  name.vb: ExecuteScript(PinnedScript, ParamArray Object())
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  id: ExecuteAsyncScript(System.String,System.Object[])
+  parent: OpenQA.Selenium.IJavaScriptExecutor
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsyncScript(string, params object[])
+  nameWithType: IJavaScriptExecutor.ExecuteAsyncScript(string, params object[])
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(string, params object[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IJavascriptExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecuteAsyncScript
+    path: ../src/webdriver/IJavascriptExecutor.cs
+    startLine: 107
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Executes JavaScript asynchronously in the context of the currently selected frame or window.
+  example: []
+  syntax:
+    content: object ExecuteAsyncScript(string script, params object[] args)
+    parameters:
+    - id: script
+      type: System.String
+      description: The JavaScript code to execute.
+    - id: args
+      type: System.Object[]
+      description: The arguments to the script.
+    return:
+      type: System.Object
+      description: The value returned by the script.
+    content.vb: Function ExecuteAsyncScript(script As String, ParamArray args As Object()) As Object
+  overload: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript*
+  nameWithType.vb: IJavaScriptExecutor.ExecuteAsyncScript(String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(String, ParamArray Object())
+  name.vb: ExecuteAsyncScript(String, ParamArray Object())
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebElement.html
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.IWrapsElement
+  commentId: T:OpenQA.Selenium.IWrapsElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWrapsElement.html
+  name: IWrapsElement
+  nameWithType: IWrapsElement
+  fullName: OpenQA.Selenium.IWrapsElement
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript*
+  commentId: Overload:OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript
+  href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteScript_System_String_System_Object___
+  name: ExecuteScript
+  nameWithType: IJavaScriptExecutor.ExecuteScript
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteScript
+- uid: System.Object[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object[]
+  nameWithType: object[]
+  fullName: object[]
+  nameWithType.vb: Object()
+  fullName.vb: Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.PinnedScript
+  commentId: T:OpenQA.Selenium.PinnedScript
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.PinnedScript.html
+  name: PinnedScript
+  nameWithType: PinnedScript
+  fullName: OpenQA.Selenium.PinnedScript
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript*
+  commentId: Overload:OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript
+  href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  name: ExecuteAsyncScript
+  nameWithType: IJavaScriptExecutor.ExecuteAsyncScript
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript

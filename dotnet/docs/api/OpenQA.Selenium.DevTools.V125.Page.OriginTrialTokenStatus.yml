@@ -1,0 +1,627 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  id: OriginTrialTokenStatus
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  children:
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Expired
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabled
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabledForUser
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Insecure
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.InvalidSignature
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Malformed
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.NotSupported
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Success
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.TokenDisabled
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.UnknownTrial
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongOrigin
+  - OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongVersion
+  langs:
+  - csharp
+  - vb
+  name: OriginTrialTokenStatus
+  nameWithType: OriginTrialTokenStatus
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OriginTrialTokenStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: >-
+    Origin Trial(https://www.chromium.org/blink/origin-trials) support.
+
+    Status for an Origin Trial token.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum OriginTrialTokenStatus
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum OriginTrialTokenStatus
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Success
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Success
+  id: Success
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: OriginTrialTokenStatus.Success
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Success
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Success
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 17
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the Success value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Success")]
+
+      Success = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="Success")>
+
+      Success = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Success
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.NotSupported
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.NotSupported
+  id: NotSupported
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: NotSupported
+  nameWithType: OriginTrialTokenStatus.NotSupported
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.NotSupported
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NotSupported
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the NotSupported value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "NotSupported")]
+
+      NotSupported = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="NotSupported")>
+
+      NotSupported = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: NotSupported
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Insecure
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Insecure
+  id: Insecure
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: Insecure
+  nameWithType: OriginTrialTokenStatus.Insecure
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Insecure
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Insecure
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the Insecure value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Insecure")]
+
+      Insecure = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="Insecure")>
+
+      Insecure = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Insecure
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Expired
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Expired
+  id: Expired
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: Expired
+  nameWithType: OriginTrialTokenStatus.Expired
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Expired
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Expired
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the Expired value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Expired")]
+
+      Expired = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="Expired")>
+
+      Expired = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Expired
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongOrigin
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongOrigin
+  id: WrongOrigin
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: WrongOrigin
+  nameWithType: OriginTrialTokenStatus.WrongOrigin
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongOrigin
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WrongOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the WrongOrigin value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "WrongOrigin")]
+
+      WrongOrigin = 4
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="WrongOrigin")>
+
+      WrongOrigin = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: WrongOrigin
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.InvalidSignature
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.InvalidSignature
+  id: InvalidSignature
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: InvalidSignature
+  nameWithType: OriginTrialTokenStatus.InvalidSignature
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.InvalidSignature
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InvalidSignature
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the InvalidSignature value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "InvalidSignature")]
+
+      InvalidSignature = 5
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="InvalidSignature")>
+
+      InvalidSignature = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: InvalidSignature
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Malformed
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Malformed
+  id: Malformed
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: Malformed
+  nameWithType: OriginTrialTokenStatus.Malformed
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.Malformed
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Malformed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the Malformed value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Malformed")]
+
+      Malformed = 6
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="Malformed")>
+
+      Malformed = 6
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Malformed
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongVersion
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongVersion
+  id: WrongVersion
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: WrongVersion
+  nameWithType: OriginTrialTokenStatus.WrongVersion
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.WrongVersion
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WrongVersion
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the WrongVersion value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "WrongVersion")]
+
+      WrongVersion = 7
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="WrongVersion")>
+
+      WrongVersion = 7
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: WrongVersion
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabled
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabled
+  id: FeatureDisabled
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: FeatureDisabled
+  nameWithType: OriginTrialTokenStatus.FeatureDisabled
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabled
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FeatureDisabled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the FeatureDisabled value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "FeatureDisabled")]
+
+      FeatureDisabled = 8
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="FeatureDisabled")>
+
+      FeatureDisabled = 8
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: FeatureDisabled
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.TokenDisabled
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.TokenDisabled
+  id: TokenDisabled
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: TokenDisabled
+  nameWithType: OriginTrialTokenStatus.TokenDisabled
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.TokenDisabled
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TokenDisabled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the TokenDisabled value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "TokenDisabled")]
+
+      TokenDisabled = 9
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="TokenDisabled")>
+
+      TokenDisabled = 9
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: TokenDisabled
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabledForUser
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabledForUser
+  id: FeatureDisabledForUser
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: FeatureDisabledForUser
+  nameWithType: OriginTrialTokenStatus.FeatureDisabledForUser
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.FeatureDisabledForUser
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FeatureDisabledForUser
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the FeatureDisabledForUser value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "FeatureDisabledForUser")]
+
+      FeatureDisabledForUser = 10
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="FeatureDisabledForUser")>
+
+      FeatureDisabledForUser = 10
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: FeatureDisabledForUser
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.UnknownTrial
+  commentId: F:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.UnknownTrial
+  id: UnknownTrial
+  parent: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  langs:
+  - csharp
+  - vb
+  name: UnknownTrial
+  nameWithType: OriginTrialTokenStatus.UnknownTrial
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.UnknownTrial
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UnknownTrial
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/OriginTrialTokenStatus.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Enumerated member for the UnknownTrial value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "UnknownTrial")]
+
+      UnknownTrial = 11
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+    content.vb: >-
+      <EnumMember(Value:="UnknownTrial")>
+
+      UnknownTrial = 11
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: UnknownTrial
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Page
+  commentId: N:OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Page
+  nameWithType: OpenQA.Selenium.DevTools.V125.Page
+  fullName: OpenQA.Selenium.DevTools.V125.Page
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V125.Page.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V125.Page.html
+- uid: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus.html
+  name: OriginTrialTokenStatus
+  nameWithType: OriginTrialTokenStatus
+  fullName: OpenQA.Selenium.DevTools.V125.Page.OriginTrialTokenStatus
