@@ -1,0 +1,70 @@
+name: Release Staging
+
+on:
+  pull_request:
+    types: [closed]
+
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+jobs:
+  generate-packages:
+    if: >
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.head.ref, 'release-preparation-')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Extract version from branch name
+        id: extract_version
+        run: |
+          BRANCH_NAME="${{ github.event.pull_request.head.ref }}"
+          VERSION=$(echo $BRANCH_NAME | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: 17
+          distribution: 'temurin'
+      - name: Build and Stage Packages
+        run: ./go all:package
+      - name: "Upload releases"
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-assets
+          path: build/dist/
+          retention-days: 6
+      - name: Prep git
+        run: |
+          git config --local user.email "selenium-ci@users.noreply.github.com"
+          git config --local user.name "Selenium CI Bot"
+      - name: Tag Release
+        run: |
+          git tag selenium-${{ env.VERSION }}
+          git push origin selenium-${{ env.VERSION }}
+      - name: "Release"
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Selenium ${{ env.VERSION }}
+          body: |
+            ### Changelogs
+
+            For each component's detailed changelog, please check:
+            * [Ruby](https://github.com/SeleniumHQ/selenium/blob/trunk/rb/CHANGES)
+            * [Python](https://github.com/SeleniumHQ/selenium/blob/trunk/py/CHANGES)
+            * [JavaScript](https://github.com/SeleniumHQ/selenium/blob/trunk/javascript/node/selenium-webdriver/CHANGES.md)
+            * [Java](https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG)
+            * [DotNet](https://github.com/SeleniumHQ/selenium/blob/trunk/dotnet/CHANGELOG)
+            * [IEDriverServer](https://github.com/SeleniumHQ/selenium/blob/trunk/cpp/iedriverserver/CHANGELOG)
+
+          tag_name: selenium-${{ env.VERSION }}
+          draft: true
+          generate_release_notes: true
+          prerelease: false
+          files: |
+            artifacts/release-assets/selenium-dotent-${{ env.VERSION }}.zip
+            artifacts/release-assets/selenium-dotent-strongnamed-${{ env.VERSION }}.zip
+            artifacts/release-assets/selenium-java-${{ env.VERSION }}.zip
+            artifacts/release-assets/selenium-server-${{ env.VERSION }}.jar
+            artifacts/release-assets/selenium-server-${{ env.VERSION }}.zip
