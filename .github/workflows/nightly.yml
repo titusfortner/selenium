@@ -144,9 +144,8 @@ jobs:
 
   grid:
     if: |
-      github.repository_owner == 'seleniumhq' &&
-      (inputs.language == 'grid' || github.event_name == 'workflow_dispatch' ||
-      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success'))
+      inputs.language == 'grid' || github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     name: Grid
     uses: ./.github/workflows/bazel.yml
     with:
