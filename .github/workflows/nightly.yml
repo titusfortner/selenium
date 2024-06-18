@@ -143,7 +143,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   grid:
-    if: github.repository_owner == 'seleniumhq' && (inputs.language == 'grid' || (contains('schedule,workflow_run', github.event_name)))
+    if: inputs.language == 'grid' || (contains('schedule,workflow_run', github.event_name))
     name: Grid
     uses: ./.github/workflows/bazel.yml
     with:
