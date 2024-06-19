@@ -463,13 +463,10 @@ namespace :node do
       sh 'npm run generate-docs --prefix javascript/node/selenium-webdriver || true', verbose: true
     rescue StandardError
       puts 'Ensure that npm is installed on your system'
-      raise
+      raise unless arguments[:skip_update]
     end
 
-    unless arguments[:skip_update]
-      puts 'Updating JavaScript documentation'
-      puts update_gh_pages ? 'JavaScript Docs updated!' : 'JavaScript Doc update cancelled'
-    end
+    update_gh_pages unless arguments[:skip_update]
   end
 
   desc 'Update JavaScript changelog'
@@ -560,13 +557,10 @@ namespace :py do
       sh 'tox -c py/tox.ini -e docs', verbose: true
     rescue StandardError
       puts 'Ensure that tox is installed on your system'
-      raise
+      raise unless arguments[:skip_update]
     end
 
-    unless arguments[:skip_update]
-      puts 'Updating Python documentation'
-      puts update_gh_pages ? 'Python Docs updated!' : 'Python Doc update cancelled'
-    end
+    update_gh_pages unless arguments[:skip_update]
   end
 
   desc 'Install Python wheel locally'
@@ -700,10 +694,7 @@ namespace :rb do
     FileUtils.mkdir_p('build/docs/api')
     FileUtils.cp_r('bazel-bin/rb/docs.sh.runfiles/_main/docs/api/rb/.', 'build/docs/api/rb')
 
-    unless arguments[:skip_update]
-      puts 'Updating Ruby documentation'
-      puts update_gh_pages ? 'Ruby Docs updated!' : 'Ruby Doc update cancelled'
-    end
+    update_gh_pages unless arguments[:skip_update]
   end
 
   desc 'Update Ruby changelog'
@@ -787,33 +778,21 @@ namespace :dotnet do
   task :docs, [:skip_update] do |_task, arguments|
     FileUtils.rm_rf('build/docs/api/dotnet/')
     begin
-      # Pinning to 2.75.3 to avoid breaking changes in newer versions
-      # See https://github.com/dotnet/docfx/issues/9855
-      sh 'dotnet tool uninstall --global docfx || true'
-      sh 'dotnet tool install --global --version 2.75.3 docfx'
-      # sh 'dotnet tool update -g docfx'
-    rescue StandardError
-      puts 'Please ensure that .NET SDK is installed.'
-      raise
-    end
-
-    begin
       sh 'docfx dotnet/docs/docfx.json'
     rescue StandardError
+      puts '.NET documentation build failed:'
       case $CHILD_STATUS.exitstatus
       when 127
-        raise 'Ensure the dotnet/tools directory is added to your PATH environment variable (e.g., `~/.dotnet/tools`)'
+        puts 'Ensure the dotnet/tools directory is added to your PATH environment variable (e.g., `~/.dotnet/tools`)'
+        raise unless arguments[:skip_update]
       when 255
-        puts '.NET documentation build failed, likely because of DevTools namespacing. This is ok; continuing'
+        puts 'Likely cause is DevTools namespacing. This is ok; continuing'
       else
-        raise
+        raise unless arguments[:skip_update]
       end
     end
 
-    unless arguments[:skip_update]
-      puts 'Updating .NET documentation'
-      puts update_gh_pages ? '.NET Docs updated!' : '.NET Doc update cancelled'
-    end
+    update_gh_pages unless arguments[:skip_update]
   end
 
   desc 'Update .NET changelog'
@@ -896,10 +875,7 @@ namespace :java do
   task :docs, [:skip_update] do |_task, arguments|
     Rake::Task['javadocs'].invoke
 
-    unless arguments[:skip_update]
-      puts 'Updating Java documentation'
-      puts update_gh_pages ? 'Java Docs updated!' : 'Java Doc update cancelled'
-    end
+    update_gh_pages unless arguments[:skip_update]
   end
 
   desc 'Update Maven dependencies'
@@ -1013,16 +989,13 @@ end
 namespace :all do
   desc 'Update all API Documentation'
   task :docs do
-    FileUtils.rm_rf('build/docs/api')
-
     Rake::Task['java:docs'].invoke(true)
     Rake::Task['py:docs'].invoke(true)
     Rake::Task['rb:docs'].invoke(true)
     Rake::Task['dotnet:docs'].invoke(true)
     Rake::Task['node:docs'].invoke(true)
 
-    puts 'Updating All API Docs'
-    puts update_gh_pages ? 'AP Docs updated!' : 'API Doc update cancelled'
+    update_gh_pages
   end
 
   desc 'Build all artifacts for all language bindings'
@@ -1055,7 +1028,7 @@ namespace :all do
     Rake::Task['rb:release'].invoke(*args)
     Rake::Task['dotnet:release'].invoke(*args)
     Rake::Task['node:release'].invoke(*args)
-    Rake::Task['all:docs'].invoke
+
     Rake::Task['all:version'].invoke('nightly')
 
     puts 'Committing nightly version updates'
@@ -1161,70 +1134,18 @@ def updated_version(current, desired = nil, nightly = nil)
   end
 end
 
-# TODO: make this less insane
-# rubocop:disable all
 def update_gh_pages
-  origin_reference = @git.current_branch
-  origin_reference ||= begin
-    # This allows updating docs from a tagged commit instead of a branch
-    puts 'commit is not at HEAD, checking for matching tag'
-    tag = @git.tags.detect { |t| t.sha == @git.revparse('HEAD') }
-    tag ? tag.name : raise(StandardError, 'Must be on a tagged commit or at the HEAD of a branch to update API Docs')
-  end
-
-  puts 'Checking out gh-pages'
-  begin
-    @git.checkout('gh-pages')
-  rescue Git::FailedError => e
-    # This happens when the working directory is not clean and things need to be stashed or committed
-    line = e.message.lines[2].gsub('output: "error: ', '')
-    puts line.gsub('\t', "\t").split('\n')[0...-2].join("\n")
-    # TODO: we could offer to automatically fix with a stash, but there may be edge cases
-    print 'Manually Fix and Retry? (Y/n):'
-    response = $stdin.gets.chomp.downcase
-    return false unless %w[y yes].include?(response)
-
-    retry
-  end
-
-  puts 'Updating gh-pages branch from upstream repository'
-  begin
-    @git.pull
-  rescue Git::FailedError => e
-    # This happens when upstream is not already set
-    line = e.message.lines[2].gsub('output: "error: ', '')
-    puts line.gsub('\t', "\t").split('\n').delete_if(&:empty?)[-2...-1].join("\n")
-    print 'Manually Fix and Retry? (Y/n):'
-    response = $stdin.gets.chomp.downcase
-    return restore_git(origin_reference) unless %w[y yes].include?(response)
-
-    retry
-  end
+  @git.checkout('gh-pages')
 
   %w[java rb py dotnet javascript].each do |language|
     next unless Dir.exist?("build/docs/api/#{language}") && !Dir.empty?("build/docs/api/#{language}")
 
-    puts "Deleting #{language} directory in docs/api since corresponding directory in build/docs/api is not empty"
     FileUtils.rm_rf("docs/api/#{language}")
-    puts 'Moving documentation files from untracked build directory to tracked docs directory'
     FileUtils.mv("build/docs/api/#{language}", "docs/api/#{language}")
+
+    commit!("updating #{language} API docs", ["docs/api/#{language}/"])
   end
-
-  print 'Do you want to commit the changes? (Y/n): '
-  response = $stdin.gets.chomp.downcase
-  return restore_git(origin_reference) unless %w[y yes].include?(response)
-
-  puts 'Committing changes'
-  commit!('updating all API docs', ['docs/api/'])
-
-  puts 'Pushing changes to upstream repository'
-  @git.push
-
-  puts "Checking out originating branch/tag — #{origin_reference}"
-  @git.checkout(origin_reference)
-  true
 end
-# rubocop:disable all
 
 def restore_git(origin_reference)
   puts 'Stashing docs changes for gh-pages'
