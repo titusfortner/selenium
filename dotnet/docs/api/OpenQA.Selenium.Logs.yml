@@ -1,0 +1,650 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Logs
+  commentId: T:OpenQA.Selenium.Logs
+  id: Logs
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.Logs.#ctor(OpenQA.Selenium.WebDriver)
+  - OpenQA.Selenium.Logs.AvailableLogTypes
+  - OpenQA.Selenium.Logs.GetLog(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Logs
+  nameWithType: Logs
+  fullName: OpenQA.Selenium.Logs
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Logs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Logs
+    path: ../src/webdriver/Logs.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides a mechanism for examining logs for the driver during the test.
+  example: []
+  syntax:
+    content: 'public class Logs : ILogs'
+    content.vb: Public Class Logs Implements ILogs
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.ILogs
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Logs.#ctor(OpenQA.Selenium.WebDriver)
+  commentId: M:OpenQA.Selenium.Logs.#ctor(OpenQA.Selenium.WebDriver)
+  id: '#ctor(OpenQA.Selenium.WebDriver)'
+  parent: OpenQA.Selenium.Logs
+  langs:
+  - csharp
+  - vb
+  name: Logs(WebDriver)
+  nameWithType: Logs.Logs(WebDriver)
+  fullName: OpenQA.Selenium.Logs.Logs(OpenQA.Selenium.WebDriver)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Logs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Logs.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Logs" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Logs(WebDriver driver)
+    parameters:
+    - id: driver
+      type: OpenQA.Selenium.WebDriver
+      description: Instance of the driver currently in use
+    content.vb: Public Sub New(driver As WebDriver)
+  overload: OpenQA.Selenium.Logs.#ctor*
+  nameWithType.vb: Logs.New(WebDriver)
+  fullName.vb: OpenQA.Selenium.Logs.New(OpenQA.Selenium.WebDriver)
+  name.vb: New(WebDriver)
+- uid: OpenQA.Selenium.Logs.AvailableLogTypes
+  commentId: P:OpenQA.Selenium.Logs.AvailableLogTypes
+  id: AvailableLogTypes
+  parent: OpenQA.Selenium.Logs
+  langs:
+  - csharp
+  - vb
+  name: AvailableLogTypes
+  nameWithType: Logs.AvailableLogTypes
+  fullName: OpenQA.Selenium.Logs.AvailableLogTypes
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Logs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AvailableLogTypes
+    path: ../src/webdriver/Logs.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the list of available log types for this driver.
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<string> AvailableLogTypes { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+    content.vb: Public ReadOnly Property AvailableLogTypes As ReadOnlyCollection(Of String)
+  overload: OpenQA.Selenium.Logs.AvailableLogTypes*
+  implements:
+  - OpenQA.Selenium.ILogs.AvailableLogTypes
+- uid: OpenQA.Selenium.Logs.GetLog(System.String)
+  commentId: M:OpenQA.Selenium.Logs.GetLog(System.String)
+  id: GetLog(System.String)
+  parent: OpenQA.Selenium.Logs
+  langs:
+  - csharp
+  - vb
+  name: GetLog(string)
+  nameWithType: Logs.GetLog(string)
+  fullName: OpenQA.Selenium.Logs.GetLog(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Logs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetLog
+    path: ../src/webdriver/Logs.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the set of <xref href="OpenQA.Selenium.LogEntry" data-throw-if-not-resolved="false"></xref> objects for a specified log.
+  example: []
+  syntax:
+    content: public ReadOnlyCollection<LogEntry> GetLog(string logKind)
+    parameters:
+    - id: logKind
+      type: System.String
+      description: >-
+        The log for which to retrieve the log entries.
+            Log types can be found in the <xref href="OpenQA.Selenium.LogType" data-throw-if-not-resolved="false"></xref> class.
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.LogEntry}
+      description: The list of <xref href="OpenQA.Selenium.LogEntry" data-throw-if-not-resolved="false"></xref> objects for the specified log.
+    content.vb: Public Function GetLog(logKind As String) As ReadOnlyCollection(Of LogEntry)
+  overload: OpenQA.Selenium.Logs.GetLog*
+  implements:
+  - OpenQA.Selenium.ILogs.GetLog(System.String)
+  nameWithType.vb: Logs.GetLog(String)
+  fullName.vb: OpenQA.Selenium.Logs.GetLog(String)
+  name.vb: GetLog(String)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.ILogs
+  commentId: T:OpenQA.Selenium.ILogs
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ILogs.html
+  name: ILogs
+  nameWithType: ILogs
+  fullName: OpenQA.Selenium.ILogs
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Logs
+  commentId: T:OpenQA.Selenium.Logs
+  href: OpenQA.Selenium.Logs.html
+  name: Logs
+  nameWithType: Logs
+  fullName: OpenQA.Selenium.Logs
+- uid: OpenQA.Selenium.Logs.#ctor*
+  commentId: Overload:OpenQA.Selenium.Logs.#ctor
+  href: OpenQA.Selenium.Logs.html#OpenQA_Selenium_Logs__ctor_OpenQA_Selenium_WebDriver_
+  name: Logs
+  nameWithType: Logs.Logs
+  fullName: OpenQA.Selenium.Logs.Logs
+  nameWithType.vb: Logs.New
+  fullName.vb: OpenQA.Selenium.Logs.New
+  name.vb: New
+- uid: OpenQA.Selenium.WebDriver
+  commentId: T:OpenQA.Selenium.WebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.WebDriver.html
+  name: WebDriver
+  nameWithType: WebDriver
+  fullName: OpenQA.Selenium.WebDriver
+- uid: OpenQA.Selenium.Logs.AvailableLogTypes*
+  commentId: Overload:OpenQA.Selenium.Logs.AvailableLogTypes
+  href: OpenQA.Selenium.Logs.html#OpenQA_Selenium_Logs_AvailableLogTypes
+  name: AvailableLogTypes
+  nameWithType: Logs.AvailableLogTypes
+  fullName: OpenQA.Selenium.Logs.AvailableLogTypes
+- uid: OpenQA.Selenium.ILogs.AvailableLogTypes
+  commentId: P:OpenQA.Selenium.ILogs.AvailableLogTypes
+  parent: OpenQA.Selenium.ILogs
+  href: OpenQA.Selenium.ILogs.html#OpenQA_Selenium_ILogs_AvailableLogTypes
+  name: AvailableLogTypes
+  nameWithType: ILogs.AvailableLogTypes
+  fullName: OpenQA.Selenium.ILogs.AvailableLogTypes
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{System.String}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<string>
+  nameWithType: ReadOnlyCollection<string>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<string>
+  nameWithType.vb: ReadOnlyCollection(Of String)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of String)
+  name.vb: ReadOnlyCollection(Of String)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: OpenQA.Selenium.LogEntry
+  commentId: T:OpenQA.Selenium.LogEntry
+  href: OpenQA.Selenium.LogEntry.html
+  name: LogEntry
+  nameWithType: LogEntry
+  fullName: OpenQA.Selenium.LogEntry
+- uid: OpenQA.Selenium.LogType
+  commentId: T:OpenQA.Selenium.LogType
+  href: OpenQA.Selenium.LogType.html
+  name: LogType
+  nameWithType: LogType
+  fullName: OpenQA.Selenium.LogType
+- uid: OpenQA.Selenium.Logs.GetLog*
+  commentId: Overload:OpenQA.Selenium.Logs.GetLog
+  href: OpenQA.Selenium.Logs.html#OpenQA_Selenium_Logs_GetLog_System_String_
+  name: GetLog
+  nameWithType: Logs.GetLog
+  fullName: OpenQA.Selenium.Logs.GetLog
+- uid: OpenQA.Selenium.ILogs.GetLog(System.String)
+  commentId: M:OpenQA.Selenium.ILogs.GetLog(System.String)
+  parent: OpenQA.Selenium.ILogs
+  isExternal: true
+  href: OpenQA.Selenium.ILogs.html#OpenQA_Selenium_ILogs_GetLog_System_String_
+  name: GetLog(string)
+  nameWithType: ILogs.GetLog(string)
+  fullName: OpenQA.Selenium.ILogs.GetLog(string)
+  nameWithType.vb: ILogs.GetLog(String)
+  fullName.vb: OpenQA.Selenium.ILogs.GetLog(String)
+  name.vb: GetLog(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ILogs.GetLog(System.String)
+    name: GetLog
+    href: OpenQA.Selenium.ILogs.html#OpenQA_Selenium_ILogs_GetLog_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ILogs.GetLog(System.String)
+    name: GetLog
+    href: OpenQA.Selenium.ILogs.html#OpenQA_Selenium_ILogs_GetLog_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.LogEntry}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.LogEntry}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<LogEntry>
+  nameWithType: ReadOnlyCollection<LogEntry>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<OpenQA.Selenium.LogEntry>
+  nameWithType.vb: ReadOnlyCollection(Of LogEntry)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of OpenQA.Selenium.LogEntry)
+  name.vb: ReadOnlyCollection(Of LogEntry)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: OpenQA.Selenium.LogEntry
+    name: LogEntry
+    href: OpenQA.Selenium.LogEntry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.LogEntry
+    name: LogEntry
+    href: OpenQA.Selenium.LogEntry.html
+  - name: )

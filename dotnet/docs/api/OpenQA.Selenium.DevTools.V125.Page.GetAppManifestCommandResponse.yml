@@ -1,0 +1,785 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  id: GetAppManifestCommandResponse
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  children:
+  - OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data
+  - OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors
+  - OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest
+  - OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed
+  - OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url
+  langs:
+  - csharp
+  - vb
+  name: GetAppManifestCommandResponse
+  nameWithType: GetAppManifestCommandResponse
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetAppManifestCommandResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: >-
+    Response for Gets the processed manifest for this current document.
+      This API always waits for the manifest to be loaded.
+      If manifestId is provided, and it does not match the manifest of the
+        current document, this API errors out.
+      If there isn’t a loaded page, this API errors out immediately.
+  example: []
+  syntax:
+    content: 'public sealed class GetAppManifestCommandResponse : ICommandResponse<GetAppManifestCommandSettings>, ICommandResponse'
+    content.vb: Public NotInheritable Class GetAppManifestCommandResponse Implements ICommandResponse(Of GetAppManifestCommandSettings), ICommandResponse
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings}
+  - OpenQA.Selenium.DevTools.ICommandResponse
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: GetAppManifestCommandResponse.Url
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+    startLine: 48
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Manifest location.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors
+  id: Errors
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: GetAppManifestCommandResponse.Errors
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Errors
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Gets or sets the errors
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("errors")]
+
+      public AppManifestError[] Errors { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.AppManifestError[]
+    content.vb: >-
+      <JsonProperty("errors")>
+
+      Public Property Errors As AppManifestError()
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errors
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data
+  id: Data
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: GetAppManifestCommandResponse.Data
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Data
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Manifest content.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("data", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Data { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("data", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Data As String
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: data
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed
+  id: Parsed
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Parsed
+  nameWithType: GetAppManifestCommandResponse.Parsed
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Parsed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Parsed manifest properties. Deprecated, use manifest instead.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parsed", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AppManifestParsedProperties Parsed { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.AppManifestParsedProperties
+    content.vb: >-
+      <JsonProperty("parsed", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Parsed As AppManifestParsedProperties
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parsed
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest
+  id: Manifest
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Manifest
+  nameWithType: GetAppManifestCommandResponse.Manifest
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Manifest
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetAppManifestCommand.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Gets or sets the manifest
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("manifest")]
+
+      public WebAppManifest Manifest { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.WebAppManifest
+    content.vb: >-
+      <JsonProperty("manifest")>
+
+      Public Property Manifest As WebAppManifest
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: manifest
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Page
+  commentId: N:OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Page
+  nameWithType: OpenQA.Selenium.DevTools.V125.Page
+  fullName: OpenQA.Selenium.DevTools.V125.Page
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V125.Page.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V125.Page.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings}
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<GetAppManifestCommandSettings>
+  nameWithType: ICommandResponse<GetAppManifestCommandSettings>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings>
+  nameWithType.vb: ICommandResponse(Of GetAppManifestCommandSettings)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings)
+  name.vb: ICommandResponse(Of GetAppManifestCommandSettings)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings
+    name: GetAppManifestCommandSettings
+    href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings
+    name: GetAppManifestCommandSettings
+    href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandSettings.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  name: ICommandResponse
+  nameWithType: ICommandResponse
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  parent: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  definition: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<T>
+  nameWithType: ICommandResponse<T>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<T>
+  nameWithType.vb: ICommandResponse(Of T)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of T)
+  name.vb: ICommandResponse(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html
+  name: ICommandResponseExtensions
+  nameWithType: ICommandResponseExtensions
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url
+  href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetAppManifestCommandResponse_Url
+  name: Url
+  nameWithType: GetAppManifestCommandResponse.Url
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors
+  href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetAppManifestCommandResponse_Errors
+  name: Errors
+  nameWithType: GetAppManifestCommandResponse.Errors
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Errors
+- uid: OpenQA.Selenium.DevTools.V125.Page.AppManifestError[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.Page.AppManifestError.html
+  name: AppManifestError[]
+  nameWithType: AppManifestError[]
+  fullName: OpenQA.Selenium.DevTools.V125.Page.AppManifestError[]
+  nameWithType.vb: AppManifestError()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Page.AppManifestError()
+  name.vb: AppManifestError()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Page.AppManifestError
+    name: AppManifestError
+    href: OpenQA.Selenium.DevTools.V125.Page.AppManifestError.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Page.AppManifestError
+    name: AppManifestError
+    href: OpenQA.Selenium.DevTools.V125.Page.AppManifestError.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data
+  href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetAppManifestCommandResponse_Data
+  name: Data
+  nameWithType: GetAppManifestCommandResponse.Data
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Data
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed
+  href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetAppManifestCommandResponse_Parsed
+  name: Parsed
+  nameWithType: GetAppManifestCommandResponse.Parsed
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Parsed
+- uid: OpenQA.Selenium.DevTools.V125.Page.AppManifestParsedProperties
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.AppManifestParsedProperties
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.Selenium.DevTools.V125.Page.AppManifestParsedProperties.html
+  name: AppManifestParsedProperties
+  nameWithType: AppManifestParsedProperties
+  fullName: OpenQA.Selenium.DevTools.V125.Page.AppManifestParsedProperties
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest
+  href: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetAppManifestCommandResponse_Manifest
+  name: Manifest
+  nameWithType: GetAppManifestCommandResponse.Manifest
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetAppManifestCommandResponse.Manifest
+- uid: OpenQA.Selenium.DevTools.V125.Page.WebAppManifest
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.WebAppManifest
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.Selenium.DevTools.V125.Page.WebAppManifest.html
+  name: WebAppManifest
+  nameWithType: WebAppManifest
+  fullName: OpenQA.Selenium.DevTools.V125.Page.WebAppManifest

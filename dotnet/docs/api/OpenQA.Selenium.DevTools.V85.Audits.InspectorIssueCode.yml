@@ -1,0 +1,277 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  id: InspectorIssueCode
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  children:
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.BlockedByResponseIssue
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.HeavyAdIssue
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.MixedContentIssue
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.SameSiteCookieIssue
+  langs:
+  - csharp
+  - vb
+  name: InspectorIssueCode
+  nameWithType: InspectorIssueCode
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InspectorIssueCode
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+    startLine: 12
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: >-
+    A unique identifier for the type of issue. Each type may use one of the
+
+    optional fields in InspectorIssueDetails to convey more specific
+
+    information about the kind of issue.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum InspectorIssueCode
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum InspectorIssueCode
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.SameSiteCookieIssue
+  commentId: F:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.SameSiteCookieIssue
+  id: SameSiteCookieIssue
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  langs:
+  - csharp
+  - vb
+  name: SameSiteCookieIssue
+  nameWithType: InspectorIssueCode.SameSiteCookieIssue
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.SameSiteCookieIssue
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSiteCookieIssue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+    startLine: 18
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: Enumerated member for the SameSiteCookieIssue value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "SameSiteCookieIssue")]
+
+      SameSiteCookieIssue = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+    content.vb: >-
+      <EnumMember(Value:="SameSiteCookieIssue")>
+
+      SameSiteCookieIssue = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: SameSiteCookieIssue
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.MixedContentIssue
+  commentId: F:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.MixedContentIssue
+  id: MixedContentIssue
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  langs:
+  - csharp
+  - vb
+  name: MixedContentIssue
+  nameWithType: InspectorIssueCode.MixedContentIssue
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.MixedContentIssue
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MixedContentIssue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: Enumerated member for the MixedContentIssue value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "MixedContentIssue")]
+
+      MixedContentIssue = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+    content.vb: >-
+      <EnumMember(Value:="MixedContentIssue")>
+
+      MixedContentIssue = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: MixedContentIssue
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.BlockedByResponseIssue
+  commentId: F:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.BlockedByResponseIssue
+  id: BlockedByResponseIssue
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  langs:
+  - csharp
+  - vb
+  name: BlockedByResponseIssue
+  nameWithType: InspectorIssueCode.BlockedByResponseIssue
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.BlockedByResponseIssue
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BlockedByResponseIssue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+    startLine: 28
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: Enumerated member for the BlockedByResponseIssue value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "BlockedByResponseIssue")]
+
+      BlockedByResponseIssue = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+    content.vb: >-
+      <EnumMember(Value:="BlockedByResponseIssue")>
+
+      BlockedByResponseIssue = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: BlockedByResponseIssue
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.HeavyAdIssue
+  commentId: F:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.HeavyAdIssue
+  id: HeavyAdIssue
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  langs:
+  - csharp
+  - vb
+  name: HeavyAdIssue
+  nameWithType: InspectorIssueCode.HeavyAdIssue
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.HeavyAdIssue
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HeavyAdIssue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueCode.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: Enumerated member for the HeavyAdIssue value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "HeavyAdIssue")]
+
+      HeavyAdIssue = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+    content.vb: >-
+      <EnumMember(Value:="HeavyAdIssue")>
+
+      HeavyAdIssue = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: HeavyAdIssue
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Audits
+  commentId: N:OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Audits
+  nameWithType: OpenQA.Selenium.DevTools.V85.Audits
+  fullName: OpenQA.Selenium.DevTools.V85.Audits
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V85.Audits.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V85.Audits.html
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode.html
+  name: InspectorIssueCode
+  nameWithType: InspectorIssueCode
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueCode

@@ -1,0 +1,803 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  commentId: T:OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  id: FrameResource
+  parent: OpenQA.Selenium.DevTools.V126.Page
+  children:
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type
+  - OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url
+  langs:
+  - csharp
+  - vb
+  name: FrameResource
+  nameWithType: FrameResource
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FrameResource
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: Information about the Resource on the page.
+  example: []
+  syntax:
+    content: public sealed class FrameResource
+    content.vb: Public NotInheritable Class FrameResource
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: FrameResource.Url
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: Resource URL.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type
+  id: Type
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: FrameResource.Type
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Type
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: Type of this resource.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("type")]
+
+      public ResourceType Type { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.ResourceType
+    content.vb: >-
+      <JsonProperty("type")>
+
+      Public Property Type As ResourceType
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType
+  id: MimeType
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: MimeType
+  nameWithType: FrameResource.MimeType
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MimeType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: Resource mimeType as determined by the browser.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("mimeType")]
+
+      public string MimeType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("mimeType")>
+
+      Public Property MimeType As String
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: mimeType
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified
+  id: LastModified
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: LastModified
+  nameWithType: FrameResource.LastModified
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LastModified
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: last-modified timestamp as reported by server.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("lastModified", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? LastModified { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("lastModified", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property LastModified As Double?
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: lastModified
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize
+  id: ContentSize
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: ContentSize
+  nameWithType: FrameResource.ContentSize
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentSize
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: Resource content size.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contentSize", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? ContentSize { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("contentSize", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ContentSize As Double?
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contentSize
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed
+  id: Failed
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: FrameResource.Failed
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Failed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: True if the resource failed to load.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("failed", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Failed { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("failed", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Failed As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: failed
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled
+  commentId: P:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled
+  id: Canceled
+  parent: OpenQA.Selenium.DevTools.V126.Page.FrameResource
+  langs:
+  - csharp
+  - vb
+  name: Canceled
+  nameWithType: FrameResource.Canceled
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Canceled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Page/FrameResource.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Page
+  summary: True if the resource was canceled during loading.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("canceled", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Canceled { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("canceled", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Canceled As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: canceled
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Page
+  commentId: N:OpenQA.Selenium.DevTools.V126.Page
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Page
+  nameWithType: OpenQA.Selenium.DevTools.V126.Page
+  fullName: OpenQA.Selenium.DevTools.V126.Page
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V126.Page.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V126.Page.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_Url
+  name: Url
+  nameWithType: FrameResource.Url
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_Type
+  name: Type
+  nameWithType: FrameResource.Type
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Type
+- uid: OpenQA.Selenium.DevTools.V126.Network.ResourceType
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.ResourceType
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.Selenium.DevTools.V126.Network.ResourceType.html
+  name: ResourceType
+  nameWithType: ResourceType
+  fullName: OpenQA.Selenium.DevTools.V126.Network.ResourceType
+- uid: OpenQA.Selenium.DevTools.V126.Network
+  commentId: N:OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Network
+  nameWithType: OpenQA.Selenium.DevTools.V126.Network
+  fullName: OpenQA.Selenium.DevTools.V126.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V126.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V126.Network.html
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_MimeType
+  name: MimeType
+  nameWithType: FrameResource.MimeType
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.MimeType
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_LastModified
+  name: LastModified
+  nameWithType: FrameResource.LastModified
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.LastModified
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_ContentSize
+  name: ContentSize
+  nameWithType: FrameResource.ContentSize
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.ContentSize
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_Failed
+  name: Failed
+  nameWithType: FrameResource.Failed
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Failed
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled
+  href: OpenQA.Selenium.DevTools.V126.Page.FrameResource.html#OpenQA_Selenium_DevTools_V126_Page_FrameResource_Canceled
+  name: Canceled
+  nameWithType: FrameResource.Canceled
+  fullName: OpenQA.Selenium.DevTools.V126.Page.FrameResource.Canceled

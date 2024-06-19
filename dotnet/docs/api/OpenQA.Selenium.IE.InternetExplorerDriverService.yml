@@ -1,0 +1,956 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService
+  commentId: T:OpenQA.Selenium.IE.InternetExplorerDriverService
+  id: InternetExplorerDriverService
+  parent: OpenQA.Selenium.IE
+  children:
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(System.String)
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(System.String,System.String)
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.Host
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel
+  - OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses
+  langs:
+  - csharp
+  - vb
+  name: InternetExplorerDriverService
+  nameWithType: InternetExplorerDriverService
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InternetExplorerDriverService
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 28
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Exposes the service provided by the native IEDriverServer executable.
+  example: []
+  syntax:
+    content: 'public sealed class InternetExplorerDriverService : DriverService, ICommandServer, IDisposable'
+    content.vb: Public NotInheritable Class InternetExplorerDriverService Inherits DriverService Implements ICommandServer, IDisposable
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.DriverService
+  implements:
+  - OpenQA.Selenium.Remote.ICommandServer
+  - System.IDisposable
+  inheritedMembers:
+  - OpenQA.Selenium.DriverService.DriverProcessStarting
+  - OpenQA.Selenium.DriverService.DriverProcessStarted
+  - OpenQA.Selenium.DriverService.ServiceUrl
+  - OpenQA.Selenium.DriverService.HostName
+  - OpenQA.Selenium.DriverService.Port
+  - OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  - OpenQA.Selenium.DriverService.IsRunning
+  - OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  - OpenQA.Selenium.DriverService.ProcessId
+  - OpenQA.Selenium.DriverService.InitializationTimeout
+  - OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  - OpenQA.Selenium.DriverService.DriverServicePath
+  - OpenQA.Selenium.DriverService.Dispose
+  - OpenQA.Selenium.DriverService.Start
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions
+  commentId: M:OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions
+  id: GetDefaultDriverOptions
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultDriverOptions()
+  nameWithType: InternetExplorerDriverService.GetDefaultDriverOptions()
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDefaultDriverOptions
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: The browser options instance that corresponds to the driver service
+  example: []
+  syntax:
+    content: protected override DriverOptions GetDefaultDriverOptions()
+    return:
+      type: OpenQA.Selenium.DriverOptions
+      description: ''
+    content.vb: Protected Overrides Function GetDefaultDriverOptions() As DriverOptions
+  overridden: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.Host
+  commentId: P:OpenQA.Selenium.IE.InternetExplorerDriverService.Host
+  id: Host
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: InternetExplorerDriverService.Host
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.Host
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Host
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Gets or sets the value of the host adapter on which the IEDriverServer should listen for connections.
+  example: []
+  syntax:
+    content: public string Host { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Host As String
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.Host*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile
+  commentId: P:OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile
+  id: LogFile
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: LogFile
+  nameWithType: InternetExplorerDriverService.LogFile
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LogFile
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Gets or sets the location of the log file written to by the IEDriverServer.
+  example: []
+  syntax:
+    content: public string LogFile { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LogFile As String
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel
+  commentId: P:OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel
+  id: LoggingLevel
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: LoggingLevel
+  nameWithType: InternetExplorerDriverService.LoggingLevel
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LoggingLevel
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Gets or sets the logging level used by the IEDriverServer.
+  example: []
+  syntax:
+    content: public InternetExplorerDriverLogLevel LoggingLevel { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.IE.InternetExplorerDriverLogLevel
+    content.vb: Public Property LoggingLevel As InternetExplorerDriverLogLevel
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath
+  commentId: P:OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath
+  id: LibraryExtractionPath
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: LibraryExtractionPath
+  nameWithType: InternetExplorerDriverService.LibraryExtractionPath
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LibraryExtractionPath
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 91
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: >-
+    Gets or sets the path to which the supporting library of the IEDriverServer.exe is extracted.
+
+    Defaults to the temp directory if this property is not set.
+  remarks: >-
+    The IEDriverServer.exe requires extraction of a supporting library to perform some of its functions. Setting
+
+    This library is extracted to the temp directory if this property is not set. If the property is set, it must
+
+    be set to a valid directory.
+  example: []
+  syntax:
+    content: public string LibraryExtractionPath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LibraryExtractionPath As String
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses
+  commentId: P:OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses
+  id: WhitelistedIPAddresses
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: WhitelistedIPAddresses
+  nameWithType: InternetExplorerDriverService.WhitelistedIPAddresses
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WhitelistedIPAddresses
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 102
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: >-
+    Gets or sets the comma-delimited list of IP addresses that are approved to
+
+    connect to this instance of the IEDriverServer. Defaults to an empty string,
+
+    which means only the local loopback address can connect.
+  example: []
+  syntax:
+    content: public string WhitelistedIPAddresses { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property WhitelistedIPAddresses As String
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments
+  commentId: P:OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments
+  id: CommandLineArguments
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: CommandLineArguments
+  nameWithType: InternetExplorerDriverService.CommandLineArguments
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandLineArguments
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 111
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Gets the command-line arguments for the driver service.
+  example: []
+  syntax:
+    content: protected override string CommandLineArguments { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Protected Overrides ReadOnly Property CommandLineArguments As String
+  overridden: OpenQA.Selenium.DriverService.CommandLineArguments
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService
+  commentId: M:OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService
+  id: CreateDefaultService
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService()
+  nameWithType: InternetExplorerDriverService.CreateDefaultService()
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 154
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Creates a default instance of the InternetExplorerDriverService.
+  example: []
+  syntax:
+    content: public static InternetExplorerDriverService CreateDefaultService()
+    return:
+      type: OpenQA.Selenium.IE.InternetExplorerDriverService
+      description: A InternetExplorerDriverService that implements default settings.
+    content.vb: Public Shared Function CreateDefaultService() As InternetExplorerDriverService
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService*
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(System.String)
+  commentId: M:OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(System.String)
+  id: CreateDefaultService(System.String)
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService(string)
+  nameWithType: InternetExplorerDriverService.CreateDefaultService(string)
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 164
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Creates a default instance of the InternetExplorerDriverService using a specified path to the IEDriverServer executable.
+  example: []
+  syntax:
+    content: public static InternetExplorerDriverService CreateDefaultService(string driverPath)
+    parameters:
+    - id: driverPath
+      type: System.String
+      description: The path to the executable or the directory containing the IEDriverServer executable.
+    return:
+      type: OpenQA.Selenium.IE.InternetExplorerDriverService
+      description: A InternetExplorerDriverService using a random port.
+    content.vb: Public Shared Function CreateDefaultService(driverPath As String) As InternetExplorerDriverService
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService*
+  nameWithType.vb: InternetExplorerDriverService.CreateDefaultService(String)
+  fullName.vb: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(String)
+  name.vb: CreateDefaultService(String)
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(System.String,System.String)
+  commentId: M:OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(System.String,System.String)
+  id: CreateDefaultService(System.String,System.String)
+  parent: OpenQA.Selenium.IE.InternetExplorerDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService(string, string)
+  nameWithType: InternetExplorerDriverService.CreateDefaultService(string, string)
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IE/InternetExplorerDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/IE/InternetExplorerDriverService.cs
+    startLine: 186
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.IE
+  summary: Creates a default instance of the InternetExplorerDriverService using a specified path to the IEDriverServer executable with the given name.
+  example: []
+  syntax:
+    content: public static InternetExplorerDriverService CreateDefaultService(string driverPath, string driverExecutableFileName)
+    parameters:
+    - id: driverPath
+      type: System.String
+      description: The directory containing the IEDriverServer executable.
+    - id: driverExecutableFileName
+      type: System.String
+      description: The name of the IEDriverServer executable file.
+    return:
+      type: OpenQA.Selenium.IE.InternetExplorerDriverService
+      description: A InternetExplorerDriverService using a random port.
+    content.vb: Public Shared Function CreateDefaultService(driverPath As String, driverExecutableFileName As String) As InternetExplorerDriverService
+  overload: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService*
+  nameWithType.vb: InternetExplorerDriverService.CreateDefaultService(String, String)
+  fullName.vb: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService(String, String)
+  name.vb: CreateDefaultService(String, String)
+references:
+- uid: OpenQA.Selenium.IE
+  commentId: N:OpenQA.Selenium.IE
+  href: OpenQA.html
+  name: OpenQA.Selenium.IE
+  nameWithType: OpenQA.Selenium.IE
+  fullName: OpenQA.Selenium.IE
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.IE
+    name: IE
+    href: OpenQA.Selenium.IE.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.IE
+    name: IE
+    href: OpenQA.Selenium.IE.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DriverService
+  commentId: T:OpenQA.Selenium.DriverService
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverService.html
+  name: DriverService
+  nameWithType: DriverService
+  fullName: OpenQA.Selenium.DriverService
+- uid: OpenQA.Selenium.Remote.ICommandServer
+  commentId: T:OpenQA.Selenium.Remote.ICommandServer
+  parent: OpenQA.Selenium.Remote
+  href: OpenQA.Selenium.Remote.ICommandServer.html
+  name: ICommandServer
+  nameWithType: ICommandServer
+  fullName: OpenQA.Selenium.Remote.ICommandServer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OpenQA.Selenium.DriverService.DriverProcessStarting
+  commentId: E:OpenQA.Selenium.DriverService.DriverProcessStarting
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverProcessStarting
+  name: DriverProcessStarting
+  nameWithType: DriverService.DriverProcessStarting
+  fullName: OpenQA.Selenium.DriverService.DriverProcessStarting
+- uid: OpenQA.Selenium.DriverService.DriverProcessStarted
+  commentId: E:OpenQA.Selenium.DriverService.DriverProcessStarted
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverProcessStarted
+  name: DriverProcessStarted
+  nameWithType: DriverService.DriverProcessStarted
+  fullName: OpenQA.Selenium.DriverService.DriverProcessStarted
+- uid: OpenQA.Selenium.DriverService.ServiceUrl
+  commentId: P:OpenQA.Selenium.DriverService.ServiceUrl
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_ServiceUrl
+  name: ServiceUrl
+  nameWithType: DriverService.ServiceUrl
+  fullName: OpenQA.Selenium.DriverService.ServiceUrl
+- uid: OpenQA.Selenium.DriverService.HostName
+  commentId: P:OpenQA.Selenium.DriverService.HostName
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HostName
+  name: HostName
+  nameWithType: DriverService.HostName
+  fullName: OpenQA.Selenium.DriverService.HostName
+- uid: OpenQA.Selenium.DriverService.Port
+  commentId: P:OpenQA.Selenium.DriverService.Port
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Port
+  name: Port
+  nameWithType: DriverService.Port
+  fullName: OpenQA.Selenium.DriverService.Port
+- uid: OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  commentId: P:OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_SuppressInitialDiagnosticInformation
+  name: SuppressInitialDiagnosticInformation
+  nameWithType: DriverService.SuppressInitialDiagnosticInformation
+  fullName: OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+- uid: OpenQA.Selenium.DriverService.IsRunning
+  commentId: P:OpenQA.Selenium.DriverService.IsRunning
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_IsRunning
+  name: IsRunning
+  nameWithType: DriverService.IsRunning
+  fullName: OpenQA.Selenium.DriverService.IsRunning
+- uid: OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  commentId: P:OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HideCommandPromptWindow
+  name: HideCommandPromptWindow
+  nameWithType: DriverService.HideCommandPromptWindow
+  fullName: OpenQA.Selenium.DriverService.HideCommandPromptWindow
+- uid: OpenQA.Selenium.DriverService.ProcessId
+  commentId: P:OpenQA.Selenium.DriverService.ProcessId
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_ProcessId
+  name: ProcessId
+  nameWithType: DriverService.ProcessId
+  fullName: OpenQA.Selenium.DriverService.ProcessId
+- uid: OpenQA.Selenium.DriverService.InitializationTimeout
+  commentId: P:OpenQA.Selenium.DriverService.InitializationTimeout
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_InitializationTimeout
+  name: InitializationTimeout
+  nameWithType: DriverService.InitializationTimeout
+  fullName: OpenQA.Selenium.DriverService.InitializationTimeout
+- uid: OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  commentId: P:OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverServiceExecutableName
+  name: DriverServiceExecutableName
+  nameWithType: DriverService.DriverServiceExecutableName
+  fullName: OpenQA.Selenium.DriverService.DriverServiceExecutableName
+- uid: OpenQA.Selenium.DriverService.DriverServicePath
+  commentId: P:OpenQA.Selenium.DriverService.DriverServicePath
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverServicePath
+  name: DriverServicePath
+  nameWithType: DriverService.DriverServicePath
+  fullName: OpenQA.Selenium.DriverService.DriverServicePath
+- uid: OpenQA.Selenium.DriverService.Dispose
+  commentId: M:OpenQA.Selenium.DriverService.Dispose
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  name: Dispose()
+  nameWithType: DriverService.Dispose()
+  fullName: OpenQA.Selenium.DriverService.Dispose()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DriverService.Start
+  commentId: M:OpenQA.Selenium.DriverService.Start
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  name: Start()
+  nameWithType: DriverService.Start()
+  fullName: OpenQA.Selenium.DriverService.Start()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.Start
+    name: Start
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.Start
+    name: Start
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Remote
+  commentId: N:OpenQA.Selenium.Remote
+  href: OpenQA.html
+  name: OpenQA.Selenium.Remote
+  nameWithType: OpenQA.Selenium.Remote
+  fullName: OpenQA.Selenium.Remote
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+- uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  commentId: M:OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  name: GetDefaultDriverOptions()
+  nameWithType: DriverService.GetDefaultDriverOptions()
+  fullName: OpenQA.Selenium.DriverService.GetDefaultDriverOptions()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+    name: GetDefaultDriverOptions
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+    name: GetDefaultDriverOptions
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_GetDefaultDriverOptions
+  name: GetDefaultDriverOptions
+  nameWithType: InternetExplorerDriverService.GetDefaultDriverOptions
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.GetDefaultDriverOptions
+- uid: OpenQA.Selenium.DriverOptions
+  commentId: T:OpenQA.Selenium.DriverOptions
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverOptions.html
+  name: DriverOptions
+  nameWithType: DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.Host*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.Host
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_Host
+  name: Host
+  nameWithType: InternetExplorerDriverService.Host
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.Host
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_LogFile
+  name: LogFile
+  nameWithType: InternetExplorerDriverService.LogFile
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.LogFile
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_LoggingLevel
+  name: LoggingLevel
+  nameWithType: InternetExplorerDriverService.LoggingLevel
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.LoggingLevel
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverLogLevel
+  commentId: T:OpenQA.Selenium.IE.InternetExplorerDriverLogLevel
+  parent: OpenQA.Selenium.IE
+  href: OpenQA.Selenium.IE.InternetExplorerDriverLogLevel.html
+  name: InternetExplorerDriverLogLevel
+  nameWithType: InternetExplorerDriverLogLevel
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverLogLevel
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_LibraryExtractionPath
+  name: LibraryExtractionPath
+  nameWithType: InternetExplorerDriverService.LibraryExtractionPath
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.LibraryExtractionPath
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_WhitelistedIPAddresses
+  name: WhitelistedIPAddresses
+  nameWithType: InternetExplorerDriverService.WhitelistedIPAddresses
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.WhitelistedIPAddresses
+- uid: OpenQA.Selenium.DriverService.CommandLineArguments
+  commentId: P:OpenQA.Selenium.DriverService.CommandLineArguments
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_CommandLineArguments
+  name: CommandLineArguments
+  nameWithType: DriverService.CommandLineArguments
+  fullName: OpenQA.Selenium.DriverService.CommandLineArguments
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_CommandLineArguments
+  name: CommandLineArguments
+  nameWithType: InternetExplorerDriverService.CommandLineArguments
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.CommandLineArguments
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService*
+  commentId: Overload:OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html#OpenQA_Selenium_IE_InternetExplorerDriverService_CreateDefaultService
+  name: CreateDefaultService
+  nameWithType: InternetExplorerDriverService.CreateDefaultService
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService.CreateDefaultService
+- uid: OpenQA.Selenium.IE.InternetExplorerDriverService
+  commentId: T:OpenQA.Selenium.IE.InternetExplorerDriverService
+  parent: OpenQA.Selenium.IE
+  href: OpenQA.Selenium.IE.InternetExplorerDriverService.html
+  name: InternetExplorerDriverService
+  nameWithType: InternetExplorerDriverService
+  fullName: OpenQA.Selenium.IE.InternetExplorerDriverService

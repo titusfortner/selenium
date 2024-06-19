@@ -1,0 +1,649 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  id: PrefetchStatusUpdatedEventArgs
+  parent: OpenQA.Selenium.DevTools.V124.Preload
+  children:
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status
+  langs:
+  - csharp
+  - vb
+  name: PrefetchStatusUpdatedEventArgs
+  nameWithType: PrefetchStatusUpdatedEventArgs
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchStatusUpdatedEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Fired when a prefetch attempt is updated.
+  example: []
+  syntax:
+    content: 'public sealed class PrefetchStatusUpdatedEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class PrefetchStatusUpdatedEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key
+  commentId: P:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key
+  id: Key
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Key
+  nameWithType: PrefetchStatusUpdatedEventArgs.Key
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Key
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Gets or sets the key
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("key")]
+
+      public PreloadingAttemptKey Key { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PreloadingAttemptKey
+    content.vb: >-
+      <JsonProperty("key")>
+
+      Public Property Key As PreloadingAttemptKey
+  overload: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: key
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  commentId: P:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  id: InitiatingFrameId
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: InitiatingFrameId
+  nameWithType: PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InitiatingFrameId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: The frame id of the frame initiating prefetch.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("initiatingFrameId")]
+
+      public string InitiatingFrameId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("initiatingFrameId")>
+
+      Public Property InitiatingFrameId As String
+  overload: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: initiatingFrameId
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  commentId: P:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  id: PrefetchUrl
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: PrefetchUrl
+  nameWithType: PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchUrl
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Gets or sets the prefetchUrl
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("prefetchUrl")]
+
+      public string PrefetchUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("prefetchUrl")>
+
+      Public Property PrefetchUrl As String
+  overload: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: prefetchUrl
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status
+  commentId: P:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status
+  id: Status
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: PrefetchStatusUpdatedEventArgs.Status
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Status
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Gets or sets the status
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("status")]
+
+      public PreloadingStatus Status { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PreloadingStatus
+    content.vb: >-
+      <JsonProperty("status")>
+
+      Public Property Status As PreloadingStatus
+  overload: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  commentId: P:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  id: PrefetchStatus
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: PrefetchStatus
+  nameWithType: PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Gets or sets the prefetchStatus
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("prefetchStatus")]
+
+      public PrefetchStatus PrefetchStatus { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <JsonProperty("prefetchStatus")>
+
+      Public Property PrefetchStatus As PrefetchStatus
+  overload: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: prefetchStatus
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId
+  commentId: P:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId
+  id: RequestId
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: PrefetchStatusUpdatedEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatusUpdatedEventArgs.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Gets or sets the requestId
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestId")]
+
+      public string RequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("requestId")>
+
+      Public Property RequestId As String
+  overload: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestId
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Preload
+  commentId: N:OpenQA.Selenium.DevTools.V124.Preload
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Preload
+  nameWithType: OpenQA.Selenium.DevTools.V124.Preload
+  fullName: OpenQA.Selenium.DevTools.V124.Preload
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V124.Preload.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V124.Preload.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V124_Preload_PrefetchStatusUpdatedEventArgs_Key
+  name: Key
+  nameWithType: PrefetchStatusUpdatedEventArgs.Key
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Key
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PreloadingAttemptKey
+  commentId: T:OpenQA.Selenium.DevTools.V124.Preload.PreloadingAttemptKey
+  parent: OpenQA.Selenium.DevTools.V124.Preload
+  href: OpenQA.Selenium.DevTools.V124.Preload.PreloadingAttemptKey.html
+  name: PreloadingAttemptKey
+  nameWithType: PreloadingAttemptKey
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PreloadingAttemptKey
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V124_Preload_PrefetchStatusUpdatedEventArgs_InitiatingFrameId
+  name: InitiatingFrameId
+  nameWithType: PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.InitiatingFrameId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V124_Preload_PrefetchStatusUpdatedEventArgs_PrefetchUrl
+  name: PrefetchUrl
+  nameWithType: PrefetchStatusUpdatedEventArgs.PrefetchUrl
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchUrl
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V124_Preload_PrefetchStatusUpdatedEventArgs_Status
+  name: Status
+  nameWithType: PrefetchStatusUpdatedEventArgs.Status
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.Status
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PreloadingStatus
+  commentId: T:OpenQA.Selenium.DevTools.V124.Preload.PreloadingStatus
+  parent: OpenQA.Selenium.DevTools.V124.Preload
+  href: OpenQA.Selenium.DevTools.V124.Preload.PreloadingStatus.html
+  name: PreloadingStatus
+  nameWithType: PreloadingStatus
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PreloadingStatus
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V124_Preload_PrefetchStatusUpdatedEventArgs_PrefetchStatus
+  name: PrefetchStatus
+  nameWithType: PrefetchStatusUpdatedEventArgs.PrefetchStatus
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.PrefetchStatus
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  commentId: T:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  parent: OpenQA.Selenium.DevTools.V124.Preload
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.html
+  name: PrefetchStatus
+  nameWithType: PrefetchStatus
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V124_Preload_PrefetchStatusUpdatedEventArgs_RequestId
+  name: RequestId
+  nameWithType: PrefetchStatusUpdatedEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatusUpdatedEventArgs.RequestId

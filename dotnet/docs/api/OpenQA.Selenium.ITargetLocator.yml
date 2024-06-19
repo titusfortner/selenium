@@ -1,0 +1,518 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ITargetLocator
+  commentId: T:OpenQA.Selenium.ITargetLocator
+  id: ITargetLocator
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ITargetLocator.ActiveElement
+  - OpenQA.Selenium.ITargetLocator.Alert
+  - OpenQA.Selenium.ITargetLocator.DefaultContent
+  - OpenQA.Selenium.ITargetLocator.Frame(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.ITargetLocator.Frame(System.Int32)
+  - OpenQA.Selenium.ITargetLocator.Frame(System.String)
+  - OpenQA.Selenium.ITargetLocator.NewWindow(OpenQA.Selenium.WindowType)
+  - OpenQA.Selenium.ITargetLocator.ParentFrame
+  - OpenQA.Selenium.ITargetLocator.Window(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITargetLocator
+  nameWithType: ITargetLocator
+  fullName: OpenQA.Selenium.ITargetLocator
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ITargetLocator
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines the interface through which the user can locate a given frame or window.
+  example: []
+  syntax:
+    content: public interface ITargetLocator
+    content.vb: Public Interface ITargetLocator
+- uid: OpenQA.Selenium.ITargetLocator.Frame(System.Int32)
+  commentId: M:OpenQA.Selenium.ITargetLocator.Frame(System.Int32)
+  id: Frame(System.Int32)
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: Frame(int)
+  nameWithType: ITargetLocator.Frame(int)
+  fullName: OpenQA.Selenium.ITargetLocator.Frame(int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Frame
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Select a frame by its (zero-based) index.
+  example: []
+  syntax:
+    content: IWebDriver Frame(int frameIndex)
+    parameters:
+    - id: frameIndex
+      type: System.Int32
+      description: The zero-based index of the frame to select.
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the specified frame.
+    content.vb: Function Frame(frameIndex As Integer) As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.Frame*
+  exceptions:
+  - type: OpenQA.Selenium.NoSuchFrameException
+    commentId: T:OpenQA.Selenium.NoSuchFrameException
+    description: If the frame cannot be found.
+  nameWithType.vb: ITargetLocator.Frame(Integer)
+  fullName.vb: OpenQA.Selenium.ITargetLocator.Frame(Integer)
+  name.vb: Frame(Integer)
+- uid: OpenQA.Selenium.ITargetLocator.Frame(System.String)
+  commentId: M:OpenQA.Selenium.ITargetLocator.Frame(System.String)
+  id: Frame(System.String)
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: Frame(string)
+  nameWithType: ITargetLocator.Frame(string)
+  fullName: OpenQA.Selenium.ITargetLocator.Frame(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Frame
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Select a frame by its name or ID.
+  example: []
+  syntax:
+    content: IWebDriver Frame(string frameName)
+    parameters:
+    - id: frameName
+      type: System.String
+      description: The name of the frame to select.
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the specified frame.
+    content.vb: Function Frame(frameName As String) As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.Frame*
+  exceptions:
+  - type: OpenQA.Selenium.NoSuchFrameException
+    commentId: T:OpenQA.Selenium.NoSuchFrameException
+    description: If the frame cannot be found.
+  nameWithType.vb: ITargetLocator.Frame(String)
+  fullName.vb: OpenQA.Selenium.ITargetLocator.Frame(String)
+  name.vb: Frame(String)
+- uid: OpenQA.Selenium.ITargetLocator.Frame(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.ITargetLocator.Frame(OpenQA.Selenium.IWebElement)
+  id: Frame(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: Frame(IWebElement)
+  nameWithType: ITargetLocator.Frame(IWebElement)
+  fullName: OpenQA.Selenium.ITargetLocator.Frame(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Frame
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 48
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Select a frame using its previously located <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: IWebDriver Frame(IWebElement frameElement)
+    parameters:
+    - id: frameElement
+      type: OpenQA.Selenium.IWebElement
+      description: The frame element to switch to.
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the specified frame.
+    content.vb: Function Frame(frameElement As IWebElement) As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.Frame*
+  exceptions:
+  - type: OpenQA.Selenium.NoSuchFrameException
+    commentId: T:OpenQA.Selenium.NoSuchFrameException
+    description: If the element is neither a FRAME nor an IFRAME element.
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: If the element is no longer valid.
+- uid: OpenQA.Selenium.ITargetLocator.ParentFrame
+  commentId: M:OpenQA.Selenium.ITargetLocator.ParentFrame
+  id: ParentFrame
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: ParentFrame()
+  nameWithType: ITargetLocator.ParentFrame()
+  fullName: OpenQA.Selenium.ITargetLocator.ParentFrame()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ParentFrame
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 54
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Select the parent frame of the currently selected frame.
+  example: []
+  syntax:
+    content: IWebDriver ParentFrame()
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the specified frame.
+    content.vb: Function ParentFrame() As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.ParentFrame*
+- uid: OpenQA.Selenium.ITargetLocator.Window(System.String)
+  commentId: M:OpenQA.Selenium.ITargetLocator.Window(System.String)
+  id: Window(System.String)
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: Window(string)
+  nameWithType: ITargetLocator.Window(string)
+  fullName: OpenQA.Selenium.ITargetLocator.Window(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Window
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Switches the focus of future commands for this driver to the window with the given name.
+  example: []
+  syntax:
+    content: IWebDriver Window(string windowName)
+    parameters:
+    - id: windowName
+      type: System.String
+      description: The name of the window to select.
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the given window.
+    content.vb: Function Window(windowName As String) As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.Window*
+  exceptions:
+  - type: OpenQA.Selenium.NoSuchWindowException
+    commentId: T:OpenQA.Selenium.NoSuchWindowException
+    description: If the window cannot be found.
+  nameWithType.vb: ITargetLocator.Window(String)
+  fullName.vb: OpenQA.Selenium.ITargetLocator.Window(String)
+  name.vb: Window(String)
+- uid: OpenQA.Selenium.ITargetLocator.NewWindow(OpenQA.Selenium.WindowType)
+  commentId: M:OpenQA.Selenium.ITargetLocator.NewWindow(OpenQA.Selenium.WindowType)
+  id: NewWindow(OpenQA.Selenium.WindowType)
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: NewWindow(WindowType)
+  nameWithType: ITargetLocator.NewWindow(WindowType)
+  fullName: OpenQA.Selenium.ITargetLocator.NewWindow(OpenQA.Selenium.WindowType)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NewWindow
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Creates a new browser window and switches the focus for future commands
+
+    of this driver to the new window.
+  example: []
+  syntax:
+    content: IWebDriver NewWindow(WindowType typeHint)
+    parameters:
+    - id: typeHint
+      type: OpenQA.Selenium.WindowType
+      description: >-
+        The type of new browser window to be created.
+            The created window is not guaranteed to be of the requested type; if
+            the driver does not support the requested type, a new browser window
+            will be created of whatever type the driver does support.
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the new browser.
+    content.vb: Function NewWindow(typeHint As WindowType) As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.NewWindow*
+- uid: OpenQA.Selenium.ITargetLocator.DefaultContent
+  commentId: M:OpenQA.Selenium.ITargetLocator.DefaultContent
+  id: DefaultContent
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: DefaultContent()
+  nameWithType: ITargetLocator.DefaultContent()
+  fullName: OpenQA.Selenium.ITargetLocator.DefaultContent()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DefaultContent
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 79
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Selects either the first frame on the page or the main document when a page contains iFrames.
+  example: []
+  syntax:
+    content: IWebDriver DefaultContent()
+    return:
+      type: OpenQA.Selenium.IWebDriver
+      description: An <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance focused on the default frame.
+    content.vb: Function DefaultContent() As IWebDriver
+  overload: OpenQA.Selenium.ITargetLocator.DefaultContent*
+- uid: OpenQA.Selenium.ITargetLocator.ActiveElement
+  commentId: M:OpenQA.Selenium.ITargetLocator.ActiveElement
+  id: ActiveElement
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: ActiveElement()
+  nameWithType: ITargetLocator.ActiveElement()
+  fullName: OpenQA.Selenium.ITargetLocator.ActiveElement()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ActiveElement
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Switches to the element that currently has the focus, or the body element
+
+    if no element with focus can be detected.
+  example: []
+  syntax:
+    content: IWebElement ActiveElement()
+    return:
+      type: OpenQA.Selenium.IWebElement
+      description: >-
+        An <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref> instance representing the element
+            with the focus, or the body element if no element with focus can be detected.
+    content.vb: Function ActiveElement() As IWebElement
+  overload: OpenQA.Selenium.ITargetLocator.ActiveElement*
+- uid: OpenQA.Selenium.ITargetLocator.Alert
+  commentId: M:OpenQA.Selenium.ITargetLocator.Alert
+  id: Alert
+  parent: OpenQA.Selenium.ITargetLocator
+  langs:
+  - csharp
+  - vb
+  name: Alert()
+  nameWithType: ITargetLocator.Alert()
+  fullName: OpenQA.Selenium.ITargetLocator.Alert()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITargetLocator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Alert
+    path: ../src/webdriver/ITargetLocator.cs
+    startLine: 93
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Switches to the currently active modal dialog for this particular driver instance.
+  example: []
+  syntax:
+    content: IAlert Alert()
+    return:
+      type: OpenQA.Selenium.IAlert
+      description: A handle to the dialog.
+    content.vb: Function Alert() As IAlert
+  overload: OpenQA.Selenium.ITargetLocator.Alert*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IWebDriver
+  commentId: T:OpenQA.Selenium.IWebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebDriver.html
+  name: IWebDriver
+  nameWithType: IWebDriver
+  fullName: OpenQA.Selenium.IWebDriver
+- uid: OpenQA.Selenium.NoSuchFrameException
+  commentId: T:OpenQA.Selenium.NoSuchFrameException
+  href: OpenQA.Selenium.NoSuchFrameException.html
+  name: NoSuchFrameException
+  nameWithType: NoSuchFrameException
+  fullName: OpenQA.Selenium.NoSuchFrameException
+- uid: OpenQA.Selenium.ITargetLocator.Frame*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.Frame
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_Frame_System_Int32_
+  name: Frame
+  nameWithType: ITargetLocator.Frame
+  fullName: OpenQA.Selenium.ITargetLocator.Frame
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebElement.html
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+- uid: OpenQA.Selenium.StaleElementReferenceException
+  commentId: T:OpenQA.Selenium.StaleElementReferenceException
+  href: OpenQA.Selenium.StaleElementReferenceException.html
+  name: StaleElementReferenceException
+  nameWithType: StaleElementReferenceException
+  fullName: OpenQA.Selenium.StaleElementReferenceException
+- uid: OpenQA.Selenium.ITargetLocator.ParentFrame*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.ParentFrame
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_ParentFrame
+  name: ParentFrame
+  nameWithType: ITargetLocator.ParentFrame
+  fullName: OpenQA.Selenium.ITargetLocator.ParentFrame
+- uid: OpenQA.Selenium.NoSuchWindowException
+  commentId: T:OpenQA.Selenium.NoSuchWindowException
+  href: OpenQA.Selenium.NoSuchWindowException.html
+  name: NoSuchWindowException
+  nameWithType: NoSuchWindowException
+  fullName: OpenQA.Selenium.NoSuchWindowException
+- uid: OpenQA.Selenium.ITargetLocator.Window*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.Window
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_Window_System_String_
+  name: Window
+  nameWithType: ITargetLocator.Window
+  fullName: OpenQA.Selenium.ITargetLocator.Window
+- uid: OpenQA.Selenium.ITargetLocator.NewWindow*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.NewWindow
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_NewWindow_OpenQA_Selenium_WindowType_
+  name: NewWindow
+  nameWithType: ITargetLocator.NewWindow
+  fullName: OpenQA.Selenium.ITargetLocator.NewWindow
+- uid: OpenQA.Selenium.WindowType
+  commentId: T:OpenQA.Selenium.WindowType
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.WindowType.html
+  name: WindowType
+  nameWithType: WindowType
+  fullName: OpenQA.Selenium.WindowType
+- uid: OpenQA.Selenium.ITargetLocator.DefaultContent*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.DefaultContent
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_DefaultContent
+  name: DefaultContent
+  nameWithType: ITargetLocator.DefaultContent
+  fullName: OpenQA.Selenium.ITargetLocator.DefaultContent
+- uid: OpenQA.Selenium.ITargetLocator.ActiveElement*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.ActiveElement
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_ActiveElement
+  name: ActiveElement
+  nameWithType: ITargetLocator.ActiveElement
+  fullName: OpenQA.Selenium.ITargetLocator.ActiveElement
+- uid: OpenQA.Selenium.ITargetLocator.Alert*
+  commentId: Overload:OpenQA.Selenium.ITargetLocator.Alert
+  href: OpenQA.Selenium.ITargetLocator.html#OpenQA_Selenium_ITargetLocator_Alert
+  name: Alert
+  nameWithType: ITargetLocator.Alert
+  fullName: OpenQA.Selenium.ITargetLocator.Alert
+- uid: OpenQA.Selenium.IAlert
+  commentId: T:OpenQA.Selenium.IAlert
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IAlert.html
+  name: IAlert
+  nameWithType: IAlert
+  fullName: OpenQA.Selenium.IAlert

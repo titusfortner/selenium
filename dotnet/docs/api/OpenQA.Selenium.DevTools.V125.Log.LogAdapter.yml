@@ -1,0 +1,1145 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  id: LogAdapter
+  parent: OpenQA.Selenium.DevTools.V125.Log
+  children:
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear(OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable(OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable(OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.EntryAdded
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: LogAdapter
+  nameWithType: LogAdapter
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LogAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Represents an adapter for the Log domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class LogAdapter
+    content.vb: Public Class LogAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: LogAdapter(IDevToolsSession)
+  nameWithType: LogAdapter.LogAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.LogAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Initializes a new instance of the LogAdapter class.
+  example: []
+  syntax:
+    content: public LogAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.#ctor*
+  nameWithType.vb: LogAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: LogAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.EntryAdded
+  commentId: E:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.EntryAdded
+  id: EntryAdded
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: EntryAdded
+  nameWithType: LogAdapter.EntryAdded
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.EntryAdded
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EntryAdded
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Issued when new message was logged.
+  example: []
+  syntax:
+    content: public event EventHandler<EntryAddedEventArgs> EntryAdded
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs}
+    content.vb: Public Event EntryAdded As EventHandler(Of EntryAddedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear(OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear(OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Clear(OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: Clear(ClearCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LogAdapter.Clear(ClearCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear(OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Clear
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Clears the log.
+  example: []
+  syntax:
+    content: public Task<ClearCommandResponse> Clear(ClearCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse}
+    content.vb: Public Function Clear(command As ClearCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ClearCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear*
+  nameWithType.vb: LogAdapter.Clear(ClearCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear(OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Clear(ClearCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable(OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable(OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LogAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable(OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Disables log domain, prevents further log entries from being reported to the client.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable*
+  nameWithType.vb: LogAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable(OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable(OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable(OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LogAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable(OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: >-
+    Enables log domain, sends the entries collected so far to the client by means of the
+
+    `entryAdded` notification.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable*
+  nameWithType.vb: LogAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable(OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StartViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: StartViolationsReport(StartViolationsReportCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LogAdapter.StartViolationsReport(StartViolationsReportCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartViolationsReport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: start violation reporting.
+  example: []
+  syntax:
+    content: public Task<StartViolationsReportCommandResponse> StartViolationsReport(StartViolationsReportCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse}
+    content.vb: Public Function StartViolationsReport(command As StartViolationsReportCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartViolationsReportCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport*
+  nameWithType.vb: LogAdapter.StartViolationsReport(StartViolationsReportCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StartViolationsReport(StartViolationsReportCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StopViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Log.LogAdapter
+  langs:
+  - csharp
+  - vb
+  name: StopViolationsReport(StopViolationsReportCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LogAdapter.StopViolationsReport(StopViolationsReportCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StopViolationsReport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Log/LogAdapter.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Log
+  summary: Stop violation reporting.
+  example: []
+  syntax:
+    content: public Task<StopViolationsReportCommandResponse> StopViolationsReport(StopViolationsReportCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse}
+    content.vb: Public Function StopViolationsReport(command As StopViolationsReportCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StopViolationsReportCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport*
+  nameWithType.vb: LogAdapter.StopViolationsReport(StopViolationsReportCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport(OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StopViolationsReport(StopViolationsReportCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Log
+  commentId: N:OpenQA.Selenium.DevTools.V125.Log
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Log
+  nameWithType: OpenQA.Selenium.DevTools.V125.Log
+  fullName: OpenQA.Selenium.DevTools.V125.Log
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Log
+    name: Log
+    href: OpenQA.Selenium.DevTools.V125.Log.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Log
+    name: Log
+    href: OpenQA.Selenium.DevTools.V125.Log.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: LogAdapter
+  nameWithType: LogAdapter.LogAdapter
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.LogAdapter
+  nameWithType.vb: LogAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter_Session
+  name: Session
+  nameWithType: LogAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<EntryAddedEventArgs>
+  nameWithType: EventHandler<EntryAddedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs>
+  nameWithType.vb: EventHandler(Of EntryAddedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs)
+  name.vb: EventHandler(Of EntryAddedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs
+    name: EntryAddedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs
+    name: EntryAddedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Log.EntryAddedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter_Clear_OpenQA_Selenium_DevTools_V125_Log_ClearCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Clear
+  nameWithType: LogAdapter.Clear
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Clear
+- uid: OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Log
+  href: OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings.html
+  name: ClearCommandSettings
+  nameWithType: ClearCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Log.ClearCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ClearCommandResponse>
+  nameWithType: Task<ClearCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse>
+  nameWithType.vb: Task(Of ClearCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse)
+  name.vb: Task(Of ClearCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse
+    name: ClearCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse
+    name: ClearCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.ClearCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter_Disable_OpenQA_Selenium_DevTools_V125_Log_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: LogAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Log
+  href: OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Log.DisableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.DisableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter_Enable_OpenQA_Selenium_DevTools_V125_Log_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: LogAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Log
+  href: OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Log.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter_StartViolationsReport_OpenQA_Selenium_DevTools_V125_Log_StartViolationsReportCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StartViolationsReport
+  nameWithType: LogAdapter.StartViolationsReport
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StartViolationsReport
+- uid: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Log
+  href: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings.html
+  name: StartViolationsReportCommandSettings
+  nameWithType: StartViolationsReportCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartViolationsReportCommandResponse>
+  nameWithType: Task<StartViolationsReportCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse>
+  nameWithType.vb: Task(Of StartViolationsReportCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse)
+  name.vb: Task(Of StartViolationsReportCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse
+    name: StartViolationsReportCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse
+    name: StartViolationsReportCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.StartViolationsReportCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport
+  href: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.html#OpenQA_Selenium_DevTools_V125_Log_LogAdapter_StopViolationsReport_OpenQA_Selenium_DevTools_V125_Log_StopViolationsReportCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StopViolationsReport
+  nameWithType: LogAdapter.StopViolationsReport
+  fullName: OpenQA.Selenium.DevTools.V125.Log.LogAdapter.StopViolationsReport
+- uid: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Log
+  href: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings.html
+  name: StopViolationsReportCommandSettings
+  nameWithType: StopViolationsReportCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StopViolationsReportCommandResponse>
+  nameWithType: Task<StopViolationsReportCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse>
+  nameWithType.vb: Task(Of StopViolationsReportCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse)
+  name.vb: Task(Of StopViolationsReportCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse
+    name: StopViolationsReportCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse
+    name: StopViolationsReportCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Log.StopViolationsReportCommandResponse.html
+  - name: )

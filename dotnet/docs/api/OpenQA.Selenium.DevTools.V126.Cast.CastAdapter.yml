@@ -1,0 +1,1312 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  id: CastAdapter
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  children:
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable(OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable(OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.IssueUpdated
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse(OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SinksUpdated
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting(OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: CastAdapter
+  nameWithType: CastAdapter
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CastAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Represents an adapter for the Cast domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class CastAdapter
+    content.vb: Public Class CastAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: CastAdapter(IDevToolsSession)
+  nameWithType: CastAdapter.CastAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.CastAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Initializes a new instance of the CastAdapter class.
+  example: []
+  syntax:
+    content: public CastAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.#ctor*
+  nameWithType.vb: CastAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: CastAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SinksUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SinksUpdated
+  id: SinksUpdated
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: SinksUpdated
+  nameWithType: CastAdapter.SinksUpdated
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SinksUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SinksUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: >-
+    This is fired whenever the list of available sinks changes. A sink is a
+
+    device or a software surface that you can cast to.
+  example: []
+  syntax:
+    content: public event EventHandler<SinksUpdatedEventArgs> SinksUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs}
+    content.vb: Public Event SinksUpdated As EventHandler(Of SinksUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.IssueUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.IssueUpdated
+  id: IssueUpdated
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: IssueUpdated
+  nameWithType: CastAdapter.IssueUpdated
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.IssueUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IssueUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: >-
+    This is fired whenever the outstanding issue/error message changes.
+
+    |issueMessage| is empty if there is no issue.
+  example: []
+  syntax:
+    content: public event EventHandler<IssueUpdatedEventArgs> IssueUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs}
+    content.vb: Public Event IssueUpdated As EventHandler(Of IssueUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable(OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable(OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: CastAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable(OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 55
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: >-
+    Starts observing for sinks that can be used for tab mirroring, and if set,
+
+    sinks compatible with |presentationUrl| as well. When sinks are found, a
+
+    |sinksUpdated| event is fired.
+
+    Also starts observing for issue messages. When an issue is added or removed,
+
+    an |issueUpdated| event is fired.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable*
+  nameWithType.vb: CastAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable(OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable(OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable(OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: CastAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable(OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Stops observing for sinks and issues.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable*
+  nameWithType.vb: CastAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable(OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse(OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse(OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetSinkToUse(OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetSinkToUse(SetSinkToUseCommandSettings, CancellationToken, int?, bool)
+  nameWithType: CastAdapter.SetSinkToUse(SetSinkToUseCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse(OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetSinkToUse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 70
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: >-
+    Sets a sink to be used when the web page requests the browser to choose a
+
+    sink via Presentation API, Remote Playback API, or Cast SDK.
+  example: []
+  syntax:
+    content: public Task<SetSinkToUseCommandResponse> SetSinkToUse(SetSinkToUseCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse}
+    content.vb: Public Function SetSinkToUse(command As SetSinkToUseCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetSinkToUseCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse*
+  nameWithType.vb: CastAdapter.SetSinkToUse(SetSinkToUseCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse(OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetSinkToUse(SetSinkToUseCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StartDesktopMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: StartDesktopMirroring(StartDesktopMirroringCommandSettings, CancellationToken, int?, bool)
+  nameWithType: CastAdapter.StartDesktopMirroring(StartDesktopMirroringCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartDesktopMirroring
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Starts mirroring the desktop to the sink.
+  example: []
+  syntax:
+    content: public Task<StartDesktopMirroringCommandResponse> StartDesktopMirroring(StartDesktopMirroringCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse}
+    content.vb: Public Function StartDesktopMirroring(command As StartDesktopMirroringCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartDesktopMirroringCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring*
+  nameWithType.vb: CastAdapter.StartDesktopMirroring(StartDesktopMirroringCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StartDesktopMirroring(StartDesktopMirroringCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StartTabMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: StartTabMirroring(StartTabMirroringCommandSettings, CancellationToken, int?, bool)
+  nameWithType: CastAdapter.StartTabMirroring(StartTabMirroringCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartTabMirroring
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Starts mirroring the tab to the sink.
+  example: []
+  syntax:
+    content: public Task<StartTabMirroringCommandResponse> StartTabMirroring(StartTabMirroringCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse}
+    content.vb: Public Function StartTabMirroring(command As StartTabMirroringCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartTabMirroringCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring*
+  nameWithType.vb: CastAdapter.StartTabMirroring(StartTabMirroringCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring(OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StartTabMirroring(StartTabMirroringCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting(OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting(OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StopCasting(OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter
+  langs:
+  - csharp
+  - vb
+  name: StopCasting(StopCastingCommandSettings, CancellationToken, int?, bool)
+  nameWithType: CastAdapter.StopCasting(StopCastingCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting(OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StopCasting
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Cast/CastAdapter.cs
+    startLine: 91
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Cast
+  summary: Stops the active Cast session on the sink.
+  example: []
+  syntax:
+    content: public Task<StopCastingCommandResponse> StopCasting(StopCastingCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse}
+    content.vb: Public Function StopCasting(command As StopCastingCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StopCastingCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting*
+  nameWithType.vb: CastAdapter.StopCasting(StopCastingCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting(OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StopCasting(StopCastingCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Cast
+  commentId: N:OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Cast
+  nameWithType: OpenQA.Selenium.DevTools.V126.Cast
+  fullName: OpenQA.Selenium.DevTools.V126.Cast
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Cast
+    name: Cast
+    href: OpenQA.Selenium.DevTools.V126.Cast.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Cast
+    name: Cast
+    href: OpenQA.Selenium.DevTools.V126.Cast.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: CastAdapter
+  nameWithType: CastAdapter.CastAdapter
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.CastAdapter
+  nameWithType.vb: CastAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_Session
+  name: Session
+  nameWithType: CastAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SinksUpdatedEventArgs>
+  nameWithType: EventHandler<SinksUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of SinksUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs)
+  name.vb: EventHandler(Of SinksUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs
+    name: SinksUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs
+    name: SinksUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Cast.SinksUpdatedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<IssueUpdatedEventArgs>
+  nameWithType: EventHandler<IssueUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of IssueUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs)
+  name.vb: EventHandler(Of IssueUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs
+    name: IssueUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs
+    name: IssueUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Cast.IssueUpdatedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_Enable_OpenQA_Selenium_DevTools_V126_Cast_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: CastAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.EnableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_Disable_OpenQA_Selenium_DevTools_V126_Cast_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: CastAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.DisableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_SetSinkToUse_OpenQA_Selenium_DevTools_V126_Cast_SetSinkToUseCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetSinkToUse
+  nameWithType: CastAdapter.SetSinkToUse
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.SetSinkToUse
+- uid: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings.html
+  name: SetSinkToUseCommandSettings
+  nameWithType: SetSinkToUseCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetSinkToUseCommandResponse>
+  nameWithType: Task<SetSinkToUseCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse>
+  nameWithType.vb: Task(Of SetSinkToUseCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse)
+  name.vb: Task(Of SetSinkToUseCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse
+    name: SetSinkToUseCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse
+    name: SetSinkToUseCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.SetSinkToUseCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_StartDesktopMirroring_OpenQA_Selenium_DevTools_V126_Cast_StartDesktopMirroringCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StartDesktopMirroring
+  nameWithType: CastAdapter.StartDesktopMirroring
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartDesktopMirroring
+- uid: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings.html
+  name: StartDesktopMirroringCommandSettings
+  nameWithType: StartDesktopMirroringCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartDesktopMirroringCommandResponse>
+  nameWithType: Task<StartDesktopMirroringCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse>
+  nameWithType.vb: Task(Of StartDesktopMirroringCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse)
+  name.vb: Task(Of StartDesktopMirroringCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse
+    name: StartDesktopMirroringCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse
+    name: StartDesktopMirroringCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.StartDesktopMirroringCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_StartTabMirroring_OpenQA_Selenium_DevTools_V126_Cast_StartTabMirroringCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StartTabMirroring
+  nameWithType: CastAdapter.StartTabMirroring
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StartTabMirroring
+- uid: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings.html
+  name: StartTabMirroringCommandSettings
+  nameWithType: StartTabMirroringCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartTabMirroringCommandResponse>
+  nameWithType: Task<StartTabMirroringCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse>
+  nameWithType.vb: Task(Of StartTabMirroringCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse)
+  name.vb: Task(Of StartTabMirroringCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse
+    name: StartTabMirroringCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse
+    name: StartTabMirroringCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.StartTabMirroringCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting
+  href: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.html#OpenQA_Selenium_DevTools_V126_Cast_CastAdapter_StopCasting_OpenQA_Selenium_DevTools_V126_Cast_StopCastingCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StopCasting
+  nameWithType: CastAdapter.StopCasting
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.CastAdapter.StopCasting
+- uid: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Cast
+  href: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings.html
+  name: StopCastingCommandSettings
+  nameWithType: StopCastingCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StopCastingCommandResponse>
+  nameWithType: Task<StopCastingCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse>
+  nameWithType.vb: Task(Of StopCastingCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse)
+  name.vb: Task(Of StopCastingCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse
+    name: StopCastingCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse
+    name: StopCastingCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Cast.StopCastingCommandResponse.html
+  - name: )

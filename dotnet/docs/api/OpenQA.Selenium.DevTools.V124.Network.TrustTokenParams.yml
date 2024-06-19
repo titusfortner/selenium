@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams
+  commentId: T:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams
+  id: TrustTokenParams
+  parent: OpenQA.Selenium.DevTools.V124.Network
+  children:
+  - OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers
+  - OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation
+  - OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy
+  langs:
+  - csharp
+  - vb
+  name: TrustTokenParams
+  nameWithType: TrustTokenParams
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TrustTokenParams
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: >-
+    Determines what type of Trust Token operation is executed and
+
+    depending on the type, some additional parameters. The values
+
+    are specified in third_party/blink/renderer/core/fetch/trust_token.idl.
+  example: []
+  syntax:
+    content: public sealed class TrustTokenParams
+    content.vb: Public NotInheritable Class TrustTokenParams
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation
+  commentId: P:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation
+  id: Operation
+  parent: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: TrustTokenParams.Operation
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Operation
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+    startLine: 15
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: operation
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("operation")]
+
+      public TrustTokenOperationType Operation { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.TrustTokenOperationType
+    content.vb: >-
+      <JsonProperty("operation")>
+
+      Public Property Operation As TrustTokenOperationType
+  overload: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: operation
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy
+  commentId: P:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy
+  id: RefreshPolicy
+  parent: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams
+  langs:
+  - csharp
+  - vb
+  name: RefreshPolicy
+  nameWithType: TrustTokenParams.RefreshPolicy
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RefreshPolicy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: >-
+    Only set for "token-redemption" operation and determine whether
+
+    to request a fresh SRR or use a still valid cached SRR.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("refreshPolicy")]
+
+      public TrustTokenParamsRefreshPolicyValues RefreshPolicy { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParamsRefreshPolicyValues
+    content.vb: >-
+      <JsonProperty("refreshPolicy")>
+
+      Public Property RefreshPolicy As TrustTokenParamsRefreshPolicyValues
+  overload: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: refreshPolicy
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers
+  commentId: P:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers
+  id: Issuers
+  parent: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams
+  langs:
+  - csharp
+  - vb
+  name: Issuers
+  nameWithType: TrustTokenParams.Issuers
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Issuers
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/TrustTokenParams.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: >-
+    Origins of issuers from whom to request tokens or redemption
+
+    records.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("issuers", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] Issuers { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("issuers", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Issuers As String()
+  overload: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: issuers
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Network
+  commentId: N:OpenQA.Selenium.DevTools.V124.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Network
+  nameWithType: OpenQA.Selenium.DevTools.V124.Network
+  fullName: OpenQA.Selenium.DevTools.V124.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V124.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V124.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation
+  href: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.html#OpenQA_Selenium_DevTools_V124_Network_TrustTokenParams_Operation
+  name: Operation
+  nameWithType: TrustTokenParams.Operation
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Operation
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenOperationType
+  commentId: T:OpenQA.Selenium.DevTools.V124.Network.TrustTokenOperationType
+  parent: OpenQA.Selenium.DevTools.V124.Network
+  href: OpenQA.Selenium.DevTools.V124.Network.TrustTokenOperationType.html
+  name: TrustTokenOperationType
+  nameWithType: TrustTokenOperationType
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenOperationType
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy
+  href: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.html#OpenQA_Selenium_DevTools_V124_Network_TrustTokenParams_RefreshPolicy
+  name: RefreshPolicy
+  nameWithType: TrustTokenParams.RefreshPolicy
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.RefreshPolicy
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParamsRefreshPolicyValues
+  commentId: T:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParamsRefreshPolicyValues
+  parent: OpenQA.Selenium.DevTools.V124.Network
+  href: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParamsRefreshPolicyValues.html
+  name: TrustTokenParamsRefreshPolicyValues
+  nameWithType: TrustTokenParamsRefreshPolicyValues
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParamsRefreshPolicyValues
+- uid: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers
+  href: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.html#OpenQA_Selenium_DevTools_V124_Network_TrustTokenParams_Issuers
+  name: Issuers
+  nameWithType: TrustTokenParams.Issuers
+  fullName: OpenQA.Selenium.DevTools.V124.Network.TrustTokenParams.Issuers
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )

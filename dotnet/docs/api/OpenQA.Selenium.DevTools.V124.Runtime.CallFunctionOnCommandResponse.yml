@@ -1,0 +1,597 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse
+  id: CallFunctionOnCommandResponse
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails
+  - OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result
+  langs:
+  - csharp
+  - vb
+  name: CallFunctionOnCommandResponse
+  nameWithType: CallFunctionOnCommandResponse
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CallFunctionOnCommandResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallFunctionOnCommand.cs
+    startLine: 158
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: >-
+    Response for Calls function with given declaration on the given object. Object group of the result is
+
+    inherited from the target object.
+  example: []
+  syntax:
+    content: 'public sealed class CallFunctionOnCommandResponse : ICommandResponse<CallFunctionOnCommandSettings>, ICommandResponse'
+    content.vb: Public NotInheritable Class CallFunctionOnCommandResponse Implements ICommandResponse(Of CallFunctionOnCommandSettings), ICommandResponse
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings}
+  - OpenQA.Selenium.DevTools.ICommandResponse
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result
+  id: Result
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: CallFunctionOnCommandResponse.Result
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Result
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallFunctionOnCommand.cs
+    startLine: 163
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Call result.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("result")]
+
+      public RemoteObject Result { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Runtime.RemoteObject
+    content.vb: >-
+      <JsonProperty("result")>
+
+      Public Property Result As RemoteObject
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: result
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails
+  id: ExceptionDetails
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: ExceptionDetails
+  nameWithType: CallFunctionOnCommandResponse.ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExceptionDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallFunctionOnCommand.cs
+    startLine: 172
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Exception details.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("exceptionDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ExceptionDetails ExceptionDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Runtime.ExceptionDetails
+    content.vb: >-
+      <JsonProperty("exceptionDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ExceptionDetails As ExceptionDetails
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exceptionDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V124.Runtime
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings}
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<CallFunctionOnCommandSettings>
+  nameWithType: ICommandResponse<CallFunctionOnCommandSettings>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings>
+  nameWithType.vb: ICommandResponse(Of CallFunctionOnCommandSettings)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings)
+  name.vb: ICommandResponse(Of CallFunctionOnCommandSettings)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings
+    name: CallFunctionOnCommandSettings
+    href: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings
+    name: CallFunctionOnCommandSettings
+    href: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandSettings.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  name: ICommandResponse
+  nameWithType: ICommandResponse
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  parent: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  definition: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<T>
+  nameWithType: ICommandResponse<T>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<T>
+  nameWithType.vb: ICommandResponse(Of T)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of T)
+  name.vb: ICommandResponse(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html
+  name: ICommandResponseExtensions
+  nameWithType: ICommandResponseExtensions
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result
+  href: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.html#OpenQA_Selenium_DevTools_V124_Runtime_CallFunctionOnCommandResponse_Result
+  name: Result
+  nameWithType: CallFunctionOnCommandResponse.Result
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.Result
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.RemoteObject
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.RemoteObject
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.Selenium.DevTools.V124.Runtime.RemoteObject.html
+  name: RemoteObject
+  nameWithType: RemoteObject
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.RemoteObject
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails
+  href: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.html#OpenQA_Selenium_DevTools_V124_Runtime_CallFunctionOnCommandResponse_ExceptionDetails
+  name: ExceptionDetails
+  nameWithType: CallFunctionOnCommandResponse.ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallFunctionOnCommandResponse.ExceptionDetails
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.ExceptionDetails
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.ExceptionDetails
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.Selenium.DevTools.V124.Runtime.ExceptionDetails.html
+  name: ExceptionDetails
+  nameWithType: ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.ExceptionDetails

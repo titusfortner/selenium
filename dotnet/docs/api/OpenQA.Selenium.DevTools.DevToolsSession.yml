@@ -1,0 +1,2031 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.DevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsSession
+  id: DevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.DevToolsSession.#ctor(System.String)
+  - OpenQA.Selenium.DevTools.DevToolsSession.#ctor(System.String,OpenQA.Selenium.DevTools.DevToolsOptions)
+  - OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId
+  - OpenQA.Selenium.DevTools.DevToolsSession.AutoDetectDevToolsProtocolVersion
+  - OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout
+  - OpenQA.Selenium.DevTools.DevToolsSession.DevToolsEventReceived
+  - OpenQA.Selenium.DevTools.DevToolsSession.Dispose
+  - OpenQA.Selenium.DevTools.DevToolsSession.Dispose(System.Boolean)
+  - OpenQA.Selenium.DevTools.DevToolsSession.Domains
+  - OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress
+  - OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains``1
+  - OpenQA.Selenium.DevTools.DevToolsSession.LogMessage
+  - OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(System.String,System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``1(``0,System.String,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: DevToolsSession
+  nameWithType: DevToolsSession
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DevToolsSession
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: >-
+    Represents a WebSocket connection to a running DevTools instance that can be used to send
+
+    commands and recieve events.
+  example: []
+  syntax:
+    content: 'public class DevToolsSession : IDevToolsSession, IDisposable'
+    content.vb: Public Class DevToolsSession Implements IDevToolsSession, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.AutoDetectDevToolsProtocolVersion
+  commentId: F:OpenQA.Selenium.DevTools.DevToolsSession.AutoDetectDevToolsProtocolVersion
+  id: AutoDetectDevToolsProtocolVersion
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: AutoDetectDevToolsProtocolVersion
+  nameWithType: DevToolsSession.AutoDetectDevToolsProtocolVersion
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.AutoDetectDevToolsProtocolVersion
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AutoDetectDevToolsProtocolVersion
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: >-
+    A value indicating that the version of the DevTools protocol in use
+
+    by the browser should be automatically detected.
+  example: []
+  syntax:
+    content: public const int AutoDetectDevToolsProtocolVersion = 0
+    return:
+      type: System.Int32
+    content.vb: Public Const AutoDetectDevToolsProtocolVersion As Integer = 0
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.#ctor(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: DevToolsSession(string)
+  nameWithType: DevToolsSession.DevToolsSession(string)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.DevToolsSession(string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Initializes a new instance of the DevToolsSession class, using the specified WebSocket endpoint.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use DevToolsSession(string endpointAddress, DevToolsOptions options)")]
+
+      public DevToolsSession(string endpointAddress)
+    parameters:
+    - id: endpointAddress
+      type: System.String
+      description: ''
+    content.vb: >-
+      <Obsolete("Use DevToolsSession(string endpointAddress, DevToolsOptions options)")>
+
+      Public Sub New(endpointAddress As String)
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.#ctor*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use DevToolsSession(string endpointAddress, DevToolsOptions options)
+  nameWithType.vb: DevToolsSession.New(String)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.New(String)
+  name.vb: New(String)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.#ctor(System.String,OpenQA.Selenium.DevTools.DevToolsOptions)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.#ctor(System.String,OpenQA.Selenium.DevTools.DevToolsOptions)
+  id: '#ctor(System.String,OpenQA.Selenium.DevTools.DevToolsOptions)'
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: DevToolsSession(string, DevToolsOptions)
+  nameWithType: DevToolsSession.DevToolsSession(string, DevToolsOptions)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.DevToolsSession(string, OpenQA.Selenium.DevTools.DevToolsOptions)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Initializes a new instance of the DevToolsSession class, using the specified WebSocket endpoint and specified DevTools options.
+  example: []
+  syntax:
+    content: public DevToolsSession(string endpointAddress, DevToolsOptions options)
+    parameters:
+    - id: endpointAddress
+      type: System.String
+      description: ''
+    - id: options
+      type: OpenQA.Selenium.DevTools.DevToolsOptions
+      description: ''
+    content.vb: Public Sub New(endpointAddress As String, options As DevToolsOptions)
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.#ctor*
+  exceptions:
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: ''
+  nameWithType.vb: DevToolsSession.New(String, DevToolsOptions)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.New(String, OpenQA.Selenium.DevTools.DevToolsOptions)
+  name.vb: New(String, DevToolsOptions)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.LogMessage
+  commentId: E:OpenQA.Selenium.DevTools.DevToolsSession.LogMessage
+  id: LogMessage
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: LogMessage
+  nameWithType: DevToolsSession.LogMessage
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.LogMessage
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LogMessage
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 91
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Event raised when the DevToolsSession logs informational messages.
+  example: []
+  syntax:
+    content: public event EventHandler<DevToolsSessionLogMessageEventArgs> LogMessage
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs}
+    content.vb: Public Event LogMessage As EventHandler(Of DevToolsSessionLogMessageEventArgs)
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession.LogMessage
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.DevToolsEventReceived
+  commentId: E:OpenQA.Selenium.DevTools.DevToolsSession.DevToolsEventReceived
+  id: DevToolsEventReceived
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: DevToolsEventReceived
+  nameWithType: DevToolsSession.DevToolsEventReceived
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.DevToolsEventReceived
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DevToolsEventReceived
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 96
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Event raised an event notification is received from the DevTools session.
+  example: []
+  syntax:
+    content: public event EventHandler<DevToolsEventReceivedEventArgs> DevToolsEventReceived
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs}
+    content.vb: Public Event DevToolsEventReceived As EventHandler(Of DevToolsEventReceivedEventArgs)
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession.DevToolsEventReceived
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout
+  id: CommandTimeout
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: CommandTimeout
+  nameWithType: DevToolsSession.CommandTimeout
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandTimeout
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 101
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets or sets the time to wait for a command to complete. Default is 30 seconds.
+  example: []
+  syntax:
+    content: public TimeSpan CommandTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property CommandTimeout As TimeSpan
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout*
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId
+  id: ActiveSessionId
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: ActiveSessionId
+  nameWithType: DevToolsSession.ActiveSessionId
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ActiveSessionId
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 106
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets or sets the active session ID of the connection.
+  example: []
+  syntax:
+    content: public string ActiveSessionId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ActiveSessionId As String
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId*
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress
+  id: EndpointAddress
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: EndpointAddress
+  nameWithType: DevToolsSession.EndpointAddress
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EndpointAddress
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 111
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the endpoint address of the session.
+  example: []
+  syntax:
+    content: public string EndpointAddress { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property EndpointAddress As String
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress*
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.Domains
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsSession.Domains
+  id: Domains
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: Domains
+  nameWithType: DevToolsSession.Domains
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.Domains
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Domains
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 116
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version-independent domain implementation for this Developer Tools connection
+  example: []
+  syntax:
+    content: public DevToolsDomains Domains { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsDomains
+    content.vb: Public ReadOnly Property Domains As DevToolsDomains
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.Domains*
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains``1
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains``1
+  id: GetVersionSpecificDomains``1
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: GetVersionSpecificDomains<T>()
+  nameWithType: DevToolsSession.GetVersionSpecificDomains<T>()
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains<T>()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetVersionSpecificDomains
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 124
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version-specific implementation of domains for this DevTools session.
+  example: []
+  syntax:
+    content: 'public T GetVersionSpecificDomains<T>() where T : DevToolsSessionDomains'
+    typeParameters:
+    - id: T
+      description: A <xref href="OpenQA.Selenium.DevTools.DevToolsSessionDomains" data-throw-if-not-resolved="false"></xref> object containing the version-specific DevTools Protocol domain implementations.
+    return:
+      type: '{T}'
+      description: The version-specific DevTools Protocol domain implementation.
+    content.vb: Public Function GetVersionSpecificDomains(Of T As DevToolsSessionDomains)() As T
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains*
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains``1
+  nameWithType.vb: DevToolsSession.GetVersionSpecificDomains(Of T)()
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains(Of T)()
+  name.vb: GetVersionSpecificDomains(Of T)()
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: SendCommand<TCommand>(TCommand, CancellationToken, int?, bool)
+  nameWithType: DevToolsSession.SendCommand<TCommand>(TCommand, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand<TCommand>(TCommand, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendCommand
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 146
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Sends the specified command and returns the associated command response.
+  example: []
+  syntax:
+    content: 'public Task<ICommandResponse<TCommand>> SendCommand<TCommand>(TCommand command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true) where TCommand : ICommand'
+    parameters:
+    - id: command
+      type: '{TCommand}'
+      description: The command to be sent.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A CancellationToken object to allow for cancellation of the command.
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+      description: The execution timeout of the command in milliseconds.
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to throw an exception if a response is not received; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    typeParameters:
+    - id: TCommand
+      description: A command object implementing the <xref href="OpenQA.Selenium.DevTools.ICommand" data-throw-if-not-resolved="false"></xref> interface.
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.ICommandResponse{{TCommand}}}
+      description: The command response object implementing the <xref href="OpenQA.Selenium.DevTools.ICommandResponse%601" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Public Function SendCommand(Of TCommand As ICommand)(command As TCommand, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ICommandResponse(Of TCommand))
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand*
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1({TCommand},System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  nameWithType.vb: DevToolsSession.SendCommand(Of TCommand)(TCommand, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(Of TCommand)(TCommand, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand)(TCommand, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``1(``0,System.String,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``1(``0,System.String,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SendCommand``1(``0,System.String,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: SendCommand<TCommand>(TCommand, string, CancellationToken, int?, bool)
+  nameWithType: DevToolsSession.SendCommand<TCommand>(TCommand, string, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand<TCommand>(TCommand, string, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendCommand
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 179
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Sends the specified command and returns the associated command response.
+  example: []
+  syntax:
+    content: 'public Task<ICommandResponse<TCommand>> SendCommand<TCommand>(TCommand command, string sessionId, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true) where TCommand : ICommand'
+    parameters:
+    - id: command
+      type: '{TCommand}'
+      description: The command to be sent.
+    - id: sessionId
+      type: System.String
+      description: The target session of the command
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A CancellationToken object to allow for cancellation of the command.
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+      description: The execution timeout of the command in milliseconds.
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to throw an exception if a response is not received; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    typeParameters:
+    - id: TCommand
+      description: A command object implementing the <xref href="OpenQA.Selenium.DevTools.ICommand" data-throw-if-not-resolved="false"></xref> interface.
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.ICommandResponse{{TCommand}}}
+      description: The command response object implementing the <xref href="OpenQA.Selenium.DevTools.ICommandResponse%601" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Public Function SendCommand(Of TCommand As ICommand)(command As TCommand, sessionId As String, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ICommandResponse(Of TCommand))
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand*
+  nameWithType.vb: DevToolsSession.SendCommand(Of TCommand)(TCommand, String, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(Of TCommand)(TCommand, String, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand)(TCommand, String, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: SendCommand<TCommand, TCommandResponse>(TCommand, CancellationToken, int?, bool)
+  nameWithType: DevToolsSession.SendCommand<TCommand, TCommandResponse>(TCommand, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand<TCommand, TCommandResponse>(TCommand, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendCommand
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 212
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Sends the specified command and returns the associated command response.
+  example: []
+  syntax:
+    content: 'public Task<TCommandResponse> SendCommand<TCommand, TCommandResponse>(TCommand command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true) where TCommand : ICommand where TCommandResponse : ICommandResponse<TCommand>'
+    parameters:
+    - id: command
+      type: '{TCommand}'
+      description: The command to send.
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A CancellationToken object to allow for cancellation of the command.
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+      description: The execution timeout of the command in milliseconds.
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to throw an exception if a response is not received; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    typeParameters:
+    - id: TCommand
+      description: A command object implementing the <xref href="OpenQA.Selenium.DevTools.ICommand" data-throw-if-not-resolved="false"></xref> interface.
+    - id: TCommandResponse
+      description: A response object implementing the <xref href="OpenQA.Selenium.DevTools.ICommandResponse" data-throw-if-not-resolved="false"></xref> interface.
+    return:
+      type: System.Threading.Tasks.Task{{TCommandResponse}}
+      description: The command response object implementing the <xref href="OpenQA.Selenium.DevTools.ICommandResponse%601" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Public Function SendCommand(Of TCommand As ICommand, TCommandResponse As ICommandResponse(Of TCommand))(command As TCommand, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of TCommandResponse)
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand*
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2({TCommand},System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  nameWithType.vb: DevToolsSession.SendCommand(Of TCommand, TCommandResponse)(TCommand, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(Of TCommand, TCommandResponse)(TCommand, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand, TCommandResponse)(TCommand, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: SendCommand(string, JToken, CancellationToken, int?, bool)
+  nameWithType: DevToolsSession.SendCommand(string, JToken, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(string, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendCommand
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 241
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Returns a JToken based on a command created with the specified command name and params.
+  example: []
+  syntax:
+    content: public Task<JToken> SendCommand(string commandName, JToken commandParameters, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: commandName
+      type: System.String
+      description: The name of the command to send.
+    - id: commandParameters
+      type: Newtonsoft.Json.Linq.JToken
+      description: The parameters of the command as a JToken object
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A CancellationToken object to allow for cancellation of the command.
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+      description: The execution timeout of the command in milliseconds.
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to throw an exception if a response is not received; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    return:
+      type: System.Threading.Tasks.Task{Newtonsoft.Json.Linq.JToken}
+      description: The command response object implementing the <xref href="OpenQA.Selenium.DevTools.ICommandResponse%601" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Public Function SendCommand(commandName As String, commandParameters As JToken, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of JToken)
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand*
+  implements:
+  - OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  nameWithType.vb: DevToolsSession.SendCommand(String, JToken, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(String, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(String, JToken, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(System.String,System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(System.String,System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SendCommand(System.String,System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: SendCommand(string, string, JToken, CancellationToken, int?, bool)
+  nameWithType: DevToolsSession.SendCommand(string, string, JToken, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(string, string, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendCommand
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 263
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Returns a JToken based on a command created with the specified command name and params.
+  example: []
+  syntax:
+    content: public Task<JToken> SendCommand(string commandName, string sessionId, JToken commandParameters, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: commandName
+      type: System.String
+      description: The name of the command to send.
+    - id: sessionId
+      type: System.String
+      description: The sessionId of the command.
+    - id: commandParameters
+      type: Newtonsoft.Json.Linq.JToken
+      description: The parameters of the command as a JToken object
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+      description: A CancellationToken object to allow for cancellation of the command.
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+      description: The execution timeout of the command in milliseconds.
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> to throw an exception if a response is not received; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    return:
+      type: System.Threading.Tasks.Task{Newtonsoft.Json.Linq.JToken}
+      description: The command response object implementing the <xref href="OpenQA.Selenium.DevTools.ICommandResponse%601" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Public Function SendCommand(commandName As String, sessionId As String, commandParameters As JToken, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of JToken)
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand*
+  nameWithType.vb: DevToolsSession.SendCommand(String, String, JToken, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand(String, String, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(String, String, JToken, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.Dispose
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.Dispose
+  id: Dispose
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DevToolsSession.Dispose()
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.Dispose()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Dispose
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 321
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Releases all resources associated with this <xref href="OpenQA.Selenium.DevTools.DevToolsSession" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.Dispose(System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsSession.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: OpenQA.Selenium.DevTools.DevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: DevToolsSession.Dispose(bool)
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsSession.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Dispose
+    path: ../src/webdriver/DevTools/DevToolsSession.cs
+    startLine: 375
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Releases all resources associated with this <xref href="OpenQA.Selenium.DevTools.DevToolsSession" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Dispose method was explicitly called; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Protected Sub Dispose(disposing As Boolean)
+  overload: OpenQA.Selenium.DevTools.DevToolsSession.Dispose*
+  nameWithType.vb: DevToolsSession.Dispose(Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.#ctor
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession__ctor_System_String_
+  name: DevToolsSession
+  nameWithType: DevToolsSession.DevToolsSession
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.DevToolsSession
+  nameWithType.vb: DevToolsSession.New
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsSession.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: OpenQA.Selenium.DevTools.DevToolsOptions
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsOptions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsOptions.html
+  name: DevToolsOptions
+  nameWithType: DevToolsOptions
+  fullName: OpenQA.Selenium.DevTools.DevToolsOptions
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.LogMessage
+  commentId: E:OpenQA.Selenium.DevTools.IDevToolsSession.LogMessage
+  parent: OpenQA.Selenium.DevTools.IDevToolsSession
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_LogMessage
+  name: LogMessage
+  nameWithType: IDevToolsSession.LogMessage
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.LogMessage
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<DevToolsSessionLogMessageEventArgs>
+  nameWithType: EventHandler<DevToolsSessionLogMessageEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs>
+  nameWithType.vb: EventHandler(Of DevToolsSessionLogMessageEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs)
+  name.vb: EventHandler(Of DevToolsSessionLogMessageEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs
+    name: DevToolsSessionLogMessageEventArgs
+    href: OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs
+    name: DevToolsSessionLogMessageEventArgs
+    href: OpenQA.Selenium.DevTools.DevToolsSessionLogMessageEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.DevToolsEventReceived
+  commentId: E:OpenQA.Selenium.DevTools.IDevToolsSession.DevToolsEventReceived
+  parent: OpenQA.Selenium.DevTools.IDevToolsSession
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_DevToolsEventReceived
+  name: DevToolsEventReceived
+  nameWithType: IDevToolsSession.DevToolsEventReceived
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.DevToolsEventReceived
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<DevToolsEventReceivedEventArgs>
+  nameWithType: EventHandler<DevToolsEventReceivedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs>
+  nameWithType.vb: EventHandler(Of DevToolsEventReceivedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs)
+  name.vb: EventHandler(Of DevToolsEventReceivedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs
+    name: DevToolsEventReceivedEventArgs
+    href: OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs
+    name: DevToolsEventReceivedEventArgs
+    href: OpenQA.Selenium.DevTools.DevToolsEventReceivedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_CommandTimeout
+  name: CommandTimeout
+  nameWithType: DevToolsSession.CommandTimeout
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.CommandTimeout
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_ActiveSessionId
+  name: ActiveSessionId
+  nameWithType: DevToolsSession.ActiveSessionId
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.ActiveSessionId
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_EndpointAddress
+  name: EndpointAddress
+  nameWithType: DevToolsSession.EndpointAddress
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.EndpointAddress
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.Domains*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.Domains
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_Domains
+  name: Domains
+  nameWithType: DevToolsSession.Domains
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.Domains
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsDomains
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html
+  name: DevToolsDomains
+  nameWithType: DevToolsDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains
+- uid: OpenQA.Selenium.DevTools.DevToolsSessionDomains
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsSessionDomains
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsSessionDomains.html
+  name: DevToolsSessionDomains
+  nameWithType: DevToolsSessionDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsSessionDomains
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_GetVersionSpecificDomains__1
+  name: GetVersionSpecificDomains
+  nameWithType: DevToolsSession.GetVersionSpecificDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.GetVersionSpecificDomains
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains``1
+  commentId: M:OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains``1
+  parent: OpenQA.Selenium.DevTools.IDevToolsSession
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_GetVersionSpecificDomains__1
+  name: GetVersionSpecificDomains<T>()
+  nameWithType: IDevToolsSession.GetVersionSpecificDomains<T>()
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains<T>()
+  nameWithType.vb: IDevToolsSession.GetVersionSpecificDomains(Of T)()
+  fullName.vb: OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains(Of T)()
+  name.vb: GetVersionSpecificDomains(Of T)()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains``1
+    name: GetVersionSpecificDomains
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_GetVersionSpecificDomains__1
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.GetVersionSpecificDomains``1
+    name: GetVersionSpecificDomains
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_GetVersionSpecificDomains__1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<T>
+  nameWithType: ICommandResponse<T>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<T>
+  nameWithType.vb: ICommandResponse(Of T)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of T)
+  name.vb: ICommandResponse(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.SendCommand
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SendCommand
+  nameWithType: DevToolsSession.SendCommand
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.SendCommand
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1({TCommand},System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.IDevToolsSession
+  definition: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SendCommand<TCommand>(TCommand, CancellationToken, int?, bool)
+  nameWithType: IDevToolsSession.SendCommand<TCommand>(TCommand, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand<TCommand>(TCommand, System.Threading.CancellationToken, int?, bool)
+  nameWithType.vb: IDevToolsSession.SendCommand(Of TCommand)(TCommand, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(Of TCommand)(TCommand, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand)(TCommand, CancellationToken, Integer?, Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: <
+  - name: TCommand
+  - name: '>'
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommand
+  - name: )
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: '{TCommand}'
+  commentId: '!:TCommand'
+  definition: TCommand
+  name: TCommand
+  nameWithType: TCommand
+  fullName: TCommand
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.ICommandResponse{{TCommand}}}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.ICommandResponse{``0}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ICommandResponse<TCommand>>
+  nameWithType: Task<ICommandResponse<TCommand>>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.ICommandResponse<TCommand>>
+  nameWithType.vb: Task(Of ICommandResponse(Of TCommand))
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.ICommandResponse(Of TCommand))
+  name.vb: Task(Of ICommandResponse(Of TCommand))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: TCommand
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommand
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SendCommand<TCommand>(TCommand, CancellationToken, int?, bool)
+  nameWithType: IDevToolsSession.SendCommand<TCommand>(TCommand, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand<TCommand>(TCommand, System.Threading.CancellationToken, int?, bool)
+  nameWithType.vb: IDevToolsSession.SendCommand(Of TCommand)(TCommand, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(Of TCommand)(TCommand, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand)(TCommand, CancellationToken, Integer?, Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: <
+  - name: TCommand
+  - name: '>'
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``1(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__1___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommand
+  - name: )
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: TCommand
+  name: TCommand
+  nameWithType: TCommand
+  fullName: TCommand
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.ICommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  name: ICommandResponse
+  nameWithType: ICommandResponse
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2({TCommand},System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.IDevToolsSession
+  definition: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__2___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SendCommand<TCommand, TCommandResponse>(TCommand, CancellationToken, int?, bool)
+  nameWithType: IDevToolsSession.SendCommand<TCommand, TCommandResponse>(TCommand, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand<TCommand, TCommandResponse>(TCommand, System.Threading.CancellationToken, int?, bool)
+  nameWithType.vb: IDevToolsSession.SendCommand(Of TCommand, TCommandResponse)(TCommand, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(Of TCommand, TCommandResponse)(TCommand, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand, TCommandResponse)(TCommand, CancellationToken, Integer?, Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__2___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: <
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__2___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Threading.Tasks.Task{{TCommandResponse}}
+  commentId: T:System.Threading.Tasks.Task{``1}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TCommandResponse>
+  nameWithType: Task<TCommandResponse>
+  fullName: System.Threading.Tasks.Task<TCommandResponse>
+  nameWithType.vb: Task(Of TCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of TCommandResponse)
+  name.vb: Task(Of TCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__2___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SendCommand<TCommand, TCommandResponse>(TCommand, CancellationToken, int?, bool)
+  nameWithType: IDevToolsSession.SendCommand<TCommand, TCommandResponse>(TCommand, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand<TCommand, TCommandResponse>(TCommand, System.Threading.CancellationToken, int?, bool)
+  nameWithType.vb: IDevToolsSession.SendCommand(Of TCommand, TCommandResponse)(TCommand, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(Of TCommand, TCommandResponse)(TCommand, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(Of TCommand, TCommandResponse)(TCommand, CancellationToken, Integer?, Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__2___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: <
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand``2(``0,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand__2___0_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - name: TCommand
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.IDevToolsSession
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand_System_String_Newtonsoft_Json_Linq_JToken_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SendCommand(string, JToken, CancellationToken, int?, bool)
+  nameWithType: IDevToolsSession.SendCommand(string, JToken, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(string, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken, int?, bool)
+  nameWithType.vb: IDevToolsSession.SendCommand(String, JToken, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(String, Newtonsoft.Json.Linq.JToken, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SendCommand(String, JToken, CancellationToken, Integer?, Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand_System_String_Newtonsoft_Json_Linq_JToken_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.Linq.JToken
+    name: JToken
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.IDevToolsSession.SendCommand(System.String,Newtonsoft.Json.Linq.JToken,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+    name: SendCommand
+    href: OpenQA.Selenium.DevTools.IDevToolsSession.html#OpenQA_Selenium_DevTools_IDevToolsSession_SendCommand_System_String_Newtonsoft_Json_Linq_JToken_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Newtonsoft.Json.Linq.JToken
+    name: JToken
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: Newtonsoft.Json.Linq.JToken
+  commentId: T:Newtonsoft.Json.Linq.JToken
+  parent: Newtonsoft.Json.Linq
+  isExternal: true
+  name: JToken
+  nameWithType: JToken
+  fullName: Newtonsoft.Json.Linq.JToken
+- uid: System.Threading.Tasks.Task{Newtonsoft.Json.Linq.JToken}
+  commentId: T:System.Threading.Tasks.Task{Newtonsoft.Json.Linq.JToken}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<JToken>
+  nameWithType: Task<JToken>
+  fullName: System.Threading.Tasks.Task<Newtonsoft.Json.Linq.JToken>
+  nameWithType.vb: Task(Of JToken)
+  fullName.vb: System.Threading.Tasks.Task(Of Newtonsoft.Json.Linq.JToken)
+  name.vb: Task(Of JToken)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Newtonsoft.Json.Linq.JToken
+    name: JToken
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Newtonsoft.Json.Linq.JToken
+    name: JToken
+    isExternal: true
+  - name: )
+- uid: Newtonsoft.Json.Linq
+  commentId: N:Newtonsoft.Json.Linq
+  isExternal: true
+  name: Newtonsoft.Json.Linq
+  nameWithType: Newtonsoft.Json.Linq
+  fullName: Newtonsoft.Json.Linq
+  spec.csharp:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json.Linq
+    name: Linq
+    isExternal: true
+  spec.vb:
+  - uid: Newtonsoft
+    name: Newtonsoft
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json
+    name: Json
+    isExternal: true
+  - name: .
+  - uid: Newtonsoft.Json.Linq
+    name: Linq
+    isExternal: true
+- uid: OpenQA.Selenium.DevTools.DevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html
+  name: DevToolsSession
+  nameWithType: DevToolsSession
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession
+- uid: OpenQA.Selenium.DevTools.DevToolsSession.Dispose*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsSession.Dispose
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html#OpenQA_Selenium_DevTools_DevToolsSession_Dispose
+  name: Dispose
+  nameWithType: DevToolsSession.Dispose
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )

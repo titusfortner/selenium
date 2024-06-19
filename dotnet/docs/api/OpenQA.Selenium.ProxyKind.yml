@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ProxyKind
+  commentId: T:OpenQA.Selenium.ProxyKind
+  id: ProxyKind
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ProxyKind.AutoDetect
+  - OpenQA.Selenium.ProxyKind.Direct
+  - OpenQA.Selenium.ProxyKind.Manual
+  - OpenQA.Selenium.ProxyKind.ProxyAutoConfigure
+  - OpenQA.Selenium.ProxyKind.System
+  - OpenQA.Selenium.ProxyKind.Unspecified
+  langs:
+  - csharp
+  - vb
+  name: ProxyKind
+  nameWithType: ProxyKind
+  fullName: OpenQA.Selenium.ProxyKind
+  type: Enum
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ProxyKind
+    path: ../src/webdriver/Proxy.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Describes the kind of proxy.
+  remarks: >-
+    Keep these in sync with the Firefox preferences numbers:
+
+    http://kb.mozillazine.org/Network.proxy.type
+  example: []
+  syntax:
+    content: public enum ProxyKind
+    content.vb: Public Enum ProxyKind
+- uid: OpenQA.Selenium.ProxyKind.Direct
+  commentId: F:OpenQA.Selenium.ProxyKind.Direct
+  id: Direct
+  parent: OpenQA.Selenium.ProxyKind
+  langs:
+  - csharp
+  - vb
+  name: Direct
+  nameWithType: ProxyKind.Direct
+  fullName: OpenQA.Selenium.ProxyKind.Direct
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Direct
+    path: ../src/webdriver/Proxy.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Direct connection, no proxy (default on Windows).
+  example: []
+  syntax:
+    content: Direct = 0
+    return:
+      type: OpenQA.Selenium.ProxyKind
+- uid: OpenQA.Selenium.ProxyKind.Manual
+  commentId: F:OpenQA.Selenium.ProxyKind.Manual
+  id: Manual
+  parent: OpenQA.Selenium.ProxyKind
+  langs:
+  - csharp
+  - vb
+  name: Manual
+  nameWithType: ProxyKind.Manual
+  fullName: OpenQA.Selenium.ProxyKind.Manual
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Manual
+    path: ../src/webdriver/Proxy.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Manual proxy settings (e.g., for httpProxy).
+  example: []
+  syntax:
+    content: Manual = 1
+    return:
+      type: OpenQA.Selenium.ProxyKind
+- uid: OpenQA.Selenium.ProxyKind.ProxyAutoConfigure
+  commentId: F:OpenQA.Selenium.ProxyKind.ProxyAutoConfigure
+  id: ProxyAutoConfigure
+  parent: OpenQA.Selenium.ProxyKind
+  langs:
+  - csharp
+  - vb
+  name: ProxyAutoConfigure
+  nameWithType: ProxyKind.ProxyAutoConfigure
+  fullName: OpenQA.Selenium.ProxyKind.ProxyAutoConfigure
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ProxyAutoConfigure
+    path: ../src/webdriver/Proxy.cs
+    startLine: 48
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Proxy automatic configuration from URL.
+  example: []
+  syntax:
+    content: ProxyAutoConfigure = 2
+    return:
+      type: OpenQA.Selenium.ProxyKind
+- uid: OpenQA.Selenium.ProxyKind.AutoDetect
+  commentId: F:OpenQA.Selenium.ProxyKind.AutoDetect
+  id: AutoDetect
+  parent: OpenQA.Selenium.ProxyKind
+  langs:
+  - csharp
+  - vb
+  name: AutoDetect
+  nameWithType: ProxyKind.AutoDetect
+  fullName: OpenQA.Selenium.ProxyKind.AutoDetect
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AutoDetect
+    path: ../src/webdriver/Proxy.cs
+    startLine: 53
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Use proxy automatic detection.
+  example: []
+  syntax:
+    content: AutoDetect = 4
+    return:
+      type: OpenQA.Selenium.ProxyKind
+- uid: OpenQA.Selenium.ProxyKind.System
+  commentId: F:OpenQA.Selenium.ProxyKind.System
+  id: System
+  parent: OpenQA.Selenium.ProxyKind
+  langs:
+  - csharp
+  - vb
+  name: System
+  nameWithType: ProxyKind.System
+  fullName: OpenQA.Selenium.ProxyKind.System
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: System
+    path: ../src/webdriver/Proxy.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Use the system values for proxy settings (default on Linux).
+  example: []
+  syntax:
+    content: System = 5
+    return:
+      type: OpenQA.Selenium.ProxyKind
+- uid: OpenQA.Selenium.ProxyKind.Unspecified
+  commentId: F:OpenQA.Selenium.ProxyKind.Unspecified
+  id: Unspecified
+  parent: OpenQA.Selenium.ProxyKind
+  langs:
+  - csharp
+  - vb
+  name: Unspecified
+  nameWithType: ProxyKind.Unspecified
+  fullName: OpenQA.Selenium.ProxyKind.Unspecified
+  type: Field
+  source:
+    remote:
+      path: dotnet/src/webdriver/Proxy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Unspecified
+    path: ../src/webdriver/Proxy.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: No proxy type is specified.
+  example: []
+  syntax:
+    content: Unspecified = 6
+    return:
+      type: OpenQA.Selenium.ProxyKind
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.ProxyKind
+  commentId: T:OpenQA.Selenium.ProxyKind
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ProxyKind.html
+  name: ProxyKind
+  nameWithType: ProxyKind
+  fullName: OpenQA.Selenium.ProxyKind

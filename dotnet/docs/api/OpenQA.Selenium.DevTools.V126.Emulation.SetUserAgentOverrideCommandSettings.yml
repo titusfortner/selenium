@@ -1,0 +1,628 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  id: SetUserAgentOverrideCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Emulation
+  children:
+  - OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage
+  - OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform
+  - OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent
+  - OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  langs:
+  - csharp
+  - vb
+  name: SetUserAgentOverrideCommandSettings
+  nameWithType: SetUserAgentOverrideCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetUserAgentOverrideCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Emulation
+  summary: >-
+    Allows overriding user agent with the given string.
+
+    `userAgentMetadata` must be set for Client Hint headers to be sent.
+  example: []
+  syntax:
+    content: 'public sealed class SetUserAgentOverrideCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class SetUserAgentOverrideCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: SetUserAgentOverrideCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Emulation
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent
+  commentId: P:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent
+  id: UserAgent
+  parent: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: SetUserAgentOverrideCommandSettings.UserAgent
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserAgent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Emulation
+  summary: User agent to use.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("userAgent")]
+
+      public string UserAgent { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("userAgent")>
+
+      Public Property UserAgent As String
+  overload: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userAgent
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage
+  commentId: P:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage
+  id: AcceptLanguage
+  parent: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: AcceptLanguage
+  nameWithType: SetUserAgentOverrideCommandSettings.AcceptLanguage
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AcceptLanguage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Emulation
+  summary: Browser language to emulate.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("acceptLanguage", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string AcceptLanguage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("acceptLanguage", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AcceptLanguage As String
+  overload: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: acceptLanguage
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform
+  commentId: P:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform
+  id: Platform
+  parent: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Platform
+  nameWithType: SetUserAgentOverrideCommandSettings.Platform
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Platform
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Emulation
+  summary: The platform navigator.platform should return.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("platform", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Platform { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("platform", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Platform As String
+  overload: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: platform
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  commentId: P:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  id: UserAgentMetadata
+  parent: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: UserAgentMetadata
+  nameWithType: SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserAgentMetadata
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Emulation/SetUserAgentOverrideCommand.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Emulation
+  summary: To be sent in Sec-CH-UA-* headers and returned in navigator.userAgentData
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("userAgentMetadata", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public UserAgentMetadata UserAgentMetadata { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Emulation.UserAgentMetadata
+    content.vb: >-
+      <JsonProperty("userAgentMetadata", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UserAgentMetadata As UserAgentMetadata
+  overload: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userAgentMetadata
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Emulation
+  commentId: N:OpenQA.Selenium.DevTools.V126.Emulation
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Emulation
+  nameWithType: OpenQA.Selenium.DevTools.V126.Emulation
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Emulation
+    name: Emulation
+    href: OpenQA.Selenium.DevTools.V126.Emulation.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Emulation
+    name: Emulation
+    href: OpenQA.Selenium.DevTools.V126.Emulation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.html#OpenQA_Selenium_DevTools_V126_Emulation_SetUserAgentOverrideCommandSettings_CommandName
+  name: CommandName
+  nameWithType: SetUserAgentOverrideCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent
+  href: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.html#OpenQA_Selenium_DevTools_V126_Emulation_SetUserAgentOverrideCommandSettings_UserAgent
+  name: UserAgent
+  nameWithType: SetUserAgentOverrideCommandSettings.UserAgent
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgent
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage
+  href: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.html#OpenQA_Selenium_DevTools_V126_Emulation_SetUserAgentOverrideCommandSettings_AcceptLanguage
+  name: AcceptLanguage
+  nameWithType: SetUserAgentOverrideCommandSettings.AcceptLanguage
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.AcceptLanguage
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform
+  href: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.html#OpenQA_Selenium_DevTools_V126_Emulation_SetUserAgentOverrideCommandSettings_Platform
+  name: Platform
+  nameWithType: SetUserAgentOverrideCommandSettings.Platform
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.Platform
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  href: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.html#OpenQA_Selenium_DevTools_V126_Emulation_SetUserAgentOverrideCommandSettings_UserAgentMetadata
+  name: UserAgentMetadata
+  nameWithType: SetUserAgentOverrideCommandSettings.UserAgentMetadata
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.SetUserAgentOverrideCommandSettings.UserAgentMetadata
+- uid: OpenQA.Selenium.DevTools.V126.Emulation.UserAgentMetadata
+  commentId: T:OpenQA.Selenium.DevTools.V126.Emulation.UserAgentMetadata
+  parent: OpenQA.Selenium.DevTools.V126.Emulation
+  href: OpenQA.Selenium.DevTools.V126.Emulation.UserAgentMetadata.html
+  name: UserAgentMetadata
+  nameWithType: UserAgentMetadata
+  fullName: OpenQA.Selenium.DevTools.V126.Emulation.UserAgentMetadata

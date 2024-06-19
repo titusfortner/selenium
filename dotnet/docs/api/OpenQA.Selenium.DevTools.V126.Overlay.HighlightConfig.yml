@@ -1,0 +1,1493 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  commentId: T:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  id: HighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay
+  children:
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers
+  - OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles
+  langs:
+  - csharp
+  - vb
+  name: HighlightConfig
+  nameWithType: HighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HighlightConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: Configuration data for the highlighting of page elements.
+  example: []
+  syntax:
+    content: public sealed class HighlightConfig
+    content.vb: Public NotInheritable Class HighlightConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo
+  id: ShowInfo
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShowInfo
+  nameWithType: HighlightConfig.ShowInfo
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShowInfo
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'Whether the node info tooltip should be shown (default: false).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("showInfo", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ShowInfo { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("showInfo", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShowInfo As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: showInfo
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles
+  id: ShowStyles
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShowStyles
+  nameWithType: HighlightConfig.ShowStyles
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShowStyles
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'Whether the node styles in the tooltip (default: false).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("showStyles", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ShowStyles { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("showStyles", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShowStyles As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: showStyles
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers
+  id: ShowRulers
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShowRulers
+  nameWithType: HighlightConfig.ShowRulers
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShowRulers
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'Whether the rulers should be shown (default: false).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("showRulers", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ShowRulers { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("showRulers", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShowRulers As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: showRulers
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo
+  id: ShowAccessibilityInfo
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShowAccessibilityInfo
+  nameWithType: HighlightConfig.ShowAccessibilityInfo
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShowAccessibilityInfo
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'Whether the a11y info should be shown (default: true).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("showAccessibilityInfo", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ShowAccessibilityInfo { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("showAccessibilityInfo", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShowAccessibilityInfo As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: showAccessibilityInfo
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines
+  id: ShowExtensionLines
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShowExtensionLines
+  nameWithType: HighlightConfig.ShowExtensionLines
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShowExtensionLines
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'Whether the extension lines from node to the rulers should be shown (default: false).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("showExtensionLines", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ShowExtensionLines { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("showExtensionLines", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShowExtensionLines As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: showExtensionLines
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor
+  id: ContentColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ContentColor
+  nameWithType: HighlightConfig.ContentColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The content box highlight fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contentColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA ContentColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("contentColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ContentColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contentColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor
+  id: PaddingColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: PaddingColor
+  nameWithType: HighlightConfig.PaddingColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PaddingColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The padding highlight fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("paddingColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA PaddingColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("paddingColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PaddingColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: paddingColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor
+  id: BorderColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: BorderColor
+  nameWithType: HighlightConfig.BorderColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BorderColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The border highlight fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("borderColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA BorderColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("borderColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property BorderColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: borderColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor
+  id: MarginColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: MarginColor
+  nameWithType: HighlightConfig.MarginColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MarginColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 85
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The margin highlight fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("marginColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA MarginColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("marginColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property MarginColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: marginColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor
+  id: EventTargetColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: EventTargetColor
+  nameWithType: HighlightConfig.EventTargetColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EventTargetColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The event target element highlight fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("eventTargetColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA EventTargetColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("eventTargetColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property EventTargetColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eventTargetColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor
+  id: ShapeColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShapeColor
+  nameWithType: HighlightConfig.ShapeColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShapeColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 103
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The shape outside fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("shapeColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA ShapeColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("shapeColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShapeColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shapeColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor
+  id: ShapeMarginColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ShapeMarginColor
+  nameWithType: HighlightConfig.ShapeMarginColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShapeMarginColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 112
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The shape margin fill color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("shapeMarginColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA ShapeMarginColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("shapeMarginColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShapeMarginColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shapeMarginColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor
+  id: CssGridColor
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: CssGridColor
+  nameWithType: HighlightConfig.CssGridColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CssGridColor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 121
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The grid layout color (default: transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cssGridColor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RGBA CssGridColor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+    content.vb: >-
+      <JsonProperty("cssGridColor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CssGridColor As RGBA
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cssGridColor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat
+  id: ColorFormat
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ColorFormat
+  nameWithType: HighlightConfig.ColorFormat
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ColorFormat
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 130
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The color format used to format color styles (default: hex).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("colorFormat", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ColorFormat? ColorFormat { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat}
+    content.vb: >-
+      <JsonProperty("colorFormat", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ColorFormat As ColorFormat?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: colorFormat
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig
+  id: GridHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: GridHighlightConfig
+  nameWithType: HighlightConfig.GridHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GridHighlightConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 139
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The grid layout highlight configuration (default: all transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("gridHighlightConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public GridHighlightConfig GridHighlightConfig { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Overlay.GridHighlightConfig
+    content.vb: >-
+      <JsonProperty("gridHighlightConfig", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property GridHighlightConfig As GridHighlightConfig
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: gridHighlightConfig
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig
+  id: FlexContainerHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: FlexContainerHighlightConfig
+  nameWithType: HighlightConfig.FlexContainerHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FlexContainerHighlightConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 148
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The flex container highlight configuration (default: all transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("flexContainerHighlightConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public FlexContainerHighlightConfig FlexContainerHighlightConfig { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Overlay.FlexContainerHighlightConfig
+    content.vb: >-
+      <JsonProperty("flexContainerHighlightConfig", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FlexContainerHighlightConfig As FlexContainerHighlightConfig
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: flexContainerHighlightConfig
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig
+  id: FlexItemHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: FlexItemHighlightConfig
+  nameWithType: HighlightConfig.FlexItemHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FlexItemHighlightConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 157
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The flex item highlight configuration (default: all transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("flexItemHighlightConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public FlexItemHighlightConfig FlexItemHighlightConfig { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Overlay.FlexItemHighlightConfig
+    content.vb: >-
+      <JsonProperty("flexItemHighlightConfig", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FlexItemHighlightConfig As FlexItemHighlightConfig
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: flexItemHighlightConfig
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm
+  id: ContrastAlgorithm
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ContrastAlgorithm
+  nameWithType: HighlightConfig.ContrastAlgorithm
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContrastAlgorithm
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 166
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The contrast algorithm to use for the contrast ratio (default: aa).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contrastAlgorithm", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ContrastAlgorithm? ContrastAlgorithm { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm}
+    content.vb: >-
+      <JsonProperty("contrastAlgorithm", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ContrastAlgorithm As ContrastAlgorithm?
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contrastAlgorithm
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig
+  commentId: P:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig
+  id: ContainerQueryContainerHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig
+  langs:
+  - csharp
+  - vb
+  name: ContainerQueryContainerHighlightConfig
+  nameWithType: HighlightConfig.ContainerQueryContainerHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContainerQueryContainerHighlightConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Overlay/HighlightConfig.cs
+    startLine: 175
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Overlay
+  summary: 'The container query container highlight configuration (default: all transparent).'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("containerQueryContainerHighlightConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ContainerQueryContainerHighlightConfig ContainerQueryContainerHighlightConfig { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Overlay.ContainerQueryContainerHighlightConfig
+    content.vb: >-
+      <JsonProperty("containerQueryContainerHighlightConfig", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ContainerQueryContainerHighlightConfig As ContainerQueryContainerHighlightConfig
+  overload: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: containerQueryContainerHighlightConfig
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Overlay
+  commentId: N:OpenQA.Selenium.DevTools.V126.Overlay
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Overlay
+  nameWithType: OpenQA.Selenium.DevTools.V126.Overlay
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Overlay
+    name: Overlay
+    href: OpenQA.Selenium.DevTools.V126.Overlay.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Overlay
+    name: Overlay
+    href: OpenQA.Selenium.DevTools.V126.Overlay.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShowInfo
+  name: ShowInfo
+  nameWithType: HighlightConfig.ShowInfo
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowInfo
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShowStyles
+  name: ShowStyles
+  nameWithType: HighlightConfig.ShowStyles
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowStyles
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShowRulers
+  name: ShowRulers
+  nameWithType: HighlightConfig.ShowRulers
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowRulers
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShowAccessibilityInfo
+  name: ShowAccessibilityInfo
+  nameWithType: HighlightConfig.ShowAccessibilityInfo
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowAccessibilityInfo
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShowExtensionLines
+  name: ShowExtensionLines
+  nameWithType: HighlightConfig.ShowExtensionLines
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShowExtensionLines
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ContentColor
+  name: ContentColor
+  nameWithType: HighlightConfig.ContentColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContentColor
+- uid: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+  commentId: T:OpenQA.Selenium.DevTools.V126.DOM.RGBA
+  parent: OpenQA.Selenium.DevTools.V126.DOM
+  href: OpenQA.Selenium.DevTools.V126.DOM.RGBA.html
+  name: RGBA
+  nameWithType: RGBA
+  fullName: OpenQA.Selenium.DevTools.V126.DOM.RGBA
+- uid: OpenQA.Selenium.DevTools.V126.DOM
+  commentId: N:OpenQA.Selenium.DevTools.V126.DOM
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.DOM
+  nameWithType: OpenQA.Selenium.DevTools.V126.DOM
+  fullName: OpenQA.Selenium.DevTools.V126.DOM
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V126.DOM.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V126.DOM.html
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_PaddingColor
+  name: PaddingColor
+  nameWithType: HighlightConfig.PaddingColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.PaddingColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_BorderColor
+  name: BorderColor
+  nameWithType: HighlightConfig.BorderColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.BorderColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_MarginColor
+  name: MarginColor
+  nameWithType: HighlightConfig.MarginColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.MarginColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_EventTargetColor
+  name: EventTargetColor
+  nameWithType: HighlightConfig.EventTargetColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.EventTargetColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShapeColor
+  name: ShapeColor
+  nameWithType: HighlightConfig.ShapeColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ShapeMarginColor
+  name: ShapeMarginColor
+  nameWithType: HighlightConfig.ShapeMarginColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ShapeMarginColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_CssGridColor
+  name: CssGridColor
+  nameWithType: HighlightConfig.CssGridColor
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.CssGridColor
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ColorFormat
+  name: ColorFormat
+  nameWithType: HighlightConfig.ColorFormat
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ColorFormat
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat.html
+  name: ColorFormat?
+  nameWithType: ColorFormat?
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat
+    name: ColorFormat
+    href: OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat
+    name: ColorFormat
+    href: OpenQA.Selenium.DevTools.V126.Overlay.ColorFormat.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_GridHighlightConfig
+  name: GridHighlightConfig
+  nameWithType: HighlightConfig.GridHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.GridHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.GridHighlightConfig
+  commentId: T:OpenQA.Selenium.DevTools.V126.Overlay.GridHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay
+  href: OpenQA.Selenium.DevTools.V126.Overlay.GridHighlightConfig.html
+  name: GridHighlightConfig
+  nameWithType: GridHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.GridHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_FlexContainerHighlightConfig
+  name: FlexContainerHighlightConfig
+  nameWithType: HighlightConfig.FlexContainerHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexContainerHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.FlexContainerHighlightConfig
+  commentId: T:OpenQA.Selenium.DevTools.V126.Overlay.FlexContainerHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay
+  href: OpenQA.Selenium.DevTools.V126.Overlay.FlexContainerHighlightConfig.html
+  name: FlexContainerHighlightConfig
+  nameWithType: FlexContainerHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.FlexContainerHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_FlexItemHighlightConfig
+  name: FlexItemHighlightConfig
+  nameWithType: HighlightConfig.FlexItemHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.FlexItemHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.FlexItemHighlightConfig
+  commentId: T:OpenQA.Selenium.DevTools.V126.Overlay.FlexItemHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay
+  href: OpenQA.Selenium.DevTools.V126.Overlay.FlexItemHighlightConfig.html
+  name: FlexItemHighlightConfig
+  nameWithType: FlexItemHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.FlexItemHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ContrastAlgorithm
+  name: ContrastAlgorithm
+  nameWithType: HighlightConfig.ContrastAlgorithm
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContrastAlgorithm
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm.html
+  name: ContrastAlgorithm?
+  nameWithType: ContrastAlgorithm?
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm
+    name: ContrastAlgorithm
+    href: OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm
+    name: ContrastAlgorithm
+    href: OpenQA.Selenium.DevTools.V126.Overlay.ContrastAlgorithm.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig
+  href: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.html#OpenQA_Selenium_DevTools_V126_Overlay_HighlightConfig_ContainerQueryContainerHighlightConfig
+  name: ContainerQueryContainerHighlightConfig
+  nameWithType: HighlightConfig.ContainerQueryContainerHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.HighlightConfig.ContainerQueryContainerHighlightConfig
+- uid: OpenQA.Selenium.DevTools.V126.Overlay.ContainerQueryContainerHighlightConfig
+  commentId: T:OpenQA.Selenium.DevTools.V126.Overlay.ContainerQueryContainerHighlightConfig
+  parent: OpenQA.Selenium.DevTools.V126.Overlay
+  href: OpenQA.Selenium.DevTools.V126.Overlay.ContainerQueryContainerHighlightConfig.html
+  name: ContainerQueryContainerHighlightConfig
+  nameWithType: ContainerQueryContainerHighlightConfig
+  fullName: OpenQA.Selenium.DevTools.V126.Overlay.ContainerQueryContainerHighlightConfig

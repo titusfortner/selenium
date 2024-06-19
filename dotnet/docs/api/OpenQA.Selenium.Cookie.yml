@@ -1,0 +1,1423 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Cookie
+  commentId: T:OpenQA.Selenium.Cookie
+  id: Cookie
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.Cookie.#ctor(System.String,System.String)
+  - OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String)
+  - OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime})
+  - OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})
+  - OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)
+  - OpenQA.Selenium.Cookie.Domain
+  - OpenQA.Selenium.Cookie.Equals(System.Object)
+  - OpenQA.Selenium.Cookie.Expiry
+  - OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.Cookie.GetHashCode
+  - OpenQA.Selenium.Cookie.IsHttpOnly
+  - OpenQA.Selenium.Cookie.Name
+  - OpenQA.Selenium.Cookie.Path
+  - OpenQA.Selenium.Cookie.SameSite
+  - OpenQA.Selenium.Cookie.Secure
+  - OpenQA.Selenium.Cookie.ToString
+  - OpenQA.Selenium.Cookie.Value
+  langs:
+  - csharp
+  - vb
+  name: Cookie
+  nameWithType: Cookie
+  fullName: OpenQA.Selenium.Cookie
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Cookie
+    path: ../src/webdriver/Cookie.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Represents a cookie in the browser.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      [JsonObject(MemberSerialization = MemberSerialization.OptIn)]
+
+      public class Cookie
+    content.vb: >-
+      <Serializable>
+
+      <JsonObject(MemberSerialization:=MemberSerialization.OptIn)>
+
+      Public Class Cookie
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.Internal.ReturnedCookie
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+  - type: Newtonsoft.Json.JsonObjectAttribute
+    ctor: Newtonsoft.Json.JsonObjectAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: MemberSerialization
+      type: Newtonsoft.Json.MemberSerialization
+      value: 1
+- uid: OpenQA.Selenium.Cookie.#ctor(System.String,System.String)
+  commentId: M:OpenQA.Selenium.Cookie.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Cookie(string, string)
+  nameWithType: Cookie.Cookie(string, string)
+  fullName: OpenQA.Selenium.Cookie.Cookie(string, string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Cookie.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> class with a specific name and value.
+  example: []
+  syntax:
+    content: public Cookie(string name, string value)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    content.vb: Public Sub New(name As String, value As String)
+  overload: OpenQA.Selenium.Cookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty string,
+          or if it contains a semi-colon.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: Cookie.New(String, String)
+  fullName.vb: OpenQA.Selenium.Cookie.New(String, String)
+  name.vb: New(String, String)
+- uid: OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String)
+  commentId: M:OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Cookie(string, string, string)
+  nameWithType: Cookie.Cookie(string, string, string)
+  fullName: OpenQA.Selenium.Cookie.Cookie(string, string, string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Cookie.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> class with a specific name,
+
+    value, and path.
+  example: []
+  syntax:
+    content: public Cookie(string name, string value, string path)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    - id: path
+      type: System.String
+      description: The path of the cookie.
+    content.vb: Public Sub New(name As String, value As String, path As String)
+  overload: OpenQA.Selenium.Cookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty string,
+          or if it contains a semi-colon.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: Cookie.New(String, String, String)
+  fullName.vb: OpenQA.Selenium.Cookie.New(String, String, String)
+  name.vb: New(String, String, String)
+- uid: OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime})
+  commentId: M:OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.String,System.String,System.Nullable{System.DateTime})'
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Cookie(string, string, string, DateTime?)
+  nameWithType: Cookie.Cookie(string, string, string, DateTime?)
+  fullName: OpenQA.Selenium.Cookie.Cookie(string, string, string, System.DateTime?)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Cookie.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> class with a specific name,
+
+    value, path and expiration date.
+  example: []
+  syntax:
+    content: public Cookie(string name, string value, string path, DateTime? expiry)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    - id: path
+      type: System.String
+      description: The path of the cookie.
+    - id: expiry
+      type: System.Nullable{System.DateTime}
+      description: The expiration date of the cookie.
+    content.vb: Public Sub New(name As String, value As String, path As String, expiry As Date?)
+  overload: OpenQA.Selenium.Cookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty string,
+          or if it contains a semi-colon.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: Cookie.New(String, String, String, Date?)
+  fullName.vb: OpenQA.Selenium.Cookie.New(String, String, String, Date?)
+  name.vb: New(String, String, String, Date?)
+- uid: OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})
+  commentId: M:OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime})'
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Cookie(string, string, string, string, DateTime?)
+  nameWithType: Cookie.Cookie(string, string, string, string, DateTime?)
+  fullName: OpenQA.Selenium.Cookie.Cookie(string, string, string, string, System.DateTime?)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Cookie.cs
+    startLine: 100
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> class with a specific name,
+
+    value, domain, path and expiration date.
+  example: []
+  syntax:
+    content: public Cookie(string name, string value, string domain, string path, DateTime? expiry)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    - id: domain
+      type: System.String
+      description: The domain of the cookie.
+    - id: path
+      type: System.String
+      description: The path of the cookie.
+    - id: expiry
+      type: System.Nullable{System.DateTime}
+      description: The expiration date of the cookie.
+    content.vb: Public Sub New(name As String, value As String, domain As String, path As String, expiry As Date?)
+  overload: OpenQA.Selenium.Cookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty string,
+          or if it contains a semi-colon.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the value is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: Cookie.New(String, String, String, String, Date?)
+  fullName.vb: OpenQA.Selenium.Cookie.New(String, String, String, String, Date?)
+  name.vb: New(String, String, String, String, Date?)
+- uid: OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)
+  commentId: M:OpenQA.Selenium.Cookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)'
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Cookie(string, string, string, string, DateTime?, bool, bool, string)
+  nameWithType: Cookie.Cookie(string, string, string, string, DateTime?, bool, bool, string)
+  fullName: OpenQA.Selenium.Cookie.Cookie(string, string, string, string, System.DateTime?, bool, bool, string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Cookie.cs
+    startLine: 120
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Internal.ReturnedCookie" data-throw-if-not-resolved="false"></xref> class with a specific name,
+
+    value, domain, path and expiration date.
+  example: []
+  syntax:
+    content: public Cookie(string name, string value, string domain, string path, DateTime? expiry, bool secure, bool isHttpOnly, string sameSite)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    - id: domain
+      type: System.String
+      description: The domain of the cookie.
+    - id: path
+      type: System.String
+      description: The path of the cookie.
+    - id: expiry
+      type: System.Nullable{System.DateTime}
+      description: The expiration date of the cookie.
+    - id: secure
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the cookie is secure; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+    - id: isHttpOnly
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the cookie is an HTTP-only cookie; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+    - id: sameSite
+      type: System.String
+      description: The SameSite value of cookie.
+    content.vb: Public Sub New(name As String, value As String, domain As String, path As String, expiry As Date?, secure As Boolean, isHttpOnly As Boolean, sameSite As String)
+  overload: OpenQA.Selenium.Cookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name and value are both an empty string,
+          if the name contains a semi-colon, or if same site value is not valid.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the name, value or currentUrl is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: Cookie.New(String, String, String, String, Date?, Boolean, Boolean, String)
+  fullName.vb: OpenQA.Selenium.Cookie.New(String, String, String, String, Date?, Boolean, Boolean, String)
+  name.vb: New(String, String, String, String, Date?, Boolean, Boolean, String)
+- uid: OpenQA.Selenium.Cookie.Name
+  commentId: P:OpenQA.Selenium.Cookie.Name
+  id: Name
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Cookie.Name
+  fullName: OpenQA.Selenium.Cookie.Name
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../src/webdriver/Cookie.cs
+    startLine: 173
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the name of the cookie.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public ReadOnly Property Name As String
+  overload: OpenQA.Selenium.Cookie.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OpenQA.Selenium.Cookie.Value
+  commentId: P:OpenQA.Selenium.Cookie.Value
+  id: Value
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Cookie.Value
+  fullName: OpenQA.Selenium.Cookie.Value
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Value
+    path: ../src/webdriver/Cookie.cs
+    startLine: 182
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the value of the cookie.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("value")]
+
+      public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("value")>
+
+      Public ReadOnly Property Value As String
+  overload: OpenQA.Selenium.Cookie.Value*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: value
+- uid: OpenQA.Selenium.Cookie.Domain
+  commentId: P:OpenQA.Selenium.Cookie.Domain
+  id: Domain
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Domain
+  nameWithType: Cookie.Domain
+  fullName: OpenQA.Selenium.Cookie.Domain
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Domain
+    path: ../src/webdriver/Cookie.cs
+    startLine: 191
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the domain of the cookie.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("domain", NullValueHandling = NullValueHandling.Ignore)]
+
+      public string Domain { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("domain", NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public ReadOnly Property Domain As String
+  overload: OpenQA.Selenium.Cookie.Domain*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: domain
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Cookie.Path
+  commentId: P:OpenQA.Selenium.Cookie.Path
+  id: Path
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: Cookie.Path
+  fullName: OpenQA.Selenium.Cookie.Path
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Path
+    path: ../src/webdriver/Cookie.cs
+    startLine: 200
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the path of the cookie.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("path", NullValueHandling = NullValueHandling.Ignore)]
+
+      public virtual string Path { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("path", NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Overridable ReadOnly Property Path As String
+  overload: OpenQA.Selenium.Cookie.Path*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: path
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Cookie.Secure
+  commentId: P:OpenQA.Selenium.Cookie.Secure
+  id: Secure
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Secure
+  nameWithType: Cookie.Secure
+  fullName: OpenQA.Selenium.Cookie.Secure
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Secure
+    path: ../src/webdriver/Cookie.cs
+    startLine: 209
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether the cookie is secure.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("secure")]
+
+      public virtual bool Secure { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("secure")>
+
+      Public Overridable ReadOnly Property Secure As Boolean
+  overload: OpenQA.Selenium.Cookie.Secure*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: secure
+- uid: OpenQA.Selenium.Cookie.IsHttpOnly
+  commentId: P:OpenQA.Selenium.Cookie.IsHttpOnly
+  id: IsHttpOnly
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: IsHttpOnly
+  nameWithType: Cookie.IsHttpOnly
+  fullName: OpenQA.Selenium.Cookie.IsHttpOnly
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsHttpOnly
+    path: ../src/webdriver/Cookie.cs
+    startLine: 218
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether the cookie is an HTTP-only cookie.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("httpOnly")]
+
+      public virtual bool IsHttpOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("httpOnly")>
+
+      Public Overridable ReadOnly Property IsHttpOnly As Boolean
+  overload: OpenQA.Selenium.Cookie.IsHttpOnly*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: httpOnly
+- uid: OpenQA.Selenium.Cookie.SameSite
+  commentId: P:OpenQA.Selenium.Cookie.SameSite
+  id: SameSite
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: SameSite
+  nameWithType: Cookie.SameSite
+  fullName: OpenQA.Selenium.Cookie.SameSite
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSite
+    path: ../src/webdriver/Cookie.cs
+    startLine: 228
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the SameSite setting for the cookie.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sameSite", NullValueHandling = NullValueHandling.Ignore)]
+
+      public virtual string SameSite { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("sameSite", NullValueHandling:=NullValueHandling.Ignore)>
+
+      Public Overridable ReadOnly Property SameSite As String
+  overload: OpenQA.Selenium.Cookie.SameSite*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sameSite
+    namedArguments:
+    - name: NullValueHandling
+      type: Newtonsoft.Json.NullValueHandling
+      value: 1
+- uid: OpenQA.Selenium.Cookie.Expiry
+  commentId: P:OpenQA.Selenium.Cookie.Expiry
+  id: Expiry
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Expiry
+  nameWithType: Cookie.Expiry
+  fullName: OpenQA.Selenium.Cookie.Expiry
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Expiry
+    path: ../src/webdriver/Cookie.cs
+    startLine: 237
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the expiration date of the cookie.
+  example: []
+  syntax:
+    content: public DateTime? Expiry { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public ReadOnly Property Expiry As Date?
+  overload: OpenQA.Selenium.Cookie.Expiry*
+- uid: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: FromDictionary(Dictionary<string, object>)
+  nameWithType: Cookie.FromDictionary(Dictionary<string, object>)
+  fullName: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FromDictionary
+    path: ../src/webdriver/Cookie.cs
+    startLine: 269
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Converts a Dictionary to a Cookie.
+  example: []
+  syntax:
+    content: public static Cookie FromDictionary(Dictionary<string, object> rawCookie)
+    parameters:
+    - id: rawCookie
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: The Dictionary object containing the cookie parameters.
+    return:
+      type: OpenQA.Selenium.Cookie
+      description: A <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> object with the proper parameters set.
+    content.vb: Public Shared Function FromDictionary(rawCookie As Dictionary(Of String, Object)) As Cookie
+  overload: OpenQA.Selenium.Cookie.FromDictionary*
+  nameWithType.vb: Cookie.FromDictionary(Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: FromDictionary(Dictionary(Of String, Object))
+- uid: OpenQA.Selenium.Cookie.ToString
+  commentId: M:OpenQA.Selenium.Cookie.ToString
+  id: ToString
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Cookie.ToString()
+  fullName: OpenQA.Selenium.Cookie.ToString()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToString
+    path: ../src/webdriver/Cookie.cs
+    startLine: 326
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Creates and returns a string representation of the cookie.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representation of the cookie.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OpenQA.Selenium.Cookie.ToString*
+- uid: OpenQA.Selenium.Cookie.Equals(System.Object)
+  commentId: M:OpenQA.Selenium.Cookie.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: Equals(object)
+  nameWithType: Cookie.Equals(object)
+  fullName: OpenQA.Selenium.Cookie.Equals(object)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Equals
+    path: ../src/webdriver/Cookie.cs
+    startLine: 344
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Determines whether the specified <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref> is equal
+
+    to the current <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: >-
+        The <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref> to compare with the
+            current <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Boolean
+      description: >-
+        <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the specified <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref>
+            is equal to the current <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref>; otherwise,
+            <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.Object.Equals(System.Object)
+  overload: OpenQA.Selenium.Cookie.Equals*
+  nameWithType.vb: Cookie.Equals(Object)
+  fullName.vb: OpenQA.Selenium.Cookie.Equals(Object)
+  name.vb: Equals(Object)
+- uid: OpenQA.Selenium.Cookie.GetHashCode
+  commentId: M:OpenQA.Selenium.Cookie.GetHashCode
+  id: GetHashCode
+  parent: OpenQA.Selenium.Cookie
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Cookie.GetHashCode()
+  fullName: OpenQA.Selenium.Cookie.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Cookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetHashCode
+    path: ../src/webdriver/Cookie.cs
+    startLine: 371
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Serves as a hash function for a particular type.
+  example: []
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for the current <xref href="System.Object?text=Object" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function GetHashCode() As Integer
+  overridden: System.Object.GetHashCode
+  overload: OpenQA.Selenium.Cookie.GetHashCode*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Cookie
+  commentId: T:OpenQA.Selenium.Cookie
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Cookie.html
+  name: Cookie
+  nameWithType: Cookie
+  fullName: OpenQA.Selenium.Cookie
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: OpenQA.Selenium.Cookie.#ctor*
+  commentId: Overload:OpenQA.Selenium.Cookie.#ctor
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie__ctor_System_String_System_String_
+  name: Cookie
+  nameWithType: Cookie.Cookie
+  fullName: OpenQA.Selenium.Cookie.Cookie
+  nameWithType.vb: Cookie.New
+  fullName.vb: OpenQA.Selenium.Cookie.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Internal.ReturnedCookie
+  commentId: T:OpenQA.Selenium.Internal.ReturnedCookie
+  href: OpenQA.Selenium.Internal.ReturnedCookie.html
+  name: ReturnedCookie
+  nameWithType: ReturnedCookie
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.Cookie.Name*
+  commentId: Overload:OpenQA.Selenium.Cookie.Name
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Name
+  name: Name
+  nameWithType: Cookie.Name
+  fullName: OpenQA.Selenium.Cookie.Name
+- uid: OpenQA.Selenium.Cookie.Value*
+  commentId: Overload:OpenQA.Selenium.Cookie.Value
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Value
+  name: Value
+  nameWithType: Cookie.Value
+  fullName: OpenQA.Selenium.Cookie.Value
+- uid: OpenQA.Selenium.Cookie.Domain*
+  commentId: Overload:OpenQA.Selenium.Cookie.Domain
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Domain
+  name: Domain
+  nameWithType: Cookie.Domain
+  fullName: OpenQA.Selenium.Cookie.Domain
+- uid: OpenQA.Selenium.Cookie.Path*
+  commentId: Overload:OpenQA.Selenium.Cookie.Path
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Path
+  name: Path
+  nameWithType: Cookie.Path
+  fullName: OpenQA.Selenium.Cookie.Path
+- uid: OpenQA.Selenium.Cookie.Secure*
+  commentId: Overload:OpenQA.Selenium.Cookie.Secure
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Secure
+  name: Secure
+  nameWithType: Cookie.Secure
+  fullName: OpenQA.Selenium.Cookie.Secure
+- uid: OpenQA.Selenium.Cookie.IsHttpOnly*
+  commentId: Overload:OpenQA.Selenium.Cookie.IsHttpOnly
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_IsHttpOnly
+  name: IsHttpOnly
+  nameWithType: Cookie.IsHttpOnly
+  fullName: OpenQA.Selenium.Cookie.IsHttpOnly
+- uid: OpenQA.Selenium.Cookie.SameSite*
+  commentId: Overload:OpenQA.Selenium.Cookie.SameSite
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_SameSite
+  name: SameSite
+  nameWithType: Cookie.SameSite
+  fullName: OpenQA.Selenium.Cookie.SameSite
+- uid: OpenQA.Selenium.Cookie.Expiry*
+  commentId: Overload:OpenQA.Selenium.Cookie.Expiry
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Expiry
+  name: Expiry
+  nameWithType: Cookie.Expiry
+  fullName: OpenQA.Selenium.Cookie.Expiry
+- uid: OpenQA.Selenium.Cookie.FromDictionary*
+  commentId: Overload:OpenQA.Selenium.Cookie.FromDictionary
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_FromDictionary_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: FromDictionary
+  nameWithType: Cookie.FromDictionary
+  fullName: OpenQA.Selenium.Cookie.FromDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Cookie.ToString*
+  commentId: Overload:OpenQA.Selenium.Cookie.ToString
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_ToString
+  name: ToString
+  nameWithType: Cookie.ToString
+  fullName: OpenQA.Selenium.Cookie.ToString
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OpenQA.Selenium.Cookie.Equals*
+  commentId: Overload:OpenQA.Selenium.Cookie.Equals
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Equals_System_Object_
+  name: Equals
+  nameWithType: Cookie.Equals
+  fullName: OpenQA.Selenium.Cookie.Equals
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Cookie.GetHashCode*
+  commentId: Overload:OpenQA.Selenium.Cookie.GetHashCode
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_GetHashCode
+  name: GetHashCode
+  nameWithType: Cookie.GetHashCode
+  fullName: OpenQA.Selenium.Cookie.GetHashCode
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

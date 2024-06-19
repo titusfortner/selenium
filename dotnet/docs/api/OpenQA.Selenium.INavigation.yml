@@ -1,0 +1,588 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.INavigation
+  commentId: T:OpenQA.Selenium.INavigation
+  id: INavigation
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.INavigation.Back
+  - OpenQA.Selenium.INavigation.BackAsync
+  - OpenQA.Selenium.INavigation.Forward
+  - OpenQA.Selenium.INavigation.ForwardAsync
+  - OpenQA.Selenium.INavigation.GoToUrl(System.String)
+  - OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  - OpenQA.Selenium.INavigation.GoToUrlAsync(System.String)
+  - OpenQA.Selenium.INavigation.GoToUrlAsync(System.Uri)
+  - OpenQA.Selenium.INavigation.Refresh
+  - OpenQA.Selenium.INavigation.RefreshAsync
+  langs:
+  - csharp
+  - vb
+  name: INavigation
+  nameWithType: INavigation
+  fullName: OpenQA.Selenium.INavigation
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: INavigation
+    path: ../src/webdriver/INavigation.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Defines an interface allowing the user to access the browser's history and to
+
+    navigate to a given URL.
+  example: []
+  syntax:
+    content: public interface INavigation
+    content.vb: Public Interface INavigation
+- uid: OpenQA.Selenium.INavigation.Back
+  commentId: M:OpenQA.Selenium.INavigation.Back
+  id: Back
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: Back()
+  nameWithType: INavigation.Back()
+  fullName: OpenQA.Selenium.INavigation.Back()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Back
+    path: ../src/webdriver/INavigation.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Move back a single entry in the browser's history.
+  example: []
+  syntax:
+    content: void Back()
+    content.vb: Sub Back()
+  overload: OpenQA.Selenium.INavigation.Back*
+- uid: OpenQA.Selenium.INavigation.BackAsync
+  commentId: M:OpenQA.Selenium.INavigation.BackAsync
+  id: BackAsync
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: BackAsync()
+  nameWithType: INavigation.BackAsync()
+  fullName: OpenQA.Selenium.INavigation.BackAsync()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BackAsync
+    path: ../src/webdriver/INavigation.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Move back a single entry in the browser's history as an asynchronous task.
+  example: []
+  syntax:
+    content: Task BackAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task object representing the asynchronous operation.
+    content.vb: Function BackAsync() As Task
+  overload: OpenQA.Selenium.INavigation.BackAsync*
+- uid: OpenQA.Selenium.INavigation.Forward
+  commentId: M:OpenQA.Selenium.INavigation.Forward
+  id: Forward
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: Forward()
+  nameWithType: INavigation.Forward()
+  fullName: OpenQA.Selenium.INavigation.Forward()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Forward
+    path: ../src/webdriver/INavigation.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Move a single "item" forward in the browser's history.
+  remarks: Does nothing if we are on the latest page viewed.
+  example: []
+  syntax:
+    content: void Forward()
+    content.vb: Sub Forward()
+  overload: OpenQA.Selenium.INavigation.Forward*
+- uid: OpenQA.Selenium.INavigation.ForwardAsync
+  commentId: M:OpenQA.Selenium.INavigation.ForwardAsync
+  id: ForwardAsync
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: ForwardAsync()
+  nameWithType: INavigation.ForwardAsync()
+  fullName: OpenQA.Selenium.INavigation.ForwardAsync()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ForwardAsync
+    path: ../src/webdriver/INavigation.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Move a single "item" forward in the browser's history as an asynchronous task.
+  example: []
+  syntax:
+    content: Task ForwardAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task object representing the asynchronous operation.
+    content.vb: Function ForwardAsync() As Task
+  overload: OpenQA.Selenium.INavigation.ForwardAsync*
+- uid: OpenQA.Selenium.INavigation.GoToUrl(System.String)
+  commentId: M:OpenQA.Selenium.INavigation.GoToUrl(System.String)
+  id: GoToUrl(System.String)
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: GoToUrl(string)
+  nameWithType: INavigation.GoToUrl(string)
+  fullName: OpenQA.Selenium.INavigation.GoToUrl(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GoToUrl
+    path: ../src/webdriver/INavigation.cs
+    startLine: 65
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Load a new web page in the current browser window.
+  remarks: >-
+    Calling the <xref href="OpenQA.Selenium.INavigation.GoToUrl(System.String)" data-throw-if-not-resolved="false"></xref> method will load a new web page in the current browser window.
+
+    This is done using an HTTP GET operation, and the method will block until the
+
+    load is complete. This will follow redirects issued either by the server or
+
+    as a meta-redirect from within the returned HTML. Should a meta-redirect "rest"
+
+    for any duration of time, it is best to wait until this timeout is over, since
+
+    should the underlying page change while your test is executing the results of
+
+    future calls against this interface will be against the freshly loaded page.
+  example: []
+  syntax:
+    content: void GoToUrl(string url)
+    parameters:
+    - id: url
+      type: System.String
+      description: The URL to load. It is best to use a fully qualified URL
+    content.vb: Sub GoToUrl(url As String)
+  overload: OpenQA.Selenium.INavigation.GoToUrl*
+  nameWithType.vb: INavigation.GoToUrl(String)
+  fullName.vb: OpenQA.Selenium.INavigation.GoToUrl(String)
+  name.vb: GoToUrl(String)
+- uid: OpenQA.Selenium.INavigation.GoToUrlAsync(System.String)
+  commentId: M:OpenQA.Selenium.INavigation.GoToUrlAsync(System.String)
+  id: GoToUrlAsync(System.String)
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: GoToUrlAsync(string)
+  nameWithType: INavigation.GoToUrlAsync(string)
+  fullName: OpenQA.Selenium.INavigation.GoToUrlAsync(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GoToUrlAsync
+    path: ../src/webdriver/INavigation.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Navigate to a url as an asynchronous task.
+  example: []
+  syntax:
+    content: Task GoToUrlAsync(string url)
+    parameters:
+    - id: url
+      type: System.String
+      description: String of where you want the browser to go.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task object representing the asynchronous operation.
+    content.vb: Function GoToUrlAsync(url As String) As Task
+  overload: OpenQA.Selenium.INavigation.GoToUrlAsync*
+  nameWithType.vb: INavigation.GoToUrlAsync(String)
+  fullName.vb: OpenQA.Selenium.INavigation.GoToUrlAsync(String)
+  name.vb: GoToUrlAsync(String)
+- uid: OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  commentId: M:OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  id: GoToUrl(System.Uri)
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: GoToUrl(Uri)
+  nameWithType: INavigation.GoToUrl(Uri)
+  fullName: OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GoToUrl
+    path: ../src/webdriver/INavigation.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Load a new web page in the current browser window.
+  remarks: >-
+    Calling the <xref href="OpenQA.Selenium.INavigation.GoToUrl(System.Uri)" data-throw-if-not-resolved="false"></xref> method will load a new web page in the current browser window.
+
+    This is done using an HTTP GET operation, and the method will block until the
+
+    load is complete. This will follow redirects issued either by the server or
+
+    as a meta-redirect from within the returned HTML. Should a meta-redirect "rest"
+
+    for any duration of time, it is best to wait until this timeout is over, since
+
+    should the underlying page change while your test is executing the results of
+
+    future calls against this interface will be against the freshly loaded page.
+  example: []
+  syntax:
+    content: void GoToUrl(Uri url)
+    parameters:
+    - id: url
+      type: System.Uri
+      description: The URL to load.
+    content.vb: Sub GoToUrl(url As Uri)
+  overload: OpenQA.Selenium.INavigation.GoToUrl*
+- uid: OpenQA.Selenium.INavigation.GoToUrlAsync(System.Uri)
+  commentId: M:OpenQA.Selenium.INavigation.GoToUrlAsync(System.Uri)
+  id: GoToUrlAsync(System.Uri)
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: GoToUrlAsync(Uri)
+  nameWithType: INavigation.GoToUrlAsync(Uri)
+  fullName: OpenQA.Selenium.INavigation.GoToUrlAsync(System.Uri)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GoToUrlAsync
+    path: ../src/webdriver/INavigation.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Navigate to a url as an asynchronous task.
+  example: []
+  syntax:
+    content: Task GoToUrlAsync(Uri url)
+    parameters:
+    - id: url
+      type: System.Uri
+      description: Uri object of where you want the browser to go.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task object representing the asynchronous operation.
+    content.vb: Function GoToUrlAsync(url As Uri) As Task
+  overload: OpenQA.Selenium.INavigation.GoToUrlAsync*
+- uid: OpenQA.Selenium.INavigation.Refresh
+  commentId: M:OpenQA.Selenium.INavigation.Refresh
+  id: Refresh
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: Refresh()
+  nameWithType: INavigation.Refresh()
+  fullName: OpenQA.Selenium.INavigation.Refresh()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Refresh
+    path: ../src/webdriver/INavigation.cs
+    startLine: 99
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Refreshes the current page.
+  example: []
+  syntax:
+    content: void Refresh()
+    content.vb: Sub Refresh()
+  overload: OpenQA.Selenium.INavigation.Refresh*
+- uid: OpenQA.Selenium.INavigation.RefreshAsync
+  commentId: M:OpenQA.Selenium.INavigation.RefreshAsync
+  id: RefreshAsync
+  parent: OpenQA.Selenium.INavigation
+  langs:
+  - csharp
+  - vb
+  name: RefreshAsync()
+  nameWithType: INavigation.RefreshAsync()
+  fullName: OpenQA.Selenium.INavigation.RefreshAsync()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/INavigation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RefreshAsync
+    path: ../src/webdriver/INavigation.cs
+    startLine: 105
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Reload the current page as an asynchronous task.
+  example: []
+  syntax:
+    content: Task RefreshAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task object representing the asynchronous operation.
+    content.vb: Function RefreshAsync() As Task
+  overload: OpenQA.Selenium.INavigation.RefreshAsync*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.INavigation.Back*
+  commentId: Overload:OpenQA.Selenium.INavigation.Back
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_Back
+  name: Back
+  nameWithType: INavigation.Back
+  fullName: OpenQA.Selenium.INavigation.Back
+- uid: OpenQA.Selenium.INavigation.BackAsync*
+  commentId: Overload:OpenQA.Selenium.INavigation.BackAsync
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_BackAsync
+  name: BackAsync
+  nameWithType: INavigation.BackAsync
+  fullName: OpenQA.Selenium.INavigation.BackAsync
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.INavigation.Forward*
+  commentId: Overload:OpenQA.Selenium.INavigation.Forward
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_Forward
+  name: Forward
+  nameWithType: INavigation.Forward
+  fullName: OpenQA.Selenium.INavigation.Forward
+- uid: OpenQA.Selenium.INavigation.ForwardAsync*
+  commentId: Overload:OpenQA.Selenium.INavigation.ForwardAsync
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_ForwardAsync
+  name: ForwardAsync
+  nameWithType: INavigation.ForwardAsync
+  fullName: OpenQA.Selenium.INavigation.ForwardAsync
+- uid: OpenQA.Selenium.INavigation.GoToUrl(System.String)
+  commentId: M:OpenQA.Selenium.INavigation.GoToUrl(System.String)
+  isExternal: true
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_String_
+  name: GoToUrl(string)
+  nameWithType: INavigation.GoToUrl(string)
+  fullName: OpenQA.Selenium.INavigation.GoToUrl(string)
+  nameWithType.vb: INavigation.GoToUrl(String)
+  fullName.vb: OpenQA.Selenium.INavigation.GoToUrl(String)
+  name.vb: GoToUrl(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.INavigation.GoToUrl(System.String)
+    name: GoToUrl
+    href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.INavigation.GoToUrl(System.String)
+    name: GoToUrl
+    href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.INavigation.GoToUrl*
+  commentId: Overload:OpenQA.Selenium.INavigation.GoToUrl
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_String_
+  name: GoToUrl
+  nameWithType: INavigation.GoToUrl
+  fullName: OpenQA.Selenium.INavigation.GoToUrl
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.INavigation.GoToUrlAsync*
+  commentId: Overload:OpenQA.Selenium.INavigation.GoToUrlAsync
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrlAsync_System_String_
+  name: GoToUrlAsync
+  nameWithType: INavigation.GoToUrlAsync
+  fullName: OpenQA.Selenium.INavigation.GoToUrlAsync
+- uid: OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  commentId: M:OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  isExternal: true
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_Uri_
+  name: GoToUrl(Uri)
+  nameWithType: INavigation.GoToUrl(Uri)
+  fullName: OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+  spec.csharp:
+  - uid: OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+    name: GoToUrl
+    href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_Uri_
+  - name: (
+  - uid: System.Uri
+    name: Uri
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uri
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.INavigation.GoToUrl(System.Uri)
+    name: GoToUrl
+    href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_GoToUrl_System_Uri_
+  - name: (
+  - uid: System.Uri
+    name: Uri
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.uri
+  - name: )
+- uid: System.Uri
+  commentId: T:System.Uri
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.uri
+  name: Uri
+  nameWithType: Uri
+  fullName: System.Uri
+- uid: OpenQA.Selenium.INavigation.Refresh*
+  commentId: Overload:OpenQA.Selenium.INavigation.Refresh
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_Refresh
+  name: Refresh
+  nameWithType: INavigation.Refresh
+  fullName: OpenQA.Selenium.INavigation.Refresh
+- uid: OpenQA.Selenium.INavigation.RefreshAsync*
+  commentId: Overload:OpenQA.Selenium.INavigation.RefreshAsync
+  href: OpenQA.Selenium.INavigation.html#OpenQA_Selenium_INavigation_RefreshAsync
+  name: RefreshAsync
+  nameWithType: INavigation.RefreshAsync
+  fullName: OpenQA.Selenium.INavigation.RefreshAsync

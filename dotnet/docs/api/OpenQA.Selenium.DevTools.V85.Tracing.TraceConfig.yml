@@ -1,0 +1,830 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  commentId: T:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  id: TraceConfig
+  parent: OpenQA.Selenium.DevTools.V85.Tracing
+  children:
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode
+  - OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays
+  langs:
+  - csharp
+  - vb
+  name: TraceConfig
+  nameWithType: TraceConfig
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TraceConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: TraceConfig
+  example: []
+  syntax:
+    content: public sealed class TraceConfig
+    content.vb: Public NotInheritable Class TraceConfig
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode
+  id: RecordMode
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: RecordMode
+  nameWithType: TraceConfig.RecordMode
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RecordMode
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Controls how the trace buffer stores data.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("recordMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public TraceConfigRecordModeValues? RecordMode { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues}
+    content.vb: >-
+      <JsonProperty("recordMode", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RecordMode As TraceConfigRecordModeValues?
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: recordMode
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling
+  id: EnableSampling
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableSampling
+  nameWithType: TraceConfig.EnableSampling
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableSampling
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Turns on JavaScript stack sampling.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("enableSampling", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? EnableSampling { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("enableSampling", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property EnableSampling As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: enableSampling
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace
+  id: EnableSystrace
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableSystrace
+  nameWithType: TraceConfig.EnableSystrace
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableSystrace
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Turns on system tracing.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("enableSystrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? EnableSystrace { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("enableSystrace", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property EnableSystrace As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: enableSystrace
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter
+  id: EnableArgumentFilter
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: EnableArgumentFilter
+  nameWithType: TraceConfig.EnableArgumentFilter
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableArgumentFilter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Turns on argument filter.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("enableArgumentFilter", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? EnableArgumentFilter { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("enableArgumentFilter", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property EnableArgumentFilter As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: enableArgumentFilter
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories
+  id: IncludedCategories
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: IncludedCategories
+  nameWithType: TraceConfig.IncludedCategories
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IncludedCategories
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Included category filters.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("includedCategories", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] IncludedCategories { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("includedCategories", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IncludedCategories As String()
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: includedCategories
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories
+  id: ExcludedCategories
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: ExcludedCategories
+  nameWithType: TraceConfig.ExcludedCategories
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExcludedCategories
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Excluded category filters.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("excludedCategories", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] ExcludedCategories { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("excludedCategories", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ExcludedCategories As String()
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: excludedCategories
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays
+  id: SyntheticDelays
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: SyntheticDelays
+  nameWithType: TraceConfig.SyntheticDelays
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SyntheticDelays
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Configuration to synthesize the delays in tracing.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("syntheticDelays", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] SyntheticDelays { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("syntheticDelays", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SyntheticDelays As String()
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: syntheticDelays
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig
+  commentId: P:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig
+  id: MemoryDumpConfig
+  parent: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig
+  langs:
+  - csharp
+  - vb
+  name: MemoryDumpConfig
+  nameWithType: TraceConfig.MemoryDumpConfig
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MemoryDumpConfig
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Tracing/TraceConfig.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Tracing
+  summary: Configuration for memory dump triggers. Used only when "memory-infra" category is enabled.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("memoryDumpConfig", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public MemoryDumpConfig MemoryDumpConfig { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Tracing.MemoryDumpConfig
+    content.vb: >-
+      <JsonProperty("memoryDumpConfig", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property MemoryDumpConfig As MemoryDumpConfig
+  overload: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: memoryDumpConfig
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Tracing
+  commentId: N:OpenQA.Selenium.DevTools.V85.Tracing
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Tracing
+  nameWithType: OpenQA.Selenium.DevTools.V85.Tracing
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Tracing
+    name: Tracing
+    href: OpenQA.Selenium.DevTools.V85.Tracing.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Tracing
+    name: Tracing
+    href: OpenQA.Selenium.DevTools.V85.Tracing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_RecordMode
+  name: RecordMode
+  nameWithType: TraceConfig.RecordMode
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.RecordMode
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues.html
+  name: TraceConfigRecordModeValues?
+  nameWithType: TraceConfigRecordModeValues?
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues
+    name: TraceConfigRecordModeValues
+    href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues
+    name: TraceConfigRecordModeValues
+    href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfigRecordModeValues.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_EnableSampling
+  name: EnableSampling
+  nameWithType: TraceConfig.EnableSampling
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSampling
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_EnableSystrace
+  name: EnableSystrace
+  nameWithType: TraceConfig.EnableSystrace
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableSystrace
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_EnableArgumentFilter
+  name: EnableArgumentFilter
+  nameWithType: TraceConfig.EnableArgumentFilter
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.EnableArgumentFilter
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_IncludedCategories
+  name: IncludedCategories
+  nameWithType: TraceConfig.IncludedCategories
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.IncludedCategories
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_ExcludedCategories
+  name: ExcludedCategories
+  nameWithType: TraceConfig.ExcludedCategories
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.ExcludedCategories
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_SyntheticDelays
+  name: SyntheticDelays
+  nameWithType: TraceConfig.SyntheticDelays
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.SyntheticDelays
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig
+  href: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.html#OpenQA_Selenium_DevTools_V85_Tracing_TraceConfig_MemoryDumpConfig
+  name: MemoryDumpConfig
+  nameWithType: TraceConfig.MemoryDumpConfig
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.TraceConfig.MemoryDumpConfig
+- uid: OpenQA.Selenium.DevTools.V85.Tracing.MemoryDumpConfig
+  commentId: T:OpenQA.Selenium.DevTools.V85.Tracing.MemoryDumpConfig
+  parent: OpenQA.Selenium.DevTools.V85.Tracing
+  href: OpenQA.Selenium.DevTools.V85.Tracing.MemoryDumpConfig.html
+  name: MemoryDumpConfig
+  nameWithType: MemoryDumpConfig
+  fullName: OpenQA.Selenium.DevTools.V85.Tracing.MemoryDumpConfig

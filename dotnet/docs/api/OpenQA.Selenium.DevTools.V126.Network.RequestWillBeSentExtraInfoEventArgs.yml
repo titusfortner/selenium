@@ -1,0 +1,739 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  id: RequestWillBeSentExtraInfoEventArgs
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  children:
+  - OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  - OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  - OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  - OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers
+  - OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId
+  - OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  langs:
+  - csharp
+  - vb
+  name: RequestWillBeSentExtraInfoEventArgs
+  nameWithType: RequestWillBeSentExtraInfoEventArgs
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestWillBeSentExtraInfoEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 12
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: >-
+    Fired when additional information about a requestWillBeSent event is available from the
+
+    network stack. Not every requestWillBeSent event will have an additional
+
+    requestWillBeSentExtraInfo fired for it, and there is no guarantee whether requestWillBeSent
+
+    or requestWillBeSentExtraInfo will be fired first for the same request.
+  example: []
+  syntax:
+    content: 'public sealed class RequestWillBeSentExtraInfoEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class RequestWillBeSentExtraInfoEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId
+  id: RequestId
+  parent: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 17
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: Request identifier. Used to match this information to an existing requestWillBeSent event.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestId")]
+
+      public string RequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("requestId")>
+
+      Public Property RequestId As String
+  overload: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestId
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  commentId: P:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  id: AssociatedCookies
+  parent: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  langs:
+  - csharp
+  - vb
+  name: AssociatedCookies
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AssociatedCookies
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: >-
+    A list of cookies potentially associated to the requested URL. This includes both cookies sent with
+
+    the request and the ones not sent; the latter are distinguished by having blockedReasons field set.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("associatedCookies")]
+
+      public AssociatedCookie[] AssociatedCookies { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie[]
+    content.vb: >-
+      <JsonProperty("associatedCookies")>
+
+      Public Property AssociatedCookies As AssociatedCookie()
+  overload: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: associatedCookies
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers
+  commentId: P:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers
+  id: Headers
+  parent: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.Headers
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Headers
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: Raw request headers as they will be sent over the wire.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("headers")]
+
+      public Headers Headers { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.Headers
+    content.vb: >-
+      <JsonProperty("headers")>
+
+      Public Property Headers As Headers
+  overload: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: headers
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  commentId: P:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  id: ConnectTiming
+  parent: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ConnectTiming
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ConnectTiming
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: Connection timing information for the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("connectTiming")]
+
+      public ConnectTiming ConnectTiming { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.ConnectTiming
+    content.vb: >-
+      <JsonProperty("connectTiming")>
+
+      Public Property ConnectTiming As ConnectTiming
+  overload: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: connectTiming
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  commentId: P:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  id: ClientSecurityState
+  parent: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ClientSecurityState
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClientSecurityState
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 54
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: The client security state set for the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("clientSecurityState", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ClientSecurityState ClientSecurityState { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.ClientSecurityState
+    content.vb: >-
+      <JsonProperty("clientSecurityState", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ClientSecurityState As ClientSecurityState
+  overload: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: clientSecurityState
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  commentId: P:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  id: SiteHasCookieInOtherPartition
+  parent: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SiteHasCookieInOtherPartition
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SiteHasCookieInOtherPartition
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Network/RequestWillBeSentExtraInfoEventArgs.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Network
+  summary: Whether the site has partitioned cookies stored in a partition different than the current one.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("siteHasCookieInOtherPartition", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? SiteHasCookieInOtherPartition { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("siteHasCookieInOtherPartition", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SiteHasCookieInOtherPartition As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: siteHasCookieInOtherPartition
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Network
+  commentId: N:OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Network
+  nameWithType: OpenQA.Selenium.DevTools.V126.Network
+  fullName: OpenQA.Selenium.DevTools.V126.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V126.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V126.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId
+  href: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.html#OpenQA_Selenium_DevTools_V126_Network_RequestWillBeSentExtraInfoEventArgs_RequestId
+  name: RequestId
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.RequestId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  href: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.html#OpenQA_Selenium_DevTools_V126_Network_RequestWillBeSentExtraInfoEventArgs_AssociatedCookies
+  name: AssociatedCookies
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.AssociatedCookies
+- uid: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie.html
+  name: AssociatedCookie[]
+  nameWithType: AssociatedCookie[]
+  fullName: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie[]
+  nameWithType.vb: AssociatedCookie()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie()
+  name.vb: AssociatedCookie()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie
+    name: AssociatedCookie
+    href: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie
+    name: AssociatedCookie
+    href: OpenQA.Selenium.DevTools.V126.Network.AssociatedCookie.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers
+  href: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.html#OpenQA_Selenium_DevTools_V126_Network_RequestWillBeSentExtraInfoEventArgs_Headers
+  name: Headers
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.Headers
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.Headers
+- uid: OpenQA.Selenium.DevTools.V126.Network.Headers
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.Headers
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.Selenium.DevTools.V126.Network.Headers.html
+  name: Headers
+  nameWithType: Headers
+  fullName: OpenQA.Selenium.DevTools.V126.Network.Headers
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  href: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.html#OpenQA_Selenium_DevTools_V126_Network_RequestWillBeSentExtraInfoEventArgs_ConnectTiming
+  name: ConnectTiming
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ConnectTiming
+- uid: OpenQA.Selenium.DevTools.V126.Network.ConnectTiming
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.ConnectTiming
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.Selenium.DevTools.V126.Network.ConnectTiming.html
+  name: ConnectTiming
+  nameWithType: ConnectTiming
+  fullName: OpenQA.Selenium.DevTools.V126.Network.ConnectTiming
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  href: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.html#OpenQA_Selenium_DevTools_V126_Network_RequestWillBeSentExtraInfoEventArgs_ClientSecurityState
+  name: ClientSecurityState
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.ClientSecurityState
+- uid: OpenQA.Selenium.DevTools.V126.Network.ClientSecurityState
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.ClientSecurityState
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.Selenium.DevTools.V126.Network.ClientSecurityState.html
+  name: ClientSecurityState
+  nameWithType: ClientSecurityState
+  fullName: OpenQA.Selenium.DevTools.V126.Network.ClientSecurityState
+- uid: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  href: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.html#OpenQA_Selenium_DevTools_V126_Network_RequestWillBeSentExtraInfoEventArgs_SiteHasCookieInOtherPartition
+  name: SiteHasCookieInOtherPartition
+  nameWithType: RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+  fullName: OpenQA.Selenium.DevTools.V126.Network.RequestWillBeSentExtraInfoEventArgs.SiteHasCookieInOtherPartition
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

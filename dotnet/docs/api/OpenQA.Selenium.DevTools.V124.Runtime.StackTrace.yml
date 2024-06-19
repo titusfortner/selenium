@@ -1,0 +1,560 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  id: StackTrace
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames
+  - OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description
+  - OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent
+  - OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId
+  langs:
+  - csharp
+  - vb
+  name: StackTrace
+  nameWithType: StackTrace
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StackTrace
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Call frames for assertions or error messages.
+  example: []
+  syntax:
+    content: public sealed class StackTrace
+    content.vb: Public NotInheritable Class StackTrace
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description
+  id: Description
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: StackTrace.Description
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Description
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: >-
+    String label of this stack trace. For async traces this may be a name of the function that
+
+    initiated the async call.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("description", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("description", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Description As String
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames
+  id: CallFrames
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  langs:
+  - csharp
+  - vb
+  name: CallFrames
+  nameWithType: StackTrace.CallFrames
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CallFrames
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: JavaScript function name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("callFrames")]
+
+      public CallFrame[] CallFrames { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame[]
+    content.vb: >-
+      <JsonProperty("callFrames")>
+
+      Public Property CallFrames As CallFrame()
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: callFrames
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent
+  id: Parent
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: StackTrace.Parent
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Parent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Asynchronous JavaScript stack trace that preceded this stack, if available.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parent", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StackTrace Parent { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+    content.vb: >-
+      <JsonProperty("parent", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Parent As StackTrace
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parent
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId
+  id: ParentId
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  langs:
+  - csharp
+  - vb
+  name: ParentId
+  nameWithType: StackTrace.ParentId
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ParentId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/StackTrace.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Asynchronous JavaScript stack trace that preceded this stack, if available.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parentId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StackTraceId ParentId { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Runtime.StackTraceId
+    content.vb: >-
+      <JsonProperty("parentId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ParentId As StackTraceId
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parentId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V124.Runtime
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.html#OpenQA_Selenium_DevTools_V124_Runtime_StackTrace_Description
+  name: Description
+  nameWithType: StackTrace.Description
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Description
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.html#OpenQA_Selenium_DevTools_V124_Runtime_StackTrace_CallFrames
+  name: CallFrames
+  nameWithType: StackTrace.CallFrames
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.CallFrames
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame.html
+  name: CallFrame[]
+  nameWithType: CallFrame[]
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame[]
+  nameWithType.vb: CallFrame()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame()
+  name.vb: CallFrame()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame
+    name: CallFrame
+    href: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame
+    name: CallFrame
+    href: OpenQA.Selenium.DevTools.V124.Runtime.CallFrame.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.html#OpenQA_Selenium_DevTools_V124_Runtime_StackTrace_Parent
+  name: Parent
+  nameWithType: StackTrace.Parent
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.Parent
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.html
+  name: StackTrace
+  nameWithType: StackTrace
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.html#OpenQA_Selenium_DevTools_V124_Runtime_StackTrace_ParentId
+  name: ParentId
+  nameWithType: StackTrace.ParentId
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.ParentId
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTraceId
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.StackTraceId
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTraceId.html
+  name: StackTraceId
+  nameWithType: StackTraceId
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTraceId

@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../script.js"></script>
-<script type="text/javascript" src="../../../script-dir/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="../../../script-dir/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="package-use-page">
@@ -60,6 +60,10 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color"><a href="#org.openqa.selenium.bidi">org.openqa.selenium.bidi</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
 <div class="col-first even-row-color"><a href="#org.openqa.selenium.bidi.browsingcontext">org.openqa.selenium.bidi.browsingcontext</a></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="#org.openqa.selenium.bidi.module">org.openqa.selenium.bidi.module</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="#org.openqa.selenium.bidi.network">org.openqa.selenium.bidi.network</a></div>
 <div class="col-last even-row-color">&nbsp;</div>
 <div class="col-first odd-row-color"><a href="#org.openqa.selenium.chrome">org.openqa.selenium.chrome</a></div>
 <div class="col-last odd-row-color">&nbsp;</div>
@@ -320,13 +324,8 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Describes a series of key/value pairs that encapsulate aspects of a browser.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/WebDriver.html#org.openqa.selenium.bidi">WebDriver</a></div>
-<div class="col-last odd-row-color">
-<div class="block">WebDriver is a remote control interface that enables introspection and control of user agents
- (browsers).</div>
-</div>
-<div class="col-first even-row-color"><a href="class-use/WebDriverException.html#org.openqa.selenium.bidi">WebDriverException</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-first odd-row-color"><a href="class-use/WebDriverException.html#org.openqa.selenium.bidi">WebDriverException</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -341,9 +340,44 @@ loadScripts(document, 'script');</script>
 <div class="block">WebDriver is a remote control interface that enables introspection and control of user agents
  (browsers).</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/WindowType.html#org.openqa.selenium.bidi.browsingcontext">WindowType</a></div>
+<div class="col-first odd-row-color"><a href="class-use/WebElement.html#org.openqa.selenium.bidi.browsingcontext">WebElement</a></div>
 <div class="col-last odd-row-color">
+<div class="block">Represents an HTML element.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/WindowType.html#org.openqa.selenium.bidi.browsingcontext">WindowType</a></div>
+<div class="col-last even-row-color">
 <div class="block">Represents the type of new browser window that may be created.</div>
+</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="org.openqa.selenium.bidi.module">
+<div class="caption"><span>Classes in <a href="package-summary.html">org.openqa.selenium</a> used by <a href="bidi/module/package-summary.html">org.openqa.selenium.bidi.module</a></span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><a href="class-use/UsernameAndPassword.html#org.openqa.selenium.bidi.module">UsernameAndPassword</a></div>
+<div class="col-last even-row-color">
+<div class="block">A combination of username and password to use when authenticating a browser with a website.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/WebDriver.html#org.openqa.selenium.bidi.module">WebDriver</a></div>
+<div class="col-last odd-row-color">
+<div class="block">WebDriver is a remote control interface that enables introspection and control of user agents
+ (browsers).</div>
+</div>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="org.openqa.selenium.bidi.network">
+<div class="caption"><span>Classes in <a href="package-summary.html">org.openqa.selenium</a> used by <a href="bidi/network/package-summary.html">org.openqa.selenium.bidi.network</a></span></div>
+<div class="summary-table two-column-summary">
+<div class="table-header col-first">Class</div>
+<div class="table-header col-last">Description</div>
+<div class="col-first even-row-color"><a href="class-use/UsernameAndPassword.html#org.openqa.selenium.bidi.network">UsernameAndPassword</a></div>
+<div class="col-last even-row-color">
+<div class="block">A combination of username and password to use when authenticating a browser with a website.</div>
 </div>
 </div>
 </section>
@@ -1124,10 +1158,6 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">Indicates that a feature or API is in active development, and so should not be relied upon.</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/Capabilities.html#org.openqa.selenium.manager">Capabilities</a></div>
-<div class="col-last odd-row-color">
-<div class="block">Describes a series of key/value pairs that encapsulate aspects of a browser.</div>
-</div>
 </div>
 </section>
 </li>
@@ -1472,15 +1502,23 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color">
 <div class="block">An interface for managing stuff you would do in a browser menu</div>
 </div>
-<div class="col-first odd-row-color"><a href="class-use/WebDriver.Timeouts.html#org.openqa.selenium.support.events">WebDriver.Timeouts</a></div>
+<div class="col-first odd-row-color"><a href="class-use/WebDriver.TargetLocator.html#org.openqa.selenium.support.events">WebDriver.TargetLocator</a></div>
 <div class="col-last odd-row-color">
+<div class="block">Used to locate a given frame or window.</div>
+</div>
+<div class="col-first even-row-color"><a href="class-use/WebDriver.Timeouts.html#org.openqa.selenium.support.events">WebDriver.Timeouts</a></div>
+<div class="col-last even-row-color">
 <div class="block">An interface for managing timeout behavior for WebDriver instances.</div>
 </div>
-<div class="col-first even-row-color"><a href="class-use/WebDriver.Window.html#org.openqa.selenium.support.events">WebDriver.Window</a></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><a href="class-use/WebElement.html#org.openqa.selenium.support.events">WebElement</a></div>
-<div class="col-last odd-row-color">
+<div class="col-first odd-row-color"><a href="class-use/WebDriver.Window.html#org.openqa.selenium.support.events">WebDriver.Window</a></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-first even-row-color"><a href="class-use/WebElement.html#org.openqa.selenium.support.events">WebElement</a></div>
+<div class="col-last even-row-color">
 <div class="block">Represents an HTML element.</div>
+</div>
+<div class="col-first odd-row-color"><a href="class-use/WindowType.html#org.openqa.selenium.support.events">WindowType</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Represents the type of new browser window that may be created.</div>
 </div>
 </div>
 </section>

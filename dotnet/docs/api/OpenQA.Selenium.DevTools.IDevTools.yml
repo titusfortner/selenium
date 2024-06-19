@@ -1,0 +1,302 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.IDevTools
+  commentId: T:OpenQA.Selenium.DevTools.IDevTools
+  id: IDevTools
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession
+  - OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession
+  - OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(OpenQA.Selenium.DevTools.DevToolsOptions)
+  - OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(System.Int32)
+  - OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession
+  langs:
+  - csharp
+  - vb
+  name: IDevTools
+  nameWithType: IDevTools
+  fullName: OpenQA.Selenium.DevTools.IDevTools
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/IDevTools.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IDevTools
+    path: ../src/webdriver/DevTools/IDevTools.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Interface indicating the driver supports the Chrome DevTools Protocol.
+  example: []
+  syntax:
+    content: public interface IDevTools
+    content.vb: Public Interface IDevTools
+- uid: OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession
+  commentId: P:OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession
+  id: HasActiveDevToolsSession
+  parent: OpenQA.Selenium.DevTools.IDevTools
+  langs:
+  - csharp
+  - vb
+  name: HasActiveDevToolsSession
+  nameWithType: IDevTools.HasActiveDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/IDevTools.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasActiveDevToolsSession
+    path: ../src/webdriver/DevTools/IDevTools.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets a value indicating whether a DevTools session is active.
+  example: []
+  syntax:
+    content: bool HasActiveDevToolsSession { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property HasActiveDevToolsSession As Boolean
+  overload: OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession*
+- uid: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession
+  commentId: M:OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession
+  id: GetDevToolsSession
+  parent: OpenQA.Selenium.DevTools.IDevTools
+  langs:
+  - csharp
+  - vb
+  name: GetDevToolsSession()
+  nameWithType: IDevTools.GetDevToolsSession()
+  fullName: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/IDevTools.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDevToolsSession
+    path: ../src/webdriver/DevTools/IDevTools.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Creates a session to communicate with a browser using a Developer Tools debugging protocol.
+  example: []
+  syntax:
+    content: DevToolsSession GetDevToolsSession()
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsSession
+      description: The active session to use to communicate with the Developer Tools debugging protocol.
+    content.vb: Function GetDevToolsSession() As DevToolsSession
+  overload: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession*
+- uid: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(OpenQA.Selenium.DevTools.DevToolsOptions)
+  commentId: M:OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(OpenQA.Selenium.DevTools.DevToolsOptions)
+  id: GetDevToolsSession(OpenQA.Selenium.DevTools.DevToolsOptions)
+  parent: OpenQA.Selenium.DevTools.IDevTools
+  langs:
+  - csharp
+  - vb
+  name: GetDevToolsSession(DevToolsOptions)
+  nameWithType: IDevTools.GetDevToolsSession(DevToolsOptions)
+  fullName: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(OpenQA.Selenium.DevTools.DevToolsOptions)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/IDevTools.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDevToolsSession
+    path: ../src/webdriver/DevTools/IDevTools.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Creates a session to communicate with a browser using a specific version of the Developer Tools debugging protocol.
+  example: []
+  syntax:
+    content: DevToolsSession GetDevToolsSession(DevToolsOptions options)
+    parameters:
+    - id: options
+      type: OpenQA.Selenium.DevTools.DevToolsOptions
+      description: The options for the DevToolsSession to use.
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsSession
+      description: The active session to use to communicate with the Developer Tools debugging protocol.
+    content.vb: Function GetDevToolsSession(options As DevToolsOptions) As DevToolsSession
+  overload: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession*
+- uid: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(System.Int32)
+  commentId: M:OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(System.Int32)
+  id: GetDevToolsSession(System.Int32)
+  parent: OpenQA.Selenium.DevTools.IDevTools
+  langs:
+  - csharp
+  - vb
+  name: GetDevToolsSession(int)
+  nameWithType: IDevTools.GetDevToolsSession(int)
+  fullName: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/IDevTools.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDevToolsSession
+    path: ../src/webdriver/DevTools/IDevTools.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Creates a session to communicate with a browser using a specific version of the Developer Tools debugging protocol.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use GetDevToolsSession(DevToolsOptions options)")]
+
+      DevToolsSession GetDevToolsSession(int protocolVersion)
+    parameters:
+    - id: protocolVersion
+      type: System.Int32
+      description: The specific version of the Developer Tools debugging protocol to use.
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsSession
+      description: The active session to use to communicate with the Developer Tools debugging protocol.
+    content.vb: >-
+      <Obsolete("Use GetDevToolsSession(DevToolsOptions options)")>
+
+      Function GetDevToolsSession(protocolVersion As Integer) As DevToolsSession
+  overload: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use GetDevToolsSession(DevToolsOptions options)
+  nameWithType.vb: IDevTools.GetDevToolsSession(Integer)
+  fullName.vb: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession(Integer)
+  name.vb: GetDevToolsSession(Integer)
+- uid: OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession
+  commentId: M:OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession
+  id: CloseDevToolsSession
+  parent: OpenQA.Selenium.DevTools.IDevTools
+  langs:
+  - csharp
+  - vb
+  name: CloseDevToolsSession()
+  nameWithType: IDevTools.CloseDevToolsSession()
+  fullName: OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/IDevTools.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CloseDevToolsSession
+    path: ../src/webdriver/DevTools/IDevTools.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Closes a DevTools session
+  example: []
+  syntax:
+    content: void CloseDevToolsSession()
+    content.vb: Sub CloseDevToolsSession()
+  overload: OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession*
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession*
+  commentId: Overload:OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession
+  href: OpenQA.Selenium.DevTools.IDevTools.html#OpenQA_Selenium_DevTools_IDevTools_HasActiveDevToolsSession
+  name: HasActiveDevToolsSession
+  nameWithType: IDevTools.HasActiveDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevTools.HasActiveDevToolsSession
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession*
+  commentId: Overload:OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession
+  href: OpenQA.Selenium.DevTools.IDevTools.html#OpenQA_Selenium_DevTools_IDevTools_GetDevToolsSession
+  name: GetDevToolsSession
+  nameWithType: IDevTools.GetDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevTools.GetDevToolsSession
+- uid: OpenQA.Selenium.DevTools.DevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html
+  name: DevToolsSession
+  nameWithType: DevToolsSession
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession
+- uid: OpenQA.Selenium.DevTools.DevToolsOptions
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsOptions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsOptions.html
+  name: DevToolsOptions
+  nameWithType: DevToolsOptions
+  fullName: OpenQA.Selenium.DevTools.DevToolsOptions
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession*
+  commentId: Overload:OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession
+  href: OpenQA.Selenium.DevTools.IDevTools.html#OpenQA_Selenium_DevTools_IDevTools_CloseDevToolsSession
+  name: CloseDevToolsSession
+  nameWithType: IDevTools.CloseDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevTools.CloseDevToolsSession

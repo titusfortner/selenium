@@ -1,0 +1,522 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox
+  commentId: T:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox
+  id: InlineTextBox
+  parent: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  children:
+  - OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox
+  - OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters
+  - OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex
+  langs:
+  - csharp
+  - vb
+  name: InlineTextBox
+  nameWithType: InlineTextBox
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InlineTextBox
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  summary: >-
+    Details of post layout rendered text positions. The exact layout should not be regarded as
+
+    stable and may change between versions.
+  example: []
+  syntax:
+    content: public sealed class InlineTextBox
+    content.vb: Public NotInheritable Class InlineTextBox
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox
+  commentId: P:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox
+  id: BoundingBox
+  parent: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox
+  langs:
+  - csharp
+  - vb
+  name: BoundingBox
+  nameWithType: InlineTextBox.BoundingBox
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BoundingBox
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  summary: The bounding box in document coordinates. Note that scroll offset of the document is ignored.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("boundingBox")]
+
+      public Rect BoundingBox { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.DOM.Rect
+    content.vb: >-
+      <JsonProperty("boundingBox")>
+
+      Public Property BoundingBox As Rect
+  overload: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: boundingBox
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex
+  commentId: P:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex
+  id: StartCharacterIndex
+  parent: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox
+  langs:
+  - csharp
+  - vb
+  name: StartCharacterIndex
+  nameWithType: InlineTextBox.StartCharacterIndex
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartCharacterIndex
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  summary: >-
+    The starting index in characters, for this post layout textbox substring. Characters that
+
+    would be represented as a surrogate pair in UTF-16 have length 2.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("startCharacterIndex")]
+
+      public long StartCharacterIndex { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("startCharacterIndex")>
+
+      Public Property StartCharacterIndex As Long
+  overload: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: startCharacterIndex
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters
+  commentId: P:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters
+  id: NumCharacters
+  parent: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox
+  langs:
+  - csharp
+  - vb
+  name: NumCharacters
+  nameWithType: InlineTextBox.NumCharacters
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NumCharacters
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/DOMSnapshot/InlineTextBox.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  summary: >-
+    The number of characters in this post layout textbox substring. Characters that would be
+
+    represented as a surrogate pair in UTF-16 have length 2.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("numCharacters")]
+
+      public long NumCharacters { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("numCharacters")>
+
+      Public Property NumCharacters As Long
+  overload: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: numCharacters
+references:
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  commentId: N:OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  nameWithType: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V124.DOMSnapshot.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V124.DOMSnapshot.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox
+  href: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.html#OpenQA_Selenium_DevTools_V124_DOMSnapshot_InlineTextBox_BoundingBox
+  name: BoundingBox
+  nameWithType: InlineTextBox.BoundingBox
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.BoundingBox
+- uid: OpenQA.Selenium.DevTools.V124.DOM.Rect
+  commentId: T:OpenQA.Selenium.DevTools.V124.DOM.Rect
+  parent: OpenQA.Selenium.DevTools.V124.DOM
+  href: OpenQA.Selenium.DevTools.V124.DOM.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: OpenQA.Selenium.DevTools.V124.DOM.Rect
+- uid: OpenQA.Selenium.DevTools.V124.DOM
+  commentId: N:OpenQA.Selenium.DevTools.V124.DOM
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.DOM
+  nameWithType: OpenQA.Selenium.DevTools.V124.DOM
+  fullName: OpenQA.Selenium.DevTools.V124.DOM
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V124.DOM.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V124.DOM.html
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex
+  href: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.html#OpenQA_Selenium_DevTools_V124_DOMSnapshot_InlineTextBox_StartCharacterIndex
+  name: StartCharacterIndex
+  nameWithType: InlineTextBox.StartCharacterIndex
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.StartCharacterIndex
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters
+  href: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.html#OpenQA_Selenium_DevTools_V124_DOMSnapshot_InlineTextBox_NumCharacters
+  name: NumCharacters
+  nameWithType: InlineTextBox.NumCharacters
+  fullName: OpenQA.Selenium.DevTools.V124.DOMSnapshot.InlineTextBox.NumCharacters

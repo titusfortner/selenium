@@ -1,0 +1,808 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  id: CookieIssueDetails
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  children:
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request
+  - OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies
+  langs:
+  - csharp
+  - vb
+  name: CookieIssueDetails
+  nameWithType: CookieIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CookieIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: >-
+    This information is currently necessary, as the front-end has a difficult
+
+    time finding a specific cookie. With this, we can convey specific error
+
+    information without the cookie.
+  example: []
+  syntax:
+    content: public sealed class CookieIssueDetails
+    content.vb: Public NotInheritable Class CookieIssueDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie
+  id: Cookie
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: Cookie
+  nameWithType: CookieIssueDetails.Cookie
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Cookie
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 18
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: >-
+    If AffectedCookie is not set then rawCookieLine contains the raw
+
+    Set-Cookie header string. This hints at a problem where the
+
+    cookie line is syntactically or semantically malformed in a way
+
+    that no valid cookie could be created.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cookie", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AffectedCookie Cookie { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.AffectedCookie
+    content.vb: >-
+      <JsonProperty("cookie", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Cookie As AffectedCookie
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cookie
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine
+  id: RawCookieLine
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: RawCookieLine
+  nameWithType: CookieIssueDetails.RawCookieLine
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RawCookieLine
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: rawCookieLine
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("rawCookieLine", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string RawCookieLine { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("rawCookieLine", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RawCookieLine As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: rawCookieLine
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons
+  id: CookieWarningReasons
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: CookieWarningReasons
+  nameWithType: CookieIssueDetails.CookieWarningReasons
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CookieWarningReasons
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: cookieWarningReasons
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cookieWarningReasons")]
+
+      public CookieWarningReason[] CookieWarningReasons { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason[]
+    content.vb: >-
+      <JsonProperty("cookieWarningReasons")>
+
+      Public Property CookieWarningReasons As CookieWarningReason()
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cookieWarningReasons
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons
+  id: CookieExclusionReasons
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: CookieExclusionReasons
+  nameWithType: CookieIssueDetails.CookieExclusionReasons
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CookieExclusionReasons
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: cookieExclusionReasons
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cookieExclusionReasons")]
+
+      public CookieExclusionReason[] CookieExclusionReasons { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason[]
+    content.vb: >-
+      <JsonProperty("cookieExclusionReasons")>
+
+      Public Property CookieExclusionReasons As CookieExclusionReason()
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cookieExclusionReasons
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation
+  id: Operation
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: Operation
+  nameWithType: CookieIssueDetails.Operation
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Operation
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 55
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: >-
+    Optionally identifies the site-for-cookies and the cookie url, which
+
+    may be used by the front-end as additional context.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("operation")]
+
+      public CookieOperation Operation { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.CookieOperation
+    content.vb: >-
+      <JsonProperty("operation")>
+
+      Public Property Operation As CookieOperation
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: operation
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies
+  id: SiteForCookies
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: SiteForCookies
+  nameWithType: CookieIssueDetails.SiteForCookies
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SiteForCookies
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 64
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: siteForCookies
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("siteForCookies", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string SiteForCookies { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("siteForCookies", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SiteForCookies As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: siteForCookies
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl
+  id: CookieUrl
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: CookieUrl
+  nameWithType: CookieIssueDetails.CookieUrl
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CookieUrl
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: cookieUrl
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cookieUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string CookieUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("cookieUrl", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CookieUrl As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cookieUrl
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request
+  id: Request
+  parent: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: Request
+  nameWithType: CookieIssueDetails.Request
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Request
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/CookieIssueDetails.cs
+    startLine: 82
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: request
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("request", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AffectedRequest Request { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+    content.vb: >-
+      <JsonProperty("request", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Request As AffectedRequest
+  overload: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: request
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Audits
+  commentId: N:OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Audits
+  nameWithType: OpenQA.Selenium.DevTools.V126.Audits
+  fullName: OpenQA.Selenium.DevTools.V126.Audits
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V126.Audits.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V126.Audits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_Cookie
+  name: Cookie
+  nameWithType: CookieIssueDetails.Cookie
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Cookie
+- uid: OpenQA.Selenium.DevTools.V126.Audits.AffectedCookie
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.AffectedCookie
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.AffectedCookie.html
+  name: AffectedCookie
+  nameWithType: AffectedCookie
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.AffectedCookie
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_RawCookieLine
+  name: RawCookieLine
+  nameWithType: CookieIssueDetails.RawCookieLine
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.RawCookieLine
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_CookieWarningReasons
+  name: CookieWarningReasons
+  nameWithType: CookieIssueDetails.CookieWarningReasons
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieWarningReasons
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason.html
+  name: CookieWarningReason[]
+  nameWithType: CookieWarningReason[]
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason[]
+  nameWithType.vb: CookieWarningReason()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason()
+  name.vb: CookieWarningReason()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason
+    name: CookieWarningReason
+    href: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason
+    name: CookieWarningReason
+    href: OpenQA.Selenium.DevTools.V126.Audits.CookieWarningReason.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_CookieExclusionReasons
+  name: CookieExclusionReasons
+  nameWithType: CookieIssueDetails.CookieExclusionReasons
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieExclusionReasons
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason.html
+  name: CookieExclusionReason[]
+  nameWithType: CookieExclusionReason[]
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason[]
+  nameWithType.vb: CookieExclusionReason()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason()
+  name.vb: CookieExclusionReason()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason
+    name: CookieExclusionReason
+    href: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason
+    name: CookieExclusionReason
+    href: OpenQA.Selenium.DevTools.V126.Audits.CookieExclusionReason.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_Operation
+  name: Operation
+  nameWithType: CookieIssueDetails.Operation
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Operation
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieOperation
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.CookieOperation
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieOperation.html
+  name: CookieOperation
+  nameWithType: CookieOperation
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieOperation
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_SiteForCookies
+  name: SiteForCookies
+  nameWithType: CookieIssueDetails.SiteForCookies
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.SiteForCookies
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_CookieUrl
+  name: CookieUrl
+  nameWithType: CookieIssueDetails.CookieUrl
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.CookieUrl
+- uid: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request
+  href: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_CookieIssueDetails_Request
+  name: Request
+  nameWithType: CookieIssueDetails.Request
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.CookieIssueDetails.Request
+- uid: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest.html
+  name: AffectedRequest
+  nameWithType: AffectedRequest
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.AffectedRequest

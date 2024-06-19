@@ -1,0 +1,1058 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  id: PerformanceAdapter
+  parent: OpenQA.Selenium.DevTools.V124.Performance
+  children:
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable(OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable(OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics(OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Metrics
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session
+  - OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain(OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: PerformanceAdapter
+  nameWithType: PerformanceAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PerformanceAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Represents an adapter for the Performance domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class PerformanceAdapter
+    content.vb: Public Class PerformanceAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: PerformanceAdapter(IDevToolsSession)
+  nameWithType: PerformanceAdapter.PerformanceAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.PerformanceAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Initializes a new instance of the PerformanceAdapter class.
+  example: []
+  syntax:
+    content: public PerformanceAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.#ctor*
+  nameWithType.vb: PerformanceAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: PerformanceAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Metrics
+  commentId: E:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Metrics
+  id: Metrics
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: Metrics
+  nameWithType: PerformanceAdapter.Metrics
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Metrics
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Metrics
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Current values of the metrics.
+  example: []
+  syntax:
+    content: public event EventHandler<MetricsEventArgs> Metrics
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs}
+    content.vb: Public Event Metrics As EventHandler(Of MetricsEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable(OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable(OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: PerformanceAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable(OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Disable collecting and reporting metrics.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable*
+  nameWithType.vb: PerformanceAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable(OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable(OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable(OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: PerformanceAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable(OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Enable collecting and reporting metrics.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable*
+  nameWithType.vb: PerformanceAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable(OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain(OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain(OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetTimeDomain(OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetTimeDomain(SetTimeDomainCommandSettings, CancellationToken, int?, bool)
+  nameWithType: PerformanceAdapter.SetTimeDomain(SetTimeDomainCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain(OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetTimeDomain
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: >-
+    Sets time domain to use for collecting and reporting duration metrics.
+
+    Note that this must be called before enabling metrics collection. Calling
+
+    this method while metrics collection is enabled returns an error.
+  example: []
+  syntax:
+    content: public Task<SetTimeDomainCommandResponse> SetTimeDomain(SetTimeDomainCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse}
+    content.vb: Public Function SetTimeDomain(command As SetTimeDomainCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetTimeDomainCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain*
+  nameWithType.vb: PerformanceAdapter.SetTimeDomain(SetTimeDomainCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain(OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetTimeDomain(SetTimeDomainCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics(OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics(OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetMetrics(OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetMetrics(GetMetricsCommandSettings, CancellationToken, int?, bool)
+  nameWithType: PerformanceAdapter.GetMetrics(GetMetricsCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics(OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetMetrics
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Performance/PerformanceAdapter.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Performance
+  summary: Retrieve current values of run-time metrics.
+  example: []
+  syntax:
+    content: public Task<GetMetricsCommandResponse> GetMetrics(GetMetricsCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse}
+    content.vb: Public Function GetMetrics(command As GetMetricsCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetMetricsCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics*
+  nameWithType.vb: PerformanceAdapter.GetMetrics(GetMetricsCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics(OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetMetrics(GetMetricsCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Performance
+  commentId: N:OpenQA.Selenium.DevTools.V124.Performance
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Performance
+  nameWithType: OpenQA.Selenium.DevTools.V124.Performance
+  fullName: OpenQA.Selenium.DevTools.V124.Performance
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Performance
+    name: Performance
+    href: OpenQA.Selenium.DevTools.V124.Performance.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Performance
+    name: Performance
+    href: OpenQA.Selenium.DevTools.V124.Performance.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.html#OpenQA_Selenium_DevTools_V124_Performance_PerformanceAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: PerformanceAdapter
+  nameWithType: PerformanceAdapter.PerformanceAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.PerformanceAdapter
+  nameWithType.vb: PerformanceAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session
+  href: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.html#OpenQA_Selenium_DevTools_V124_Performance_PerformanceAdapter_Session
+  name: Session
+  nameWithType: PerformanceAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<MetricsEventArgs>
+  nameWithType: EventHandler<MetricsEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs>
+  nameWithType.vb: EventHandler(Of MetricsEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs)
+  name.vb: EventHandler(Of MetricsEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs
+    name: MetricsEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs
+    name: MetricsEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Performance.MetricsEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.html#OpenQA_Selenium_DevTools_V124_Performance_PerformanceAdapter_Disable_OpenQA_Selenium_DevTools_V124_Performance_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: PerformanceAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Performance
+  href: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.DisableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.html#OpenQA_Selenium_DevTools_V124_Performance_PerformanceAdapter_Enable_OpenQA_Selenium_DevTools_V124_Performance_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: PerformanceAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Performance
+  href: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain
+  href: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.html#OpenQA_Selenium_DevTools_V124_Performance_PerformanceAdapter_SetTimeDomain_OpenQA_Selenium_DevTools_V124_Performance_SetTimeDomainCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetTimeDomain
+  nameWithType: PerformanceAdapter.SetTimeDomain
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.SetTimeDomain
+- uid: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Performance
+  href: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings.html
+  name: SetTimeDomainCommandSettings
+  nameWithType: SetTimeDomainCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetTimeDomainCommandResponse>
+  nameWithType: Task<SetTimeDomainCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse>
+  nameWithType.vb: Task(Of SetTimeDomainCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse)
+  name.vb: Task(Of SetTimeDomainCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse
+    name: SetTimeDomainCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse
+    name: SetTimeDomainCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.SetTimeDomainCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics
+  href: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.html#OpenQA_Selenium_DevTools_V124_Performance_PerformanceAdapter_GetMetrics_OpenQA_Selenium_DevTools_V124_Performance_GetMetricsCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetMetrics
+  nameWithType: PerformanceAdapter.GetMetrics
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.PerformanceAdapter.GetMetrics
+- uid: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Performance
+  href: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings.html
+  name: GetMetricsCommandSettings
+  nameWithType: GetMetricsCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetMetricsCommandResponse>
+  nameWithType: Task<GetMetricsCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse>
+  nameWithType.vb: Task(Of GetMetricsCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse)
+  name.vb: Task(Of GetMetricsCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse
+    name: GetMetricsCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse
+    name: GetMetricsCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Performance.GetMetricsCommandResponse.html
+  - name: )

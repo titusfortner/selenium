@@ -1,0 +1,1488 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  id: ScriptParsedEventArgs
+  parent: OpenQA.Selenium.DevTools.V124.Debugger
+  children:
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine
+  - OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url
+  langs:
+  - csharp
+  - vb
+  name: ScriptParsedEventArgs
+  nameWithType: ScriptParsedEventArgs
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScriptParsedEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: >-
+    Fired when virtual machine parses script. This event is also fired for all known and uncollected
+
+    scripts upon enabling debugger.
+  example: []
+  syntax:
+    content: 'public sealed class ScriptParsedEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class ScriptParsedEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId
+  id: ScriptId
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ScriptId
+  nameWithType: ScriptParsedEventArgs.ScriptId
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScriptId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 15
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Identifier of the script parsed.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("scriptId")]
+
+      public string ScriptId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("scriptId")>
+
+      Public Property ScriptId As String
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: scriptId
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: ScriptParsedEventArgs.Url
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: URL or name of the script parsed (if any).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine
+  id: StartLine
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: StartLine
+  nameWithType: ScriptParsedEventArgs.StartLine
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartLine
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Line offset of the script within the resource with given URL (for script tags).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("startLine")]
+
+      public long StartLine { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("startLine")>
+
+      Public Property StartLine As Long
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: startLine
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn
+  id: StartColumn
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: StartColumn
+  nameWithType: ScriptParsedEventArgs.StartColumn
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartColumn
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Column offset of the script within the resource with given URL.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("startColumn")]
+
+      public long StartColumn { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("startColumn")>
+
+      Public Property StartColumn As Long
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: startColumn
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine
+  id: EndLine
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: EndLine
+  nameWithType: ScriptParsedEventArgs.EndLine
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EndLine
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Last line of the script.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("endLine")]
+
+      public long EndLine { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("endLine")>
+
+      Public Property EndLine As Long
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: endLine
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn
+  id: EndColumn
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: EndColumn
+  nameWithType: ScriptParsedEventArgs.EndColumn
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EndColumn
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Length of the last line of the script.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("endColumn")]
+
+      public long EndColumn { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("endColumn")>
+
+      Public Property EndColumn As Long
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: endColumn
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId
+  id: ExecutionContextId
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ExecutionContextId
+  nameWithType: ScriptParsedEventArgs.ExecutionContextId
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecutionContextId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 69
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Specifies script creation context.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("executionContextId")]
+
+      public long ExecutionContextId { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("executionContextId")>
+
+      Public Property ExecutionContextId As Long
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: executionContextId
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash
+  id: Hash
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Hash
+  nameWithType: ScriptParsedEventArgs.Hash
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Hash
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: Content hash of the script, SHA-256.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hash")]
+
+      public string Hash { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("hash")>
+
+      Public Property Hash As String
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hash
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData
+  id: ExecutionContextAuxData
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ExecutionContextAuxData
+  nameWithType: ScriptParsedEventArgs.ExecutionContextAuxData
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecutionContextAuxData
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: "Embedder-specific auxiliary data likely matching {isDefault: boolean, type: 'default'|'isolated'|'worker', frameId: string}"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("executionContextAuxData", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public object ExecutionContextAuxData { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: >-
+      <JsonProperty("executionContextAuxData", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ExecutionContextAuxData As Object
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: executionContextAuxData
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit
+  id: IsLiveEdit
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: IsLiveEdit
+  nameWithType: ScriptParsedEventArgs.IsLiveEdit
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsLiveEdit
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 96
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: True, if this script is generated as a result of the live edit operation.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isLiveEdit", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IsLiveEdit { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("isLiveEdit", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IsLiveEdit As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isLiveEdit
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL
+  id: SourceMapURL
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: SourceMapURL
+  nameWithType: ScriptParsedEventArgs.SourceMapURL
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SourceMapURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 105
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: URL of source map associated with script (if any).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sourceMapURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string SourceMapURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("sourceMapURL", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SourceMapURL As String
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sourceMapURL
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL
+  id: HasSourceURL
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: HasSourceURL
+  nameWithType: ScriptParsedEventArgs.HasSourceURL
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HasSourceURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 114
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: True, if this script has sourceURL.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("hasSourceURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? HasSourceURL { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("hasSourceURL", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HasSourceURL As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: hasSourceURL
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule
+  id: IsModule
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: IsModule
+  nameWithType: ScriptParsedEventArgs.IsModule
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsModule
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 123
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: True, if this script is ES6 module.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isModule", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IsModule { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("isModule", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IsModule As Boolean?
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isModule
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length
+  id: Length
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Length
+  nameWithType: ScriptParsedEventArgs.Length
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Length
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 132
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: This script length.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("length", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? Length { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("length", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Length As Long?
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: length
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace
+  id: StackTrace
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: StackTrace
+  nameWithType: ScriptParsedEventArgs.StackTrace
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StackTrace
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 141
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: JavaScript top stack frame of where the script parsed event was triggered if available.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("stackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StackTrace StackTrace { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+    content.vb: >-
+      <JsonProperty("stackTrace", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StackTrace As StackTrace
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stackTrace
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset
+  id: CodeOffset
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: CodeOffset
+  nameWithType: ScriptParsedEventArgs.CodeOffset
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CodeOffset
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 150
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: If the scriptLanguage is WebAssembly, the code section offset in the module.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("codeOffset", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? CodeOffset { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("codeOffset", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CodeOffset As Long?
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: codeOffset
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage
+  id: ScriptLanguage
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ScriptLanguage
+  nameWithType: ScriptParsedEventArgs.ScriptLanguage
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScriptLanguage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 159
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: The language of the script.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("scriptLanguage", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ScriptLanguage? ScriptLanguage { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage}
+    content.vb: >-
+      <JsonProperty("scriptLanguage", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ScriptLanguage As ScriptLanguage?
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: scriptLanguage
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols
+  id: DebugSymbols
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DebugSymbols
+  nameWithType: ScriptParsedEventArgs.DebugSymbols
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DebugSymbols
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 168
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: If the scriptLanguage is WebASsembly, the source of debug symbols for the module.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("debugSymbols", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public DebugSymbols DebugSymbols { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Debugger.DebugSymbols
+    content.vb: >-
+      <JsonProperty("debugSymbols", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property DebugSymbols As DebugSymbols
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: debugSymbols
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName
+  commentId: P:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName
+  id: EmbedderName
+  parent: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: EmbedderName
+  nameWithType: ScriptParsedEventArgs.EmbedderName
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EmbedderName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Debugger/ScriptParsedEventArgs.cs
+    startLine: 177
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Debugger
+  summary: The name the embedder supplied for this script.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("embedderName", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string EmbedderName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("embedderName", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property EmbedderName As String
+  overload: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: embedderName
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Debugger
+  commentId: N:OpenQA.Selenium.DevTools.V124.Debugger
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Debugger
+  nameWithType: OpenQA.Selenium.DevTools.V124.Debugger
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Debugger
+    name: Debugger
+    href: OpenQA.Selenium.DevTools.V124.Debugger.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Debugger
+    name: Debugger
+    href: OpenQA.Selenium.DevTools.V124.Debugger.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_ScriptId
+  name: ScriptId
+  nameWithType: ScriptParsedEventArgs.ScriptId
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_Url
+  name: Url
+  nameWithType: ScriptParsedEventArgs.Url
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Url
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_StartLine
+  name: StartLine
+  nameWithType: ScriptParsedEventArgs.StartLine
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartLine
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_StartColumn
+  name: StartColumn
+  nameWithType: ScriptParsedEventArgs.StartColumn
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StartColumn
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_EndLine
+  name: EndLine
+  nameWithType: ScriptParsedEventArgs.EndLine
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndLine
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_EndColumn
+  name: EndColumn
+  nameWithType: ScriptParsedEventArgs.EndColumn
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EndColumn
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_ExecutionContextId
+  name: ExecutionContextId
+  nameWithType: ScriptParsedEventArgs.ExecutionContextId
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextId
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_Hash
+  name: Hash
+  nameWithType: ScriptParsedEventArgs.Hash
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Hash
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_ExecutionContextAuxData
+  name: ExecutionContextAuxData
+  nameWithType: ScriptParsedEventArgs.ExecutionContextAuxData
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ExecutionContextAuxData
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_IsLiveEdit
+  name: IsLiveEdit
+  nameWithType: ScriptParsedEventArgs.IsLiveEdit
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsLiveEdit
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_SourceMapURL
+  name: SourceMapURL
+  nameWithType: ScriptParsedEventArgs.SourceMapURL
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.SourceMapURL
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_HasSourceURL
+  name: HasSourceURL
+  nameWithType: ScriptParsedEventArgs.HasSourceURL
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.HasSourceURL
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_IsModule
+  name: IsModule
+  nameWithType: ScriptParsedEventArgs.IsModule
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.IsModule
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_Length
+  name: Length
+  nameWithType: ScriptParsedEventArgs.Length
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.Length
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_StackTrace
+  name: StackTrace
+  nameWithType: ScriptParsedEventArgs.StackTrace
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.StackTrace
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace.html
+  name: StackTrace
+  nameWithType: StackTrace
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.StackTrace
+- uid: OpenQA.Selenium.DevTools.V124.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V124.Runtime
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_CodeOffset
+  name: CodeOffset
+  nameWithType: ScriptParsedEventArgs.CodeOffset
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.CodeOffset
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_ScriptLanguage
+  name: ScriptLanguage
+  nameWithType: ScriptParsedEventArgs.ScriptLanguage
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.ScriptLanguage
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage.html
+  name: ScriptLanguage?
+  nameWithType: ScriptLanguage?
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage
+    name: ScriptLanguage
+    href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage
+    name: ScriptLanguage
+    href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptLanguage.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_DebugSymbols
+  name: DebugSymbols
+  nameWithType: ScriptParsedEventArgs.DebugSymbols
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.DebugSymbols
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.DebugSymbols
+  commentId: T:OpenQA.Selenium.DevTools.V124.Debugger.DebugSymbols
+  parent: OpenQA.Selenium.DevTools.V124.Debugger
+  href: OpenQA.Selenium.DevTools.V124.Debugger.DebugSymbols.html
+  name: DebugSymbols
+  nameWithType: DebugSymbols
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.DebugSymbols
+- uid: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName
+  href: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.html#OpenQA_Selenium_DevTools_V124_Debugger_ScriptParsedEventArgs_EmbedderName
+  name: EmbedderName
+  nameWithType: ScriptParsedEventArgs.EmbedderName
+  fullName: OpenQA.Selenium.DevTools.V124.Debugger.ScriptParsedEventArgs.EmbedderName

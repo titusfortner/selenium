@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IHasDownloads
+  commentId: T:OpenQA.Selenium.IHasDownloads
+  id: IHasDownloads
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles
+  - OpenQA.Selenium.IHasDownloads.DownloadFile(System.String,System.String)
+  - OpenQA.Selenium.IHasDownloads.GetDownloadableFiles
+  langs:
+  - csharp
+  - vb
+  name: IHasDownloads
+  nameWithType: IHasDownloads
+  fullName: OpenQA.Selenium.IHasDownloads
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IHasDownloads.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IHasDownloads
+    path: ../src/webdriver/IHasDownloads.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Interface indicating the driver can handle downloading remote files.
+  example: []
+  syntax:
+    content: public interface IHasDownloads
+    content.vb: Public Interface IHasDownloads
+- uid: OpenQA.Selenium.IHasDownloads.GetDownloadableFiles
+  commentId: M:OpenQA.Selenium.IHasDownloads.GetDownloadableFiles
+  id: GetDownloadableFiles
+  parent: OpenQA.Selenium.IHasDownloads
+  langs:
+  - csharp
+  - vb
+  name: GetDownloadableFiles()
+  nameWithType: IHasDownloads.GetDownloadableFiles()
+  fullName: OpenQA.Selenium.IHasDownloads.GetDownloadableFiles()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IHasDownloads.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDownloadableFiles
+    path: ../src/webdriver/IHasDownloads.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Retrieves the downloadable files.
+  example: []
+  syntax:
+    content: IReadOnlyList<string> GetDownloadableFiles()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+      description: A read-only list of file names available for download.
+    content.vb: Function GetDownloadableFiles() As IReadOnlyList(Of String)
+  overload: OpenQA.Selenium.IHasDownloads.GetDownloadableFiles*
+- uid: OpenQA.Selenium.IHasDownloads.DownloadFile(System.String,System.String)
+  commentId: M:OpenQA.Selenium.IHasDownloads.DownloadFile(System.String,System.String)
+  id: DownloadFile(System.String,System.String)
+  parent: OpenQA.Selenium.IHasDownloads
+  langs:
+  - csharp
+  - vb
+  name: DownloadFile(string, string)
+  nameWithType: IHasDownloads.DownloadFile(string, string)
+  fullName: OpenQA.Selenium.IHasDownloads.DownloadFile(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IHasDownloads.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DownloadFile
+    path: ../src/webdriver/IHasDownloads.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Downloads a file with the specified file name and returns a dictionary containing the downloaded file's data.
+  example: []
+  syntax:
+    content: void DownloadFile(string fileName, string targetDirectory)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The name of the file to be downloaded.
+    - id: targetDirectory
+      type: System.String
+      description: The location to save the downloaded file.
+    content.vb: Sub DownloadFile(fileName As String, targetDirectory As String)
+  overload: OpenQA.Selenium.IHasDownloads.DownloadFile*
+  nameWithType.vb: IHasDownloads.DownloadFile(String, String)
+  fullName.vb: OpenQA.Selenium.IHasDownloads.DownloadFile(String, String)
+  name.vb: DownloadFile(String, String)
+- uid: OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles
+  commentId: M:OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles
+  id: DeleteDownloadableFiles
+  parent: OpenQA.Selenium.IHasDownloads
+  langs:
+  - csharp
+  - vb
+  name: DeleteDownloadableFiles()
+  nameWithType: IHasDownloads.DeleteDownloadableFiles()
+  fullName: OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IHasDownloads.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DeleteDownloadableFiles
+    path: ../src/webdriver/IHasDownloads.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Deletes the downloadable files.
+  example: []
+  syntax:
+    content: void DeleteDownloadableFiles()
+    content.vb: Sub DeleteDownloadableFiles()
+  overload: OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IHasDownloads.GetDownloadableFiles*
+  commentId: Overload:OpenQA.Selenium.IHasDownloads.GetDownloadableFiles
+  href: OpenQA.Selenium.IHasDownloads.html#OpenQA_Selenium_IHasDownloads_GetDownloadableFiles
+  name: GetDownloadableFiles
+  nameWithType: IHasDownloads.GetDownloadableFiles
+  fullName: OpenQA.Selenium.IHasDownloads.GetDownloadableFiles
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.IHasDownloads.DownloadFile*
+  commentId: Overload:OpenQA.Selenium.IHasDownloads.DownloadFile
+  href: OpenQA.Selenium.IHasDownloads.html#OpenQA_Selenium_IHasDownloads_DownloadFile_System_String_System_String_
+  name: DownloadFile
+  nameWithType: IHasDownloads.DownloadFile
+  fullName: OpenQA.Selenium.IHasDownloads.DownloadFile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles*
+  commentId: Overload:OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles
+  href: OpenQA.Selenium.IHasDownloads.html#OpenQA_Selenium_IHasDownloads_DeleteDownloadableFiles
+  name: DeleteDownloadableFiles
+  nameWithType: IHasDownloads.DeleteDownloadableFiles
+  fullName: OpenQA.Selenium.IHasDownloads.DeleteDownloadableFiles

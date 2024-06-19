@@ -1,0 +1,1119 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.JavaScript
+  commentId: T:OpenQA.Selenium.DevTools.JavaScript
+  id: JavaScript
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.JavaScript.AddBinding(System.String)
+  - OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument(System.String)
+  - OpenQA.Selenium.DevTools.JavaScript.BindingCalled
+  - OpenQA.Selenium.DevTools.JavaScript.ConsoleApiCalled
+  - OpenQA.Selenium.DevTools.JavaScript.DisablePage
+  - OpenQA.Selenium.DevTools.JavaScript.DisableRuntime
+  - OpenQA.Selenium.DevTools.JavaScript.EnablePage
+  - OpenQA.Selenium.DevTools.JavaScript.EnableRuntime
+  - OpenQA.Selenium.DevTools.JavaScript.ExceptionThrown
+  - OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled(OpenQA.Selenium.DevTools.BindingCalledEventArgs)
+  - OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled(OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs)
+  - OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown(OpenQA.Selenium.DevTools.ExceptionThrownEventArgs)
+  - OpenQA.Selenium.DevTools.JavaScript.RemoveBinding(System.String)
+  - OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument(System.String)
+  langs:
+  - csharp
+  - vb
+  name: JavaScript
+  nameWithType: JavaScript
+  fullName: OpenQA.Selenium.DevTools.JavaScript
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: JavaScript
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Class representing the browser's JavaScript execution as referenced by the DevTools Protocol.
+  example: []
+  syntax:
+    content: public abstract class JavaScript
+    content.vb: Public MustInherit Class JavaScript
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.DevTools.V124.V124JavaScript
+  - OpenQA.Selenium.DevTools.V125.V125JavaScript
+  - OpenQA.Selenium.DevTools.V126.V126JavaScript
+  - OpenQA.Selenium.DevTools.V85.V85JavaScript
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.JavaScript.BindingCalled
+  commentId: E:OpenQA.Selenium.DevTools.JavaScript.BindingCalled
+  id: BindingCalled
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: BindingCalled
+  nameWithType: JavaScript.BindingCalled
+  fullName: OpenQA.Selenium.DevTools.JavaScript.BindingCalled
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BindingCalled
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a JavaScript script binding is called.
+  example: []
+  syntax:
+    content: public event EventHandler<BindingCalledEventArgs> BindingCalled
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.BindingCalledEventArgs}
+    content.vb: Public Event BindingCalled As EventHandler(Of BindingCalledEventArgs)
+- uid: OpenQA.Selenium.DevTools.JavaScript.ConsoleApiCalled
+  commentId: E:OpenQA.Selenium.DevTools.JavaScript.ConsoleApiCalled
+  id: ConsoleApiCalled
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: ConsoleApiCalled
+  nameWithType: JavaScript.ConsoleApiCalled
+  fullName: OpenQA.Selenium.DevTools.JavaScript.ConsoleApiCalled
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ConsoleApiCalled
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when the browser's JavaScript console API is called.
+  example: []
+  syntax:
+    content: public event EventHandler<ConsoleApiCalledEventArgs> ConsoleApiCalled
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs}
+    content.vb: Public Event ConsoleApiCalled As EventHandler(Of ConsoleApiCalledEventArgs)
+- uid: OpenQA.Selenium.DevTools.JavaScript.ExceptionThrown
+  commentId: E:OpenQA.Selenium.DevTools.JavaScript.ExceptionThrown
+  id: ExceptionThrown
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: ExceptionThrown
+  nameWithType: JavaScript.ExceptionThrown
+  fullName: OpenQA.Selenium.DevTools.JavaScript.ExceptionThrown
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExceptionThrown
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a JavaScript exception is thrown.
+  example: []
+  syntax:
+    content: public event EventHandler<ExceptionThrownEventArgs> ExceptionThrown
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.ExceptionThrownEventArgs}
+    content.vb: Public Event ExceptionThrown As EventHandler(Of ExceptionThrownEventArgs)
+- uid: OpenQA.Selenium.DevTools.JavaScript.EnableRuntime
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.EnableRuntime
+  id: EnableRuntime
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: EnableRuntime()
+  nameWithType: JavaScript.EnableRuntime()
+  fullName: OpenQA.Selenium.DevTools.JavaScript.EnableRuntime()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableRuntime
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously enables the Runtime domain in the DevTools Protocol.
+  example: []
+  syntax:
+    content: public abstract Task EnableRuntime()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function EnableRuntime() As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.EnableRuntime*
+- uid: OpenQA.Selenium.DevTools.JavaScript.DisableRuntime
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.DisableRuntime
+  id: DisableRuntime
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: DisableRuntime()
+  nameWithType: JavaScript.DisableRuntime()
+  fullName: OpenQA.Selenium.DevTools.JavaScript.DisableRuntime()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisableRuntime
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously disables the Runtime domain in the DevTools Protocol.
+  example: []
+  syntax:
+    content: public abstract Task DisableRuntime()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function DisableRuntime() As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.DisableRuntime*
+- uid: OpenQA.Selenium.DevTools.JavaScript.EnablePage
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.EnablePage
+  id: EnablePage
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: EnablePage()
+  nameWithType: JavaScript.EnablePage()
+  fullName: OpenQA.Selenium.DevTools.JavaScript.EnablePage()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnablePage
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously enables the Page domain in the DevTools Protocol.
+  example: []
+  syntax:
+    content: public abstract Task EnablePage()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function EnablePage() As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.EnablePage*
+- uid: OpenQA.Selenium.DevTools.JavaScript.DisablePage
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.DisablePage
+  id: DisablePage
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: DisablePage()
+  nameWithType: JavaScript.DisablePage()
+  fullName: OpenQA.Selenium.DevTools.JavaScript.DisablePage()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisablePage
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 64
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously disables the Page domain in the DevTools Protocol.
+  example: []
+  syntax:
+    content: public abstract Task DisablePage()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function DisablePage() As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.DisablePage*
+- uid: OpenQA.Selenium.DevTools.JavaScript.AddBinding(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.AddBinding(System.String)
+  id: AddBinding(System.String)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: AddBinding(string)
+  nameWithType: JavaScript.AddBinding(string)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.AddBinding(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddBinding
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Adds a binding to a specific JavaScript name.
+  example: []
+  syntax:
+    content: public abstract Task AddBinding(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to which to bind to.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function AddBinding(name As String) As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.AddBinding*
+  nameWithType.vb: JavaScript.AddBinding(String)
+  fullName.vb: OpenQA.Selenium.DevTools.JavaScript.AddBinding(String)
+  name.vb: AddBinding(String)
+- uid: OpenQA.Selenium.DevTools.JavaScript.RemoveBinding(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.RemoveBinding(System.String)
+  id: RemoveBinding(System.String)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: RemoveBinding(string)
+  nameWithType: JavaScript.RemoveBinding(string)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.RemoveBinding(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveBinding
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Removes a binding from a specific JavaScript name.
+  example: []
+  syntax:
+    content: public abstract Task RemoveBinding(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name to which to remove the bind from.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function RemoveBinding(name As String) As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.RemoveBinding*
+  nameWithType.vb: JavaScript.RemoveBinding(String)
+  fullName.vb: OpenQA.Selenium.DevTools.JavaScript.RemoveBinding(String)
+  name.vb: RemoveBinding(String)
+- uid: OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument(System.String)
+  id: AddScriptToEvaluateOnNewDocument(System.String)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: AddScriptToEvaluateOnNewDocument(string)
+  nameWithType: JavaScript.AddScriptToEvaluateOnNewDocument(string)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddScriptToEvaluateOnNewDocument
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 85
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Adds a JavaScript snippet to evaluate when a new document is opened.
+  example: []
+  syntax:
+    content: public abstract Task<string> AddScriptToEvaluateOnNewDocument(string script)
+    parameters:
+    - id: script
+      type: System.String
+      description: The script to add to be evaluated when a new document is opened.
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: A task that represents the asynchronous operation. The task result contains the internal ID of the script.
+    content.vb: Public MustOverride Function AddScriptToEvaluateOnNewDocument(script As String) As Task(Of String)
+  overload: OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument*
+  nameWithType.vb: JavaScript.AddScriptToEvaluateOnNewDocument(String)
+  fullName.vb: OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument(String)
+  name.vb: AddScriptToEvaluateOnNewDocument(String)
+- uid: OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument(System.String)
+  id: RemoveScriptToEvaluateOnNewDocument(System.String)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: RemoveScriptToEvaluateOnNewDocument(string)
+  nameWithType: JavaScript.RemoveScriptToEvaluateOnNewDocument(string)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveScriptToEvaluateOnNewDocument
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 92
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Removes a JavaScript snippet from evaluate when a new document is opened.
+  example: []
+  syntax:
+    content: public abstract Task RemoveScriptToEvaluateOnNewDocument(string scriptId)
+    parameters:
+    - id: scriptId
+      type: System.String
+      description: The ID of the script to be removed.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function RemoveScriptToEvaluateOnNewDocument(scriptId As String) As Task
+  overload: OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument*
+  nameWithType.vb: JavaScript.RemoveScriptToEvaluateOnNewDocument(String)
+  fullName.vb: OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument(String)
+  name.vb: RemoveScriptToEvaluateOnNewDocument(String)
+- uid: OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled(OpenQA.Selenium.DevTools.BindingCalledEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled(OpenQA.Selenium.DevTools.BindingCalledEventArgs)
+  id: OnBindingCalled(OpenQA.Selenium.DevTools.BindingCalledEventArgs)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: OnBindingCalled(BindingCalledEventArgs)
+  nameWithType: JavaScript.OnBindingCalled(BindingCalledEventArgs)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled(OpenQA.Selenium.DevTools.BindingCalledEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnBindingCalled
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 109
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the BindingCalled event.
+  example: []
+  syntax:
+    content: protected virtual void OnBindingCalled(BindingCalledEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.BindingCalledEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.BindingCalledEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnBindingCalled(e As BindingCalledEventArgs)
+  overload: OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled*
+- uid: OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled(OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled(OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs)
+  id: OnConsoleApiCalled(OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: OnConsoleApiCalled(ConsoleApiCalledEventArgs)
+  nameWithType: JavaScript.OnConsoleApiCalled(ConsoleApiCalledEventArgs)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled(OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnConsoleApiCalled
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 121
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the ConsoleApiCalled event.
+  example: []
+  syntax:
+    content: protected virtual void OnConsoleApiCalled(ConsoleApiCalledEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnConsoleApiCalled(e As ConsoleApiCalledEventArgs)
+  overload: OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled*
+- uid: OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown(OpenQA.Selenium.DevTools.ExceptionThrownEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown(OpenQA.Selenium.DevTools.ExceptionThrownEventArgs)
+  id: OnExceptionThrown(OpenQA.Selenium.DevTools.ExceptionThrownEventArgs)
+  parent: OpenQA.Selenium.DevTools.JavaScript
+  langs:
+  - csharp
+  - vb
+  name: OnExceptionThrown(ExceptionThrownEventArgs)
+  nameWithType: JavaScript.OnExceptionThrown(ExceptionThrownEventArgs)
+  fullName: OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown(OpenQA.Selenium.DevTools.ExceptionThrownEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/JavaScript.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnExceptionThrown
+    path: ../src/webdriver/DevTools/JavaScript.cs
+    startLine: 133
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the ExceptionThrown event.
+  example: []
+  syntax:
+    content: protected virtual void OnExceptionThrown(ExceptionThrownEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.ExceptionThrownEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnExceptionThrown(e As ExceptionThrownEventArgs)
+  overload: OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown*
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.BindingCalledEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.BindingCalledEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<BindingCalledEventArgs>
+  nameWithType: EventHandler<BindingCalledEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.BindingCalledEventArgs>
+  nameWithType.vb: EventHandler(Of BindingCalledEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.BindingCalledEventArgs)
+  name.vb: EventHandler(Of BindingCalledEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.BindingCalledEventArgs
+    name: BindingCalledEventArgs
+    href: OpenQA.Selenium.DevTools.BindingCalledEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.BindingCalledEventArgs
+    name: BindingCalledEventArgs
+    href: OpenQA.Selenium.DevTools.BindingCalledEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<ConsoleApiCalledEventArgs>
+  nameWithType: EventHandler<ConsoleApiCalledEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs>
+  nameWithType.vb: EventHandler(Of ConsoleApiCalledEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs)
+  name.vb: EventHandler(Of ConsoleApiCalledEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs
+    name: ConsoleApiCalledEventArgs
+    href: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs
+    name: ConsoleApiCalledEventArgs
+    href: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.ExceptionThrownEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.ExceptionThrownEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<ExceptionThrownEventArgs>
+  nameWithType: EventHandler<ExceptionThrownEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.ExceptionThrownEventArgs>
+  nameWithType.vb: EventHandler(Of ExceptionThrownEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.ExceptionThrownEventArgs)
+  name.vb: EventHandler(Of ExceptionThrownEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs
+    name: ExceptionThrownEventArgs
+    href: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs
+    name: ExceptionThrownEventArgs
+    href: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.JavaScript.EnableRuntime*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.EnableRuntime
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_EnableRuntime
+  name: EnableRuntime
+  nameWithType: JavaScript.EnableRuntime
+  fullName: OpenQA.Selenium.DevTools.JavaScript.EnableRuntime
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.JavaScript.DisableRuntime*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.DisableRuntime
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_DisableRuntime
+  name: DisableRuntime
+  nameWithType: JavaScript.DisableRuntime
+  fullName: OpenQA.Selenium.DevTools.JavaScript.DisableRuntime
+- uid: OpenQA.Selenium.DevTools.JavaScript.EnablePage*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.EnablePage
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_EnablePage
+  name: EnablePage
+  nameWithType: JavaScript.EnablePage
+  fullName: OpenQA.Selenium.DevTools.JavaScript.EnablePage
+- uid: OpenQA.Selenium.DevTools.JavaScript.DisablePage*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.DisablePage
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_DisablePage
+  name: DisablePage
+  nameWithType: JavaScript.DisablePage
+  fullName: OpenQA.Selenium.DevTools.JavaScript.DisablePage
+- uid: OpenQA.Selenium.DevTools.JavaScript.AddBinding*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.AddBinding
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_AddBinding_System_String_
+  name: AddBinding
+  nameWithType: JavaScript.AddBinding
+  fullName: OpenQA.Selenium.DevTools.JavaScript.AddBinding
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.JavaScript.RemoveBinding*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.RemoveBinding
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_RemoveBinding_System_String_
+  name: RemoveBinding
+  nameWithType: JavaScript.RemoveBinding
+  fullName: OpenQA.Selenium.DevTools.JavaScript.RemoveBinding
+- uid: OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_AddScriptToEvaluateOnNewDocument_System_String_
+  name: AddScriptToEvaluateOnNewDocument
+  nameWithType: JavaScript.AddScriptToEvaluateOnNewDocument
+  fullName: OpenQA.Selenium.DevTools.JavaScript.AddScriptToEvaluateOnNewDocument
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_RemoveScriptToEvaluateOnNewDocument_System_String_
+  name: RemoveScriptToEvaluateOnNewDocument
+  nameWithType: JavaScript.RemoveScriptToEvaluateOnNewDocument
+  fullName: OpenQA.Selenium.DevTools.JavaScript.RemoveScriptToEvaluateOnNewDocument
+- uid: OpenQA.Selenium.DevTools.BindingCalledEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.BindingCalledEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.BindingCalledEventArgs.html
+  name: BindingCalledEventArgs
+  nameWithType: BindingCalledEventArgs
+  fullName: OpenQA.Selenium.DevTools.BindingCalledEventArgs
+- uid: OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_OnBindingCalled_OpenQA_Selenium_DevTools_BindingCalledEventArgs_
+  name: OnBindingCalled
+  nameWithType: JavaScript.OnBindingCalled
+  fullName: OpenQA.Selenium.DevTools.JavaScript.OnBindingCalled
+- uid: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs.html
+  name: ConsoleApiCalledEventArgs
+  nameWithType: ConsoleApiCalledEventArgs
+  fullName: OpenQA.Selenium.DevTools.ConsoleApiCalledEventArgs
+- uid: OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_OnConsoleApiCalled_OpenQA_Selenium_DevTools_ConsoleApiCalledEventArgs_
+  name: OnConsoleApiCalled
+  nameWithType: JavaScript.OnConsoleApiCalled
+  fullName: OpenQA.Selenium.DevTools.JavaScript.OnConsoleApiCalled
+- uid: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.ExceptionThrownEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs.html
+  name: ExceptionThrownEventArgs
+  nameWithType: ExceptionThrownEventArgs
+  fullName: OpenQA.Selenium.DevTools.ExceptionThrownEventArgs
+- uid: OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown*
+  commentId: Overload:OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown
+  href: OpenQA.Selenium.DevTools.JavaScript.html#OpenQA_Selenium_DevTools_JavaScript_OnExceptionThrown_OpenQA_Selenium_DevTools_ExceptionThrownEventArgs_
+  name: OnExceptionThrown
+  nameWithType: JavaScript.OnExceptionThrown
+  fullName: OpenQA.Selenium.DevTools.JavaScript.OnExceptionThrown

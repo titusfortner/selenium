@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  commentId: T:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  id: IHasVirtualAuthenticator
+  parent: OpenQA.Selenium.VirtualAuth
+  children:
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(System.Byte[])
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(System.String)
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator(System.String)
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IHasVirtualAuthenticator
+  nameWithType: IHasVirtualAuthenticator
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IHasVirtualAuthenticator
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Interface indicating that an object supports using a virtual authenticator.
+  example: []
+  syntax:
+    content: public interface IHasVirtualAuthenticator
+    content.vb: Public Interface IHasVirtualAuthenticator
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  id: AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: AddVirtualAuthenticator(VirtualAuthenticatorOptions)
+  nameWithType: IHasVirtualAuthenticator.AddVirtualAuthenticator(VirtualAuthenticatorOptions)
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddVirtualAuthenticator
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Adds a virtual authenticator.
+  example: []
+  syntax:
+    content: string AddVirtualAuthenticator(VirtualAuthenticatorOptions options)
+    parameters:
+    - id: options
+      type: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions
+      description: The VirtualAuthenticatorOptions to use in creating the authenticator.
+    return:
+      type: System.String
+      description: The ID of the added virtual authenticator.
+    content.vb: Function AddVirtualAuthenticator(options As VirtualAuthenticatorOptions) As String
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator*
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator(System.String)
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator(System.String)
+  id: RemoveVirtualAuthenticator(System.String)
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: RemoveVirtualAuthenticator(string)
+  nameWithType: IHasVirtualAuthenticator.RemoveVirtualAuthenticator(string)
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveVirtualAuthenticator
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Removes a virtual authenticator.
+  example: []
+  syntax:
+    content: void RemoveVirtualAuthenticator(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the virtual authenticator to remove.
+    content.vb: Sub RemoveVirtualAuthenticator(id As String)
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator*
+  nameWithType.vb: IHasVirtualAuthenticator.RemoveVirtualAuthenticator(String)
+  fullName.vb: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator(String)
+  name.vb: RemoveVirtualAuthenticator(String)
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  id: AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: AddCredential(Credential)
+  nameWithType: IHasVirtualAuthenticator.AddCredential(Credential)
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddCredential
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Adds a credential to the virtual authenticator.
+  example: []
+  syntax:
+    content: void AddCredential(Credential credential)
+    parameters:
+    - id: credential
+      type: OpenQA.Selenium.VirtualAuth.Credential
+      description: The credential to add to the authenticator.
+    content.vb: Sub AddCredential(credential As Credential)
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential*
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials
+  id: GetCredentials
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: GetCredentials()
+  nameWithType: IHasVirtualAuthenticator.GetCredentials()
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCredentials
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Gets a list of the credentials registered to the virtual authenticator.
+  example: []
+  syntax:
+    content: List<Credential> GetCredentials()
+    return:
+      type: System.Collections.Generic.List{OpenQA.Selenium.VirtualAuth.Credential}
+      description: The list of credentials registered to the virtual authenticator.
+    content.vb: Function GetCredentials() As List(Of Credential)
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials*
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(System.Byte[])
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(System.Byte[])
+  id: RemoveCredential(System.Byte[])
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: RemoveCredential(byte[])
+  nameWithType: IHasVirtualAuthenticator.RemoveCredential(byte[])
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(byte[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveCredential
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 55
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Removes a credential from the virtual authenticator.
+  example: []
+  syntax:
+    content: void RemoveCredential(byte[] credentialId)
+    parameters:
+    - id: credentialId
+      type: System.Byte[]
+      description: A byte array representing the ID of the credential to remove.
+    content.vb: Sub RemoveCredential(credentialId As Byte())
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential*
+  nameWithType.vb: IHasVirtualAuthenticator.RemoveCredential(Byte())
+  fullName.vb: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(Byte())
+  name.vb: RemoveCredential(Byte())
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(System.String)
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(System.String)
+  id: RemoveCredential(System.String)
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: RemoveCredential(string)
+  nameWithType: IHasVirtualAuthenticator.RemoveCredential(string)
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveCredential
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Removes a credential from the virtual authenticator.
+  example: []
+  syntax:
+    content: void RemoveCredential(string credentialId)
+    parameters:
+    - id: credentialId
+      type: System.String
+      description: A string representing the ID of the credential to remove.
+    content.vb: Sub RemoveCredential(credentialId As String)
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential*
+  nameWithType.vb: IHasVirtualAuthenticator.RemoveCredential(String)
+  fullName.vb: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential(String)
+  name.vb: RemoveCredential(String)
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials
+  id: RemoveAllCredentials
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: RemoveAllCredentials()
+  nameWithType: IHasVirtualAuthenticator.RemoveAllCredentials()
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveAllCredentials
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Removes all credentials registered to this virtual authenticator.
+  example: []
+  syntax:
+    content: void RemoveAllCredentials()
+    content.vb: Sub RemoveAllCredentials()
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials*
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified(System.Boolean)
+  commentId: M:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified(System.Boolean)
+  id: SetUserVerified(System.Boolean)
+  parent: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  langs:
+  - csharp
+  - vb
+  name: SetUserVerified(bool)
+  nameWithType: IHasVirtualAuthenticator.SetUserVerified(bool)
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified(bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetUserVerified
+    path: ../src/webdriver/VirtualAuth/IHasVirtualAuthenticator.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.VirtualAuth
+  summary: Sets whether or not a user is verified in this virtual authenticator.
+  example: []
+  syntax:
+    content: void SetUserVerified(bool verified)
+    parameters:
+    - id: verified
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the user is verified; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Sub SetUserVerified(verified As Boolean)
+  overload: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified*
+  nameWithType.vb: IHasVirtualAuthenticator.SetUserVerified(Boolean)
+  fullName.vb: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified(Boolean)
+  name.vb: SetUserVerified(Boolean)
+references:
+- uid: OpenQA.Selenium.VirtualAuth
+  commentId: N:OpenQA.Selenium.VirtualAuth
+  href: OpenQA.html
+  name: OpenQA.Selenium.VirtualAuth
+  nameWithType: OpenQA.Selenium.VirtualAuth
+  fullName: OpenQA.Selenium.VirtualAuth
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.VirtualAuth
+    name: VirtualAuth
+    href: OpenQA.Selenium.VirtualAuth.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.VirtualAuth
+    name: VirtualAuth
+    href: OpenQA.Selenium.VirtualAuth.html
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_AddVirtualAuthenticator_OpenQA_Selenium_VirtualAuth_VirtualAuthenticatorOptions_
+  name: AddVirtualAuthenticator
+  nameWithType: IHasVirtualAuthenticator.AddVirtualAuthenticator
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddVirtualAuthenticator
+- uid: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions
+  commentId: T:OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions
+  parent: OpenQA.Selenium.VirtualAuth
+  href: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions.html
+  name: VirtualAuthenticatorOptions
+  nameWithType: VirtualAuthenticatorOptions
+  fullName: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_RemoveVirtualAuthenticator_System_String_
+  name: RemoveVirtualAuthenticator
+  nameWithType: IHasVirtualAuthenticator.RemoveVirtualAuthenticator
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveVirtualAuthenticator
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_AddCredential_OpenQA_Selenium_VirtualAuth_Credential_
+  name: AddCredential
+  nameWithType: IHasVirtualAuthenticator.AddCredential
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.AddCredential
+- uid: OpenQA.Selenium.VirtualAuth.Credential
+  commentId: T:OpenQA.Selenium.VirtualAuth.Credential
+  parent: OpenQA.Selenium.VirtualAuth
+  href: OpenQA.Selenium.VirtualAuth.Credential.html
+  name: Credential
+  nameWithType: Credential
+  fullName: OpenQA.Selenium.VirtualAuth.Credential
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_GetCredentials
+  name: GetCredentials
+  nameWithType: IHasVirtualAuthenticator.GetCredentials
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.GetCredentials
+- uid: System.Collections.Generic.List{OpenQA.Selenium.VirtualAuth.Credential}
+  commentId: T:System.Collections.Generic.List{OpenQA.Selenium.VirtualAuth.Credential}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Credential>
+  nameWithType: List<Credential>
+  fullName: System.Collections.Generic.List<OpenQA.Selenium.VirtualAuth.Credential>
+  nameWithType.vb: List(Of Credential)
+  fullName.vb: System.Collections.Generic.List(Of OpenQA.Selenium.VirtualAuth.Credential)
+  name.vb: List(Of Credential)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: OpenQA.Selenium.VirtualAuth.Credential
+    name: Credential
+    href: OpenQA.Selenium.VirtualAuth.Credential.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.VirtualAuth.Credential
+    name: Credential
+    href: OpenQA.Selenium.VirtualAuth.Credential.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_RemoveCredential_System_Byte___
+  name: RemoveCredential
+  nameWithType: IHasVirtualAuthenticator.RemoveCredential
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveCredential
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_RemoveAllCredentials
+  name: RemoveAllCredentials
+  nameWithType: IHasVirtualAuthenticator.RemoveAllCredentials
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.RemoveAllCredentials
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified*
+  commentId: Overload:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html#OpenQA_Selenium_VirtualAuth_IHasVirtualAuthenticator_SetUserVerified_System_Boolean_
+  name: SetUserVerified
+  nameWithType: IHasVirtualAuthenticator.SetUserVerified
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.SetUserVerified
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

@@ -1,0 +1,1561 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  id: LayerTreeAdapter
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  children:
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons(OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable(OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable(OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerPainted
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerTreeDidChange
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session
+  - OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog(OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: LayerTreeAdapter
+  nameWithType: LayerTreeAdapter
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayerTreeAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Represents an adapter for the LayerTree domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class LayerTreeAdapter
+    content.vb: Public Class LayerTreeAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: LayerTreeAdapter(IDevToolsSession)
+  nameWithType: LayerTreeAdapter.LayerTreeAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerTreeAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Initializes a new instance of the LayerTreeAdapter class.
+  example: []
+  syntax:
+    content: public LayerTreeAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.#ctor*
+  nameWithType.vb: LayerTreeAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: LayerTreeAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerPainted
+  commentId: E:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerPainted
+  id: LayerPainted
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: LayerPainted
+  nameWithType: LayerTreeAdapter.LayerPainted
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerPainted
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayerPainted
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: layerPainted
+  example: []
+  syntax:
+    content: public event EventHandler<LayerPaintedEventArgs> LayerPainted
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs}
+    content.vb: Public Event LayerPainted As EventHandler(Of LayerPaintedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerTreeDidChange
+  commentId: E:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerTreeDidChange
+  id: LayerTreeDidChange
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: LayerTreeDidChange
+  nameWithType: LayerTreeAdapter.LayerTreeDidChange
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerTreeDidChange
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayerTreeDidChange
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: layerTreeDidChange
+  example: []
+  syntax:
+    content: public event EventHandler<LayerTreeDidChangeEventArgs> LayerTreeDidChange
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs}
+    content.vb: Public Event LayerTreeDidChange As EventHandler(Of LayerTreeDidChangeEventArgs)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons(OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons(OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: CompositingReasons(OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: CompositingReasons(CompositingReasonsCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.CompositingReasons(CompositingReasonsCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons(OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CompositingReasons
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Provides the reasons why the given layer was composited.
+  example: []
+  syntax:
+    content: public Task<CompositingReasonsCommandResponse> CompositingReasons(CompositingReasonsCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse}
+    content.vb: Public Function CompositingReasons(command As CompositingReasonsCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of CompositingReasonsCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons*
+  nameWithType.vb: LayerTreeAdapter.CompositingReasons(CompositingReasonsCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons(OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: CompositingReasons(CompositingReasonsCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable(OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable(OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable(OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Disables compositing tree inspection.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable*
+  nameWithType.vb: LayerTreeAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable(OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable(OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable(OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable(OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Enables compositing tree inspection.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable*
+  nameWithType.vb: LayerTreeAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable(OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: LoadSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: LoadSnapshot(LoadSnapshotCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.LoadSnapshot(LoadSnapshotCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LoadSnapshot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 70
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Returns the snapshot identifier.
+  example: []
+  syntax:
+    content: public Task<LoadSnapshotCommandResponse> LoadSnapshot(LoadSnapshotCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse}
+    content.vb: Public Function LoadSnapshot(command As LoadSnapshotCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of LoadSnapshotCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot*
+  nameWithType.vb: LayerTreeAdapter.LoadSnapshot(LoadSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: LoadSnapshot(LoadSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: MakeSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: MakeSnapshot(MakeSnapshotCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.MakeSnapshot(MakeSnapshotCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MakeSnapshot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Returns the layer snapshot identifier.
+  example: []
+  syntax:
+    content: public Task<MakeSnapshotCommandResponse> MakeSnapshot(MakeSnapshotCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse}
+    content.vb: Public Function MakeSnapshot(command As MakeSnapshotCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of MakeSnapshotCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot*
+  nameWithType.vb: LayerTreeAdapter.MakeSnapshot(MakeSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: MakeSnapshot(MakeSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ProfileSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: ProfileSnapshot(ProfileSnapshotCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.ProfileSnapshot(ProfileSnapshotCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ProfileSnapshot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: profileSnapshot
+  example: []
+  syntax:
+    content: public Task<ProfileSnapshotCommandResponse> ProfileSnapshot(ProfileSnapshotCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse}
+    content.vb: Public Function ProfileSnapshot(command As ProfileSnapshotCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ProfileSnapshotCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot*
+  nameWithType.vb: LayerTreeAdapter.ProfileSnapshot(ProfileSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ProfileSnapshot(ProfileSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ReleaseSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: ReleaseSnapshot(ReleaseSnapshotCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.ReleaseSnapshot(ReleaseSnapshotCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReleaseSnapshot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 91
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Releases layer snapshot captured by the back-end.
+  example: []
+  syntax:
+    content: public Task<ReleaseSnapshotCommandResponse> ReleaseSnapshot(ReleaseSnapshotCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse}
+    content.vb: Public Function ReleaseSnapshot(command As ReleaseSnapshotCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ReleaseSnapshotCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot*
+  nameWithType.vb: LayerTreeAdapter.ReleaseSnapshot(ReleaseSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ReleaseSnapshot(ReleaseSnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ReplaySnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: ReplaySnapshot(ReplaySnapshotCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.ReplaySnapshot(ReplaySnapshotCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReplaySnapshot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 98
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Replays the layer snapshot and returns the resulting bitmap.
+  example: []
+  syntax:
+    content: public Task<ReplaySnapshotCommandResponse> ReplaySnapshot(ReplaySnapshotCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse}
+    content.vb: Public Function ReplaySnapshot(command As ReplaySnapshotCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ReplaySnapshotCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot*
+  nameWithType.vb: LayerTreeAdapter.ReplaySnapshot(ReplaySnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot(OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ReplaySnapshot(ReplaySnapshotCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog(OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog(OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SnapshotCommandLog(OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter
+  langs:
+  - csharp
+  - vb
+  name: SnapshotCommandLog(SnapshotCommandLogCommandSettings, CancellationToken, int?, bool)
+  nameWithType: LayerTreeAdapter.SnapshotCommandLog(SnapshotCommandLogCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog(OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SnapshotCommandLog
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/LayerTreeAdapter.cs
+    startLine: 105
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Replays the layer snapshot and returns canvas log.
+  example: []
+  syntax:
+    content: public Task<SnapshotCommandLogCommandResponse> SnapshotCommandLog(SnapshotCommandLogCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse}
+    content.vb: Public Function SnapshotCommandLog(command As SnapshotCommandLogCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SnapshotCommandLogCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog*
+  nameWithType.vb: LayerTreeAdapter.SnapshotCommandLog(SnapshotCommandLogCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog(OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SnapshotCommandLog(SnapshotCommandLogCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree
+  commentId: N:OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.LayerTree
+  nameWithType: OpenQA.Selenium.DevTools.V85.LayerTree
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree
+    name: LayerTree
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree
+    name: LayerTree
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: LayerTreeAdapter
+  nameWithType: LayerTreeAdapter.LayerTreeAdapter
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LayerTreeAdapter
+  nameWithType.vb: LayerTreeAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_Session
+  name: Session
+  nameWithType: LayerTreeAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<LayerPaintedEventArgs>
+  nameWithType: EventHandler<LayerPaintedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs>
+  nameWithType.vb: EventHandler(Of LayerPaintedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs)
+  name.vb: EventHandler(Of LayerPaintedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs
+    name: LayerPaintedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs
+    name: LayerPaintedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerPaintedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<LayerTreeDidChangeEventArgs>
+  nameWithType: EventHandler<LayerTreeDidChangeEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs>
+  nameWithType.vb: EventHandler(Of LayerTreeDidChangeEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs)
+  name.vb: EventHandler(Of LayerTreeDidChangeEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs
+    name: LayerTreeDidChangeEventArgs
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs
+    name: LayerTreeDidChangeEventArgs
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeDidChangeEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_CompositingReasons_OpenQA_Selenium_DevTools_V85_LayerTree_CompositingReasonsCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: CompositingReasons
+  nameWithType: LayerTreeAdapter.CompositingReasons
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.CompositingReasons
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings.html
+  name: CompositingReasonsCommandSettings
+  nameWithType: CompositingReasonsCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<CompositingReasonsCommandResponse>
+  nameWithType: Task<CompositingReasonsCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse>
+  nameWithType.vb: Task(Of CompositingReasonsCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse)
+  name.vb: Task(Of CompositingReasonsCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse
+    name: CompositingReasonsCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse
+    name: CompositingReasonsCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.CompositingReasonsCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_Disable_OpenQA_Selenium_DevTools_V85_LayerTree_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: LayerTreeAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.DisableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_Enable_OpenQA_Selenium_DevTools_V85_LayerTree_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: LayerTreeAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_LoadSnapshot_OpenQA_Selenium_DevTools_V85_LayerTree_LoadSnapshotCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: LoadSnapshot
+  nameWithType: LayerTreeAdapter.LoadSnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.LoadSnapshot
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings.html
+  name: LoadSnapshotCommandSettings
+  nameWithType: LoadSnapshotCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<LoadSnapshotCommandResponse>
+  nameWithType: Task<LoadSnapshotCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse>
+  nameWithType.vb: Task(Of LoadSnapshotCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse)
+  name.vb: Task(Of LoadSnapshotCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse
+    name: LoadSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse
+    name: LoadSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.LoadSnapshotCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_MakeSnapshot_OpenQA_Selenium_DevTools_V85_LayerTree_MakeSnapshotCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: MakeSnapshot
+  nameWithType: LayerTreeAdapter.MakeSnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.MakeSnapshot
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings.html
+  name: MakeSnapshotCommandSettings
+  nameWithType: MakeSnapshotCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<MakeSnapshotCommandResponse>
+  nameWithType: Task<MakeSnapshotCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse>
+  nameWithType.vb: Task(Of MakeSnapshotCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse)
+  name.vb: Task(Of MakeSnapshotCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse
+    name: MakeSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse
+    name: MakeSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.MakeSnapshotCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_ProfileSnapshot_OpenQA_Selenium_DevTools_V85_LayerTree_ProfileSnapshotCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ProfileSnapshot
+  nameWithType: LayerTreeAdapter.ProfileSnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ProfileSnapshot
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings.html
+  name: ProfileSnapshotCommandSettings
+  nameWithType: ProfileSnapshotCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ProfileSnapshotCommandResponse>
+  nameWithType: Task<ProfileSnapshotCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse>
+  nameWithType.vb: Task(Of ProfileSnapshotCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse)
+  name.vb: Task(Of ProfileSnapshotCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse
+    name: ProfileSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse
+    name: ProfileSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ProfileSnapshotCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_ReleaseSnapshot_OpenQA_Selenium_DevTools_V85_LayerTree_ReleaseSnapshotCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ReleaseSnapshot
+  nameWithType: LayerTreeAdapter.ReleaseSnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReleaseSnapshot
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings.html
+  name: ReleaseSnapshotCommandSettings
+  nameWithType: ReleaseSnapshotCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ReleaseSnapshotCommandResponse>
+  nameWithType: Task<ReleaseSnapshotCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse>
+  nameWithType.vb: Task(Of ReleaseSnapshotCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse)
+  name.vb: Task(Of ReleaseSnapshotCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse
+    name: ReleaseSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse
+    name: ReleaseSnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ReleaseSnapshotCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_ReplaySnapshot_OpenQA_Selenium_DevTools_V85_LayerTree_ReplaySnapshotCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ReplaySnapshot
+  nameWithType: LayerTreeAdapter.ReplaySnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.ReplaySnapshot
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings.html
+  name: ReplaySnapshotCommandSettings
+  nameWithType: ReplaySnapshotCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ReplaySnapshotCommandResponse>
+  nameWithType: Task<ReplaySnapshotCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse>
+  nameWithType.vb: Task(Of ReplaySnapshotCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse)
+  name.vb: Task(Of ReplaySnapshotCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse
+    name: ReplaySnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse
+    name: ReplaySnapshotCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ReplaySnapshotCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.html#OpenQA_Selenium_DevTools_V85_LayerTree_LayerTreeAdapter_SnapshotCommandLog_OpenQA_Selenium_DevTools_V85_LayerTree_SnapshotCommandLogCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SnapshotCommandLog
+  nameWithType: LayerTreeAdapter.SnapshotCommandLog
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.LayerTreeAdapter.SnapshotCommandLog
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings.html
+  name: SnapshotCommandLogCommandSettings
+  nameWithType: SnapshotCommandLogCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SnapshotCommandLogCommandResponse>
+  nameWithType: Task<SnapshotCommandLogCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse>
+  nameWithType.vb: Task(Of SnapshotCommandLogCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse)
+  name.vb: Task(Of SnapshotCommandLogCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse
+    name: SnapshotCommandLogCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse
+    name: SnapshotCommandLogCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.SnapshotCommandLogCommandResponse.html
+  - name: )

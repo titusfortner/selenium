@@ -1,0 +1,129 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Support.UI.ILoadableComponent
+  commentId: T:OpenQA.Selenium.Support.UI.ILoadableComponent
+  id: ILoadableComponent
+  parent: OpenQA.Selenium.Support.UI
+  children:
+  - OpenQA.Selenium.Support.UI.ILoadableComponent.Load
+  langs:
+  - csharp
+  - vb
+  name: ILoadableComponent
+  nameWithType: ILoadableComponent
+  fullName: OpenQA.Selenium.Support.UI.ILoadableComponent
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/support/UI/ILoadableComponent.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ILoadableComponent
+    path: ../src/support/UI/ILoadableComponent.cs
+    startLine: 37
+  assemblies:
+  - WebDriver.Support
+  namespace: OpenQA.Selenium.Support.UI
+  summary: >-
+    Interface allows for the component to be used in Nested Component scenarios such that the
+
+    child component class does not have to declare the generic type of the parent explicitly.
+  example:
+  - >-
+    public class HypotheticalLoadableComponent : LoadableComponent&lt;T&gt; {
+      ILoadableComponent parent;
+      public HypotheticalLoadableComponent(ILoadableComponent parent) {
+        this.parent = parent;
+      }
+      protected void EvaluateLoadedStatus() { //code to determine loaded state }
+      protected void ExecuteLoad() {
+        parent.Load();  //loads the parent
+        //code to load this component
+      }
+    }
+  syntax:
+    content: public interface ILoadableComponent
+    content.vb: Public Interface ILoadableComponent
+- uid: OpenQA.Selenium.Support.UI.ILoadableComponent.Load
+  commentId: M:OpenQA.Selenium.Support.UI.ILoadableComponent.Load
+  id: Load
+  parent: OpenQA.Selenium.Support.UI.ILoadableComponent
+  langs:
+  - csharp
+  - vb
+  name: Load()
+  nameWithType: ILoadableComponent.Load()
+  fullName: OpenQA.Selenium.Support.UI.ILoadableComponent.Load()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/support/UI/ILoadableComponent.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Load
+    path: ../src/support/UI/ILoadableComponent.cs
+    startLine: 43
+  assemblies:
+  - WebDriver.Support
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Loads the component.
+  example: []
+  syntax:
+    content: ILoadableComponent Load()
+    return:
+      type: OpenQA.Selenium.Support.UI.ILoadableComponent
+      description: A reference to this <xref href="OpenQA.Selenium.Support.UI.ILoadableComponent" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function Load() As ILoadableComponent
+  overload: OpenQA.Selenium.Support.UI.ILoadableComponent.Load*
+references:
+- uid: OpenQA.Selenium.Support.UI
+  commentId: N:OpenQA.Selenium.Support.UI
+  href: OpenQA.html
+  name: OpenQA.Selenium.Support.UI
+  nameWithType: OpenQA.Selenium.Support.UI
+  fullName: OpenQA.Selenium.Support.UI
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.UI
+    name: UI
+    href: OpenQA.Selenium.Support.UI.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.UI
+    name: UI
+    href: OpenQA.Selenium.Support.UI.html
+- uid: OpenQA.Selenium.Support.UI.ILoadableComponent
+  commentId: T:OpenQA.Selenium.Support.UI.ILoadableComponent
+  parent: OpenQA.Selenium.Support.UI
+  href: OpenQA.Selenium.Support.UI.ILoadableComponent.html
+  name: ILoadableComponent
+  nameWithType: ILoadableComponent
+  fullName: OpenQA.Selenium.Support.UI.ILoadableComponent
+- uid: OpenQA.Selenium.Support.UI.ILoadableComponent.Load*
+  commentId: Overload:OpenQA.Selenium.Support.UI.ILoadableComponent.Load
+  href: OpenQA.Selenium.Support.UI.ILoadableComponent.html#OpenQA_Selenium_Support_UI_ILoadableComponent_Load
+  name: Load
+  nameWithType: ILoadableComponent.Load
+  fullName: OpenQA.Selenium.Support.UI.ILoadableComponent.Load

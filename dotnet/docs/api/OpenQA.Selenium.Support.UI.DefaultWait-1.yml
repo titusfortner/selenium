@@ -1,0 +1,1259 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1
+  commentId: T:OpenQA.Selenium.Support.UI.DefaultWait`1
+  id: DefaultWait`1
+  parent: OpenQA.Selenium.Support.UI
+  children:
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor(`0)
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor(`0,OpenQA.Selenium.Support.UI.IClock)
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.IgnoreExceptionTypes(System.Type[])
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.Message
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.PollingInterval
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(System.String,System.Exception)
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.Timeout
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.Until``1(System.Func{`0,``0})
+  - OpenQA.Selenium.Support.UI.DefaultWait`1.Until``1(System.Func{`0,``0},System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: DefaultWait<T>
+  nameWithType: DefaultWait<T>
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DefaultWait
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: >-
+    An implementation of the <xref href="OpenQA.Selenium.Support.UI.IWait%601" data-throw-if-not-resolved="false"></xref> interface that may have its timeout and polling interval
+
+    configured on the fly.
+  example: []
+  syntax:
+    content: 'public class DefaultWait<T> : IWait<T>'
+    typeParameters:
+    - id: T
+      description: The type of object on which the wait it to be applied.
+    content.vb: Public Class DefaultWait(Of T) Implements IWait(Of T)
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.Support.UI.WebDriverWait
+  implements:
+  - OpenQA.Selenium.Support.UI.IWait{{T}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: DefaultWait(Of T)
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T)
+  name.vb: DefaultWait(Of T)
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor(`0)
+  commentId: M:OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: DefaultWait(T)
+  nameWithType: DefaultWait<T>.DefaultWait(T)
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.DefaultWait(T)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Support.UI.DefaultWait%601" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public DefaultWait(T input)
+    parameters:
+    - id: input
+      type: '{T}'
+      description: The input value to pass to the evaluated conditions.
+    content.vb: Public Sub New(input As T)
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor*
+  nameWithType.vb: DefaultWait(Of T).New(T)
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).New(T)
+  name.vb: New(T)
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor(`0,OpenQA.Selenium.Support.UI.IClock)
+  commentId: M:OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor(`0,OpenQA.Selenium.Support.UI.IClock)
+  id: '#ctor(`0,OpenQA.Selenium.Support.UI.IClock)'
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: DefaultWait(T, IClock)
+  nameWithType: DefaultWait<T>.DefaultWait(T, IClock)
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.DefaultWait(T, OpenQA.Selenium.Support.UI.IClock)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Support.UI.DefaultWait%601" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public DefaultWait(T input, IClock clock)
+    parameters:
+    - id: input
+      type: '{T}'
+      description: The input value to pass to the evaluated conditions.
+    - id: clock
+      type: OpenQA.Selenium.Support.UI.IClock
+      description: The clock to use when measuring the timeout.
+    content.vb: Public Sub New(input As T, clock As IClock)
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor*
+  nameWithType.vb: DefaultWait(Of T).New(T, IClock)
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).New(T, OpenQA.Selenium.Support.UI.IClock)
+  name.vb: New(T, IClock)
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Timeout
+  commentId: P:OpenQA.Selenium.Support.UI.DefaultWait`1.Timeout
+  id: Timeout
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: DefaultWait<T>.Timeout
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Timeout
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Timeout
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Gets or sets how long to wait for the evaluated condition to be true. The default timeout is 500 milliseconds.
+  example: []
+  syntax:
+    content: public TimeSpan Timeout { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property Timeout As TimeSpan
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.Timeout*
+  implements:
+  - OpenQA.Selenium.Support.UI.IWait{{T}}.Timeout
+  nameWithType.vb: DefaultWait(Of T).Timeout
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Timeout
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.PollingInterval
+  commentId: P:OpenQA.Selenium.Support.UI.DefaultWait`1.PollingInterval
+  id: PollingInterval
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: PollingInterval
+  nameWithType: DefaultWait<T>.PollingInterval
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.PollingInterval
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PollingInterval
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Gets or sets how often the condition should be evaluated. The default timeout is 500 milliseconds.
+  example: []
+  syntax:
+    content: public TimeSpan PollingInterval { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Public Property PollingInterval As TimeSpan
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.PollingInterval*
+  implements:
+  - OpenQA.Selenium.Support.UI.IWait{{T}}.PollingInterval
+  nameWithType.vb: DefaultWait(Of T).PollingInterval
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).PollingInterval
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Message
+  commentId: P:OpenQA.Selenium.Support.UI.DefaultWait`1.Message
+  id: Message
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: DefaultWait<T>.Message
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Message
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Message
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 93
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Gets or sets the message to be displayed when time expires.
+  example: []
+  syntax:
+    content: public string Message { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Message As String
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.Message*
+  implements:
+  - OpenQA.Selenium.Support.UI.IWait{{T}}.Message
+  nameWithType.vb: DefaultWait(Of T).Message
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Message
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.IgnoreExceptionTypes(System.Type[])
+  commentId: M:OpenQA.Selenium.Support.UI.DefaultWait`1.IgnoreExceptionTypes(System.Type[])
+  id: IgnoreExceptionTypes(System.Type[])
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: IgnoreExceptionTypes(params Type[])
+  nameWithType: DefaultWait<T>.IgnoreExceptionTypes(params Type[])
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.IgnoreExceptionTypes(params System.Type[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IgnoreExceptionTypes
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 109
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: >-
+    Configures this instance to ignore specific types of exceptions while waiting for a condition.
+
+    Any exceptions not whitelisted will be allowed to propagate, terminating the wait.
+  example: []
+  syntax:
+    content: public void IgnoreExceptionTypes(params Type[] exceptionTypes)
+    parameters:
+    - id: exceptionTypes
+      type: System.Type[]
+      description: The types of exceptions to ignore.
+    content.vb: Public Sub IgnoreExceptionTypes(ParamArray exceptionTypes As Type())
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.IgnoreExceptionTypes*
+  implements:
+  - OpenQA.Selenium.Support.UI.IWait{{T}}.IgnoreExceptionTypes(System.Type[])
+  nameWithType.vb: DefaultWait(Of T).IgnoreExceptionTypes(ParamArray Type())
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).IgnoreExceptionTypes(ParamArray System.Type())
+  name.vb: IgnoreExceptionTypes(ParamArray Type())
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Until``1(System.Func{`0,``0})
+  commentId: M:OpenQA.Selenium.Support.UI.DefaultWait`1.Until``1(System.Func{`0,``0})
+  id: Until``1(System.Func{`0,``0})
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: Until<TResult>(Func<T, TResult>)
+  nameWithType: DefaultWait<T>.Until<TResult>(Func<T, TResult>)
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Until<TResult>(System.Func<T, TResult>)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Until
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 141
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: >-
+    Repeatedly applies this instance's input value to the given function until one of the following
+
+    occurs:
+
+    <p>
+
+    <ul><li>the function returns neither null nor false</li><li>the function throws an exception that is not in the list of ignored exception types</li><li>the timeout expires</li></ul>
+
+    </p>
+  example: []
+  syntax:
+    content: public virtual TResult Until<TResult>(Func<T, TResult> condition)
+    parameters:
+    - id: condition
+      type: System.Func{{T},{TResult}}
+      description: A delegate taking an object of type T as its parameter, and returning a TResult.
+    typeParameters:
+    - id: TResult
+      description: The delegate's expected return type.
+    return:
+      type: '{TResult}'
+      description: The delegate's return value.
+    content.vb: Public Overridable Function Until(Of TResult)(condition As Func(Of T, TResult)) As TResult
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.Until*
+  implements:
+  - OpenQA.Selenium.Support.UI.IWait{{T}}.Until``1(System.Func{{T},{TResult}})
+  nameWithType.vb: DefaultWait(Of T).Until(Of TResult)(Func(Of T, TResult))
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Until(Of TResult)(System.Func(Of T, TResult))
+  name.vb: Until(Of TResult)(Func(Of T, TResult))
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Until``1(System.Func{`0,``0},System.Threading.CancellationToken)
+  commentId: M:OpenQA.Selenium.Support.UI.DefaultWait`1.Until``1(System.Func{`0,``0},System.Threading.CancellationToken)
+  id: Until``1(System.Func{`0,``0},System.Threading.CancellationToken)
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: Until<TResult>(Func<T, TResult>, CancellationToken)
+  nameWithType: DefaultWait<T>.Until<TResult>(Func<T, TResult>, CancellationToken)
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Until<TResult>(System.Func<T, TResult>, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Until
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 161
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: >-
+    Repeatedly applies this instance's input value to the given function until one of the following
+
+    occurs:
+
+    <p>
+
+    <ul><li>the function returns neither null nor false</li><li>the function throws an exception that is not in the list of ignored exception types</li><li>the timeout expires</li></ul>
+
+    </p>
+  example: []
+  syntax:
+    content: public virtual TResult Until<TResult>(Func<T, TResult> condition, CancellationToken token)
+    parameters:
+    - id: condition
+      type: System.Func{{T},{TResult}}
+      description: A delegate taking an object of type T as its parameter, and returning a TResult.
+    - id: token
+      type: System.Threading.CancellationToken
+      description: A cancellation token that can be used to cancel the wait.
+    typeParameters:
+    - id: TResult
+      description: The delegate's expected return type.
+    return:
+      type: '{TResult}'
+      description: The delegate's return value.
+    content.vb: Public Overridable Function Until(Of TResult)(condition As Func(Of T, TResult), token As CancellationToken) As TResult
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.Until*
+  nameWithType.vb: DefaultWait(Of T).Until(Of TResult)(Func(Of T, TResult), CancellationToken)
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Until(Of TResult)(System.Func(Of T, TResult), System.Threading.CancellationToken)
+  name.vb: Until(Of TResult)(Func(Of T, TResult), CancellationToken)
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(System.String,System.Exception)
+  commentId: M:OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(System.String,System.Exception)
+  id: ThrowTimeoutException(System.String,System.Exception)
+  parent: OpenQA.Selenium.Support.UI.DefaultWait`1
+  langs:
+  - csharp
+  - vb
+  name: ThrowTimeoutException(string, Exception)
+  nameWithType: DefaultWait<T>.ThrowTimeoutException(string, Exception)
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.ThrowTimeoutException(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/DefaultWait{T}.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ThrowTimeoutException
+    path: ../src/webdriver/Support/DefaultWait{T}.cs
+    startLine: 233
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Throws a <xref href="OpenQA.Selenium.WebDriverTimeoutException" data-throw-if-not-resolved="false"></xref> with the given message.
+  remarks: >-
+    This method may be overridden to throw an exception that is
+        idiomatic for a particular test infrastructure.
+  example: []
+  syntax:
+    content: protected virtual void ThrowTimeoutException(string exceptionMessage, Exception lastException)
+    parameters:
+    - id: exceptionMessage
+      type: System.String
+      description: The message of the exception.
+    - id: lastException
+      type: System.Exception
+      description: The last exception thrown by the condition.
+    content.vb: Protected Overridable Sub ThrowTimeoutException(exceptionMessage As String, lastException As Exception)
+  overload: OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException*
+  nameWithType.vb: DefaultWait(Of T).ThrowTimeoutException(String, Exception)
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).ThrowTimeoutException(String, System.Exception)
+  name.vb: ThrowTimeoutException(String, Exception)
+references:
+- uid: OpenQA.Selenium.Support.UI.IWait`1
+  commentId: T:OpenQA.Selenium.Support.UI.IWait`1
+  href: OpenQA.Selenium.Support.UI.IWait-1.html
+  name: IWait<T>
+  nameWithType: IWait<T>
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>
+  nameWithType.vb: IWait(Of T)
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T)
+  name.vb: IWait(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1
+    name: IWait
+    href: OpenQA.Selenium.Support.UI.IWait-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1
+    name: IWait
+    href: OpenQA.Selenium.Support.UI.IWait-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Support.UI
+  commentId: N:OpenQA.Selenium.Support.UI
+  href: OpenQA.html
+  name: OpenQA.Selenium.Support.UI
+  nameWithType: OpenQA.Selenium.Support.UI
+  fullName: OpenQA.Selenium.Support.UI
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.UI
+    name: UI
+    href: OpenQA.Selenium.Support.UI.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.UI
+    name: UI
+    href: OpenQA.Selenium.Support.UI.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.Support.UI.IWait{{T}}
+  commentId: T:OpenQA.Selenium.Support.UI.IWait{`0}
+  parent: OpenQA.Selenium.Support.UI
+  definition: OpenQA.Selenium.Support.UI.IWait`1
+  href: OpenQA.Selenium.Support.UI.IWait-1.html
+  name: IWait<T>
+  nameWithType: IWait<T>
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>
+  nameWithType.vb: IWait(Of T)
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T)
+  name.vb: IWait(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1
+    name: IWait
+    href: OpenQA.Selenium.Support.UI.IWait-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1
+    name: IWait
+    href: OpenQA.Selenium.Support.UI.IWait-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1
+  commentId: T:OpenQA.Selenium.Support.UI.DefaultWait`1
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html
+  name: DefaultWait<T>
+  nameWithType: DefaultWait<T>
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>
+  nameWithType.vb: DefaultWait(Of T)
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T)
+  name.vb: DefaultWait(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.DefaultWait`1
+    name: DefaultWait
+    href: OpenQA.Selenium.Support.UI.DefaultWait-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.DefaultWait`1
+    name: DefaultWait
+    href: OpenQA.Selenium.Support.UI.DefaultWait-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.#ctor
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1__ctor__0_
+  name: DefaultWait
+  nameWithType: DefaultWait<T>.DefaultWait
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.DefaultWait
+  nameWithType.vb: DefaultWait(Of T).New
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).New
+  name.vb: New
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: OpenQA.Selenium.Support.UI.IClock
+  commentId: T:OpenQA.Selenium.Support.UI.IClock
+  parent: OpenQA.Selenium.Support.UI
+  href: OpenQA.Selenium.Support.UI.IClock.html
+  name: IClock
+  nameWithType: IClock
+  fullName: OpenQA.Selenium.Support.UI.IClock
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Timeout*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.Timeout
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1_Timeout
+  name: Timeout
+  nameWithType: DefaultWait<T>.Timeout
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Timeout
+  nameWithType.vb: DefaultWait(Of T).Timeout
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Timeout
+- uid: OpenQA.Selenium.Support.UI.IWait{{T}}.Timeout
+  commentId: P:OpenQA.Selenium.Support.UI.IWait{`0}.Timeout
+  parent: OpenQA.Selenium.Support.UI.IWait{{T}}
+  definition: OpenQA.Selenium.Support.UI.IWait`1.Timeout
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Timeout
+  name: Timeout
+  nameWithType: IWait<T>.Timeout
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.Timeout
+  nameWithType.vb: IWait(Of T).Timeout
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).Timeout
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium.Support.UI.IWait`1.Timeout
+  commentId: P:OpenQA.Selenium.Support.UI.IWait`1.Timeout
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Timeout
+  name: Timeout
+  nameWithType: IWait<T>.Timeout
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.Timeout
+  nameWithType.vb: IWait(Of T).Timeout
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).Timeout
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.PollingInterval*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.PollingInterval
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1_PollingInterval
+  name: PollingInterval
+  nameWithType: DefaultWait<T>.PollingInterval
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.PollingInterval
+  nameWithType.vb: DefaultWait(Of T).PollingInterval
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).PollingInterval
+- uid: OpenQA.Selenium.Support.UI.IWait{{T}}.PollingInterval
+  commentId: P:OpenQA.Selenium.Support.UI.IWait{`0}.PollingInterval
+  parent: OpenQA.Selenium.Support.UI.IWait{{T}}
+  definition: OpenQA.Selenium.Support.UI.IWait`1.PollingInterval
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_PollingInterval
+  name: PollingInterval
+  nameWithType: IWait<T>.PollingInterval
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.PollingInterval
+  nameWithType.vb: IWait(Of T).PollingInterval
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).PollingInterval
+- uid: OpenQA.Selenium.Support.UI.IWait`1.PollingInterval
+  commentId: P:OpenQA.Selenium.Support.UI.IWait`1.PollingInterval
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_PollingInterval
+  name: PollingInterval
+  nameWithType: IWait<T>.PollingInterval
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.PollingInterval
+  nameWithType.vb: IWait(Of T).PollingInterval
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).PollingInterval
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Message*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.Message
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1_Message
+  name: Message
+  nameWithType: DefaultWait<T>.Message
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Message
+  nameWithType.vb: DefaultWait(Of T).Message
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Message
+- uid: OpenQA.Selenium.Support.UI.IWait{{T}}.Message
+  commentId: P:OpenQA.Selenium.Support.UI.IWait{`0}.Message
+  parent: OpenQA.Selenium.Support.UI.IWait{{T}}
+  definition: OpenQA.Selenium.Support.UI.IWait`1.Message
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Message
+  name: Message
+  nameWithType: IWait<T>.Message
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.Message
+  nameWithType.vb: IWait(Of T).Message
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).Message
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Support.UI.IWait`1.Message
+  commentId: P:OpenQA.Selenium.Support.UI.IWait`1.Message
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Message
+  name: Message
+  nameWithType: IWait<T>.Message
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.Message
+  nameWithType.vb: IWait(Of T).Message
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).Message
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.IgnoreExceptionTypes*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.IgnoreExceptionTypes
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1_IgnoreExceptionTypes_System_Type___
+  name: IgnoreExceptionTypes
+  nameWithType: DefaultWait<T>.IgnoreExceptionTypes
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.IgnoreExceptionTypes
+  nameWithType.vb: DefaultWait(Of T).IgnoreExceptionTypes
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).IgnoreExceptionTypes
+- uid: OpenQA.Selenium.Support.UI.IWait{{T}}.IgnoreExceptionTypes(System.Type[])
+  commentId: M:OpenQA.Selenium.Support.UI.IWait{`0}.IgnoreExceptionTypes(System.Type[])
+  parent: OpenQA.Selenium.Support.UI.IWait{{T}}
+  definition: OpenQA.Selenium.Support.UI.IWait`1.IgnoreExceptionTypes(System.Type[])
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_IgnoreExceptionTypes_System_Type___
+  name: IgnoreExceptionTypes(params Type[])
+  nameWithType: IWait<T>.IgnoreExceptionTypes(params Type[])
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.IgnoreExceptionTypes(params System.Type[])
+  nameWithType.vb: IWait(Of T).IgnoreExceptionTypes(ParamArray Type())
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).IgnoreExceptionTypes(ParamArray System.Type())
+  name.vb: IgnoreExceptionTypes(ParamArray Type())
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.IWait{`0}.IgnoreExceptionTypes(System.Type[])
+    name: IgnoreExceptionTypes
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_IgnoreExceptionTypes_System_Type___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.IWait{`0}.IgnoreExceptionTypes(System.Type[])
+    name: IgnoreExceptionTypes
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_IgnoreExceptionTypes_System_Type___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Type[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type[]
+  nameWithType: Type[]
+  fullName: System.Type[]
+  nameWithType.vb: Type()
+  fullName.vb: System.Type()
+  name.vb: Type()
+  spec.csharp:
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Support.UI.IWait`1.IgnoreExceptionTypes(System.Type[])
+  commentId: M:OpenQA.Selenium.Support.UI.IWait`1.IgnoreExceptionTypes(System.Type[])
+  isExternal: true
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_IgnoreExceptionTypes_System_Type___
+  name: IgnoreExceptionTypes(params Type[])
+  nameWithType: IWait<T>.IgnoreExceptionTypes(params Type[])
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.IgnoreExceptionTypes(params System.Type[])
+  nameWithType.vb: IWait(Of T).IgnoreExceptionTypes(ParamArray Type())
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).IgnoreExceptionTypes(ParamArray System.Type())
+  name.vb: IgnoreExceptionTypes(ParamArray Type())
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1.IgnoreExceptionTypes(System.Type[])
+    name: IgnoreExceptionTypes
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_IgnoreExceptionTypes_System_Type___
+  - name: (
+  - name: params
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1.IgnoreExceptionTypes(System.Type[])
+    name: IgnoreExceptionTypes
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_IgnoreExceptionTypes_System_Type___
+  - name: (
+  - name: ParamArray
+  - name: " "
+  - uid: System.Type
+    name: Type
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.type
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.Until*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.Until
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1_Until__1_System_Func__0___0__
+  name: Until
+  nameWithType: DefaultWait<T>.Until
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.Until
+  nameWithType.vb: DefaultWait(Of T).Until
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).Until
+- uid: OpenQA.Selenium.Support.UI.IWait{{T}}.Until``1(System.Func{{T},{TResult}})
+  commentId: M:OpenQA.Selenium.Support.UI.IWait{`0}.Until``1(System.Func{`0,``0})
+  parent: OpenQA.Selenium.Support.UI.IWait{{T}}
+  definition: OpenQA.Selenium.Support.UI.IWait`1.Until``1(System.Func{`0,``0})
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Until__1_System_Func__0___0__
+  name: Until<TResult>(Func<T, TResult>)
+  nameWithType: IWait<T>.Until<TResult>(Func<T, TResult>)
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.Until<TResult>(System.Func<T, TResult>)
+  nameWithType.vb: IWait(Of T).Until(Of TResult)(Func(Of T, TResult))
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).Until(Of TResult)(System.Func(Of T, TResult))
+  name.vb: Until(Of TResult)(Func(Of T, TResult))
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.IWait{`0}.Until``1(System.Func{`0,``0})
+    name: Until
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Until__1_System_Func__0___0__
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.IWait{`0}.Until``1(System.Func{`0,``0})
+    name: Until
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Until__1_System_Func__0___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: System.Func{{T},{TResult}}
+  commentId: T:System.Func{`0,``0}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: OpenQA.Selenium.Support.UI.IWait`1.Until``1(System.Func{`0,``0})
+  commentId: M:OpenQA.Selenium.Support.UI.IWait`1.Until``1(System.Func{`0,``0})
+  isExternal: true
+  href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Until__1_System_Func__0___0__
+  name: Until<TResult>(Func<T, TResult>)
+  nameWithType: IWait<T>.Until<TResult>(Func<T, TResult>)
+  fullName: OpenQA.Selenium.Support.UI.IWait<T>.Until<TResult>(System.Func<T, TResult>)
+  nameWithType.vb: IWait(Of T).Until(Of TResult)(Func(Of T, TResult))
+  fullName.vb: OpenQA.Selenium.Support.UI.IWait(Of T).Until(Of TResult)(System.Func(Of T, TResult))
+  name.vb: Until(Of TResult)(Func(Of T, TResult))
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1.Until``1(System.Func{`0,``0})
+    name: Until
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Until__1_System_Func__0___0__
+  - name: <
+  - name: TResult
+  - name: '>'
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.UI.IWait`1.Until``1(System.Func{`0,``0})
+    name: Until
+    href: OpenQA.Selenium.Support.UI.IWait-1.html#OpenQA_Selenium_Support_UI_IWait_1_Until__1_System_Func__0___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: (
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: OpenQA.Selenium.WebDriverTimeoutException
+  commentId: T:OpenQA.Selenium.WebDriverTimeoutException
+  href: OpenQA.Selenium.WebDriverTimeoutException.html
+  name: WebDriverTimeoutException
+  nameWithType: WebDriverTimeoutException
+  fullName: OpenQA.Selenium.WebDriverTimeoutException
+- uid: OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException*
+  commentId: Overload:OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException
+  href: OpenQA.Selenium.Support.UI.DefaultWait-1.html#OpenQA_Selenium_Support_UI_DefaultWait_1_ThrowTimeoutException_System_String_System_Exception_
+  name: ThrowTimeoutException
+  nameWithType: DefaultWait<T>.ThrowTimeoutException
+  fullName: OpenQA.Selenium.Support.UI.DefaultWait<T>.ThrowTimeoutException
+  nameWithType.vb: DefaultWait(Of T).ThrowTimeoutException
+  fullName.vb: OpenQA.Selenium.Support.UI.DefaultWait(Of T).ThrowTimeoutException
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

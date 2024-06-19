@@ -1,0 +1,416 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ICookieJar
+  commentId: T:OpenQA.Selenium.ICookieJar
+  id: ICookieJar
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ICookieJar.AddCookie(OpenQA.Selenium.Cookie)
+  - OpenQA.Selenium.ICookieJar.AllCookies
+  - OpenQA.Selenium.ICookieJar.DeleteAllCookies
+  - OpenQA.Selenium.ICookieJar.DeleteCookie(OpenQA.Selenium.Cookie)
+  - OpenQA.Selenium.ICookieJar.DeleteCookieNamed(System.String)
+  - OpenQA.Selenium.ICookieJar.GetCookieNamed(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ICookieJar
+  nameWithType: ICookieJar
+  fullName: OpenQA.Selenium.ICookieJar
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ICookieJar
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines an interface allowing the user to manipulate cookies on the current page.
+  example: []
+  syntax:
+    content: public interface ICookieJar
+    content.vb: Public Interface ICookieJar
+- uid: OpenQA.Selenium.ICookieJar.AllCookies
+  commentId: P:OpenQA.Selenium.ICookieJar.AllCookies
+  id: AllCookies
+  parent: OpenQA.Selenium.ICookieJar
+  langs:
+  - csharp
+  - vb
+  name: AllCookies
+  nameWithType: ICookieJar.AllCookies
+  fullName: OpenQA.Selenium.ICookieJar.AllCookies
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AllCookies
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets all cookies defined for the current page.
+  example: []
+  syntax:
+    content: ReadOnlyCollection<Cookie> AllCookies { get; }
+    parameters: []
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.Cookie}
+    content.vb: ReadOnly Property AllCookies As ReadOnlyCollection(Of Cookie)
+  overload: OpenQA.Selenium.ICookieJar.AllCookies*
+- uid: OpenQA.Selenium.ICookieJar.AddCookie(OpenQA.Selenium.Cookie)
+  commentId: M:OpenQA.Selenium.ICookieJar.AddCookie(OpenQA.Selenium.Cookie)
+  id: AddCookie(OpenQA.Selenium.Cookie)
+  parent: OpenQA.Selenium.ICookieJar
+  langs:
+  - csharp
+  - vb
+  name: AddCookie(Cookie)
+  nameWithType: ICookieJar.AddCookie(Cookie)
+  fullName: OpenQA.Selenium.ICookieJar.AddCookie(OpenQA.Selenium.Cookie)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddCookie
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Adds a cookie to the current page.
+  example: []
+  syntax:
+    content: void AddCookie(Cookie cookie)
+    parameters:
+    - id: cookie
+      type: OpenQA.Selenium.Cookie
+      description: The <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> object to be added.
+    content.vb: Sub AddCookie(cookie As Cookie)
+  overload: OpenQA.Selenium.ICookieJar.AddCookie*
+- uid: OpenQA.Selenium.ICookieJar.GetCookieNamed(System.String)
+  commentId: M:OpenQA.Selenium.ICookieJar.GetCookieNamed(System.String)
+  id: GetCookieNamed(System.String)
+  parent: OpenQA.Selenium.ICookieJar
+  langs:
+  - csharp
+  - vb
+  name: GetCookieNamed(string)
+  nameWithType: ICookieJar.GetCookieNamed(string)
+  fullName: OpenQA.Selenium.ICookieJar.GetCookieNamed(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCookieNamed
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a cookie with the specified name.
+  example: []
+  syntax:
+    content: Cookie GetCookieNamed(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie to retrieve.
+    return:
+      type: OpenQA.Selenium.Cookie
+      description: >-
+        The <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> containing the name. Returns <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>
+            if no cookie with the specified name is found.
+    content.vb: Function GetCookieNamed(name As String) As Cookie
+  overload: OpenQA.Selenium.ICookieJar.GetCookieNamed*
+  nameWithType.vb: ICookieJar.GetCookieNamed(String)
+  fullName.vb: OpenQA.Selenium.ICookieJar.GetCookieNamed(String)
+  name.vb: GetCookieNamed(String)
+- uid: OpenQA.Selenium.ICookieJar.DeleteCookie(OpenQA.Selenium.Cookie)
+  commentId: M:OpenQA.Selenium.ICookieJar.DeleteCookie(OpenQA.Selenium.Cookie)
+  id: DeleteCookie(OpenQA.Selenium.Cookie)
+  parent: OpenQA.Selenium.ICookieJar
+  langs:
+  - csharp
+  - vb
+  name: DeleteCookie(Cookie)
+  nameWithType: ICookieJar.DeleteCookie(Cookie)
+  fullName: OpenQA.Selenium.ICookieJar.DeleteCookie(OpenQA.Selenium.Cookie)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DeleteCookie
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Deletes the specified cookie from the page.
+  example: []
+  syntax:
+    content: void DeleteCookie(Cookie cookie)
+    parameters:
+    - id: cookie
+      type: OpenQA.Selenium.Cookie
+      description: The <xref href="OpenQA.Selenium.Cookie" data-throw-if-not-resolved="false"></xref> to be deleted.
+    content.vb: Sub DeleteCookie(cookie As Cookie)
+  overload: OpenQA.Selenium.ICookieJar.DeleteCookie*
+- uid: OpenQA.Selenium.ICookieJar.DeleteCookieNamed(System.String)
+  commentId: M:OpenQA.Selenium.ICookieJar.DeleteCookieNamed(System.String)
+  id: DeleteCookieNamed(System.String)
+  parent: OpenQA.Selenium.ICookieJar
+  langs:
+  - csharp
+  - vb
+  name: DeleteCookieNamed(string)
+  nameWithType: ICookieJar.DeleteCookieNamed(string)
+  fullName: OpenQA.Selenium.ICookieJar.DeleteCookieNamed(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DeleteCookieNamed
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Deletes the cookie with the specified name from the page.
+  example: []
+  syntax:
+    content: void DeleteCookieNamed(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie to be deleted.
+    content.vb: Sub DeleteCookieNamed(name As String)
+  overload: OpenQA.Selenium.ICookieJar.DeleteCookieNamed*
+  nameWithType.vb: ICookieJar.DeleteCookieNamed(String)
+  fullName.vb: OpenQA.Selenium.ICookieJar.DeleteCookieNamed(String)
+  name.vb: DeleteCookieNamed(String)
+- uid: OpenQA.Selenium.ICookieJar.DeleteAllCookies
+  commentId: M:OpenQA.Selenium.ICookieJar.DeleteAllCookies
+  id: DeleteAllCookies
+  parent: OpenQA.Selenium.ICookieJar
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllCookies()
+  nameWithType: ICookieJar.DeleteAllCookies()
+  fullName: OpenQA.Selenium.ICookieJar.DeleteAllCookies()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICookieJar.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DeleteAllCookies
+    path: ../src/webdriver/ICookieJar.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Deletes all cookies from the page.
+  example: []
+  syntax:
+    content: void DeleteAllCookies()
+    content.vb: Sub DeleteAllCookies()
+  overload: OpenQA.Selenium.ICookieJar.DeleteAllCookies*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.ICookieJar.AllCookies*
+  commentId: Overload:OpenQA.Selenium.ICookieJar.AllCookies
+  href: OpenQA.Selenium.ICookieJar.html#OpenQA_Selenium_ICookieJar_AllCookies
+  name: AllCookies
+  nameWithType: ICookieJar.AllCookies
+  fullName: OpenQA.Selenium.ICookieJar.AllCookies
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.Cookie}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.Cookie}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<Cookie>
+  nameWithType: ReadOnlyCollection<Cookie>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<OpenQA.Selenium.Cookie>
+  nameWithType.vb: ReadOnlyCollection(Of Cookie)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of OpenQA.Selenium.Cookie)
+  name.vb: ReadOnlyCollection(Of Cookie)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: OpenQA.Selenium.Cookie
+    name: Cookie
+    href: OpenQA.Selenium.Cookie.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.Cookie
+    name: Cookie
+    href: OpenQA.Selenium.Cookie.html
+  - name: )
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: OpenQA.Selenium.Cookie
+  commentId: T:OpenQA.Selenium.Cookie
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Cookie.html
+  name: Cookie
+  nameWithType: Cookie
+  fullName: OpenQA.Selenium.Cookie
+- uid: OpenQA.Selenium.ICookieJar.AddCookie*
+  commentId: Overload:OpenQA.Selenium.ICookieJar.AddCookie
+  href: OpenQA.Selenium.ICookieJar.html#OpenQA_Selenium_ICookieJar_AddCookie_OpenQA_Selenium_Cookie_
+  name: AddCookie
+  nameWithType: ICookieJar.AddCookie
+  fullName: OpenQA.Selenium.ICookieJar.AddCookie
+- uid: OpenQA.Selenium.ICookieJar.GetCookieNamed*
+  commentId: Overload:OpenQA.Selenium.ICookieJar.GetCookieNamed
+  href: OpenQA.Selenium.ICookieJar.html#OpenQA_Selenium_ICookieJar_GetCookieNamed_System_String_
+  name: GetCookieNamed
+  nameWithType: ICookieJar.GetCookieNamed
+  fullName: OpenQA.Selenium.ICookieJar.GetCookieNamed
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.ICookieJar.DeleteCookie*
+  commentId: Overload:OpenQA.Selenium.ICookieJar.DeleteCookie
+  href: OpenQA.Selenium.ICookieJar.html#OpenQA_Selenium_ICookieJar_DeleteCookie_OpenQA_Selenium_Cookie_
+  name: DeleteCookie
+  nameWithType: ICookieJar.DeleteCookie
+  fullName: OpenQA.Selenium.ICookieJar.DeleteCookie
+- uid: OpenQA.Selenium.ICookieJar.DeleteCookieNamed*
+  commentId: Overload:OpenQA.Selenium.ICookieJar.DeleteCookieNamed
+  href: OpenQA.Selenium.ICookieJar.html#OpenQA_Selenium_ICookieJar_DeleteCookieNamed_System_String_
+  name: DeleteCookieNamed
+  nameWithType: ICookieJar.DeleteCookieNamed
+  fullName: OpenQA.Selenium.ICookieJar.DeleteCookieNamed
+- uid: OpenQA.Selenium.ICookieJar.DeleteAllCookies*
+  commentId: Overload:OpenQA.Selenium.ICookieJar.DeleteAllCookies
+  href: OpenQA.Selenium.ICookieJar.html#OpenQA_Selenium_ICookieJar_DeleteAllCookies
+  name: DeleteAllCookies
+  nameWithType: ICookieJar.DeleteAllCookies
+  fullName: OpenQA.Selenium.ICookieJar.DeleteAllCookies

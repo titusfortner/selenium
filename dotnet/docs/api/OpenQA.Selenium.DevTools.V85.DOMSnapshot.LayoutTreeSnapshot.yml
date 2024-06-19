@@ -1,0 +1,854 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  commentId: T:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  id: LayoutTreeSnapshot
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  children:
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles
+  - OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text
+  langs:
+  - csharp
+  - vb
+  name: LayoutTreeSnapshot
+  nameWithType: LayoutTreeSnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayoutTreeSnapshot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: Table of details of an element in the DOM tree with a LayoutObject.
+  example: []
+  syntax:
+    content: public sealed class LayoutTreeSnapshot
+    content.vb: Public NotInheritable Class LayoutTreeSnapshot
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex
+  id: NodeIndex
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: NodeIndex
+  nameWithType: LayoutTreeSnapshot.NodeIndex
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NodeIndex
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: Index of the corresponding node in the `NodeTreeSnapshot` array returned by `captureSnapshot`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nodeIndex")]
+
+      public long[] NodeIndex { get; set; }
+    parameters: []
+    return:
+      type: System.Int64[]
+    content.vb: >-
+      <JsonProperty("nodeIndex")>
+
+      Public Property NodeIndex As Long()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nodeIndex
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles
+  id: Styles
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: Styles
+  nameWithType: LayoutTreeSnapshot.Styles
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Styles
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: Array of indexes specifying computed style strings, filtered according to the `computedStyles` parameter passed to `captureSnapshot`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("styles")]
+
+      public string[][] Styles { get; set; }
+    parameters: []
+    return:
+      type: System.String[][]
+    content.vb: >-
+      <JsonProperty("styles")>
+
+      Public Property Styles As String()()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: styles
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds
+  id: Bounds
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: Bounds
+  nameWithType: LayoutTreeSnapshot.Bounds
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Bounds
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: The absolute position bounding box.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("bounds")]
+
+      public double[][] Bounds { get; set; }
+    parameters: []
+    return:
+      type: System.Double[][]
+    content.vb: >-
+      <JsonProperty("bounds")>
+
+      Public Property Bounds As Double()()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: bounds
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text
+  id: Text
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: LayoutTreeSnapshot.Text
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Text
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: Contents of the LayoutText, if any.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("text")]
+
+      public long[] Text { get; set; }
+    parameters: []
+    return:
+      type: System.Int64[]
+    content.vb: >-
+      <JsonProperty("text")>
+
+      Public Property Text As Long()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: text
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts
+  id: StackingContexts
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: StackingContexts
+  nameWithType: LayoutTreeSnapshot.StackingContexts
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StackingContexts
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: Stacking context information.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("stackingContexts")]
+
+      public RareBooleanData StackingContexts { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.DOMSnapshot.RareBooleanData
+    content.vb: >-
+      <JsonProperty("stackingContexts")>
+
+      Public Property StackingContexts As RareBooleanData
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stackingContexts
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders
+  id: PaintOrders
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: PaintOrders
+  nameWithType: LayoutTreeSnapshot.PaintOrders
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PaintOrders
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: >-
+    Global paint order index, which is determined by the stacking order of the nodes. Nodes
+
+    that are painted together will have the same index. Only provided if includePaintOrder in
+
+    captureSnapshot was true.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("paintOrders", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long[] PaintOrders { get; set; }
+    parameters: []
+    return:
+      type: System.Int64[]
+    content.vb: >-
+      <JsonProperty("paintOrders", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PaintOrders As Long()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: paintOrders
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects
+  id: OffsetRects
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: OffsetRects
+  nameWithType: LayoutTreeSnapshot.OffsetRects
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OffsetRects
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 69
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: The offset rect of nodes. Only available when includeDOMRects is set to true
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("offsetRects", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double[][] OffsetRects { get; set; }
+    parameters: []
+    return:
+      type: System.Double[][]
+    content.vb: >-
+      <JsonProperty("offsetRects", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property OffsetRects As Double()()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: offsetRects
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects
+  id: ScrollRects
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: ScrollRects
+  nameWithType: LayoutTreeSnapshot.ScrollRects
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScrollRects
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: The scroll rect of nodes. Only available when includeDOMRects is set to true
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("scrollRects", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double[][] ScrollRects { get; set; }
+    parameters: []
+    return:
+      type: System.Double[][]
+    content.vb: >-
+      <JsonProperty("scrollRects", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ScrollRects As Double()()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: scrollRects
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects
+  commentId: P:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects
+  id: ClientRects
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot
+  langs:
+  - csharp
+  - vb
+  name: ClientRects
+  nameWithType: LayoutTreeSnapshot.ClientRects
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClientRects
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/DOMSnapshot/LayoutTreeSnapshot.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  summary: The client rect of nodes. Only available when includeDOMRects is set to true
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("clientRects", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double[][] ClientRects { get; set; }
+    parameters: []
+    return:
+      type: System.Double[][]
+    content.vb: >-
+      <JsonProperty("clientRects", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ClientRects As Double()()
+  overload: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: clientRects
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  commentId: N:OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  nameWithType: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_NodeIndex
+  name: NodeIndex
+  nameWithType: LayoutTreeSnapshot.NodeIndex
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.NodeIndex
+- uid: System.Int64[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long[]
+  nameWithType: long[]
+  fullName: long[]
+  nameWithType.vb: Long()
+  fullName.vb: Long()
+  name.vb: Long()
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_Styles
+  name: Styles
+  nameWithType: LayoutTreeSnapshot.Styles
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Styles
+- uid: System.String[][]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[][]
+  nameWithType: string[][]
+  fullName: string[][]
+  nameWithType.vb: String()()
+  fullName.vb: String()()
+  name.vb: String()()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_Bounds
+  name: Bounds
+  nameWithType: LayoutTreeSnapshot.Bounds
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Bounds
+- uid: System.Double[][]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[][]
+  nameWithType: double[][]
+  fullName: double[][]
+  nameWithType.vb: Double()()
+  fullName.vb: Double()()
+  name.vb: Double()()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_Text
+  name: Text
+  nameWithType: LayoutTreeSnapshot.Text
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.Text
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_StackingContexts
+  name: StackingContexts
+  nameWithType: LayoutTreeSnapshot.StackingContexts
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.StackingContexts
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.RareBooleanData
+  commentId: T:OpenQA.Selenium.DevTools.V85.DOMSnapshot.RareBooleanData
+  parent: OpenQA.Selenium.DevTools.V85.DOMSnapshot
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.RareBooleanData.html
+  name: RareBooleanData
+  nameWithType: RareBooleanData
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.RareBooleanData
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_PaintOrders
+  name: PaintOrders
+  nameWithType: LayoutTreeSnapshot.PaintOrders
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.PaintOrders
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_OffsetRects
+  name: OffsetRects
+  nameWithType: LayoutTreeSnapshot.OffsetRects
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.OffsetRects
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_ScrollRects
+  name: ScrollRects
+  nameWithType: LayoutTreeSnapshot.ScrollRects
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ScrollRects
+- uid: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects
+  href: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.html#OpenQA_Selenium_DevTools_V85_DOMSnapshot_LayoutTreeSnapshot_ClientRects
+  name: ClientRects
+  nameWithType: LayoutTreeSnapshot.ClientRects
+  fullName: OpenQA.Selenium.DevTools.V85.DOMSnapshot.LayoutTreeSnapshot.ClientRects

@@ -1,0 +1,809 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService
+  commentId: T:OpenQA.Selenium.Chrome.ChromeDriverService
+  id: ChromeDriverService
+  parent: OpenQA.Selenium.Chrome
+  children:
+  - OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService
+  - OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(System.String)
+  - OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(System.String,System.String)
+  - OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions
+  langs:
+  - csharp
+  - vb
+  name: ChromeDriverService
+  nameWithType: ChromeDriverService
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Chrome/ChromeDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ChromeDriverService
+    path: ../src/webdriver/Chrome/ChromeDriverService.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Chrome
+  summary: Exposes the service provided by the native ChromeDriver executable.
+  example: []
+  syntax:
+    content: 'public sealed class ChromeDriverService : ChromiumDriverService, ICommandServer, IDisposable'
+    content.vb: Public NotInheritable Class ChromeDriverService Inherits ChromiumDriverService Implements ICommandServer, IDisposable
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.DriverService
+  - OpenQA.Selenium.Chromium.ChromiumDriverService
+  implements:
+  - OpenQA.Selenium.Remote.ICommandServer
+  - System.IDisposable
+  inheritedMembers:
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.LogPath
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.UrlPathPrefix
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.PortServerAddress
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.AndroidDebugBridgePort
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.DisableBuildCheck
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.EnableVerboseLogging
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.EnableAppendLog
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.WhitelistedIPAddresses
+  - OpenQA.Selenium.Chromium.ChromiumDriverService.AllowedIPAddresses
+  - OpenQA.Selenium.DriverService.DriverProcessStarting
+  - OpenQA.Selenium.DriverService.DriverProcessStarted
+  - OpenQA.Selenium.DriverService.ServiceUrl
+  - OpenQA.Selenium.DriverService.HostName
+  - OpenQA.Selenium.DriverService.Port
+  - OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  - OpenQA.Selenium.DriverService.IsRunning
+  - OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  - OpenQA.Selenium.DriverService.ProcessId
+  - OpenQA.Selenium.DriverService.InitializationTimeout
+  - OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  - OpenQA.Selenium.DriverService.DriverServicePath
+  - OpenQA.Selenium.DriverService.Dispose
+  - OpenQA.Selenium.DriverService.Start
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions
+  commentId: M:OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions
+  id: GetDefaultDriverOptions
+  parent: OpenQA.Selenium.Chrome.ChromeDriverService
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultDriverOptions()
+  nameWithType: ChromeDriverService.GetDefaultDriverOptions()
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Chrome/ChromeDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDefaultDriverOptions
+    path: ../src/webdriver/Chrome/ChromeDriverService.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Chrome
+  summary: The browser options instance that corresponds to the driver service
+  example: []
+  syntax:
+    content: protected override DriverOptions GetDefaultDriverOptions()
+    return:
+      type: OpenQA.Selenium.DriverOptions
+      description: ''
+    content.vb: Protected Overrides Function GetDefaultDriverOptions() As DriverOptions
+  overridden: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  overload: OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions*
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService
+  commentId: M:OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService
+  id: CreateDefaultService
+  parent: OpenQA.Selenium.Chrome.ChromeDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService()
+  nameWithType: ChromeDriverService.CreateDefaultService()
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Chrome/ChromeDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/Chrome/ChromeDriverService.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Chrome
+  summary: Creates a default instance of the ChromeDriverService.
+  example: []
+  syntax:
+    content: public static ChromeDriverService CreateDefaultService()
+    return:
+      type: OpenQA.Selenium.Chrome.ChromeDriverService
+      description: A ChromeDriverService that implements default settings.
+    content.vb: Public Shared Function CreateDefaultService() As ChromeDriverService
+  overload: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService*
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(System.String)
+  commentId: M:OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(System.String)
+  id: CreateDefaultService(System.String)
+  parent: OpenQA.Selenium.Chrome.ChromeDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService(string)
+  nameWithType: ChromeDriverService.CreateDefaultService(string)
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Chrome/ChromeDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/Chrome/ChromeDriverService.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Chrome
+  summary: Creates a default instance of the ChromeDriverService using a specified path to the ChromeDriver executable.
+  example: []
+  syntax:
+    content: public static ChromeDriverService CreateDefaultService(string driverPath)
+    parameters:
+    - id: driverPath
+      type: System.String
+      description: The path to the executable or the directory containing the ChromeDriver executable.
+    return:
+      type: OpenQA.Selenium.Chrome.ChromeDriverService
+      description: A ChromeDriverService using a random port.
+    content.vb: Public Shared Function CreateDefaultService(driverPath As String) As ChromeDriverService
+  overload: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService*
+  nameWithType.vb: ChromeDriverService.CreateDefaultService(String)
+  fullName.vb: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(String)
+  name.vb: CreateDefaultService(String)
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(System.String,System.String)
+  commentId: M:OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(System.String,System.String)
+  id: CreateDefaultService(System.String,System.String)
+  parent: OpenQA.Selenium.Chrome.ChromeDriverService
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultService(string, string)
+  nameWithType: ChromeDriverService.CreateDefaultService(string, string)
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Chrome/ChromeDriverService.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateDefaultService
+    path: ../src/webdriver/Chrome/ChromeDriverService.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Chrome
+  summary: Creates a default instance of the ChromeDriverService using a specified path to the ChromeDriver executable with the given name.
+  example: []
+  syntax:
+    content: public static ChromeDriverService CreateDefaultService(string driverPath, string driverExecutableFileName)
+    parameters:
+    - id: driverPath
+      type: System.String
+      description: The directory containing the ChromeDriver executable.
+    - id: driverExecutableFileName
+      type: System.String
+      description: The name of the ChromeDriver executable file.
+    return:
+      type: OpenQA.Selenium.Chrome.ChromeDriverService
+      description: A ChromeDriverService using a random port.
+    content.vb: Public Shared Function CreateDefaultService(driverPath As String, driverExecutableFileName As String) As ChromeDriverService
+  overload: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService*
+  nameWithType.vb: ChromeDriverService.CreateDefaultService(String, String)
+  fullName.vb: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService(String, String)
+  name.vb: CreateDefaultService(String, String)
+references:
+- uid: OpenQA.Selenium.Chrome
+  commentId: N:OpenQA.Selenium.Chrome
+  href: OpenQA.html
+  name: OpenQA.Selenium.Chrome
+  nameWithType: OpenQA.Selenium.Chrome
+  fullName: OpenQA.Selenium.Chrome
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Chrome
+    name: Chrome
+    href: OpenQA.Selenium.Chrome.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Chrome
+    name: Chrome
+    href: OpenQA.Selenium.Chrome.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DriverService
+  commentId: T:OpenQA.Selenium.DriverService
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverService.html
+  name: DriverService
+  nameWithType: DriverService
+  fullName: OpenQA.Selenium.DriverService
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService
+  commentId: T:OpenQA.Selenium.Chromium.ChromiumDriverService
+  parent: OpenQA.Selenium.Chromium
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html
+  name: ChromiumDriverService
+  nameWithType: ChromiumDriverService
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService
+- uid: OpenQA.Selenium.Remote.ICommandServer
+  commentId: T:OpenQA.Selenium.Remote.ICommandServer
+  parent: OpenQA.Selenium.Remote
+  href: OpenQA.Selenium.Remote.ICommandServer.html
+  name: ICommandServer
+  nameWithType: ICommandServer
+  fullName: OpenQA.Selenium.Remote.ICommandServer
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.LogPath
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.LogPath
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_LogPath
+  name: LogPath
+  nameWithType: ChromiumDriverService.LogPath
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.LogPath
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.UrlPathPrefix
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.UrlPathPrefix
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_UrlPathPrefix
+  name: UrlPathPrefix
+  nameWithType: ChromiumDriverService.UrlPathPrefix
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.UrlPathPrefix
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.PortServerAddress
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.PortServerAddress
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_PortServerAddress
+  name: PortServerAddress
+  nameWithType: ChromiumDriverService.PortServerAddress
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.PortServerAddress
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.AndroidDebugBridgePort
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.AndroidDebugBridgePort
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_AndroidDebugBridgePort
+  name: AndroidDebugBridgePort
+  nameWithType: ChromiumDriverService.AndroidDebugBridgePort
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.AndroidDebugBridgePort
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.DisableBuildCheck
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.DisableBuildCheck
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_DisableBuildCheck
+  name: DisableBuildCheck
+  nameWithType: ChromiumDriverService.DisableBuildCheck
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.DisableBuildCheck
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.EnableVerboseLogging
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.EnableVerboseLogging
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_EnableVerboseLogging
+  name: EnableVerboseLogging
+  nameWithType: ChromiumDriverService.EnableVerboseLogging
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.EnableVerboseLogging
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.EnableAppendLog
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.EnableAppendLog
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_EnableAppendLog
+  name: EnableAppendLog
+  nameWithType: ChromiumDriverService.EnableAppendLog
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.EnableAppendLog
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.WhitelistedIPAddresses
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.WhitelistedIPAddresses
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_WhitelistedIPAddresses
+  name: WhitelistedIPAddresses
+  nameWithType: ChromiumDriverService.WhitelistedIPAddresses
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.WhitelistedIPAddresses
+- uid: OpenQA.Selenium.Chromium.ChromiumDriverService.AllowedIPAddresses
+  commentId: P:OpenQA.Selenium.Chromium.ChromiumDriverService.AllowedIPAddresses
+  parent: OpenQA.Selenium.Chromium.ChromiumDriverService
+  href: OpenQA.Selenium.Chromium.ChromiumDriverService.html#OpenQA_Selenium_Chromium_ChromiumDriverService_AllowedIPAddresses
+  name: AllowedIPAddresses
+  nameWithType: ChromiumDriverService.AllowedIPAddresses
+  fullName: OpenQA.Selenium.Chromium.ChromiumDriverService.AllowedIPAddresses
+- uid: OpenQA.Selenium.DriverService.DriverProcessStarting
+  commentId: E:OpenQA.Selenium.DriverService.DriverProcessStarting
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverProcessStarting
+  name: DriverProcessStarting
+  nameWithType: DriverService.DriverProcessStarting
+  fullName: OpenQA.Selenium.DriverService.DriverProcessStarting
+- uid: OpenQA.Selenium.DriverService.DriverProcessStarted
+  commentId: E:OpenQA.Selenium.DriverService.DriverProcessStarted
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverProcessStarted
+  name: DriverProcessStarted
+  nameWithType: DriverService.DriverProcessStarted
+  fullName: OpenQA.Selenium.DriverService.DriverProcessStarted
+- uid: OpenQA.Selenium.DriverService.ServiceUrl
+  commentId: P:OpenQA.Selenium.DriverService.ServiceUrl
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_ServiceUrl
+  name: ServiceUrl
+  nameWithType: DriverService.ServiceUrl
+  fullName: OpenQA.Selenium.DriverService.ServiceUrl
+- uid: OpenQA.Selenium.DriverService.HostName
+  commentId: P:OpenQA.Selenium.DriverService.HostName
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HostName
+  name: HostName
+  nameWithType: DriverService.HostName
+  fullName: OpenQA.Selenium.DriverService.HostName
+- uid: OpenQA.Selenium.DriverService.Port
+  commentId: P:OpenQA.Selenium.DriverService.Port
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Port
+  name: Port
+  nameWithType: DriverService.Port
+  fullName: OpenQA.Selenium.DriverService.Port
+- uid: OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  commentId: P:OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_SuppressInitialDiagnosticInformation
+  name: SuppressInitialDiagnosticInformation
+  nameWithType: DriverService.SuppressInitialDiagnosticInformation
+  fullName: OpenQA.Selenium.DriverService.SuppressInitialDiagnosticInformation
+- uid: OpenQA.Selenium.DriverService.IsRunning
+  commentId: P:OpenQA.Selenium.DriverService.IsRunning
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_IsRunning
+  name: IsRunning
+  nameWithType: DriverService.IsRunning
+  fullName: OpenQA.Selenium.DriverService.IsRunning
+- uid: OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  commentId: P:OpenQA.Selenium.DriverService.HideCommandPromptWindow
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_HideCommandPromptWindow
+  name: HideCommandPromptWindow
+  nameWithType: DriverService.HideCommandPromptWindow
+  fullName: OpenQA.Selenium.DriverService.HideCommandPromptWindow
+- uid: OpenQA.Selenium.DriverService.ProcessId
+  commentId: P:OpenQA.Selenium.DriverService.ProcessId
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_ProcessId
+  name: ProcessId
+  nameWithType: DriverService.ProcessId
+  fullName: OpenQA.Selenium.DriverService.ProcessId
+- uid: OpenQA.Selenium.DriverService.InitializationTimeout
+  commentId: P:OpenQA.Selenium.DriverService.InitializationTimeout
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_InitializationTimeout
+  name: InitializationTimeout
+  nameWithType: DriverService.InitializationTimeout
+  fullName: OpenQA.Selenium.DriverService.InitializationTimeout
+- uid: OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  commentId: P:OpenQA.Selenium.DriverService.DriverServiceExecutableName
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverServiceExecutableName
+  name: DriverServiceExecutableName
+  nameWithType: DriverService.DriverServiceExecutableName
+  fullName: OpenQA.Selenium.DriverService.DriverServiceExecutableName
+- uid: OpenQA.Selenium.DriverService.DriverServicePath
+  commentId: P:OpenQA.Selenium.DriverService.DriverServicePath
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_DriverServicePath
+  name: DriverServicePath
+  nameWithType: DriverService.DriverServicePath
+  fullName: OpenQA.Selenium.DriverService.DriverServicePath
+- uid: OpenQA.Selenium.DriverService.Dispose
+  commentId: M:OpenQA.Selenium.DriverService.Dispose
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  name: Dispose()
+  nameWithType: DriverService.Dispose()
+  fullName: OpenQA.Selenium.DriverService.Dispose()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Dispose
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DriverService.Start
+  commentId: M:OpenQA.Selenium.DriverService.Start
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  name: Start()
+  nameWithType: DriverService.Start()
+  fullName: OpenQA.Selenium.DriverService.Start()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.Start
+    name: Start
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.Start
+    name: Start
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_Start
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Chromium
+  commentId: N:OpenQA.Selenium.Chromium
+  href: OpenQA.html
+  name: OpenQA.Selenium.Chromium
+  nameWithType: OpenQA.Selenium.Chromium
+  fullName: OpenQA.Selenium.Chromium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Chromium
+    name: Chromium
+    href: OpenQA.Selenium.Chromium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Chromium
+    name: Chromium
+    href: OpenQA.Selenium.Chromium.html
+- uid: OpenQA.Selenium.Remote
+  commentId: N:OpenQA.Selenium.Remote
+  href: OpenQA.html
+  name: OpenQA.Selenium.Remote
+  nameWithType: OpenQA.Selenium.Remote
+  fullName: OpenQA.Selenium.Remote
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+- uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  commentId: M:OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+  parent: OpenQA.Selenium.DriverService
+  href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  name: GetDefaultDriverOptions()
+  nameWithType: DriverService.GetDefaultDriverOptions()
+  fullName: OpenQA.Selenium.DriverService.GetDefaultDriverOptions()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+    name: GetDefaultDriverOptions
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverService.GetDefaultDriverOptions
+    name: GetDefaultDriverOptions
+    href: OpenQA.Selenium.DriverService.html#OpenQA_Selenium_DriverService_GetDefaultDriverOptions
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions*
+  commentId: Overload:OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions
+  href: OpenQA.Selenium.Chrome.ChromeDriverService.html#OpenQA_Selenium_Chrome_ChromeDriverService_GetDefaultDriverOptions
+  name: GetDefaultDriverOptions
+  nameWithType: ChromeDriverService.GetDefaultDriverOptions
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService.GetDefaultDriverOptions
+- uid: OpenQA.Selenium.DriverOptions
+  commentId: T:OpenQA.Selenium.DriverOptions
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverOptions.html
+  name: DriverOptions
+  nameWithType: DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService*
+  commentId: Overload:OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService
+  href: OpenQA.Selenium.Chrome.ChromeDriverService.html#OpenQA_Selenium_Chrome_ChromeDriverService_CreateDefaultService
+  name: CreateDefaultService
+  nameWithType: ChromeDriverService.CreateDefaultService
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService.CreateDefaultService
+- uid: OpenQA.Selenium.Chrome.ChromeDriverService
+  commentId: T:OpenQA.Selenium.Chrome.ChromeDriverService
+  parent: OpenQA.Selenium.Chrome
+  href: OpenQA.Selenium.Chrome.ChromeDriverService.html
+  name: ChromeDriverService
+  nameWithType: ChromeDriverService
+  fullName: OpenQA.Selenium.Chrome.ChromeDriverService
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

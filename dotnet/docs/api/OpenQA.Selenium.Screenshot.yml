@@ -1,0 +1,469 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Screenshot
+  commentId: T:OpenQA.Selenium.Screenshot
+  id: Screenshot
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.Screenshot.#ctor(System.String)
+  - OpenQA.Selenium.Screenshot.SaveAsFile(System.String)
+  langs:
+  - csharp
+  - vb
+  name: Screenshot
+  nameWithType: Screenshot
+  fullName: OpenQA.Selenium.Screenshot
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Screenshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Screenshot
+    path: ../src/webdriver/Screenshot.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Represents an image of the page currently loaded in the browser.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public class Screenshot : EncodedFile
+    content.vb: >-
+      <Serializable>
+
+      Public Class Screenshot Inherits EncodedFile
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.EncodedFile
+  inheritedMembers:
+  - OpenQA.Selenium.EncodedFile.AsBase64EncodedString
+  - OpenQA.Selenium.EncodedFile.AsByteArray
+  - OpenQA.Selenium.EncodedFile.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.Screenshot.#ctor(System.String)
+  commentId: M:OpenQA.Selenium.Screenshot.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: OpenQA.Selenium.Screenshot
+  langs:
+  - csharp
+  - vb
+  name: Screenshot(string)
+  nameWithType: Screenshot.Screenshot(string)
+  fullName: OpenQA.Selenium.Screenshot.Screenshot(string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Screenshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Screenshot.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Screenshot" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public Screenshot(string base64EncodedScreenshot)
+    parameters:
+    - id: base64EncodedScreenshot
+      type: System.String
+      description: The image of the page as a Base64-encoded string.
+    content.vb: Public Sub New(base64EncodedScreenshot As String)
+  overload: OpenQA.Selenium.Screenshot.#ctor*
+  nameWithType.vb: Screenshot.New(String)
+  fullName.vb: OpenQA.Selenium.Screenshot.New(String)
+  name.vb: New(String)
+- uid: OpenQA.Selenium.Screenshot.SaveAsFile(System.String)
+  commentId: M:OpenQA.Selenium.Screenshot.SaveAsFile(System.String)
+  id: SaveAsFile(System.String)
+  parent: OpenQA.Selenium.Screenshot
+  langs:
+  - csharp
+  - vb
+  name: SaveAsFile(string)
+  nameWithType: Screenshot.SaveAsFile(string)
+  fullName: OpenQA.Selenium.Screenshot.SaveAsFile(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Screenshot.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SaveAsFile
+    path: ../src/webdriver/Screenshot.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Saves the screenshot to a Portable Network Graphics (PNG) file, overwriting the
+
+    file if it already exists.
+  example: []
+  syntax:
+    content: public override void SaveAsFile(string fileName)
+    parameters:
+    - id: fileName
+      type: System.String
+      description: The full path and file name to save the screenshot to.
+    content.vb: Public Overrides Sub SaveAsFile(fileName As String)
+  overridden: OpenQA.Selenium.EncodedFile.SaveAsFile(System.String)
+  overload: OpenQA.Selenium.Screenshot.SaveAsFile*
+  nameWithType.vb: Screenshot.SaveAsFile(String)
+  fullName.vb: OpenQA.Selenium.Screenshot.SaveAsFile(String)
+  name.vb: SaveAsFile(String)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.EncodedFile
+  commentId: T:OpenQA.Selenium.EncodedFile
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.EncodedFile.html
+  name: EncodedFile
+  nameWithType: EncodedFile
+  fullName: OpenQA.Selenium.EncodedFile
+- uid: OpenQA.Selenium.EncodedFile.AsBase64EncodedString
+  commentId: P:OpenQA.Selenium.EncodedFile.AsBase64EncodedString
+  parent: OpenQA.Selenium.EncodedFile
+  href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_AsBase64EncodedString
+  name: AsBase64EncodedString
+  nameWithType: EncodedFile.AsBase64EncodedString
+  fullName: OpenQA.Selenium.EncodedFile.AsBase64EncodedString
+- uid: OpenQA.Selenium.EncodedFile.AsByteArray
+  commentId: P:OpenQA.Selenium.EncodedFile.AsByteArray
+  parent: OpenQA.Selenium.EncodedFile
+  href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_AsByteArray
+  name: AsByteArray
+  nameWithType: EncodedFile.AsByteArray
+  fullName: OpenQA.Selenium.EncodedFile.AsByteArray
+- uid: OpenQA.Selenium.EncodedFile.ToString
+  commentId: M:OpenQA.Selenium.EncodedFile.ToString
+  parent: OpenQA.Selenium.EncodedFile
+  href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_ToString
+  name: ToString()
+  nameWithType: EncodedFile.ToString()
+  fullName: OpenQA.Selenium.EncodedFile.ToString()
+  spec.csharp:
+  - uid: OpenQA.Selenium.EncodedFile.ToString
+    name: ToString
+    href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.EncodedFile.ToString
+    name: ToString
+    href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Screenshot
+  commentId: T:OpenQA.Selenium.Screenshot
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Screenshot.html
+  name: Screenshot
+  nameWithType: Screenshot
+  fullName: OpenQA.Selenium.Screenshot
+- uid: OpenQA.Selenium.Screenshot.#ctor*
+  commentId: Overload:OpenQA.Selenium.Screenshot.#ctor
+  href: OpenQA.Selenium.Screenshot.html#OpenQA_Selenium_Screenshot__ctor_System_String_
+  name: Screenshot
+  nameWithType: Screenshot.Screenshot
+  fullName: OpenQA.Selenium.Screenshot.Screenshot
+  nameWithType.vb: Screenshot.New
+  fullName.vb: OpenQA.Selenium.Screenshot.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.EncodedFile.SaveAsFile(System.String)
+  commentId: M:OpenQA.Selenium.EncodedFile.SaveAsFile(System.String)
+  parent: OpenQA.Selenium.EncodedFile
+  isExternal: true
+  href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_SaveAsFile_System_String_
+  name: SaveAsFile(string)
+  nameWithType: EncodedFile.SaveAsFile(string)
+  fullName: OpenQA.Selenium.EncodedFile.SaveAsFile(string)
+  nameWithType.vb: EncodedFile.SaveAsFile(String)
+  fullName.vb: OpenQA.Selenium.EncodedFile.SaveAsFile(String)
+  name.vb: SaveAsFile(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.EncodedFile.SaveAsFile(System.String)
+    name: SaveAsFile
+    href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_SaveAsFile_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.EncodedFile.SaveAsFile(System.String)
+    name: SaveAsFile
+    href: OpenQA.Selenium.EncodedFile.html#OpenQA_Selenium_EncodedFile_SaveAsFile_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.Screenshot.SaveAsFile*
+  commentId: Overload:OpenQA.Selenium.Screenshot.SaveAsFile
+  href: OpenQA.Selenium.Screenshot.html#OpenQA_Selenium_Screenshot_SaveAsFile_System_String_
+  name: SaveAsFile
+  nameWithType: Screenshot.SaveAsFile
+  fullName: OpenQA.Selenium.Screenshot.SaveAsFile

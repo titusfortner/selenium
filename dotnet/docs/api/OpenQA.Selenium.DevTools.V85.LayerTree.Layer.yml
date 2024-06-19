@@ -1,0 +1,1330 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  id: Layer
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  children:
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform
+  - OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width
+  langs:
+  - csharp
+  - vb
+  name: Layer
+  nameWithType: Layer
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Layer
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Information about a compositing layer.
+  example: []
+  syntax:
+    content: public sealed class Layer
+    content.vb: Public NotInheritable Class Layer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId
+  id: LayerId
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: LayerId
+  nameWithType: Layer.LayerId
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayerId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: The unique id for this layer.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("layerId")]
+
+      public string LayerId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("layerId")>
+
+      Public Property LayerId As String
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: layerId
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId
+  id: ParentLayerId
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: ParentLayerId
+  nameWithType: Layer.ParentLayerId
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ParentLayerId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: The id of parent (not present for root).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parentLayerId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ParentLayerId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("parentLayerId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ParentLayerId As String
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parentLayerId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId
+  id: BackendNodeId
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: BackendNodeId
+  nameWithType: Layer.BackendNodeId
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BackendNodeId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: The backend id for the node associated with this layer.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("backendNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? BackendNodeId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("backendNodeId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property BackendNodeId As Long?
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: backendNodeId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX
+  id: OffsetX
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: OffsetX
+  nameWithType: Layer.OffsetX
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OffsetX
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Offset from parent layer, X coordinate.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("offsetX")]
+
+      public double OffsetX { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("offsetX")>
+
+      Public Property OffsetX As Double
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: offsetX
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY
+  id: OffsetY
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: OffsetY
+  nameWithType: Layer.OffsetY
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OffsetY
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Offset from parent layer, Y coordinate.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("offsetY")]
+
+      public double OffsetY { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("offsetY")>
+
+      Public Property OffsetY As Double
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: offsetY
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width
+  id: Width
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Layer.Width
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Width
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Layer width.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("width")]
+
+      public double Width { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("width")>
+
+      Public Property Width As Double
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: width
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height
+  id: Height
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Layer.Height
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Height
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Layer height.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("height")]
+
+      public double Height { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("height")>
+
+      Public Property Height As Double
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: height
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform
+  id: Transform
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: Transform
+  nameWithType: Layer.Transform
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Transform
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Transformation matrix for layer, default is identity matrix
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("transform", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double[] Transform { get; set; }
+    parameters: []
+    return:
+      type: System.Double[]
+    content.vb: >-
+      <JsonProperty("transform", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Transform As Double()
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: transform
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX
+  id: AnchorX
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: AnchorX
+  nameWithType: Layer.AnchorX
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnchorX
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 85
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Transform anchor point X, absent if no transform specified
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("anchorX", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? AnchorX { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("anchorX", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AnchorX As Double?
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: anchorX
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY
+  id: AnchorY
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: AnchorY
+  nameWithType: Layer.AnchorY
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnchorY
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Transform anchor point Y, absent if no transform specified
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("anchorY", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? AnchorY { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("anchorY", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AnchorY As Double?
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: anchorY
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ
+  id: AnchorZ
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: AnchorZ
+  nameWithType: Layer.AnchorZ
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnchorZ
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 103
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Transform anchor point Z, absent if no transform specified
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("anchorZ", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? AnchorZ { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("anchorZ", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AnchorZ As Double?
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: anchorZ
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount
+  id: PaintCount
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: PaintCount
+  nameWithType: Layer.PaintCount
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PaintCount
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 112
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Indicates how many time this layer has painted.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("paintCount")]
+
+      public long PaintCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("paintCount")>
+
+      Public Property PaintCount As Long
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: paintCount
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent
+  id: DrawsContent
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: DrawsContent
+  nameWithType: Layer.DrawsContent
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DrawsContent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 122
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: >-
+    Indicates whether this layer hosts any content, rather than being used for
+
+    transform/scrolling purposes only.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("drawsContent")]
+
+      public bool DrawsContent { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("drawsContent")>
+
+      Public Property DrawsContent As Boolean
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: drawsContent
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible
+  id: Invisible
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: Invisible
+  nameWithType: Layer.Invisible
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Invisible
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 131
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Set if layer is not visible.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("invisible", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Invisible { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("invisible", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Invisible As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: invisible
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects
+  id: ScrollRects
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: ScrollRects
+  nameWithType: Layer.ScrollRects
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScrollRects
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 140
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Rectangles scrolling on main thread only.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("scrollRects", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ScrollRect[] ScrollRects { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect[]
+    content.vb: >-
+      <JsonProperty("scrollRects", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ScrollRects As ScrollRect()
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: scrollRects
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint
+  commentId: P:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint
+  id: StickyPositionConstraint
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree.Layer
+  langs:
+  - csharp
+  - vb
+  name: StickyPositionConstraint
+  nameWithType: Layer.StickyPositionConstraint
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StickyPositionConstraint
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/LayerTree/Layer.cs
+    startLine: 149
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.LayerTree
+  summary: Sticky position constraint information
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("stickyPositionConstraint", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StickyPositionConstraint StickyPositionConstraint { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.LayerTree.StickyPositionConstraint
+    content.vb: >-
+      <JsonProperty("stickyPositionConstraint", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StickyPositionConstraint As StickyPositionConstraint
+  overload: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stickyPositionConstraint
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree
+  commentId: N:OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.LayerTree
+  nameWithType: OpenQA.Selenium.DevTools.V85.LayerTree
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree
+    name: LayerTree
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree
+    name: LayerTree
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_LayerId
+  name: LayerId
+  nameWithType: Layer.LayerId
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.LayerId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_ParentLayerId
+  name: ParentLayerId
+  nameWithType: Layer.ParentLayerId
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ParentLayerId
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_BackendNodeId
+  name: BackendNodeId
+  nameWithType: Layer.BackendNodeId
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.BackendNodeId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_OffsetX
+  name: OffsetX
+  nameWithType: Layer.OffsetX
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetX
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_OffsetY
+  name: OffsetY
+  nameWithType: Layer.OffsetY
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.OffsetY
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_Width
+  name: Width
+  nameWithType: Layer.Width
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Width
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_Height
+  name: Height
+  nameWithType: Layer.Height
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Height
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_Transform
+  name: Transform
+  nameWithType: Layer.Transform
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Transform
+- uid: System.Double[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double[]
+  nameWithType: double[]
+  fullName: double[]
+  nameWithType.vb: Double()
+  fullName.vb: Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_AnchorX
+  name: AnchorX
+  nameWithType: Layer.AnchorX
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorX
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_AnchorY
+  name: AnchorY
+  nameWithType: Layer.AnchorY
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorY
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_AnchorZ
+  name: AnchorZ
+  nameWithType: Layer.AnchorZ
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.AnchorZ
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_PaintCount
+  name: PaintCount
+  nameWithType: Layer.PaintCount
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.PaintCount
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_DrawsContent
+  name: DrawsContent
+  nameWithType: Layer.DrawsContent
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.DrawsContent
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_Invisible
+  name: Invisible
+  nameWithType: Layer.Invisible
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.Invisible
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_ScrollRects
+  name: ScrollRects
+  nameWithType: Layer.ScrollRects
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.ScrollRects
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect.html
+  name: ScrollRect[]
+  nameWithType: ScrollRect[]
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect[]
+  nameWithType.vb: ScrollRect()
+  fullName.vb: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect()
+  name.vb: ScrollRect()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect
+    name: ScrollRect
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect
+    name: ScrollRect
+    href: OpenQA.Selenium.DevTools.V85.LayerTree.ScrollRect.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.html#OpenQA_Selenium_DevTools_V85_LayerTree_Layer_StickyPositionConstraint
+  name: StickyPositionConstraint
+  nameWithType: Layer.StickyPositionConstraint
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.Layer.StickyPositionConstraint
+- uid: OpenQA.Selenium.DevTools.V85.LayerTree.StickyPositionConstraint
+  commentId: T:OpenQA.Selenium.DevTools.V85.LayerTree.StickyPositionConstraint
+  parent: OpenQA.Selenium.DevTools.V85.LayerTree
+  href: OpenQA.Selenium.DevTools.V85.LayerTree.StickyPositionConstraint.html
+  name: StickyPositionConstraint
+  nameWithType: StickyPositionConstraint
+  fullName: OpenQA.Selenium.DevTools.V85.LayerTree.StickyPositionConstraint

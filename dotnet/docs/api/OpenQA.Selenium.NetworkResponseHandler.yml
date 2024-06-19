@@ -1,0 +1,513 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.NetworkResponseHandler
+  commentId: T:OpenQA.Selenium.NetworkResponseHandler
+  id: NetworkResponseHandler
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher
+  - OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer
+  langs:
+  - csharp
+  - vb
+  name: NetworkResponseHandler
+  nameWithType: NetworkResponseHandler
+  fullName: OpenQA.Selenium.NetworkResponseHandler
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkResponseHandler.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NetworkResponseHandler
+    path: ../src/webdriver/NetworkResponseHandler.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Allows a user to handle a returned network, potentially modifying it before processing by the browser.
+  example: []
+  syntax:
+    content: public class NetworkResponseHandler
+    content.vb: Public Class NetworkResponseHandler
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher
+  commentId: P:OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher
+  id: ResponseMatcher
+  parent: OpenQA.Selenium.NetworkResponseHandler
+  langs:
+  - csharp
+  - vb
+  name: ResponseMatcher
+  nameWithType: NetworkResponseHandler.ResponseMatcher
+  fullName: OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkResponseHandler.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseMatcher
+    path: ../src/webdriver/NetworkResponseHandler.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets a function that evaluates returned response data in an <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> object,
+
+    and returns a value indicating whether the data matches the specified criteria.
+  example: []
+  syntax:
+    content: public Func<HttpResponseData, bool> ResponseMatcher { get; set; }
+    parameters: []
+    return:
+      type: System.Func{OpenQA.Selenium.HttpResponseData,System.Boolean}
+    content.vb: Public Property ResponseMatcher As Func(Of HttpResponseData, Boolean)
+  overload: OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher*
+- uid: OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer
+  commentId: P:OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer
+  id: ResponseTransformer
+  parent: OpenQA.Selenium.NetworkResponseHandler
+  langs:
+  - csharp
+  - vb
+  name: ResponseTransformer
+  nameWithType: NetworkResponseHandler.ResponseTransformer
+  fullName: OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkResponseHandler.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseTransformer
+    path: ../src/webdriver/NetworkResponseHandler.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets a function that accepts an <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> object describing a network
+
+    response received by the browser, and returns a modified <xref href="OpenQA.Selenium.HttpResponseData" data-throw-if-not-resolved="false"></xref> object to used
+
+    as the actual network response.
+  example: []
+  syntax:
+    content: public Func<HttpResponseData, HttpResponseData> ResponseTransformer { get; set; }
+    parameters: []
+    return:
+      type: System.Func{OpenQA.Selenium.HttpResponseData,OpenQA.Selenium.HttpResponseData}
+    content.vb: Public Property ResponseTransformer As Func(Of HttpResponseData, HttpResponseData)
+  overload: OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.HttpResponseData
+  commentId: T:OpenQA.Selenium.HttpResponseData
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.HttpResponseData.html
+  name: HttpResponseData
+  nameWithType: HttpResponseData
+  fullName: OpenQA.Selenium.HttpResponseData
+- uid: OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher*
+  commentId: Overload:OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher
+  href: OpenQA.Selenium.NetworkResponseHandler.html#OpenQA_Selenium_NetworkResponseHandler_ResponseMatcher
+  name: ResponseMatcher
+  nameWithType: NetworkResponseHandler.ResponseMatcher
+  fullName: OpenQA.Selenium.NetworkResponseHandler.ResponseMatcher
+- uid: System.Func{OpenQA.Selenium.HttpResponseData,System.Boolean}
+  commentId: T:System.Func{OpenQA.Selenium.HttpResponseData,System.Boolean}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<HttpResponseData, bool>
+  nameWithType: Func<HttpResponseData, bool>
+  fullName: System.Func<OpenQA.Selenium.HttpResponseData, bool>
+  nameWithType.vb: Func(Of HttpResponseData, Boolean)
+  fullName.vb: System.Func(Of OpenQA.Selenium.HttpResponseData, Boolean)
+  name.vb: Func(Of HttpResponseData, Boolean)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: OpenQA.Selenium.HttpResponseData
+    name: HttpResponseData
+    href: OpenQA.Selenium.HttpResponseData.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.HttpResponseData
+    name: HttpResponseData
+    href: OpenQA.Selenium.HttpResponseData.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Func`2
+  commentId: T:System.Func`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: System.Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: System.Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer*
+  commentId: Overload:OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer
+  href: OpenQA.Selenium.NetworkResponseHandler.html#OpenQA_Selenium_NetworkResponseHandler_ResponseTransformer
+  name: ResponseTransformer
+  nameWithType: NetworkResponseHandler.ResponseTransformer
+  fullName: OpenQA.Selenium.NetworkResponseHandler.ResponseTransformer
+- uid: System.Func{OpenQA.Selenium.HttpResponseData,OpenQA.Selenium.HttpResponseData}
+  commentId: T:System.Func{OpenQA.Selenium.HttpResponseData,OpenQA.Selenium.HttpResponseData}
+  parent: System
+  definition: System.Func`2
+  href: https://learn.microsoft.com/dotnet/api/system.func-2
+  name: Func<HttpResponseData, HttpResponseData>
+  nameWithType: Func<HttpResponseData, HttpResponseData>
+  fullName: System.Func<OpenQA.Selenium.HttpResponseData, OpenQA.Selenium.HttpResponseData>
+  nameWithType.vb: Func(Of HttpResponseData, HttpResponseData)
+  fullName.vb: System.Func(Of OpenQA.Selenium.HttpResponseData, OpenQA.Selenium.HttpResponseData)
+  name.vb: Func(Of HttpResponseData, HttpResponseData)
+  spec.csharp:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: <
+  - uid: OpenQA.Selenium.HttpResponseData
+    name: HttpResponseData
+    href: OpenQA.Selenium.HttpResponseData.html
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.HttpResponseData
+    name: HttpResponseData
+    href: OpenQA.Selenium.HttpResponseData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Func`2
+    name: Func
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.func-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.HttpResponseData
+    name: HttpResponseData
+    href: OpenQA.Selenium.HttpResponseData.html
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.HttpResponseData
+    name: HttpResponseData
+    href: OpenQA.Selenium.HttpResponseData.html
+  - name: )

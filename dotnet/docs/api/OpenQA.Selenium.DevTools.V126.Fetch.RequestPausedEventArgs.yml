@@ -1,0 +1,1029 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  id: RequestPausedEventArgs
+  parent: OpenQA.Selenium.DevTools.V126.Fetch
+  children:
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode
+  - OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText
+  langs:
+  - csharp
+  - vb
+  name: RequestPausedEventArgs
+  nameWithType: RequestPausedEventArgs
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestPausedEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 19
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: >-
+    Issued when the domain is enabled and the request URL matches the
+
+    specified filter. The request is paused until the client responds
+
+    with one of continueRequest, failRequest or fulfillRequest.
+
+    The stage of the request can be determined by presence of responseErrorReason
+
+    and responseStatusCode -- the request is at the response stage if either
+
+    of these fields is present and in the request stage otherwise.
+
+    Redirect responses and subsequent requests are reported similarly to regular
+
+    responses and requests. Redirect responses may be distinguished by the value
+
+    of `responseStatusCode` (which is one of 301, 302, 303, 307, 308) along with
+
+    presence of the `location` header. Requests resulting from a redirect will
+
+    have `redirectedRequestId` field set.
+  example: []
+  syntax:
+    content: 'public sealed class RequestPausedEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class RequestPausedEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId
+  id: RequestId
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: RequestPausedEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: Each request the page makes will have a unique id.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestId")]
+
+      public string RequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("requestId")>
+
+      Public Property RequestId As String
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestId
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request
+  id: Request
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Request
+  nameWithType: RequestPausedEventArgs.Request
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Request
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: The details of the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("request")]
+
+      public Request Request { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.Request
+    content.vb: >-
+      <JsonProperty("request")>
+
+      Public Property Request As Request
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: request
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId
+  id: FrameId
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: FrameId
+  nameWithType: RequestPausedEventArgs.FrameId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FrameId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: The id of the frame that initiated the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("frameId")]
+
+      public string FrameId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("frameId")>
+
+      Public Property FrameId As String
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: frameId
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType
+  id: ResourceType
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ResourceType
+  nameWithType: RequestPausedEventArgs.ResourceType
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResourceType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: How the requested resource will be used.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("resourceType")]
+
+      public ResourceType ResourceType { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Network.ResourceType
+    content.vb: >-
+      <JsonProperty("resourceType")>
+
+      Public Property ResourceType As ResourceType
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: resourceType
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason
+  id: ResponseErrorReason
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ResponseErrorReason
+  nameWithType: RequestPausedEventArgs.ResponseErrorReason
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseErrorReason
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: Response error if intercepted at response stage.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("responseErrorReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ErrorReason? ResponseErrorReason { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V126.Network.ErrorReason}
+    content.vb: >-
+      <JsonProperty("responseErrorReason", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResponseErrorReason As ErrorReason?
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: responseErrorReason
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode
+  id: ResponseStatusCode
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ResponseStatusCode
+  nameWithType: RequestPausedEventArgs.ResponseStatusCode
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseStatusCode
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 69
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: Response code if intercepted at response stage.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("responseStatusCode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ResponseStatusCode { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("responseStatusCode", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResponseStatusCode As Long?
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: responseStatusCode
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText
+  id: ResponseStatusText
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ResponseStatusText
+  nameWithType: RequestPausedEventArgs.ResponseStatusText
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseStatusText
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: Response status text if intercepted at response stage.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("responseStatusText", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ResponseStatusText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("responseStatusText", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResponseStatusText As String
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: responseStatusText
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders
+  id: ResponseHeaders
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ResponseHeaders
+  nameWithType: RequestPausedEventArgs.ResponseHeaders
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseHeaders
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: Response headers if intercepted at the response stage.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("responseHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public HeaderEntry[] ResponseHeaders { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry[]
+    content.vb: >-
+      <JsonProperty("responseHeaders", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResponseHeaders As HeaderEntry()
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: responseHeaders
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId
+  id: NetworkId
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: NetworkId
+  nameWithType: RequestPausedEventArgs.NetworkId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NetworkId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 97
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: >-
+    If the intercepted request had a corresponding Network.requestWillBeSent event fired for it,
+
+    then this networkId will be the same as the requestId present in the requestWillBeSent event.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("networkId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string NetworkId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("networkId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property NetworkId As String
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: networkId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId
+  id: RedirectedRequestId
+  parent: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RedirectedRequestId
+  nameWithType: RequestPausedEventArgs.RedirectedRequestId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RedirectedRequestId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Fetch/RequestPausedEventArgs.cs
+    startLine: 107
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Fetch
+  summary: >-
+    If the request is due to a redirect response from the server, the id of the request that
+
+    has caused the redirect.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("redirectedRequestId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string RedirectedRequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("redirectedRequestId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RedirectedRequestId As String
+  overload: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: redirectedRequestId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Fetch
+  commentId: N:OpenQA.Selenium.DevTools.V126.Fetch
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Fetch
+  nameWithType: OpenQA.Selenium.DevTools.V126.Fetch
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V126.Fetch.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V126.Fetch.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_RequestId
+  name: RequestId
+  nameWithType: RequestPausedEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RequestId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_Request
+  name: Request
+  nameWithType: RequestPausedEventArgs.Request
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.Request
+- uid: OpenQA.Selenium.DevTools.V126.Network.Request
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.Request
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.Selenium.DevTools.V126.Network.Request.html
+  name: Request
+  nameWithType: Request
+  fullName: OpenQA.Selenium.DevTools.V126.Network.Request
+- uid: OpenQA.Selenium.DevTools.V126.Network
+  commentId: N:OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Network
+  nameWithType: OpenQA.Selenium.DevTools.V126.Network
+  fullName: OpenQA.Selenium.DevTools.V126.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V126.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V126.Network.html
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_FrameId
+  name: FrameId
+  nameWithType: RequestPausedEventArgs.FrameId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.FrameId
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_ResourceType
+  name: ResourceType
+  nameWithType: RequestPausedEventArgs.ResourceType
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResourceType
+- uid: OpenQA.Selenium.DevTools.V126.Network.ResourceType
+  commentId: T:OpenQA.Selenium.DevTools.V126.Network.ResourceType
+  parent: OpenQA.Selenium.DevTools.V126.Network
+  href: OpenQA.Selenium.DevTools.V126.Network.ResourceType.html
+  name: ResourceType
+  nameWithType: ResourceType
+  fullName: OpenQA.Selenium.DevTools.V126.Network.ResourceType
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_ResponseErrorReason
+  name: ResponseErrorReason
+  nameWithType: RequestPausedEventArgs.ResponseErrorReason
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseErrorReason
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V126.Network.ErrorReason}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V126.Network.ErrorReason}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V126.Network.ErrorReason.html
+  name: ErrorReason?
+  nameWithType: ErrorReason?
+  fullName: OpenQA.Selenium.DevTools.V126.Network.ErrorReason?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Network.ErrorReason
+    name: ErrorReason
+    href: OpenQA.Selenium.DevTools.V126.Network.ErrorReason.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Network.ErrorReason
+    name: ErrorReason
+    href: OpenQA.Selenium.DevTools.V126.Network.ErrorReason.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_ResponseStatusCode
+  name: ResponseStatusCode
+  nameWithType: RequestPausedEventArgs.ResponseStatusCode
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusCode
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_ResponseStatusText
+  name: ResponseStatusText
+  nameWithType: RequestPausedEventArgs.ResponseStatusText
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseStatusText
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_ResponseHeaders
+  name: ResponseHeaders
+  nameWithType: RequestPausedEventArgs.ResponseHeaders
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.ResponseHeaders
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry.html
+  name: HeaderEntry[]
+  nameWithType: HeaderEntry[]
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry[]
+  nameWithType.vb: HeaderEntry()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry()
+  name.vb: HeaderEntry()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry
+    name: HeaderEntry
+    href: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry
+    name: HeaderEntry
+    href: OpenQA.Selenium.DevTools.V126.Fetch.HeaderEntry.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_NetworkId
+  name: NetworkId
+  nameWithType: RequestPausedEventArgs.NetworkId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.NetworkId
+- uid: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId
+  href: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.html#OpenQA_Selenium_DevTools_V126_Fetch_RequestPausedEventArgs_RedirectedRequestId
+  name: RedirectedRequestId
+  nameWithType: RequestPausedEventArgs.RedirectedRequestId
+  fullName: OpenQA.Selenium.DevTools.V126.Fetch.RequestPausedEventArgs.RedirectedRequestId

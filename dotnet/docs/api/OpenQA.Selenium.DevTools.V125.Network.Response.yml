@@ -1,0 +1,1975 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.Response
+  id: Response
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  children:
+  - OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage
+  - OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName
+  - OpenQA.Selenium.DevTools.V125.Network.Response.Charset
+  - OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId
+  - OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused
+  - OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength
+  - OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache
+  - OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints
+  - OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache
+  - OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker
+  - OpenQA.Selenium.DevTools.V125.Network.Response.Headers
+  - OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText
+  - OpenQA.Selenium.DevTools.V125.Network.Response.MimeType
+  - OpenQA.Selenium.DevTools.V125.Network.Response.Protocol
+  - OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress
+  - OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort
+  - OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders
+  - OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText
+  - OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime
+  - OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails
+  - OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState
+  - OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource
+  - OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo
+  - OpenQA.Selenium.DevTools.V125.Network.Response.Status
+  - OpenQA.Selenium.DevTools.V125.Network.Response.StatusText
+  - OpenQA.Selenium.DevTools.V125.Network.Response.Timing
+  - OpenQA.Selenium.DevTools.V125.Network.Response.Url
+  langs:
+  - csharp
+  - vb
+  name: Response
+  nameWithType: Response
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Response
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: HTTP response data.
+  example: []
+  syntax:
+    content: public sealed class Response
+    content.vb: Public NotInheritable Class Response
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Url
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: Response.Url
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Response URL. This URL can be different from CachedResource.url in case of redirect.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Status
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.Status
+  id: Status
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: Response.Status
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Status
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Status
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: HTTP response status code.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("status")]
+
+      public long Status { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("status")>
+
+      Public Property Status As Long
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.Status*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.StatusText
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.StatusText
+  id: StatusText
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: StatusText
+  nameWithType: Response.StatusText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.StatusText
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StatusText
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: HTTP response status text.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("statusText")]
+
+      public string StatusText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("statusText")>
+
+      Public Property StatusText As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.StatusText*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: statusText
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Headers
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.Headers
+  id: Headers
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: Headers
+  nameWithType: Response.Headers
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Headers
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Headers
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: HTTP response headers.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("headers")]
+
+      public Headers Headers { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.Headers
+    content.vb: >-
+      <JsonProperty("headers")>
+
+      Public Property Headers As Headers
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.Headers*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: headers
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText
+  id: HeadersText
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: HeadersText
+  nameWithType: Response.HeadersText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HeadersText
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: HTTP response headers text. This has been replaced by the headers in Network.responseReceivedExtraInfo.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("headersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string HeadersText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("headersText", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HeadersText As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: headersText
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.MimeType
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.MimeType
+  id: MimeType
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: MimeType
+  nameWithType: Response.MimeType
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.MimeType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MimeType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Resource mimeType as determined by the browser.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("mimeType")]
+
+      public string MimeType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("mimeType")>
+
+      Public Property MimeType As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.MimeType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: mimeType
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Charset
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.Charset
+  id: Charset
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: Charset
+  nameWithType: Response.Charset
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Charset
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Charset
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Resource charset as determined by the browser (if applicable).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("charset")]
+
+      public string Charset { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("charset")>
+
+      Public Property Charset As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.Charset*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: charset
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders
+  id: RequestHeaders
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: RequestHeaders
+  nameWithType: Response.RequestHeaders
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestHeaders
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Refined HTTP request headers that were actually transmitted over the network.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestHeaders", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Headers RequestHeaders { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.Headers
+    content.vb: >-
+      <JsonProperty("requestHeaders", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RequestHeaders As Headers
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestHeaders
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText
+  id: RequestHeadersText
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: RequestHeadersText
+  nameWithType: Response.RequestHeadersText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestHeadersText
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 85
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: HTTP request headers text. This has been replaced by the headers in Network.requestWillBeSentExtraInfo.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestHeadersText", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string RequestHeadersText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("requestHeadersText", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RequestHeadersText As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestHeadersText
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused
+  id: ConnectionReused
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: ConnectionReused
+  nameWithType: Response.ConnectionReused
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ConnectionReused
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Specifies whether physical connection was actually reused for this request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("connectionReused")]
+
+      public bool ConnectionReused { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("connectionReused")>
+
+      Public Property ConnectionReused As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: connectionReused
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId
+  id: ConnectionId
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: ConnectionId
+  nameWithType: Response.ConnectionId
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ConnectionId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 103
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Physical connection id that was actually used for this request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("connectionId")]
+
+      public double ConnectionId { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("connectionId")>
+
+      Public Property ConnectionId As Double
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: connectionId
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress
+  id: RemoteIPAddress
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: RemoteIPAddress
+  nameWithType: Response.RemoteIPAddress
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoteIPAddress
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 112
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Remote IP address.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("remoteIPAddress", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string RemoteIPAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("remoteIPAddress", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RemoteIPAddress As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: remoteIPAddress
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort
+  id: RemotePort
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: RemotePort
+  nameWithType: Response.RemotePort
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemotePort
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 121
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Remote port.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("remotePort", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? RemotePort { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("remotePort", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RemotePort As Long?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: remotePort
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache
+  id: FromDiskCache
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: FromDiskCache
+  nameWithType: Response.FromDiskCache
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FromDiskCache
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 130
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Specifies that the request was served from the disk cache.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("fromDiskCache", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? FromDiskCache { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("fromDiskCache", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FromDiskCache As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: fromDiskCache
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker
+  id: FromServiceWorker
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: FromServiceWorker
+  nameWithType: Response.FromServiceWorker
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FromServiceWorker
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 139
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Specifies that the request was served from the ServiceWorker.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("fromServiceWorker", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? FromServiceWorker { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("fromServiceWorker", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FromServiceWorker As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: fromServiceWorker
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache
+  id: FromPrefetchCache
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: FromPrefetchCache
+  nameWithType: Response.FromPrefetchCache
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FromPrefetchCache
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 148
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Specifies that the request was served from the prefetch cache.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("fromPrefetchCache", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? FromPrefetchCache { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("fromPrefetchCache", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FromPrefetchCache As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: fromPrefetchCache
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints
+  id: FromEarlyHints
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: FromEarlyHints
+  nameWithType: Response.FromEarlyHints
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FromEarlyHints
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 157
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Specifies that the request was served from the prefetch cache.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("fromEarlyHints", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? FromEarlyHints { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("fromEarlyHints", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FromEarlyHints As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: fromEarlyHints
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo
+  id: ServiceWorkerRouterInfo
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: ServiceWorkerRouterInfo
+  nameWithType: Response.ServiceWorkerRouterInfo
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ServiceWorkerRouterInfo
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 166
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Information about how Service Worker Static Router was used.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("serviceWorkerRouterInfo", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ServiceWorkerRouterInfo ServiceWorkerRouterInfo { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerRouterInfo
+    content.vb: >-
+      <JsonProperty("serviceWorkerRouterInfo", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ServiceWorkerRouterInfo As ServiceWorkerRouterInfo
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: serviceWorkerRouterInfo
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength
+  id: EncodedDataLength
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: EncodedDataLength
+  nameWithType: Response.EncodedDataLength
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EncodedDataLength
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 175
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Total number of bytes received for this request so far.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("encodedDataLength")]
+
+      public double EncodedDataLength { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("encodedDataLength")>
+
+      Public Property EncodedDataLength As Double
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: encodedDataLength
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Timing
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.Timing
+  id: Timing
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: Timing
+  nameWithType: Response.Timing
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Timing
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Timing
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 184
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Timing information for the given request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("timing", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ResourceTiming Timing { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.ResourceTiming
+    content.vb: >-
+      <JsonProperty("timing", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Timing As ResourceTiming
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.Timing*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timing
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource
+  id: ServiceWorkerResponseSource
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: ServiceWorkerResponseSource
+  nameWithType: Response.ServiceWorkerResponseSource
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ServiceWorkerResponseSource
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 193
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Response source of response from ServiceWorker.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("serviceWorkerResponseSource", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ServiceWorkerResponseSource? ServiceWorkerResponseSource { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource}
+    content.vb: >-
+      <JsonProperty("serviceWorkerResponseSource", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ServiceWorkerResponseSource As ServiceWorkerResponseSource?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: serviceWorkerResponseSource
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime
+  id: ResponseTime
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: ResponseTime
+  nameWithType: Response.ResponseTime
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResponseTime
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 202
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The time at which the returned response was generated.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("responseTime", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? ResponseTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("responseTime", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResponseTime As Double?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: responseTime
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName
+  id: CacheStorageCacheName
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: CacheStorageCacheName
+  nameWithType: Response.CacheStorageCacheName
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CacheStorageCacheName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 211
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Cache Storage Cache Name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cacheStorageCacheName", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string CacheStorageCacheName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("cacheStorageCacheName", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CacheStorageCacheName As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cacheStorageCacheName
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Protocol
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.Protocol
+  id: Protocol
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: Protocol
+  nameWithType: Response.Protocol
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Protocol
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Protocol
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 220
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Protocol used to fetch this request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("protocol", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Protocol { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("protocol", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Protocol As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.Protocol*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: protocol
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage
+  id: AlternateProtocolUsage
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: AlternateProtocolUsage
+  nameWithType: Response.AlternateProtocolUsage
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AlternateProtocolUsage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 229
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The reason why Chrome uses a specific transport protocol for HTTP semantics.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("alternateProtocolUsage", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AlternateProtocolUsage? AlternateProtocolUsage { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage}
+    content.vb: >-
+      <JsonProperty("alternateProtocolUsage", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AlternateProtocolUsage As AlternateProtocolUsage?
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: alternateProtocolUsage
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState
+  id: SecurityState
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: SecurityState
+  nameWithType: Response.SecurityState
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityState
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 238
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Security state of the request resource.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("securityState")]
+
+      public SecurityState SecurityState { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Security.SecurityState
+    content.vb: >-
+      <JsonProperty("securityState")>
+
+      Public Property SecurityState As SecurityState
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: securityState
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails
+  id: SecurityDetails
+  parent: OpenQA.Selenium.DevTools.V125.Network.Response
+  langs:
+  - csharp
+  - vb
+  name: SecurityDetails
+  nameWithType: Response.SecurityDetails
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/Response.cs
+    startLine: 247
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Security details for the request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("securityDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SecurityDetails SecurityDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.SecurityDetails
+    content.vb: >-
+      <JsonProperty("securityDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SecurityDetails As SecurityDetails
+  overload: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: securityDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Network
+  commentId: N:OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Network
+  nameWithType: OpenQA.Selenium.DevTools.V125.Network
+  fullName: OpenQA.Selenium.DevTools.V125.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.Url
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_Url
+  name: Url
+  nameWithType: Response.Url
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Url
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Status*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.Status
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_Status
+  name: Status
+  nameWithType: Response.Status
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Status
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.StatusText*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.StatusText
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_StatusText
+  name: StatusText
+  nameWithType: Response.StatusText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.StatusText
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Headers*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.Headers
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_Headers
+  name: Headers
+  nameWithType: Response.Headers
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Headers
+- uid: OpenQA.Selenium.DevTools.V125.Network.Headers
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.Headers
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.Headers.html
+  name: Headers
+  nameWithType: Headers
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Headers
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_HeadersText
+  name: HeadersText
+  nameWithType: Response.HeadersText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.HeadersText
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.MimeType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.MimeType
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_MimeType
+  name: MimeType
+  nameWithType: Response.MimeType
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.MimeType
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Charset*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.Charset
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_Charset
+  name: Charset
+  nameWithType: Response.Charset
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Charset
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_RequestHeaders
+  name: RequestHeaders
+  nameWithType: Response.RequestHeaders
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeaders
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_RequestHeadersText
+  name: RequestHeadersText
+  nameWithType: Response.RequestHeadersText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RequestHeadersText
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_ConnectionReused
+  name: ConnectionReused
+  nameWithType: Response.ConnectionReused
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionReused
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_ConnectionId
+  name: ConnectionId
+  nameWithType: Response.ConnectionId
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ConnectionId
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_RemoteIPAddress
+  name: RemoteIPAddress
+  nameWithType: Response.RemoteIPAddress
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RemoteIPAddress
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_RemotePort
+  name: RemotePort
+  nameWithType: Response.RemotePort
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.RemotePort
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_FromDiskCache
+  name: FromDiskCache
+  nameWithType: Response.FromDiskCache
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromDiskCache
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_FromServiceWorker
+  name: FromServiceWorker
+  nameWithType: Response.FromServiceWorker
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromServiceWorker
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_FromPrefetchCache
+  name: FromPrefetchCache
+  nameWithType: Response.FromPrefetchCache
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromPrefetchCache
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_FromEarlyHints
+  name: FromEarlyHints
+  nameWithType: Response.FromEarlyHints
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.FromEarlyHints
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_ServiceWorkerRouterInfo
+  name: ServiceWorkerRouterInfo
+  nameWithType: Response.ServiceWorkerRouterInfo
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerRouterInfo
+- uid: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerRouterInfo
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerRouterInfo
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerRouterInfo.html
+  name: ServiceWorkerRouterInfo
+  nameWithType: ServiceWorkerRouterInfo
+  fullName: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerRouterInfo
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_EncodedDataLength
+  name: EncodedDataLength
+  nameWithType: Response.EncodedDataLength
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.EncodedDataLength
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Timing*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.Timing
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_Timing
+  name: Timing
+  nameWithType: Response.Timing
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Timing
+- uid: OpenQA.Selenium.DevTools.V125.Network.ResourceTiming
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.ResourceTiming
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.ResourceTiming.html
+  name: ResourceTiming
+  nameWithType: ResourceTiming
+  fullName: OpenQA.Selenium.DevTools.V125.Network.ResourceTiming
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_ServiceWorkerResponseSource
+  name: ServiceWorkerResponseSource
+  nameWithType: Response.ServiceWorkerResponseSource
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ServiceWorkerResponseSource
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource.html
+  name: ServiceWorkerResponseSource?
+  nameWithType: ServiceWorkerResponseSource?
+  fullName: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource
+    name: ServiceWorkerResponseSource
+    href: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource
+    name: ServiceWorkerResponseSource
+    href: OpenQA.Selenium.DevTools.V125.Network.ServiceWorkerResponseSource.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_ResponseTime
+  name: ResponseTime
+  nameWithType: Response.ResponseTime
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.ResponseTime
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_CacheStorageCacheName
+  name: CacheStorageCacheName
+  nameWithType: Response.CacheStorageCacheName
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.CacheStorageCacheName
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.Protocol*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.Protocol
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_Protocol
+  name: Protocol
+  nameWithType: Response.Protocol
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.Protocol
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_AlternateProtocolUsage
+  name: AlternateProtocolUsage
+  nameWithType: Response.AlternateProtocolUsage
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.AlternateProtocolUsage
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage.html
+  name: AlternateProtocolUsage?
+  nameWithType: AlternateProtocolUsage?
+  fullName: OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage
+    name: AlternateProtocolUsage
+    href: OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage
+    name: AlternateProtocolUsage
+    href: OpenQA.Selenium.DevTools.V125.Network.AlternateProtocolUsage.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_SecurityState
+  name: SecurityState
+  nameWithType: Response.SecurityState
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityState
+- uid: OpenQA.Selenium.DevTools.V125.Security.SecurityState
+  commentId: T:OpenQA.Selenium.DevTools.V125.Security.SecurityState
+  parent: OpenQA.Selenium.DevTools.V125.Security
+  href: OpenQA.Selenium.DevTools.V125.Security.SecurityState.html
+  name: SecurityState
+  nameWithType: SecurityState
+  fullName: OpenQA.Selenium.DevTools.V125.Security.SecurityState
+- uid: OpenQA.Selenium.DevTools.V125.Security
+  commentId: N:OpenQA.Selenium.DevTools.V125.Security
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Security
+  nameWithType: OpenQA.Selenium.DevTools.V125.Security
+  fullName: OpenQA.Selenium.DevTools.V125.Security
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V125.Security.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V125.Security.html
+- uid: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails
+  href: OpenQA.Selenium.DevTools.V125.Network.Response.html#OpenQA_Selenium_DevTools_V125_Network_Response_SecurityDetails
+  name: SecurityDetails
+  nameWithType: Response.SecurityDetails
+  fullName: OpenQA.Selenium.DevTools.V125.Network.Response.SecurityDetails
+- uid: OpenQA.Selenium.DevTools.V125.Network.SecurityDetails
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.SecurityDetails
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.SecurityDetails.html
+  name: SecurityDetails
+  nameWithType: SecurityDetails
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SecurityDetails
