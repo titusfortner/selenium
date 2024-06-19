@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IWindow
+  commentId: T:OpenQA.Selenium.IWindow
+  id: IWindow
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IWindow.FullScreen
+  - OpenQA.Selenium.IWindow.Maximize
+  - OpenQA.Selenium.IWindow.Minimize
+  - OpenQA.Selenium.IWindow.Position
+  - OpenQA.Selenium.IWindow.Size
+  langs:
+  - csharp
+  - vb
+  name: IWindow
+  nameWithType: IWindow
+  fullName: OpenQA.Selenium.IWindow
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWindow.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IWindow
+    path: ../src/webdriver/IWindow.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides methods for getting and setting the size and position of the browser window.
+  example: []
+  syntax:
+    content: public interface IWindow
+    content.vb: Public Interface IWindow
+- uid: OpenQA.Selenium.IWindow.Position
+  commentId: P:OpenQA.Selenium.IWindow.Position
+  id: Position
+  parent: OpenQA.Selenium.IWindow
+  langs:
+  - csharp
+  - vb
+  name: Position
+  nameWithType: IWindow.Position
+  fullName: OpenQA.Selenium.IWindow.Position
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWindow.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Position
+    path: ../src/webdriver/IWindow.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the position of the browser window relative to the upper-left corner of the screen.
+  remarks: When setting this property, it should act as the JavaScript window.moveTo() method.
+  example: []
+  syntax:
+    content: Point Position { get; set; }
+    parameters: []
+    return:
+      type: System.Drawing.Point
+    content.vb: Property Position As Point
+  overload: OpenQA.Selenium.IWindow.Position*
+- uid: OpenQA.Selenium.IWindow.Size
+  commentId: P:OpenQA.Selenium.IWindow.Size
+  id: Size
+  parent: OpenQA.Selenium.IWindow
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: IWindow.Size
+  fullName: OpenQA.Selenium.IWindow.Size
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWindow.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Size
+    path: ../src/webdriver/IWindow.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the size of the outer browser window, including title bars and window borders.
+  remarks: When setting this property, it should act as the JavaScript window.resizeTo() method.
+  example: []
+  syntax:
+    content: Size Size { get; set; }
+    parameters: []
+    return:
+      type: System.Drawing.Size
+    content.vb: Property Size As Size
+  overload: OpenQA.Selenium.IWindow.Size*
+- uid: OpenQA.Selenium.IWindow.Maximize
+  commentId: M:OpenQA.Selenium.IWindow.Maximize
+  id: Maximize
+  parent: OpenQA.Selenium.IWindow
+  langs:
+  - csharp
+  - vb
+  name: Maximize()
+  nameWithType: IWindow.Maximize()
+  fullName: OpenQA.Selenium.IWindow.Maximize()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWindow.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Maximize
+    path: ../src/webdriver/IWindow.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Maximizes the current window if it is not already maximized.
+  example: []
+  syntax:
+    content: void Maximize()
+    content.vb: Sub Maximize()
+  overload: OpenQA.Selenium.IWindow.Maximize*
+- uid: OpenQA.Selenium.IWindow.Minimize
+  commentId: M:OpenQA.Selenium.IWindow.Minimize
+  id: Minimize
+  parent: OpenQA.Selenium.IWindow
+  langs:
+  - csharp
+  - vb
+  name: Minimize()
+  nameWithType: IWindow.Minimize()
+  fullName: OpenQA.Selenium.IWindow.Minimize()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWindow.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Minimize
+    path: ../src/webdriver/IWindow.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Minimizes the current window if it is not already minimized.
+  example: []
+  syntax:
+    content: void Minimize()
+    content.vb: Sub Minimize()
+  overload: OpenQA.Selenium.IWindow.Minimize*
+- uid: OpenQA.Selenium.IWindow.FullScreen
+  commentId: M:OpenQA.Selenium.IWindow.FullScreen
+  id: FullScreen
+  parent: OpenQA.Selenium.IWindow
+  langs:
+  - csharp
+  - vb
+  name: FullScreen()
+  nameWithType: IWindow.FullScreen()
+  fullName: OpenQA.Selenium.IWindow.FullScreen()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWindow.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FullScreen
+    path: ../src/webdriver/IWindow.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Sets the current window to full screen if it is not already in that state.
+  example: []
+  syntax:
+    content: void FullScreen()
+    content.vb: Sub FullScreen()
+  overload: OpenQA.Selenium.IWindow.FullScreen*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IWindow.Position*
+  commentId: Overload:OpenQA.Selenium.IWindow.Position
+  href: OpenQA.Selenium.IWindow.html#OpenQA_Selenium_IWindow_Position
+  name: Position
+  nameWithType: IWindow.Position
+  fullName: OpenQA.Selenium.IWindow.Position
+- uid: System.Drawing.Point
+  commentId: T:System.Drawing.Point
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.point
+  name: Point
+  nameWithType: Point
+  fullName: System.Drawing.Point
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: OpenQA.Selenium.IWindow.Size*
+  commentId: Overload:OpenQA.Selenium.IWindow.Size
+  href: OpenQA.Selenium.IWindow.html#OpenQA_Selenium_IWindow_Size
+  name: Size
+  nameWithType: IWindow.Size
+  fullName: OpenQA.Selenium.IWindow.Size
+- uid: System.Drawing.Size
+  commentId: T:System.Drawing.Size
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.size
+  name: Size
+  nameWithType: Size
+  fullName: System.Drawing.Size
+- uid: OpenQA.Selenium.IWindow.Maximize*
+  commentId: Overload:OpenQA.Selenium.IWindow.Maximize
+  href: OpenQA.Selenium.IWindow.html#OpenQA_Selenium_IWindow_Maximize
+  name: Maximize
+  nameWithType: IWindow.Maximize
+  fullName: OpenQA.Selenium.IWindow.Maximize
+- uid: OpenQA.Selenium.IWindow.Minimize*
+  commentId: Overload:OpenQA.Selenium.IWindow.Minimize
+  href: OpenQA.Selenium.IWindow.html#OpenQA_Selenium_IWindow_Minimize
+  name: Minimize
+  nameWithType: IWindow.Minimize
+  fullName: OpenQA.Selenium.IWindow.Minimize
+- uid: OpenQA.Selenium.IWindow.FullScreen*
+  commentId: Overload:OpenQA.Selenium.IWindow.FullScreen
+  href: OpenQA.Selenium.IWindow.html#OpenQA_Selenium_IWindow_FullScreen
+  name: FullScreen
+  nameWithType: IWindow.FullScreen
+  fullName: OpenQA.Selenium.IWindow.FullScreen

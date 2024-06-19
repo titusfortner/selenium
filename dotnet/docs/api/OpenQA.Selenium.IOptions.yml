@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IOptions
+  commentId: T:OpenQA.Selenium.IOptions
+  id: IOptions
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IOptions.Cookies
+  - OpenQA.Selenium.IOptions.Logs
+  - OpenQA.Selenium.IOptions.Network
+  - OpenQA.Selenium.IOptions.Timeouts
+  - OpenQA.Selenium.IOptions.Window
+  langs:
+  - csharp
+  - vb
+  name: IOptions
+  nameWithType: IOptions
+  fullName: OpenQA.Selenium.IOptions
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IOptions
+    path: ../src/webdriver/IOptions.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines an interface allowing the user to set options on the browser.
+  example: []
+  syntax:
+    content: public interface IOptions
+    content.vb: Public Interface IOptions
+- uid: OpenQA.Selenium.IOptions.Cookies
+  commentId: P:OpenQA.Selenium.IOptions.Cookies
+  id: Cookies
+  parent: OpenQA.Selenium.IOptions
+  langs:
+  - csharp
+  - vb
+  name: Cookies
+  nameWithType: IOptions.Cookies
+  fullName: OpenQA.Selenium.IOptions.Cookies
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Cookies
+    path: ../src/webdriver/IOptions.cs
+    startLine: 28
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets an object allowing the user to manipulate cookies on the page.
+  example: []
+  syntax:
+    content: ICookieJar Cookies { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.ICookieJar
+    content.vb: ReadOnly Property Cookies As ICookieJar
+  overload: OpenQA.Selenium.IOptions.Cookies*
+- uid: OpenQA.Selenium.IOptions.Window
+  commentId: P:OpenQA.Selenium.IOptions.Window
+  id: Window
+  parent: OpenQA.Selenium.IOptions
+  langs:
+  - csharp
+  - vb
+  name: Window
+  nameWithType: IOptions.Window
+  fullName: OpenQA.Selenium.IOptions.Window
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Window
+    path: ../src/webdriver/IOptions.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets an object allowing the user to manipulate the currently-focused browser window.
+  remarks: "\"Currently-focused\" is defined as the browser window having the window handle\n    returned when IWebDriver.CurrentWindowHandle is called."
+  example: []
+  syntax:
+    content: IWindow Window { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.IWindow
+    content.vb: ReadOnly Property Window As IWindow
+  overload: OpenQA.Selenium.IOptions.Window*
+- uid: OpenQA.Selenium.IOptions.Logs
+  commentId: P:OpenQA.Selenium.IOptions.Logs
+  id: Logs
+  parent: OpenQA.Selenium.IOptions
+  langs:
+  - csharp
+  - vb
+  name: Logs
+  nameWithType: IOptions.Logs
+  fullName: OpenQA.Selenium.IOptions.Logs
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Logs
+    path: ../src/webdriver/IOptions.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets an object allowing the user to examine the logs for this driver instance.
+  example: []
+  syntax:
+    content: ILogs Logs { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.ILogs
+    content.vb: ReadOnly Property Logs As ILogs
+  overload: OpenQA.Selenium.IOptions.Logs*
+- uid: OpenQA.Selenium.IOptions.Network
+  commentId: P:OpenQA.Selenium.IOptions.Network
+  id: Network
+  parent: OpenQA.Selenium.IOptions
+  langs:
+  - csharp
+  - vb
+  name: Network
+  nameWithType: IOptions.Network
+  fullName: OpenQA.Selenium.IOptions.Network
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Network
+    path: ../src/webdriver/IOptions.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets an object allowing the user to manage network communication by the browser.
+  example: []
+  syntax:
+    content: INetwork Network { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.INetwork
+    content.vb: ReadOnly Property Network As INetwork
+  overload: OpenQA.Selenium.IOptions.Network*
+- uid: OpenQA.Selenium.IOptions.Timeouts
+  commentId: M:OpenQA.Selenium.IOptions.Timeouts
+  id: Timeouts
+  parent: OpenQA.Selenium.IOptions
+  langs:
+  - csharp
+  - vb
+  name: Timeouts()
+  nameWithType: IOptions.Timeouts()
+  fullName: OpenQA.Selenium.IOptions.Timeouts()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Timeouts
+    path: ../src/webdriver/IOptions.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides access to the timeouts defined for this driver.
+  example: []
+  syntax:
+    content: ITimeouts Timeouts()
+    return:
+      type: OpenQA.Selenium.ITimeouts
+      description: An object implementing the <xref href="OpenQA.Selenium.ITimeouts" data-throw-if-not-resolved="false"></xref> interface.
+    content.vb: Function Timeouts() As ITimeouts
+  overload: OpenQA.Selenium.IOptions.Timeouts*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IOptions.Cookies*
+  commentId: Overload:OpenQA.Selenium.IOptions.Cookies
+  href: OpenQA.Selenium.IOptions.html#OpenQA_Selenium_IOptions_Cookies
+  name: Cookies
+  nameWithType: IOptions.Cookies
+  fullName: OpenQA.Selenium.IOptions.Cookies
+- uid: OpenQA.Selenium.ICookieJar
+  commentId: T:OpenQA.Selenium.ICookieJar
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ICookieJar.html
+  name: ICookieJar
+  nameWithType: ICookieJar
+  fullName: OpenQA.Selenium.ICookieJar
+- uid: OpenQA.Selenium.IOptions.Window*
+  commentId: Overload:OpenQA.Selenium.IOptions.Window
+  href: OpenQA.Selenium.IOptions.html#OpenQA_Selenium_IOptions_Window
+  name: Window
+  nameWithType: IOptions.Window
+  fullName: OpenQA.Selenium.IOptions.Window
+- uid: OpenQA.Selenium.IWindow
+  commentId: T:OpenQA.Selenium.IWindow
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWindow.html
+  name: IWindow
+  nameWithType: IWindow
+  fullName: OpenQA.Selenium.IWindow
+- uid: OpenQA.Selenium.IOptions.Logs*
+  commentId: Overload:OpenQA.Selenium.IOptions.Logs
+  href: OpenQA.Selenium.IOptions.html#OpenQA_Selenium_IOptions_Logs
+  name: Logs
+  nameWithType: IOptions.Logs
+  fullName: OpenQA.Selenium.IOptions.Logs
+- uid: OpenQA.Selenium.ILogs
+  commentId: T:OpenQA.Selenium.ILogs
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ILogs.html
+  name: ILogs
+  nameWithType: ILogs
+  fullName: OpenQA.Selenium.ILogs
+- uid: OpenQA.Selenium.IOptions.Network*
+  commentId: Overload:OpenQA.Selenium.IOptions.Network
+  href: OpenQA.Selenium.IOptions.html#OpenQA_Selenium_IOptions_Network
+  name: Network
+  nameWithType: IOptions.Network
+  fullName: OpenQA.Selenium.IOptions.Network
+- uid: OpenQA.Selenium.INetwork
+  commentId: T:OpenQA.Selenium.INetwork
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.INetwork.html
+  name: INetwork
+  nameWithType: INetwork
+  fullName: OpenQA.Selenium.INetwork
+- uid: OpenQA.Selenium.ITimeouts
+  commentId: T:OpenQA.Selenium.ITimeouts
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ITimeouts.html
+  name: ITimeouts
+  nameWithType: ITimeouts
+  fullName: OpenQA.Selenium.ITimeouts
+- uid: OpenQA.Selenium.IOptions.Timeouts*
+  commentId: Overload:OpenQA.Selenium.IOptions.Timeouts
+  href: OpenQA.Selenium.IOptions.html#OpenQA_Selenium_IOptions_Timeouts
+  name: Timeouts
+  nameWithType: IOptions.Timeouts
+  fullName: OpenQA.Selenium.IOptions.Timeouts

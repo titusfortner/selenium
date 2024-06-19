@@ -1,0 +1,577 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  commentId: T:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  id: PreloadingAttemptKey
+  parent: OpenQA.Selenium.DevTools.V125.Preload
+  children:
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url
+  langs:
+  - csharp
+  - vb
+  name: PreloadingAttemptKey
+  nameWithType: PreloadingAttemptKey
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PreloadingAttemptKey
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: >-
+    A key that identifies a preloading attempt.
+
+
+    The url used is the url specified by the trigger (i.e. the initial URL), and
+
+    not the final url that is navigated to. For example, prerendering allows
+
+    same-origin main frame navigations during the attempt, but the attempt is
+
+    still keyed with the initial URL.
+  example: []
+  syntax:
+    content: public sealed class PreloadingAttemptKey
+    content.vb: Public NotInheritable Class PreloadingAttemptKey
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId
+  id: LoaderId
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  langs:
+  - csharp
+  - vb
+  name: LoaderId
+  nameWithType: PreloadingAttemptKey.LoaderId
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LoaderId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+    startLine: 18
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: loaderId
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("loaderId")]
+
+      public string LoaderId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("loaderId")>
+
+      Public Property LoaderId As String
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: loaderId
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action
+  id: Action
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: PreloadingAttemptKey.Action
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Action
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: action
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("action")]
+
+      public SpeculationAction Action { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Preload.SpeculationAction
+    content.vb: >-
+      <JsonProperty("action")>
+
+      Public Property Action As SpeculationAction
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: action
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: PreloadingAttemptKey.Url
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: url
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint
+  id: TargetHint
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey
+  langs:
+  - csharp
+  - vb
+  name: TargetHint
+  nameWithType: PreloadingAttemptKey.TargetHint
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TargetHint
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadingAttemptKey.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: targetHint
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("targetHint", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SpeculationTargetHint? TargetHint { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint}
+    content.vb: >-
+      <JsonProperty("targetHint", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property TargetHint As SpeculationTargetHint?
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: targetHint
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Preload
+  commentId: N:OpenQA.Selenium.DevTools.V125.Preload
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Preload
+  nameWithType: OpenQA.Selenium.DevTools.V125.Preload
+  fullName: OpenQA.Selenium.DevTools.V125.Preload
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V125.Preload.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V125.Preload.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadingAttemptKey_LoaderId
+  name: LoaderId
+  nameWithType: PreloadingAttemptKey.LoaderId
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.LoaderId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadingAttemptKey_Action
+  name: Action
+  nameWithType: PreloadingAttemptKey.Action
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Action
+- uid: OpenQA.Selenium.DevTools.V125.Preload.SpeculationAction
+  commentId: T:OpenQA.Selenium.DevTools.V125.Preload.SpeculationAction
+  parent: OpenQA.Selenium.DevTools.V125.Preload
+  href: OpenQA.Selenium.DevTools.V125.Preload.SpeculationAction.html
+  name: SpeculationAction
+  nameWithType: SpeculationAction
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.SpeculationAction
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadingAttemptKey_Url
+  name: Url
+  nameWithType: PreloadingAttemptKey.Url
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.Url
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadingAttemptKey_TargetHint
+  name: TargetHint
+  nameWithType: PreloadingAttemptKey.TargetHint
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadingAttemptKey.TargetHint
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint.html
+  name: SpeculationTargetHint?
+  nameWithType: SpeculationTargetHint?
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint
+    name: SpeculationTargetHint
+    href: OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint
+    name: SpeculationTargetHint
+    href: OpenQA.Selenium.DevTools.V125.Preload.SpeculationTargetHint.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

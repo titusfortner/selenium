@@ -1,0 +1,539 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern
+  commentId: T:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern
+  id: RequestPattern
+  parent: OpenQA.Selenium.DevTools.V85.Fetch
+  children:
+  - OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage
+  - OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType
+  - OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern
+  langs:
+  - csharp
+  - vb
+  name: RequestPattern
+  nameWithType: RequestPattern
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestPattern
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Fetch
+  summary: RequestPattern
+  example: []
+  syntax:
+    content: public sealed class RequestPattern
+    content.vb: Public NotInheritable Class RequestPattern
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern
+  commentId: P:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern
+  id: UrlPattern
+  parent: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern
+  langs:
+  - csharp
+  - vb
+  name: UrlPattern
+  nameWithType: RequestPattern.UrlPattern
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UrlPattern
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Fetch
+  summary: >-
+    Wildcards ('*' -&gt; zero or more, '?' -&gt; exactly one) are allowed. Escape character is
+
+    backslash. Omitting is equivalent to "*".
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("urlPattern", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string UrlPattern { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("urlPattern", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UrlPattern As String
+  overload: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: urlPattern
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType
+  commentId: P:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType
+  id: ResourceType
+  parent: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern
+  langs:
+  - csharp
+  - vb
+  name: ResourceType
+  nameWithType: RequestPattern.ResourceType
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResourceType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Fetch
+  summary: If set, only requests for matching resource types will be intercepted.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("resourceType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ResourceType? ResourceType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V85.Network.ResourceType}
+    content.vb: >-
+      <JsonProperty("resourceType", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ResourceType As ResourceType?
+  overload: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: resourceType
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage
+  commentId: P:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage
+  id: RequestStage
+  parent: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern
+  langs:
+  - csharp
+  - vb
+  name: RequestStage
+  nameWithType: RequestPattern.RequestStage
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestStage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Fetch/RequestPattern.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Fetch
+  summary: Stage at wich to begin intercepting requests. Default is Request.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestStage", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public RequestStage? RequestStage { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V85.Fetch.RequestStage}
+    content.vb: >-
+      <JsonProperty("requestStage", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RequestStage As RequestStage?
+  overload: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestStage
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Fetch
+  commentId: N:OpenQA.Selenium.DevTools.V85.Fetch
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Fetch
+  nameWithType: OpenQA.Selenium.DevTools.V85.Fetch
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V85.Fetch.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V85.Fetch.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern
+  href: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.html#OpenQA_Selenium_DevTools_V85_Fetch_RequestPattern_UrlPattern
+  name: UrlPattern
+  nameWithType: RequestPattern.UrlPattern
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.UrlPattern
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType
+  href: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.html#OpenQA_Selenium_DevTools_V85_Fetch_RequestPattern_ResourceType
+  name: ResourceType
+  nameWithType: RequestPattern.ResourceType
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.ResourceType
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V85.Network.ResourceType}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V85.Network.ResourceType}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V85.Network.ResourceType.html
+  name: ResourceType?
+  nameWithType: ResourceType?
+  fullName: OpenQA.Selenium.DevTools.V85.Network.ResourceType?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.Network.ResourceType
+    name: ResourceType
+    href: OpenQA.Selenium.DevTools.V85.Network.ResourceType.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.Network.ResourceType
+    name: ResourceType
+    href: OpenQA.Selenium.DevTools.V85.Network.ResourceType.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage
+  href: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.html#OpenQA_Selenium_DevTools_V85_Fetch_RequestPattern_RequestStage
+  name: RequestStage
+  nameWithType: RequestPattern.RequestStage
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestPattern.RequestStage
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V85.Fetch.RequestStage}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V85.Fetch.RequestStage}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V85.Fetch.RequestStage.html
+  name: RequestStage?
+  nameWithType: RequestStage?
+  fullName: OpenQA.Selenium.DevTools.V85.Fetch.RequestStage?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestStage
+    name: RequestStage
+    href: OpenQA.Selenium.DevTools.V85.Fetch.RequestStage.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.Fetch.RequestStage
+    name: RequestStage
+    href: OpenQA.Selenium.DevTools.V85.Fetch.RequestStage.html
+  - name: '?'

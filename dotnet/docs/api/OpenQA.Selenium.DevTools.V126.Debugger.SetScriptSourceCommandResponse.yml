@@ -1,0 +1,963 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  id: SetScriptSourceCommandResponse
+  parent: OpenQA.Selenium.DevTools.V126.Debugger
+  children:
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status
+  langs:
+  - csharp
+  - vb
+  name: SetScriptSourceCommandResponse
+  nameWithType: SetScriptSourceCommandResponse
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetScriptSourceCommandResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: >-
+    Response for Edits JavaScript source live.
+
+
+    In general, functions that are currently on the stack can not be edited with
+
+    a single exception: If the edited function is the top-most stack frame and
+
+    that is the only activation of that function on the stack. In this case
+
+    the live edit will be successful and a `Debugger.restartFrame` for the
+
+    top-most function is automatically triggered.
+  example: []
+  syntax:
+    content: 'public sealed class SetScriptSourceCommandResponse : ICommandResponse<SetScriptSourceCommandSettings>, ICommandResponse'
+    content.vb: Public NotInheritable Class SetScriptSourceCommandResponse Implements ICommandResponse(Of SetScriptSourceCommandSettings), ICommandResponse
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings}
+  - OpenQA.Selenium.DevTools.ICommandResponse
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames
+  id: CallFrames
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: CallFrames
+  nameWithType: SetScriptSourceCommandResponse.CallFrames
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CallFrames
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 81
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: New stack trace in case editing has happened while VM was stopped.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("callFrames", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public CallFrame[] CallFrames { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame[]
+    content.vb: >-
+      <JsonProperty("callFrames", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CallFrames As CallFrame()
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: callFrames
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged
+  id: StackChanged
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: StackChanged
+  nameWithType: SetScriptSourceCommandResponse.StackChanged
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StackChanged
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 90
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Whether current call stack  was modified after applying the changes.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("stackChanged", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? StackChanged { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("stackChanged", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StackChanged As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: stackChanged
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace
+  id: AsyncStackTrace
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: AsyncStackTrace
+  nameWithType: SetScriptSourceCommandResponse.AsyncStackTrace
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AsyncStackTrace
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 99
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Async stack trace, if any.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("asyncStackTrace", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StackTrace AsyncStackTrace { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Runtime.StackTrace
+    content.vb: >-
+      <JsonProperty("asyncStackTrace", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AsyncStackTrace As StackTrace
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: asyncStackTrace
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId
+  id: AsyncStackTraceId
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: AsyncStackTraceId
+  nameWithType: SetScriptSourceCommandResponse.AsyncStackTraceId
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AsyncStackTraceId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 108
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Async stack trace, if any.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("asyncStackTraceId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public StackTraceId AsyncStackTraceId { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Runtime.StackTraceId
+    content.vb: >-
+      <JsonProperty("asyncStackTraceId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AsyncStackTraceId As StackTraceId
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: asyncStackTraceId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status
+  id: Status
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: SetScriptSourceCommandResponse.Status
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Status
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 119
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: >-
+    Whether the operation was successful or not. Only `Ok` denotes a
+
+    successful live edit while the other enum variants denote why
+
+    the live edit failed.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("status")]
+
+      public string Status { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("status")>
+
+      Public Property Status As String
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: status
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails
+  id: ExceptionDetails
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: ExceptionDetails
+  nameWithType: SetScriptSourceCommandResponse.ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExceptionDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetScriptSourceCommand.cs
+    startLine: 128
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Exception details if any. Only present when `status` is `CompileError`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("exceptionDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ExceptionDetails ExceptionDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Runtime.ExceptionDetails
+    content.vb: >-
+      <JsonProperty("exceptionDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ExceptionDetails As ExceptionDetails
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: exceptionDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Debugger
+  commentId: N:OpenQA.Selenium.DevTools.V126.Debugger
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Debugger
+  nameWithType: OpenQA.Selenium.DevTools.V126.Debugger
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger
+    name: Debugger
+    href: OpenQA.Selenium.DevTools.V126.Debugger.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger
+    name: Debugger
+    href: OpenQA.Selenium.DevTools.V126.Debugger.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings}
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<SetScriptSourceCommandSettings>
+  nameWithType: ICommandResponse<SetScriptSourceCommandSettings>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings>
+  nameWithType.vb: ICommandResponse(Of SetScriptSourceCommandSettings)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings)
+  name.vb: ICommandResponse(Of SetScriptSourceCommandSettings)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings
+    name: SetScriptSourceCommandSettings
+    href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings
+    name: SetScriptSourceCommandSettings
+    href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandSettings.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  name: ICommandResponse
+  nameWithType: ICommandResponse
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  parent: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  definition: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<T>
+  nameWithType: ICommandResponse<T>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<T>
+  nameWithType.vb: ICommandResponse(Of T)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of T)
+  name.vb: ICommandResponse(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html
+  name: ICommandResponseExtensions
+  nameWithType: ICommandResponseExtensions
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.html#OpenQA_Selenium_DevTools_V126_Debugger_SetScriptSourceCommandResponse_CallFrames
+  name: CallFrames
+  nameWithType: SetScriptSourceCommandResponse.CallFrames
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.CallFrames
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame.html
+  name: CallFrame[]
+  nameWithType: CallFrame[]
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame[]
+  nameWithType.vb: CallFrame()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame()
+  name.vb: CallFrame()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame
+    name: CallFrame
+    href: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame
+    name: CallFrame
+    href: OpenQA.Selenium.DevTools.V126.Debugger.CallFrame.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.html#OpenQA_Selenium_DevTools_V126_Debugger_SetScriptSourceCommandResponse_StackChanged
+  name: StackChanged
+  nameWithType: SetScriptSourceCommandResponse.StackChanged
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.StackChanged
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.html#OpenQA_Selenium_DevTools_V126_Debugger_SetScriptSourceCommandResponse_AsyncStackTrace
+  name: AsyncStackTrace
+  nameWithType: SetScriptSourceCommandResponse.AsyncStackTrace
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTrace
+- uid: OpenQA.Selenium.DevTools.V126.Runtime.StackTrace
+  commentId: T:OpenQA.Selenium.DevTools.V126.Runtime.StackTrace
+  parent: OpenQA.Selenium.DevTools.V126.Runtime
+  href: OpenQA.Selenium.DevTools.V126.Runtime.StackTrace.html
+  name: StackTrace
+  nameWithType: StackTrace
+  fullName: OpenQA.Selenium.DevTools.V126.Runtime.StackTrace
+- uid: OpenQA.Selenium.DevTools.V126.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V126.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V126.Runtime
+  fullName: OpenQA.Selenium.DevTools.V126.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V126.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V126.Runtime.html
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.html#OpenQA_Selenium_DevTools_V126_Debugger_SetScriptSourceCommandResponse_AsyncStackTraceId
+  name: AsyncStackTraceId
+  nameWithType: SetScriptSourceCommandResponse.AsyncStackTraceId
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.AsyncStackTraceId
+- uid: OpenQA.Selenium.DevTools.V126.Runtime.StackTraceId
+  commentId: T:OpenQA.Selenium.DevTools.V126.Runtime.StackTraceId
+  parent: OpenQA.Selenium.DevTools.V126.Runtime
+  href: OpenQA.Selenium.DevTools.V126.Runtime.StackTraceId.html
+  name: StackTraceId
+  nameWithType: StackTraceId
+  fullName: OpenQA.Selenium.DevTools.V126.Runtime.StackTraceId
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.html#OpenQA_Selenium_DevTools_V126_Debugger_SetScriptSourceCommandResponse_Status
+  name: Status
+  nameWithType: SetScriptSourceCommandResponse.Status
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.Status
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.html#OpenQA_Selenium_DevTools_V126_Debugger_SetScriptSourceCommandResponse_ExceptionDetails
+  name: ExceptionDetails
+  nameWithType: SetScriptSourceCommandResponse.ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetScriptSourceCommandResponse.ExceptionDetails
+- uid: OpenQA.Selenium.DevTools.V126.Runtime.ExceptionDetails
+  commentId: T:OpenQA.Selenium.DevTools.V126.Runtime.ExceptionDetails
+  parent: OpenQA.Selenium.DevTools.V126.Runtime
+  href: OpenQA.Selenium.DevTools.V126.Runtime.ExceptionDetails.html
+  name: ExceptionDetails
+  nameWithType: ExceptionDetails
+  fullName: OpenQA.Selenium.DevTools.V126.Runtime.ExceptionDetails

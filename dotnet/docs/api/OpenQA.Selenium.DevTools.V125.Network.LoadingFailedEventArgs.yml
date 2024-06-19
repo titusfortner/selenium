@@ -1,0 +1,784 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  id: LoadingFailedEventArgs
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  children:
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp
+  - OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type
+  langs:
+  - csharp
+  - vb
+  name: LoadingFailedEventArgs
+  nameWithType: LoadingFailedEventArgs
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LoadingFailedEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Fired when HTTP request has failed to load.
+  example: []
+  syntax:
+    content: 'public sealed class LoadingFailedEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class LoadingFailedEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId
+  id: RequestId
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: LoadingFailedEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Request identifier.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestId")]
+
+      public string RequestId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("requestId")>
+
+      Public Property RequestId As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestId
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp
+  id: Timestamp
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Timestamp
+  nameWithType: LoadingFailedEventArgs.Timestamp
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Timestamp
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Timestamp.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("timestamp")]
+
+      public double Timestamp { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("timestamp")>
+
+      Public Property Timestamp As Double
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timestamp
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type
+  id: Type
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: LoadingFailedEventArgs.Type
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Type
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Resource type.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("type")]
+
+      public ResourceType Type { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.ResourceType
+    content.vb: >-
+      <JsonProperty("type")>
+
+      Public Property Type As ResourceType
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText
+  id: ErrorText
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ErrorText
+  nameWithType: LoadingFailedEventArgs.ErrorText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ErrorText
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: 'Error message. List of network errors: https://cs.chromium.org/chromium/src/net/base/net_error_list.h'
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("errorText")]
+
+      public string ErrorText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("errorText")>
+
+      Public Property ErrorText As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errorText
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled
+  id: Canceled
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Canceled
+  nameWithType: LoadingFailedEventArgs.Canceled
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Canceled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: True if loading was canceled.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("canceled", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Canceled { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("canceled", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Canceled As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: canceled
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason
+  id: BlockedReason
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: BlockedReason
+  nameWithType: LoadingFailedEventArgs.BlockedReason
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BlockedReason
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The reason why loading was blocked, if any.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("blockedReason", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public BlockedReason? BlockedReason { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.Network.BlockedReason}
+    content.vb: >-
+      <JsonProperty("blockedReason", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property BlockedReason As BlockedReason?
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: blockedReason
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus
+  id: CorsErrorStatus
+  parent: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: CorsErrorStatus
+  nameWithType: LoadingFailedEventArgs.CorsErrorStatus
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CorsErrorStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/LoadingFailedEventArgs.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The reason why loading was blocked by CORS, if any.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("corsErrorStatus", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public CorsErrorStatus CorsErrorStatus { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Network.CorsErrorStatus
+    content.vb: >-
+      <JsonProperty("corsErrorStatus", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CorsErrorStatus As CorsErrorStatus
+  overload: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: corsErrorStatus
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Network
+  commentId: N:OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Network
+  nameWithType: OpenQA.Selenium.DevTools.V125.Network
+  fullName: OpenQA.Selenium.DevTools.V125.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_RequestId
+  name: RequestId
+  nameWithType: LoadingFailedEventArgs.RequestId
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.RequestId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_Timestamp
+  name: Timestamp
+  nameWithType: LoadingFailedEventArgs.Timestamp
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Timestamp
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_Type
+  name: Type
+  nameWithType: LoadingFailedEventArgs.Type
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Type
+- uid: OpenQA.Selenium.DevTools.V125.Network.ResourceType
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.ResourceType
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.ResourceType.html
+  name: ResourceType
+  nameWithType: ResourceType
+  fullName: OpenQA.Selenium.DevTools.V125.Network.ResourceType
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_ErrorText
+  name: ErrorText
+  nameWithType: LoadingFailedEventArgs.ErrorText
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.ErrorText
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_Canceled
+  name: Canceled
+  nameWithType: LoadingFailedEventArgs.Canceled
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.Canceled
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_BlockedReason
+  name: BlockedReason
+  nameWithType: LoadingFailedEventArgs.BlockedReason
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.BlockedReason
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.Network.BlockedReason}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.Network.BlockedReason}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.Network.BlockedReason.html
+  name: BlockedReason?
+  nameWithType: BlockedReason?
+  fullName: OpenQA.Selenium.DevTools.V125.Network.BlockedReason?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Network.BlockedReason
+    name: BlockedReason
+    href: OpenQA.Selenium.DevTools.V125.Network.BlockedReason.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Network.BlockedReason
+    name: BlockedReason
+    href: OpenQA.Selenium.DevTools.V125.Network.BlockedReason.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus
+  href: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.html#OpenQA_Selenium_DevTools_V125_Network_LoadingFailedEventArgs_CorsErrorStatus
+  name: CorsErrorStatus
+  nameWithType: LoadingFailedEventArgs.CorsErrorStatus
+  fullName: OpenQA.Selenium.DevTools.V125.Network.LoadingFailedEventArgs.CorsErrorStatus
+- uid: OpenQA.Selenium.DevTools.V125.Network.CorsErrorStatus
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.CorsErrorStatus
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.Selenium.DevTools.V125.Network.CorsErrorStatus.html
+  name: CorsErrorStatus
+  nameWithType: CorsErrorStatus
+  fullName: OpenQA.Selenium.DevTools.V125.Network.CorsErrorStatus

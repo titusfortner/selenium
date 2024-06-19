@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData
+  commentId: T:OpenQA.Selenium.DevTools.V124.Input.DragData
+  id: DragData
+  parent: OpenQA.Selenium.DevTools.V124.Input
+  children:
+  - OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask
+  - OpenQA.Selenium.DevTools.V124.Input.DragData.Files
+  - OpenQA.Selenium.DevTools.V124.Input.DragData.Items
+  langs:
+  - csharp
+  - vb
+  name: DragData
+  nameWithType: DragData
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DragData
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Input
+  summary: DragData
+  example: []
+  syntax:
+    content: public sealed class DragData
+    content.vb: Public NotInheritable Class DragData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData.Items
+  commentId: P:OpenQA.Selenium.DevTools.V124.Input.DragData.Items
+  id: Items
+  parent: OpenQA.Selenium.DevTools.V124.Input.DragData
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: DragData.Items
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData.Items
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Items
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Input
+  summary: items
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("items")]
+
+      public DragDataItem[] Items { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Input.DragDataItem[]
+    content.vb: >-
+      <JsonProperty("items")>
+
+      Public Property Items As DragDataItem()
+  overload: OpenQA.Selenium.DevTools.V124.Input.DragData.Items*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: items
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData.Files
+  commentId: P:OpenQA.Selenium.DevTools.V124.Input.DragData.Files
+  id: Files
+  parent: OpenQA.Selenium.DevTools.V124.Input.DragData
+  langs:
+  - csharp
+  - vb
+  name: Files
+  nameWithType: DragData.Files
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData.Files
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Files
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Input
+  summary: List of filenames that should be included when dropping
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("files", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] Files { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("files", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Files As String()
+  overload: OpenQA.Selenium.DevTools.V124.Input.DragData.Files*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: files
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask
+  commentId: P:OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask
+  id: DragOperationsMask
+  parent: OpenQA.Selenium.DevTools.V124.Input.DragData
+  langs:
+  - csharp
+  - vb
+  name: DragOperationsMask
+  nameWithType: DragData.DragOperationsMask
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DragOperationsMask
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Input/DragData.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Input
+  summary: Bit field representing allowed drag operations. Copy = 1, Link = 2, Move = 16
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("dragOperationsMask")]
+
+      public long DragOperationsMask { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("dragOperationsMask")>
+
+      Public Property DragOperationsMask As Long
+  overload: OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: dragOperationsMask
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Input
+  commentId: N:OpenQA.Selenium.DevTools.V124.Input
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Input
+  nameWithType: OpenQA.Selenium.DevTools.V124.Input
+  fullName: OpenQA.Selenium.DevTools.V124.Input
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Input
+    name: Input
+    href: OpenQA.Selenium.DevTools.V124.Input.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Input
+    name: Input
+    href: OpenQA.Selenium.DevTools.V124.Input.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData.Items*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Input.DragData.Items
+  href: OpenQA.Selenium.DevTools.V124.Input.DragData.html#OpenQA_Selenium_DevTools_V124_Input_DragData_Items
+  name: Items
+  nameWithType: DragData.Items
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData.Items
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragDataItem[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.Input.DragDataItem.html
+  name: DragDataItem[]
+  nameWithType: DragDataItem[]
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragDataItem[]
+  nameWithType.vb: DragDataItem()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Input.DragDataItem()
+  name.vb: DragDataItem()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.Input.DragDataItem
+    name: DragDataItem
+    href: OpenQA.Selenium.DevTools.V124.Input.DragDataItem.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.Input.DragDataItem
+    name: DragDataItem
+    href: OpenQA.Selenium.DevTools.V124.Input.DragDataItem.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData.Files*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Input.DragData.Files
+  href: OpenQA.Selenium.DevTools.V124.Input.DragData.html#OpenQA_Selenium_DevTools_V124_Input_DragData_Files
+  name: Files
+  nameWithType: DragData.Files
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData.Files
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask
+  href: OpenQA.Selenium.DevTools.V124.Input.DragData.html#OpenQA_Selenium_DevTools_V124_Input_DragData_DragOperationsMask
+  name: DragOperationsMask
+  nameWithType: DragData.DragOperationsMask
+  fullName: OpenQA.Selenium.DevTools.V124.Input.DragData.DragOperationsMask
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long

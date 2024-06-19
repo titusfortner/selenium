@@ -1,0 +1,1645 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  id: ProfilerAdapter
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  children:
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileFinished
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileStarted
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable(OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable(OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage(OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.PreciseCoverageDeltaUpdate
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval(OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start(OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop(OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: ProfilerAdapter
+  nameWithType: ProfilerAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ProfilerAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Represents an adapter for the Profiler domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class ProfilerAdapter
+    content.vb: Public Class ProfilerAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: ProfilerAdapter(IDevToolsSession)
+  nameWithType: ProfilerAdapter.ProfilerAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ProfilerAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Initializes a new instance of the ProfilerAdapter class.
+  example: []
+  syntax:
+    content: public ProfilerAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.#ctor*
+  nameWithType.vb: ProfilerAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: ProfilerAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileFinished
+  commentId: E:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileFinished
+  id: ConsoleProfileFinished
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: ConsoleProfileFinished
+  nameWithType: ProfilerAdapter.ConsoleProfileFinished
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileFinished
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ConsoleProfileFinished
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: consoleProfileFinished
+  example: []
+  syntax:
+    content: public event EventHandler<ConsoleProfileFinishedEventArgs> ConsoleProfileFinished
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs}
+    content.vb: Public Event ConsoleProfileFinished As EventHandler(Of ConsoleProfileFinishedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileStarted
+  commentId: E:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileStarted
+  id: ConsoleProfileStarted
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: ConsoleProfileStarted
+  nameWithType: ProfilerAdapter.ConsoleProfileStarted
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ConsoleProfileStarted
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ConsoleProfileStarted
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Sent when new profile recording is started using console.profile() call.
+  example: []
+  syntax:
+    content: public event EventHandler<ConsoleProfileStartedEventArgs> ConsoleProfileStarted
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs}
+    content.vb: Public Event ConsoleProfileStarted As EventHandler(Of ConsoleProfileStartedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.PreciseCoverageDeltaUpdate
+  commentId: E:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.PreciseCoverageDeltaUpdate
+  id: PreciseCoverageDeltaUpdate
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: PreciseCoverageDeltaUpdate
+  nameWithType: ProfilerAdapter.PreciseCoverageDeltaUpdate
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.PreciseCoverageDeltaUpdate
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PreciseCoverageDeltaUpdate
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: >-
+    Reports coverage delta since the last poll (either from an event like this, or from
+
+    `takePreciseCoverage` for the current isolate. May only be sent if precise code
+
+    coverage has been started. This event can be trigged by the embedder to, for example,
+
+    trigger collection of coverage data immediately at a certain point in time.
+  example: []
+  syntax:
+    content: public event EventHandler<PreciseCoverageDeltaUpdateEventArgs> PreciseCoverageDeltaUpdate
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs}
+    content.vb: Public Event PreciseCoverageDeltaUpdate As EventHandler(Of PreciseCoverageDeltaUpdateEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable(OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable(OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable(OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: disable
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable*
+  nameWithType.vb: ProfilerAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable(OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable(OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable(OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable(OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 64
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: enable
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable*
+  nameWithType.vb: ProfilerAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable(OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage(OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage(OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetBestEffortCoverage(OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetBestEffortCoverage(GetBestEffortCoverageCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.GetBestEffortCoverage(GetBestEffortCoverageCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage(OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetBestEffortCoverage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: >-
+    Collect coverage data for the current isolate. The coverage data may be incomplete due to
+
+    garbage collection.
+  example: []
+  syntax:
+    content: public Task<GetBestEffortCoverageCommandResponse> GetBestEffortCoverage(GetBestEffortCoverageCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse}
+    content.vb: Public Function GetBestEffortCoverage(command As GetBestEffortCoverageCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetBestEffortCoverageCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage*
+  nameWithType.vb: ProfilerAdapter.GetBestEffortCoverage(GetBestEffortCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage(OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetBestEffortCoverage(GetBestEffortCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval(OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval(OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetSamplingInterval(OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetSamplingInterval(SetSamplingIntervalCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.SetSamplingInterval(SetSamplingIntervalCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval(OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetSamplingInterval
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 79
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Changes CPU profiler sampling interval. Must be called before CPU profiles recording started.
+  example: []
+  syntax:
+    content: public Task<SetSamplingIntervalCommandResponse> SetSamplingInterval(SetSamplingIntervalCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse}
+    content.vb: Public Function SetSamplingInterval(command As SetSamplingIntervalCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetSamplingIntervalCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval*
+  nameWithType.vb: ProfilerAdapter.SetSamplingInterval(SetSamplingIntervalCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval(OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetSamplingInterval(SetSamplingIntervalCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start(OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start(OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Start(OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: Start(StartCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.Start(StartCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start(OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Start
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: start
+  example: []
+  syntax:
+    content: public Task<StartCommandResponse> Start(StartCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse}
+    content.vb: Public Function Start(command As StartCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start*
+  nameWithType.vb: ProfilerAdapter.Start(StartCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start(OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Start(StartCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StartPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: StartPreciseCoverage(StartPreciseCoverageCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.StartPreciseCoverage(StartPreciseCoverageCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartPreciseCoverage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 95
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: >-
+    Enable precise code coverage. Coverage data for JavaScript executed before enabling precise code
+
+    coverage may be incomplete. Enabling prevents running optimized code and resets execution
+
+    counters.
+  example: []
+  syntax:
+    content: public Task<StartPreciseCoverageCommandResponse> StartPreciseCoverage(StartPreciseCoverageCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse}
+    content.vb: Public Function StartPreciseCoverage(command As StartPreciseCoverageCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartPreciseCoverageCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage*
+  nameWithType.vb: ProfilerAdapter.StartPreciseCoverage(StartPreciseCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StartPreciseCoverage(StartPreciseCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop(OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop(OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Stop(OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: Stop(StopCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.Stop(StopCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop(OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Stop
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 102
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: stop
+  example: []
+  syntax:
+    content: public Task<StopCommandResponse> Stop(StopCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse}
+    content.vb: Public Function [Stop](command As StopCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StopCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop*
+  nameWithType.vb: ProfilerAdapter.Stop(StopCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop(OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Stop(StopCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StopPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: StopPreciseCoverage(StopPreciseCoverageCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.StopPreciseCoverage(StopPreciseCoverageCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StopPreciseCoverage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 110
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: >-
+    Disable precise code coverage. Disabling releases unnecessary execution count records and allows
+
+    executing optimized code.
+  example: []
+  syntax:
+    content: public Task<StopPreciseCoverageCommandResponse> StopPreciseCoverage(StopPreciseCoverageCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse}
+    content.vb: Public Function StopPreciseCoverage(command As StopPreciseCoverageCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StopPreciseCoverageCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage*
+  nameWithType.vb: ProfilerAdapter.StopPreciseCoverage(StopPreciseCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StopPreciseCoverage(StopPreciseCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: TakePreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter
+  langs:
+  - csharp
+  - vb
+  name: TakePreciseCoverage(TakePreciseCoverageCommandSettings, CancellationToken, int?, bool)
+  nameWithType: ProfilerAdapter.TakePreciseCoverage(TakePreciseCoverageCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TakePreciseCoverage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/ProfilerAdapter.cs
+    startLine: 118
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: >-
+    Collect coverage data for the current isolate, and resets execution counters. Precise code
+
+    coverage needs to have started.
+  example: []
+  syntax:
+    content: public Task<TakePreciseCoverageCommandResponse> TakePreciseCoverage(TakePreciseCoverageCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse}
+    content.vb: Public Function TakePreciseCoverage(command As TakePreciseCoverageCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of TakePreciseCoverageCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage*
+  nameWithType.vb: ProfilerAdapter.TakePreciseCoverage(TakePreciseCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage(OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: TakePreciseCoverage(TakePreciseCoverageCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Profiler
+  commentId: N:OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Profiler
+  nameWithType: OpenQA.Selenium.DevTools.V124.Profiler
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler
+    name: Profiler
+    href: OpenQA.Selenium.DevTools.V124.Profiler.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler
+    name: Profiler
+    href: OpenQA.Selenium.DevTools.V124.Profiler.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: ProfilerAdapter
+  nameWithType: ProfilerAdapter.ProfilerAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.ProfilerAdapter
+  nameWithType.vb: ProfilerAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_Session
+  name: Session
+  nameWithType: ProfilerAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<ConsoleProfileFinishedEventArgs>
+  nameWithType: EventHandler<ConsoleProfileFinishedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs>
+  nameWithType.vb: EventHandler(Of ConsoleProfileFinishedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs)
+  name.vb: EventHandler(Of ConsoleProfileFinishedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs
+    name: ConsoleProfileFinishedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs
+    name: ConsoleProfileFinishedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileFinishedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<ConsoleProfileStartedEventArgs>
+  nameWithType: EventHandler<ConsoleProfileStartedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs>
+  nameWithType.vb: EventHandler(Of ConsoleProfileStartedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs)
+  name.vb: EventHandler(Of ConsoleProfileStartedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs
+    name: ConsoleProfileStartedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs
+    name: ConsoleProfileStartedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Profiler.ConsoleProfileStartedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<PreciseCoverageDeltaUpdateEventArgs>
+  nameWithType: EventHandler<PreciseCoverageDeltaUpdateEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs>
+  nameWithType.vb: EventHandler(Of PreciseCoverageDeltaUpdateEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs)
+  name.vb: EventHandler(Of PreciseCoverageDeltaUpdateEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs
+    name: PreciseCoverageDeltaUpdateEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs
+    name: PreciseCoverageDeltaUpdateEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Profiler.PreciseCoverageDeltaUpdateEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_Disable_OpenQA_Selenium_DevTools_V124_Profiler_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: ProfilerAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.DisableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_Enable_OpenQA_Selenium_DevTools_V124_Profiler_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: ProfilerAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_GetBestEffortCoverage_OpenQA_Selenium_DevTools_V124_Profiler_GetBestEffortCoverageCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetBestEffortCoverage
+  nameWithType: ProfilerAdapter.GetBestEffortCoverage
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.GetBestEffortCoverage
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings.html
+  name: GetBestEffortCoverageCommandSettings
+  nameWithType: GetBestEffortCoverageCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetBestEffortCoverageCommandResponse>
+  nameWithType: Task<GetBestEffortCoverageCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse>
+  nameWithType.vb: Task(Of GetBestEffortCoverageCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse)
+  name.vb: Task(Of GetBestEffortCoverageCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse
+    name: GetBestEffortCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse
+    name: GetBestEffortCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.GetBestEffortCoverageCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_SetSamplingInterval_OpenQA_Selenium_DevTools_V124_Profiler_SetSamplingIntervalCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetSamplingInterval
+  nameWithType: ProfilerAdapter.SetSamplingInterval
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.SetSamplingInterval
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings.html
+  name: SetSamplingIntervalCommandSettings
+  nameWithType: SetSamplingIntervalCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetSamplingIntervalCommandResponse>
+  nameWithType: Task<SetSamplingIntervalCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse>
+  nameWithType.vb: Task(Of SetSamplingIntervalCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse)
+  name.vb: Task(Of SetSamplingIntervalCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse
+    name: SetSamplingIntervalCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse
+    name: SetSamplingIntervalCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.SetSamplingIntervalCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_Start_OpenQA_Selenium_DevTools_V124_Profiler_StartCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Start
+  nameWithType: ProfilerAdapter.Start
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Start
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings.html
+  name: StartCommandSettings
+  nameWithType: StartCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartCommandResponse>
+  nameWithType: Task<StartCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse>
+  nameWithType.vb: Task(Of StartCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse)
+  name.vb: Task(Of StartCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse
+    name: StartCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse
+    name: StartCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StartCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_StartPreciseCoverage_OpenQA_Selenium_DevTools_V124_Profiler_StartPreciseCoverageCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StartPreciseCoverage
+  nameWithType: ProfilerAdapter.StartPreciseCoverage
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StartPreciseCoverage
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings.html
+  name: StartPreciseCoverageCommandSettings
+  nameWithType: StartPreciseCoverageCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartPreciseCoverageCommandResponse>
+  nameWithType: Task<StartPreciseCoverageCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse>
+  nameWithType.vb: Task(Of StartPreciseCoverageCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse)
+  name.vb: Task(Of StartPreciseCoverageCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse
+    name: StartPreciseCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse
+    name: StartPreciseCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StartPreciseCoverageCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_Stop_OpenQA_Selenium_DevTools_V124_Profiler_StopCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Stop
+  nameWithType: ProfilerAdapter.Stop
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.Stop
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings.html
+  name: StopCommandSettings
+  nameWithType: StopCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StopCommandResponse>
+  nameWithType: Task<StopCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse>
+  nameWithType.vb: Task(Of StopCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse)
+  name.vb: Task(Of StopCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse
+    name: StopCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse
+    name: StopCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StopCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_StopPreciseCoverage_OpenQA_Selenium_DevTools_V124_Profiler_StopPreciseCoverageCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StopPreciseCoverage
+  nameWithType: ProfilerAdapter.StopPreciseCoverage
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.StopPreciseCoverage
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings.html
+  name: StopPreciseCoverageCommandSettings
+  nameWithType: StopPreciseCoverageCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StopPreciseCoverageCommandResponse>
+  nameWithType: Task<StopPreciseCoverageCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse>
+  nameWithType.vb: Task(Of StopPreciseCoverageCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse)
+  name.vb: Task(Of StopPreciseCoverageCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse
+    name: StopPreciseCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse
+    name: StopPreciseCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.StopPreciseCoverageCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.html#OpenQA_Selenium_DevTools_V124_Profiler_ProfilerAdapter_TakePreciseCoverage_OpenQA_Selenium_DevTools_V124_Profiler_TakePreciseCoverageCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: TakePreciseCoverage
+  nameWithType: ProfilerAdapter.TakePreciseCoverage
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfilerAdapter.TakePreciseCoverage
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings.html
+  name: TakePreciseCoverageCommandSettings
+  nameWithType: TakePreciseCoverageCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TakePreciseCoverageCommandResponse>
+  nameWithType: Task<TakePreciseCoverageCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse>
+  nameWithType.vb: Task(Of TakePreciseCoverageCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse)
+  name.vb: Task(Of TakePreciseCoverageCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse
+    name: TakePreciseCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse
+    name: TakePreciseCoverageCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Profiler.TakePreciseCoverageCommandResponse.html
+  - name: )

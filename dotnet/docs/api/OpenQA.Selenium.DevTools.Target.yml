@@ -1,0 +1,915 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.Target
+  commentId: T:OpenQA.Selenium.DevTools.Target
+  id: Target
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.Target.AttachToTarget(System.String)
+  - OpenQA.Selenium.DevTools.Target.DetachFromTarget(System.String,System.String)
+  - OpenQA.Selenium.DevTools.Target.GetTargets(System.Object)
+  - OpenQA.Selenium.DevTools.Target.OnTargetAttached(OpenQA.Selenium.DevTools.TargetAttachedEventArgs)
+  - OpenQA.Selenium.DevTools.Target.OnTargetDetached(OpenQA.Selenium.DevTools.TargetDetachedEventArgs)
+  - OpenQA.Selenium.DevTools.Target.SetAutoAttach
+  - OpenQA.Selenium.DevTools.Target.TargetAttached
+  - OpenQA.Selenium.DevTools.Target.TargetDetached
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: Target
+  fullName: OpenQA.Selenium.DevTools.Target
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Target
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Class representing a target for DevTools Protocol commands
+  example: []
+  syntax:
+    content: public abstract class Target
+    content.vb: Public MustInherit Class Target
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.DevTools.V124.V124Target
+  - OpenQA.Selenium.DevTools.V125.V125Target
+  - OpenQA.Selenium.DevTools.V126.V126Target
+  - OpenQA.Selenium.DevTools.V85.V85Target
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.Target.TargetDetached
+  commentId: E:OpenQA.Selenium.DevTools.Target.TargetDetached
+  id: TargetDetached
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: TargetDetached
+  nameWithType: Target.TargetDetached
+  fullName: OpenQA.Selenium.DevTools.Target.TargetDetached
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TargetDetached
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a target is detached.
+  example: []
+  syntax:
+    content: public event EventHandler<TargetDetachedEventArgs> TargetDetached
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.TargetDetachedEventArgs}
+    content.vb: Public Event TargetDetached As EventHandler(Of TargetDetachedEventArgs)
+- uid: OpenQA.Selenium.DevTools.Target.TargetAttached
+  commentId: E:OpenQA.Selenium.DevTools.Target.TargetAttached
+  id: TargetAttached
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: TargetAttached
+  nameWithType: Target.TargetAttached
+  fullName: OpenQA.Selenium.DevTools.Target.TargetAttached
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TargetAttached
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Occurs when a target is attached.
+  example: []
+  syntax:
+    content: public event EventHandler<TargetAttachedEventArgs> TargetAttached
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.TargetAttachedEventArgs}
+    content.vb: Public Event TargetAttached As EventHandler(Of TargetAttachedEventArgs)
+- uid: OpenQA.Selenium.DevTools.Target.GetTargets(System.Object)
+  commentId: M:OpenQA.Selenium.DevTools.Target.GetTargets(System.Object)
+  id: GetTargets(System.Object)
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: GetTargets(object)
+  nameWithType: Target.GetTargets(object)
+  fullName: OpenQA.Selenium.DevTools.Target.GetTargets(object)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetTargets
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously gets the targets available for this session.
+  example: []
+  syntax:
+    content: public abstract Task<ReadOnlyCollection<TargetInfo>> GetTargets(object settings = null)
+    parameters:
+    - id: settings
+      type: System.Object
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.DevTools.TargetInfo}}
+      description: >-
+        A task that represents the asynchronous operation. The task result
+
+        contains the list of <xref href="OpenQA.Selenium.DevTools.TargetInfo" data-throw-if-not-resolved="false"></xref> objects describing the
+
+        targets available for this session.
+    content.vb: Public MustOverride Function GetTargets(settings As Object = Nothing) As Task(Of ReadOnlyCollection(Of TargetInfo))
+  overload: OpenQA.Selenium.DevTools.Target.GetTargets*
+  nameWithType.vb: Target.GetTargets(Object)
+  fullName.vb: OpenQA.Selenium.DevTools.Target.GetTargets(Object)
+  name.vb: GetTargets(Object)
+- uid: OpenQA.Selenium.DevTools.Target.AttachToTarget(System.String)
+  commentId: M:OpenQA.Selenium.DevTools.Target.AttachToTarget(System.String)
+  id: AttachToTarget(System.String)
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: AttachToTarget(string)
+  nameWithType: Target.AttachToTarget(string)
+  fullName: OpenQA.Selenium.DevTools.Target.AttachToTarget(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AttachToTarget
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously attaches to a target.
+  example: []
+  syntax:
+    content: public abstract Task<string> AttachToTarget(string targetId)
+    parameters:
+    - id: targetId
+      type: System.String
+      description: The ID of the target to which to attach.
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: >-
+        A task representing the asynchronous attach operation. The task result contains the
+
+        session ID established for commands to the target attached to.
+    content.vb: Public MustOverride Function AttachToTarget(targetId As String) As Task(Of String)
+  overload: OpenQA.Selenium.DevTools.Target.AttachToTarget*
+  nameWithType.vb: Target.AttachToTarget(String)
+  fullName.vb: OpenQA.Selenium.DevTools.Target.AttachToTarget(String)
+  name.vb: AttachToTarget(String)
+- uid: OpenQA.Selenium.DevTools.Target.DetachFromTarget(System.String,System.String)
+  commentId: M:OpenQA.Selenium.DevTools.Target.DetachFromTarget(System.String,System.String)
+  id: DetachFromTarget(System.String,System.String)
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: DetachFromTarget(string, string)
+  nameWithType: Target.DetachFromTarget(string, string)
+  fullName: OpenQA.Selenium.DevTools.Target.DetachFromTarget(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DetachFromTarget
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously detaches from a target.
+  example: []
+  syntax:
+    content: public abstract Task DetachFromTarget(string sessionId = null, string targetId = null)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: The ID of the session of the target from which to detach.
+    - id: targetId
+      type: System.String
+      description: The ID of the target from which to detach.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task representing the asynchronous detach operation.
+    content.vb: Public MustOverride Function DetachFromTarget(sessionId As String = Nothing, targetId As String = Nothing) As Task
+  overload: OpenQA.Selenium.DevTools.Target.DetachFromTarget*
+  nameWithType.vb: Target.DetachFromTarget(String, String)
+  fullName.vb: OpenQA.Selenium.DevTools.Target.DetachFromTarget(String, String)
+  name.vb: DetachFromTarget(String, String)
+- uid: OpenQA.Selenium.DevTools.Target.SetAutoAttach
+  commentId: M:OpenQA.Selenium.DevTools.Target.SetAutoAttach
+  id: SetAutoAttach
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: SetAutoAttach()
+  nameWithType: Target.SetAutoAttach()
+  fullName: OpenQA.Selenium.DevTools.Target.SetAutoAttach()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetAutoAttach
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Asynchronously sets the DevTools Protocol connection to automatically attach to new targets.
+  example: []
+  syntax:
+    content: public abstract Task SetAutoAttach()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public MustOverride Function SetAutoAttach() As Task
+  overload: OpenQA.Selenium.DevTools.Target.SetAutoAttach*
+- uid: OpenQA.Selenium.DevTools.Target.OnTargetDetached(OpenQA.Selenium.DevTools.TargetDetachedEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.Target.OnTargetDetached(OpenQA.Selenium.DevTools.TargetDetachedEventArgs)
+  id: OnTargetDetached(OpenQA.Selenium.DevTools.TargetDetachedEventArgs)
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: OnTargetDetached(TargetDetachedEventArgs)
+  nameWithType: Target.OnTargetDetached(TargetDetachedEventArgs)
+  fullName: OpenQA.Selenium.DevTools.Target.OnTargetDetached(OpenQA.Selenium.DevTools.TargetDetachedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnTargetDetached
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the TargetDetached event.
+  example: []
+  syntax:
+    content: protected virtual void OnTargetDetached(TargetDetachedEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.TargetDetachedEventArgs
+      description: An <xref href="OpenQA.Selenium.DevTools.TargetDetachedEventArgs" data-throw-if-not-resolved="false"></xref> that contains the event data.
+    content.vb: Protected Overridable Sub OnTargetDetached(e As TargetDetachedEventArgs)
+  overload: OpenQA.Selenium.DevTools.Target.OnTargetDetached*
+- uid: OpenQA.Selenium.DevTools.Target.OnTargetAttached(OpenQA.Selenium.DevTools.TargetAttachedEventArgs)
+  commentId: M:OpenQA.Selenium.DevTools.Target.OnTargetAttached(OpenQA.Selenium.DevTools.TargetAttachedEventArgs)
+  id: OnTargetAttached(OpenQA.Selenium.DevTools.TargetAttachedEventArgs)
+  parent: OpenQA.Selenium.DevTools.Target
+  langs:
+  - csharp
+  - vb
+  name: OnTargetAttached(TargetAttachedEventArgs)
+  nameWithType: Target.OnTargetAttached(TargetAttachedEventArgs)
+  fullName: OpenQA.Selenium.DevTools.Target.OnTargetAttached(OpenQA.Selenium.DevTools.TargetAttachedEventArgs)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/Target.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: OnTargetAttached
+    path: ../src/webdriver/DevTools/Target.cs
+    startLine: 95
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Raises the TargetAttached event.
+  example: []
+  syntax:
+    content: protected virtual void OnTargetAttached(TargetAttachedEventArgs e)
+    parameters:
+    - id: e
+      type: OpenQA.Selenium.DevTools.TargetAttachedEventArgs
+      description: ''
+    content.vb: Protected Overridable Sub OnTargetAttached(e As TargetAttachedEventArgs)
+  overload: OpenQA.Selenium.DevTools.Target.OnTargetAttached*
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.TargetDetachedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.TargetDetachedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TargetDetachedEventArgs>
+  nameWithType: EventHandler<TargetDetachedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.TargetDetachedEventArgs>
+  nameWithType.vb: EventHandler(Of TargetDetachedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.TargetDetachedEventArgs)
+  name.vb: EventHandler(Of TargetDetachedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.TargetDetachedEventArgs
+    name: TargetDetachedEventArgs
+    href: OpenQA.Selenium.DevTools.TargetDetachedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.TargetDetachedEventArgs
+    name: TargetDetachedEventArgs
+    href: OpenQA.Selenium.DevTools.TargetDetachedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.TargetAttachedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.TargetAttachedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TargetAttachedEventArgs>
+  nameWithType: EventHandler<TargetAttachedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.TargetAttachedEventArgs>
+  nameWithType.vb: EventHandler(Of TargetAttachedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.TargetAttachedEventArgs)
+  name.vb: EventHandler(Of TargetAttachedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.TargetAttachedEventArgs
+    name: TargetAttachedEventArgs
+    href: OpenQA.Selenium.DevTools.TargetAttachedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.TargetAttachedEventArgs
+    name: TargetAttachedEventArgs
+    href: OpenQA.Selenium.DevTools.TargetAttachedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.TargetInfo
+  commentId: T:OpenQA.Selenium.DevTools.TargetInfo
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.TargetInfo.html
+  name: TargetInfo
+  nameWithType: TargetInfo
+  fullName: OpenQA.Selenium.DevTools.TargetInfo
+- uid: OpenQA.Selenium.DevTools.Target.GetTargets*
+  commentId: Overload:OpenQA.Selenium.DevTools.Target.GetTargets
+  href: OpenQA.Selenium.DevTools.Target.html#OpenQA_Selenium_DevTools_Target_GetTargets_System_Object_
+  name: GetTargets
+  nameWithType: Target.GetTargets
+  fullName: OpenQA.Selenium.DevTools.Target.GetTargets
+- uid: System.Threading.Tasks.Task{System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.DevTools.TargetInfo}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.DevTools.TargetInfo}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ReadOnlyCollection<TargetInfo>>
+  nameWithType: Task<ReadOnlyCollection<TargetInfo>>
+  fullName: System.Threading.Tasks.Task<System.Collections.ObjectModel.ReadOnlyCollection<OpenQA.Selenium.DevTools.TargetInfo>>
+  nameWithType.vb: Task(Of ReadOnlyCollection(Of TargetInfo))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.ObjectModel.ReadOnlyCollection(Of OpenQA.Selenium.DevTools.TargetInfo))
+  name.vb: Task(Of ReadOnlyCollection(Of TargetInfo))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.TargetInfo
+    name: TargetInfo
+    href: OpenQA.Selenium.DevTools.TargetInfo.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.TargetInfo
+    name: TargetInfo
+    href: OpenQA.Selenium.DevTools.TargetInfo.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.Target.AttachToTarget*
+  commentId: Overload:OpenQA.Selenium.DevTools.Target.AttachToTarget
+  href: OpenQA.Selenium.DevTools.Target.html#OpenQA_Selenium_DevTools_Target_AttachToTarget_System_String_
+  name: AttachToTarget
+  nameWithType: Target.AttachToTarget
+  fullName: OpenQA.Selenium.DevTools.Target.AttachToTarget
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<string>
+  nameWithType: Task<string>
+  fullName: System.Threading.Tasks.Task<string>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.DevTools.Target.DetachFromTarget*
+  commentId: Overload:OpenQA.Selenium.DevTools.Target.DetachFromTarget
+  href: OpenQA.Selenium.DevTools.Target.html#OpenQA_Selenium_DevTools_Target_DetachFromTarget_System_String_System_String_
+  name: DetachFromTarget
+  nameWithType: Target.DetachFromTarget
+  fullName: OpenQA.Selenium.DevTools.Target.DetachFromTarget
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: OpenQA.Selenium.DevTools.Target.SetAutoAttach*
+  commentId: Overload:OpenQA.Selenium.DevTools.Target.SetAutoAttach
+  href: OpenQA.Selenium.DevTools.Target.html#OpenQA_Selenium_DevTools_Target_SetAutoAttach
+  name: SetAutoAttach
+  nameWithType: Target.SetAutoAttach
+  fullName: OpenQA.Selenium.DevTools.Target.SetAutoAttach
+- uid: OpenQA.Selenium.DevTools.TargetDetachedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.TargetDetachedEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.TargetDetachedEventArgs.html
+  name: TargetDetachedEventArgs
+  nameWithType: TargetDetachedEventArgs
+  fullName: OpenQA.Selenium.DevTools.TargetDetachedEventArgs
+- uid: OpenQA.Selenium.DevTools.Target.OnTargetDetached*
+  commentId: Overload:OpenQA.Selenium.DevTools.Target.OnTargetDetached
+  href: OpenQA.Selenium.DevTools.Target.html#OpenQA_Selenium_DevTools_Target_OnTargetDetached_OpenQA_Selenium_DevTools_TargetDetachedEventArgs_
+  name: OnTargetDetached
+  nameWithType: Target.OnTargetDetached
+  fullName: OpenQA.Selenium.DevTools.Target.OnTargetDetached
+- uid: OpenQA.Selenium.DevTools.Target.OnTargetAttached*
+  commentId: Overload:OpenQA.Selenium.DevTools.Target.OnTargetAttached
+  href: OpenQA.Selenium.DevTools.Target.html#OpenQA_Selenium_DevTools_Target_OnTargetAttached_OpenQA_Selenium_DevTools_TargetAttachedEventArgs_
+  name: OnTargetAttached
+  nameWithType: Target.OnTargetAttached
+  fullName: OpenQA.Selenium.DevTools.Target.OnTargetAttached
+- uid: OpenQA.Selenium.DevTools.TargetAttachedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.TargetAttachedEventArgs
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.TargetAttachedEventArgs.html
+  name: TargetAttachedEventArgs
+  nameWithType: TargetAttachedEventArgs
+  fullName: OpenQA.Selenium.DevTools.TargetAttachedEventArgs

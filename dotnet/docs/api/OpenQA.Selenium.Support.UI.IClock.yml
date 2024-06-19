@@ -1,0 +1,231 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Support.UI.IClock
+  commentId: T:OpenQA.Selenium.Support.UI.IClock
+  id: IClock
+  parent: OpenQA.Selenium.Support.UI
+  children:
+  - OpenQA.Selenium.Support.UI.IClock.IsNowBefore(System.DateTime)
+  - OpenQA.Selenium.Support.UI.IClock.LaterBy(System.TimeSpan)
+  - OpenQA.Selenium.Support.UI.IClock.Now
+  langs:
+  - csharp
+  - vb
+  name: IClock
+  nameWithType: IClock
+  fullName: OpenQA.Selenium.Support.UI.IClock
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/IClock.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IClock
+    path: ../src/webdriver/Support/IClock.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: An interface describing time handling functions for timeouts.
+  example: []
+  syntax:
+    content: public interface IClock
+    content.vb: Public Interface IClock
+- uid: OpenQA.Selenium.Support.UI.IClock.Now
+  commentId: P:OpenQA.Selenium.Support.UI.IClock.Now
+  id: Now
+  parent: OpenQA.Selenium.Support.UI.IClock
+  langs:
+  - csharp
+  - vb
+  name: Now
+  nameWithType: IClock.Now
+  fullName: OpenQA.Selenium.Support.UI.IClock.Now
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/IClock.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Now
+    path: ../src/webdriver/Support/IClock.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Gets the current date and time values.
+  example: []
+  syntax:
+    content: DateTime Now { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: ReadOnly Property Now As Date
+  overload: OpenQA.Selenium.Support.UI.IClock.Now*
+- uid: OpenQA.Selenium.Support.UI.IClock.LaterBy(System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Support.UI.IClock.LaterBy(System.TimeSpan)
+  id: LaterBy(System.TimeSpan)
+  parent: OpenQA.Selenium.Support.UI.IClock
+  langs:
+  - csharp
+  - vb
+  name: LaterBy(TimeSpan)
+  nameWithType: IClock.LaterBy(TimeSpan)
+  fullName: OpenQA.Selenium.Support.UI.IClock.LaterBy(System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/IClock.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LaterBy
+    path: ../src/webdriver/Support/IClock.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Gets the <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> at a specified offset in the future.
+  example: []
+  syntax:
+    content: DateTime LaterBy(TimeSpan delay)
+    parameters:
+    - id: delay
+      type: System.TimeSpan
+      description: The offset to use.
+    return:
+      type: System.DateTime
+      description: The <xref href="System.DateTime" data-throw-if-not-resolved="false"></xref> at the specified offset in the future.
+    content.vb: Function LaterBy(delay As TimeSpan) As Date
+  overload: OpenQA.Selenium.Support.UI.IClock.LaterBy*
+- uid: OpenQA.Selenium.Support.UI.IClock.IsNowBefore(System.DateTime)
+  commentId: M:OpenQA.Selenium.Support.UI.IClock.IsNowBefore(System.DateTime)
+  id: IsNowBefore(System.DateTime)
+  parent: OpenQA.Selenium.Support.UI.IClock
+  langs:
+  - csharp
+  - vb
+  name: IsNowBefore(DateTime)
+  nameWithType: IClock.IsNowBefore(DateTime)
+  fullName: OpenQA.Selenium.Support.UI.IClock.IsNowBefore(System.DateTime)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Support/IClock.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsNowBefore
+    path: ../src/webdriver/Support/IClock.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Support.UI
+  summary: Gets a value indicating whether the current date and time is before the specified date and time.
+  example: []
+  syntax:
+    content: bool IsNowBefore(DateTime otherDateTime)
+    parameters:
+    - id: otherDateTime
+      type: System.DateTime
+      description: The date and time values to compare the current date and time values to.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the current date and time is before the specified date and time; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Function IsNowBefore(otherDateTime As Date) As Boolean
+  overload: OpenQA.Selenium.Support.UI.IClock.IsNowBefore*
+  nameWithType.vb: IClock.IsNowBefore(Date)
+  fullName.vb: OpenQA.Selenium.Support.UI.IClock.IsNowBefore(Date)
+  name.vb: IsNowBefore(Date)
+references:
+- uid: OpenQA.Selenium.Support.UI
+  commentId: N:OpenQA.Selenium.Support.UI
+  href: OpenQA.html
+  name: OpenQA.Selenium.Support.UI
+  nameWithType: OpenQA.Selenium.Support.UI
+  fullName: OpenQA.Selenium.Support.UI
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.UI
+    name: UI
+    href: OpenQA.Selenium.Support.UI.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.UI
+    name: UI
+    href: OpenQA.Selenium.Support.UI.html
+- uid: OpenQA.Selenium.Support.UI.IClock.Now*
+  commentId: Overload:OpenQA.Selenium.Support.UI.IClock.Now
+  href: OpenQA.Selenium.Support.UI.IClock.html#OpenQA_Selenium_Support_UI_IClock_Now
+  name: Now
+  nameWithType: IClock.Now
+  fullName: OpenQA.Selenium.Support.UI.IClock.Now
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Support.UI.IClock.LaterBy*
+  commentId: Overload:OpenQA.Selenium.Support.UI.IClock.LaterBy
+  href: OpenQA.Selenium.Support.UI.IClock.html#OpenQA_Selenium_Support_UI_IClock_LaterBy_System_TimeSpan_
+  name: LaterBy
+  nameWithType: IClock.LaterBy
+  fullName: OpenQA.Selenium.Support.UI.IClock.LaterBy
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium.Support.UI.IClock.IsNowBefore*
+  commentId: Overload:OpenQA.Selenium.Support.UI.IClock.IsNowBefore
+  href: OpenQA.Selenium.Support.UI.IClock.html#OpenQA_Selenium_Support_UI_IClock_IsNowBefore_System_DateTime_
+  name: IsNowBefore
+  nameWithType: IClock.IsNowBefore
+  fullName: OpenQA.Selenium.Support.UI.IClock.IsNowBefore
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

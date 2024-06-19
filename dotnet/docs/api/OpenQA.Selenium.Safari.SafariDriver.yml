@@ -1,0 +1,2740 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Safari.SafariDriver
+  commentId: T:OpenQA.Selenium.Safari.SafariDriver
+  id: SafariDriver
+  parent: OpenQA.Selenium.Safari
+  children:
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService)
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions)
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariOptions)
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String)
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions)
+  - OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)
+  - OpenQA.Selenium.Safari.SafariDriver.AttachDebugger
+  - OpenQA.Selenium.Safari.SafariDriver.FileDetector
+  - OpenQA.Selenium.Safari.SafariDriver.GetPermissions
+  - OpenQA.Selenium.Safari.SafariDriver.SetPermission(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver
+  nameWithType: SafariDriver
+  fullName: OpenQA.Selenium.Safari.SafariDriver
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SafariDriver
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Provides a way to access Safari to run your tests by creating a SafariDriver instance
+  remarks: >-
+    When the WebDriver object has been instantiated the browser will load. The test can then navigate to the URL under test and
+
+    start your test.
+  example:
+  - >-
+    <pre><code class="lang-csharp">[TestFixture]
+
+    public class Testing
+
+    {
+        private IWebDriver driver;
+
+        [SetUp]
+        public void SetUp()
+        {
+            driver = new SafariDriver();
+        }
+
+        [Test]
+        public void TestGoogle()
+        {
+            driver.Navigate().GoToUrl("http://www.google.co.uk");
+            /*
+            *   Rest of the test
+            */
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            driver.Quit();
+            driver.Dispose();
+        }
+    }</code></pre>
+  syntax:
+    content: 'public class SafariDriver : WebDriver, IWebDriver, IDisposable, ISearchContext, IJavaScriptExecutor, IFindsElement, ITakesScreenshot, ISupportsPrint, IActionExecutor, IAllowsFileDetection, IHasCapabilities, IHasCommandExecutor, IHasSessionId, ICustomDriverCommandExecutor, IHasVirtualAuthenticator'
+    content.vb: Public Class SafariDriver Inherits WebDriver Implements IWebDriver, IDisposable, ISearchContext, IJavaScriptExecutor, IFindsElement, ITakesScreenshot, ISupportsPrint, IActionExecutor, IAllowsFileDetection, IHasCapabilities, IHasCommandExecutor, IHasSessionId, ICustomDriverCommandExecutor, IHasVirtualAuthenticator
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.WebDriver
+  implements:
+  - OpenQA.Selenium.IWebDriver
+  - System.IDisposable
+  - OpenQA.Selenium.ISearchContext
+  - OpenQA.Selenium.IJavaScriptExecutor
+  - OpenQA.Selenium.Internal.IFindsElement
+  - OpenQA.Selenium.ITakesScreenshot
+  - OpenQA.Selenium.ISupportsPrint
+  - OpenQA.Selenium.IActionExecutor
+  - OpenQA.Selenium.IAllowsFileDetection
+  - OpenQA.Selenium.IHasCapabilities
+  - OpenQA.Selenium.IHasCommandExecutor
+  - OpenQA.Selenium.IHasSessionId
+  - OpenQA.Selenium.ICustomDriverCommandExecutor
+  - OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  inheritedMembers:
+  - OpenQA.Selenium.WebDriver.DefaultCommandTimeout
+  - OpenQA.Selenium.WebDriver.CommandExecutor
+  - OpenQA.Selenium.WebDriver.Capabilities
+  - OpenQA.Selenium.WebDriver.Url
+  - OpenQA.Selenium.WebDriver.Title
+  - OpenQA.Selenium.WebDriver.PageSource
+  - OpenQA.Selenium.WebDriver.CurrentWindowHandle
+  - OpenQA.Selenium.WebDriver.WindowHandles
+  - OpenQA.Selenium.WebDriver.IsActionExecutor
+  - OpenQA.Selenium.WebDriver.SessionId
+  - OpenQA.Selenium.WebDriver.ElementFactory
+  - OpenQA.Selenium.WebDriver.Close
+  - OpenQA.Selenium.WebDriver.Dispose
+  - OpenQA.Selenium.WebDriver.ExecuteAsyncScript(System.String,System.Object[])
+  - OpenQA.Selenium.WebDriver.ExecuteScript(System.String,System.Object[])
+  - OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  - OpenQA.Selenium.WebDriver.FindElement(OpenQA.Selenium.By)
+  - OpenQA.Selenium.WebDriver.FindElement(System.String,System.String)
+  - OpenQA.Selenium.WebDriver.FindElements(OpenQA.Selenium.By)
+  - OpenQA.Selenium.WebDriver.FindElements(System.String,System.String)
+  - OpenQA.Selenium.WebDriver.GetScreenshot
+  - OpenQA.Selenium.WebDriver.Print(OpenQA.Selenium.PrintOptions)
+  - OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList{OpenQA.Selenium.Interactions.ActionSequence})
+  - OpenQA.Selenium.WebDriver.ResetInputState
+  - OpenQA.Selenium.WebDriver.Quit
+  - OpenQA.Selenium.WebDriver.SwitchTo
+  - OpenQA.Selenium.WebDriver.Manage
+  - OpenQA.Selenium.WebDriver.Navigate
+  - OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  - OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  - OpenQA.Selenium.WebDriver.ExecuteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.WebDriver.StartSession(OpenQA.Selenium.ICapabilities)
+  - OpenQA.Selenium.WebDriver.GetCapabilitiesDictionary(OpenQA.Selenium.ICapabilities)
+  - OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  - OpenQA.Selenium.WebDriver.Dispose(System.Boolean)
+  - OpenQA.Selenium.WebDriver.ExecuteScriptCommand(System.String,System.String,System.Object[])
+  - OpenQA.Selenium.WebDriver.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  - OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(System.String)
+  - OpenQA.Selenium.WebDriver.AuthenticatorId
+  - OpenQA.Selenium.WebDriver.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  - OpenQA.Selenium.WebDriver.GetCredentials
+  - OpenQA.Selenium.WebDriver.RemoveCredential(System.Byte[])
+  - OpenQA.Selenium.WebDriver.RemoveCredential(System.String)
+  - OpenQA.Selenium.WebDriver.RemoveAllCredentials
+  - OpenQA.Selenium.WebDriver.SetUserVerified(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - OpenQA.Selenium.IWebDriver.OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(System.String,System.Object[])
+  - OpenQA.Selenium.IWebDriver.OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(System.String,System.Object[])
+  - OpenQA.Selenium.IWebDriver.OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver()
+  nameWithType: SafariDriver.SafariDriver()
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public SafariDriver()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New()
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariOptions)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariOptions)
+  id: '#ctor(OpenQA.Selenium.Safari.SafariOptions)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(SafariOptions)
+  nameWithType: SafariDriver.SafariDriver(SafariOptions)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(OpenQA.Selenium.Safari.SafariOptions)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 81
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified <xref href="OpenQA.Selenium.Safari.SafariOptions" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public SafariDriver(SafariOptions options)
+    parameters:
+    - id: options
+      type: OpenQA.Selenium.Safari.SafariOptions
+      description: The <xref href="OpenQA.Selenium.Safari.SafariOptions" data-throw-if-not-resolved="false"></xref> to use for this <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> instance.
+    content.vb: Public Sub New(options As SafariOptions)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(SafariOptions)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(OpenQA.Selenium.Safari.SafariOptions)
+  name.vb: New(SafariOptions)
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService)
+  id: '#ctor(OpenQA.Selenium.Safari.SafariDriverService)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(SafariDriverService)
+  nameWithType: SafariDriver.SafariDriver(SafariDriverService)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(OpenQA.Selenium.Safari.SafariDriverService)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 90
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified driver service.
+  example: []
+  syntax:
+    content: public SafariDriver(SafariDriverService service)
+    parameters:
+    - id: service
+      type: OpenQA.Selenium.Safari.SafariDriverService
+      description: The <xref href="OpenQA.Selenium.Safari.SafariDriverService" data-throw-if-not-resolved="false"></xref> used to initialize the driver.
+    content.vb: Public Sub New(service As SafariDriverService)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(SafariDriverService)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(OpenQA.Selenium.Safari.SafariDriverService)
+  name.vb: New(SafariDriverService)
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(string)
+  nameWithType: SafariDriver.SafariDriver(string)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 100
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified path
+
+    to the directory containing safaridriver.
+  example: []
+  syntax:
+    content: public SafariDriver(string safariDriverDirectory)
+    parameters:
+    - id: safariDriverDirectory
+      type: System.String
+      description: The full path to the directory containing SafariDriver executable.
+    content.vb: Public Sub New(safariDriverDirectory As String)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(String)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(String)
+  name.vb: New(String)
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions)
+  id: '#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(string, SafariOptions)
+  nameWithType: SafariDriver.SafariDriver(string, SafariOptions)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(string, OpenQA.Selenium.Safari.SafariOptions)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 111
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified path
+
+    to the directory containing safaridriver and options.
+  example: []
+  syntax:
+    content: public SafariDriver(string safariDriverDirectory, SafariOptions options)
+    parameters:
+    - id: safariDriverDirectory
+      type: System.String
+      description: The full path to the directory containing SafariDriver executable.
+    - id: options
+      type: OpenQA.Selenium.Safari.SafariOptions
+      description: The <xref href="OpenQA.Selenium.Safari.SafariOptions" data-throw-if-not-resolved="false"></xref> to be used with the Safari driver.
+    content.vb: Public Sub New(safariDriverDirectory As String, options As SafariOptions)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(String, SafariOptions)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(String, OpenQA.Selenium.Safari.SafariOptions)
+  name.vb: New(String, SafariOptions)
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)
+  id: '#ctor(System.String,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(string, SafariOptions, TimeSpan)
+  nameWithType: SafariDriver.SafariDriver(string, SafariOptions, TimeSpan)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(string, OpenQA.Selenium.Safari.SafariOptions, System.TimeSpan)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 123
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified path
+
+    to the directory containing safaridriver, options, and command timeout.
+  example: []
+  syntax:
+    content: public SafariDriver(string safariDriverDirectory, SafariOptions options, TimeSpan commandTimeout)
+    parameters:
+    - id: safariDriverDirectory
+      type: System.String
+      description: The full path to the directory containing SafariDriver executable.
+    - id: options
+      type: OpenQA.Selenium.Safari.SafariOptions
+      description: The <xref href="OpenQA.Selenium.Safari.SafariOptions" data-throw-if-not-resolved="false"></xref> to be used with the Safari driver.
+    - id: commandTimeout
+      type: System.TimeSpan
+      description: The maximum amount of time to wait for each command.
+    content.vb: Public Sub New(safariDriverDirectory As String, options As SafariOptions, commandTimeout As TimeSpan)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(String, SafariOptions, TimeSpan)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(String, OpenQA.Selenium.Safari.SafariOptions, System.TimeSpan)
+  name.vb: New(String, SafariOptions, TimeSpan)
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions)
+  id: '#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(SafariDriverService, SafariOptions)
+  nameWithType: SafariDriver.SafariDriver(SafariDriverService, SafariOptions)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(OpenQA.Selenium.Safari.SafariDriverService, OpenQA.Selenium.Safari.SafariOptions)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 134
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified
+
+    <xref href="OpenQA.Selenium.Safari.SafariDriverService" data-throw-if-not-resolved="false"></xref> and options.
+  example: []
+  syntax:
+    content: public SafariDriver(SafariDriverService service, SafariOptions options)
+    parameters:
+    - id: service
+      type: OpenQA.Selenium.Safari.SafariDriverService
+      description: The <xref href="OpenQA.Selenium.Safari.SafariDriverService" data-throw-if-not-resolved="false"></xref> to use.
+    - id: options
+      type: OpenQA.Selenium.Safari.SafariOptions
+      description: The <xref href="OpenQA.Selenium.Safari.SafariOptions" data-throw-if-not-resolved="false"></xref> used to initialize the driver.
+    content.vb: Public Sub New(service As SafariDriverService, options As SafariOptions)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(SafariDriverService, SafariOptions)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(OpenQA.Selenium.Safari.SafariDriverService, OpenQA.Selenium.Safari.SafariOptions)
+  name.vb: New(SafariDriverService, SafariOptions)
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)
+  id: '#ctor(OpenQA.Selenium.Safari.SafariDriverService,OpenQA.Selenium.Safari.SafariOptions,System.TimeSpan)'
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SafariDriver(SafariDriverService, SafariOptions, TimeSpan)
+  nameWithType: SafariDriver.SafariDriver(SafariDriverService, SafariOptions, TimeSpan)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver(OpenQA.Selenium.Safari.SafariDriverService, OpenQA.Selenium.Safari.SafariOptions, System.TimeSpan)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 145
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Safari.SafariDriver" data-throw-if-not-resolved="false"></xref> class using the specified <xref href="OpenQA.Selenium.Safari.SafariDriverService" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public SafariDriver(SafariDriverService service, SafariOptions options, TimeSpan commandTimeout)
+    parameters:
+    - id: service
+      type: OpenQA.Selenium.Safari.SafariDriverService
+      description: The <xref href="OpenQA.Selenium.Safari.SafariDriverService" data-throw-if-not-resolved="false"></xref> to use.
+    - id: options
+      type: OpenQA.Selenium.Safari.SafariOptions
+      description: The <xref href="OpenQA.Selenium.Safari.SafariOptions" data-throw-if-not-resolved="false"></xref> to be used with the Safari driver.
+    - id: commandTimeout
+      type: System.TimeSpan
+      description: The maximum amount of time to wait for each command.
+    content.vb: Public Sub New(service As SafariDriverService, options As SafariOptions, commandTimeout As TimeSpan)
+  overload: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  nameWithType.vb: SafariDriver.New(SafariDriverService, SafariOptions, TimeSpan)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New(OpenQA.Selenium.Safari.SafariDriverService, OpenQA.Selenium.Safari.SafariOptions, System.TimeSpan)
+  name.vb: New(SafariDriverService, SafariOptions, TimeSpan)
+- uid: OpenQA.Selenium.Safari.SafariDriver.AttachDebugger
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.AttachDebugger
+  id: AttachDebugger
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: AttachDebugger()
+  nameWithType: SafariDriver.AttachDebugger()
+  fullName: OpenQA.Selenium.Safari.SafariDriver.AttachDebugger()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AttachDebugger
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 177
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    This opens Safari's Web Inspector.
+
+    If driver subsequently executes script of "debugger;"
+
+    the execution will pause, no additional commands will be processed, and the code will time out.
+  example: []
+  syntax:
+    content: public void AttachDebugger()
+    content.vb: Public Sub AttachDebugger()
+  overload: OpenQA.Selenium.Safari.SafariDriver.AttachDebugger*
+- uid: OpenQA.Selenium.Safari.SafariDriver.SetPermission(System.String,System.Boolean)
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.SetPermission(System.String,System.Boolean)
+  id: SetPermission(System.String,System.Boolean)
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: SetPermission(string, bool)
+  nameWithType: SafariDriver.SetPermission(string, bool)
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SetPermission(string, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPermission
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 189
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Set permission of an item on the browser. The only supported permission at this time is "getUserMedia".
+  example: []
+  syntax:
+    content: public void SetPermission(string permissionName, bool permissionValue)
+    parameters:
+    - id: permissionName
+      type: System.String
+      description: The name of the item to set permission on.
+    - id: permissionValue
+      type: System.Boolean
+      description: Whether the permission has been granted.
+    content.vb: Public Sub SetPermission(permissionName As String, permissionValue As Boolean)
+  overload: OpenQA.Selenium.Safari.SafariDriver.SetPermission*
+  nameWithType.vb: SafariDriver.SetPermission(String, Boolean)
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.SetPermission(String, Boolean)
+  name.vb: SetPermission(String, Boolean)
+- uid: OpenQA.Selenium.Safari.SafariDriver.GetPermissions
+  commentId: M:OpenQA.Selenium.Safari.SafariDriver.GetPermissions
+  id: GetPermissions
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: GetPermissions()
+  nameWithType: SafariDriver.GetPermissions()
+  fullName: OpenQA.Selenium.Safari.SafariDriver.GetPermissions()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetPermissions
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 207
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: Returns Each available permission item and whether it is allowed or not.
+  example: []
+  syntax:
+    content: public object GetPermissions()
+    return:
+      type: System.Object
+      description: whether the item is allowed or not.
+    content.vb: Public Function GetPermissions() As Object
+  overload: OpenQA.Selenium.Safari.SafariDriver.GetPermissions*
+- uid: OpenQA.Selenium.Safari.SafariDriver.FileDetector
+  commentId: P:OpenQA.Selenium.Safari.SafariDriver.FileDetector
+  id: FileDetector
+  parent: OpenQA.Selenium.Safari.SafariDriver
+  langs:
+  - csharp
+  - vb
+  name: FileDetector
+  nameWithType: SafariDriver.FileDetector
+  fullName: OpenQA.Selenium.Safari.SafariDriver.FileDetector
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Safari/SafariDriver.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FileDetector
+    path: ../src/webdriver/Safari/SafariDriver.cs
+    startLine: 223
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Safari
+  summary: >-
+    Gets or sets the <xref href="OpenQA.Selenium.IFileDetector" data-throw-if-not-resolved="false"></xref> responsible for detecting
+
+    sequences of keystrokes representing file paths and names.
+  remarks: >-
+    The Safari driver does not allow a file detector to be set,
+        as the server component of the Safari driver (the Safari extension) only
+        allows uploads from the local computer environment. Attempting to set
+        this property has no effect, but does not throw an exception. If you
+        are attempting to run the Safari driver remotely, use <xref href="OpenQA.Selenium.Remote.RemoteWebDriver" data-throw-if-not-resolved="false"></xref>
+        in conjunction with a standalone WebDriver server.
+  example: []
+  syntax:
+    content: public override IFileDetector FileDetector { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.IFileDetector
+    content.vb: Public Overrides Property FileDetector As IFileDetector
+  overridden: OpenQA.Selenium.WebDriver.FileDetector
+  overload: OpenQA.Selenium.Safari.SafariDriver.FileDetector*
+references:
+- uid: OpenQA.Selenium.Safari
+  commentId: N:OpenQA.Selenium.Safari
+  href: OpenQA.html
+  name: OpenQA.Selenium.Safari
+  nameWithType: OpenQA.Selenium.Safari
+  fullName: OpenQA.Selenium.Safari
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Safari
+    name: Safari
+    href: OpenQA.Selenium.Safari.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Safari
+    name: Safari
+    href: OpenQA.Selenium.Safari.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.WebDriver
+  commentId: T:OpenQA.Selenium.WebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.WebDriver.html
+  name: WebDriver
+  nameWithType: WebDriver
+  fullName: OpenQA.Selenium.WebDriver
+- uid: OpenQA.Selenium.IWebDriver
+  commentId: T:OpenQA.Selenium.IWebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebDriver.html
+  name: IWebDriver
+  nameWithType: IWebDriver
+  fullName: OpenQA.Selenium.IWebDriver
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: OpenQA.Selenium.ISearchContext
+  commentId: T:OpenQA.Selenium.ISearchContext
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ISearchContext.html
+  name: ISearchContext
+  nameWithType: ISearchContext
+  fullName: OpenQA.Selenium.ISearchContext
+- uid: OpenQA.Selenium.IJavaScriptExecutor
+  commentId: T:OpenQA.Selenium.IJavaScriptExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IJavaScriptExecutor.html
+  name: IJavaScriptExecutor
+  nameWithType: IJavaScriptExecutor
+  fullName: OpenQA.Selenium.IJavaScriptExecutor
+- uid: OpenQA.Selenium.Internal.IFindsElement
+  commentId: T:OpenQA.Selenium.Internal.IFindsElement
+  parent: OpenQA.Selenium.Internal
+  href: OpenQA.Selenium.Internal.IFindsElement.html
+  name: IFindsElement
+  nameWithType: IFindsElement
+  fullName: OpenQA.Selenium.Internal.IFindsElement
+- uid: OpenQA.Selenium.ITakesScreenshot
+  commentId: T:OpenQA.Selenium.ITakesScreenshot
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ITakesScreenshot.html
+  name: ITakesScreenshot
+  nameWithType: ITakesScreenshot
+  fullName: OpenQA.Selenium.ITakesScreenshot
+- uid: OpenQA.Selenium.ISupportsPrint
+  commentId: T:OpenQA.Selenium.ISupportsPrint
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ISupportsPrint.html
+  name: ISupportsPrint
+  nameWithType: ISupportsPrint
+  fullName: OpenQA.Selenium.ISupportsPrint
+- uid: OpenQA.Selenium.IActionExecutor
+  commentId: T:OpenQA.Selenium.IActionExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IActionExecutor.html
+  name: IActionExecutor
+  nameWithType: IActionExecutor
+  fullName: OpenQA.Selenium.IActionExecutor
+- uid: OpenQA.Selenium.IAllowsFileDetection
+  commentId: T:OpenQA.Selenium.IAllowsFileDetection
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IAllowsFileDetection.html
+  name: IAllowsFileDetection
+  nameWithType: IAllowsFileDetection
+  fullName: OpenQA.Selenium.IAllowsFileDetection
+- uid: OpenQA.Selenium.IHasCapabilities
+  commentId: T:OpenQA.Selenium.IHasCapabilities
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IHasCapabilities.html
+  name: IHasCapabilities
+  nameWithType: IHasCapabilities
+  fullName: OpenQA.Selenium.IHasCapabilities
+- uid: OpenQA.Selenium.IHasCommandExecutor
+  commentId: T:OpenQA.Selenium.IHasCommandExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IHasCommandExecutor.html
+  name: IHasCommandExecutor
+  nameWithType: IHasCommandExecutor
+  fullName: OpenQA.Selenium.IHasCommandExecutor
+- uid: OpenQA.Selenium.IHasSessionId
+  commentId: T:OpenQA.Selenium.IHasSessionId
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IHasSessionId.html
+  name: IHasSessionId
+  nameWithType: IHasSessionId
+  fullName: OpenQA.Selenium.IHasSessionId
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor
+  commentId: T:OpenQA.Selenium.ICustomDriverCommandExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ICustomDriverCommandExecutor.html
+  name: ICustomDriverCommandExecutor
+  nameWithType: ICustomDriverCommandExecutor
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor
+- uid: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  commentId: T:OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+  parent: OpenQA.Selenium.VirtualAuth
+  href: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator.html
+  name: IHasVirtualAuthenticator
+  nameWithType: IHasVirtualAuthenticator
+  fullName: OpenQA.Selenium.VirtualAuth.IHasVirtualAuthenticator
+- uid: OpenQA.Selenium.WebDriver.DefaultCommandTimeout
+  commentId: F:OpenQA.Selenium.WebDriver.DefaultCommandTimeout
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_DefaultCommandTimeout
+  name: DefaultCommandTimeout
+  nameWithType: WebDriver.DefaultCommandTimeout
+  fullName: OpenQA.Selenium.WebDriver.DefaultCommandTimeout
+- uid: OpenQA.Selenium.WebDriver.CommandExecutor
+  commentId: P:OpenQA.Selenium.WebDriver.CommandExecutor
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_CommandExecutor
+  name: CommandExecutor
+  nameWithType: WebDriver.CommandExecutor
+  fullName: OpenQA.Selenium.WebDriver.CommandExecutor
+- uid: OpenQA.Selenium.WebDriver.Capabilities
+  commentId: P:OpenQA.Selenium.WebDriver.Capabilities
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Capabilities
+  name: Capabilities
+  nameWithType: WebDriver.Capabilities
+  fullName: OpenQA.Selenium.WebDriver.Capabilities
+- uid: OpenQA.Selenium.WebDriver.Url
+  commentId: P:OpenQA.Selenium.WebDriver.Url
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Url
+  name: Url
+  nameWithType: WebDriver.Url
+  fullName: OpenQA.Selenium.WebDriver.Url
+- uid: OpenQA.Selenium.WebDriver.Title
+  commentId: P:OpenQA.Selenium.WebDriver.Title
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Title
+  name: Title
+  nameWithType: WebDriver.Title
+  fullName: OpenQA.Selenium.WebDriver.Title
+- uid: OpenQA.Selenium.WebDriver.PageSource
+  commentId: P:OpenQA.Selenium.WebDriver.PageSource
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_PageSource
+  name: PageSource
+  nameWithType: WebDriver.PageSource
+  fullName: OpenQA.Selenium.WebDriver.PageSource
+- uid: OpenQA.Selenium.WebDriver.CurrentWindowHandle
+  commentId: P:OpenQA.Selenium.WebDriver.CurrentWindowHandle
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_CurrentWindowHandle
+  name: CurrentWindowHandle
+  nameWithType: WebDriver.CurrentWindowHandle
+  fullName: OpenQA.Selenium.WebDriver.CurrentWindowHandle
+- uid: OpenQA.Selenium.WebDriver.WindowHandles
+  commentId: P:OpenQA.Selenium.WebDriver.WindowHandles
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_WindowHandles
+  name: WindowHandles
+  nameWithType: WebDriver.WindowHandles
+  fullName: OpenQA.Selenium.WebDriver.WindowHandles
+- uid: OpenQA.Selenium.WebDriver.IsActionExecutor
+  commentId: P:OpenQA.Selenium.WebDriver.IsActionExecutor
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_IsActionExecutor
+  name: IsActionExecutor
+  nameWithType: WebDriver.IsActionExecutor
+  fullName: OpenQA.Selenium.WebDriver.IsActionExecutor
+- uid: OpenQA.Selenium.WebDriver.SessionId
+  commentId: P:OpenQA.Selenium.WebDriver.SessionId
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SessionId
+  name: SessionId
+  nameWithType: WebDriver.SessionId
+  fullName: OpenQA.Selenium.WebDriver.SessionId
+- uid: OpenQA.Selenium.WebDriver.ElementFactory
+  commentId: P:OpenQA.Selenium.WebDriver.ElementFactory
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ElementFactory
+  name: ElementFactory
+  nameWithType: WebDriver.ElementFactory
+  fullName: OpenQA.Selenium.WebDriver.ElementFactory
+- uid: OpenQA.Selenium.WebDriver.Close
+  commentId: M:OpenQA.Selenium.WebDriver.Close
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Close
+  name: Close()
+  nameWithType: WebDriver.Close()
+  fullName: OpenQA.Selenium.WebDriver.Close()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Close
+    name: Close
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Close
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Close
+    name: Close
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Close
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.Dispose
+  commentId: M:OpenQA.Selenium.WebDriver.Dispose
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Dispose
+  name: Dispose()
+  nameWithType: WebDriver.Dispose()
+  fullName: OpenQA.Selenium.WebDriver.Dispose()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Dispose
+    name: Dispose
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Dispose
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ExecuteAsyncScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.WebDriver.ExecuteAsyncScript(System.String,System.Object[])
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteAsyncScript_System_String_System_Object___
+  name: ExecuteAsyncScript(string, params object[])
+  nameWithType: WebDriver.ExecuteAsyncScript(string, params object[])
+  fullName: OpenQA.Selenium.WebDriver.ExecuteAsyncScript(string, params object[])
+  nameWithType.vb: WebDriver.ExecuteAsyncScript(String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.WebDriver.ExecuteAsyncScript(String, ParamArray Object())
+  name.vb: ExecuteAsyncScript(String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteAsyncScript(System.String,System.Object[])
+    name: ExecuteAsyncScript
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteAsyncScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteAsyncScript(System.String,System.Object[])
+    name: ExecuteAsyncScript
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteAsyncScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ExecuteScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.WebDriver.ExecuteScript(System.String,System.Object[])
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScript_System_String_System_Object___
+  name: ExecuteScript(string, params object[])
+  nameWithType: WebDriver.ExecuteScript(string, params object[])
+  fullName: OpenQA.Selenium.WebDriver.ExecuteScript(string, params object[])
+  nameWithType.vb: WebDriver.ExecuteScript(String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.WebDriver.ExecuteScript(String, ParamArray Object())
+  name.vb: ExecuteScript(String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteScript(System.String,System.Object[])
+    name: ExecuteScript
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteScript(System.String,System.Object[])
+    name: ExecuteScript
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  commentId: M:OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScript_OpenQA_Selenium_PinnedScript_System_Object___
+  name: ExecuteScript(PinnedScript, params object[])
+  nameWithType: WebDriver.ExecuteScript(PinnedScript, params object[])
+  fullName: OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript, params object[])
+  nameWithType.vb: WebDriver.ExecuteScript(PinnedScript, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript, ParamArray Object())
+  name.vb: ExecuteScript(PinnedScript, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+    name: ExecuteScript
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScript_OpenQA_Selenium_PinnedScript_System_Object___
+  - name: (
+  - uid: OpenQA.Selenium.PinnedScript
+    name: PinnedScript
+    href: OpenQA.Selenium.PinnedScript.html
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteScript(OpenQA.Selenium.PinnedScript,System.Object[])
+    name: ExecuteScript
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScript_OpenQA_Selenium_PinnedScript_System_Object___
+  - name: (
+  - uid: OpenQA.Selenium.PinnedScript
+    name: PinnedScript
+    href: OpenQA.Selenium.PinnedScript.html
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.FindElement(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.WebDriver.FindElement(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElement_OpenQA_Selenium_By_
+  name: FindElement(By)
+  nameWithType: WebDriver.FindElement(By)
+  fullName: OpenQA.Selenium.WebDriver.FindElement(OpenQA.Selenium.By)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.FindElement(OpenQA.Selenium.By)
+    name: FindElement
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElement_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.FindElement(OpenQA.Selenium.By)
+    name: FindElement
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElement_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.FindElement(System.String,System.String)
+  commentId: M:OpenQA.Selenium.WebDriver.FindElement(System.String,System.String)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElement_System_String_System_String_
+  name: FindElement(string, string)
+  nameWithType: WebDriver.FindElement(string, string)
+  fullName: OpenQA.Selenium.WebDriver.FindElement(string, string)
+  nameWithType.vb: WebDriver.FindElement(String, String)
+  fullName.vb: OpenQA.Selenium.WebDriver.FindElement(String, String)
+  name.vb: FindElement(String, String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.FindElement(System.String,System.String)
+    name: FindElement
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElement_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.FindElement(System.String,System.String)
+    name: FindElement
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElement_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.FindElements(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.WebDriver.FindElements(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElements_OpenQA_Selenium_By_
+  name: FindElements(By)
+  nameWithType: WebDriver.FindElements(By)
+  fullName: OpenQA.Selenium.WebDriver.FindElements(OpenQA.Selenium.By)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.FindElements(OpenQA.Selenium.By)
+    name: FindElements
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElements_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.FindElements(OpenQA.Selenium.By)
+    name: FindElements
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElements_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.FindElements(System.String,System.String)
+  commentId: M:OpenQA.Selenium.WebDriver.FindElements(System.String,System.String)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElements_System_String_System_String_
+  name: FindElements(string, string)
+  nameWithType: WebDriver.FindElements(string, string)
+  fullName: OpenQA.Selenium.WebDriver.FindElements(string, string)
+  nameWithType.vb: WebDriver.FindElements(String, String)
+  fullName.vb: OpenQA.Selenium.WebDriver.FindElements(String, String)
+  name.vb: FindElements(String, String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.FindElements(System.String,System.String)
+    name: FindElements
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElements_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.FindElements(System.String,System.String)
+    name: FindElements
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FindElements_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.GetScreenshot
+  commentId: M:OpenQA.Selenium.WebDriver.GetScreenshot
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetScreenshot
+  name: GetScreenshot()
+  nameWithType: WebDriver.GetScreenshot()
+  fullName: OpenQA.Selenium.WebDriver.GetScreenshot()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.GetScreenshot
+    name: GetScreenshot
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetScreenshot
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.GetScreenshot
+    name: GetScreenshot
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetScreenshot
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.Print(OpenQA.Selenium.PrintOptions)
+  commentId: M:OpenQA.Selenium.WebDriver.Print(OpenQA.Selenium.PrintOptions)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Print_OpenQA_Selenium_PrintOptions_
+  name: Print(PrintOptions)
+  nameWithType: WebDriver.Print(PrintOptions)
+  fullName: OpenQA.Selenium.WebDriver.Print(OpenQA.Selenium.PrintOptions)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Print(OpenQA.Selenium.PrintOptions)
+    name: Print
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Print_OpenQA_Selenium_PrintOptions_
+  - name: (
+  - uid: OpenQA.Selenium.PrintOptions
+    name: PrintOptions
+    href: OpenQA.Selenium.PrintOptions.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Print(OpenQA.Selenium.PrintOptions)
+    name: Print
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Print_OpenQA_Selenium_PrintOptions_
+  - name: (
+  - uid: OpenQA.Selenium.PrintOptions
+    name: PrintOptions
+    href: OpenQA.Selenium.PrintOptions.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList{OpenQA.Selenium.Interactions.ActionSequence})
+  commentId: M:OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList{OpenQA.Selenium.Interactions.ActionSequence})
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_PerformActions_System_Collections_Generic_IList_OpenQA_Selenium_Interactions_ActionSequence__
+  name: PerformActions(IList<ActionSequence>)
+  nameWithType: WebDriver.PerformActions(IList<ActionSequence>)
+  fullName: OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList<OpenQA.Selenium.Interactions.ActionSequence>)
+  nameWithType.vb: WebDriver.PerformActions(IList(Of ActionSequence))
+  fullName.vb: OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList(Of OpenQA.Selenium.Interactions.ActionSequence))
+  name.vb: PerformActions(IList(Of ActionSequence))
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList{OpenQA.Selenium.Interactions.ActionSequence})
+    name: PerformActions
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_PerformActions_System_Collections_Generic_IList_OpenQA_Selenium_Interactions_ActionSequence__
+  - name: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: OpenQA.Selenium.Interactions.ActionSequence
+    name: ActionSequence
+    href: OpenQA.Selenium.Interactions.ActionSequence.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.PerformActions(System.Collections.Generic.IList{OpenQA.Selenium.Interactions.ActionSequence})
+    name: PerformActions
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_PerformActions_System_Collections_Generic_IList_OpenQA_Selenium_Interactions_ActionSequence__
+  - name: (
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.Interactions.ActionSequence
+    name: ActionSequence
+    href: OpenQA.Selenium.Interactions.ActionSequence.html
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ResetInputState
+  commentId: M:OpenQA.Selenium.WebDriver.ResetInputState
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ResetInputState
+  name: ResetInputState()
+  nameWithType: WebDriver.ResetInputState()
+  fullName: OpenQA.Selenium.WebDriver.ResetInputState()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ResetInputState
+    name: ResetInputState
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ResetInputState
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ResetInputState
+    name: ResetInputState
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ResetInputState
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.Quit
+  commentId: M:OpenQA.Selenium.WebDriver.Quit
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Quit
+  name: Quit()
+  nameWithType: WebDriver.Quit()
+  fullName: OpenQA.Selenium.WebDriver.Quit()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Quit
+    name: Quit
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Quit
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Quit
+    name: Quit
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Quit
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.SwitchTo
+  commentId: M:OpenQA.Selenium.WebDriver.SwitchTo
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SwitchTo
+  name: SwitchTo()
+  nameWithType: WebDriver.SwitchTo()
+  fullName: OpenQA.Selenium.WebDriver.SwitchTo()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.SwitchTo
+    name: SwitchTo
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SwitchTo
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.SwitchTo
+    name: SwitchTo
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SwitchTo
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.Manage
+  commentId: M:OpenQA.Selenium.WebDriver.Manage
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Manage
+  name: Manage()
+  nameWithType: WebDriver.Manage()
+  fullName: OpenQA.Selenium.WebDriver.Manage()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Manage
+    name: Manage
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Manage
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Manage
+    name: Manage
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Manage
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.Navigate
+  commentId: M:OpenQA.Selenium.WebDriver.Navigate
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Navigate
+  name: Navigate()
+  nameWithType: WebDriver.Navigate()
+  fullName: OpenQA.Selenium.WebDriver.Navigate()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Navigate
+    name: Navigate
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Navigate
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Navigate
+    name: Navigate
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Navigate
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteCustomDriverCommand_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: ExecuteCustomDriverCommand(string, Dictionary<string, object>)
+  nameWithType: WebDriver.ExecuteCustomDriverCommand(string, Dictionary<string, object>)
+  fullName: OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(string, System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: WebDriver.ExecuteCustomDriverCommand(String, Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: ExecuteCustomDriverCommand(String, Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteCustomDriverCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteCustomDriverCommand_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteCustomDriverCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteCustomDriverCommand_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  commentId: M:OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterCustomDriverCommands_System_Collections_Generic_IReadOnlyDictionary_System_String_OpenQA_Selenium_CommandInfo__
+  name: RegisterCustomDriverCommands(IReadOnlyDictionary<string, CommandInfo>)
+  nameWithType: WebDriver.RegisterCustomDriverCommands(IReadOnlyDictionary<string, CommandInfo>)
+  fullName: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary<string, OpenQA.Selenium.CommandInfo>)
+  nameWithType.vb: WebDriver.RegisterCustomDriverCommands(IReadOnlyDictionary(Of String, CommandInfo))
+  fullName.vb: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary(Of String, OpenQA.Selenium.CommandInfo))
+  name.vb: RegisterCustomDriverCommands(IReadOnlyDictionary(Of String, CommandInfo))
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+    name: RegisterCustomDriverCommands
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterCustomDriverCommands_System_Collections_Generic_IReadOnlyDictionary_System_String_OpenQA_Selenium_CommandInfo__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+    name: RegisterCustomDriverCommands
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterCustomDriverCommands_System_Collections_Generic_IReadOnlyDictionary_System_String_OpenQA_Selenium_CommandInfo__
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterCustomDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  name: RegisterCustomDriverCommand(string, CommandInfo)
+  nameWithType: WebDriver.RegisterCustomDriverCommand(string, CommandInfo)
+  fullName: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(string, OpenQA.Selenium.CommandInfo)
+  nameWithType.vb: WebDriver.RegisterCustomDriverCommand(String, CommandInfo)
+  fullName.vb: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(String, OpenQA.Selenium.CommandInfo)
+  name.vb: RegisterCustomDriverCommand(String, CommandInfo)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+    name: RegisterCustomDriverCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterCustomDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+    name: RegisterCustomDriverCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterCustomDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ExecuteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.WebDriver.ExecuteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: ExecuteAsync(string, Dictionary<string, object>)
+  nameWithType: WebDriver.ExecuteAsync(string, Dictionary<string, object>)
+  fullName: OpenQA.Selenium.WebDriver.ExecuteAsync(string, System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: WebDriver.ExecuteAsync(String, Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.WebDriver.ExecuteAsync(String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: ExecuteAsync(String, Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteAsync
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteAsync(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: ExecuteAsync
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteAsync_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.StartSession(OpenQA.Selenium.ICapabilities)
+  commentId: M:OpenQA.Selenium.WebDriver.StartSession(OpenQA.Selenium.ICapabilities)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_StartSession_OpenQA_Selenium_ICapabilities_
+  name: StartSession(ICapabilities)
+  nameWithType: WebDriver.StartSession(ICapabilities)
+  fullName: OpenQA.Selenium.WebDriver.StartSession(OpenQA.Selenium.ICapabilities)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.StartSession(OpenQA.Selenium.ICapabilities)
+    name: StartSession
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_StartSession_OpenQA_Selenium_ICapabilities_
+  - name: (
+  - uid: OpenQA.Selenium.ICapabilities
+    name: ICapabilities
+    href: OpenQA.Selenium.ICapabilities.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.StartSession(OpenQA.Selenium.ICapabilities)
+    name: StartSession
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_StartSession_OpenQA_Selenium_ICapabilities_
+  - name: (
+  - uid: OpenQA.Selenium.ICapabilities
+    name: ICapabilities
+    href: OpenQA.Selenium.ICapabilities.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.GetCapabilitiesDictionary(OpenQA.Selenium.ICapabilities)
+  commentId: M:OpenQA.Selenium.WebDriver.GetCapabilitiesDictionary(OpenQA.Selenium.ICapabilities)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetCapabilitiesDictionary_OpenQA_Selenium_ICapabilities_
+  name: GetCapabilitiesDictionary(ICapabilities)
+  nameWithType: WebDriver.GetCapabilitiesDictionary(ICapabilities)
+  fullName: OpenQA.Selenium.WebDriver.GetCapabilitiesDictionary(OpenQA.Selenium.ICapabilities)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.GetCapabilitiesDictionary(OpenQA.Selenium.ICapabilities)
+    name: GetCapabilitiesDictionary
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetCapabilitiesDictionary_OpenQA_Selenium_ICapabilities_
+  - name: (
+  - uid: OpenQA.Selenium.ICapabilities
+    name: ICapabilities
+    href: OpenQA.Selenium.ICapabilities.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.GetCapabilitiesDictionary(OpenQA.Selenium.ICapabilities)
+    name: GetCapabilitiesDictionary
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetCapabilitiesDictionary_OpenQA_Selenium_ICapabilities_
+  - name: (
+  - uid: OpenQA.Selenium.ICapabilities
+    name: ICapabilities
+    href: OpenQA.Selenium.ICapabilities.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterInternalDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  name: RegisterInternalDriverCommand(string, CommandInfo)
+  nameWithType: WebDriver.RegisterInternalDriverCommand(string, CommandInfo)
+  fullName: OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(string, OpenQA.Selenium.CommandInfo)
+  nameWithType.vb: WebDriver.RegisterInternalDriverCommand(String, CommandInfo)
+  fullName.vb: OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(String, OpenQA.Selenium.CommandInfo)
+  name.vb: RegisterInternalDriverCommand(String, CommandInfo)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+    name: RegisterInternalDriverCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterInternalDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RegisterInternalDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+    name: RegisterInternalDriverCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RegisterInternalDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.Dispose(System.Boolean)
+  commentId: M:OpenQA.Selenium.WebDriver.Dispose(System.Boolean)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Dispose_System_Boolean_
+  name: Dispose(bool)
+  nameWithType: WebDriver.Dispose(bool)
+  fullName: OpenQA.Selenium.WebDriver.Dispose(bool)
+  nameWithType.vb: WebDriver.Dispose(Boolean)
+  fullName.vb: OpenQA.Selenium.WebDriver.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.Dispose(System.Boolean)
+    name: Dispose
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.Dispose(System.Boolean)
+    name: Dispose
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_Dispose_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.ExecuteScriptCommand(System.String,System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.WebDriver.ExecuteScriptCommand(System.String,System.String,System.Object[])
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScriptCommand_System_String_System_String_System_Object___
+  name: ExecuteScriptCommand(string, string, params object[])
+  nameWithType: WebDriver.ExecuteScriptCommand(string, string, params object[])
+  fullName: OpenQA.Selenium.WebDriver.ExecuteScriptCommand(string, string, params object[])
+  nameWithType.vb: WebDriver.ExecuteScriptCommand(String, String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.WebDriver.ExecuteScriptCommand(String, String, ParamArray Object())
+  name.vb: ExecuteScriptCommand(String, String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteScriptCommand(System.String,System.String,System.Object[])
+    name: ExecuteScriptCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScriptCommand_System_String_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.ExecuteScriptCommand(System.String,System.String,System.Object[])
+    name: ExecuteScriptCommand
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_ExecuteScriptCommand_System_String_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  commentId: M:OpenQA.Selenium.WebDriver.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AddVirtualAuthenticator_OpenQA_Selenium_VirtualAuth_VirtualAuthenticatorOptions_
+  name: AddVirtualAuthenticator(VirtualAuthenticatorOptions)
+  nameWithType: WebDriver.AddVirtualAuthenticator(VirtualAuthenticatorOptions)
+  fullName: OpenQA.Selenium.WebDriver.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+    name: AddVirtualAuthenticator
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AddVirtualAuthenticator_OpenQA_Selenium_VirtualAuth_VirtualAuthenticatorOptions_
+  - name: (
+  - uid: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions
+    name: VirtualAuthenticatorOptions
+    href: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.AddVirtualAuthenticator(OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions)
+    name: AddVirtualAuthenticator
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AddVirtualAuthenticator_OpenQA_Selenium_VirtualAuth_VirtualAuthenticatorOptions_
+  - name: (
+  - uid: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions
+    name: VirtualAuthenticatorOptions
+    href: OpenQA.Selenium.VirtualAuth.VirtualAuthenticatorOptions.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(System.String)
+  commentId: M:OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(System.String)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveVirtualAuthenticator_System_String_
+  name: RemoveVirtualAuthenticator(string)
+  nameWithType: WebDriver.RemoveVirtualAuthenticator(string)
+  fullName: OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(string)
+  nameWithType.vb: WebDriver.RemoveVirtualAuthenticator(String)
+  fullName.vb: OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(String)
+  name.vb: RemoveVirtualAuthenticator(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(System.String)
+    name: RemoveVirtualAuthenticator
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveVirtualAuthenticator_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RemoveVirtualAuthenticator(System.String)
+    name: RemoveVirtualAuthenticator
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveVirtualAuthenticator_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.AuthenticatorId
+  commentId: P:OpenQA.Selenium.WebDriver.AuthenticatorId
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AuthenticatorId
+  name: AuthenticatorId
+  nameWithType: WebDriver.AuthenticatorId
+  fullName: OpenQA.Selenium.WebDriver.AuthenticatorId
+- uid: OpenQA.Selenium.WebDriver.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  commentId: M:OpenQA.Selenium.WebDriver.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AddCredential_OpenQA_Selenium_VirtualAuth_Credential_
+  name: AddCredential(Credential)
+  nameWithType: WebDriver.AddCredential(Credential)
+  fullName: OpenQA.Selenium.WebDriver.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+    name: AddCredential
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AddCredential_OpenQA_Selenium_VirtualAuth_Credential_
+  - name: (
+  - uid: OpenQA.Selenium.VirtualAuth.Credential
+    name: Credential
+    href: OpenQA.Selenium.VirtualAuth.Credential.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.AddCredential(OpenQA.Selenium.VirtualAuth.Credential)
+    name: AddCredential
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_AddCredential_OpenQA_Selenium_VirtualAuth_Credential_
+  - name: (
+  - uid: OpenQA.Selenium.VirtualAuth.Credential
+    name: Credential
+    href: OpenQA.Selenium.VirtualAuth.Credential.html
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.GetCredentials
+  commentId: M:OpenQA.Selenium.WebDriver.GetCredentials
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetCredentials
+  name: GetCredentials()
+  nameWithType: WebDriver.GetCredentials()
+  fullName: OpenQA.Selenium.WebDriver.GetCredentials()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.GetCredentials
+    name: GetCredentials
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetCredentials
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.GetCredentials
+    name: GetCredentials
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_GetCredentials
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RemoveCredential(System.Byte[])
+  commentId: M:OpenQA.Selenium.WebDriver.RemoveCredential(System.Byte[])
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveCredential_System_Byte___
+  name: RemoveCredential(byte[])
+  nameWithType: WebDriver.RemoveCredential(byte[])
+  fullName: OpenQA.Selenium.WebDriver.RemoveCredential(byte[])
+  nameWithType.vb: WebDriver.RemoveCredential(Byte())
+  fullName.vb: OpenQA.Selenium.WebDriver.RemoveCredential(Byte())
+  name.vb: RemoveCredential(Byte())
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RemoveCredential(System.Byte[])
+    name: RemoveCredential
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveCredential_System_Byte___
+  - name: (
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RemoveCredential(System.Byte[])
+    name: RemoveCredential
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveCredential_System_Byte___
+  - name: (
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RemoveCredential(System.String)
+  commentId: M:OpenQA.Selenium.WebDriver.RemoveCredential(System.String)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveCredential_System_String_
+  name: RemoveCredential(string)
+  nameWithType: WebDriver.RemoveCredential(string)
+  fullName: OpenQA.Selenium.WebDriver.RemoveCredential(string)
+  nameWithType.vb: WebDriver.RemoveCredential(String)
+  fullName.vb: OpenQA.Selenium.WebDriver.RemoveCredential(String)
+  name.vb: RemoveCredential(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RemoveCredential(System.String)
+    name: RemoveCredential
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveCredential_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RemoveCredential(System.String)
+    name: RemoveCredential
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveCredential_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.RemoveAllCredentials
+  commentId: M:OpenQA.Selenium.WebDriver.RemoveAllCredentials
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveAllCredentials
+  name: RemoveAllCredentials()
+  nameWithType: WebDriver.RemoveAllCredentials()
+  fullName: OpenQA.Selenium.WebDriver.RemoveAllCredentials()
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.RemoveAllCredentials
+    name: RemoveAllCredentials
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveAllCredentials
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.RemoveAllCredentials
+    name: RemoveAllCredentials
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_RemoveAllCredentials
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.WebDriver.SetUserVerified(System.Boolean)
+  commentId: M:OpenQA.Selenium.WebDriver.SetUserVerified(System.Boolean)
+  parent: OpenQA.Selenium.WebDriver
+  isExternal: true
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SetUserVerified_System_Boolean_
+  name: SetUserVerified(bool)
+  nameWithType: WebDriver.SetUserVerified(bool)
+  fullName: OpenQA.Selenium.WebDriver.SetUserVerified(bool)
+  nameWithType.vb: WebDriver.SetUserVerified(Boolean)
+  fullName.vb: OpenQA.Selenium.WebDriver.SetUserVerified(Boolean)
+  name.vb: SetUserVerified(Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.WebDriver.SetUserVerified(System.Boolean)
+    name: SetUserVerified
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SetUserVerified_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.WebDriver.SetUserVerified(System.Boolean)
+    name: SetUserVerified
+    href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_SetUserVerified_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.IWebDriver.OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  parent: OpenQA.Selenium.Support.Extensions.WebDriverExtensions
+  definition: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  name: ExecuteJavaScript(IWebDriver, string, params object[])
+  nameWithType: WebDriverExtensions.ExecuteJavaScript(IWebDriver, string, params object[])
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver, string, params object[])
+  nameWithType.vb: WebDriverExtensions.ExecuteJavaScript(IWebDriver, String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver, String, ParamArray Object())
+  name.vb: ExecuteJavaScript(IWebDriver, String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.IWebDriver.OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  parent: OpenQA.Selenium.Support.Extensions.WebDriverExtensions
+  definition: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript__1_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  name: ExecuteJavaScript<T>(IWebDriver, string, params object[])
+  nameWithType: WebDriverExtensions.ExecuteJavaScript<T>(IWebDriver, string, params object[])
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript<T>(OpenQA.Selenium.IWebDriver, string, params object[])
+  nameWithType.vb: WebDriverExtensions.ExecuteJavaScript(Of T)(IWebDriver, String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(Of T)(OpenQA.Selenium.IWebDriver, String, ParamArray Object())
+  name.vb: ExecuteJavaScript(Of T)(IWebDriver, String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript__1_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript__1_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.IWebDriver.OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot
+  commentId: M:OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+  parent: OpenQA.Selenium.Support.Extensions.WebDriverExtensions
+  definition: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_TakeScreenshot_OpenQA_Selenium_IWebDriver_
+  name: TakeScreenshot(IWebDriver)
+  nameWithType: WebDriverExtensions.TakeScreenshot(IWebDriver)
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+    name: TakeScreenshot
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_TakeScreenshot_OpenQA_Selenium_IWebDriver_
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+    name: TakeScreenshot
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_TakeScreenshot_OpenQA_Selenium_IWebDriver_
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Internal
+  commentId: N:OpenQA.Selenium.Internal
+  href: OpenQA.html
+  name: OpenQA.Selenium.Internal
+  nameWithType: OpenQA.Selenium.Internal
+  fullName: OpenQA.Selenium.Internal
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal
+    name: Internal
+    href: OpenQA.Selenium.Internal.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal
+    name: Internal
+    href: OpenQA.Selenium.Internal.html
+- uid: OpenQA.Selenium.VirtualAuth
+  commentId: N:OpenQA.Selenium.VirtualAuth
+  href: OpenQA.html
+  name: OpenQA.Selenium.VirtualAuth
+  nameWithType: OpenQA.Selenium.VirtualAuth
+  fullName: OpenQA.Selenium.VirtualAuth
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.VirtualAuth
+    name: VirtualAuth
+    href: OpenQA.Selenium.VirtualAuth.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.VirtualAuth
+    name: VirtualAuth
+    href: OpenQA.Selenium.VirtualAuth.html
+- uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  isExternal: true
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  name: ExecuteJavaScript(IWebDriver, string, params object[])
+  nameWithType: WebDriverExtensions.ExecuteJavaScript(IWebDriver, string, params object[])
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver, string, params object[])
+  nameWithType.vb: WebDriverExtensions.ExecuteJavaScript(IWebDriver, String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver, String, ParamArray Object())
+  name.vb: ExecuteJavaScript(IWebDriver, String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions
+  commentId: T:OpenQA.Selenium.Support.Extensions.WebDriverExtensions
+  parent: OpenQA.Selenium.Support.Extensions
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html
+  name: WebDriverExtensions
+  nameWithType: WebDriverExtensions
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions
+- uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+  isExternal: true
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript__1_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  name: ExecuteJavaScript<T>(IWebDriver, string, params object[])
+  nameWithType: WebDriverExtensions.ExecuteJavaScript<T>(IWebDriver, string, params object[])
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript<T>(OpenQA.Selenium.IWebDriver, string, params object[])
+  nameWithType.vb: WebDriverExtensions.ExecuteJavaScript(Of T)(IWebDriver, String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript(Of T)(OpenQA.Selenium.IWebDriver, String, ParamArray Object())
+  name.vb: ExecuteJavaScript(Of T)(IWebDriver, String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript__1_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.ExecuteJavaScript``1(OpenQA.Selenium.IWebDriver,System.String,System.Object[])
+    name: ExecuteJavaScript
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_ExecuteJavaScript__1_OpenQA_Selenium_IWebDriver_System_String_System_Object___
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+  commentId: M:OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+  href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_TakeScreenshot_OpenQA_Selenium_IWebDriver_
+  name: TakeScreenshot(IWebDriver)
+  nameWithType: WebDriverExtensions.TakeScreenshot(IWebDriver)
+  fullName: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+    name: TakeScreenshot
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_TakeScreenshot_OpenQA_Selenium_IWebDriver_
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.TakeScreenshot(OpenQA.Selenium.IWebDriver)
+    name: TakeScreenshot
+    href: OpenQA.Selenium.Support.Extensions.WebDriverExtensions.html#OpenQA_Selenium_Support_Extensions_WebDriverExtensions_TakeScreenshot_OpenQA_Selenium_IWebDriver_
+  - name: (
+  - uid: OpenQA.Selenium.IWebDriver
+    name: IWebDriver
+    href: OpenQA.Selenium.IWebDriver.html
+  - name: )
+- uid: OpenQA.Selenium.Support.Extensions
+  commentId: N:OpenQA.Selenium.Support.Extensions
+  href: OpenQA.html
+  name: OpenQA.Selenium.Support.Extensions
+  nameWithType: OpenQA.Selenium.Support.Extensions
+  fullName: OpenQA.Selenium.Support.Extensions
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.Extensions
+    name: Extensions
+    href: OpenQA.Selenium.Support.Extensions.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Support
+    name: Support
+    href: OpenQA.Selenium.Support.html
+  - name: .
+  - uid: OpenQA.Selenium.Support.Extensions
+    name: Extensions
+    href: OpenQA.Selenium.Support.Extensions.html
+- uid: OpenQA.Selenium.Safari.SafariDriver
+  commentId: T:OpenQA.Selenium.Safari.SafariDriver
+  href: OpenQA.Selenium.Safari.SafariDriver.html
+  name: SafariDriver
+  nameWithType: SafariDriver
+  fullName: OpenQA.Selenium.Safari.SafariDriver
+- uid: OpenQA.Selenium.Safari.SafariDriver.#ctor*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriver.#ctor
+  href: OpenQA.Selenium.Safari.SafariDriver.html#OpenQA_Selenium_Safari_SafariDriver__ctor
+  name: SafariDriver
+  nameWithType: SafariDriver.SafariDriver
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SafariDriver
+  nameWithType.vb: SafariDriver.New
+  fullName.vb: OpenQA.Selenium.Safari.SafariDriver.New
+  name.vb: New
+- uid: OpenQA.Selenium.Safari.SafariOptions
+  commentId: T:OpenQA.Selenium.Safari.SafariOptions
+  parent: OpenQA.Selenium.Safari
+  href: OpenQA.Selenium.Safari.SafariOptions.html
+  name: SafariOptions
+  nameWithType: SafariOptions
+  fullName: OpenQA.Selenium.Safari.SafariOptions
+- uid: OpenQA.Selenium.Safari.SafariDriverService
+  commentId: T:OpenQA.Selenium.Safari.SafariDriverService
+  parent: OpenQA.Selenium.Safari
+  href: OpenQA.Selenium.Safari.SafariDriverService.html
+  name: SafariDriverService
+  nameWithType: SafariDriverService
+  fullName: OpenQA.Selenium.Safari.SafariDriverService
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium.Safari.SafariDriver.AttachDebugger*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriver.AttachDebugger
+  href: OpenQA.Selenium.Safari.SafariDriver.html#OpenQA_Selenium_Safari_SafariDriver_AttachDebugger
+  name: AttachDebugger
+  nameWithType: SafariDriver.AttachDebugger
+  fullName: OpenQA.Selenium.Safari.SafariDriver.AttachDebugger
+- uid: OpenQA.Selenium.Safari.SafariDriver.SetPermission*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriver.SetPermission
+  href: OpenQA.Selenium.Safari.SafariDriver.html#OpenQA_Selenium_Safari_SafariDriver_SetPermission_System_String_System_Boolean_
+  name: SetPermission
+  nameWithType: SafariDriver.SetPermission
+  fullName: OpenQA.Selenium.Safari.SafariDriver.SetPermission
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.Safari.SafariDriver.GetPermissions*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriver.GetPermissions
+  href: OpenQA.Selenium.Safari.SafariDriver.html#OpenQA_Selenium_Safari_SafariDriver_GetPermissions
+  name: GetPermissions
+  nameWithType: SafariDriver.GetPermissions
+  fullName: OpenQA.Selenium.Safari.SafariDriver.GetPermissions
+- uid: OpenQA.Selenium.IFileDetector
+  commentId: T:OpenQA.Selenium.IFileDetector
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IFileDetector.html
+  name: IFileDetector
+  nameWithType: IFileDetector
+  fullName: OpenQA.Selenium.IFileDetector
+- uid: OpenQA.Selenium.Remote.RemoteWebDriver
+  commentId: T:OpenQA.Selenium.Remote.RemoteWebDriver
+  href: OpenQA.Selenium.Remote.RemoteWebDriver.html
+  name: RemoteWebDriver
+  nameWithType: RemoteWebDriver
+  fullName: OpenQA.Selenium.Remote.RemoteWebDriver
+- uid: OpenQA.Selenium.WebDriver.FileDetector
+  commentId: P:OpenQA.Selenium.WebDriver.FileDetector
+  parent: OpenQA.Selenium.WebDriver
+  href: OpenQA.Selenium.WebDriver.html#OpenQA_Selenium_WebDriver_FileDetector
+  name: FileDetector
+  nameWithType: WebDriver.FileDetector
+  fullName: OpenQA.Selenium.WebDriver.FileDetector
+- uid: OpenQA.Selenium.Safari.SafariDriver.FileDetector*
+  commentId: Overload:OpenQA.Selenium.Safari.SafariDriver.FileDetector
+  href: OpenQA.Selenium.Safari.SafariDriver.html#OpenQA_Selenium_Safari_SafariDriver_FileDetector
+  name: FileDetector
+  nameWithType: SafariDriver.FileDetector
+  fullName: OpenQA.Selenium.Safari.SafariDriver.FileDetector

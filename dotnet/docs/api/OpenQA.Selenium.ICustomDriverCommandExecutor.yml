@@ -1,0 +1,435 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor
+  commentId: T:OpenQA.Selenium.ICustomDriverCommandExecutor
+  id: ICustomDriverCommandExecutor
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  - OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  langs:
+  - csharp
+  - vb
+  name: ICustomDriverCommandExecutor
+  nameWithType: ICustomDriverCommandExecutor
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICustomDriverCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ICustomDriverCommandExecutor
+    path: ../src/webdriver/ICustomDriverCommandExecutor.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Exposes an interface to allow drivers to register and execute custom commands.
+  example: []
+  syntax:
+    content: public interface ICustomDriverCommandExecutor
+    content.vb: Public Interface ICustomDriverCommandExecutor
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  id: ExecuteCustomDriverCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: OpenQA.Selenium.ICustomDriverCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: ExecuteCustomDriverCommand(string, Dictionary<string, object>)
+  nameWithType: ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(string, Dictionary<string, object>)
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(string, System.Collections.Generic.Dictionary<string, object>)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICustomDriverCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecuteCustomDriverCommand
+    path: ../src/webdriver/ICustomDriverCommandExecutor.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Executes a command with this driver.
+  example: []
+  syntax:
+    content: object ExecuteCustomDriverCommand(string driverCommandToExecute, Dictionary<string, object> parameters)
+    parameters:
+    - id: driverCommandToExecute
+      type: System.String
+      description: The name of the command to execute. The command name must be registered with the command executor, and must not be a command name known to this driver type.
+    - id: parameters
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> containing the names and values of the parameters of the command.
+    return:
+      type: System.Object
+      description: An object that contains the value returned by the command, if any.
+    content.vb: Function ExecuteCustomDriverCommand(driverCommandToExecute As String, parameters As Dictionary(Of String, Object)) As Object
+  overload: OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand*
+  nameWithType.vb: ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(String, Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand(String, System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: ExecuteCustomDriverCommand(String, Dictionary(Of String, Object))
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  commentId: M:OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  id: RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo})
+  parent: OpenQA.Selenium.ICustomDriverCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: RegisterCustomDriverCommands(IReadOnlyDictionary<string, CommandInfo>)
+  nameWithType: ICustomDriverCommandExecutor.RegisterCustomDriverCommands(IReadOnlyDictionary<string, CommandInfo>)
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary<string, OpenQA.Selenium.CommandInfo>)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICustomDriverCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RegisterCustomDriverCommands
+    path: ../src/webdriver/ICustomDriverCommandExecutor.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Registers a set of commands to be executed with this driver instance.
+  example: []
+  syntax:
+    content: void RegisterCustomDriverCommands(IReadOnlyDictionary<string, CommandInfo> commands)
+    parameters:
+    - id: commands
+      type: System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo}
+      description: An <xref href="System.Collections.Generic.IReadOnlyDictionary%602" data-throw-if-not-resolved="false"></xref> where the keys are the names of the commands to register, and the values are the <xref href="OpenQA.Selenium.CommandInfo" data-throw-if-not-resolved="false"></xref> objects describing the commands.
+    content.vb: Sub RegisterCustomDriverCommands(commands As IReadOnlyDictionary(Of String, CommandInfo))
+  overload: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands*
+  nameWithType.vb: ICustomDriverCommandExecutor.RegisterCustomDriverCommands(IReadOnlyDictionary(Of String, CommandInfo))
+  fullName.vb: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands(System.Collections.Generic.IReadOnlyDictionary(Of String, OpenQA.Selenium.CommandInfo))
+  name.vb: RegisterCustomDriverCommands(IReadOnlyDictionary(Of String, CommandInfo))
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  id: RegisterCustomDriverCommand(System.String,OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.ICustomDriverCommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: RegisterCustomDriverCommand(string, CommandInfo)
+  nameWithType: ICustomDriverCommandExecutor.RegisterCustomDriverCommand(string, CommandInfo)
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand(string, OpenQA.Selenium.CommandInfo)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICustomDriverCommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RegisterCustomDriverCommand
+    path: ../src/webdriver/ICustomDriverCommandExecutor.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Registers a command to be executed with this driver instance.
+  example: []
+  syntax:
+    content: bool RegisterCustomDriverCommand(string commandName, CommandInfo commandInfo)
+    parameters:
+    - id: commandName
+      type: System.String
+      description: The unique name of the command to register.
+    - id: commandInfo
+      type: OpenQA.Selenium.CommandInfo
+      description: The <xref href="OpenQA.Selenium.CommandInfo" data-throw-if-not-resolved="false"></xref> object describing the command.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the command was registered; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Function RegisterCustomDriverCommand(commandName As String, commandInfo As CommandInfo) As Boolean
+  overload: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand*
+  nameWithType.vb: ICustomDriverCommandExecutor.RegisterCustomDriverCommand(String, CommandInfo)
+  fullName.vb: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand(String, OpenQA.Selenium.CommandInfo)
+  name.vb: RegisterCustomDriverCommand(String, CommandInfo)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand*
+  commentId: Overload:OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand
+  href: OpenQA.Selenium.ICustomDriverCommandExecutor.html#OpenQA_Selenium_ICustomDriverCommandExecutor_ExecuteCustomDriverCommand_System_String_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: ExecuteCustomDriverCommand
+  nameWithType: ICustomDriverCommandExecutor.ExecuteCustomDriverCommand
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor.ExecuteCustomDriverCommand
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: OpenQA.Selenium.CommandInfo
+  commentId: T:OpenQA.Selenium.CommandInfo
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.CommandInfo.html
+  name: CommandInfo
+  nameWithType: CommandInfo
+  fullName: OpenQA.Selenium.CommandInfo
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands*
+  commentId: Overload:OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands
+  href: OpenQA.Selenium.ICustomDriverCommandExecutor.html#OpenQA_Selenium_ICustomDriverCommandExecutor_RegisterCustomDriverCommands_System_Collections_Generic_IReadOnlyDictionary_System_String_OpenQA_Selenium_CommandInfo__
+  name: RegisterCustomDriverCommands
+  nameWithType: ICustomDriverCommandExecutor.RegisterCustomDriverCommands
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommands
+- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,OpenQA.Selenium.CommandInfo}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<string, CommandInfo>
+  nameWithType: IReadOnlyDictionary<string, CommandInfo>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<string, OpenQA.Selenium.CommandInfo>
+  nameWithType.vb: IReadOnlyDictionary(Of String, CommandInfo)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, OpenQA.Selenium.CommandInfo)
+  name.vb: IReadOnlyDictionary(Of String, CommandInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+- uid: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand*
+  commentId: Overload:OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand
+  href: OpenQA.Selenium.ICustomDriverCommandExecutor.html#OpenQA_Selenium_ICustomDriverCommandExecutor_RegisterCustomDriverCommand_System_String_OpenQA_Selenium_CommandInfo_
+  name: RegisterCustomDriverCommand
+  nameWithType: ICustomDriverCommandExecutor.RegisterCustomDriverCommand
+  fullName: OpenQA.Selenium.ICustomDriverCommandExecutor.RegisterCustomDriverCommand
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

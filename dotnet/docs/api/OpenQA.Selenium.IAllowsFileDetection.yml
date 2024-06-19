@@ -1,0 +1,104 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IAllowsFileDetection
+  commentId: T:OpenQA.Selenium.IAllowsFileDetection
+  id: IAllowsFileDetection
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IAllowsFileDetection.FileDetector
+  langs:
+  - csharp
+  - vb
+  name: IAllowsFileDetection
+  nameWithType: IAllowsFileDetection
+  fullName: OpenQA.Selenium.IAllowsFileDetection
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IAllowsFileDetection.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IAllowsFileDetection
+    path: ../src/webdriver/IAllowsFileDetection.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Interface determining whether the driver implementation allows detection of files
+
+    when sending keystrokes to a file upload element.
+  example: []
+  syntax:
+    content: public interface IAllowsFileDetection
+    content.vb: Public Interface IAllowsFileDetection
+- uid: OpenQA.Selenium.IAllowsFileDetection.FileDetector
+  commentId: P:OpenQA.Selenium.IAllowsFileDetection.FileDetector
+  id: FileDetector
+  parent: OpenQA.Selenium.IAllowsFileDetection
+  langs:
+  - csharp
+  - vb
+  name: FileDetector
+  nameWithType: IAllowsFileDetection.FileDetector
+  fullName: OpenQA.Selenium.IAllowsFileDetection.FileDetector
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IAllowsFileDetection.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FileDetector
+    path: ../src/webdriver/IAllowsFileDetection.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the <xref href="OpenQA.Selenium.IFileDetector" data-throw-if-not-resolved="false"></xref> responsible for detecting
+
+    sequences of keystrokes representing file paths and names.
+  example: []
+  syntax:
+    content: IFileDetector FileDetector { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.IFileDetector
+    content.vb: Property FileDetector As IFileDetector
+  overload: OpenQA.Selenium.IAllowsFileDetection.FileDetector*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.IFileDetector
+  commentId: T:OpenQA.Selenium.IFileDetector
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IFileDetector.html
+  name: IFileDetector
+  nameWithType: IFileDetector
+  fullName: OpenQA.Selenium.IFileDetector
+- uid: OpenQA.Selenium.IAllowsFileDetection.FileDetector*
+  commentId: Overload:OpenQA.Selenium.IAllowsFileDetection.FileDetector
+  href: OpenQA.Selenium.IAllowsFileDetection.html#OpenQA_Selenium_IAllowsFileDetection_FileDetector
+  name: FileDetector
+  nameWithType: IAllowsFileDetection.FileDetector
+  fullName: OpenQA.Selenium.IAllowsFileDetection.FileDetector

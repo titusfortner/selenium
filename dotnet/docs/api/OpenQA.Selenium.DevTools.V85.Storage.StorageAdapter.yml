@@ -1,0 +1,1687 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  id: StorageAdapter
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  children:
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageContentUpdated
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageListUpdated
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies(OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin(OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies(OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota(OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBContentUpdated
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBListUpdated
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies(OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: StorageAdapter
+  nameWithType: StorageAdapter
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StorageAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Represents an adapter for the Storage domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class StorageAdapter
+    content.vb: Public Class StorageAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: StorageAdapter(IDevToolsSession)
+  nameWithType: StorageAdapter.StorageAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.StorageAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Initializes a new instance of the StorageAdapter class.
+  example: []
+  syntax:
+    content: public StorageAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.#ctor*
+  nameWithType.vb: StorageAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: StorageAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageContentUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageContentUpdated
+  id: CacheStorageContentUpdated
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: CacheStorageContentUpdated
+  nameWithType: StorageAdapter.CacheStorageContentUpdated
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageContentUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CacheStorageContentUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: A cache's contents have been modified.
+  example: []
+  syntax:
+    content: public event EventHandler<CacheStorageContentUpdatedEventArgs> CacheStorageContentUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs}
+    content.vb: Public Event CacheStorageContentUpdated As EventHandler(Of CacheStorageContentUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageListUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageListUpdated
+  id: CacheStorageListUpdated
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: CacheStorageListUpdated
+  nameWithType: StorageAdapter.CacheStorageListUpdated
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.CacheStorageListUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CacheStorageListUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: A cache has been added/deleted.
+  example: []
+  syntax:
+    content: public event EventHandler<CacheStorageListUpdatedEventArgs> CacheStorageListUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs}
+    content.vb: Public Event CacheStorageListUpdated As EventHandler(Of CacheStorageListUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBContentUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBContentUpdated
+  id: IndexedDBContentUpdated
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: IndexedDBContentUpdated
+  nameWithType: StorageAdapter.IndexedDBContentUpdated
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBContentUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IndexedDBContentUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: The origin's IndexedDB object store has been modified.
+  example: []
+  syntax:
+    content: public event EventHandler<IndexedDBContentUpdatedEventArgs> IndexedDBContentUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs}
+    content.vb: Public Event IndexedDBContentUpdated As EventHandler(Of IndexedDBContentUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBListUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBListUpdated
+  id: IndexedDBListUpdated
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: IndexedDBListUpdated
+  nameWithType: StorageAdapter.IndexedDBListUpdated
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.IndexedDBListUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IndexedDBListUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 54
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: The origin's IndexedDB database list has been modified.
+  example: []
+  syntax:
+    content: public event EventHandler<IndexedDBListUpdatedEventArgs> IndexedDBListUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs}
+    content.vb: Public Event IndexedDBListUpdated As EventHandler(Of IndexedDBListUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin(OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin(OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ClearDataForOrigin(OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: ClearDataForOrigin(ClearDataForOriginCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.ClearDataForOrigin(ClearDataForOriginCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin(OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearDataForOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Clears storage for origin.
+  example: []
+  syntax:
+    content: public Task<ClearDataForOriginCommandResponse> ClearDataForOrigin(ClearDataForOriginCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse}
+    content.vb: Public Function ClearDataForOrigin(command As ClearDataForOriginCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ClearDataForOriginCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin*
+  nameWithType.vb: StorageAdapter.ClearDataForOrigin(ClearDataForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin(OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ClearDataForOrigin(ClearDataForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies(OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies(OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetCookies(OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetCookies(GetCookiesCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.GetCookies(GetCookiesCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies(OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCookies
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Returns all browser cookies.
+  example: []
+  syntax:
+    content: public Task<GetCookiesCommandResponse> GetCookies(GetCookiesCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse}
+    content.vb: Public Function GetCookies(command As GetCookiesCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetCookiesCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies*
+  nameWithType.vb: StorageAdapter.GetCookies(GetCookiesCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies(OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetCookies(GetCookiesCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies(OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies(OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetCookies(OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetCookies(SetCookiesCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.SetCookies(SetCookiesCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies(OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetCookies
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Sets given cookies.
+  example: []
+  syntax:
+    content: public Task<SetCookiesCommandResponse> SetCookies(SetCookiesCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse}
+    content.vb: Public Function SetCookies(command As SetCookiesCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetCookiesCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies*
+  nameWithType.vb: StorageAdapter.SetCookies(SetCookiesCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies(OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetCookies(SetCookiesCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies(OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies(OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ClearCookies(OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: ClearCookies(ClearCookiesCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.ClearCookies(ClearCookiesCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies(OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearCookies
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 80
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Clears cookies.
+  example: []
+  syntax:
+    content: public Task<ClearCookiesCommandResponse> ClearCookies(ClearCookiesCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse}
+    content.vb: Public Function ClearCookies(command As ClearCookiesCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ClearCookiesCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies*
+  nameWithType.vb: StorageAdapter.ClearCookies(ClearCookiesCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies(OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ClearCookies(ClearCookiesCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota(OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota(OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetUsageAndQuota(OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetUsageAndQuota(GetUsageAndQuotaCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.GetUsageAndQuota(GetUsageAndQuotaCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota(OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetUsageAndQuota
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Returns usage and quota in bytes.
+  example: []
+  syntax:
+    content: public Task<GetUsageAndQuotaCommandResponse> GetUsageAndQuota(GetUsageAndQuotaCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse}
+    content.vb: Public Function GetUsageAndQuota(command As GetUsageAndQuotaCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetUsageAndQuotaCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota*
+  nameWithType.vb: StorageAdapter.GetUsageAndQuota(GetUsageAndQuotaCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota(OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetUsageAndQuota(GetUsageAndQuotaCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: TrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: TrackCacheStorageForOrigin(TrackCacheStorageForOriginCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.TrackCacheStorageForOrigin(TrackCacheStorageForOriginCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TrackCacheStorageForOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Registers origin to be notified when an update occurs to its cache storage list.
+  example: []
+  syntax:
+    content: public Task<TrackCacheStorageForOriginCommandResponse> TrackCacheStorageForOrigin(TrackCacheStorageForOriginCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse}
+    content.vb: Public Function TrackCacheStorageForOrigin(command As TrackCacheStorageForOriginCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of TrackCacheStorageForOriginCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin*
+  nameWithType.vb: StorageAdapter.TrackCacheStorageForOrigin(TrackCacheStorageForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: TrackCacheStorageForOrigin(TrackCacheStorageForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: TrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: TrackIndexedDBForOrigin(TrackIndexedDBForOriginCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.TrackIndexedDBForOrigin(TrackIndexedDBForOriginCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TrackIndexedDBForOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 101
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Registers origin to be notified when an update occurs to its IndexedDB.
+  example: []
+  syntax:
+    content: public Task<TrackIndexedDBForOriginCommandResponse> TrackIndexedDBForOrigin(TrackIndexedDBForOriginCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse}
+    content.vb: Public Function TrackIndexedDBForOrigin(command As TrackIndexedDBForOriginCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of TrackIndexedDBForOriginCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin*
+  nameWithType.vb: StorageAdapter.TrackIndexedDBForOrigin(TrackIndexedDBForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: TrackIndexedDBForOrigin(TrackIndexedDBForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: UntrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UntrackCacheStorageForOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 108
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Unregisters origin from receiving notifications for cache storage.
+  example: []
+  syntax:
+    content: public Task<UntrackCacheStorageForOriginCommandResponse> UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse}
+    content.vb: Public Function UntrackCacheStorageForOrigin(command As UntrackCacheStorageForOriginCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of UntrackCacheStorageForOriginCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin*
+  nameWithType.vb: StorageAdapter.UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: UntrackCacheStorageForOrigin(UntrackCacheStorageForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: UntrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter
+  langs:
+  - csharp
+  - vb
+  name: UntrackIndexedDBForOrigin(UntrackIndexedDBForOriginCommandSettings, CancellationToken, int?, bool)
+  nameWithType: StorageAdapter.UntrackIndexedDBForOrigin(UntrackIndexedDBForOriginCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UntrackIndexedDBForOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Storage/StorageAdapter.cs
+    startLine: 115
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Storage
+  summary: Unregisters origin from receiving notifications for IndexedDB.
+  example: []
+  syntax:
+    content: public Task<UntrackIndexedDBForOriginCommandResponse> UntrackIndexedDBForOrigin(UntrackIndexedDBForOriginCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse}
+    content.vb: Public Function UntrackIndexedDBForOrigin(command As UntrackIndexedDBForOriginCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of UntrackIndexedDBForOriginCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin*
+  nameWithType.vb: StorageAdapter.UntrackIndexedDBForOrigin(UntrackIndexedDBForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin(OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: UntrackIndexedDBForOrigin(UntrackIndexedDBForOriginCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Storage
+  commentId: N:OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Storage
+  nameWithType: OpenQA.Selenium.DevTools.V85.Storage
+  fullName: OpenQA.Selenium.DevTools.V85.Storage
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Storage
+    name: Storage
+    href: OpenQA.Selenium.DevTools.V85.Storage.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Storage
+    name: Storage
+    href: OpenQA.Selenium.DevTools.V85.Storage.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: StorageAdapter
+  nameWithType: StorageAdapter.StorageAdapter
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.StorageAdapter
+  nameWithType.vb: StorageAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_Session
+  name: Session
+  nameWithType: StorageAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<CacheStorageContentUpdatedEventArgs>
+  nameWithType: EventHandler<CacheStorageContentUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of CacheStorageContentUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs)
+  name.vb: EventHandler(Of CacheStorageContentUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs
+    name: CacheStorageContentUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs
+    name: CacheStorageContentUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageContentUpdatedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<CacheStorageListUpdatedEventArgs>
+  nameWithType: EventHandler<CacheStorageListUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of CacheStorageListUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs)
+  name.vb: EventHandler(Of CacheStorageListUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs
+    name: CacheStorageListUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs
+    name: CacheStorageListUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.CacheStorageListUpdatedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<IndexedDBContentUpdatedEventArgs>
+  nameWithType: EventHandler<IndexedDBContentUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of IndexedDBContentUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs)
+  name.vb: EventHandler(Of IndexedDBContentUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs
+    name: IndexedDBContentUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs
+    name: IndexedDBContentUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBContentUpdatedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<IndexedDBListUpdatedEventArgs>
+  nameWithType: EventHandler<IndexedDBListUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of IndexedDBListUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs)
+  name.vb: EventHandler(Of IndexedDBListUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs
+    name: IndexedDBListUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs
+    name: IndexedDBListUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V85.Storage.IndexedDBListUpdatedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_ClearDataForOrigin_OpenQA_Selenium_DevTools_V85_Storage_ClearDataForOriginCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ClearDataForOrigin
+  nameWithType: StorageAdapter.ClearDataForOrigin
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearDataForOrigin
+- uid: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings.html
+  name: ClearDataForOriginCommandSettings
+  nameWithType: ClearDataForOriginCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ClearDataForOriginCommandResponse>
+  nameWithType: Task<ClearDataForOriginCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse>
+  nameWithType.vb: Task(Of ClearDataForOriginCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse)
+  name.vb: Task(Of ClearDataForOriginCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse
+    name: ClearDataForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse
+    name: ClearDataForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.ClearDataForOriginCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_GetCookies_OpenQA_Selenium_DevTools_V85_Storage_GetCookiesCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetCookies
+  nameWithType: StorageAdapter.GetCookies
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetCookies
+- uid: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings.html
+  name: GetCookiesCommandSettings
+  nameWithType: GetCookiesCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetCookiesCommandResponse>
+  nameWithType: Task<GetCookiesCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse>
+  nameWithType.vb: Task(Of GetCookiesCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse)
+  name.vb: Task(Of GetCookiesCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse
+    name: GetCookiesCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse
+    name: GetCookiesCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.GetCookiesCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_SetCookies_OpenQA_Selenium_DevTools_V85_Storage_SetCookiesCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetCookies
+  nameWithType: StorageAdapter.SetCookies
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.SetCookies
+- uid: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings.html
+  name: SetCookiesCommandSettings
+  nameWithType: SetCookiesCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetCookiesCommandResponse>
+  nameWithType: Task<SetCookiesCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse>
+  nameWithType.vb: Task(Of SetCookiesCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse)
+  name.vb: Task(Of SetCookiesCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse
+    name: SetCookiesCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse
+    name: SetCookiesCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.SetCookiesCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_ClearCookies_OpenQA_Selenium_DevTools_V85_Storage_ClearCookiesCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ClearCookies
+  nameWithType: StorageAdapter.ClearCookies
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.ClearCookies
+- uid: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings.html
+  name: ClearCookiesCommandSettings
+  nameWithType: ClearCookiesCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ClearCookiesCommandResponse>
+  nameWithType: Task<ClearCookiesCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse>
+  nameWithType.vb: Task(Of ClearCookiesCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse)
+  name.vb: Task(Of ClearCookiesCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse
+    name: ClearCookiesCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse
+    name: ClearCookiesCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.ClearCookiesCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_GetUsageAndQuota_OpenQA_Selenium_DevTools_V85_Storage_GetUsageAndQuotaCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetUsageAndQuota
+  nameWithType: StorageAdapter.GetUsageAndQuota
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.GetUsageAndQuota
+- uid: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings.html
+  name: GetUsageAndQuotaCommandSettings
+  nameWithType: GetUsageAndQuotaCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetUsageAndQuotaCommandResponse>
+  nameWithType: Task<GetUsageAndQuotaCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse>
+  nameWithType.vb: Task(Of GetUsageAndQuotaCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse)
+  name.vb: Task(Of GetUsageAndQuotaCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse
+    name: GetUsageAndQuotaCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse
+    name: GetUsageAndQuotaCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.GetUsageAndQuotaCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_TrackCacheStorageForOrigin_OpenQA_Selenium_DevTools_V85_Storage_TrackCacheStorageForOriginCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: TrackCacheStorageForOrigin
+  nameWithType: StorageAdapter.TrackCacheStorageForOrigin
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackCacheStorageForOrigin
+- uid: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings.html
+  name: TrackCacheStorageForOriginCommandSettings
+  nameWithType: TrackCacheStorageForOriginCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TrackCacheStorageForOriginCommandResponse>
+  nameWithType: Task<TrackCacheStorageForOriginCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse>
+  nameWithType.vb: Task(Of TrackCacheStorageForOriginCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse)
+  name.vb: Task(Of TrackCacheStorageForOriginCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse
+    name: TrackCacheStorageForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse
+    name: TrackCacheStorageForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.TrackCacheStorageForOriginCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_TrackIndexedDBForOrigin_OpenQA_Selenium_DevTools_V85_Storage_TrackIndexedDBForOriginCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: TrackIndexedDBForOrigin
+  nameWithType: StorageAdapter.TrackIndexedDBForOrigin
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.TrackIndexedDBForOrigin
+- uid: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings.html
+  name: TrackIndexedDBForOriginCommandSettings
+  nameWithType: TrackIndexedDBForOriginCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TrackIndexedDBForOriginCommandResponse>
+  nameWithType: Task<TrackIndexedDBForOriginCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse>
+  nameWithType.vb: Task(Of TrackIndexedDBForOriginCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse)
+  name.vb: Task(Of TrackIndexedDBForOriginCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse
+    name: TrackIndexedDBForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse
+    name: TrackIndexedDBForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.TrackIndexedDBForOriginCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_UntrackCacheStorageForOrigin_OpenQA_Selenium_DevTools_V85_Storage_UntrackCacheStorageForOriginCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: UntrackCacheStorageForOrigin
+  nameWithType: StorageAdapter.UntrackCacheStorageForOrigin
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackCacheStorageForOrigin
+- uid: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings.html
+  name: UntrackCacheStorageForOriginCommandSettings
+  nameWithType: UntrackCacheStorageForOriginCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UntrackCacheStorageForOriginCommandResponse>
+  nameWithType: Task<UntrackCacheStorageForOriginCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse>
+  nameWithType.vb: Task(Of UntrackCacheStorageForOriginCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse)
+  name.vb: Task(Of UntrackCacheStorageForOriginCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse
+    name: UntrackCacheStorageForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse
+    name: UntrackCacheStorageForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.UntrackCacheStorageForOriginCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin
+  href: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.html#OpenQA_Selenium_DevTools_V85_Storage_StorageAdapter_UntrackIndexedDBForOrigin_OpenQA_Selenium_DevTools_V85_Storage_UntrackIndexedDBForOriginCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: UntrackIndexedDBForOrigin
+  nameWithType: StorageAdapter.UntrackIndexedDBForOrigin
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.StorageAdapter.UntrackIndexedDBForOrigin
+- uid: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Storage
+  href: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings.html
+  name: UntrackIndexedDBForOriginCommandSettings
+  nameWithType: UntrackIndexedDBForOriginCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<UntrackIndexedDBForOriginCommandResponse>
+  nameWithType: Task<UntrackIndexedDBForOriginCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse>
+  nameWithType.vb: Task(Of UntrackIndexedDBForOriginCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse)
+  name.vb: Task(Of UntrackIndexedDBForOriginCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse
+    name: UntrackIndexedDBForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse
+    name: UntrackIndexedDBForOriginCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Storage.UntrackIndexedDBForOriginCommandResponse.html
+  - name: )

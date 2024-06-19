@@ -1,0 +1,736 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  id: NavigateCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Page
+  children:
+  - OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId
+  - OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer
+  - OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy
+  - OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType
+  - OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url
+  langs:
+  - csharp
+  - vb
+  name: NavigateCommandSettings
+  nameWithType: NavigateCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NavigateCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: Navigates current page to the given URL.
+  example: []
+  syntax:
+    content: 'public sealed class NavigateCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class NavigateCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: NavigateCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 15
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url
+  commentId: P:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url
+  id: Url
+  parent: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: NavigateCommandSettings.Url
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Url
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: URL to navigate the page to.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("url")]
+
+      public string Url { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("url")>
+
+      Public Property Url As String
+  overload: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: url
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer
+  commentId: P:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer
+  id: Referrer
+  parent: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Referrer
+  nameWithType: NavigateCommandSettings.Referrer
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Referrer
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: Referrer URL.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("referrer", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Referrer { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("referrer", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Referrer As String
+  overload: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: referrer
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType
+  commentId: P:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType
+  id: TransitionType
+  parent: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: TransitionType
+  nameWithType: NavigateCommandSettings.TransitionType
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TransitionType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: Intended transition type.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("transitionType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public TransitionType? TransitionType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V85.Page.TransitionType}
+    content.vb: >-
+      <JsonProperty("transitionType", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property TransitionType As TransitionType?
+  overload: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: transitionType
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId
+  commentId: P:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId
+  id: FrameId
+  parent: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: FrameId
+  nameWithType: NavigateCommandSettings.FrameId
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FrameId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: Frame id to navigate, if not specified navigates the top frame.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string FrameId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("frameId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FrameId As String
+  overload: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: frameId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy
+  commentId: P:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy
+  id: ReferrerPolicy
+  parent: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ReferrerPolicy
+  nameWithType: NavigateCommandSettings.ReferrerPolicy
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReferrerPolicy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Page/NavigateCommand.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Page
+  summary: Referrer-policy used for the navigation.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("referrerPolicy", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ReferrerPolicy? ReferrerPolicy { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy}
+    content.vb: >-
+      <JsonProperty("referrerPolicy", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ReferrerPolicy As ReferrerPolicy?
+  overload: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: referrerPolicy
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Page
+  commentId: N:OpenQA.Selenium.DevTools.V85.Page
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Page
+  nameWithType: OpenQA.Selenium.DevTools.V85.Page
+  fullName: OpenQA.Selenium.DevTools.V85.Page
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V85.Page.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V85.Page.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Page_NavigateCommandSettings_CommandName
+  name: CommandName
+  nameWithType: NavigateCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url
+  href: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Page_NavigateCommandSettings_Url
+  name: Url
+  nameWithType: NavigateCommandSettings.Url
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Url
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer
+  href: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Page_NavigateCommandSettings_Referrer
+  name: Referrer
+  nameWithType: NavigateCommandSettings.Referrer
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.Referrer
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType
+  href: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Page_NavigateCommandSettings_TransitionType
+  name: TransitionType
+  nameWithType: NavigateCommandSettings.TransitionType
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.TransitionType
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V85.Page.TransitionType}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V85.Page.TransitionType}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V85.Page.TransitionType.html
+  name: TransitionType?
+  nameWithType: TransitionType?
+  fullName: OpenQA.Selenium.DevTools.V85.Page.TransitionType?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.Page.TransitionType
+    name: TransitionType
+    href: OpenQA.Selenium.DevTools.V85.Page.TransitionType.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.Page.TransitionType
+    name: TransitionType
+    href: OpenQA.Selenium.DevTools.V85.Page.TransitionType.html
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId
+  href: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Page_NavigateCommandSettings_FrameId
+  name: FrameId
+  nameWithType: NavigateCommandSettings.FrameId
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.FrameId
+- uid: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy
+  href: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Page_NavigateCommandSettings_ReferrerPolicy
+  name: ReferrerPolicy
+  nameWithType: NavigateCommandSettings.ReferrerPolicy
+  fullName: OpenQA.Selenium.DevTools.V85.Page.NavigateCommandSettings.ReferrerPolicy
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy.html
+  name: ReferrerPolicy?
+  nameWithType: ReferrerPolicy?
+  fullName: OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy
+    name: ReferrerPolicy
+    href: OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy
+    name: ReferrerPolicy
+    href: OpenQA.Selenium.DevTools.V85.Page.ReferrerPolicy.html
+  - name: '?'

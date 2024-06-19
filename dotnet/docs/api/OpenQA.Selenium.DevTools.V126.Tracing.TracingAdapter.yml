@@ -1,0 +1,1274 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  id: TracingAdapter
+  parent: OpenQA.Selenium.DevTools.V126.Tracing
+  children:
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.BufferUsage
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.DataCollected
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End(OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories(OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker(OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump(OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start(OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.TracingComplete
+  langs:
+  - csharp
+  - vb
+  name: TracingAdapter
+  nameWithType: TracingAdapter
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TracingAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Represents an adapter for the Tracing domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class TracingAdapter
+    content.vb: Public Class TracingAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: TracingAdapter(IDevToolsSession)
+  nameWithType: TracingAdapter.TracingAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.TracingAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Initializes a new instance of the TracingAdapter class.
+  example: []
+  syntax:
+    content: public TracingAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.#ctor*
+  nameWithType.vb: TracingAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: TracingAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.BufferUsage
+  commentId: E:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.BufferUsage
+  id: BufferUsage
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: BufferUsage
+  nameWithType: TracingAdapter.BufferUsage
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.BufferUsage
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BufferUsage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: bufferUsage
+  example: []
+  syntax:
+    content: public event EventHandler<BufferUsageEventArgs> BufferUsage
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs}
+    content.vb: Public Event BufferUsage As EventHandler(Of BufferUsageEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.DataCollected
+  commentId: E:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.DataCollected
+  id: DataCollected
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: DataCollected
+  nameWithType: TracingAdapter.DataCollected
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.DataCollected
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DataCollected
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: >-
+    Contains a bucket of collected trace events. When tracing is stopped collected events will be
+
+    sent as a sequence of dataCollected events followed by tracingComplete event.
+  example: []
+  syntax:
+    content: public event EventHandler<DataCollectedEventArgs> DataCollected
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs}
+    content.vb: Public Event DataCollected As EventHandler(Of DataCollectedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.TracingComplete
+  commentId: E:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.TracingComplete
+  id: TracingComplete
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: TracingComplete
+  nameWithType: TracingAdapter.TracingComplete
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.TracingComplete
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TracingComplete
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: >-
+    Signals that tracing is stopped and there is no trace buffers pending flush, all data were
+
+    delivered via dataCollected events.
+  example: []
+  syntax:
+    content: public event EventHandler<TracingCompleteEventArgs> TracingComplete
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs}
+    content.vb: Public Event TracingComplete As EventHandler(Of TracingCompleteEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End(OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End(OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: End(OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: End(EndCommandSettings, CancellationToken, int?, bool)
+  nameWithType: TracingAdapter.End(EndCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End(OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: End
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Stop trace events collection.
+  example: []
+  syntax:
+    content: public Task<EndCommandResponse> End(EndCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse}
+    content.vb: Public Function [End](command As EndCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EndCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End*
+  nameWithType.vb: TracingAdapter.End(EndCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End(OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: End(EndCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories(OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories(OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetCategories(OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetCategories(GetCategoriesCommandSettings, CancellationToken, int?, bool)
+  nameWithType: TracingAdapter.GetCategories(GetCategoriesCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories(OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCategories
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Gets supported tracing categories.
+  example: []
+  syntax:
+    content: public Task<GetCategoriesCommandResponse> GetCategories(GetCategoriesCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse}
+    content.vb: Public Function GetCategories(command As GetCategoriesCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetCategoriesCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories*
+  nameWithType.vb: TracingAdapter.GetCategories(GetCategoriesCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories(OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetCategories(GetCategoriesCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker(OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker(OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: RecordClockSyncMarker(OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: RecordClockSyncMarker(RecordClockSyncMarkerCommandSettings, CancellationToken, int?, bool)
+  nameWithType: TracingAdapter.RecordClockSyncMarker(RecordClockSyncMarkerCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker(OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RecordClockSyncMarker
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 70
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Record a clock sync marker in the trace.
+  example: []
+  syntax:
+    content: public Task<RecordClockSyncMarkerCommandResponse> RecordClockSyncMarker(RecordClockSyncMarkerCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse}
+    content.vb: Public Function RecordClockSyncMarker(command As RecordClockSyncMarkerCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of RecordClockSyncMarkerCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker*
+  nameWithType.vb: TracingAdapter.RecordClockSyncMarker(RecordClockSyncMarkerCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker(OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: RecordClockSyncMarker(RecordClockSyncMarkerCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump(OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump(OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: RequestMemoryDump(OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: RequestMemoryDump(RequestMemoryDumpCommandSettings, CancellationToken, int?, bool)
+  nameWithType: TracingAdapter.RequestMemoryDump(RequestMemoryDumpCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump(OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestMemoryDump
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Request a global memory dump.
+  example: []
+  syntax:
+    content: public Task<RequestMemoryDumpCommandResponse> RequestMemoryDump(RequestMemoryDumpCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse}
+    content.vb: Public Function RequestMemoryDump(command As RequestMemoryDumpCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of RequestMemoryDumpCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump*
+  nameWithType.vb: TracingAdapter.RequestMemoryDump(RequestMemoryDumpCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump(OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: RequestMemoryDump(RequestMemoryDumpCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start(OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start(OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Start(OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter
+  langs:
+  - csharp
+  - vb
+  name: Start(StartCommandSettings, CancellationToken, int?, bool)
+  nameWithType: TracingAdapter.Start(StartCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start(OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Start
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Tracing/TracingAdapter.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Tracing
+  summary: Start trace events collection.
+  example: []
+  syntax:
+    content: public Task<StartCommandResponse> Start(StartCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse}
+    content.vb: Public Function Start(command As StartCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start*
+  nameWithType.vb: TracingAdapter.Start(StartCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start(OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Start(StartCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Tracing
+  commentId: N:OpenQA.Selenium.DevTools.V126.Tracing
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Tracing
+  nameWithType: OpenQA.Selenium.DevTools.V126.Tracing
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing
+    name: Tracing
+    href: OpenQA.Selenium.DevTools.V126.Tracing.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing
+    name: Tracing
+    href: OpenQA.Selenium.DevTools.V126.Tracing.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: TracingAdapter
+  nameWithType: TracingAdapter.TracingAdapter
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.TracingAdapter
+  nameWithType.vb: TracingAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter_Session
+  name: Session
+  nameWithType: TracingAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<BufferUsageEventArgs>
+  nameWithType: EventHandler<BufferUsageEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs>
+  nameWithType.vb: EventHandler(Of BufferUsageEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs)
+  name.vb: EventHandler(Of BufferUsageEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs
+    name: BufferUsageEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs
+    name: BufferUsageEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Tracing.BufferUsageEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<DataCollectedEventArgs>
+  nameWithType: EventHandler<DataCollectedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs>
+  nameWithType.vb: EventHandler(Of DataCollectedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs)
+  name.vb: EventHandler(Of DataCollectedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs
+    name: DataCollectedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs
+    name: DataCollectedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Tracing.DataCollectedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TracingCompleteEventArgs>
+  nameWithType: EventHandler<TracingCompleteEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs>
+  nameWithType.vb: EventHandler(Of TracingCompleteEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs)
+  name.vb: EventHandler(Of TracingCompleteEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs
+    name: TracingCompleteEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs
+    name: TracingCompleteEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Tracing.TracingCompleteEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter_End_OpenQA_Selenium_DevTools_V126_Tracing_EndCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: End
+  nameWithType: TracingAdapter.End
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.End
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Tracing
+  href: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings.html
+  name: EndCommandSettings
+  nameWithType: EndCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EndCommandResponse>
+  nameWithType: Task<EndCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse>
+  nameWithType.vb: Task(Of EndCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse)
+  name.vb: Task(Of EndCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse
+    name: EndCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse
+    name: EndCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.EndCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter_GetCategories_OpenQA_Selenium_DevTools_V126_Tracing_GetCategoriesCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetCategories
+  nameWithType: TracingAdapter.GetCategories
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.GetCategories
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Tracing
+  href: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings.html
+  name: GetCategoriesCommandSettings
+  nameWithType: GetCategoriesCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetCategoriesCommandResponse>
+  nameWithType: Task<GetCategoriesCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse>
+  nameWithType.vb: Task(Of GetCategoriesCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse)
+  name.vb: Task(Of GetCategoriesCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse
+    name: GetCategoriesCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse
+    name: GetCategoriesCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.GetCategoriesCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter_RecordClockSyncMarker_OpenQA_Selenium_DevTools_V126_Tracing_RecordClockSyncMarkerCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: RecordClockSyncMarker
+  nameWithType: TracingAdapter.RecordClockSyncMarker
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RecordClockSyncMarker
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Tracing
+  href: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings.html
+  name: RecordClockSyncMarkerCommandSettings
+  nameWithType: RecordClockSyncMarkerCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<RecordClockSyncMarkerCommandResponse>
+  nameWithType: Task<RecordClockSyncMarkerCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse>
+  nameWithType.vb: Task(Of RecordClockSyncMarkerCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse)
+  name.vb: Task(Of RecordClockSyncMarkerCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse
+    name: RecordClockSyncMarkerCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse
+    name: RecordClockSyncMarkerCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.RecordClockSyncMarkerCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter_RequestMemoryDump_OpenQA_Selenium_DevTools_V126_Tracing_RequestMemoryDumpCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: RequestMemoryDump
+  nameWithType: TracingAdapter.RequestMemoryDump
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.RequestMemoryDump
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Tracing
+  href: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings.html
+  name: RequestMemoryDumpCommandSettings
+  nameWithType: RequestMemoryDumpCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<RequestMemoryDumpCommandResponse>
+  nameWithType: Task<RequestMemoryDumpCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse>
+  nameWithType.vb: Task(Of RequestMemoryDumpCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse)
+  name.vb: Task(Of RequestMemoryDumpCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse
+    name: RequestMemoryDumpCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse
+    name: RequestMemoryDumpCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.RequestMemoryDumpCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start
+  href: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.html#OpenQA_Selenium_DevTools_V126_Tracing_TracingAdapter_Start_OpenQA_Selenium_DevTools_V126_Tracing_StartCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Start
+  nameWithType: TracingAdapter.Start
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.TracingAdapter.Start
+- uid: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Tracing
+  href: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings.html
+  name: StartCommandSettings
+  nameWithType: StartCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartCommandResponse>
+  nameWithType: Task<StartCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse>
+  nameWithType.vb: Task(Of StartCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse)
+  name.vb: Task(Of StartCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse
+    name: StartCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse
+    name: StartCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Tracing.StartCommandResponse.html
+  - name: )

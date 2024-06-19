@@ -1,0 +1,1776 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  id: AnimationAdapter
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  children:
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCanceled
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCreated
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationStarted
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationUpdated
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable(OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable(OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime(OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations(OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation(OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations(OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused(OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming(OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: AnimationAdapter
+  nameWithType: AnimationAdapter
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnimationAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Represents an adapter for the Animation domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class AnimationAdapter
+    content.vb: Public Class AnimationAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: AnimationAdapter(IDevToolsSession)
+  nameWithType: AnimationAdapter.AnimationAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Initializes a new instance of the AnimationAdapter class.
+  example: []
+  syntax:
+    content: public AnimationAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.#ctor*
+  nameWithType.vb: AnimationAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: AnimationAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCanceled
+  commentId: E:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCanceled
+  id: AnimationCanceled
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: AnimationCanceled
+  nameWithType: AnimationAdapter.AnimationCanceled
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCanceled
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnimationCanceled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Event for when an animation has been cancelled.
+  example: []
+  syntax:
+    content: public event EventHandler<AnimationCanceledEventArgs> AnimationCanceled
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs}
+    content.vb: Public Event AnimationCanceled As EventHandler(Of AnimationCanceledEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCreated
+  commentId: E:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCreated
+  id: AnimationCreated
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: AnimationCreated
+  nameWithType: AnimationAdapter.AnimationCreated
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationCreated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnimationCreated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Event for each animation that has been created.
+  example: []
+  syntax:
+    content: public event EventHandler<AnimationCreatedEventArgs> AnimationCreated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs}
+    content.vb: Public Event AnimationCreated As EventHandler(Of AnimationCreatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationStarted
+  commentId: E:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationStarted
+  id: AnimationStarted
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: AnimationStarted
+  nameWithType: AnimationAdapter.AnimationStarted
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationStarted
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnimationStarted
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Event for animation that has been started.
+  example: []
+  syntax:
+    content: public event EventHandler<AnimationStartedEventArgs> AnimationStarted
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs}
+    content.vb: Public Event AnimationStarted As EventHandler(Of AnimationStartedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationUpdated
+  commentId: E:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationUpdated
+  id: AnimationUpdated
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: AnimationUpdated
+  nameWithType: AnimationAdapter.AnimationUpdated
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationUpdated
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AnimationUpdated
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 54
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Event for animation that has been updated.
+  example: []
+  syntax:
+    content: public event EventHandler<AnimationUpdatedEventArgs> AnimationUpdated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs}
+    content.vb: Public Event AnimationUpdated As EventHandler(Of AnimationUpdatedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable(OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable(OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable(OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Disables animation domain notifications.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable*
+  nameWithType.vb: AnimationAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable(OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable(OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable(OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable(OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Enables animation domain notifications.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable*
+  nameWithType.vb: AnimationAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable(OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime(OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime(OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetCurrentTime(OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentTime(GetCurrentTimeCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.GetCurrentTime(GetCurrentTimeCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime(OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCurrentTime
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Returns the current time of the an animation.
+  example: []
+  syntax:
+    content: public Task<GetCurrentTimeCommandResponse> GetCurrentTime(GetCurrentTimeCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse}
+    content.vb: Public Function GetCurrentTime(command As GetCurrentTimeCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetCurrentTimeCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime*
+  nameWithType.vb: AnimationAdapter.GetCurrentTime(GetCurrentTimeCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime(OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetCurrentTime(GetCurrentTimeCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetPlaybackRate(GetPlaybackRateCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.GetPlaybackRate(GetPlaybackRateCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetPlaybackRate
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 80
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Gets the playback rate of the document timeline.
+  example: []
+  syntax:
+    content: public Task<GetPlaybackRateCommandResponse> GetPlaybackRate(GetPlaybackRateCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse}
+    content.vb: Public Function GetPlaybackRate(command As GetPlaybackRateCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetPlaybackRateCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate*
+  nameWithType.vb: AnimationAdapter.GetPlaybackRate(GetPlaybackRateCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetPlaybackRate(GetPlaybackRateCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations(OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations(OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ReleaseAnimations(OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: ReleaseAnimations(ReleaseAnimationsCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.ReleaseAnimations(ReleaseAnimationsCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations(OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReleaseAnimations
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Releases a set of animations to no longer be manipulated.
+  example: []
+  syntax:
+    content: public Task<ReleaseAnimationsCommandResponse> ReleaseAnimations(ReleaseAnimationsCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse}
+    content.vb: Public Function ReleaseAnimations(command As ReleaseAnimationsCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ReleaseAnimationsCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations*
+  nameWithType.vb: AnimationAdapter.ReleaseAnimations(ReleaseAnimationsCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations(OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ReleaseAnimations(ReleaseAnimationsCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation(OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation(OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ResolveAnimation(OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: ResolveAnimation(ResolveAnimationCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.ResolveAnimation(ResolveAnimationCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation(OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ResolveAnimation
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 94
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Gets the remote object of the Animation.
+  example: []
+  syntax:
+    content: public Task<ResolveAnimationCommandResponse> ResolveAnimation(ResolveAnimationCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse}
+    content.vb: Public Function ResolveAnimation(command As ResolveAnimationCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ResolveAnimationCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation*
+  nameWithType.vb: AnimationAdapter.ResolveAnimation(ResolveAnimationCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation(OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ResolveAnimation(ResolveAnimationCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations(OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations(OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SeekAnimations(OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: SeekAnimations(SeekAnimationsCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.SeekAnimations(SeekAnimationsCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations(OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SeekAnimations
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 101
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Seek a set of animations to a particular time within each animation.
+  example: []
+  syntax:
+    content: public Task<SeekAnimationsCommandResponse> SeekAnimations(SeekAnimationsCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse}
+    content.vb: Public Function SeekAnimations(command As SeekAnimationsCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SeekAnimationsCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations*
+  nameWithType.vb: AnimationAdapter.SeekAnimations(SeekAnimationsCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations(OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SeekAnimations(SeekAnimationsCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused(OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused(OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetPaused(OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetPaused(SetPausedCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.SetPaused(SetPausedCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused(OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPaused
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 108
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Sets the paused state of a set of animations.
+  example: []
+  syntax:
+    content: public Task<SetPausedCommandResponse> SetPaused(SetPausedCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse}
+    content.vb: Public Function SetPaused(command As SetPausedCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetPausedCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused*
+  nameWithType.vb: AnimationAdapter.SetPaused(SetPausedCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused(OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetPaused(SetPausedCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetPlaybackRate(SetPlaybackRateCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.SetPlaybackRate(SetPlaybackRateCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPlaybackRate
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 115
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Sets the playback rate of the document timeline.
+  example: []
+  syntax:
+    content: public Task<SetPlaybackRateCommandResponse> SetPlaybackRate(SetPlaybackRateCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse}
+    content.vb: Public Function SetPlaybackRate(command As SetPlaybackRateCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetPlaybackRateCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate*
+  nameWithType.vb: AnimationAdapter.SetPlaybackRate(SetPlaybackRateCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate(OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetPlaybackRate(SetPlaybackRateCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming(OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming(OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetTiming(OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetTiming(SetTimingCommandSettings, CancellationToken, int?, bool)
+  nameWithType: AnimationAdapter.SetTiming(SetTimingCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming(OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetTiming
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Animation/AnimationAdapter.cs
+    startLine: 122
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Animation
+  summary: Sets the timing of an animation node.
+  example: []
+  syntax:
+    content: public Task<SetTimingCommandResponse> SetTiming(SetTimingCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse}
+    content.vb: Public Function SetTiming(command As SetTimingCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetTimingCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming*
+  nameWithType.vb: AnimationAdapter.SetTiming(SetTimingCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming(OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetTiming(SetTimingCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Animation
+  commentId: N:OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Animation
+  nameWithType: OpenQA.Selenium.DevTools.V126.Animation
+  fullName: OpenQA.Selenium.DevTools.V126.Animation
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Animation
+    name: Animation
+    href: OpenQA.Selenium.DevTools.V126.Animation.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Animation
+    name: Animation
+    href: OpenQA.Selenium.DevTools.V126.Animation.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: AnimationAdapter
+  nameWithType: AnimationAdapter.AnimationAdapter
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.AnimationAdapter
+  nameWithType.vb: AnimationAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_Session
+  name: Session
+  nameWithType: AnimationAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<AnimationCanceledEventArgs>
+  nameWithType: EventHandler<AnimationCanceledEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs>
+  nameWithType.vb: EventHandler(Of AnimationCanceledEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs)
+  name.vb: EventHandler(Of AnimationCanceledEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs
+    name: AnimationCanceledEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs
+    name: AnimationCanceledEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationCanceledEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<AnimationCreatedEventArgs>
+  nameWithType: EventHandler<AnimationCreatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs>
+  nameWithType.vb: EventHandler(Of AnimationCreatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs)
+  name.vb: EventHandler(Of AnimationCreatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs
+    name: AnimationCreatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs
+    name: AnimationCreatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationCreatedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<AnimationStartedEventArgs>
+  nameWithType: EventHandler<AnimationStartedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs>
+  nameWithType.vb: EventHandler(Of AnimationStartedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs)
+  name.vb: EventHandler(Of AnimationStartedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs
+    name: AnimationStartedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs
+    name: AnimationStartedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationStartedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<AnimationUpdatedEventArgs>
+  nameWithType: EventHandler<AnimationUpdatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs>
+  nameWithType.vb: EventHandler(Of AnimationUpdatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs)
+  name.vb: EventHandler(Of AnimationUpdatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs
+    name: AnimationUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs
+    name: AnimationUpdatedEventArgs
+    href: OpenQA.Selenium.DevTools.V126.Animation.AnimationUpdatedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_Disable_OpenQA_Selenium_DevTools_V126_Animation_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: AnimationAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.DisableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_Enable_OpenQA_Selenium_DevTools_V126_Animation_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: AnimationAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_GetCurrentTime_OpenQA_Selenium_DevTools_V126_Animation_GetCurrentTimeCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetCurrentTime
+  nameWithType: AnimationAdapter.GetCurrentTime
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetCurrentTime
+- uid: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings.html
+  name: GetCurrentTimeCommandSettings
+  nameWithType: GetCurrentTimeCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetCurrentTimeCommandResponse>
+  nameWithType: Task<GetCurrentTimeCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse>
+  nameWithType.vb: Task(Of GetCurrentTimeCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse)
+  name.vb: Task(Of GetCurrentTimeCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse
+    name: GetCurrentTimeCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse
+    name: GetCurrentTimeCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.GetCurrentTimeCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_GetPlaybackRate_OpenQA_Selenium_DevTools_V126_Animation_GetPlaybackRateCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetPlaybackRate
+  nameWithType: AnimationAdapter.GetPlaybackRate
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.GetPlaybackRate
+- uid: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings.html
+  name: GetPlaybackRateCommandSettings
+  nameWithType: GetPlaybackRateCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetPlaybackRateCommandResponse>
+  nameWithType: Task<GetPlaybackRateCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse>
+  nameWithType.vb: Task(Of GetPlaybackRateCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse)
+  name.vb: Task(Of GetPlaybackRateCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse
+    name: GetPlaybackRateCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse
+    name: GetPlaybackRateCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.GetPlaybackRateCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_ReleaseAnimations_OpenQA_Selenium_DevTools_V126_Animation_ReleaseAnimationsCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ReleaseAnimations
+  nameWithType: AnimationAdapter.ReleaseAnimations
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ReleaseAnimations
+- uid: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings.html
+  name: ReleaseAnimationsCommandSettings
+  nameWithType: ReleaseAnimationsCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ReleaseAnimationsCommandResponse>
+  nameWithType: Task<ReleaseAnimationsCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse>
+  nameWithType.vb: Task(Of ReleaseAnimationsCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse)
+  name.vb: Task(Of ReleaseAnimationsCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse
+    name: ReleaseAnimationsCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse
+    name: ReleaseAnimationsCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.ReleaseAnimationsCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_ResolveAnimation_OpenQA_Selenium_DevTools_V126_Animation_ResolveAnimationCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ResolveAnimation
+  nameWithType: AnimationAdapter.ResolveAnimation
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.ResolveAnimation
+- uid: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings.html
+  name: ResolveAnimationCommandSettings
+  nameWithType: ResolveAnimationCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ResolveAnimationCommandResponse>
+  nameWithType: Task<ResolveAnimationCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse>
+  nameWithType.vb: Task(Of ResolveAnimationCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse)
+  name.vb: Task(Of ResolveAnimationCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse
+    name: ResolveAnimationCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse
+    name: ResolveAnimationCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.ResolveAnimationCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_SeekAnimations_OpenQA_Selenium_DevTools_V126_Animation_SeekAnimationsCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SeekAnimations
+  nameWithType: AnimationAdapter.SeekAnimations
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SeekAnimations
+- uid: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings.html
+  name: SeekAnimationsCommandSettings
+  nameWithType: SeekAnimationsCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SeekAnimationsCommandResponse>
+  nameWithType: Task<SeekAnimationsCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse>
+  nameWithType.vb: Task(Of SeekAnimationsCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse)
+  name.vb: Task(Of SeekAnimationsCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse
+    name: SeekAnimationsCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse
+    name: SeekAnimationsCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SeekAnimationsCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_SetPaused_OpenQA_Selenium_DevTools_V126_Animation_SetPausedCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetPaused
+  nameWithType: AnimationAdapter.SetPaused
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPaused
+- uid: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings.html
+  name: SetPausedCommandSettings
+  nameWithType: SetPausedCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetPausedCommandResponse>
+  nameWithType: Task<SetPausedCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse>
+  nameWithType.vb: Task(Of SetPausedCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse)
+  name.vb: Task(Of SetPausedCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse
+    name: SetPausedCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse
+    name: SetPausedCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SetPausedCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_SetPlaybackRate_OpenQA_Selenium_DevTools_V126_Animation_SetPlaybackRateCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetPlaybackRate
+  nameWithType: AnimationAdapter.SetPlaybackRate
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetPlaybackRate
+- uid: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings.html
+  name: SetPlaybackRateCommandSettings
+  nameWithType: SetPlaybackRateCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetPlaybackRateCommandResponse>
+  nameWithType: Task<SetPlaybackRateCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse>
+  nameWithType.vb: Task(Of SetPlaybackRateCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse)
+  name.vb: Task(Of SetPlaybackRateCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse
+    name: SetPlaybackRateCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse
+    name: SetPlaybackRateCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SetPlaybackRateCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming
+  href: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.html#OpenQA_Selenium_DevTools_V126_Animation_AnimationAdapter_SetTiming_OpenQA_Selenium_DevTools_V126_Animation_SetTimingCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetTiming
+  nameWithType: AnimationAdapter.SetTiming
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.AnimationAdapter.SetTiming
+- uid: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Animation
+  href: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings.html
+  name: SetTimingCommandSettings
+  nameWithType: SetTimingCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetTimingCommandResponse>
+  nameWithType: Task<SetTimingCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse>
+  nameWithType.vb: Task(Of SetTimingCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse)
+  name.vb: Task(Of SetTimingCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse
+    name: SetTimingCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse
+    name: SetTimingCommandResponse
+    href: OpenQA.Selenium.DevTools.V126.Animation.SetTimingCommandResponse.html
+  - name: )

@@ -1,0 +1,2194 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node
+  commentId: T:OpenQA.Selenium.DevTools.V125.DOM.Node
+  id: Node
+  parent: OpenQA.Selenium.DevTools.V125.DOM
+  children:
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.Children
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.Name
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.Value
+  - OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion
+  langs:
+  - csharp
+  - vb
+  name: Node
+  nameWithType: Node
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Node
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: >-
+    DOM interaction is implemented in terms of mirror objects that represent the actual DOM nodes.
+
+    DOMNode is a base node mirror type.
+  example: []
+  syntax:
+    content: public sealed class Node
+    content.vb: Public NotInheritable Class Node
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId
+  id: NodeId
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: NodeId
+  nameWithType: Node.NodeId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NodeId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: >-
+    Node identifier that is passed into the rest of the DOM messages as the `nodeId`. Backend
+
+    will only push node with given `id` once. It is aware of all requested nodes and will only
+
+    fire DOM events for nodes known to the client.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nodeId")]
+
+      public long NodeId { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("nodeId")>
+
+      Public Property NodeId As Long
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nodeId
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId
+  id: ParentId
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: ParentId
+  nameWithType: Node.ParentId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ParentId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: The id of the parent node if any.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("parentId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ParentId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("parentId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ParentId As Long?
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: parentId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId
+  id: BackendNodeId
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: BackendNodeId
+  nameWithType: Node.BackendNodeId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BackendNodeId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: The BackendNodeId for this node.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("backendNodeId")]
+
+      public long BackendNodeId { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("backendNodeId")>
+
+      Public Property BackendNodeId As Long
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: backendNodeId
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType
+  id: NodeType
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: NodeType
+  nameWithType: Node.NodeType
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NodeType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Node`'s nodeType."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nodeType")]
+
+      public long NodeType { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("nodeType")>
+
+      Public Property NodeType As Long
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nodeType
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName
+  id: NodeName
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: NodeName
+  nameWithType: Node.NodeName
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NodeName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Node`'s nodeName."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nodeName")]
+
+      public string NodeName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("nodeName")>
+
+      Public Property NodeName As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nodeName
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName
+  id: LocalName
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: LocalName
+  nameWithType: Node.LocalName
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LocalName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Node`'s localName."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("localName")]
+
+      public string LocalName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("localName")>
+
+      Public Property LocalName As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: localName
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue
+  id: NodeValue
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: NodeValue
+  nameWithType: Node.NodeValue
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NodeValue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 70
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Node`'s nodeValue."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nodeValue")]
+
+      public string NodeValue { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("nodeValue")>
+
+      Public Property NodeValue As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nodeValue
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount
+  id: ChildNodeCount
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: ChildNodeCount
+  nameWithType: Node.ChildNodeCount
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ChildNodeCount
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 79
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Child count for `Container` nodes.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("childNodeCount", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ChildNodeCount { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("childNodeCount", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ChildNodeCount As Long?
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: childNodeCount
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Children
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.Children
+  id: Children
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: Node.Children
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Children
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Children
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 88
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Child nodes of this node when requested with children.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("children", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Node[] Children { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Node[]
+    content.vb: >-
+      <JsonProperty("children", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Children As Node()
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.Children*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: children
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes
+  id: Attributes
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: Attributes
+  nameWithType: Node.Attributes
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Attributes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 97
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Attributes of the `Element` node in the form of flat array `[name1, value1, name2, value2]`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("attributes", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] Attributes { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("attributes", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Attributes As String()
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: attributes
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL
+  id: DocumentURL
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: DocumentURL
+  nameWithType: Node.DocumentURL
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DocumentURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 106
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Document URL that `Document` or `FrameOwner` node points to.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("documentURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string DocumentURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("documentURL", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property DocumentURL As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: documentURL
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL
+  id: BaseURL
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: BaseURL
+  nameWithType: Node.BaseURL
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BaseURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 115
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Base URL that `Document` or `FrameOwner` node uses for URL completion.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("baseURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string BaseURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("baseURL", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property BaseURL As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: baseURL
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId
+  id: PublicId
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: PublicId
+  nameWithType: Node.PublicId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PublicId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 124
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`DocumentType`'s publicId."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("publicId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string PublicId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("publicId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PublicId As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: publicId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId
+  id: SystemId
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: SystemId
+  nameWithType: Node.SystemId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SystemId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 133
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`DocumentType`'s systemId."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("systemId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string SystemId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("systemId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SystemId As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: systemId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset
+  id: InternalSubset
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: InternalSubset
+  nameWithType: Node.InternalSubset
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InternalSubset
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 142
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`DocumentType`'s internalSubset."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("internalSubset", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string InternalSubset { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("internalSubset", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property InternalSubset As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: internalSubset
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion
+  id: XmlVersion
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: XmlVersion
+  nameWithType: Node.XmlVersion
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: XmlVersion
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 151
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Document`'s XML version in case of XML documents."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("xmlVersion", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string XmlVersion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("xmlVersion", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property XmlVersion As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: xmlVersion
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Name
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.Name
+  id: Name
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Node.Name
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Name
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 160
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Attr`'s name."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Name As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Value
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.Value
+  id: Value
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: Node.Value
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Value
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Value
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 169
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: "`Attr`'s value."
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string Value { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("value", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Value As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.Value*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: value
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType
+  id: PseudoType
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: PseudoType
+  nameWithType: Node.PseudoType
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PseudoType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 178
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Pseudo element type for this node.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("pseudoType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public PseudoType? PseudoType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.PseudoType}
+    content.vb: >-
+      <JsonProperty("pseudoType", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PseudoType As PseudoType?
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pseudoType
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier
+  id: PseudoIdentifier
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: PseudoIdentifier
+  nameWithType: Node.PseudoIdentifier
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PseudoIdentifier
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 188
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: >-
+    Pseudo element identifier for this node. Only present if there is a
+
+    valid pseudoType.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("pseudoIdentifier", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string PseudoIdentifier { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("pseudoIdentifier", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PseudoIdentifier As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pseudoIdentifier
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType
+  id: ShadowRootType
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: ShadowRootType
+  nameWithType: Node.ShadowRootType
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShadowRootType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 197
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Shadow root type.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("shadowRootType", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public ShadowRootType? ShadowRootType { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType}
+    content.vb: >-
+      <JsonProperty("shadowRootType", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShadowRootType As ShadowRootType?
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shadowRootType
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId
+  id: FrameId
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: FrameId
+  nameWithType: Node.FrameId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FrameId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 206
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Frame ID for frame owner elements.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("frameId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string FrameId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("frameId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FrameId As String
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: frameId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument
+  id: ContentDocument
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: ContentDocument
+  nameWithType: Node.ContentDocument
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentDocument
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 215
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Content document for frame owner elements.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contentDocument", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Node ContentDocument { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Node
+    content.vb: >-
+      <JsonProperty("contentDocument", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ContentDocument As Node
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contentDocument
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots
+  id: ShadowRoots
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: ShadowRoots
+  nameWithType: Node.ShadowRoots
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShadowRoots
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 224
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Shadow root list for given element host.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("shadowRoots", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Node[] ShadowRoots { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Node[]
+    content.vb: >-
+      <JsonProperty("shadowRoots", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ShadowRoots As Node()
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shadowRoots
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent
+  id: TemplateContent
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: TemplateContent
+  nameWithType: Node.TemplateContent
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TemplateContent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 233
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Content document fragment for template elements.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("templateContent", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Node TemplateContent { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Node
+    content.vb: >-
+      <JsonProperty("templateContent", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property TemplateContent As Node
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: templateContent
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements
+  id: PseudoElements
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: PseudoElements
+  nameWithType: Node.PseudoElements
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PseudoElements
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 242
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Pseudo elements associated with this node.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("pseudoElements", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Node[] PseudoElements { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Node[]
+    content.vb: >-
+      <JsonProperty("pseudoElements", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property PseudoElements As Node()
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: pseudoElements
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument
+  id: ImportedDocument
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: ImportedDocument
+  nameWithType: Node.ImportedDocument
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ImportedDocument
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 253
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: >-
+    Deprecated, as the HTML Imports API has been removed (crbug.com/937746).
+
+    This property used to return the imported document for the HTMLImport links.
+
+    The property is always undefined now.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("importedDocument", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public Node ImportedDocument { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Node
+    content.vb: >-
+      <JsonProperty("importedDocument", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ImportedDocument As Node
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: importedDocument
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes
+  id: DistributedNodes
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: DistributedNodes
+  nameWithType: Node.DistributedNodes
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DistributedNodes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 262
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Distributed nodes for given insertion point.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("distributedNodes", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public BackendNode[] DistributedNodes { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.BackendNode[]
+    content.vb: >-
+      <JsonProperty("distributedNodes", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property DistributedNodes As BackendNode()
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: distributedNodes
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG
+  id: IsSVG
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: IsSVG
+  nameWithType: Node.IsSVG
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsSVG
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 271
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: Whether the node is SVG.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isSVG", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IsSVG { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("isSVG", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IsSVG As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isSVG
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode
+  id: CompatibilityMode
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: CompatibilityMode
+  nameWithType: Node.CompatibilityMode
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CompatibilityMode
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 280
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: compatibilityMode
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("compatibilityMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public CompatibilityMode? CompatibilityMode { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode}
+    content.vb: >-
+      <JsonProperty("compatibilityMode", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CompatibilityMode As CompatibilityMode?
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: compatibilityMode
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot
+  commentId: P:OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot
+  id: AssignedSlot
+  parent: OpenQA.Selenium.DevTools.V125.DOM.Node
+  langs:
+  - csharp
+  - vb
+  name: AssignedSlot
+  nameWithType: Node.AssignedSlot
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AssignedSlot
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/DOM/Node.cs
+    startLine: 289
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.DOM
+  summary: assignedSlot
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("assignedSlot", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public BackendNode AssignedSlot { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.BackendNode
+    content.vb: >-
+      <JsonProperty("assignedSlot", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AssignedSlot As BackendNode
+  overload: OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: assignedSlot
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.DOM
+  commentId: N:OpenQA.Selenium.DevTools.V125.DOM
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.DOM
+  nameWithType: OpenQA.Selenium.DevTools.V125.DOM
+  fullName: OpenQA.Selenium.DevTools.V125.DOM
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V125.DOM.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V125.DOM.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_NodeId
+  name: NodeId
+  nameWithType: Node.NodeId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_ParentId
+  name: ParentId
+  nameWithType: Node.ParentId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ParentId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_BackendNodeId
+  name: BackendNodeId
+  nameWithType: Node.BackendNodeId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.BackendNodeId
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_NodeType
+  name: NodeType
+  nameWithType: Node.NodeType
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeType
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_NodeName
+  name: NodeName
+  nameWithType: Node.NodeName
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_LocalName
+  name: LocalName
+  nameWithType: Node.LocalName
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.LocalName
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_NodeValue
+  name: NodeValue
+  nameWithType: Node.NodeValue
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.NodeValue
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_ChildNodeCount
+  name: ChildNodeCount
+  nameWithType: Node.ChildNodeCount
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ChildNodeCount
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Children*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.Children
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_Children
+  name: Children
+  nameWithType: Node.Children
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Children
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html
+  name: Node[]
+  nameWithType: Node[]
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node[]
+  nameWithType.vb: Node()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.DOM.Node()
+  name.vb: Node()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.Node
+    name: Node
+    href: OpenQA.Selenium.DevTools.V125.DOM.Node.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.Node
+    name: Node
+    href: OpenQA.Selenium.DevTools.V125.DOM.Node.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_Attributes
+  name: Attributes
+  nameWithType: Node.Attributes
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Attributes
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_DocumentURL
+  name: DocumentURL
+  nameWithType: Node.DocumentURL
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.DocumentURL
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_BaseURL
+  name: BaseURL
+  nameWithType: Node.BaseURL
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.BaseURL
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_PublicId
+  name: PublicId
+  nameWithType: Node.PublicId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PublicId
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_SystemId
+  name: SystemId
+  nameWithType: Node.SystemId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.SystemId
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_InternalSubset
+  name: InternalSubset
+  nameWithType: Node.InternalSubset
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.InternalSubset
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_XmlVersion
+  name: XmlVersion
+  nameWithType: Node.XmlVersion
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.XmlVersion
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Name*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.Name
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_Name
+  name: Name
+  nameWithType: Node.Name
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Name
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.Value*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.Value
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_Value
+  name: Value
+  nameWithType: Node.Value
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.Value
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_PseudoType
+  name: PseudoType
+  nameWithType: Node.PseudoType
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoType
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.PseudoType}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.PseudoType}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.DOM.PseudoType.html
+  name: PseudoType?
+  nameWithType: PseudoType?
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.PseudoType?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.PseudoType
+    name: PseudoType
+    href: OpenQA.Selenium.DevTools.V125.DOM.PseudoType.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.PseudoType
+    name: PseudoType
+    href: OpenQA.Selenium.DevTools.V125.DOM.PseudoType.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_PseudoIdentifier
+  name: PseudoIdentifier
+  nameWithType: Node.PseudoIdentifier
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoIdentifier
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_ShadowRootType
+  name: ShadowRootType
+  nameWithType: Node.ShadowRootType
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRootType
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType.html
+  name: ShadowRootType?
+  nameWithType: ShadowRootType?
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType
+    name: ShadowRootType
+    href: OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType
+    name: ShadowRootType
+    href: OpenQA.Selenium.DevTools.V125.DOM.ShadowRootType.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_FrameId
+  name: FrameId
+  nameWithType: Node.FrameId
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.FrameId
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_ContentDocument
+  name: ContentDocument
+  nameWithType: Node.ContentDocument
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ContentDocument
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node
+  commentId: T:OpenQA.Selenium.DevTools.V125.DOM.Node
+  parent: OpenQA.Selenium.DevTools.V125.DOM
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html
+  name: Node
+  nameWithType: Node
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_ShadowRoots
+  name: ShadowRoots
+  nameWithType: Node.ShadowRoots
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ShadowRoots
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_TemplateContent
+  name: TemplateContent
+  nameWithType: Node.TemplateContent
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.TemplateContent
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_PseudoElements
+  name: PseudoElements
+  nameWithType: Node.PseudoElements
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.PseudoElements
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_ImportedDocument
+  name: ImportedDocument
+  nameWithType: Node.ImportedDocument
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.ImportedDocument
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_DistributedNodes
+  name: DistributedNodes
+  nameWithType: Node.DistributedNodes
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.DistributedNodes
+- uid: OpenQA.Selenium.DevTools.V125.DOM.BackendNode[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.DOM.BackendNode.html
+  name: BackendNode[]
+  nameWithType: BackendNode[]
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.BackendNode[]
+  nameWithType.vb: BackendNode()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.DOM.BackendNode()
+  name.vb: BackendNode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.BackendNode
+    name: BackendNode
+    href: OpenQA.Selenium.DevTools.V125.DOM.BackendNode.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.BackendNode
+    name: BackendNode
+    href: OpenQA.Selenium.DevTools.V125.DOM.BackendNode.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_IsSVG
+  name: IsSVG
+  nameWithType: Node.IsSVG
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.IsSVG
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_CompatibilityMode
+  name: CompatibilityMode
+  nameWithType: Node.CompatibilityMode
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.CompatibilityMode
+- uid: System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode}
+  commentId: T:System.Nullable{OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode}
+  parent: System
+  definition: System.Nullable`1
+  href: OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode.html
+  name: CompatibilityMode?
+  nameWithType: CompatibilityMode?
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode?
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode
+    name: CompatibilityMode
+    href: OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode.html
+  - name: '?'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode
+    name: CompatibilityMode
+    href: OpenQA.Selenium.DevTools.V125.DOM.CompatibilityMode.html
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot
+  href: OpenQA.Selenium.DevTools.V125.DOM.Node.html#OpenQA_Selenium_DevTools_V125_DOM_Node_AssignedSlot
+  name: AssignedSlot
+  nameWithType: Node.AssignedSlot
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Node.AssignedSlot
+- uid: OpenQA.Selenium.DevTools.V125.DOM.BackendNode
+  commentId: T:OpenQA.Selenium.DevTools.V125.DOM.BackendNode
+  parent: OpenQA.Selenium.DevTools.V125.DOM
+  href: OpenQA.Selenium.DevTools.V125.DOM.BackendNode.html
+  name: BackendNode
+  nameWithType: BackendNode
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.BackendNode

@@ -1,0 +1,1278 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  id: SecurityAdapter
+  parent: OpenQA.Selenium.DevTools.V124.Security
+  children:
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.CertificateError
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable(OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable(OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError(OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SecurityStateChanged
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.VisibleSecurityStateChanged
+  langs:
+  - csharp
+  - vb
+  name: SecurityAdapter
+  nameWithType: SecurityAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Represents an adapter for the Security domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class SecurityAdapter
+    content.vb: Public Class SecurityAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: SecurityAdapter(IDevToolsSession)
+  nameWithType: SecurityAdapter.SecurityAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SecurityAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Initializes a new instance of the SecurityAdapter class.
+  example: []
+  syntax:
+    content: public SecurityAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.#ctor*
+  nameWithType.vb: SecurityAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: SecurityAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.CertificateError
+  commentId: E:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.CertificateError
+  id: CertificateError
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: CertificateError
+  nameWithType: SecurityAdapter.CertificateError
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.CertificateError
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CertificateError
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: >-
+    There is a certificate error. If overriding certificate errors is enabled, then it should be
+
+    handled with the `handleCertificateError` command. Note: this event does not fire if the
+
+    certificate error has been allowed internally. Only one client per target should override
+
+    certificate errors at the same time.
+  example: []
+  syntax:
+    content: public event EventHandler<CertificateErrorEventArgs> CertificateError
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs}
+    content.vb: Public Event CertificateError As EventHandler(Of CertificateErrorEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.VisibleSecurityStateChanged
+  commentId: E:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.VisibleSecurityStateChanged
+  id: VisibleSecurityStateChanged
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: VisibleSecurityStateChanged
+  nameWithType: SecurityAdapter.VisibleSecurityStateChanged
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.VisibleSecurityStateChanged
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VisibleSecurityStateChanged
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 48
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: The security state of the page changed.
+  example: []
+  syntax:
+    content: public event EventHandler<VisibleSecurityStateChangedEventArgs> VisibleSecurityStateChanged
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs}
+    content.vb: Public Event VisibleSecurityStateChanged As EventHandler(Of VisibleSecurityStateChangedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SecurityStateChanged
+  commentId: E:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SecurityStateChanged
+  id: SecurityStateChanged
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: SecurityStateChanged
+  nameWithType: SecurityAdapter.SecurityStateChanged
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SecurityStateChanged
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityStateChanged
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: The security state of the page changed. No longer being sent.
+  example: []
+  syntax:
+    content: public event EventHandler<SecurityStateChangedEventArgs> SecurityStateChanged
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs}
+    content.vb: Public Event SecurityStateChanged As EventHandler(Of SecurityStateChangedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable(OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable(OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: SecurityAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable(OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Disables tracking security state changes.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable*
+  nameWithType.vb: SecurityAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable(OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable(OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable(OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: SecurityAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable(OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 64
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Enables tracking security state changes.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable*
+  nameWithType.vb: SecurityAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable(OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetIgnoreCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetIgnoreCertificateErrors(SetIgnoreCertificateErrorsCommandSettings, CancellationToken, int?, bool)
+  nameWithType: SecurityAdapter.SetIgnoreCertificateErrors(SetIgnoreCertificateErrorsCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetIgnoreCertificateErrors
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Enable/disable whether all certificate errors should be ignored.
+  example: []
+  syntax:
+    content: public Task<SetIgnoreCertificateErrorsCommandResponse> SetIgnoreCertificateErrors(SetIgnoreCertificateErrorsCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse}
+    content.vb: Public Function SetIgnoreCertificateErrors(command As SetIgnoreCertificateErrorsCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetIgnoreCertificateErrorsCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors*
+  nameWithType.vb: SecurityAdapter.SetIgnoreCertificateErrors(SetIgnoreCertificateErrorsCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetIgnoreCertificateErrors(SetIgnoreCertificateErrorsCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError(OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError(OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: HandleCertificateError(OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: HandleCertificateError(HandleCertificateErrorCommandSettings, CancellationToken, int?, bool)
+  nameWithType: SecurityAdapter.HandleCertificateError(HandleCertificateErrorCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError(OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HandleCertificateError
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 78
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: Handles a certificate error that fired a certificateError event.
+  example: []
+  syntax:
+    content: public Task<HandleCertificateErrorCommandResponse> HandleCertificateError(HandleCertificateErrorCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse}
+    content.vb: Public Function HandleCertificateError(command As HandleCertificateErrorCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of HandleCertificateErrorCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError*
+  nameWithType.vb: SecurityAdapter.HandleCertificateError(HandleCertificateErrorCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError(OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: HandleCertificateError(HandleCertificateErrorCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetOverrideCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetOverrideCertificateErrors(SetOverrideCertificateErrorsCommandSettings, CancellationToken, int?, bool)
+  nameWithType: SecurityAdapter.SetOverrideCertificateErrors(SetOverrideCertificateErrorsCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetOverrideCertificateErrors
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Security/SecurityAdapter.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Security
+  summary: >-
+    Enable/disable overriding certificate errors. If enabled, all certificate error events need to
+
+    be handled by the DevTools client and should be answered with `handleCertificateError` commands.
+  example: []
+  syntax:
+    content: public Task<SetOverrideCertificateErrorsCommandResponse> SetOverrideCertificateErrors(SetOverrideCertificateErrorsCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse}
+    content.vb: Public Function SetOverrideCertificateErrors(command As SetOverrideCertificateErrorsCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetOverrideCertificateErrorsCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors*
+  nameWithType.vb: SecurityAdapter.SetOverrideCertificateErrors(SetOverrideCertificateErrorsCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors(OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetOverrideCertificateErrors(SetOverrideCertificateErrorsCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Security
+  commentId: N:OpenQA.Selenium.DevTools.V124.Security
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Security
+  nameWithType: OpenQA.Selenium.DevTools.V124.Security
+  fullName: OpenQA.Selenium.DevTools.V124.Security
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V124.Security.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V124.Security.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: SecurityAdapter
+  nameWithType: SecurityAdapter.SecurityAdapter
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SecurityAdapter
+  nameWithType.vb: SecurityAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter_Session
+  name: Session
+  nameWithType: SecurityAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<CertificateErrorEventArgs>
+  nameWithType: EventHandler<CertificateErrorEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs>
+  nameWithType.vb: EventHandler(Of CertificateErrorEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs)
+  name.vb: EventHandler(Of CertificateErrorEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs
+    name: CertificateErrorEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs
+    name: CertificateErrorEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Security.CertificateErrorEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<VisibleSecurityStateChangedEventArgs>
+  nameWithType: EventHandler<VisibleSecurityStateChangedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs>
+  nameWithType.vb: EventHandler(Of VisibleSecurityStateChangedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs)
+  name.vb: EventHandler(Of VisibleSecurityStateChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs
+    name: VisibleSecurityStateChangedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs
+    name: VisibleSecurityStateChangedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Security.VisibleSecurityStateChangedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<SecurityStateChangedEventArgs>
+  nameWithType: EventHandler<SecurityStateChangedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs>
+  nameWithType.vb: EventHandler(Of SecurityStateChangedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs)
+  name.vb: EventHandler(Of SecurityStateChangedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs
+    name: SecurityStateChangedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs
+    name: SecurityStateChangedEventArgs
+    href: OpenQA.Selenium.DevTools.V124.Security.SecurityStateChangedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter_Disable_OpenQA_Selenium_DevTools_V124_Security_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: SecurityAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Security
+  href: OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Security.DisableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.DisableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter_Enable_OpenQA_Selenium_DevTools_V124_Security_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: SecurityAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Security
+  href: OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Security.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter_SetIgnoreCertificateErrors_OpenQA_Selenium_DevTools_V124_Security_SetIgnoreCertificateErrorsCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetIgnoreCertificateErrors
+  nameWithType: SecurityAdapter.SetIgnoreCertificateErrors
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetIgnoreCertificateErrors
+- uid: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Security
+  href: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings.html
+  name: SetIgnoreCertificateErrorsCommandSettings
+  nameWithType: SetIgnoreCertificateErrorsCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetIgnoreCertificateErrorsCommandResponse>
+  nameWithType: Task<SetIgnoreCertificateErrorsCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse>
+  nameWithType.vb: Task(Of SetIgnoreCertificateErrorsCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse)
+  name.vb: Task(Of SetIgnoreCertificateErrorsCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse
+    name: SetIgnoreCertificateErrorsCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse
+    name: SetIgnoreCertificateErrorsCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.SetIgnoreCertificateErrorsCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter_HandleCertificateError_OpenQA_Selenium_DevTools_V124_Security_HandleCertificateErrorCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: HandleCertificateError
+  nameWithType: SecurityAdapter.HandleCertificateError
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.HandleCertificateError
+- uid: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Security
+  href: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings.html
+  name: HandleCertificateErrorCommandSettings
+  nameWithType: HandleCertificateErrorCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<HandleCertificateErrorCommandResponse>
+  nameWithType: Task<HandleCertificateErrorCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse>
+  nameWithType.vb: Task(Of HandleCertificateErrorCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse)
+  name.vb: Task(Of HandleCertificateErrorCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse
+    name: HandleCertificateErrorCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse
+    name: HandleCertificateErrorCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.HandleCertificateErrorCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors
+  href: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.html#OpenQA_Selenium_DevTools_V124_Security_SecurityAdapter_SetOverrideCertificateErrors_OpenQA_Selenium_DevTools_V124_Security_SetOverrideCertificateErrorsCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetOverrideCertificateErrors
+  nameWithType: SecurityAdapter.SetOverrideCertificateErrors
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SecurityAdapter.SetOverrideCertificateErrors
+- uid: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings
+  parent: OpenQA.Selenium.DevTools.V124.Security
+  href: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings.html
+  name: SetOverrideCertificateErrorsCommandSettings
+  nameWithType: SetOverrideCertificateErrorsCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetOverrideCertificateErrorsCommandResponse>
+  nameWithType: Task<SetOverrideCertificateErrorsCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse>
+  nameWithType.vb: Task(Of SetOverrideCertificateErrorsCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse)
+  name.vb: Task(Of SetOverrideCertificateErrorsCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse
+    name: SetOverrideCertificateErrorsCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse
+    name: SetOverrideCertificateErrorsCommandResponse
+    href: OpenQA.Selenium.DevTools.V124.Security.SetOverrideCertificateErrorsCommandResponse.html
+  - name: )

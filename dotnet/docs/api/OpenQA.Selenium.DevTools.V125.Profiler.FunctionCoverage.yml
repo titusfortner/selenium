@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage
+  commentId: T:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage
+  id: FunctionCoverage
+  parent: OpenQA.Selenium.DevTools.V125.Profiler
+  children:
+  - OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName
+  - OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage
+  - OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges
+  langs:
+  - csharp
+  - vb
+  name: FunctionCoverage
+  nameWithType: FunctionCoverage
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FunctionCoverage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Profiler
+  summary: Coverage data for a JavaScript function.
+  example: []
+  syntax:
+    content: public sealed class FunctionCoverage
+    content.vb: Public NotInheritable Class FunctionCoverage
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName
+  commentId: P:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName
+  id: FunctionName
+  parent: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage
+  langs:
+  - csharp
+  - vb
+  name: FunctionName
+  nameWithType: FunctionCoverage.FunctionName
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FunctionName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Profiler
+  summary: JavaScript function name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("functionName")]
+
+      public string FunctionName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("functionName")>
+
+      Public Property FunctionName As String
+  overload: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: functionName
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges
+  commentId: P:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges
+  id: Ranges
+  parent: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage
+  langs:
+  - csharp
+  - vb
+  name: Ranges
+  nameWithType: FunctionCoverage.Ranges
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Ranges
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Profiler
+  summary: Source ranges inside the function with coverage data.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("ranges")]
+
+      public CoverageRange[] Ranges { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange[]
+    content.vb: >-
+      <JsonProperty("ranges")>
+
+      Public Property Ranges As CoverageRange()
+  overload: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ranges
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage
+  commentId: P:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage
+  id: IsBlockCoverage
+  parent: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage
+  langs:
+  - csharp
+  - vb
+  name: IsBlockCoverage
+  nameWithType: FunctionCoverage.IsBlockCoverage
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsBlockCoverage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Profiler/FunctionCoverage.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Profiler
+  summary: Whether coverage data for this function has block granularity.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isBlockCoverage")]
+
+      public bool IsBlockCoverage { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("isBlockCoverage")>
+
+      Public Property IsBlockCoverage As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isBlockCoverage
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Profiler
+  commentId: N:OpenQA.Selenium.DevTools.V125.Profiler
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Profiler
+  nameWithType: OpenQA.Selenium.DevTools.V125.Profiler
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Profiler
+    name: Profiler
+    href: OpenQA.Selenium.DevTools.V125.Profiler.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Profiler
+    name: Profiler
+    href: OpenQA.Selenium.DevTools.V125.Profiler.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName
+  href: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.html#OpenQA_Selenium_DevTools_V125_Profiler_FunctionCoverage_FunctionName
+  name: FunctionName
+  nameWithType: FunctionCoverage.FunctionName
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.FunctionName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges
+  href: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.html#OpenQA_Selenium_DevTools_V125_Profiler_FunctionCoverage_Ranges
+  name: Ranges
+  nameWithType: FunctionCoverage.Ranges
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.Ranges
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange.html
+  name: CoverageRange[]
+  nameWithType: CoverageRange[]
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange[]
+  nameWithType.vb: CoverageRange()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange()
+  name.vb: CoverageRange()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange
+    name: CoverageRange
+    href: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange
+    name: CoverageRange
+    href: OpenQA.Selenium.DevTools.V125.Profiler.CoverageRange.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage
+  href: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.html#OpenQA_Selenium_DevTools_V125_Profiler_FunctionCoverage_IsBlockCoverage
+  name: IsBlockCoverage
+  nameWithType: FunctionCoverage.IsBlockCoverage
+  fullName: OpenQA.Selenium.DevTools.V125.Profiler.FunctionCoverage.IsBlockCoverage
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

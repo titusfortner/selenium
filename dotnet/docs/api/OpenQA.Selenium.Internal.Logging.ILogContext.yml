@@ -1,0 +1,330 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext
+  commentId: T:OpenQA.Selenium.Internal.Logging.ILogContext
+  id: ILogContext
+  parent: OpenQA.Selenium.Internal.Logging
+  children:
+  - OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext
+  - OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  - OpenQA.Selenium.Internal.Logging.ILogContext.Handlers
+  - OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  - OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(System.Type,OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  langs:
+  - csharp
+  - vb
+  name: ILogContext
+  nameWithType: ILogContext
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/Logging/ILogContext.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ILogContext
+    path: ../src/webdriver/Internal/Logging/ILogContext.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal.Logging
+  summary: Represents a logging context that provides methods for creating sub-contexts, retrieving loggers, emitting log messages, and configuring minimum log levels.
+  example: []
+  syntax:
+    content: 'public interface ILogContext : IDisposable'
+    content.vb: Public Interface ILogContext Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext
+  commentId: M:OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext
+  id: CreateContext
+  parent: OpenQA.Selenium.Internal.Logging.ILogContext
+  langs:
+  - csharp
+  - vb
+  name: CreateContext()
+  nameWithType: ILogContext.CreateContext()
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/Logging/ILogContext.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateContext
+    path: ../src/webdriver/Internal/Logging/ILogContext.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal.Logging
+  summary: Creates a new logging context.
+  example: []
+  syntax:
+    content: ILogContext CreateContext()
+    return:
+      type: OpenQA.Selenium.Internal.Logging.ILogContext
+      description: A new instance of <xref href="OpenQA.Selenium.Internal.Logging.ILogContext" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function CreateContext() As ILogContext
+  overload: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext*
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  commentId: M:OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  id: CreateContext(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  parent: OpenQA.Selenium.Internal.Logging.ILogContext
+  langs:
+  - csharp
+  - vb
+  name: CreateContext(LogEventLevel)
+  nameWithType: ILogContext.CreateContext(LogEventLevel)
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/Logging/ILogContext.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateContext
+    path: ../src/webdriver/Internal/Logging/ILogContext.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal.Logging
+  summary: Creates a new logging context with the specified minimum log level.
+  example: []
+  syntax:
+    content: ILogContext CreateContext(LogEventLevel minimumLevel)
+    parameters:
+    - id: minimumLevel
+      type: OpenQA.Selenium.Internal.Logging.LogEventLevel
+      description: The minimum log level for the new context.
+    return:
+      type: OpenQA.Selenium.Internal.Logging.ILogContext
+      description: A new instance of <xref href="OpenQA.Selenium.Internal.Logging.ILogContext" data-throw-if-not-resolved="false"></xref> with the specified minimum log level.
+    content.vb: Function CreateContext(minimumLevel As LogEventLevel) As ILogContext
+  overload: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext*
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  commentId: M:OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  id: SetLevel(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  parent: OpenQA.Selenium.Internal.Logging.ILogContext
+  langs:
+  - csharp
+  - vb
+  name: SetLevel(LogEventLevel)
+  nameWithType: ILogContext.SetLevel(LogEventLevel)
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/Logging/ILogContext.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetLevel
+    path: ../src/webdriver/Internal/Logging/ILogContext.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal.Logging
+  summary: Sets the minimum log level for the current context.
+  example: []
+  syntax:
+    content: ILogContext SetLevel(LogEventLevel level)
+    parameters:
+    - id: level
+      type: OpenQA.Selenium.Internal.Logging.LogEventLevel
+      description: The minimum log level.
+    return:
+      type: OpenQA.Selenium.Internal.Logging.ILogContext
+      description: The current instance of <xref href="OpenQA.Selenium.Internal.Logging.ILogContext" data-throw-if-not-resolved="false"></xref> with the minimum log level set.
+    content.vb: Function SetLevel(level As LogEventLevel) As ILogContext
+  overload: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel*
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(System.Type,OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  commentId: M:OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(System.Type,OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  id: SetLevel(System.Type,OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  parent: OpenQA.Selenium.Internal.Logging.ILogContext
+  langs:
+  - csharp
+  - vb
+  name: SetLevel(Type, LogEventLevel)
+  nameWithType: ILogContext.SetLevel(Type, LogEventLevel)
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel(System.Type, OpenQA.Selenium.Internal.Logging.LogEventLevel)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/Logging/ILogContext.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetLevel
+    path: ../src/webdriver/Internal/Logging/ILogContext.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal.Logging
+  summary: Sets the minimum log level for the specified type in the current context.
+  example: []
+  syntax:
+    content: ILogContext SetLevel(Type issuer, LogEventLevel level)
+    parameters:
+    - id: issuer
+      type: System.Type
+      description: The type for which to set the minimum log level.
+    - id: level
+      type: OpenQA.Selenium.Internal.Logging.LogEventLevel
+      description: The minimum log level.
+    return:
+      type: OpenQA.Selenium.Internal.Logging.ILogContext
+      description: The current instance of <xref href="OpenQA.Selenium.Internal.Logging.ILogContext" data-throw-if-not-resolved="false"></xref> with the minimum log level set for the specified type.
+    content.vb: Function SetLevel(issuer As Type, level As LogEventLevel) As ILogContext
+  overload: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel*
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.Handlers
+  commentId: P:OpenQA.Selenium.Internal.Logging.ILogContext.Handlers
+  id: Handlers
+  parent: OpenQA.Selenium.Internal.Logging.ILogContext
+  langs:
+  - csharp
+  - vb
+  name: Handlers
+  nameWithType: ILogContext.Handlers
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.Handlers
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/Logging/ILogContext.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Handlers
+    path: ../src/webdriver/Internal/Logging/ILogContext.cs
+    startLine: 88
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal.Logging
+  summary: Gets a list of log handlers.
+  example: []
+  syntax:
+    content: ILogHandlerList Handlers { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Internal.Logging.ILogHandlerList
+    content.vb: ReadOnly Property Handlers As ILogHandlerList
+  overload: OpenQA.Selenium.Internal.Logging.ILogContext.Handlers*
+references:
+- uid: OpenQA.Selenium.Internal.Logging
+  commentId: N:OpenQA.Selenium.Internal.Logging
+  href: OpenQA.html
+  name: OpenQA.Selenium.Internal.Logging
+  nameWithType: OpenQA.Selenium.Internal.Logging
+  fullName: OpenQA.Selenium.Internal.Logging
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal
+    name: Internal
+    href: OpenQA.Selenium.Internal.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal.Logging
+    name: Logging
+    href: OpenQA.Selenium.Internal.Logging.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal
+    name: Internal
+    href: OpenQA.Selenium.Internal.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal.Logging
+    name: Logging
+    href: OpenQA.Selenium.Internal.Logging.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext
+  commentId: T:OpenQA.Selenium.Internal.Logging.ILogContext
+  parent: OpenQA.Selenium.Internal.Logging
+  href: OpenQA.Selenium.Internal.Logging.ILogContext.html
+  name: ILogContext
+  nameWithType: ILogContext
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext*
+  commentId: Overload:OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext
+  href: OpenQA.Selenium.Internal.Logging.ILogContext.html#OpenQA_Selenium_Internal_Logging_ILogContext_CreateContext
+  name: CreateContext
+  nameWithType: ILogContext.CreateContext
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.CreateContext
+- uid: OpenQA.Selenium.Internal.Logging.LogEventLevel
+  commentId: T:OpenQA.Selenium.Internal.Logging.LogEventLevel
+  parent: OpenQA.Selenium.Internal.Logging
+  href: OpenQA.Selenium.Internal.Logging.LogEventLevel.html
+  name: LogEventLevel
+  nameWithType: LogEventLevel
+  fullName: OpenQA.Selenium.Internal.Logging.LogEventLevel
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel*
+  commentId: Overload:OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel
+  href: OpenQA.Selenium.Internal.Logging.ILogContext.html#OpenQA_Selenium_Internal_Logging_ILogContext_SetLevel_OpenQA_Selenium_Internal_Logging_LogEventLevel_
+  name: SetLevel
+  nameWithType: ILogContext.SetLevel
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.SetLevel
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: OpenQA.Selenium.Internal.Logging.ILogContext.Handlers*
+  commentId: Overload:OpenQA.Selenium.Internal.Logging.ILogContext.Handlers
+  href: OpenQA.Selenium.Internal.Logging.ILogContext.html#OpenQA_Selenium_Internal_Logging_ILogContext_Handlers
+  name: Handlers
+  nameWithType: ILogContext.Handlers
+  fullName: OpenQA.Selenium.Internal.Logging.ILogContext.Handlers
+- uid: OpenQA.Selenium.Internal.Logging.ILogHandlerList
+  commentId: T:OpenQA.Selenium.Internal.Logging.ILogHandlerList
+  parent: OpenQA.Selenium.Internal.Logging
+  href: OpenQA.Selenium.Internal.Logging.ILogHandlerList.html
+  name: ILogHandlerList
+  nameWithType: ILogHandlerList
+  fullName: OpenQA.Selenium.Internal.Logging.ILogHandlerList

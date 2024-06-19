@@ -1,0 +1,656 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsDomains
+  id: DevToolsDomains
+  parent: OpenQA.Selenium.DevTools
+  children:
+  - OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession)
+  - OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession,System.Int32)
+  - OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript
+  - OpenQA.Selenium.DevTools.DevToolsDomains.Log
+  - OpenQA.Selenium.DevTools.DevToolsDomains.Network
+  - OpenQA.Selenium.DevTools.DevToolsDomains.Target
+  - OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains
+  langs:
+  - csharp
+  - vb
+  name: DevToolsDomains
+  nameWithType: DevToolsDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DevToolsDomains
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Interface providing version-independent implementations of operations available using the DevTools Protocol.
+  example: []
+  syntax:
+    content: public abstract class DevToolsDomains
+    content.vb: Public MustInherit Class DevToolsDomains
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.DevTools.V124.V124Domains
+  - OpenQA.Selenium.DevTools.V125.V125Domains
+  - OpenQA.Selenium.DevTools.V126.V126Domains
+  - OpenQA.Selenium.DevTools.V85.V85Domains
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains
+  id: VersionSpecificDomains
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: VersionSpecificDomains
+  nameWithType: DevToolsDomains.VersionSpecificDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VersionSpecificDomains
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the version-specific domains for the DevTools session. This value must be cast to a version specific type to be at all useful.
+  example: []
+  syntax:
+    content: public abstract DevToolsSessionDomains VersionSpecificDomains { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsSessionDomains
+    content.vb: Public MustOverride ReadOnly Property VersionSpecificDomains As DevToolsSessionDomains
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains*
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.Network
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsDomains.Network
+  id: Network
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: Network
+  nameWithType: DevToolsDomains.Network
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.Network
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Network
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the object used for manipulating network information in the browser.
+  example: []
+  syntax:
+    content: public abstract Network Network { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.Network
+    content.vb: Public MustOverride ReadOnly Property Network As Network
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.Network*
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript
+  id: JavaScript
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: JavaScript
+  nameWithType: DevToolsDomains.JavaScript
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: JavaScript
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the object used for manipulating the browser's JavaScript execution.
+  example: []
+  syntax:
+    content: public abstract JavaScript JavaScript { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.JavaScript
+    content.vb: Public MustOverride ReadOnly Property JavaScript As JavaScript
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript*
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.Target
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsDomains.Target
+  id: Target
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: Target
+  nameWithType: DevToolsDomains.Target
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.Target
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Target
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the object used for manipulating DevTools Protocol targets.
+  example: []
+  syntax:
+    content: public abstract Target Target { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.Target
+    content.vb: Public MustOverride ReadOnly Property Target As Target
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.Target*
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.Log
+  commentId: P:OpenQA.Selenium.DevTools.DevToolsDomains.Log
+  id: Log
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: Log
+  nameWithType: DevToolsDomains.Log
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.Log
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Log
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Gets the object used for manipulating the browser's logs.
+  example: []
+  syntax:
+    content: public abstract Log Log { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.Log
+    content.vb: Public MustOverride ReadOnly Property Log As Log
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.Log*
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession)
+  id: InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession)
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: InitializeDomains(int, DevToolsSession)
+  nameWithType: DevToolsDomains.InitializeDomains(int, DevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(int, OpenQA.Selenium.DevTools.DevToolsSession)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InitializeDomains
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 74
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Initializes the supplied DevTools session's domains for the specified browser version.
+  example: []
+  syntax:
+    content: public static DevToolsDomains InitializeDomains(int protocolVersion, DevToolsSession session)
+    parameters:
+    - id: protocolVersion
+      type: System.Int32
+      description: The version of the DevTools Protocol to use.
+    - id: session
+      type: OpenQA.Selenium.DevTools.DevToolsSession
+      description: The <xref href="OpenQA.Selenium.DevTools.DevToolsSession" data-throw-if-not-resolved="false"></xref> for which to initialiize the domains.
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsDomains
+      description: The <xref href="OpenQA.Selenium.DevTools.DevToolsDomains" data-throw-if-not-resolved="false"></xref> object containing the version-specific domains.
+    content.vb: Public Shared Function InitializeDomains(protocolVersion As Integer, session As DevToolsSession) As DevToolsDomains
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains*
+  nameWithType.vb: DevToolsDomains.InitializeDomains(Integer, DevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(Integer, OpenQA.Selenium.DevTools.DevToolsSession)
+  name.vb: InitializeDomains(Integer, DevToolsSession)
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession,System.Int32)
+  commentId: M:OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession,System.Int32)
+  id: InitializeDomains(System.Int32,OpenQA.Selenium.DevTools.DevToolsSession,System.Int32)
+  parent: OpenQA.Selenium.DevTools.DevToolsDomains
+  langs:
+  - csharp
+  - vb
+  name: InitializeDomains(int, DevToolsSession, int)
+  nameWithType: DevToolsDomains.InitializeDomains(int, DevToolsSession, int)
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(int, OpenQA.Selenium.DevTools.DevToolsSession, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DevTools/DevToolsDomains.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InitializeDomains
+    path: ../src/webdriver/DevTools/DevToolsDomains.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools
+  summary: Initializes the supplied DevTools session's domains for the specified browser version within the specified number of versions.
+  example: []
+  syntax:
+    content: public static DevToolsDomains InitializeDomains(int protocolVersion, DevToolsSession session, int versionRange)
+    parameters:
+    - id: protocolVersion
+      type: System.Int32
+      description: The version of the DevTools Protocol to use.
+    - id: session
+      type: OpenQA.Selenium.DevTools.DevToolsSession
+      description: The <xref href="OpenQA.Selenium.DevTools.DevToolsSession" data-throw-if-not-resolved="false"></xref> for which to initialiize the domains.
+    - id: versionRange
+      type: System.Int32
+      description: The range of versions within which to match the provided version number. Defaults to 5 versions.
+    return:
+      type: OpenQA.Selenium.DevTools.DevToolsDomains
+      description: The <xref href="OpenQA.Selenium.DevTools.DevToolsDomains" data-throw-if-not-resolved="false"></xref> object containing the version-specific domains.
+    content.vb: Public Shared Function InitializeDomains(protocolVersion As Integer, session As DevToolsSession, versionRange As Integer) As DevToolsDomains
+  overload: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains*
+  nameWithType.vb: DevToolsDomains.InitializeDomains(Integer, DevToolsSession, Integer)
+  fullName.vb: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains(Integer, OpenQA.Selenium.DevTools.DevToolsSession, Integer)
+  name.vb: InitializeDomains(Integer, DevToolsSession, Integer)
+references:
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html#OpenQA_Selenium_DevTools_DevToolsDomains_VersionSpecificDomains
+  name: VersionSpecificDomains
+  nameWithType: DevToolsDomains.VersionSpecificDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.VersionSpecificDomains
+- uid: OpenQA.Selenium.DevTools.DevToolsSessionDomains
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsSessionDomains
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsSessionDomains.html
+  name: DevToolsSessionDomains
+  nameWithType: DevToolsSessionDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsSessionDomains
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.Network*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsDomains.Network
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html#OpenQA_Selenium_DevTools_DevToolsDomains_Network
+  name: Network
+  nameWithType: DevToolsDomains.Network
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.Network
+- uid: OpenQA.Selenium.DevTools.Network
+  commentId: T:OpenQA.Selenium.DevTools.Network
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.Network.html
+  name: Network
+  nameWithType: Network
+  fullName: OpenQA.Selenium.DevTools.Network
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html#OpenQA_Selenium_DevTools_DevToolsDomains_JavaScript
+  name: JavaScript
+  nameWithType: DevToolsDomains.JavaScript
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.JavaScript
+- uid: OpenQA.Selenium.DevTools.JavaScript
+  commentId: T:OpenQA.Selenium.DevTools.JavaScript
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.JavaScript.html
+  name: JavaScript
+  nameWithType: JavaScript
+  fullName: OpenQA.Selenium.DevTools.JavaScript
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.Target*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsDomains.Target
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html#OpenQA_Selenium_DevTools_DevToolsDomains_Target
+  name: Target
+  nameWithType: DevToolsDomains.Target
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.Target
+- uid: OpenQA.Selenium.DevTools.Target
+  commentId: T:OpenQA.Selenium.DevTools.Target
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.Target.html
+  name: Target
+  nameWithType: Target
+  fullName: OpenQA.Selenium.DevTools.Target
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.Log*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsDomains.Log
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html#OpenQA_Selenium_DevTools_DevToolsDomains_Log
+  name: Log
+  nameWithType: DevToolsDomains.Log
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.Log
+- uid: OpenQA.Selenium.DevTools.Log
+  commentId: T:OpenQA.Selenium.DevTools.Log
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.Log.html
+  name: Log
+  nameWithType: Log
+  fullName: OpenQA.Selenium.DevTools.Log
+- uid: OpenQA.Selenium.DevTools.DevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsSession.html
+  name: DevToolsSession
+  nameWithType: DevToolsSession
+  fullName: OpenQA.Selenium.DevTools.DevToolsSession
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains
+  commentId: T:OpenQA.Selenium.DevTools.DevToolsDomains
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html
+  name: DevToolsDomains
+  nameWithType: DevToolsDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains
+- uid: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains*
+  commentId: Overload:OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains
+  href: OpenQA.Selenium.DevTools.DevToolsDomains.html#OpenQA_Selenium_DevTools_DevToolsDomains_InitializeDomains_System_Int32_OpenQA_Selenium_DevTools_DevToolsSession_
+  name: InitializeDomains
+  nameWithType: DevToolsDomains.InitializeDomains
+  fullName: OpenQA.Selenium.DevTools.DevToolsDomains.InitializeDomains
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

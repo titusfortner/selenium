@@ -1,0 +1,763 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  id: CaptureSnapshotCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  children:
+  - OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles
+  - OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  - OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects
+  - OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder
+  - OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  langs:
+  - csharp
+  - vb
+  name: CaptureSnapshotCommandSettings
+  nameWithType: CaptureSnapshotCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CaptureSnapshotCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: >-
+    Returns a document snapshot, including the full DOM tree of the root node (including iframes,
+
+    template contents, and imported documents) in a flattened array, as well as layout and
+
+    white-listed computed style information for the nodes. Shadow DOM in the returned DOM tree is
+
+    flattened.
+  example: []
+  syntax:
+    content: 'public sealed class CaptureSnapshotCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class CaptureSnapshotCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: CaptureSnapshotCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 18
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles
+  commentId: P:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles
+  id: ComputedStyles
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ComputedStyles
+  nameWithType: CaptureSnapshotCommandSettings.ComputedStyles
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ComputedStyles
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: Whitelist of computed styles to return.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("computedStyles")]
+
+      public string[] ComputedStyles { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("computedStyles")>
+
+      Public Property ComputedStyles As String()
+  overload: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: computedStyles
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder
+  commentId: P:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder
+  id: IncludePaintOrder
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: IncludePaintOrder
+  nameWithType: CaptureSnapshotCommandSettings.IncludePaintOrder
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IncludePaintOrder
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: Whether to include layout object paint orders into the snapshot.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("includePaintOrder", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IncludePaintOrder { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("includePaintOrder", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IncludePaintOrder As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: includePaintOrder
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects
+  commentId: P:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects
+  id: IncludeDOMRects
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: IncludeDOMRects
+  nameWithType: CaptureSnapshotCommandSettings.IncludeDOMRects
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IncludeDOMRects
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: Whether to include DOM rectangles (offsetRects, clientRects, scrollRects) into the snapshot
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("includeDOMRects", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IncludeDOMRects { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("includeDOMRects", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IncludeDOMRects As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: includeDOMRects
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  commentId: P:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  id: IncludeBlendedBackgroundColors
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: IncludeBlendedBackgroundColors
+  nameWithType: CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IncludeBlendedBackgroundColors
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: >-
+    Whether to include blended background colors in the snapshot (default: false).
+
+    Blended background color is achieved by blending background colors of all elements
+
+    that overlap with the current element.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("includeBlendedBackgroundColors", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IncludeBlendedBackgroundColors { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("includeBlendedBackgroundColors", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IncludeBlendedBackgroundColors As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: includeBlendedBackgroundColors
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  commentId: P:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  id: IncludeTextColorOpacities
+  parent: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: IncludeTextColorOpacities
+  nameWithType: CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IncludeTextColorOpacities
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/DOMSnapshot/CaptureSnapshotCommand.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  summary: >-
+    Whether to include text color opacity in the snapshot (default: false).
+
+    An element might have the opacity property set that affects the text color of the element.
+
+    The final text color opacity is computed based on the opacity of all overlapping elements.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("includeTextColorOpacities", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IncludeTextColorOpacities { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("includeTextColorOpacities", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IncludeTextColorOpacities As Boolean?
+  overload: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: includeTextColorOpacities
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  commentId: N:OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  nameWithType: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot
+    name: DOMSnapshot
+    href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.html#OpenQA_Selenium_DevTools_V126_DOMSnapshot_CaptureSnapshotCommandSettings_CommandName
+  name: CommandName
+  nameWithType: CaptureSnapshotCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles
+  href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.html#OpenQA_Selenium_DevTools_V126_DOMSnapshot_CaptureSnapshotCommandSettings_ComputedStyles
+  name: ComputedStyles
+  nameWithType: CaptureSnapshotCommandSettings.ComputedStyles
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.ComputedStyles
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder
+  href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.html#OpenQA_Selenium_DevTools_V126_DOMSnapshot_CaptureSnapshotCommandSettings_IncludePaintOrder
+  name: IncludePaintOrder
+  nameWithType: CaptureSnapshotCommandSettings.IncludePaintOrder
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludePaintOrder
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects
+  href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.html#OpenQA_Selenium_DevTools_V126_DOMSnapshot_CaptureSnapshotCommandSettings_IncludeDOMRects
+  name: IncludeDOMRects
+  nameWithType: CaptureSnapshotCommandSettings.IncludeDOMRects
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeDOMRects
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.html#OpenQA_Selenium_DevTools_V126_DOMSnapshot_CaptureSnapshotCommandSettings_IncludeBlendedBackgroundColors
+  name: IncludeBlendedBackgroundColors
+  nameWithType: CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeBlendedBackgroundColors
+- uid: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  href: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.html#OpenQA_Selenium_DevTools_V126_DOMSnapshot_CaptureSnapshotCommandSettings_IncludeTextColorOpacities
+  name: IncludeTextColorOpacities
+  nameWithType: CaptureSnapshotCommandSettings.IncludeTextColorOpacities
+  fullName: OpenQA.Selenium.DevTools.V126.DOMSnapshot.CaptureSnapshotCommandSettings.IncludeTextColorOpacities

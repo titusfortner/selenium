@@ -1,0 +1,795 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.KeyInputDevice
+  id: KeyInputDevice
+  parent: OpenQA.Selenium.Interactions
+  children:
+  - OpenQA.Selenium.Interactions.KeyInputDevice.#ctor
+  - OpenQA.Selenium.Interactions.KeyInputDevice.#ctor(System.String)
+  - OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown(System.Char)
+  - OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp(System.Char)
+  - OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind
+  - OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary
+  langs:
+  - csharp
+  - vb
+  name: KeyInputDevice
+  nameWithType: KeyInputDevice
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: KeyInputDevice
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Represents a key input device, such as a keyboard.
+  example: []
+  syntax:
+    content: 'public class KeyInputDevice : InputDevice'
+    content.vb: Public Class KeyInputDevice Inherits InputDevice
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.Interactions.InputDevice
+  inheritedMembers:
+  - OpenQA.Selenium.Interactions.InputDevice.DeviceName
+  - OpenQA.Selenium.Interactions.InputDevice.CreatePause
+  - OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  - OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+  - OpenQA.Selenium.Interactions.InputDevice.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.#ctor
+  commentId: M:OpenQA.Selenium.Interactions.KeyInputDevice.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Interactions.KeyInputDevice
+  langs:
+  - csharp
+  - vb
+  name: KeyInputDevice()
+  nameWithType: KeyInputDevice.KeyInputDevice()
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.KeyInputDevice()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.KeyInputDevice" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public KeyInputDevice()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Interactions.KeyInputDevice.#ctor*
+  nameWithType.vb: KeyInputDevice.New()
+  fullName.vb: OpenQA.Selenium.Interactions.KeyInputDevice.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.#ctor(System.String)
+  commentId: M:OpenQA.Selenium.Interactions.KeyInputDevice.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: OpenQA.Selenium.Interactions.KeyInputDevice
+  langs:
+  - csharp
+  - vb
+  name: KeyInputDevice(string)
+  nameWithType: KeyInputDevice.KeyInputDevice(string)
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.KeyInputDevice(string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.KeyInputDevice" data-throw-if-not-resolved="false"></xref> class, given the device's name.
+  example: []
+  syntax:
+    content: public KeyInputDevice(string deviceName)
+    parameters:
+    - id: deviceName
+      type: System.String
+      description: The unique name of this input device.
+    content.vb: Public Sub New(deviceName As String)
+  overload: OpenQA.Selenium.Interactions.KeyInputDevice.#ctor*
+  nameWithType.vb: KeyInputDevice.New(String)
+  fullName.vb: OpenQA.Selenium.Interactions.KeyInputDevice.New(String)
+  name.vb: New(String)
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind
+  commentId: P:OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind
+  id: DeviceKind
+  parent: OpenQA.Selenium.Interactions.KeyInputDevice
+  langs:
+  - csharp
+  - vb
+  name: DeviceKind
+  nameWithType: KeyInputDevice.DeviceKind
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DeviceKind
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the type of device for this input device.
+  example: []
+  syntax:
+    content: public override InputDeviceKind DeviceKind { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Interactions.InputDeviceKind
+    content.vb: Public Overrides ReadOnly Property DeviceKind As InputDeviceKind
+  overridden: OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+  overload: OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind*
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary
+  commentId: M:OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary
+  id: ToDictionary
+  parent: OpenQA.Selenium.Interactions.KeyInputDevice
+  langs:
+  - csharp
+  - vb
+  name: ToDictionary()
+  nameWithType: KeyInputDevice.ToDictionary()
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToDictionary
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Converts this input device into an object suitable for serializing across the wire.
+  example: []
+  syntax:
+    content: public override Dictionary<string, object> ToDictionary()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> representing this input device.
+    content.vb: Public Overrides Function ToDictionary() As Dictionary(Of String, Object)
+  overridden: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+  overload: OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary*
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown(System.Char)
+  commentId: M:OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown(System.Char)
+  id: CreateKeyDown(System.Char)
+  parent: OpenQA.Selenium.Interactions.KeyInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreateKeyDown(char)
+  nameWithType: KeyInputDevice.CreateKeyDown(char)
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown(char)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateKeyDown
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a key-down action for simulating a press of a key.
+  example: []
+  syntax:
+    content: public Interaction CreateKeyDown(char codePoint)
+    parameters:
+    - id: codePoint
+      type: System.Char
+      description: The unicode character to be sent.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The <xref href="OpenQA.Selenium.Interactions.Interaction" data-throw-if-not-resolved="false"></xref> representing the action.
+    content.vb: Public Function CreateKeyDown(codePoint As Char) As Interaction
+  overload: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown*
+  nameWithType.vb: KeyInputDevice.CreateKeyDown(Char)
+  fullName.vb: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown(Char)
+  name.vb: CreateKeyDown(Char)
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp(System.Char)
+  commentId: M:OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp(System.Char)
+  id: CreateKeyUp(System.Char)
+  parent: OpenQA.Selenium.Interactions.KeyInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreateKeyUp(char)
+  nameWithType: KeyInputDevice.CreateKeyUp(char)
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp(char)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/KeyInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreateKeyUp
+    path: ../src/webdriver/Interactions/KeyInputDevice.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a key-up action for simulating a release of a key.
+  example: []
+  syntax:
+    content: public Interaction CreateKeyUp(char codePoint)
+    parameters:
+    - id: codePoint
+      type: System.Char
+      description: The unicode character to be sent.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The <xref href="OpenQA.Selenium.Interactions.Interaction" data-throw-if-not-resolved="false"></xref> representing the action.
+    content.vb: Public Function CreateKeyUp(codePoint As Char) As Interaction
+  overload: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp*
+  nameWithType.vb: KeyInputDevice.CreateKeyUp(Char)
+  fullName.vb: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp(Char)
+  name.vb: CreateKeyUp(Char)
+references:
+- uid: OpenQA.Selenium.Interactions
+  commentId: N:OpenQA.Selenium.Interactions
+  href: OpenQA.html
+  name: OpenQA.Selenium.Interactions
+  nameWithType: OpenQA.Selenium.Interactions
+  fullName: OpenQA.Selenium.Interactions
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.Interactions.InputDevice
+  commentId: T:OpenQA.Selenium.Interactions.InputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.InputDevice.html
+  name: InputDevice
+  nameWithType: InputDevice
+  fullName: OpenQA.Selenium.Interactions.InputDevice
+- uid: OpenQA.Selenium.Interactions.InputDevice.DeviceName
+  commentId: P:OpenQA.Selenium.Interactions.InputDevice.DeviceName
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_DeviceName
+  name: DeviceName
+  nameWithType: InputDevice.DeviceName
+  fullName: OpenQA.Selenium.Interactions.InputDevice.DeviceName
+- uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.CreatePause
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause
+  name: CreatePause()
+  nameWithType: InputDevice.CreatePause()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.CreatePause()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  isExternal: true
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause_System_TimeSpan_
+  name: CreatePause(TimeSpan)
+  nameWithType: InputDevice.CreatePause(TimeSpan)
+  fullName: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_GetHashCode
+  name: GetHashCode()
+  nameWithType: InputDevice.GetHashCode()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.GetHashCode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_GetHashCode
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.ToString
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.ToString
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToString
+  name: ToString()
+  nameWithType: InputDevice.ToString()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.ToString()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToString
+    name: ToString
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToString
+    name: ToString
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.KeyInputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html
+  name: KeyInputDevice
+  nameWithType: KeyInputDevice
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.#ctor*
+  commentId: Overload:OpenQA.Selenium.Interactions.KeyInputDevice.#ctor
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html#OpenQA_Selenium_Interactions_KeyInputDevice__ctor
+  name: KeyInputDevice
+  nameWithType: KeyInputDevice.KeyInputDevice
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.KeyInputDevice
+  nameWithType.vb: KeyInputDevice.New
+  fullName.vb: OpenQA.Selenium.Interactions.KeyInputDevice.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+  commentId: P:OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_DeviceKind
+  name: DeviceKind
+  nameWithType: InputDevice.DeviceKind
+  fullName: OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind*
+  commentId: Overload:OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html#OpenQA_Selenium_Interactions_KeyInputDevice_DeviceKind
+  name: DeviceKind
+  nameWithType: KeyInputDevice.DeviceKind
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.DeviceKind
+- uid: OpenQA.Selenium.Interactions.InputDeviceKind
+  commentId: T:OpenQA.Selenium.Interactions.InputDeviceKind
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.InputDeviceKind.html
+  name: InputDeviceKind
+  nameWithType: InputDeviceKind
+  fullName: OpenQA.Selenium.Interactions.InputDeviceKind
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToDictionary
+  name: ToDictionary()
+  nameWithType: InputDevice.ToDictionary()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.ToDictionary()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+    name: ToDictionary
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToDictionary
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+    name: ToDictionary
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToDictionary
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary*
+  commentId: Overload:OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html#OpenQA_Selenium_Interactions_KeyInputDevice_ToDictionary
+  name: ToDictionary
+  nameWithType: KeyInputDevice.ToDictionary
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.ToDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.Interactions.Interaction
+  commentId: T:OpenQA.Selenium.Interactions.Interaction
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.Interaction.html
+  name: Interaction
+  nameWithType: Interaction
+  fullName: OpenQA.Selenium.Interactions.Interaction
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown*
+  commentId: Overload:OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html#OpenQA_Selenium_Interactions_KeyInputDevice_CreateKeyDown_System_Char_
+  name: CreateKeyDown
+  nameWithType: KeyInputDevice.CreateKeyDown
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyDown
+- uid: System.Char
+  commentId: T:System.Char
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.char
+  name: char
+  nameWithType: char
+  fullName: char
+  nameWithType.vb: Char
+  fullName.vb: Char
+  name.vb: Char
+- uid: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp*
+  commentId: Overload:OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp
+  href: OpenQA.Selenium.Interactions.KeyInputDevice.html#OpenQA_Selenium_Interactions_KeyInputDevice_CreateKeyUp_System_Char_
+  name: CreateKeyUp
+  nameWithType: KeyInputDevice.CreateKeyUp
+  fullName: OpenQA.Selenium.Interactions.KeyInputDevice.CreateKeyUp

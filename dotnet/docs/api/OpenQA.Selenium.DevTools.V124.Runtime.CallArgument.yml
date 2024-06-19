@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument
+  commentId: T:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument
+  id: CallArgument
+  parent: OpenQA.Selenium.DevTools.V124.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId
+  - OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue
+  - OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value
+  langs:
+  - csharp
+  - vb
+  name: CallArgument
+  nameWithType: CallArgument
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CallArgument
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: >-
+    Represents function call argument. Either remote object id `objectId`, primitive `value`,
+
+    unserializable primitive value or neither of (for undefined) them should be specified.
+  example: []
+  syntax:
+    content: public sealed class CallArgument
+    content.vb: Public NotInheritable Class CallArgument
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value
+  id: Value
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CallArgument.Value
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Value
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Primitive value or serializable javascript object.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public object Value { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: >-
+      <JsonProperty("value", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Value As Object
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: value
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue
+  id: UnserializableValue
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument
+  langs:
+  - csharp
+  - vb
+  name: UnserializableValue
+  nameWithType: CallArgument.UnserializableValue
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UnserializableValue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Primitive value which can not be JSON-stringified.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("unserializableValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string UnserializableValue { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("unserializableValue", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UnserializableValue As String
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: unserializableValue
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId
+  commentId: P:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId
+  id: ObjectId
+  parent: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument
+  langs:
+  - csharp
+  - vb
+  name: ObjectId
+  nameWithType: CallArgument.ObjectId
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ObjectId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Runtime/CallArgument.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Runtime
+  summary: Remote object handle.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("objectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ObjectId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("objectId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ObjectId As String
+  overload: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: objectId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V124.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V124.Runtime
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V124.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value
+  href: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.html#OpenQA_Selenium_DevTools_V124_Runtime_CallArgument_Value
+  name: Value
+  nameWithType: CallArgument.Value
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.Value
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue
+  href: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.html#OpenQA_Selenium_DevTools_V124_Runtime_CallArgument_UnserializableValue
+  name: UnserializableValue
+  nameWithType: CallArgument.UnserializableValue
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.UnserializableValue
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId
+  href: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.html#OpenQA_Selenium_DevTools_V124_Runtime_CallArgument_ObjectId
+  name: ObjectId
+  nameWithType: CallArgument.ObjectId
+  fullName: OpenQA.Selenium.DevTools.V124.Runtime.CallArgument.ObjectId

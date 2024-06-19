@@ -1,0 +1,1254 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.PointerInputDevice
+  id: PointerInputDevice
+  parent: OpenQA.Selenium.Interactions
+  children:
+  - OpenQA.Selenium.Interactions.PointerInputDevice.#ctor
+  - OpenQA.Selenium.Interactions.PointerInputDevice.#ctor(OpenQA.Selenium.Interactions.PointerKind)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.#ctor(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  - OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind
+  - OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary
+  langs:
+  - csharp
+  - vb
+  name: PointerInputDevice
+  nameWithType: PointerInputDevice
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PointerInputDevice
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 106
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Represents a pointer input device, such as a stylus, mouse, or finger on a touch screen.
+  example: []
+  syntax:
+    content: 'public class PointerInputDevice : InputDevice'
+    content.vb: Public Class PointerInputDevice Inherits InputDevice
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.Interactions.InputDevice
+  inheritedMembers:
+  - OpenQA.Selenium.Interactions.InputDevice.DeviceName
+  - OpenQA.Selenium.Interactions.InputDevice.CreatePause
+  - OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  - OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+  - OpenQA.Selenium.Interactions.InputDevice.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: PointerInputDevice()
+  nameWithType: PointerInputDevice.PointerInputDevice()
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.PointerInputDevice()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 113
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.PointerInputDevice" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public PointerInputDevice()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor*
+  nameWithType.vb: PointerInputDevice.New()
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor(OpenQA.Selenium.Interactions.PointerKind)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.#ctor(OpenQA.Selenium.Interactions.PointerKind)
+  id: '#ctor(OpenQA.Selenium.Interactions.PointerKind)'
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: PointerInputDevice(PointerKind)
+  nameWithType: PointerInputDevice.PointerInputDevice(PointerKind)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.PointerInputDevice(OpenQA.Selenium.Interactions.PointerKind)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 122
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.PointerInputDevice" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public PointerInputDevice(PointerKind pointerKind)
+    parameters:
+    - id: pointerKind
+      type: OpenQA.Selenium.Interactions.PointerKind
+      description: The kind of pointer represented by this input device.
+    content.vb: Public Sub New(pointerKind As PointerKind)
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor*
+  nameWithType.vb: PointerInputDevice.New(PointerKind)
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.New(OpenQA.Selenium.Interactions.PointerKind)
+  name.vb: New(PointerKind)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.#ctor(OpenQA.Selenium.Interactions.PointerKind,System.String)
+  id: '#ctor(OpenQA.Selenium.Interactions.PointerKind,System.String)'
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: PointerInputDevice(PointerKind, string)
+  nameWithType: PointerInputDevice.PointerInputDevice(PointerKind, string)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.PointerInputDevice(OpenQA.Selenium.Interactions.PointerKind, string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 132
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Interactions.PointerInputDevice" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public PointerInputDevice(PointerKind pointerKind, string deviceName)
+    parameters:
+    - id: pointerKind
+      type: OpenQA.Selenium.Interactions.PointerKind
+      description: The kind of pointer represented by this input device.
+    - id: deviceName
+      type: System.String
+      description: The unique name for this input device.
+    content.vb: Public Sub New(pointerKind As PointerKind, deviceName As String)
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor*
+  nameWithType.vb: PointerInputDevice.New(PointerKind, String)
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.New(OpenQA.Selenium.Interactions.PointerKind, String)
+  name.vb: New(PointerKind, String)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind
+  commentId: P:OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind
+  id: DeviceKind
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: DeviceKind
+  nameWithType: PointerInputDevice.DeviceKind
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DeviceKind
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 141
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Gets the type of device for this input device.
+  example: []
+  syntax:
+    content: public override InputDeviceKind DeviceKind { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Interactions.InputDeviceKind
+    content.vb: Public Overrides ReadOnly Property DeviceKind As InputDeviceKind
+  overridden: OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind*
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary
+  id: ToDictionary
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: ToDictionary()
+  nameWithType: PointerInputDevice.ToDictionary()
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToDictionary
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 150
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Returns a value for this input device that can be transmitted across the wire to a remote end.
+  example: []
+  syntax:
+    content: public override Dictionary<string, object> ToDictionary()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: A <xref href="System.Collections.Generic.Dictionary%602" data-throw-if-not-resolved="false"></xref> representing this action.
+    content.vb: Public Overrides Function ToDictionary() As Dictionary(Of String, Object)
+  overridden: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary*
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton)
+  id: CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerDown(MouseButton)
+  nameWithType: PointerInputDevice.CreatePointerDown(MouseButton)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerDown
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 169
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer down action.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerDown(MouseButton button)
+    parameters:
+    - id: button
+      type: OpenQA.Selenium.Interactions.MouseButton
+      description: The button of the pointer that should be pressed.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer down gesture.
+    content.vb: Public Function CreatePointerDown(button As MouseButton) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown*
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  id: CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerDown(MouseButton, PointerEventProperties)
+  nameWithType: PointerInputDevice.CreatePointerDown(MouseButton, PointerInputDevice.PointerEventProperties)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown(OpenQA.Selenium.Interactions.MouseButton, OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerDown
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 183
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer down action.
+  remarks: MouseButton value applies to Pen types for primary, secondary and erase functionality (0, 2, and 5 respectively)
+  example: []
+  syntax:
+    content: public Interaction CreatePointerDown(MouseButton button, PointerInputDevice.PointerEventProperties properties)
+    parameters:
+    - id: button
+      type: OpenQA.Selenium.Interactions.MouseButton
+      description: The button of the pointer that should be pressed.
+    - id: properties
+      type: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+      description: The specifications for the pointer event interaction
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer down gesture.
+    content.vb: Public Function CreatePointerDown(button As MouseButton, properties As PointerInputDevice.PointerEventProperties) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown*
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton)
+  id: CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerUp(MouseButton)
+  nameWithType: PointerInputDevice.CreatePointerUp(MouseButton)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerUp
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 193
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer up action.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerUp(MouseButton button)
+    parameters:
+    - id: button
+      type: OpenQA.Selenium.Interactions.MouseButton
+      description: The button of the pointer that should be released.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer up gesture.
+    content.vb: Public Function CreatePointerUp(button As MouseButton) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp*
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  id: CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerUp(MouseButton, PointerEventProperties)
+  nameWithType: PointerInputDevice.CreatePointerUp(MouseButton, PointerInputDevice.PointerEventProperties)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp(OpenQA.Selenium.Interactions.MouseButton, OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerUp
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 207
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer down action.
+  remarks: MouseButton value applies to Pen types for primary, secondary and erase functionality (0, 2, and 5 respectively)
+  example: []
+  syntax:
+    content: public Interaction CreatePointerUp(MouseButton button, PointerInputDevice.PointerEventProperties properties)
+    parameters:
+    - id: button
+      type: OpenQA.Selenium.Interactions.MouseButton
+      description: The button of the pointer that should be pressed.
+    - id: properties
+      type: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+      description: The specifications for the pointer event interaction
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer down gesture.
+    content.vb: Public Function CreatePointerUp(button As MouseButton, properties As PointerInputDevice.PointerEventProperties) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp*
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan)
+  id: CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerMove(IWebElement, int, int, TimeSpan)
+  nameWithType: PointerInputDevice.CreatePointerMove(IWebElement, int, int, TimeSpan)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement, int, int, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerMove
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 220
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer move action to a specific element.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerMove(IWebElement target, int xOffset, int yOffset, TimeSpan duration)
+    parameters:
+    - id: target
+      type: OpenQA.Selenium.IWebElement
+      description: The <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref> used as the target for the move.
+    - id: xOffset
+      type: System.Int32
+      description: The horizontal offset from the origin of the move.
+    - id: yOffset
+      type: System.Int32
+      description: The vertical offset from the origin of the move.
+    - id: duration
+      type: System.TimeSpan
+      description: The length of time the move gesture takes to complete.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer move gesture.
+    content.vb: Public Function CreatePointerMove(target As IWebElement, xOffset As Integer, yOffset As Integer, duration As TimeSpan) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove*
+  nameWithType.vb: PointerInputDevice.CreatePointerMove(IWebElement, Integer, Integer, TimeSpan)
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement, Integer, Integer, System.TimeSpan)
+  name.vb: CreatePointerMove(IWebElement, Integer, Integer, TimeSpan)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  id: CreatePointerMove(OpenQA.Selenium.IWebElement,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerMove(IWebElement, int, int, TimeSpan, PointerEventProperties)
+  nameWithType: PointerInputDevice.CreatePointerMove(IWebElement, int, int, TimeSpan, PointerInputDevice.PointerEventProperties)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement, int, int, System.TimeSpan, OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerMove
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 234
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer move action to a specific element.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerMove(IWebElement target, int xOffset, int yOffset, TimeSpan duration, PointerInputDevice.PointerEventProperties properties)
+    parameters:
+    - id: target
+      type: OpenQA.Selenium.IWebElement
+      description: The <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref> used as the target for the move.
+    - id: xOffset
+      type: System.Int32
+      description: The horizontal offset from the origin of the move.
+    - id: yOffset
+      type: System.Int32
+      description: The vertical offset from the origin of the move.
+    - id: duration
+      type: System.TimeSpan
+      description: The length of time the move gesture takes to complete.
+    - id: properties
+      type: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+      description: The specifications for the pointer event interaction
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer move gesture.
+    content.vb: Public Function CreatePointerMove(target As IWebElement, xOffset As Integer, yOffset As Integer, duration As TimeSpan, properties As PointerInputDevice.PointerEventProperties) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove*
+  nameWithType.vb: PointerInputDevice.CreatePointerMove(IWebElement, Integer, Integer, TimeSpan, PointerInputDevice.PointerEventProperties)
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.IWebElement, Integer, Integer, System.TimeSpan, OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  name.vb: CreatePointerMove(IWebElement, Integer, Integer, TimeSpan, PointerEventProperties)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan)
+  id: CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerMove(CoordinateOrigin, int, int, TimeSpan)
+  nameWithType: PointerInputDevice.CreatePointerMove(CoordinateOrigin, int, int, TimeSpan)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin, int, int, System.TimeSpan)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerMove
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 250
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer move action to an absolute coordinate.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerMove(CoordinateOrigin origin, int xOffset, int yOffset, TimeSpan duration)
+    parameters:
+    - id: origin
+      type: OpenQA.Selenium.Interactions.CoordinateOrigin
+      description: >-
+        The origin of coordinates for the move. Values can be relative to
+            the view port origin, or the most recent pointer position.
+    - id: xOffset
+      type: System.Int32
+      description: The horizontal offset from the origin of the move.
+    - id: yOffset
+      type: System.Int32
+      description: The vertical offset from the origin of the move.
+    - id: duration
+      type: System.TimeSpan
+      description: The length of time the move gesture takes to complete.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer move gesture.
+    content.vb: Public Function CreatePointerMove(origin As CoordinateOrigin, xOffset As Integer, yOffset As Integer, duration As TimeSpan) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      Thrown when passing CoordinateOrigin.Element into origin.
+          Users should us the other CreatePointerMove overload to move to a specific element.
+  nameWithType.vb: PointerInputDevice.CreatePointerMove(CoordinateOrigin, Integer, Integer, TimeSpan)
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin, Integer, Integer, System.TimeSpan)
+  name.vb: CreatePointerMove(CoordinateOrigin, Integer, Integer, TimeSpan)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  id: CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin,System.Int32,System.Int32,System.TimeSpan,OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerMove(CoordinateOrigin, int, int, TimeSpan, PointerEventProperties)
+  nameWithType: PointerInputDevice.CreatePointerMove(CoordinateOrigin, int, int, TimeSpan, PointerInputDevice.PointerEventProperties)
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin, int, int, System.TimeSpan, OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerMove
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 267
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer move action to an absolute coordinate.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerMove(CoordinateOrigin origin, int xOffset, int yOffset, TimeSpan duration, PointerInputDevice.PointerEventProperties properties)
+    parameters:
+    - id: origin
+      type: OpenQA.Selenium.Interactions.CoordinateOrigin
+      description: >-
+        The origin of coordinates for the move. Values can be relative to
+            the view port origin, or the most recent pointer position.
+    - id: xOffset
+      type: System.Int32
+      description: The horizontal offset from the origin of the move.
+    - id: yOffset
+      type: System.Int32
+      description: The vertical offset from the origin of the move.
+    - id: duration
+      type: System.TimeSpan
+      description: The length of time the move gesture takes to complete.
+    - id: properties
+      type: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+      description: The object containing additional proprties for this pointer move operation.
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer move gesture.
+    content.vb: Public Function CreatePointerMove(origin As CoordinateOrigin, xOffset As Integer, yOffset As Integer, duration As TimeSpan, properties As PointerInputDevice.PointerEventProperties) As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      Thrown when passing CoordinateOrigin.Element into origin.
+          Users should us the other CreatePointerMove overload to move to a specific element.
+  nameWithType.vb: PointerInputDevice.CreatePointerMove(CoordinateOrigin, Integer, Integer, TimeSpan, PointerInputDevice.PointerEventProperties)
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove(OpenQA.Selenium.Interactions.CoordinateOrigin, Integer, Integer, System.TimeSpan, OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties)
+  name.vb: CreatePointerMove(CoordinateOrigin, Integer, Integer, TimeSpan, PointerEventProperties)
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel
+  commentId: M:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel
+  id: CreatePointerCancel
+  parent: OpenQA.Selenium.Interactions.PointerInputDevice
+  langs:
+  - csharp
+  - vb
+  name: CreatePointerCancel()
+  nameWithType: PointerInputDevice.CreatePointerCancel()
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Interactions/PointerInputDevice.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CreatePointerCancel
+    path: ../src/webdriver/Interactions/PointerInputDevice.cs
+    startLine: 281
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Interactions
+  summary: Creates a pointer cancel action.
+  example: []
+  syntax:
+    content: public Interaction CreatePointerCancel()
+    return:
+      type: OpenQA.Selenium.Interactions.Interaction
+      description: The action representing the pointer cancel gesture.
+    content.vb: Public Function CreatePointerCancel() As Interaction
+  overload: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel*
+references:
+- uid: OpenQA.Selenium.Interactions
+  commentId: N:OpenQA.Selenium.Interactions
+  href: OpenQA.html
+  name: OpenQA.Selenium.Interactions
+  nameWithType: OpenQA.Selenium.Interactions
+  fullName: OpenQA.Selenium.Interactions
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions
+    name: Interactions
+    href: OpenQA.Selenium.Interactions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.Interactions.InputDevice
+  commentId: T:OpenQA.Selenium.Interactions.InputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.InputDevice.html
+  name: InputDevice
+  nameWithType: InputDevice
+  fullName: OpenQA.Selenium.Interactions.InputDevice
+- uid: OpenQA.Selenium.Interactions.InputDevice.DeviceName
+  commentId: P:OpenQA.Selenium.Interactions.InputDevice.DeviceName
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_DeviceName
+  name: DeviceName
+  nameWithType: InputDevice.DeviceName
+  fullName: OpenQA.Selenium.Interactions.InputDevice.DeviceName
+- uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.CreatePause
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause
+  name: CreatePause()
+  nameWithType: InputDevice.CreatePause()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.CreatePause()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  isExternal: true
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause_System_TimeSpan_
+  name: CreatePause(TimeSpan)
+  nameWithType: InputDevice.CreatePause(TimeSpan)
+  fullName: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.CreatePause(System.TimeSpan)
+    name: CreatePause
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_CreatePause_System_TimeSpan_
+  - name: (
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_GetHashCode
+  name: GetHashCode()
+  nameWithType: InputDevice.GetHashCode()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.GetHashCode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_GetHashCode
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.ToString
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.ToString
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToString
+  name: ToString()
+  nameWithType: InputDevice.ToString()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.ToString()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToString
+    name: ToString
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToString
+    name: ToString
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToString
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice
+  commentId: T:OpenQA.Selenium.Interactions.PointerInputDevice
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html
+  name: PointerInputDevice
+  nameWithType: PointerInputDevice
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.#ctor*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.#ctor
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice__ctor
+  name: PointerInputDevice
+  nameWithType: PointerInputDevice.PointerInputDevice
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.PointerInputDevice
+  nameWithType.vb: PointerInputDevice.New
+  fullName.vb: OpenQA.Selenium.Interactions.PointerInputDevice.New
+  name.vb: New
+- uid: OpenQA.Selenium.Interactions.PointerKind
+  commentId: T:OpenQA.Selenium.Interactions.PointerKind
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.PointerKind.html
+  name: PointerKind
+  nameWithType: PointerKind
+  fullName: OpenQA.Selenium.Interactions.PointerKind
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+  commentId: P:OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_DeviceKind
+  name: DeviceKind
+  nameWithType: InputDevice.DeviceKind
+  fullName: OpenQA.Selenium.Interactions.InputDevice.DeviceKind
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice_DeviceKind
+  name: DeviceKind
+  nameWithType: PointerInputDevice.DeviceKind
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.DeviceKind
+- uid: OpenQA.Selenium.Interactions.InputDeviceKind
+  commentId: T:OpenQA.Selenium.Interactions.InputDeviceKind
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.InputDeviceKind.html
+  name: InputDeviceKind
+  nameWithType: InputDeviceKind
+  fullName: OpenQA.Selenium.Interactions.InputDeviceKind
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+  commentId: M:OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+  parent: OpenQA.Selenium.Interactions.InputDevice
+  href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToDictionary
+  name: ToDictionary()
+  nameWithType: InputDevice.ToDictionary()
+  fullName: OpenQA.Selenium.Interactions.InputDevice.ToDictionary()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+    name: ToDictionary
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToDictionary
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.InputDevice.ToDictionary
+    name: ToDictionary
+    href: OpenQA.Selenium.Interactions.InputDevice.html#OpenQA_Selenium_Interactions_InputDevice_ToDictionary
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice_ToDictionary
+  name: ToDictionary
+  nameWithType: PointerInputDevice.ToDictionary
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.ToDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice_CreatePointerDown_OpenQA_Selenium_Interactions_MouseButton_
+  name: CreatePointerDown
+  nameWithType: PointerInputDevice.CreatePointerDown
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerDown
+- uid: OpenQA.Selenium.Interactions.MouseButton
+  commentId: T:OpenQA.Selenium.Interactions.MouseButton
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.MouseButton.html
+  name: MouseButton
+  nameWithType: MouseButton
+  fullName: OpenQA.Selenium.Interactions.MouseButton
+- uid: OpenQA.Selenium.Interactions.Interaction
+  commentId: T:OpenQA.Selenium.Interactions.Interaction
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.Interaction.html
+  name: Interaction
+  nameWithType: Interaction
+  fullName: OpenQA.Selenium.Interactions.Interaction
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+  commentId: T:OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html
+  name: PointerInputDevice.PointerEventProperties
+  nameWithType: PointerInputDevice.PointerEventProperties
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+  spec.csharp:
+  - uid: OpenQA.Selenium.Interactions.PointerInputDevice
+    name: PointerInputDevice
+    href: OpenQA.Selenium.Interactions.PointerInputDevice.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+    name: PointerEventProperties
+    href: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties.html
+  spec.vb:
+  - uid: OpenQA.Selenium.Interactions.PointerInputDevice
+    name: PointerInputDevice
+    href: OpenQA.Selenium.Interactions.PointerInputDevice.html
+  - name: .
+  - uid: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties
+    name: PointerEventProperties
+    href: OpenQA.Selenium.Interactions.PointerInputDevice.PointerEventProperties.html
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice_CreatePointerUp_OpenQA_Selenium_Interactions_MouseButton_
+  name: CreatePointerUp
+  nameWithType: PointerInputDevice.CreatePointerUp
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerUp
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebElement.html
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice_CreatePointerMove_OpenQA_Selenium_IWebElement_System_Int32_System_Int32_System_TimeSpan_
+  name: CreatePointerMove
+  nameWithType: PointerInputDevice.CreatePointerMove
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerMove
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OpenQA.Selenium.Interactions.CoordinateOrigin
+  commentId: T:OpenQA.Selenium.Interactions.CoordinateOrigin
+  parent: OpenQA.Selenium.Interactions
+  href: OpenQA.Selenium.Interactions.CoordinateOrigin.html
+  name: CoordinateOrigin
+  nameWithType: CoordinateOrigin
+  fullName: OpenQA.Selenium.Interactions.CoordinateOrigin
+- uid: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel*
+  commentId: Overload:OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel
+  href: OpenQA.Selenium.Interactions.PointerInputDevice.html#OpenQA_Selenium_Interactions_PointerInputDevice_CreatePointerCancel
+  name: CreatePointerCancel
+  nameWithType: PointerInputDevice.CreatePointerCancel
+  fullName: OpenQA.Selenium.Interactions.PointerInputDevice.CreatePointerCancel

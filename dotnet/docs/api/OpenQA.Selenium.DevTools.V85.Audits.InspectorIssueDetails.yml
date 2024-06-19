@@ -1,0 +1,548 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  id: InspectorIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  children:
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails
+  - OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: InspectorIssueDetails
+  nameWithType: InspectorIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InspectorIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: >-
+    This struct holds a list of optional fields with additional information
+
+    specific to the kind of issue. When adding a new issue code, please also
+
+    add a new optional field to this type.
+  example: []
+  syntax:
+    content: public sealed class InspectorIssueDetails
+    content.vb: Public NotInheritable Class InspectorIssueDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails
+  commentId: P:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails
+  id: SameSiteCookieIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: SameSiteCookieIssueDetails
+  nameWithType: InspectorIssueDetails.SameSiteCookieIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SameSiteCookieIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+    startLine: 15
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: sameSiteCookieIssueDetails
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sameSiteCookieIssueDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SameSiteCookieIssueDetails SameSiteCookieIssueDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.SameSiteCookieIssueDetails
+    content.vb: >-
+      <JsonProperty("sameSiteCookieIssueDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SameSiteCookieIssueDetails As SameSiteCookieIssueDetails
+  overload: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sameSiteCookieIssueDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails
+  commentId: P:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails
+  id: MixedContentIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: MixedContentIssueDetails
+  nameWithType: InspectorIssueDetails.MixedContentIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MixedContentIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: mixedContentIssueDetails
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("mixedContentIssueDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public MixedContentIssueDetails MixedContentIssueDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.MixedContentIssueDetails
+    content.vb: >-
+      <JsonProperty("mixedContentIssueDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property MixedContentIssueDetails As MixedContentIssueDetails
+  overload: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: mixedContentIssueDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails
+  commentId: P:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails
+  id: BlockedByResponseIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: BlockedByResponseIssueDetails
+  nameWithType: InspectorIssueDetails.BlockedByResponseIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BlockedByResponseIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: blockedByResponseIssueDetails
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("blockedByResponseIssueDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public BlockedByResponseIssueDetails BlockedByResponseIssueDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.BlockedByResponseIssueDetails
+    content.vb: >-
+      <JsonProperty("blockedByResponseIssueDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property BlockedByResponseIssueDetails As BlockedByResponseIssueDetails
+  overload: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: blockedByResponseIssueDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails
+  commentId: P:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails
+  id: HeavyAdIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: HeavyAdIssueDetails
+  nameWithType: InspectorIssueDetails.HeavyAdIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: HeavyAdIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Audits/InspectorIssueDetails.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Audits
+  summary: heavyAdIssueDetails
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("heavyAdIssueDetails", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public HeavyAdIssueDetails HeavyAdIssueDetails { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Audits.HeavyAdIssueDetails
+    content.vb: >-
+      <JsonProperty("heavyAdIssueDetails", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property HeavyAdIssueDetails As HeavyAdIssueDetails
+  overload: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: heavyAdIssueDetails
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Audits
+  commentId: N:OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Audits
+  nameWithType: OpenQA.Selenium.DevTools.V85.Audits
+  fullName: OpenQA.Selenium.DevTools.V85.Audits
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V85.Audits.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V85.Audits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails
+  href: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.html#OpenQA_Selenium_DevTools_V85_Audits_InspectorIssueDetails_SameSiteCookieIssueDetails
+  name: SameSiteCookieIssueDetails
+  nameWithType: InspectorIssueDetails.SameSiteCookieIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.SameSiteCookieIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.SameSiteCookieIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.SameSiteCookieIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.Selenium.DevTools.V85.Audits.SameSiteCookieIssueDetails.html
+  name: SameSiteCookieIssueDetails
+  nameWithType: SameSiteCookieIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.SameSiteCookieIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails
+  href: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.html#OpenQA_Selenium_DevTools_V85_Audits_InspectorIssueDetails_MixedContentIssueDetails
+  name: MixedContentIssueDetails
+  nameWithType: InspectorIssueDetails.MixedContentIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.MixedContentIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.MixedContentIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.MixedContentIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.Selenium.DevTools.V85.Audits.MixedContentIssueDetails.html
+  name: MixedContentIssueDetails
+  nameWithType: MixedContentIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.MixedContentIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails
+  href: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.html#OpenQA_Selenium_DevTools_V85_Audits_InspectorIssueDetails_BlockedByResponseIssueDetails
+  name: BlockedByResponseIssueDetails
+  nameWithType: InspectorIssueDetails.BlockedByResponseIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.BlockedByResponseIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.BlockedByResponseIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.BlockedByResponseIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.Selenium.DevTools.V85.Audits.BlockedByResponseIssueDetails.html
+  name: BlockedByResponseIssueDetails
+  nameWithType: BlockedByResponseIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.BlockedByResponseIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails
+  href: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.html#OpenQA_Selenium_DevTools_V85_Audits_InspectorIssueDetails_HeavyAdIssueDetails
+  name: HeavyAdIssueDetails
+  nameWithType: InspectorIssueDetails.HeavyAdIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.InspectorIssueDetails.HeavyAdIssueDetails
+- uid: OpenQA.Selenium.DevTools.V85.Audits.HeavyAdIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V85.Audits.HeavyAdIssueDetails
+  parent: OpenQA.Selenium.DevTools.V85.Audits
+  href: OpenQA.Selenium.DevTools.V85.Audits.HeavyAdIssueDetails.html
+  name: HeavyAdIssueDetails
+  nameWithType: HeavyAdIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V85.Audits.HeavyAdIssueDetails

@@ -1,0 +1,1001 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  id: InspectorAdapter
+  parent: OpenQA.Selenium.DevTools.V125.Inspector
+  children:
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Detached
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable(OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable(OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetCrashed
+  - OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetReloadedAfterCrash
+  langs:
+  - csharp
+  - vb
+  name: InspectorAdapter
+  nameWithType: InspectorAdapter
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InspectorAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Represents an adapter for the Inspector domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class InspectorAdapter
+    content.vb: Public Class InspectorAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: InspectorAdapter(IDevToolsSession)
+  nameWithType: InspectorAdapter.InspectorAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.InspectorAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Initializes a new instance of the InspectorAdapter class.
+  example: []
+  syntax:
+    content: public InspectorAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.#ctor*
+  nameWithType.vb: InspectorAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: InspectorAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Detached
+  commentId: E:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Detached
+  id: Detached
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: Detached
+  nameWithType: InspectorAdapter.Detached
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Detached
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Detached
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Fired when remote debugging connection is about to be terminated. Contains detach reason.
+  example: []
+  syntax:
+    content: public event EventHandler<DetachedEventArgs> Detached
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs}
+    content.vb: Public Event Detached As EventHandler(Of DetachedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetCrashed
+  commentId: E:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetCrashed
+  id: TargetCrashed
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: TargetCrashed
+  nameWithType: InspectorAdapter.TargetCrashed
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetCrashed
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TargetCrashed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Fired when debugging target has crashed
+  example: []
+  syntax:
+    content: public event EventHandler<TargetCrashedEventArgs> TargetCrashed
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs}
+    content.vb: Public Event TargetCrashed As EventHandler(Of TargetCrashedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetReloadedAfterCrash
+  commentId: E:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetReloadedAfterCrash
+  id: TargetReloadedAfterCrash
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: TargetReloadedAfterCrash
+  nameWithType: InspectorAdapter.TargetReloadedAfterCrash
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.TargetReloadedAfterCrash
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TargetReloadedAfterCrash
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Fired when debugging target has reloaded after crash
+  example: []
+  syntax:
+    content: public event EventHandler<TargetReloadedAfterCrashEventArgs> TargetReloadedAfterCrash
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs}
+    content.vb: Public Event TargetReloadedAfterCrash As EventHandler(Of TargetReloadedAfterCrashEventArgs)
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable(OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable(OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: InspectorAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable(OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 54
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Disables inspector domain notifications.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable*
+  nameWithType.vb: InspectorAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable(OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable(OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable(OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: InspectorAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable(OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Inspector/InspectorAdapter.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Inspector
+  summary: Enables inspector domain notifications.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable*
+  nameWithType.vb: InspectorAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable(OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Inspector
+  commentId: N:OpenQA.Selenium.DevTools.V125.Inspector
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Inspector
+  nameWithType: OpenQA.Selenium.DevTools.V125.Inspector
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector
+    name: Inspector
+    href: OpenQA.Selenium.DevTools.V125.Inspector.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector
+    name: Inspector
+    href: OpenQA.Selenium.DevTools.V125.Inspector.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.html#OpenQA_Selenium_DevTools_V125_Inspector_InspectorAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: InspectorAdapter
+  nameWithType: InspectorAdapter.InspectorAdapter
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.InspectorAdapter
+  nameWithType.vb: InspectorAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session
+  href: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.html#OpenQA_Selenium_DevTools_V125_Inspector_InspectorAdapter_Session
+  name: Session
+  nameWithType: InspectorAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<DetachedEventArgs>
+  nameWithType: EventHandler<DetachedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs>
+  nameWithType.vb: EventHandler(Of DetachedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs)
+  name.vb: EventHandler(Of DetachedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs
+    name: DetachedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs
+    name: DetachedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Inspector.DetachedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TargetCrashedEventArgs>
+  nameWithType: EventHandler<TargetCrashedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs>
+  nameWithType.vb: EventHandler(Of TargetCrashedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs)
+  name.vb: EventHandler(Of TargetCrashedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs
+    name: TargetCrashedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs
+    name: TargetCrashedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Inspector.TargetCrashedEventArgs.html
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TargetReloadedAfterCrashEventArgs>
+  nameWithType: EventHandler<TargetReloadedAfterCrashEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs>
+  nameWithType.vb: EventHandler(Of TargetReloadedAfterCrashEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs)
+  name.vb: EventHandler(Of TargetReloadedAfterCrashEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs
+    name: TargetReloadedAfterCrashEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs
+    name: TargetReloadedAfterCrashEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Inspector.TargetReloadedAfterCrashEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.html#OpenQA_Selenium_DevTools_V125_Inspector_InspectorAdapter_Disable_OpenQA_Selenium_DevTools_V125_Inspector_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: InspectorAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Inspector
+  href: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Inspector.DisableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.html#OpenQA_Selenium_DevTools_V125_Inspector_InspectorAdapter_Enable_OpenQA_Selenium_DevTools_V125_Inspector_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: InspectorAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.InspectorAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Inspector
+  href: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Inspector.EnableCommandResponse.html
+  - name: )

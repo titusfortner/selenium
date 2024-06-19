@@ -1,0 +1,1505 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  id: MemoryAdapter
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  children:
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory(OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters(OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection(OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed(OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification(OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling(OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling(OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: MemoryAdapter
+  nameWithType: MemoryAdapter
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MemoryAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Represents an adapter for the Memory domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class MemoryAdapter
+    content.vb: Public Class MemoryAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: MemoryAdapter(IDevToolsSession)
+  nameWithType: MemoryAdapter.MemoryAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.MemoryAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Initializes a new instance of the MemoryAdapter class.
+  example: []
+  syntax:
+    content: public MemoryAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.#ctor*
+  nameWithType.vb: MemoryAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: MemoryAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters(OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters(OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetDOMCounters(OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetDOMCounters(GetDOMCountersCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.GetDOMCounters(GetDOMCountersCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters(OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDOMCounters
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: getDOMCounters
+  example: []
+  syntax:
+    content: public Task<GetDOMCountersCommandResponse> GetDOMCounters(GetDOMCountersCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse}
+    content.vb: Public Function GetDOMCounters(command As GetDOMCountersCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetDOMCountersCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters*
+  nameWithType.vb: MemoryAdapter.GetDOMCounters(GetDOMCountersCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters(OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetDOMCounters(GetDOMCountersCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection(OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection(OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: PrepareForLeakDetection(OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: PrepareForLeakDetection(PrepareForLeakDetectionCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.PrepareForLeakDetection(PrepareForLeakDetectionCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection(OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrepareForLeakDetection
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: prepareForLeakDetection
+  example: []
+  syntax:
+    content: public Task<PrepareForLeakDetectionCommandResponse> PrepareForLeakDetection(PrepareForLeakDetectionCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse}
+    content.vb: Public Function PrepareForLeakDetection(command As PrepareForLeakDetectionCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of PrepareForLeakDetectionCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection*
+  nameWithType.vb: MemoryAdapter.PrepareForLeakDetection(PrepareForLeakDetectionCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection(OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: PrepareForLeakDetection(PrepareForLeakDetectionCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory(OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory(OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ForciblyPurgeJavaScriptMemory(OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: ForciblyPurgeJavaScriptMemory(ForciblyPurgeJavaScriptMemoryCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.ForciblyPurgeJavaScriptMemory(ForciblyPurgeJavaScriptMemoryCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory(OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ForciblyPurgeJavaScriptMemory
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 53
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Simulate OomIntervention by purging V8 memory.
+  example: []
+  syntax:
+    content: public Task<ForciblyPurgeJavaScriptMemoryCommandResponse> ForciblyPurgeJavaScriptMemory(ForciblyPurgeJavaScriptMemoryCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse}
+    content.vb: Public Function ForciblyPurgeJavaScriptMemory(command As ForciblyPurgeJavaScriptMemoryCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ForciblyPurgeJavaScriptMemoryCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory*
+  nameWithType.vb: MemoryAdapter.ForciblyPurgeJavaScriptMemory(ForciblyPurgeJavaScriptMemoryCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory(OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ForciblyPurgeJavaScriptMemory(ForciblyPurgeJavaScriptMemoryCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed(OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed(OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SetPressureNotificationsSuppressed(OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed(OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPressureNotificationsSuppressed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Enable/disable suppressing memory pressure notifications in all processes.
+  example: []
+  syntax:
+    content: public Task<SetPressureNotificationsSuppressedCommandResponse> SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse}
+    content.vb: Public Function SetPressureNotificationsSuppressed(command As SetPressureNotificationsSuppressedCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SetPressureNotificationsSuppressedCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed*
+  nameWithType.vb: MemoryAdapter.SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed(OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SetPressureNotificationsSuppressed(SetPressureNotificationsSuppressedCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification(OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification(OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: SimulatePressureNotification(OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: SimulatePressureNotification(SimulatePressureNotificationCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.SimulatePressureNotification(SimulatePressureNotificationCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification(OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SimulatePressureNotification
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Simulate a memory pressure notification in all processes.
+  example: []
+  syntax:
+    content: public Task<SimulatePressureNotificationCommandResponse> SimulatePressureNotification(SimulatePressureNotificationCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse}
+    content.vb: Public Function SimulatePressureNotification(command As SimulatePressureNotificationCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of SimulatePressureNotificationCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification*
+  nameWithType.vb: MemoryAdapter.SimulatePressureNotification(SimulatePressureNotificationCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification(OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: SimulatePressureNotification(SimulatePressureNotificationCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling(OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling(OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StartSampling(OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: StartSampling(StartSamplingCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.StartSampling(StartSamplingCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling(OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartSampling
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 74
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Start collecting native memory profile.
+  example: []
+  syntax:
+    content: public Task<StartSamplingCommandResponse> StartSampling(StartSamplingCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse}
+    content.vb: Public Function StartSampling(command As StartSamplingCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StartSamplingCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling*
+  nameWithType.vb: MemoryAdapter.StartSampling(StartSamplingCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling(OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StartSampling(StartSamplingCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling(OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling(OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: StopSampling(OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: StopSampling(StopSamplingCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.StopSampling(StopSamplingCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling(OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StopSampling
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 81
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: Stop collecting native memory profile.
+  example: []
+  syntax:
+    content: public Task<StopSamplingCommandResponse> StopSampling(StopSamplingCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse}
+    content.vb: Public Function StopSampling(command As StopSamplingCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of StopSamplingCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling*
+  nameWithType.vb: MemoryAdapter.StopSampling(StopSamplingCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling(OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: StopSampling(StopSamplingCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetAllTimeSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetAllTimeSamplingProfile(GetAllTimeSamplingProfileCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.GetAllTimeSamplingProfile(GetAllTimeSamplingProfileCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetAllTimeSamplingProfile
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 89
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: >-
+    Retrieve native memory allocations profile
+
+    collected since renderer process startup.
+  example: []
+  syntax:
+    content: public Task<GetAllTimeSamplingProfileCommandResponse> GetAllTimeSamplingProfile(GetAllTimeSamplingProfileCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse}
+    content.vb: Public Function GetAllTimeSamplingProfile(command As GetAllTimeSamplingProfileCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetAllTimeSamplingProfileCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile*
+  nameWithType.vb: MemoryAdapter.GetAllTimeSamplingProfile(GetAllTimeSamplingProfileCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetAllTimeSamplingProfile(GetAllTimeSamplingProfileCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetBrowserSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetBrowserSamplingProfile(GetBrowserSamplingProfileCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.GetBrowserSamplingProfile(GetBrowserSamplingProfileCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetBrowserSamplingProfile
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 97
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: >-
+    Retrieve native memory allocations profile
+
+    collected since browser process startup.
+  example: []
+  syntax:
+    content: public Task<GetBrowserSamplingProfileCommandResponse> GetBrowserSamplingProfile(GetBrowserSamplingProfileCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse}
+    content.vb: Public Function GetBrowserSamplingProfile(command As GetBrowserSamplingProfileCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetBrowserSamplingProfileCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile*
+  nameWithType.vb: MemoryAdapter.GetBrowserSamplingProfile(GetBrowserSamplingProfileCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetBrowserSamplingProfile(GetBrowserSamplingProfileCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetSamplingProfile(GetSamplingProfileCommandSettings, CancellationToken, int?, bool)
+  nameWithType: MemoryAdapter.GetSamplingProfile(GetSamplingProfileCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetSamplingProfile
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Memory/MemoryAdapter.cs
+    startLine: 105
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Memory
+  summary: >-
+    Retrieve native memory allocations profile collected since last
+
+    `startSampling` call.
+  example: []
+  syntax:
+    content: public Task<GetSamplingProfileCommandResponse> GetSamplingProfile(GetSamplingProfileCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse}
+    content.vb: Public Function GetSamplingProfile(command As GetSamplingProfileCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetSamplingProfileCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile*
+  nameWithType.vb: MemoryAdapter.GetSamplingProfile(GetSamplingProfileCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile(OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetSamplingProfile(GetSamplingProfileCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Memory
+  commentId: N:OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Memory
+  nameWithType: OpenQA.Selenium.DevTools.V85.Memory
+  fullName: OpenQA.Selenium.DevTools.V85.Memory
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Memory
+    name: Memory
+    href: OpenQA.Selenium.DevTools.V85.Memory.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Memory
+    name: Memory
+    href: OpenQA.Selenium.DevTools.V85.Memory.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: MemoryAdapter
+  nameWithType: MemoryAdapter.MemoryAdapter
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.MemoryAdapter
+  nameWithType.vb: MemoryAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_Session
+  name: Session
+  nameWithType: MemoryAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.Session
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_GetDOMCounters_OpenQA_Selenium_DevTools_V85_Memory_GetDOMCountersCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetDOMCounters
+  nameWithType: MemoryAdapter.GetDOMCounters
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetDOMCounters
+- uid: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings.html
+  name: GetDOMCountersCommandSettings
+  nameWithType: GetDOMCountersCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetDOMCountersCommandResponse>
+  nameWithType: Task<GetDOMCountersCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse>
+  nameWithType.vb: Task(Of GetDOMCountersCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse)
+  name.vb: Task(Of GetDOMCountersCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse
+    name: GetDOMCountersCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse
+    name: GetDOMCountersCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetDOMCountersCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_PrepareForLeakDetection_OpenQA_Selenium_DevTools_V85_Memory_PrepareForLeakDetectionCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: PrepareForLeakDetection
+  nameWithType: MemoryAdapter.PrepareForLeakDetection
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.PrepareForLeakDetection
+- uid: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings.html
+  name: PrepareForLeakDetectionCommandSettings
+  nameWithType: PrepareForLeakDetectionCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<PrepareForLeakDetectionCommandResponse>
+  nameWithType: Task<PrepareForLeakDetectionCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse>
+  nameWithType.vb: Task(Of PrepareForLeakDetectionCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse)
+  name.vb: Task(Of PrepareForLeakDetectionCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse
+    name: PrepareForLeakDetectionCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse
+    name: PrepareForLeakDetectionCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.PrepareForLeakDetectionCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_ForciblyPurgeJavaScriptMemory_OpenQA_Selenium_DevTools_V85_Memory_ForciblyPurgeJavaScriptMemoryCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ForciblyPurgeJavaScriptMemory
+  nameWithType: MemoryAdapter.ForciblyPurgeJavaScriptMemory
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.ForciblyPurgeJavaScriptMemory
+- uid: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings.html
+  name: ForciblyPurgeJavaScriptMemoryCommandSettings
+  nameWithType: ForciblyPurgeJavaScriptMemoryCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ForciblyPurgeJavaScriptMemoryCommandResponse>
+  nameWithType: Task<ForciblyPurgeJavaScriptMemoryCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse>
+  nameWithType.vb: Task(Of ForciblyPurgeJavaScriptMemoryCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse)
+  name.vb: Task(Of ForciblyPurgeJavaScriptMemoryCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse
+    name: ForciblyPurgeJavaScriptMemoryCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse
+    name: ForciblyPurgeJavaScriptMemoryCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.ForciblyPurgeJavaScriptMemoryCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_SetPressureNotificationsSuppressed_OpenQA_Selenium_DevTools_V85_Memory_SetPressureNotificationsSuppressedCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SetPressureNotificationsSuppressed
+  nameWithType: MemoryAdapter.SetPressureNotificationsSuppressed
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SetPressureNotificationsSuppressed
+- uid: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings.html
+  name: SetPressureNotificationsSuppressedCommandSettings
+  nameWithType: SetPressureNotificationsSuppressedCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SetPressureNotificationsSuppressedCommandResponse>
+  nameWithType: Task<SetPressureNotificationsSuppressedCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse>
+  nameWithType.vb: Task(Of SetPressureNotificationsSuppressedCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse)
+  name.vb: Task(Of SetPressureNotificationsSuppressedCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse
+    name: SetPressureNotificationsSuppressedCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse
+    name: SetPressureNotificationsSuppressedCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.SetPressureNotificationsSuppressedCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_SimulatePressureNotification_OpenQA_Selenium_DevTools_V85_Memory_SimulatePressureNotificationCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: SimulatePressureNotification
+  nameWithType: MemoryAdapter.SimulatePressureNotification
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.SimulatePressureNotification
+- uid: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings.html
+  name: SimulatePressureNotificationCommandSettings
+  nameWithType: SimulatePressureNotificationCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<SimulatePressureNotificationCommandResponse>
+  nameWithType: Task<SimulatePressureNotificationCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse>
+  nameWithType.vb: Task(Of SimulatePressureNotificationCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse)
+  name.vb: Task(Of SimulatePressureNotificationCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse
+    name: SimulatePressureNotificationCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse
+    name: SimulatePressureNotificationCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.SimulatePressureNotificationCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_StartSampling_OpenQA_Selenium_DevTools_V85_Memory_StartSamplingCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StartSampling
+  nameWithType: MemoryAdapter.StartSampling
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StartSampling
+- uid: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings.html
+  name: StartSamplingCommandSettings
+  nameWithType: StartSamplingCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StartSamplingCommandResponse>
+  nameWithType: Task<StartSamplingCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse>
+  nameWithType.vb: Task(Of StartSamplingCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse)
+  name.vb: Task(Of StartSamplingCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse
+    name: StartSamplingCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse
+    name: StartSamplingCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.StartSamplingCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_StopSampling_OpenQA_Selenium_DevTools_V85_Memory_StopSamplingCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: StopSampling
+  nameWithType: MemoryAdapter.StopSampling
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.StopSampling
+- uid: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings.html
+  name: StopSamplingCommandSettings
+  nameWithType: StopSamplingCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<StopSamplingCommandResponse>
+  nameWithType: Task<StopSamplingCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse>
+  nameWithType.vb: Task(Of StopSamplingCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse)
+  name.vb: Task(Of StopSamplingCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse
+    name: StopSamplingCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse
+    name: StopSamplingCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.StopSamplingCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_GetAllTimeSamplingProfile_OpenQA_Selenium_DevTools_V85_Memory_GetAllTimeSamplingProfileCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetAllTimeSamplingProfile
+  nameWithType: MemoryAdapter.GetAllTimeSamplingProfile
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetAllTimeSamplingProfile
+- uid: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings.html
+  name: GetAllTimeSamplingProfileCommandSettings
+  nameWithType: GetAllTimeSamplingProfileCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetAllTimeSamplingProfileCommandResponse>
+  nameWithType: Task<GetAllTimeSamplingProfileCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse>
+  nameWithType.vb: Task(Of GetAllTimeSamplingProfileCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse)
+  name.vb: Task(Of GetAllTimeSamplingProfileCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse
+    name: GetAllTimeSamplingProfileCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse
+    name: GetAllTimeSamplingProfileCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetAllTimeSamplingProfileCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_GetBrowserSamplingProfile_OpenQA_Selenium_DevTools_V85_Memory_GetBrowserSamplingProfileCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetBrowserSamplingProfile
+  nameWithType: MemoryAdapter.GetBrowserSamplingProfile
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetBrowserSamplingProfile
+- uid: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings.html
+  name: GetBrowserSamplingProfileCommandSettings
+  nameWithType: GetBrowserSamplingProfileCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetBrowserSamplingProfileCommandResponse>
+  nameWithType: Task<GetBrowserSamplingProfileCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse>
+  nameWithType.vb: Task(Of GetBrowserSamplingProfileCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse)
+  name.vb: Task(Of GetBrowserSamplingProfileCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse
+    name: GetBrowserSamplingProfileCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse
+    name: GetBrowserSamplingProfileCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetBrowserSamplingProfileCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile
+  href: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.html#OpenQA_Selenium_DevTools_V85_Memory_MemoryAdapter_GetSamplingProfile_OpenQA_Selenium_DevTools_V85_Memory_GetSamplingProfileCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetSamplingProfile
+  nameWithType: MemoryAdapter.GetSamplingProfile
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.MemoryAdapter.GetSamplingProfile
+- uid: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Memory
+  href: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings.html
+  name: GetSamplingProfileCommandSettings
+  nameWithType: GetSamplingProfileCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetSamplingProfileCommandResponse>
+  nameWithType: Task<GetSamplingProfileCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse>
+  nameWithType.vb: Task(Of GetSamplingProfileCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse)
+  name.vb: Task(Of GetSamplingProfileCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse
+    name: GetSamplingProfileCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse
+    name: GetSamplingProfileCommandResponse
+    href: OpenQA.Selenium.DevTools.V85.Memory.GetSamplingProfileCommandResponse.html
+  - name: )

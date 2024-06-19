@@ -1,0 +1,759 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  id: ContentSecurityPolicyIssueDetails
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  children:
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective
+  - OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  langs:
+  - csharp
+  - vb
+  name: ContentSecurityPolicyIssueDetails
+  nameWithType: ContentSecurityPolicyIssueDetails
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentSecurityPolicyIssueDetails
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: ContentSecurityPolicyIssueDetails
+  example: []
+  syntax:
+    content: public sealed class ContentSecurityPolicyIssueDetails
+    content.vb: Public NotInheritable Class ContentSecurityPolicyIssueDetails
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL
+  id: BlockedURL
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: BlockedURL
+  nameWithType: ContentSecurityPolicyIssueDetails.BlockedURL
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BlockedURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: The url not included in allowed sources.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("blockedURL", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string BlockedURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("blockedURL", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property BlockedURL As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: blockedURL
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective
+  id: ViolatedDirective
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: ViolatedDirective
+  nameWithType: ContentSecurityPolicyIssueDetails.ViolatedDirective
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ViolatedDirective
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: Specific directive that is violated, causing the CSP issue.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("violatedDirective")]
+
+      public string ViolatedDirective { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("violatedDirective")>
+
+      Public Property ViolatedDirective As String
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: violatedDirective
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly
+  id: IsReportOnly
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: IsReportOnly
+  nameWithType: ContentSecurityPolicyIssueDetails.IsReportOnly
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsReportOnly
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: isReportOnly
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("isReportOnly")]
+
+      public bool IsReportOnly { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("isReportOnly")>
+
+      Public Property IsReportOnly As Boolean
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: isReportOnly
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  id: ContentSecurityPolicyViolationType
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: ContentSecurityPolicyViolationType
+  nameWithType: ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentSecurityPolicyViolationType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: contentSecurityPolicyViolationType
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contentSecurityPolicyViolationType")]
+
+      public ContentSecurityPolicyViolationType ContentSecurityPolicyViolationType { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyViolationType
+    content.vb: >-
+      <JsonProperty("contentSecurityPolicyViolationType")>
+
+      Public Property ContentSecurityPolicyViolationType As ContentSecurityPolicyViolationType
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contentSecurityPolicyViolationType
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor
+  id: FrameAncestor
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: FrameAncestor
+  nameWithType: ContentSecurityPolicyIssueDetails.FrameAncestor
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FrameAncestor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: frameAncestor
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("frameAncestor", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AffectedFrame FrameAncestor { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+    content.vb: >-
+      <JsonProperty("frameAncestor", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FrameAncestor As AffectedFrame
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: frameAncestor
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  id: SourceCodeLocation
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: SourceCodeLocation
+  nameWithType: ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SourceCodeLocation
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: sourceCodeLocation
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sourceCodeLocation", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SourceCodeLocation SourceCodeLocation { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Audits.SourceCodeLocation
+    content.vb: >-
+      <JsonProperty("sourceCodeLocation", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SourceCodeLocation As SourceCodeLocation
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sourceCodeLocation
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  id: ViolatingNodeId
+  parent: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails
+  langs:
+  - csharp
+  - vb
+  name: ViolatingNodeId
+  nameWithType: ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ViolatingNodeId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Audits/ContentSecurityPolicyIssueDetails.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Audits
+  summary: violatingNodeId
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("violatingNodeId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ViolatingNodeId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("violatingNodeId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ViolatingNodeId As Long?
+  overload: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: violatingNodeId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Audits
+  commentId: N:OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Audits
+  nameWithType: OpenQA.Selenium.DevTools.V126.Audits
+  fullName: OpenQA.Selenium.DevTools.V126.Audits
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V126.Audits.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Audits
+    name: Audits
+    href: OpenQA.Selenium.DevTools.V126.Audits.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_BlockedURL
+  name: BlockedURL
+  nameWithType: ContentSecurityPolicyIssueDetails.BlockedURL
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.BlockedURL
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_ViolatedDirective
+  name: ViolatedDirective
+  nameWithType: ContentSecurityPolicyIssueDetails.ViolatedDirective
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatedDirective
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_IsReportOnly
+  name: IsReportOnly
+  nameWithType: ContentSecurityPolicyIssueDetails.IsReportOnly
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.IsReportOnly
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_ContentSecurityPolicyViolationType
+  name: ContentSecurityPolicyViolationType
+  nameWithType: ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ContentSecurityPolicyViolationType
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyViolationType
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyViolationType
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyViolationType.html
+  name: ContentSecurityPolicyViolationType
+  nameWithType: ContentSecurityPolicyViolationType
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyViolationType
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_FrameAncestor
+  name: FrameAncestor
+  nameWithType: ContentSecurityPolicyIssueDetails.FrameAncestor
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.FrameAncestor
+- uid: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame.html
+  name: AffectedFrame
+  nameWithType: AffectedFrame
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.AffectedFrame
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_SourceCodeLocation
+  name: SourceCodeLocation
+  nameWithType: ContentSecurityPolicyIssueDetails.SourceCodeLocation
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.SourceCodeLocation
+- uid: OpenQA.Selenium.DevTools.V126.Audits.SourceCodeLocation
+  commentId: T:OpenQA.Selenium.DevTools.V126.Audits.SourceCodeLocation
+  parent: OpenQA.Selenium.DevTools.V126.Audits
+  href: OpenQA.Selenium.DevTools.V126.Audits.SourceCodeLocation.html
+  name: SourceCodeLocation
+  nameWithType: SourceCodeLocation
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.SourceCodeLocation
+- uid: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  href: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.html#OpenQA_Selenium_DevTools_V126_Audits_ContentSecurityPolicyIssueDetails_ViolatingNodeId
+  name: ViolatingNodeId
+  nameWithType: ContentSecurityPolicyIssueDetails.ViolatingNodeId
+  fullName: OpenQA.Selenium.DevTools.V126.Audits.ContentSecurityPolicyIssueDetails.ViolatingNodeId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

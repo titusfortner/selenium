@@ -1,0 +1,578 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  id: PreloadEnabledStateUpdatedEventArgs
+  parent: OpenQA.Selenium.DevTools.V125.Preload
+  children:
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  - OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  langs:
+  - csharp
+  - vb
+  name: PreloadEnabledStateUpdatedEventArgs
+  nameWithType: PreloadEnabledStateUpdatedEventArgs
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PreloadEnabledStateUpdatedEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: Fired when a preload enabled state is updated.
+  example: []
+  syntax:
+    content: 'public sealed class PreloadEnabledStateUpdatedEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class PreloadEnabledStateUpdatedEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  id: DisabledByPreference
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DisabledByPreference
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisabledByPreference
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: Gets or sets the disabledByPreference
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disabledByPreference")]
+
+      public bool DisabledByPreference { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("disabledByPreference")>
+
+      Public Property DisabledByPreference As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disabledByPreference
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  id: DisabledByDataSaver
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DisabledByDataSaver
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisabledByDataSaver
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: Gets or sets the disabledByDataSaver
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disabledByDataSaver")]
+
+      public bool DisabledByDataSaver { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("disabledByDataSaver")>
+
+      Public Property DisabledByDataSaver As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disabledByDataSaver
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  id: DisabledByBatterySaver
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DisabledByBatterySaver
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisabledByBatterySaver
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: Gets or sets the disabledByBatterySaver
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disabledByBatterySaver")]
+
+      public bool DisabledByBatterySaver { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("disabledByBatterySaver")>
+
+      Public Property DisabledByBatterySaver As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disabledByBatterySaver
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  id: DisabledByHoldbackPrefetchSpeculationRules
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DisabledByHoldbackPrefetchSpeculationRules
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisabledByHoldbackPrefetchSpeculationRules
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: Gets or sets the disabledByHoldbackPrefetchSpeculationRules
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disabledByHoldbackPrefetchSpeculationRules")]
+
+      public bool DisabledByHoldbackPrefetchSpeculationRules { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("disabledByHoldbackPrefetchSpeculationRules")>
+
+      Public Property DisabledByHoldbackPrefetchSpeculationRules As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disabledByHoldbackPrefetchSpeculationRules
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  commentId: P:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  id: DisabledByHoldbackPrerenderSpeculationRules
+  parent: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs
+  langs:
+  - csharp
+  - vb
+  name: DisabledByHoldbackPrerenderSpeculationRules
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisabledByHoldbackPrerenderSpeculationRules
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Preload/PreloadEnabledStateUpdatedEventArgs.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Preload
+  summary: Gets or sets the disabledByHoldbackPrerenderSpeculationRules
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disabledByHoldbackPrerenderSpeculationRules")]
+
+      public bool DisabledByHoldbackPrerenderSpeculationRules { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: >-
+      <JsonProperty("disabledByHoldbackPrerenderSpeculationRules")>
+
+      Public Property DisabledByHoldbackPrerenderSpeculationRules As Boolean
+  overload: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disabledByHoldbackPrerenderSpeculationRules
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Preload
+  commentId: N:OpenQA.Selenium.DevTools.V125.Preload
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Preload
+  nameWithType: OpenQA.Selenium.DevTools.V125.Preload
+  fullName: OpenQA.Selenium.DevTools.V125.Preload
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V125.Preload.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V125.Preload.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadEnabledStateUpdatedEventArgs_DisabledByPreference
+  name: DisabledByPreference
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByPreference
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadEnabledStateUpdatedEventArgs_DisabledByDataSaver
+  name: DisabledByDataSaver
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByDataSaver
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadEnabledStateUpdatedEventArgs_DisabledByBatterySaver
+  name: DisabledByBatterySaver
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByBatterySaver
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadEnabledStateUpdatedEventArgs_DisabledByHoldbackPrefetchSpeculationRules
+  name: DisabledByHoldbackPrefetchSpeculationRules
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrefetchSpeculationRules
+- uid: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  href: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.html#OpenQA_Selenium_DevTools_V125_Preload_PreloadEnabledStateUpdatedEventArgs_DisabledByHoldbackPrerenderSpeculationRules
+  name: DisabledByHoldbackPrerenderSpeculationRules
+  nameWithType: PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules
+  fullName: OpenQA.Selenium.DevTools.V125.Preload.PreloadEnabledStateUpdatedEventArgs.DisabledByHoldbackPrerenderSpeculationRules

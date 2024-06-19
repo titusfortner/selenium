@@ -1,0 +1,365 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ICommandExecutor
+  commentId: T:OpenQA.Selenium.ICommandExecutor
+  id: ICommandExecutor
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  - OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  - OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  langs:
+  - csharp
+  - vb
+  name: ICommandExecutor
+  nameWithType: ICommandExecutor
+  fullName: OpenQA.Selenium.ICommandExecutor
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ICommandExecutor
+    path: ../src/webdriver/ICommandExecutor.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides a way to send commands to the remote server
+  example: []
+  syntax:
+    content: 'public interface ICommandExecutor : IDisposable'
+    content.vb: Public Interface ICommandExecutor Inherits IDisposable
+  inheritedMembers:
+  - System.IDisposable.Dispose
+- uid: OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.ICommandExecutor.TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  id: TryAddCommand(System.String,OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.ICommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: TryAddCommand(string, CommandInfo)
+  nameWithType: ICommandExecutor.TryAddCommand(string, CommandInfo)
+  fullName: OpenQA.Selenium.ICommandExecutor.TryAddCommand(string, OpenQA.Selenium.CommandInfo)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TryAddCommand
+    path: ../src/webdriver/ICommandExecutor.cs
+    startLine: 34
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Attempts to add a command to the repository of commands known to this executor.
+  example: []
+  syntax:
+    content: bool TryAddCommand(string commandName, CommandInfo info)
+    parameters:
+    - id: commandName
+      type: System.String
+      description: The name of the command to attempt to add.
+    - id: info
+      type: OpenQA.Selenium.CommandInfo
+      description: The <xref href="OpenQA.Selenium.CommandInfo" data-throw-if-not-resolved="false"></xref> describing the commnd to add.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the new command has been added successfully; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Function TryAddCommand(commandName As String, info As CommandInfo) As Boolean
+  overload: OpenQA.Selenium.ICommandExecutor.TryAddCommand*
+  nameWithType.vb: ICommandExecutor.TryAddCommand(String, CommandInfo)
+  fullName.vb: OpenQA.Selenium.ICommandExecutor.TryAddCommand(String, OpenQA.Selenium.CommandInfo)
+  name.vb: TryAddCommand(String, CommandInfo)
+- uid: OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  commentId: M:OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  id: Execute(OpenQA.Selenium.Command)
+  parent: OpenQA.Selenium.ICommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: Execute(Command)
+  nameWithType: ICommandExecutor.Execute(Command)
+  fullName: OpenQA.Selenium.ICommandExecutor.Execute(OpenQA.Selenium.Command)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Execute
+    path: ../src/webdriver/ICommandExecutor.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Executes a command
+  example: []
+  syntax:
+    content: Response Execute(Command commandToExecute)
+    parameters:
+    - id: commandToExecute
+      type: OpenQA.Selenium.Command
+      description: The command you wish to execute
+    return:
+      type: OpenQA.Selenium.Response
+      description: A response from the browser
+    content.vb: Function Execute(commandToExecute As Command) As Response
+  overload: OpenQA.Selenium.ICommandExecutor.Execute*
+- uid: OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  commentId: M:OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  id: ExecuteAsync(OpenQA.Selenium.Command)
+  parent: OpenQA.Selenium.ICommandExecutor
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(Command)
+  nameWithType: ICommandExecutor.ExecuteAsync(Command)
+  fullName: OpenQA.Selenium.ICommandExecutor.ExecuteAsync(OpenQA.Selenium.Command)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/ICommandExecutor.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecuteAsync
+    path: ../src/webdriver/ICommandExecutor.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Executes a command as an asynchronous task.
+  example: []
+  syntax:
+    content: Task<Response> ExecuteAsync(Command commandToExecute)
+    parameters:
+    - id: commandToExecute
+      type: OpenQA.Selenium.Command
+      description: The command you wish to execute
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.Response}
+      description: A task object representing the asynchronous operation
+    content.vb: Function ExecuteAsync(commandToExecute As Command) As Task(Of Response)
+  overload: OpenQA.Selenium.ICommandExecutor.ExecuteAsync*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.CommandInfo
+  commentId: T:OpenQA.Selenium.CommandInfo
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.CommandInfo.html
+  name: CommandInfo
+  nameWithType: CommandInfo
+  fullName: OpenQA.Selenium.CommandInfo
+- uid: OpenQA.Selenium.ICommandExecutor.TryAddCommand*
+  commentId: Overload:OpenQA.Selenium.ICommandExecutor.TryAddCommand
+  href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_TryAddCommand_System_String_OpenQA_Selenium_CommandInfo_
+  name: TryAddCommand
+  nameWithType: ICommandExecutor.TryAddCommand
+  fullName: OpenQA.Selenium.ICommandExecutor.TryAddCommand
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.ICommandExecutor.Execute*
+  commentId: Overload:OpenQA.Selenium.ICommandExecutor.Execute
+  href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_Execute_OpenQA_Selenium_Command_
+  name: Execute
+  nameWithType: ICommandExecutor.Execute
+  fullName: OpenQA.Selenium.ICommandExecutor.Execute
+- uid: OpenQA.Selenium.Command
+  commentId: T:OpenQA.Selenium.Command
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Command.html
+  name: Command
+  nameWithType: Command
+  fullName: OpenQA.Selenium.Command
+- uid: OpenQA.Selenium.Response
+  commentId: T:OpenQA.Selenium.Response
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Response.html
+  name: Response
+  nameWithType: Response
+  fullName: OpenQA.Selenium.Response
+- uid: OpenQA.Selenium.ICommandExecutor.ExecuteAsync*
+  commentId: Overload:OpenQA.Selenium.ICommandExecutor.ExecuteAsync
+  href: OpenQA.Selenium.ICommandExecutor.html#OpenQA_Selenium_ICommandExecutor_ExecuteAsync_OpenQA_Selenium_Command_
+  name: ExecuteAsync
+  nameWithType: ICommandExecutor.ExecuteAsync
+  fullName: OpenQA.Selenium.ICommandExecutor.ExecuteAsync
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.Response}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.Response}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<Response>
+  nameWithType: Task<Response>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.Response>
+  nameWithType.vb: Task(Of Response)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.Response)
+  name.vb: Task(Of Response)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.Response
+    name: Response
+    href: OpenQA.Selenium.Response.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.Response
+    name: Response
+    href: OpenQA.Selenium.Response.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
