@@ -1,0 +1,764 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  commentId: T:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  id: GPUInfo
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo
+  children:
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding
+  - OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding
+  langs:
+  - csharp
+  - vb
+  name: GPUInfo
+  nameWithType: GPUInfo
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GPUInfo
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: Provides information about the GPU(s) on the system.
+  example: []
+  syntax:
+    content: public sealed class GPUInfo
+    content.vb: Public NotInheritable Class GPUInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices
+  id: Devices
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: Devices
+  nameWithType: GPUInfo.Devices
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Devices
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: The graphics devices on the system. Element 0 is the primary GPU.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("devices")]
+
+      public GPUDevice[] Devices { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice[]
+    content.vb: >-
+      <JsonProperty("devices")>
+
+      Public Property Devices As GPUDevice()
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: devices
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes
+  id: AuxAttributes
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: AuxAttributes
+  nameWithType: GPUInfo.AuxAttributes
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AuxAttributes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: An optional dictionary of additional GPU related attributes.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("auxAttributes", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public object AuxAttributes { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: >-
+      <JsonProperty("auxAttributes", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AuxAttributes As Object
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: auxAttributes
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus
+  id: FeatureStatus
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: FeatureStatus
+  nameWithType: GPUInfo.FeatureStatus
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FeatureStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: An optional dictionary of graphics features and their status.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("featureStatus", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public object FeatureStatus { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: >-
+      <JsonProperty("featureStatus", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property FeatureStatus As Object
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: featureStatus
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds
+  id: DriverBugWorkarounds
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: DriverBugWorkarounds
+  nameWithType: GPUInfo.DriverBugWorkarounds
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DriverBugWorkarounds
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: An optional array of GPU driver bug workarounds.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("driverBugWorkarounds")]
+
+      public string[] DriverBugWorkarounds { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("driverBugWorkarounds")>
+
+      Public Property DriverBugWorkarounds As String()
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: driverBugWorkarounds
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding
+  id: VideoDecoding
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: VideoDecoding
+  nameWithType: GPUInfo.VideoDecoding
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VideoDecoding
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: Supported accelerated video decoding capabilities.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("videoDecoding")]
+
+      public VideoDecodeAcceleratorCapability[] VideoDecoding { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability[]
+    content.vb: >-
+      <JsonProperty("videoDecoding")>
+
+      Public Property VideoDecoding As VideoDecodeAcceleratorCapability()
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: videoDecoding
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding
+  id: VideoEncoding
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: VideoEncoding
+  nameWithType: GPUInfo.VideoEncoding
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VideoEncoding
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: Supported accelerated video encoding capabilities.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("videoEncoding")]
+
+      public VideoEncodeAcceleratorCapability[] VideoEncoding { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability[]
+    content.vb: >-
+      <JsonProperty("videoEncoding")>
+
+      Public Property VideoEncoding As VideoEncodeAcceleratorCapability()
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: videoEncoding
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding
+  commentId: P:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding
+  id: ImageDecoding
+  parent: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo
+  langs:
+  - csharp
+  - vb
+  name: ImageDecoding
+  nameWithType: GPUInfo.ImageDecoding
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ImageDecoding
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/SystemInfo/GPUInfo.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.SystemInfo
+  summary: Supported accelerated image decoding capabilities.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("imageDecoding")]
+
+      public ImageDecodeAcceleratorCapability[] ImageDecoding { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability[]
+    content.vb: >-
+      <JsonProperty("imageDecoding")>
+
+      Public Property ImageDecoding As ImageDecodeAcceleratorCapability()
+  overload: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: imageDecoding
+references:
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo
+  commentId: N:OpenQA.Selenium.DevTools.V124.SystemInfo
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.SystemInfo
+  nameWithType: OpenQA.Selenium.DevTools.V124.SystemInfo
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo
+    name: SystemInfo
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo
+    name: SystemInfo
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_Devices
+  name: Devices
+  nameWithType: GPUInfo.Devices
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.Devices
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice.html
+  name: GPUDevice[]
+  nameWithType: GPUDevice[]
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice[]
+  nameWithType.vb: GPUDevice()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice()
+  name.vb: GPUDevice()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice
+    name: GPUDevice
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice
+    name: GPUDevice
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUDevice.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_AuxAttributes
+  name: AuxAttributes
+  nameWithType: GPUInfo.AuxAttributes
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.AuxAttributes
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_FeatureStatus
+  name: FeatureStatus
+  nameWithType: GPUInfo.FeatureStatus
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.FeatureStatus
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_DriverBugWorkarounds
+  name: DriverBugWorkarounds
+  nameWithType: GPUInfo.DriverBugWorkarounds
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.DriverBugWorkarounds
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_VideoDecoding
+  name: VideoDecoding
+  nameWithType: GPUInfo.VideoDecoding
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoDecoding
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability.html
+  name: VideoDecodeAcceleratorCapability[]
+  nameWithType: VideoDecodeAcceleratorCapability[]
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability[]
+  nameWithType.vb: VideoDecodeAcceleratorCapability()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability()
+  name.vb: VideoDecodeAcceleratorCapability()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability
+    name: VideoDecodeAcceleratorCapability
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability
+    name: VideoDecodeAcceleratorCapability
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoDecodeAcceleratorCapability.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_VideoEncoding
+  name: VideoEncoding
+  nameWithType: GPUInfo.VideoEncoding
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.VideoEncoding
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability.html
+  name: VideoEncodeAcceleratorCapability[]
+  nameWithType: VideoEncodeAcceleratorCapability[]
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability[]
+  nameWithType.vb: VideoEncodeAcceleratorCapability()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability()
+  name.vb: VideoEncodeAcceleratorCapability()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability
+    name: VideoEncodeAcceleratorCapability
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability
+    name: VideoEncodeAcceleratorCapability
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.VideoEncodeAcceleratorCapability.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.html#OpenQA_Selenium_DevTools_V124_SystemInfo_GPUInfo_ImageDecoding
+  name: ImageDecoding
+  nameWithType: GPUInfo.ImageDecoding
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.GPUInfo.ImageDecoding
+- uid: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability.html
+  name: ImageDecodeAcceleratorCapability[]
+  nameWithType: ImageDecodeAcceleratorCapability[]
+  fullName: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability[]
+  nameWithType.vb: ImageDecodeAcceleratorCapability()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability()
+  name.vb: ImageDecodeAcceleratorCapability()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability
+    name: ImageDecodeAcceleratorCapability
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability
+    name: ImageDecodeAcceleratorCapability
+    href: OpenQA.Selenium.DevTools.V124.SystemInfo.ImageDecodeAcceleratorCapability.html
+  - name: (
+  - name: )

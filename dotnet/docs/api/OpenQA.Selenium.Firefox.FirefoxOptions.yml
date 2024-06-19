@@ -1,0 +1,1841 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxOptions
+  id: FirefoxOptions
+  parent: OpenQA.Selenium.Firefox
+  children:
+  - OpenQA.Selenium.Firefox.FirefoxOptions.#ctor
+  - OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument(System.String)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.Collections.Generic.IEnumerable{System.String})
+  - OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.String[])
+  - OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions
+  - OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation
+  - OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation
+  - OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol
+  - OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel
+  - OpenQA.Selenium.Firefox.FirefoxOptions.Profile
+  - OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable(System.String,System.String)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Boolean)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Double)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Int32)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Int64)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.String)
+  - OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities
+  langs:
+  - csharp
+  - vb
+  name: FirefoxOptions
+  nameWithType: FirefoxOptions
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FirefoxOptions
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Class to manage options specific to <xref href="OpenQA.Selenium.Firefox.FirefoxDriver" data-throw-if-not-resolved="false"></xref>
+  remarks: Used with the marionette executable wires.exe.
+  example:
+  - >-
+    <pre><code class="lang-csharp">FirefoxOptions options = new FirefoxOptions();</code></pre>
+
+    <p></p>
+
+    <p>For use with FirefoxDriver:</p>
+
+    <p></p>
+
+    <pre><code class="lang-csharp">FirefoxDriver driver = new FirefoxDriver(options);</code></pre>
+
+    <p></p>
+
+    <p>For use with RemoteWebDriver:</p>
+
+    <p></p>
+
+    <pre><code class="lang-csharp">RemoteWebDriver driver = new RemoteWebDriver(new Uri("http://localhost:4444/wd/hub"), options.ToCapabilities());</code></pre>
+  syntax:
+    content: 'public class FirefoxOptions : DriverOptions'
+    content.vb: Public Class FirefoxOptions Inherits DriverOptions
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.DriverOptions
+  inheritedMembers:
+  - OpenQA.Selenium.DriverOptions.BrowserName
+  - OpenQA.Selenium.DriverOptions.BrowserVersion
+  - OpenQA.Selenium.DriverOptions.PlatformName
+  - OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  - OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  - OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  - OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  - OpenQA.Selenium.DriverOptions.Proxy
+  - OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  - OpenQA.Selenium.DriverOptions.EnableDownloads
+  - OpenQA.Selenium.DriverOptions.ScriptTimeout
+  - OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  - OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  - OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  - OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  - OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  - OpenQA.Selenium.DriverOptions.ToString
+  - OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+  - OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+  - OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+  - OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+  - OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+  - OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  - OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.#ctor
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: FirefoxOptions()
+  nameWithType: FirefoxOptions.FirefoxOptions()
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.FirefoxOptions()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Firefox.FirefoxOptions" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public FirefoxOptions()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.#ctor*
+  nameWithType.vb: FirefoxOptions.New()
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.Profile
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxOptions.Profile
+  id: Profile
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: Profile
+  nameWithType: FirefoxOptions.Profile
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.Profile
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Profile
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 98
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets or sets the <xref href="OpenQA.Selenium.Firefox.FirefoxProfile" data-throw-if-not-resolved="false"></xref> object to be used with this instance.
+  example: []
+  syntax:
+    content: public FirefoxProfile Profile { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Firefox.FirefoxProfile
+    content.vb: Public Property Profile As FirefoxProfile
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.Profile*
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation
+  id: BinaryLocation
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: BinaryLocation
+  nameWithType: FirefoxOptions.BinaryLocation
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BinaryLocation
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 107
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets or sets the path and file name of the Firefox browser executable.
+  example: []
+  syntax:
+    content: public override string BinaryLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overrides Property BinaryLocation As String
+  overridden: OpenQA.Selenium.DriverOptions.BinaryLocation
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation*
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation
+  id: BrowserExecutableLocation
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: BrowserExecutableLocation
+  nameWithType: FirefoxOptions.BrowserExecutableLocation
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BrowserExecutableLocation
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 116
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets or sets the path and file name of the Firefox browser executable.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Use BinaryLocation property instead of BrowserExecutableLocation. This one will be removed soon.")]
+
+      public string BrowserExecutableLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <Obsolete("Use BinaryLocation property instead of BrowserExecutableLocation. This one will be removed soon.")>
+
+      Public Property BrowserExecutableLocation As String
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Use BinaryLocation property instead of BrowserExecutableLocation. This one will be removed soon.
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel
+  id: LogLevel
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: LogLevel
+  nameWithType: FirefoxOptions.LogLevel
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LogLevel
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 126
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets or sets the logging level of the Firefox driver.
+  example: []
+  syntax:
+    content: public FirefoxDriverLogLevel LogLevel { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Firefox.FirefoxDriverLogLevel
+    content.vb: Public Property LogLevel As FirefoxDriverLogLevel
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel*
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol
+  id: EnableDevToolsProtocol
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: EnableDevToolsProtocol
+  nameWithType: FirefoxOptions.EnableDevToolsProtocol
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableDevToolsProtocol
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 135
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets or sets a value indicating whether to enable the DevTools protocol for the launched browser.
+  example: []
+  syntax:
+    content: public bool EnableDevToolsProtocol { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property EnableDevToolsProtocol As Boolean
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol*
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions
+  commentId: P:OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions
+  id: AndroidOptions
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: AndroidOptions
+  nameWithType: FirefoxOptions.AndroidOptions
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AndroidOptions
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 144
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Gets or sets the options for automating Firefox on Android.
+  example: []
+  syntax:
+    content: public FirefoxAndroidOptions AndroidOptions { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Firefox.FirefoxAndroidOptions
+    content.vb: Public Property AndroidOptions As FirefoxAndroidOptions
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions*
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument(System.String)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument(System.String)
+  id: AddArgument(System.String)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: AddArgument(string)
+  nameWithType: FirefoxOptions.AddArgument(string)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddArgument
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 155
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Adds an argument to be used in launching the Firefox browser.
+  remarks: Arguments must be preceeded by two dashes ("--").
+  example: []
+  syntax:
+    content: public void AddArgument(string argumentName)
+    parameters:
+    - id: argumentName
+      type: System.String
+      description: The argument to add.
+    content.vb: Public Sub AddArgument(argumentName As String)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument*
+  nameWithType.vb: FirefoxOptions.AddArgument(String)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument(String)
+  name.vb: AddArgument(String)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.String[])
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.String[])
+  id: AddArguments(System.String[])
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: AddArguments(params string[])
+  nameWithType: FirefoxOptions.AddArguments(params string[])
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(params string[])
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddArguments
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 170
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Adds a list arguments to be used in launching the Firefox browser.
+  remarks: Each argument must be preceeded by two dashes ("--").
+  example: []
+  syntax:
+    content: public void AddArguments(params string[] argumentsToAdd)
+    parameters:
+    - id: argumentsToAdd
+      type: System.String[]
+      description: An array of arguments to add.
+    content.vb: Public Sub AddArguments(ParamArray argumentsToAdd As String())
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments*
+  nameWithType.vb: FirefoxOptions.AddArguments(ParamArray String())
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(ParamArray String())
+  name.vb: AddArguments(ParamArray String())
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.Collections.Generic.IEnumerable{System.String})
+  id: AddArguments(System.Collections.Generic.IEnumerable{System.String})
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: AddArguments(IEnumerable<string>)
+  nameWithType: FirefoxOptions.AddArguments(IEnumerable<string>)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.Collections.Generic.IEnumerable<string>)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddArguments
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 179
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Adds a list arguments to be used in launching the Firefox browser.
+  example: []
+  syntax:
+    content: public void AddArguments(IEnumerable<string> argumentsToAdd)
+    parameters:
+    - id: argumentsToAdd
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: An array of arguments to add.
+    content.vb: Public Sub AddArguments(argumentsToAdd As IEnumerable(Of String))
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments*
+  nameWithType.vb: FirefoxOptions.AddArguments(IEnumerable(Of String))
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments(System.Collections.Generic.IEnumerable(Of String))
+  name.vb: AddArguments(IEnumerable(Of String))
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Boolean)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Boolean)
+  id: SetPreference(System.String,System.Boolean)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: SetPreference(string, bool)
+  nameWithType: FirefoxOptions.SetPreference(string, bool)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(string, bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPreference
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 194
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Sets a preference in the profile used by Firefox.
+  example: []
+  syntax:
+    content: public void SetPreference(string preferenceName, bool preferenceValue)
+    parameters:
+    - id: preferenceName
+      type: System.String
+      description: Name of the preference to set.
+    - id: preferenceValue
+      type: System.Boolean
+      description: Value of the preference to set.
+    content.vb: Public Sub SetPreference(preferenceName As String, preferenceValue As Boolean)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference*
+  nameWithType.vb: FirefoxOptions.SetPreference(String, Boolean)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(String, Boolean)
+  name.vb: SetPreference(String, Boolean)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Int32)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Int32)
+  id: SetPreference(System.String,System.Int32)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: SetPreference(string, int)
+  nameWithType: FirefoxOptions.SetPreference(string, int)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(string, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPreference
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 204
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Sets a preference in the profile used by Firefox.
+  example: []
+  syntax:
+    content: public void SetPreference(string preferenceName, int preferenceValue)
+    parameters:
+    - id: preferenceName
+      type: System.String
+      description: Name of the preference to set.
+    - id: preferenceValue
+      type: System.Int32
+      description: Value of the preference to set.
+    content.vb: Public Sub SetPreference(preferenceName As String, preferenceValue As Integer)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference*
+  nameWithType.vb: FirefoxOptions.SetPreference(String, Integer)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(String, Integer)
+  name.vb: SetPreference(String, Integer)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Int64)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Int64)
+  id: SetPreference(System.String,System.Int64)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: SetPreference(string, long)
+  nameWithType: FirefoxOptions.SetPreference(string, long)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(string, long)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPreference
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 214
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Sets a preference in the profile used by Firefox.
+  example: []
+  syntax:
+    content: public void SetPreference(string preferenceName, long preferenceValue)
+    parameters:
+    - id: preferenceName
+      type: System.String
+      description: Name of the preference to set.
+    - id: preferenceValue
+      type: System.Int64
+      description: Value of the preference to set.
+    content.vb: Public Sub SetPreference(preferenceName As String, preferenceValue As Long)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference*
+  nameWithType.vb: FirefoxOptions.SetPreference(String, Long)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(String, Long)
+  name.vb: SetPreference(String, Long)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Double)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.Double)
+  id: SetPreference(System.String,System.Double)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: SetPreference(string, double)
+  nameWithType: FirefoxOptions.SetPreference(string, double)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(string, double)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPreference
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 224
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Sets a preference in the profile used by Firefox.
+  example: []
+  syntax:
+    content: public void SetPreference(string preferenceName, double preferenceValue)
+    parameters:
+    - id: preferenceName
+      type: System.String
+      description: Name of the preference to set.
+    - id: preferenceValue
+      type: System.Double
+      description: Value of the preference to set.
+    content.vb: Public Sub SetPreference(preferenceName As String, preferenceValue As Double)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference*
+  nameWithType.vb: FirefoxOptions.SetPreference(String, Double)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(String, Double)
+  name.vb: SetPreference(String, Double)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.String)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(System.String,System.String)
+  id: SetPreference(System.String,System.String)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: SetPreference(string, string)
+  nameWithType: FirefoxOptions.SetPreference(string, string)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetPreference
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 234
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Sets a preference in the profile used by Firefox.
+  example: []
+  syntax:
+    content: public void SetPreference(string preferenceName, string preferenceValue)
+    parameters:
+    - id: preferenceName
+      type: System.String
+      description: Name of the preference to set.
+    - id: preferenceValue
+      type: System.String
+      description: Value of the preference to set.
+    content.vb: Public Sub SetPreference(preferenceName As String, preferenceValue As String)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference*
+  nameWithType.vb: FirefoxOptions.SetPreference(String, String)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference(String, String)
+  name.vb: SetPreference(String, String)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable(System.String,System.String)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable(System.String,System.String)
+  id: SetEnvironmentVariable(System.String,System.String)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: SetEnvironmentVariable(string, string)
+  nameWithType: FirefoxOptions.SetEnvironmentVariable(string, string)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetEnvironmentVariable
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 244
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: Sets an environment variable to be set in the operating system's environment under which the Firerox browser is launched.
+  example: []
+  syntax:
+    content: public void SetEnvironmentVariable(string variableName, string variableValue)
+    parameters:
+    - id: variableName
+      type: System.String
+      description: The name of the environment variable.
+    - id: variableValue
+      type: System.String
+      description: The value of the environment variable.
+    content.vb: Public Sub SetEnvironmentVariable(variableName As String, variableValue As String)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable*
+  nameWithType.vb: FirefoxOptions.SetEnvironmentVariable(String, String)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable(String, String)
+  name.vb: SetEnvironmentVariable(String, String)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+  id: AddAdditionalFirefoxOption(System.String,System.Object)
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: AddAdditionalFirefoxOption(string, object)
+  nameWithType: FirefoxOptions.AddAdditionalFirefoxOption(string, object)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(string, object)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddAdditionalFirefoxOption
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 274
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: >-
+    Provides a means to add additional capabilities not yet added as type safe options
+
+    for the Firefox driver.
+  remarks: >-
+    Calling <xref href="OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String%2cSystem.Object)" data-throw-if-not-resolved="false"></xref>
+        where <code class="paramref">optionName</code> has already been added will overwrite the
+        existing value with the new value in <code class="paramref">optionValue</code>.
+        Calling this method adds capabilities to the Firefox-specific options object passed to
+        geckodriver.exe (property name 'moz:firefoxOptions').
+  example: []
+  syntax:
+    content: public void AddAdditionalFirefoxOption(string optionName, object optionValue)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: The name of the capability to add.
+    - id: optionValue
+      type: System.Object
+      description: The value of the capability to add.
+    content.vb: Public Sub AddAdditionalFirefoxOption(optionName As String, optionValue As Object)
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      thrown when attempting to add a capability for which there is already a type safe option, or
+
+      when <code class="paramref">optionName</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or the empty string.
+  nameWithType.vb: FirefoxOptions.AddAdditionalFirefoxOption(String, Object)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(String, Object)
+  name.vb: AddAdditionalFirefoxOption(String, Object)
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities
+  id: ToCapabilities
+  parent: OpenQA.Selenium.Firefox.FirefoxOptions
+  langs:
+  - csharp
+  - vb
+  name: ToCapabilities()
+  nameWithType: FirefoxOptions.ToCapabilities()
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Firefox/FirefoxOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToCapabilities
+    path: ../src/webdriver/Firefox/FirefoxOptions.cs
+    startLine: 286
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Firefox
+  summary: >-
+    Returns DesiredCapabilities for Firefox with these options included as
+
+    capabilities. This does not copy the options. Further changes will be
+
+    reflected in the returned capabilities.
+  example: []
+  syntax:
+    content: public override ICapabilities ToCapabilities()
+    return:
+      type: OpenQA.Selenium.ICapabilities
+      description: The DesiredCapabilities for Firefox with these options.
+    content.vb: Public Overrides Function ToCapabilities() As ICapabilities
+  overridden: OpenQA.Selenium.DriverOptions.ToCapabilities
+  overload: OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities*
+references:
+- uid: OpenQA.Selenium.Firefox.FirefoxDriver
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxDriver
+  href: OpenQA.Selenium.Firefox.FirefoxDriver.html
+  name: FirefoxDriver
+  nameWithType: FirefoxDriver
+  fullName: OpenQA.Selenium.Firefox.FirefoxDriver
+- uid: OpenQA.Selenium.Firefox
+  commentId: N:OpenQA.Selenium.Firefox
+  href: OpenQA.html
+  name: OpenQA.Selenium.Firefox
+  nameWithType: OpenQA.Selenium.Firefox
+  fullName: OpenQA.Selenium.Firefox
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Firefox
+    name: Firefox
+    href: OpenQA.Selenium.Firefox.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Firefox
+    name: Firefox
+    href: OpenQA.Selenium.Firefox.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DriverOptions
+  commentId: T:OpenQA.Selenium.DriverOptions
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverOptions.html
+  name: DriverOptions
+  nameWithType: DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions
+- uid: OpenQA.Selenium.DriverOptions.BrowserName
+  commentId: P:OpenQA.Selenium.DriverOptions.BrowserName
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_BrowserName
+  name: BrowserName
+  nameWithType: DriverOptions.BrowserName
+  fullName: OpenQA.Selenium.DriverOptions.BrowserName
+- uid: OpenQA.Selenium.DriverOptions.BrowserVersion
+  commentId: P:OpenQA.Selenium.DriverOptions.BrowserVersion
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_BrowserVersion
+  name: BrowserVersion
+  nameWithType: DriverOptions.BrowserVersion
+  fullName: OpenQA.Selenium.DriverOptions.BrowserVersion
+- uid: OpenQA.Selenium.DriverOptions.PlatformName
+  commentId: P:OpenQA.Selenium.DriverOptions.PlatformName
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_PlatformName
+  name: PlatformName
+  nameWithType: DriverOptions.PlatformName
+  fullName: OpenQA.Selenium.DriverOptions.PlatformName
+- uid: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  commentId: P:OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AcceptInsecureCertificates
+  name: AcceptInsecureCertificates
+  nameWithType: DriverOptions.AcceptInsecureCertificates
+  fullName: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+- uid: OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  commentId: P:OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_UseWebSocketUrl
+  name: UseWebSocketUrl
+  nameWithType: DriverOptions.UseWebSocketUrl
+  fullName: OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+- uid: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  commentId: P:OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_UnhandledPromptBehavior
+  name: UnhandledPromptBehavior
+  nameWithType: DriverOptions.UnhandledPromptBehavior
+  fullName: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+- uid: OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  commentId: P:OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_PageLoadStrategy
+  name: PageLoadStrategy
+  nameWithType: DriverOptions.PageLoadStrategy
+  fullName: OpenQA.Selenium.DriverOptions.PageLoadStrategy
+- uid: OpenQA.Selenium.DriverOptions.Proxy
+  commentId: P:OpenQA.Selenium.DriverOptions.Proxy
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_Proxy
+  name: Proxy
+  nameWithType: DriverOptions.Proxy
+  fullName: OpenQA.Selenium.DriverOptions.Proxy
+- uid: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  commentId: P:OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_UseStrictFileInteractability
+  name: UseStrictFileInteractability
+  nameWithType: DriverOptions.UseStrictFileInteractability
+  fullName: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+- uid: OpenQA.Selenium.DriverOptions.EnableDownloads
+  commentId: P:OpenQA.Selenium.DriverOptions.EnableDownloads
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_EnableDownloads
+  name: EnableDownloads
+  nameWithType: DriverOptions.EnableDownloads
+  fullName: OpenQA.Selenium.DriverOptions.EnableDownloads
+- uid: OpenQA.Selenium.DriverOptions.ScriptTimeout
+  commentId: P:OpenQA.Selenium.DriverOptions.ScriptTimeout
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ScriptTimeout
+  name: ScriptTimeout
+  nameWithType: DriverOptions.ScriptTimeout
+  fullName: OpenQA.Selenium.DriverOptions.ScriptTimeout
+- uid: OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  commentId: P:OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_PageLoadTimeout
+  name: PageLoadTimeout
+  nameWithType: DriverOptions.PageLoadTimeout
+  fullName: OpenQA.Selenium.DriverOptions.PageLoadTimeout
+- uid: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  commentId: P:OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ImplicitWaitTimeout
+  name: ImplicitWaitTimeout
+  nameWithType: DriverOptions.ImplicitWaitTimeout
+  fullName: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+- uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  commentId: M:OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  name: AddAdditionalOption(string, object)
+  nameWithType: DriverOptions.AddAdditionalOption(string, object)
+  fullName: OpenQA.Selenium.DriverOptions.AddAdditionalOption(string, object)
+  nameWithType.vb: DriverOptions.AddAdditionalOption(String, Object)
+  fullName.vb: OpenQA.Selenium.DriverOptions.AddAdditionalOption(String, Object)
+  name.vb: AddAdditionalOption(String, Object)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+    name: AddAdditionalOption
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+    name: AddAdditionalOption
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  commentId: M:OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetMergeResult_OpenQA_Selenium_DriverOptions_
+  name: GetMergeResult(DriverOptions)
+  nameWithType: DriverOptions.GetMergeResult(DriverOptions)
+  fullName: OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+    name: GetMergeResult
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetMergeResult_OpenQA_Selenium_DriverOptions_
+  - name: (
+  - uid: OpenQA.Selenium.DriverOptions
+    name: DriverOptions
+    href: OpenQA.Selenium.DriverOptions.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+    name: GetMergeResult
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetMergeResult_OpenQA_Selenium_DriverOptions_
+  - name: (
+  - uid: OpenQA.Selenium.DriverOptions
+    name: DriverOptions
+    href: OpenQA.Selenium.DriverOptions.html
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  commentId: M:OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_SetLoggingPreference_System_String_OpenQA_Selenium_LogLevel_
+  name: SetLoggingPreference(string, LogLevel)
+  nameWithType: DriverOptions.SetLoggingPreference(string, LogLevel)
+  fullName: OpenQA.Selenium.DriverOptions.SetLoggingPreference(string, OpenQA.Selenium.LogLevel)
+  nameWithType.vb: DriverOptions.SetLoggingPreference(String, LogLevel)
+  fullName.vb: OpenQA.Selenium.DriverOptions.SetLoggingPreference(String, OpenQA.Selenium.LogLevel)
+  name.vb: SetLoggingPreference(String, LogLevel)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+    name: SetLoggingPreference
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_SetLoggingPreference_System_String_OpenQA_Selenium_LogLevel_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.LogLevel
+    name: LogLevel
+    href: OpenQA.Selenium.LogLevel.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+    name: SetLoggingPreference
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_SetLoggingPreference_System_String_OpenQA_Selenium_LogLevel_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: OpenQA.Selenium.LogLevel
+    name: LogLevel
+    href: OpenQA.Selenium.LogLevel.html
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.ToString
+  commentId: M:OpenQA.Selenium.DriverOptions.ToString
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToString
+  name: ToString()
+  nameWithType: DriverOptions.ToString()
+  fullName: OpenQA.Selenium.DriverOptions.ToString()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.ToString
+    name: ToString
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.ToString
+    name: ToString
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToString
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ValidateCapabilityName_System_String_
+  name: ValidateCapabilityName(string)
+  nameWithType: DriverOptions.ValidateCapabilityName(string)
+  fullName: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(string)
+  nameWithType.vb: DriverOptions.ValidateCapabilityName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(String)
+  name.vb: ValidateCapabilityName(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+    name: ValidateCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ValidateCapabilityName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+    name: ValidateCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ValidateCapabilityName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddKnownCapabilityName_System_String_System_String_
+  name: AddKnownCapabilityName(string, string)
+  nameWithType: DriverOptions.AddKnownCapabilityName(string, string)
+  fullName: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(string, string)
+  nameWithType.vb: DriverOptions.AddKnownCapabilityName(String, String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(String, String)
+  name.vb: AddKnownCapabilityName(String, String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+    name: AddKnownCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddKnownCapabilityName_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+    name: AddKnownCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddKnownCapabilityName_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_RemoveKnownCapabilityName_System_String_
+  name: RemoveKnownCapabilityName(string)
+  nameWithType: DriverOptions.RemoveKnownCapabilityName(string)
+  fullName: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(string)
+  nameWithType.vb: DriverOptions.RemoveKnownCapabilityName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(String)
+  name.vb: RemoveKnownCapabilityName(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+    name: RemoveKnownCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_RemoveKnownCapabilityName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+    name: RemoveKnownCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_RemoveKnownCapabilityName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_IsKnownCapabilityName_System_String_
+  name: IsKnownCapabilityName(string)
+  nameWithType: DriverOptions.IsKnownCapabilityName(string)
+  fullName: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(string)
+  nameWithType.vb: DriverOptions.IsKnownCapabilityName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(String)
+  name.vb: IsKnownCapabilityName(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+    name: IsKnownCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_IsKnownCapabilityName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+    name: IsKnownCapabilityName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_IsKnownCapabilityName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetTypeSafeOptionName_System_String_
+  name: GetTypeSafeOptionName(string)
+  nameWithType: DriverOptions.GetTypeSafeOptionName(string)
+  fullName: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(string)
+  nameWithType.vb: DriverOptions.GetTypeSafeOptionName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(String)
+  name.vb: GetTypeSafeOptionName(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+    name: GetTypeSafeOptionName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetTypeSafeOptionName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+    name: GetTypeSafeOptionName
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetTypeSafeOptionName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  commentId: M:OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateLoggingPreferencesDictionary
+  name: GenerateLoggingPreferencesDictionary()
+  nameWithType: DriverOptions.GenerateLoggingPreferencesDictionary()
+  fullName: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+    name: GenerateLoggingPreferencesDictionary
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateLoggingPreferencesDictionary
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+    name: GenerateLoggingPreferencesDictionary
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateLoggingPreferencesDictionary
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+  commentId: M:OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateDesiredCapabilities_System_Boolean_
+  name: GenerateDesiredCapabilities(bool)
+  nameWithType: DriverOptions.GenerateDesiredCapabilities(bool)
+  fullName: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(bool)
+  nameWithType.vb: DriverOptions.GenerateDesiredCapabilities(Boolean)
+  fullName.vb: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(Boolean)
+  name.vb: GenerateDesiredCapabilities(Boolean)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+    name: GenerateDesiredCapabilities
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateDesiredCapabilities_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+    name: GenerateDesiredCapabilities
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateDesiredCapabilities_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxOptions
+  parent: OpenQA.Selenium.Firefox
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html
+  name: FirefoxOptions
+  nameWithType: FirefoxOptions
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.#ctor*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.#ctor
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions__ctor
+  name: FirefoxOptions
+  nameWithType: FirefoxOptions.FirefoxOptions
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.FirefoxOptions
+  nameWithType.vb: FirefoxOptions.New
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.New
+  name.vb: New
+- uid: OpenQA.Selenium.Firefox.FirefoxProfile
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxProfile
+  parent: OpenQA.Selenium.Firefox
+  href: OpenQA.Selenium.Firefox.FirefoxProfile.html
+  name: FirefoxProfile
+  nameWithType: FirefoxProfile
+  fullName: OpenQA.Selenium.Firefox.FirefoxProfile
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.Profile*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.Profile
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_Profile
+  name: Profile
+  nameWithType: FirefoxOptions.Profile
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.Profile
+- uid: OpenQA.Selenium.DriverOptions.BinaryLocation
+  commentId: P:OpenQA.Selenium.DriverOptions.BinaryLocation
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_BinaryLocation
+  name: BinaryLocation
+  nameWithType: DriverOptions.BinaryLocation
+  fullName: OpenQA.Selenium.DriverOptions.BinaryLocation
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_BinaryLocation
+  name: BinaryLocation
+  nameWithType: FirefoxOptions.BinaryLocation
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.BinaryLocation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_BrowserExecutableLocation
+  name: BrowserExecutableLocation
+  nameWithType: FirefoxOptions.BrowserExecutableLocation
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.BrowserExecutableLocation
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_LogLevel
+  name: LogLevel
+  nameWithType: FirefoxOptions.LogLevel
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.LogLevel
+- uid: OpenQA.Selenium.Firefox.FirefoxDriverLogLevel
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxDriverLogLevel
+  parent: OpenQA.Selenium.Firefox
+  href: OpenQA.Selenium.Firefox.FirefoxDriverLogLevel.html
+  name: FirefoxDriverLogLevel
+  nameWithType: FirefoxDriverLogLevel
+  fullName: OpenQA.Selenium.Firefox.FirefoxDriverLogLevel
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_EnableDevToolsProtocol
+  name: EnableDevToolsProtocol
+  nameWithType: FirefoxOptions.EnableDevToolsProtocol
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.EnableDevToolsProtocol
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AndroidOptions
+  name: AndroidOptions
+  nameWithType: FirefoxOptions.AndroidOptions
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AndroidOptions
+- uid: OpenQA.Selenium.Firefox.FirefoxAndroidOptions
+  commentId: T:OpenQA.Selenium.Firefox.FirefoxAndroidOptions
+  parent: OpenQA.Selenium.Firefox
+  href: OpenQA.Selenium.Firefox.FirefoxAndroidOptions.html
+  name: FirefoxAndroidOptions
+  nameWithType: FirefoxAndroidOptions
+  fullName: OpenQA.Selenium.Firefox.FirefoxAndroidOptions
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AddArgument_System_String_
+  name: AddArgument
+  nameWithType: FirefoxOptions.AddArgument
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddArgument
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AddArguments_System_String___
+  name: AddArguments
+  nameWithType: FirefoxOptions.AddArguments
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddArguments
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<string>
+  nameWithType: IEnumerable<string>
+  fullName: System.Collections.Generic.IEnumerable<string>
+  nameWithType.vb: IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_SetPreference_System_String_System_Boolean_
+  name: SetPreference
+  nameWithType: FirefoxOptions.SetPreference
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetPreference
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_SetEnvironmentVariable_System_String_System_String_
+  name: SetEnvironmentVariable
+  nameWithType: FirefoxOptions.SetEnvironmentVariable
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.SetEnvironmentVariable
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+  commentId: M:OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+  isExternal: true
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AddAdditionalFirefoxOption_System_String_System_Object_
+  name: AddAdditionalFirefoxOption(string, object)
+  nameWithType: FirefoxOptions.AddAdditionalFirefoxOption(string, object)
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(string, object)
+  nameWithType.vb: FirefoxOptions.AddAdditionalFirefoxOption(String, Object)
+  fullName.vb: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(String, Object)
+  name.vb: AddAdditionalFirefoxOption(String, Object)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+    name: AddAdditionalFirefoxOption
+    href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AddAdditionalFirefoxOption_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption(System.String,System.Object)
+    name: AddAdditionalFirefoxOption
+    href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AddAdditionalFirefoxOption_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_AddAdditionalFirefoxOption_System_String_System_Object_
+  name: AddAdditionalFirefoxOption
+  nameWithType: FirefoxOptions.AddAdditionalFirefoxOption
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.AddAdditionalFirefoxOption
+- uid: OpenQA.Selenium.DriverOptions.ToCapabilities
+  commentId: M:OpenQA.Selenium.DriverOptions.ToCapabilities
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToCapabilities
+  name: ToCapabilities()
+  nameWithType: DriverOptions.ToCapabilities()
+  fullName: OpenQA.Selenium.DriverOptions.ToCapabilities()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.ToCapabilities
+    name: ToCapabilities
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToCapabilities
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.ToCapabilities
+    name: ToCapabilities
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToCapabilities
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities*
+  commentId: Overload:OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities
+  href: OpenQA.Selenium.Firefox.FirefoxOptions.html#OpenQA_Selenium_Firefox_FirefoxOptions_ToCapabilities
+  name: ToCapabilities
+  nameWithType: FirefoxOptions.ToCapabilities
+  fullName: OpenQA.Selenium.Firefox.FirefoxOptions.ToCapabilities
+- uid: OpenQA.Selenium.ICapabilities
+  commentId: T:OpenQA.Selenium.ICapabilities
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ICapabilities.html
+  name: ICapabilities
+  nameWithType: ICapabilities
+  fullName: OpenQA.Selenium.ICapabilities

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  commentId: T:OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  id: StreamFormat
+  parent: OpenQA.Selenium.DevTools.V125.Tracing
+  children:
+  - OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Json
+  - OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Proto
+  langs:
+  - csharp
+  - vb
+  name: StreamFormat
+  nameWithType: StreamFormat
+  fullName: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Tracing/StreamFormat.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StreamFormat
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Tracing/StreamFormat.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Tracing
+  summary: >-
+    Data format of a trace. Can be either the legacy JSON format or the
+
+    protocol buffer format. Note that the JSON format will be deprecated soon.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum StreamFormat
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum StreamFormat
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Json
+  commentId: F:OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Json
+  id: Json
+  parent: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  langs:
+  - csharp
+  - vb
+  name: Json
+  nameWithType: StreamFormat.Json
+  fullName: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Json
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Tracing/StreamFormat.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Json
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Tracing/StreamFormat.cs
+    startLine: 17
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Tracing
+  summary: Enumerated member for the json value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "json")]
+
+      Json = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+    content.vb: >-
+      <EnumMember(Value:="json")>
+
+      Json = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: json
+- uid: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Proto
+  commentId: F:OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Proto
+  id: Proto
+  parent: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  langs:
+  - csharp
+  - vb
+  name: Proto
+  nameWithType: StreamFormat.Proto
+  fullName: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.Proto
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Tracing/StreamFormat.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Proto
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Tracing/StreamFormat.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Tracing
+  summary: Enumerated member for the proto value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "proto")]
+
+      Proto = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+    content.vb: >-
+      <EnumMember(Value:="proto")>
+
+      Proto = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: proto
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Tracing
+  commentId: N:OpenQA.Selenium.DevTools.V125.Tracing
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Tracing
+  nameWithType: OpenQA.Selenium.DevTools.V125.Tracing
+  fullName: OpenQA.Selenium.DevTools.V125.Tracing
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Tracing
+    name: Tracing
+    href: OpenQA.Selenium.DevTools.V125.Tracing.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Tracing
+    name: Tracing
+    href: OpenQA.Selenium.DevTools.V125.Tracing.html
+- uid: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  commentId: T:OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat
+  parent: OpenQA.Selenium.DevTools.V125.Tracing
+  href: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat.html
+  name: StreamFormat
+  nameWithType: StreamFormat
+  fullName: OpenQA.Selenium.DevTools.V125.Tracing.StreamFormat

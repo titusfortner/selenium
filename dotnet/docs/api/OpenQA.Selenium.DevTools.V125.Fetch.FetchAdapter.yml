@@ -1,0 +1,1631 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  id: FetchAdapter
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  children:
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.AuthRequired
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest(OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse(OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth(OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable(OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable(OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest(OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest(OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody(OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.RequestPaused
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session
+  - OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream(OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: FetchAdapter
+  nameWithType: FetchAdapter
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FetchAdapter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Represents an adapter for the Fetch domain to simplify the command interface.
+  example: []
+  syntax:
+    content: public class FetchAdapter
+    content.vb: Public Class FetchAdapter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)
+  id: '#ctor(OpenQA.Selenium.DevTools.IDevToolsSession)'
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: FetchAdapter(IDevToolsSession)
+  nameWithType: FetchAdapter.FetchAdapter(IDevToolsSession)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FetchAdapter(OpenQA.Selenium.DevTools.IDevToolsSession)
+  type: Constructor
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Initializes a new instance of the FetchAdapter class.
+  example: []
+  syntax:
+    content: public FetchAdapter(IDevToolsSession session)
+    parameters:
+    - id: session
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+      description: The IDevToolsSession to be used with this adapter.
+    content.vb: Public Sub New(session As IDevToolsSession)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.#ctor*
+  nameWithType.vb: FetchAdapter.New(IDevToolsSession)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.New(OpenQA.Selenium.DevTools.IDevToolsSession)
+  name.vb: New(IDevToolsSession)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session
+  commentId: P:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session
+  id: Session
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: Session
+  nameWithType: FetchAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Session
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Gets the DevToolsSession associated with the adapter.
+  example: []
+  syntax:
+    content: public IDevToolsSession Session { get; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.IDevToolsSession
+    content.vb: Public ReadOnly Property Session As IDevToolsSession
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session*
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.RequestPaused
+  commentId: E:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.RequestPaused
+  id: RequestPaused
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: RequestPaused
+  nameWithType: FetchAdapter.RequestPaused
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.RequestPaused
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestPaused
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Issued when the domain is enabled and the request URL matches the
+
+    specified filter. The request is paused until the client responds
+
+    with one of continueRequest, failRequest or fulfillRequest.
+
+    The stage of the request can be determined by presence of responseErrorReason
+
+    and responseStatusCode -- the request is at the response stage if either
+
+    of these fields is present and in the request stage otherwise.
+
+    Redirect responses and subsequent requests are reported similarly to regular
+
+    responses and requests. Redirect responses may be distinguished by the value
+
+    of `responseStatusCode` (which is one of 301, 302, 303, 307, 308) along with
+
+    presence of the `location` header. Requests resulting from a redirect will
+
+    have `redirectedRequestId` field set.
+  example: []
+  syntax:
+    content: public event EventHandler<RequestPausedEventArgs> RequestPaused
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs}
+    content.vb: Public Event RequestPaused As EventHandler(Of RequestPausedEventArgs)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.AuthRequired
+  commentId: E:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.AuthRequired
+  id: AuthRequired
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: AuthRequired
+  nameWithType: FetchAdapter.AuthRequired
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.AuthRequired
+  type: Event
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AuthRequired
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 55
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Issued when the domain is enabled with handleAuthRequests set to true.
+
+    The request is paused until client responds with continueWithAuth.
+  example: []
+  syntax:
+    content: public event EventHandler<AuthRequiredEventArgs> AuthRequired
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs}
+    content.vb: Public Event AuthRequired As EventHandler(Of AuthRequiredEventArgs)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable(OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable(OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Disable(OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.Disable(DisableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable(OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Disable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 60
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Disables the fetch domain.
+  example: []
+  syntax:
+    content: public Task<DisableCommandResponse> Disable(DisableCommandSettings command = null, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse}
+    content.vb: Public Function Disable(command As DisableCommandSettings = Nothing, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of DisableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable*
+  nameWithType.vb: FetchAdapter.Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable(OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Disable(DisableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable(OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable(OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: Enable(OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.Enable(EnableCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable(OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Enables issuing of requestPaused events. A request will be paused until client
+
+    calls one of failRequest, fulfillRequest or continueRequest/continueWithAuth.
+  example: []
+  syntax:
+    content: public Task<EnableCommandResponse> Enable(EnableCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse}
+    content.vb: Public Function Enable(command As EnableCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of EnableCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable*
+  nameWithType.vb: FetchAdapter.Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable(OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: Enable(EnableCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest(OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest(OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: FailRequest(OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: FailRequest(FailRequestCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.FailRequest(FailRequestCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest(OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FailRequest
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Causes the request to fail with specified reason.
+  example: []
+  syntax:
+    content: public Task<FailRequestCommandResponse> FailRequest(FailRequestCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse}
+    content.vb: Public Function FailRequest(command As FailRequestCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of FailRequestCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest*
+  nameWithType.vb: FetchAdapter.FailRequest(FailRequestCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest(OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: FailRequest(FailRequestCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest(OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest(OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: FulfillRequest(OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: FulfillRequest(FulfillRequestCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.FulfillRequest(FulfillRequestCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest(OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FulfillRequest
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 82
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Provides response to the request.
+  example: []
+  syntax:
+    content: public Task<FulfillRequestCommandResponse> FulfillRequest(FulfillRequestCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse}
+    content.vb: Public Function FulfillRequest(command As FulfillRequestCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of FulfillRequestCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest*
+  nameWithType.vb: FetchAdapter.FulfillRequest(FulfillRequestCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest(OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: FulfillRequest(FulfillRequestCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest(OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest(OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ContinueRequest(OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: ContinueRequest(ContinueRequestCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.ContinueRequest(ContinueRequestCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest(OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueRequest
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 89
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Continues the request, optionally modifying some of its parameters.
+  example: []
+  syntax:
+    content: public Task<ContinueRequestCommandResponse> ContinueRequest(ContinueRequestCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse}
+    content.vb: Public Function ContinueRequest(command As ContinueRequestCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ContinueRequestCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest*
+  nameWithType.vb: FetchAdapter.ContinueRequest(ContinueRequestCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest(OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ContinueRequest(ContinueRequestCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth(OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth(OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ContinueWithAuth(OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: ContinueWithAuth(ContinueWithAuthCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.ContinueWithAuth(ContinueWithAuthCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth(OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueWithAuth
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 96
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Continues a request supplying authChallengeResponse following authRequired event.
+  example: []
+  syntax:
+    content: public Task<ContinueWithAuthCommandResponse> ContinueWithAuth(ContinueWithAuthCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse}
+    content.vb: Public Function ContinueWithAuth(command As ContinueWithAuthCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ContinueWithAuthCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth*
+  nameWithType.vb: FetchAdapter.ContinueWithAuth(ContinueWithAuthCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth(OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ContinueWithAuth(ContinueWithAuthCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse(OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse(OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: ContinueResponse(OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: ContinueResponse(ContinueResponseCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.ContinueResponse(ContinueResponseCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse(OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContinueResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 105
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Continues loading of the paused response, optionally modifying the
+
+    response headers. If either responseCode or headers are modified, all of them
+
+    must be present.
+  example: []
+  syntax:
+    content: public Task<ContinueResponseCommandResponse> ContinueResponse(ContinueResponseCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse}
+    content.vb: Public Function ContinueResponse(command As ContinueResponseCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of ContinueResponseCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse*
+  nameWithType.vb: FetchAdapter.ContinueResponse(ContinueResponseCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse(OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: ContinueResponse(ContinueResponseCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody(OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody(OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: GetResponseBody(OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: GetResponseBody(GetResponseBodyCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.GetResponseBody(GetResponseBodyCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody(OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetResponseBody
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 121
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Causes the body of the response to be received from the server and
+
+    returned as a single string. May only be issued for a request that
+
+    is paused in the Response stage and is mutually exclusive with
+
+    takeResponseBodyForInterceptionAsStream. Calling other methods that
+
+    affect the request or disabling fetch domain before body is received
+
+    results in an undefined behavior.
+
+    Note that the response body is not available for redirects. Requests
+
+    paused in the _redirect received_ state may be differentiated by
+
+    `responseCode` and presence of `location` response header, see
+
+    comments to `requestPaused` for details.
+  example: []
+  syntax:
+    content: public Task<GetResponseBodyCommandResponse> GetResponseBody(GetResponseBodyCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse}
+    content.vb: Public Function GetResponseBody(command As GetResponseBodyCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of GetResponseBodyCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody*
+  nameWithType.vb: FetchAdapter.GetResponseBody(GetResponseBodyCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody(OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: GetResponseBody(GetResponseBodyCommandSettings, CancellationToken, Integer?, Boolean)
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream(OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  commentId: M:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream(OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  id: TakeResponseBodyAsStream(OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings,System.Threading.CancellationToken,System.Nullable{System.Int32},System.Boolean)
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter
+  langs:
+  - csharp
+  - vb
+  name: TakeResponseBodyAsStream(TakeResponseBodyAsStreamCommandSettings, CancellationToken, int?, bool)
+  nameWithType: FetchAdapter.TakeResponseBodyAsStream(TakeResponseBodyAsStreamCommandSettings, CancellationToken, int?, bool)
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream(OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings, System.Threading.CancellationToken, int?, bool)
+  type: Method
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TakeResponseBodyAsStream
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/FetchAdapter.cs
+    startLine: 137
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Returns a handle to the stream representing the response body.
+
+    The request must be paused in the HeadersReceived stage.
+
+    Note that after this command the request can't be continued
+
+    as is -- client either needs to cancel it or to provide the
+
+    response body.
+
+    The stream only supports sequential read, IO.read will fail if the position
+
+    is specified.
+
+    This method is mutually exclusive with getResponseBody.
+
+    Calling other methods that affect the request or disabling fetch
+
+    domain before body is received results in an undefined behavior.
+  example: []
+  syntax:
+    content: public Task<TakeResponseBodyAsStreamCommandResponse> TakeResponseBodyAsStream(TakeResponseBodyAsStreamCommandSettings command, CancellationToken cancellationToken = default, int? millisecondsTimeout = null, bool throwExceptionIfResponseNotReceived = true)
+    parameters:
+    - id: command
+      type: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    - id: millisecondsTimeout
+      type: System.Nullable{System.Int32}
+    - id: throwExceptionIfResponseNotReceived
+      type: System.Boolean
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse}
+    content.vb: Public Function TakeResponseBodyAsStream(command As TakeResponseBodyAsStreamCommandSettings, cancellationToken As CancellationToken = Nothing, millisecondsTimeout As Integer? = Nothing, throwExceptionIfResponseNotReceived As Boolean = True) As Task(Of TakeResponseBodyAsStreamCommandResponse)
+  overload: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream*
+  nameWithType.vb: FetchAdapter.TakeResponseBodyAsStream(TakeResponseBodyAsStreamCommandSettings, CancellationToken, Integer?, Boolean)
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream(OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings, System.Threading.CancellationToken, Integer?, Boolean)
+  name.vb: TakeResponseBodyAsStream(TakeResponseBodyAsStreamCommandSettings, CancellationToken, Integer?, Boolean)
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Fetch
+  commentId: N:OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Fetch
+  nameWithType: OpenQA.Selenium.DevTools.V125.Fetch
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V125.Fetch.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V125.Fetch.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.#ctor*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.#ctor
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter__ctor_OpenQA_Selenium_DevTools_IDevToolsSession_
+  name: FetchAdapter
+  nameWithType: FetchAdapter.FetchAdapter
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FetchAdapter
+  nameWithType.vb: FetchAdapter.New
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.New
+  name.vb: New
+- uid: OpenQA.Selenium.DevTools.IDevToolsSession
+  commentId: T:OpenQA.Selenium.DevTools.IDevToolsSession
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.IDevToolsSession.html
+  name: IDevToolsSession
+  nameWithType: IDevToolsSession
+  fullName: OpenQA.Selenium.DevTools.IDevToolsSession
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_Session
+  name: Session
+  nameWithType: FetchAdapter.Session
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Session
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<RequestPausedEventArgs>
+  nameWithType: EventHandler<RequestPausedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs>
+  nameWithType.vb: EventHandler(Of RequestPausedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs)
+  name.vb: EventHandler(Of RequestPausedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs
+    name: RequestPausedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs
+    name: RequestPausedEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Fetch.RequestPausedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.EventHandler{OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<AuthRequiredEventArgs>
+  nameWithType: EventHandler<AuthRequiredEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs>
+  nameWithType.vb: EventHandler(Of AuthRequiredEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs)
+  name.vb: EventHandler(Of AuthRequiredEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs
+    name: AuthRequiredEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs
+    name: AuthRequiredEventArgs
+    href: OpenQA.Selenium.DevTools.V125.Fetch.AuthRequiredEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_Disable_OpenQA_Selenium_DevTools_V125_Fetch_DisableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Disable
+  nameWithType: FetchAdapter.Disable
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Disable
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings.html
+  name: DisableCommandSettings
+  nameWithType: DisableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandSettings
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<DisableCommandResponse>
+  nameWithType: Task<DisableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse>
+  nameWithType.vb: Task(Of DisableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse)
+  name.vb: Task(Of DisableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse
+    name: DisableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.DisableCommandResponse.html
+  - name: )
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_Enable_OpenQA_Selenium_DevTools_V125_Fetch_EnableCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: Enable
+  nameWithType: FetchAdapter.Enable
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.Enable
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings.html
+  name: EnableCommandSettings
+  nameWithType: EnableCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<EnableCommandResponse>
+  nameWithType: Task<EnableCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse>
+  nameWithType.vb: Task(Of EnableCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse)
+  name.vb: Task(Of EnableCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse
+    name: EnableCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.EnableCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_FailRequest_OpenQA_Selenium_DevTools_V125_Fetch_FailRequestCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: FailRequest
+  nameWithType: FetchAdapter.FailRequest
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FailRequest
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings.html
+  name: FailRequestCommandSettings
+  nameWithType: FailRequestCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<FailRequestCommandResponse>
+  nameWithType: Task<FailRequestCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse>
+  nameWithType.vb: Task(Of FailRequestCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse)
+  name.vb: Task(Of FailRequestCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse
+    name: FailRequestCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse
+    name: FailRequestCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.FailRequestCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_FulfillRequest_OpenQA_Selenium_DevTools_V125_Fetch_FulfillRequestCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: FulfillRequest
+  nameWithType: FetchAdapter.FulfillRequest
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.FulfillRequest
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings.html
+  name: FulfillRequestCommandSettings
+  nameWithType: FulfillRequestCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<FulfillRequestCommandResponse>
+  nameWithType: Task<FulfillRequestCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse>
+  nameWithType.vb: Task(Of FulfillRequestCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse)
+  name.vb: Task(Of FulfillRequestCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse
+    name: FulfillRequestCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse
+    name: FulfillRequestCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.FulfillRequestCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_ContinueRequest_OpenQA_Selenium_DevTools_V125_Fetch_ContinueRequestCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ContinueRequest
+  nameWithType: FetchAdapter.ContinueRequest
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueRequest
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings.html
+  name: ContinueRequestCommandSettings
+  nameWithType: ContinueRequestCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ContinueRequestCommandResponse>
+  nameWithType: Task<ContinueRequestCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse>
+  nameWithType.vb: Task(Of ContinueRequestCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse)
+  name.vb: Task(Of ContinueRequestCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse
+    name: ContinueRequestCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse
+    name: ContinueRequestCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueRequestCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_ContinueWithAuth_OpenQA_Selenium_DevTools_V125_Fetch_ContinueWithAuthCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ContinueWithAuth
+  nameWithType: FetchAdapter.ContinueWithAuth
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueWithAuth
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings.html
+  name: ContinueWithAuthCommandSettings
+  nameWithType: ContinueWithAuthCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ContinueWithAuthCommandResponse>
+  nameWithType: Task<ContinueWithAuthCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse>
+  nameWithType.vb: Task(Of ContinueWithAuthCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse)
+  name.vb: Task(Of ContinueWithAuthCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse
+    name: ContinueWithAuthCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse
+    name: ContinueWithAuthCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueWithAuthCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_ContinueResponse_OpenQA_Selenium_DevTools_V125_Fetch_ContinueResponseCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: ContinueResponse
+  nameWithType: FetchAdapter.ContinueResponse
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.ContinueResponse
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings.html
+  name: ContinueResponseCommandSettings
+  nameWithType: ContinueResponseCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<ContinueResponseCommandResponse>
+  nameWithType: Task<ContinueResponseCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse>
+  nameWithType.vb: Task(Of ContinueResponseCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse)
+  name.vb: Task(Of ContinueResponseCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse
+    name: ContinueResponseCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse
+    name: ContinueResponseCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.ContinueResponseCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_GetResponseBody_OpenQA_Selenium_DevTools_V125_Fetch_GetResponseBodyCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: GetResponseBody
+  nameWithType: FetchAdapter.GetResponseBody
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.GetResponseBody
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings.html
+  name: GetResponseBodyCommandSettings
+  nameWithType: GetResponseBodyCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GetResponseBodyCommandResponse>
+  nameWithType: Task<GetResponseBodyCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse>
+  nameWithType.vb: Task(Of GetResponseBodyCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse)
+  name.vb: Task(Of GetResponseBodyCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse
+    name: GetResponseBodyCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse
+    name: GetResponseBodyCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.GetResponseBodyCommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream
+  href: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.html#OpenQA_Selenium_DevTools_V125_Fetch_FetchAdapter_TakeResponseBodyAsStream_OpenQA_Selenium_DevTools_V125_Fetch_TakeResponseBodyAsStreamCommandSettings_System_Threading_CancellationToken_System_Nullable_System_Int32__System_Boolean_
+  name: TakeResponseBodyAsStream
+  nameWithType: FetchAdapter.TakeResponseBodyAsStream
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.FetchAdapter.TakeResponseBodyAsStream
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings.html
+  name: TakeResponseBodyAsStreamCommandSettings
+  nameWithType: TakeResponseBodyAsStreamCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandSettings
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TakeResponseBodyAsStreamCommandResponse>
+  nameWithType: Task<TakeResponseBodyAsStreamCommandResponse>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse>
+  nameWithType.vb: Task(Of TakeResponseBodyAsStreamCommandResponse)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse)
+  name.vb: Task(Of TakeResponseBodyAsStreamCommandResponse)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse
+    name: TakeResponseBodyAsStreamCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse
+    name: TakeResponseBodyAsStreamCommandResponse
+    href: OpenQA.Selenium.DevTools.V125.Fetch.TakeResponseBodyAsStreamCommandResponse.html
+  - name: )

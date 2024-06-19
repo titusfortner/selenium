@@ -1,0 +1,539 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  id: DownloadProgressEventArgs
+  parent: OpenQA.Selenium.DevTools.V126.Browser
+  children:
+  - OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid
+  - OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes
+  - OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State
+  - OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes
+  langs:
+  - csharp
+  - vb
+  name: DownloadProgressEventArgs
+  nameWithType: DownloadProgressEventArgs
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DownloadProgressEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Browser
+  summary: Fired when download makes progress. Last call has |done| == true.
+  example: []
+  syntax:
+    content: 'public sealed class DownloadProgressEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class DownloadProgressEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid
+  commentId: P:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid
+  id: Guid
+  parent: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  langs:
+  - csharp
+  - vb
+  name: Guid
+  nameWithType: DownloadProgressEventArgs.Guid
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Guid
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Browser
+  summary: Global unique identifier of the download.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("guid")]
+
+      public string Guid { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("guid")>
+
+      Public Property Guid As String
+  overload: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: guid
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes
+  commentId: P:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes
+  id: TotalBytes
+  parent: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  langs:
+  - csharp
+  - vb
+  name: TotalBytes
+  nameWithType: DownloadProgressEventArgs.TotalBytes
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TotalBytes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Browser
+  summary: Total expected bytes to download.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("totalBytes")]
+
+      public double TotalBytes { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("totalBytes")>
+
+      Public Property TotalBytes As Double
+  overload: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: totalBytes
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes
+  commentId: P:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes
+  id: ReceivedBytes
+  parent: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ReceivedBytes
+  nameWithType: DownloadProgressEventArgs.ReceivedBytes
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReceivedBytes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Browser
+  summary: Total bytes received.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("receivedBytes")]
+
+      public double ReceivedBytes { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("receivedBytes")>
+
+      Public Property ReceivedBytes As Double
+  overload: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: receivedBytes
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State
+  commentId: P:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State
+  id: State
+  parent: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: DownloadProgressEventArgs.State
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: State
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Browser/DownloadProgressEventArgs.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Browser
+  summary: Download status.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("state")]
+
+      public string State { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("state")>
+
+      Public Property State As String
+  overload: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: state
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Browser
+  commentId: N:OpenQA.Selenium.DevTools.V126.Browser
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Browser
+  nameWithType: OpenQA.Selenium.DevTools.V126.Browser
+  fullName: OpenQA.Selenium.DevTools.V126.Browser
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Browser
+    name: Browser
+    href: OpenQA.Selenium.DevTools.V126.Browser.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Browser
+    name: Browser
+    href: OpenQA.Selenium.DevTools.V126.Browser.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid
+  href: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.html#OpenQA_Selenium_DevTools_V126_Browser_DownloadProgressEventArgs_Guid
+  name: Guid
+  nameWithType: DownloadProgressEventArgs.Guid
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.Guid
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes
+  href: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.html#OpenQA_Selenium_DevTools_V126_Browser_DownloadProgressEventArgs_TotalBytes
+  name: TotalBytes
+  nameWithType: DownloadProgressEventArgs.TotalBytes
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.TotalBytes
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes
+  href: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.html#OpenQA_Selenium_DevTools_V126_Browser_DownloadProgressEventArgs_ReceivedBytes
+  name: ReceivedBytes
+  nameWithType: DownloadProgressEventArgs.ReceivedBytes
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.ReceivedBytes
+- uid: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State
+  href: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.html#OpenQA_Selenium_DevTools_V126_Browser_DownloadProgressEventArgs_State
+  name: State
+  nameWithType: DownloadProgressEventArgs.State
+  fullName: OpenQA.Selenium.DevTools.V126.Browser.DownloadProgressEventArgs.State

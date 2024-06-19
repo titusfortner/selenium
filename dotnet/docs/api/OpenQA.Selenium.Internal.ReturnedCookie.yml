@@ -1,0 +1,723 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Internal.ReturnedCookie
+  commentId: T:OpenQA.Selenium.Internal.ReturnedCookie
+  id: ReturnedCookie
+  parent: OpenQA.Selenium.Internal
+  children:
+  - OpenQA.Selenium.Internal.ReturnedCookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean)
+  - OpenQA.Selenium.Internal.ReturnedCookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)
+  - OpenQA.Selenium.Internal.ReturnedCookie.ToString
+  langs:
+  - csharp
+  - vb
+  name: ReturnedCookie
+  nameWithType: ReturnedCookie
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/ReturnedCookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReturnedCookie
+    path: ../src/webdriver/Internal/ReturnedCookie.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal
+  summary: Represents a cookie returned to the driver by the browser.
+  example: []
+  syntax:
+    content: 'public class ReturnedCookie : Cookie'
+    content.vb: Public Class ReturnedCookie Inherits Cookie
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.Cookie
+  inheritedMembers:
+  - OpenQA.Selenium.Cookie.Name
+  - OpenQA.Selenium.Cookie.Value
+  - OpenQA.Selenium.Cookie.Domain
+  - OpenQA.Selenium.Cookie.Path
+  - OpenQA.Selenium.Cookie.Secure
+  - OpenQA.Selenium.Cookie.IsHttpOnly
+  - OpenQA.Selenium.Cookie.SameSite
+  - OpenQA.Selenium.Cookie.Expiry
+  - OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  - OpenQA.Selenium.Cookie.Equals(System.Object)
+  - OpenQA.Selenium.Cookie.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.Internal.ReturnedCookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean)
+  commentId: M:OpenQA.Selenium.Internal.ReturnedCookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean)'
+  parent: OpenQA.Selenium.Internal.ReturnedCookie
+  langs:
+  - csharp
+  - vb
+  name: ReturnedCookie(string, string, string, string, DateTime?, bool, bool)
+  nameWithType: ReturnedCookie.ReturnedCookie(string, string, string, string, DateTime?, bool, bool)
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie.ReturnedCookie(string, string, string, string, System.DateTime?, bool, bool)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/ReturnedCookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Internal/ReturnedCookie.cs
+    startLine: 43
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Internal.ReturnedCookie" data-throw-if-not-resolved="false"></xref> class with a specific name,
+
+    value, domain, path and expiration date.
+  example: []
+  syntax:
+    content: public ReturnedCookie(string name, string value, string domain, string path, DateTime? expiry, bool isSecure, bool isHttpOnly)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    - id: domain
+      type: System.String
+      description: The domain of the cookie.
+    - id: path
+      type: System.String
+      description: The path of the cookie.
+    - id: expiry
+      type: System.Nullable{System.DateTime}
+      description: The expiration date of the cookie.
+    - id: isSecure
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the cookie is secure; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+    - id: isHttpOnly
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the cookie is an HTTP-only cookie; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+    content.vb: Public Sub New(name As String, value As String, domain As String, path As String, expiry As Date?, isSecure As Boolean, isHttpOnly As Boolean)
+  overload: OpenQA.Selenium.Internal.ReturnedCookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty string,
+          or if it contains a semi-colon.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the value or currentUrl is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: ReturnedCookie.New(String, String, String, String, Date?, Boolean, Boolean)
+  fullName.vb: OpenQA.Selenium.Internal.ReturnedCookie.New(String, String, String, String, Date?, Boolean, Boolean)
+  name.vb: New(String, String, String, String, Date?, Boolean, Boolean)
+- uid: OpenQA.Selenium.Internal.ReturnedCookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)
+  commentId: M:OpenQA.Selenium.Internal.ReturnedCookie.#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Boolean,System.Boolean,System.String)'
+  parent: OpenQA.Selenium.Internal.ReturnedCookie
+  langs:
+  - csharp
+  - vb
+  name: ReturnedCookie(string, string, string, string, DateTime?, bool, bool, string)
+  nameWithType: ReturnedCookie.ReturnedCookie(string, string, string, string, DateTime?, bool, bool, string)
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie.ReturnedCookie(string, string, string, string, System.DateTime?, bool, bool, string)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/ReturnedCookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Internal/ReturnedCookie.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal
+  summary: >-
+    Initializes a new instance of the <xref href="OpenQA.Selenium.Internal.ReturnedCookie" data-throw-if-not-resolved="false"></xref> class with a specific name,
+
+    value, domain, path and expiration date.
+  example: []
+  syntax:
+    content: public ReturnedCookie(string name, string value, string domain, string path, DateTime? expiry, bool isSecure, bool isHttpOnly, string sameSite)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of the cookie.
+    - id: value
+      type: System.String
+      description: The value of the cookie.
+    - id: domain
+      type: System.String
+      description: The domain of the cookie.
+    - id: path
+      type: System.String
+      description: The path of the cookie.
+    - id: expiry
+      type: System.Nullable{System.DateTime}
+      description: The expiration date of the cookie.
+    - id: isSecure
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the cookie is secure; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+    - id: isHttpOnly
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the cookie is an HTTP-only cookie; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>
+    - id: sameSite
+      type: System.String
+      description: The SameSite value of cookie.
+    content.vb: Public Sub New(name As String, value As String, domain As String, path As String, expiry As Date?, isSecure As Boolean, isHttpOnly As Boolean, sameSite As String)
+  overload: OpenQA.Selenium.Internal.ReturnedCookie.#ctor*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      If the name is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or an empty string,
+          or if it contains a semi-colon.
+  - type: System.ArgumentNullException
+    commentId: T:System.ArgumentNullException
+    description: If the value or currentUrl is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a>.
+  nameWithType.vb: ReturnedCookie.New(String, String, String, String, Date?, Boolean, Boolean, String)
+  fullName.vb: OpenQA.Selenium.Internal.ReturnedCookie.New(String, String, String, String, Date?, Boolean, Boolean, String)
+  name.vb: New(String, String, String, String, Date?, Boolean, Boolean, String)
+- uid: OpenQA.Selenium.Internal.ReturnedCookie.ToString
+  commentId: M:OpenQA.Selenium.Internal.ReturnedCookie.ToString
+  id: ToString
+  parent: OpenQA.Selenium.Internal.ReturnedCookie
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ReturnedCookie.ToString()
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie.ToString()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Internal/ReturnedCookie.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToString
+    path: ../src/webdriver/Internal/ReturnedCookie.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Internal
+  summary: Creates and returns a string representation of the current cookie.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representation of the current cookie.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: OpenQA.Selenium.Cookie.ToString
+  overload: OpenQA.Selenium.Internal.ReturnedCookie.ToString*
+references:
+- uid: OpenQA.Selenium.Internal
+  commentId: N:OpenQA.Selenium.Internal
+  href: OpenQA.html
+  name: OpenQA.Selenium.Internal
+  nameWithType: OpenQA.Selenium.Internal
+  fullName: OpenQA.Selenium.Internal
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal
+    name: Internal
+    href: OpenQA.Selenium.Internal.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Internal
+    name: Internal
+    href: OpenQA.Selenium.Internal.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.Cookie
+  commentId: T:OpenQA.Selenium.Cookie
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Cookie.html
+  name: Cookie
+  nameWithType: Cookie
+  fullName: OpenQA.Selenium.Cookie
+- uid: OpenQA.Selenium.Cookie.Name
+  commentId: P:OpenQA.Selenium.Cookie.Name
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Name
+  name: Name
+  nameWithType: Cookie.Name
+  fullName: OpenQA.Selenium.Cookie.Name
+- uid: OpenQA.Selenium.Cookie.Value
+  commentId: P:OpenQA.Selenium.Cookie.Value
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Value
+  name: Value
+  nameWithType: Cookie.Value
+  fullName: OpenQA.Selenium.Cookie.Value
+- uid: OpenQA.Selenium.Cookie.Domain
+  commentId: P:OpenQA.Selenium.Cookie.Domain
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Domain
+  name: Domain
+  nameWithType: Cookie.Domain
+  fullName: OpenQA.Selenium.Cookie.Domain
+- uid: OpenQA.Selenium.Cookie.Path
+  commentId: P:OpenQA.Selenium.Cookie.Path
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Path
+  name: Path
+  nameWithType: Cookie.Path
+  fullName: OpenQA.Selenium.Cookie.Path
+- uid: OpenQA.Selenium.Cookie.Secure
+  commentId: P:OpenQA.Selenium.Cookie.Secure
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Secure
+  name: Secure
+  nameWithType: Cookie.Secure
+  fullName: OpenQA.Selenium.Cookie.Secure
+- uid: OpenQA.Selenium.Cookie.IsHttpOnly
+  commentId: P:OpenQA.Selenium.Cookie.IsHttpOnly
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_IsHttpOnly
+  name: IsHttpOnly
+  nameWithType: Cookie.IsHttpOnly
+  fullName: OpenQA.Selenium.Cookie.IsHttpOnly
+- uid: OpenQA.Selenium.Cookie.SameSite
+  commentId: P:OpenQA.Selenium.Cookie.SameSite
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_SameSite
+  name: SameSite
+  nameWithType: Cookie.SameSite
+  fullName: OpenQA.Selenium.Cookie.SameSite
+- uid: OpenQA.Selenium.Cookie.Expiry
+  commentId: P:OpenQA.Selenium.Cookie.Expiry
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Expiry
+  name: Expiry
+  nameWithType: Cookie.Expiry
+  fullName: OpenQA.Selenium.Cookie.Expiry
+- uid: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  commentId: M:OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+  parent: OpenQA.Selenium.Cookie
+  isExternal: true
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_FromDictionary_System_Collections_Generic_Dictionary_System_String_System_Object__
+  name: FromDictionary(Dictionary<string, object>)
+  nameWithType: Cookie.FromDictionary(Dictionary<string, object>)
+  fullName: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary<string, object>)
+  nameWithType.vb: Cookie.FromDictionary(Dictionary(Of String, Object))
+  fullName.vb: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary(Of String, Object))
+  name.vb: FromDictionary(Dictionary(Of String, Object))
+  spec.csharp:
+  - uid: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: FromDictionary
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_FromDictionary_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Cookie.FromDictionary(System.Collections.Generic.Dictionary{System.String,System.Object})
+    name: FromDictionary
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_FromDictionary_System_Collections_Generic_Dictionary_System_String_System_Object__
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.Cookie.Equals(System.Object)
+  commentId: M:OpenQA.Selenium.Cookie.Equals(System.Object)
+  parent: OpenQA.Selenium.Cookie
+  isExternal: true
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: Cookie.Equals(object)
+  fullName: OpenQA.Selenium.Cookie.Equals(object)
+  nameWithType.vb: Cookie.Equals(Object)
+  fullName.vb: OpenQA.Selenium.Cookie.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: OpenQA.Selenium.Cookie.Equals(System.Object)
+    name: Equals
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Cookie.Equals(System.Object)
+    name: Equals
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OpenQA.Selenium.Cookie.GetHashCode
+  commentId: M:OpenQA.Selenium.Cookie.GetHashCode
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_GetHashCode
+  name: GetHashCode()
+  nameWithType: Cookie.GetHashCode()
+  fullName: OpenQA.Selenium.Cookie.GetHashCode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Cookie.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Cookie.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.Internal.ReturnedCookie
+  commentId: T:OpenQA.Selenium.Internal.ReturnedCookie
+  href: OpenQA.Selenium.Internal.ReturnedCookie.html
+  name: ReturnedCookie
+  nameWithType: ReturnedCookie
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.ArgumentNullException
+  commentId: T:System.ArgumentNullException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentnullexception
+  name: ArgumentNullException
+  nameWithType: ArgumentNullException
+  fullName: System.ArgumentNullException
+- uid: OpenQA.Selenium.Internal.ReturnedCookie.#ctor*
+  commentId: Overload:OpenQA.Selenium.Internal.ReturnedCookie.#ctor
+  href: OpenQA.Selenium.Internal.ReturnedCookie.html#OpenQA_Selenium_Internal_ReturnedCookie__ctor_System_String_System_String_System_String_System_String_System_Nullable_System_DateTime__System_Boolean_System_Boolean_
+  name: ReturnedCookie
+  nameWithType: ReturnedCookie.ReturnedCookie
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie.ReturnedCookie
+  nameWithType.vb: ReturnedCookie.New
+  fullName.vb: OpenQA.Selenium.Internal.ReturnedCookie.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime?
+  nameWithType: DateTime?
+  fullName: System.DateTime?
+  nameWithType.vb: Date?
+  fullName.vb: Date?
+  name.vb: Date?
+  spec.csharp:
+  - uid: System.DateTime
+    name: DateTime
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+  spec.vb:
+  - uid: System.DateTime
+    name: Date
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.datetime
+  - name: '?'
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Cookie.ToString
+  commentId: M:OpenQA.Selenium.Cookie.ToString
+  parent: OpenQA.Selenium.Cookie
+  href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_ToString
+  name: ToString()
+  nameWithType: Cookie.ToString()
+  fullName: OpenQA.Selenium.Cookie.ToString()
+  spec.csharp:
+  - uid: OpenQA.Selenium.Cookie.ToString
+    name: ToString
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.Cookie.ToString
+    name: ToString
+    href: OpenQA.Selenium.Cookie.html#OpenQA_Selenium_Cookie_ToString
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Internal.ReturnedCookie.ToString*
+  commentId: Overload:OpenQA.Selenium.Internal.ReturnedCookie.ToString
+  href: OpenQA.Selenium.Internal.ReturnedCookie.html#OpenQA_Selenium_Internal_ReturnedCookie_ToString
+  name: ToString
+  nameWithType: ReturnedCookie.ToString
+  fullName: OpenQA.Selenium.Internal.ReturnedCookie.ToString

@@ -1,0 +1,702 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs
+  commentId: T:OpenQA.Selenium.NetworkRequestSentEventArgs
+  id: NetworkRequestSentEventArgs
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.NetworkRequestSentEventArgs.#ctor(OpenQA.Selenium.HttpRequestData)
+  - OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders
+  - OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId
+  - OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod
+  - OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData
+  - OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl
+  langs:
+  - csharp
+  - vb
+  name: NetworkRequestSentEventArgs
+  nameWithType: NetworkRequestSentEventArgs
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NetworkRequestSentEventArgs
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides data for the NetworkRequestSent event of an object implementing the <xref href="OpenQA.Selenium.INetwork" data-throw-if-not-resolved="false"></xref> interface.
+  example: []
+  syntax:
+    content: 'public class NetworkRequestSentEventArgs : EventArgs'
+    content.vb: Public Class NetworkRequestSentEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.#ctor(OpenQA.Selenium.HttpRequestData)
+  commentId: M:OpenQA.Selenium.NetworkRequestSentEventArgs.#ctor(OpenQA.Selenium.HttpRequestData)
+  id: '#ctor(OpenQA.Selenium.HttpRequestData)'
+  parent: OpenQA.Selenium.NetworkRequestSentEventArgs
+  langs:
+  - csharp
+  - vb
+  name: NetworkRequestSentEventArgs(HttpRequestData)
+  nameWithType: NetworkRequestSentEventArgs.NetworkRequestSentEventArgs(HttpRequestData)
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.NetworkRequestSentEventArgs(OpenQA.Selenium.HttpRequestData)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 38
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.NetworkRequestSentEventArgs" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public NetworkRequestSentEventArgs(HttpRequestData requestData)
+    parameters:
+    - id: requestData
+      type: OpenQA.Selenium.HttpRequestData
+      description: The <xref href="OpenQA.Selenium.HttpRequestData" data-throw-if-not-resolved="false"></xref> that describes the network request.
+    content.vb: Public Sub New(requestData As HttpRequestData)
+  overload: OpenQA.Selenium.NetworkRequestSentEventArgs.#ctor*
+  nameWithType.vb: NetworkRequestSentEventArgs.New(HttpRequestData)
+  fullName.vb: OpenQA.Selenium.NetworkRequestSentEventArgs.New(OpenQA.Selenium.HttpRequestData)
+  name.vb: New(HttpRequestData)
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId
+  commentId: P:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId
+  id: RequestId
+  parent: OpenQA.Selenium.NetworkRequestSentEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: NetworkRequestSentEventArgs.RequestId
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestId
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 53
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the internal request ID of the network request.
+  example: []
+  syntax:
+    content: public string RequestId { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RequestId As String
+  overload: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId*
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl
+  commentId: P:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl
+  id: RequestUrl
+  parent: OpenQA.Selenium.NetworkRequestSentEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestUrl
+  nameWithType: NetworkRequestSentEventArgs.RequestUrl
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestUrl
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the URL of the network request.
+  example: []
+  syntax:
+    content: public string RequestUrl { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RequestUrl As String
+  overload: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl*
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod
+  commentId: P:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod
+  id: RequestMethod
+  parent: OpenQA.Selenium.NetworkRequestSentEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestMethod
+  nameWithType: NetworkRequestSentEventArgs.RequestMethod
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestMethod
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 63
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the HTTP method of the network request.
+  example: []
+  syntax:
+    content: public string RequestMethod { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RequestMethod As String
+  overload: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod*
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData
+  commentId: P:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData
+  id: RequestPostData
+  parent: OpenQA.Selenium.NetworkRequestSentEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestPostData
+  nameWithType: NetworkRequestSentEventArgs.RequestPostData
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestPostData
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the post data of the network request, if any.
+  example: []
+  syntax:
+    content: public string RequestPostData { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RequestPostData As String
+  overload: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData*
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders
+  commentId: P:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders
+  id: RequestHeaders
+  parent: OpenQA.Selenium.NetworkRequestSentEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestHeaders
+  nameWithType: NetworkRequestSentEventArgs.RequestHeaders
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/NetworkRequestSentEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestHeaders
+    path: ../src/webdriver/NetworkRequestSentEventArgs.cs
+    startLine: 73
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the collection of headers associated with the network request.
+  example: []
+  syntax:
+    content: public IReadOnlyDictionary<string, string> RequestHeaders { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyDictionary{System.String,System.String}
+    content.vb: Public ReadOnly Property RequestHeaders As IReadOnlyDictionary(Of String, String)
+  overload: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders*
+references:
+- uid: OpenQA.Selenium.INetwork
+  commentId: T:OpenQA.Selenium.INetwork
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.INetwork.html
+  name: INetwork
+  nameWithType: INetwork
+  fullName: OpenQA.Selenium.INetwork
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs
+  commentId: T:OpenQA.Selenium.NetworkRequestSentEventArgs
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html
+  name: NetworkRequestSentEventArgs
+  nameWithType: NetworkRequestSentEventArgs
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs
+- uid: OpenQA.Selenium.HttpRequestData
+  commentId: T:OpenQA.Selenium.HttpRequestData
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.HttpRequestData.html
+  name: HttpRequestData
+  nameWithType: HttpRequestData
+  fullName: OpenQA.Selenium.HttpRequestData
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.#ctor*
+  commentId: Overload:OpenQA.Selenium.NetworkRequestSentEventArgs.#ctor
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html#OpenQA_Selenium_NetworkRequestSentEventArgs__ctor_OpenQA_Selenium_HttpRequestData_
+  name: NetworkRequestSentEventArgs
+  nameWithType: NetworkRequestSentEventArgs.NetworkRequestSentEventArgs
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.NetworkRequestSentEventArgs
+  nameWithType.vb: NetworkRequestSentEventArgs.New
+  fullName.vb: OpenQA.Selenium.NetworkRequestSentEventArgs.New
+  name.vb: New
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId*
+  commentId: Overload:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html#OpenQA_Selenium_NetworkRequestSentEventArgs_RequestId
+  name: RequestId
+  nameWithType: NetworkRequestSentEventArgs.RequestId
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl*
+  commentId: Overload:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html#OpenQA_Selenium_NetworkRequestSentEventArgs_RequestUrl
+  name: RequestUrl
+  nameWithType: NetworkRequestSentEventArgs.RequestUrl
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestUrl
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod*
+  commentId: Overload:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html#OpenQA_Selenium_NetworkRequestSentEventArgs_RequestMethod
+  name: RequestMethod
+  nameWithType: NetworkRequestSentEventArgs.RequestMethod
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestMethod
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData*
+  commentId: Overload:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html#OpenQA_Selenium_NetworkRequestSentEventArgs_RequestPostData
+  name: RequestPostData
+  nameWithType: NetworkRequestSentEventArgs.RequestPostData
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestPostData
+- uid: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders*
+  commentId: Overload:OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders
+  href: OpenQA.Selenium.NetworkRequestSentEventArgs.html#OpenQA_Selenium_NetworkRequestSentEventArgs_RequestHeaders
+  name: RequestHeaders
+  nameWithType: NetworkRequestSentEventArgs.RequestHeaders
+  fullName: OpenQA.Selenium.NetworkRequestSentEventArgs.RequestHeaders
+- uid: System.Collections.Generic.IReadOnlyDictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyDictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<string, string>
+  nameWithType: IReadOnlyDictionary<string, string>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<string, string>
+  nameWithType.vb: IReadOnlyDictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of String, String)
+  name.vb: IReadOnlyDictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyDictionary`2
+  commentId: T:System.Collections.Generic.IReadOnlyDictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  name: IReadOnlyDictionary<TKey, TValue>
+  nameWithType: IReadOnlyDictionary<TKey, TValue>
+  fullName: System.Collections.Generic.IReadOnlyDictionary<TKey, TValue>
+  nameWithType.vb: IReadOnlyDictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.IReadOnlyDictionary(Of TKey, TValue)
+  name.vb: IReadOnlyDictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyDictionary`2
+    name: IReadOnlyDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlydictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

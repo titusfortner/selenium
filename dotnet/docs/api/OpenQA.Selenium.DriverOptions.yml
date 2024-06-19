@@ -1,0 +1,1930 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DriverOptions
+  commentId: T:OpenQA.Selenium.DriverOptions
+  id: DriverOptions
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.DriverOptions.#ctor
+  - OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  - OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  - OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+  - OpenQA.Selenium.DriverOptions.BinaryLocation
+  - OpenQA.Selenium.DriverOptions.BrowserName
+  - OpenQA.Selenium.DriverOptions.BrowserVersion
+  - OpenQA.Selenium.DriverOptions.EnableDownloads
+  - OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+  - OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  - OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  - OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+  - OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  - OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+  - OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  - OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  - OpenQA.Selenium.DriverOptions.PlatformName
+  - OpenQA.Selenium.DriverOptions.Proxy
+  - OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+  - OpenQA.Selenium.DriverOptions.ScriptTimeout
+  - OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  - OpenQA.Selenium.DriverOptions.ToCapabilities
+  - OpenQA.Selenium.DriverOptions.ToString
+  - OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  - OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  - OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  - OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DriverOptions
+  nameWithType: DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DriverOptions
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 112
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Base class for managing options specific to a browser driver.
+  example: []
+  syntax:
+    content: public abstract class DriverOptions
+    content.vb: Public MustInherit Class DriverOptions
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - OpenQA.Selenium.Chromium.ChromiumOptions
+  - OpenQA.Selenium.Firefox.FirefoxOptions
+  - OpenQA.Selenium.IE.InternetExplorerOptions
+  - OpenQA.Selenium.Safari.SafariOptions
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.DriverOptions.#ctor
+  commentId: M:OpenQA.Selenium.DriverOptions.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: DriverOptions()
+  nameWithType: DriverOptions.DriverOptions()
+  fullName: OpenQA.Selenium.DriverOptions.DriverOptions()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 134
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.DriverOptions" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: protected DriverOptions()
+    content.vb: Protected Sub New()
+  overload: OpenQA.Selenium.DriverOptions.#ctor*
+  nameWithType.vb: DriverOptions.New()
+  fullName.vb: OpenQA.Selenium.DriverOptions.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.DriverOptions.BrowserName
+  commentId: P:OpenQA.Selenium.DriverOptions.BrowserName
+  id: BrowserName
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: BrowserName
+  nameWithType: DriverOptions.BrowserName
+  fullName: OpenQA.Selenium.DriverOptions.BrowserName
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BrowserName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 150
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the name of the browser.
+  example: []
+  syntax:
+    content: public string BrowserName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BrowserName As String
+  overload: OpenQA.Selenium.DriverOptions.BrowserName*
+- uid: OpenQA.Selenium.DriverOptions.BrowserVersion
+  commentId: P:OpenQA.Selenium.DriverOptions.BrowserVersion
+  id: BrowserVersion
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: BrowserVersion
+  nameWithType: DriverOptions.BrowserVersion
+  fullName: OpenQA.Selenium.DriverOptions.BrowserVersion
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BrowserVersion
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 159
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the version of the browser.
+  example: []
+  syntax:
+    content: public string BrowserVersion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BrowserVersion As String
+  overload: OpenQA.Selenium.DriverOptions.BrowserVersion*
+- uid: OpenQA.Selenium.DriverOptions.PlatformName
+  commentId: P:OpenQA.Selenium.DriverOptions.PlatformName
+  id: PlatformName
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: PlatformName
+  nameWithType: DriverOptions.PlatformName
+  fullName: OpenQA.Selenium.DriverOptions.PlatformName
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PlatformName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 168
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the name of the platform on which the browser is running.
+  example: []
+  syntax:
+    content: public string PlatformName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PlatformName As String
+  overload: OpenQA.Selenium.DriverOptions.PlatformName*
+- uid: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  commentId: P:OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  id: AcceptInsecureCertificates
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: AcceptInsecureCertificates
+  nameWithType: DriverOptions.AcceptInsecureCertificates
+  fullName: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AcceptInsecureCertificates
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 178
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets a value indicating whether the browser should accept self-signed
+
+    SSL certificates.
+  example: []
+  syntax:
+    content: public bool? AcceptInsecureCertificates { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property AcceptInsecureCertificates As Boolean?
+  overload: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates*
+- uid: OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  commentId: P:OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  id: UseWebSocketUrl
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: UseWebSocketUrl
+  nameWithType: DriverOptions.UseWebSocketUrl
+  fullName: OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UseWebSocketUrl
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 188
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets a value indicating whether the driver should request a URL to
+
+    a WebSocket to be used for bidirectional communication.
+  example: []
+  syntax:
+    content: public bool? UseWebSocketUrl { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property UseWebSocketUrl As Boolean?
+  overload: OpenQA.Selenium.DriverOptions.UseWebSocketUrl*
+- uid: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  commentId: P:OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  id: UnhandledPromptBehavior
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: UnhandledPromptBehavior
+  nameWithType: DriverOptions.UnhandledPromptBehavior
+  fullName: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UnhandledPromptBehavior
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 198
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the value for describing how unexpected alerts are to be handled in the browser.
+
+    Defaults to <xref href="OpenQA.Selenium.UnhandledPromptBehavior.Default" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public UnhandledPromptBehavior UnhandledPromptBehavior { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.UnhandledPromptBehavior
+    content.vb: Public Property UnhandledPromptBehavior As UnhandledPromptBehavior
+  overload: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior*
+- uid: OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  commentId: P:OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  id: PageLoadStrategy
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: PageLoadStrategy
+  nameWithType: DriverOptions.PageLoadStrategy
+  fullName: OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PageLoadStrategy
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 208
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the value for describing how the browser is to wait for pages to load in the browser.
+
+    Defaults to <xref href="OpenQA.Selenium.PageLoadStrategy.Default" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public PageLoadStrategy PageLoadStrategy { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.PageLoadStrategy
+    content.vb: Public Property PageLoadStrategy As PageLoadStrategy
+  overload: OpenQA.Selenium.DriverOptions.PageLoadStrategy*
+- uid: OpenQA.Selenium.DriverOptions.Proxy
+  commentId: P:OpenQA.Selenium.DriverOptions.Proxy
+  id: Proxy
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: Proxy
+  nameWithType: DriverOptions.Proxy
+  fullName: OpenQA.Selenium.DriverOptions.Proxy
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Proxy
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 217
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets the <xref href="OpenQA.Selenium.DriverOptions.Proxy" data-throw-if-not-resolved="false"></xref> to be used with this browser.
+  example: []
+  syntax:
+    content: public Proxy Proxy { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.Proxy
+    content.vb: Public Property Proxy As Proxy
+  overload: OpenQA.Selenium.DriverOptions.Proxy*
+- uid: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  commentId: P:OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  id: UseStrictFileInteractability
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: UseStrictFileInteractability
+  nameWithType: DriverOptions.UseStrictFileInteractability
+  fullName: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UseStrictFileInteractability
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 227
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets a value indicating whether &lt;input type='file'/&gt; elements
+
+    must be visible to allow uploading of files.
+  example: []
+  syntax:
+    content: public bool UseStrictFileInteractability { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseStrictFileInteractability As Boolean
+  overload: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability*
+- uid: OpenQA.Selenium.DriverOptions.EnableDownloads
+  commentId: P:OpenQA.Selenium.DriverOptions.EnableDownloads
+  id: EnableDownloads
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: EnableDownloads
+  nameWithType: DriverOptions.EnableDownloads
+  fullName: OpenQA.Selenium.DriverOptions.EnableDownloads
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableDownloads
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 236
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets or sets a value indicating whether files may be downloaded from remote node.
+  example: []
+  syntax:
+    content: public bool? EnableDownloads { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property EnableDownloads As Boolean?
+  overload: OpenQA.Selenium.DriverOptions.EnableDownloads*
+- uid: OpenQA.Selenium.DriverOptions.ScriptTimeout
+  commentId: P:OpenQA.Selenium.DriverOptions.ScriptTimeout
+  id: ScriptTimeout
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: ScriptTimeout
+  nameWithType: DriverOptions.ScriptTimeout
+  fullName: OpenQA.Selenium.DriverOptions.ScriptTimeout
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScriptTimeout
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 248
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the asynchronous script timeout, which is the amount
+
+    of time the driver should wait when executing JavaScript asynchronously.
+
+    This timeout only affects the <xref href="OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String%2cSystem.Object%5b%5d)" data-throw-if-not-resolved="false"></xref>
+
+    method.
+  example: []
+  syntax:
+    content: public TimeSpan? ScriptTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: Public Property ScriptTimeout As TimeSpan?
+  overload: OpenQA.Selenium.DriverOptions.ScriptTimeout*
+- uid: OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  commentId: P:OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  id: PageLoadTimeout
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: PageLoadTimeout
+  nameWithType: DriverOptions.PageLoadTimeout
+  fullName: OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PageLoadTimeout
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 259
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the page load timeout, which is the amount of time the driver
+
+    should wait for a page to load when setting the <xref href="OpenQA.Selenium.IWebDriver.Url" data-throw-if-not-resolved="false"></xref>
+
+    property.
+  example: []
+  syntax:
+    content: public TimeSpan? PageLoadTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: Public Property PageLoadTimeout As TimeSpan?
+  overload: OpenQA.Selenium.DriverOptions.PageLoadTimeout*
+- uid: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  commentId: P:OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  id: ImplicitWaitTimeout
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: ImplicitWaitTimeout
+  nameWithType: DriverOptions.ImplicitWaitTimeout
+  fullName: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ImplicitWaitTimeout
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 282
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the implicit wait timeout, which is the  amount of time the
+
+    driver should wait when searching for an element if it is not immediately
+
+    present.
+  remarks: >-
+    When searching for a single element, the driver should poll the page
+
+    until the element has been found, or this timeout expires before throwing
+
+    a <xref href="OpenQA.Selenium.NoSuchElementException" data-throw-if-not-resolved="false"></xref>. When searching for multiple elements,
+
+    the driver should poll the page until at least one element has been found
+
+    or this timeout has expired.
+
+    <p>
+
+    Increasing the implicit wait timeout should be used judiciously as it
+
+    will have an adverse effect on test run time, especially when used with
+
+    slower location strategies like XPath.
+
+    </p>
+  example: []
+  syntax:
+    content: public TimeSpan? ImplicitWaitTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.TimeSpan}
+    content.vb: Public Property ImplicitWaitTimeout As TimeSpan?
+  overload: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout*
+- uid: OpenQA.Selenium.DriverOptions.BinaryLocation
+  commentId: P:OpenQA.Selenium.DriverOptions.BinaryLocation
+  id: BinaryLocation
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: BinaryLocation
+  nameWithType: DriverOptions.BinaryLocation
+  fullName: OpenQA.Selenium.DriverOptions.BinaryLocation
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BinaryLocation
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 292
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Set or Get the location of the browser
+
+    Override in subclass
+  example: []
+  syntax:
+    content: public virtual string BinaryLocation { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Overridable Property BinaryLocation As String
+  overload: OpenQA.Selenium.DriverOptions.BinaryLocation*
+- uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  commentId: M:OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  id: AddAdditionalOption(System.String,System.Object)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: AddAdditionalOption(string, object)
+  nameWithType: DriverOptions.AddAdditionalOption(string, object)
+  fullName: OpenQA.Selenium.DriverOptions.AddAdditionalOption(string, object)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddAdditionalOption
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 312
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Provides a means to add additional capabilities not yet added as type safe options
+
+    for the specific browser driver.
+  remarks: >-
+    Calling <xref href="OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String%2cSystem.Object)" data-throw-if-not-resolved="false"></xref>
+        where <code class="paramref">optionName</code> has already been added will overwrite the
+        existing value with the new value in <code class="paramref">optionValue</code>.
+  example: []
+  syntax:
+    content: public virtual void AddAdditionalOption(string optionName, object optionValue)
+    parameters:
+    - id: optionName
+      type: System.String
+      description: The name of the capability to add.
+    - id: optionValue
+      type: System.Object
+      description: The value of the capability to add.
+    content.vb: Public Overridable Sub AddAdditionalOption(optionName As String, optionValue As Object)
+  overload: OpenQA.Selenium.DriverOptions.AddAdditionalOption*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      thrown when attempting to add a capability for which there is already a type safe option, or
+
+      when <code class="paramref">optionName</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or the empty string.
+  nameWithType.vb: DriverOptions.AddAdditionalOption(String, Object)
+  fullName.vb: OpenQA.Selenium.DriverOptions.AddAdditionalOption(String, Object)
+  name.vb: AddAdditionalOption(String, Object)
+- uid: OpenQA.Selenium.DriverOptions.ToCapabilities
+  commentId: M:OpenQA.Selenium.DriverOptions.ToCapabilities
+  id: ToCapabilities
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: ToCapabilities()
+  nameWithType: DriverOptions.ToCapabilities()
+  fullName: OpenQA.Selenium.DriverOptions.ToCapabilities()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToCapabilities
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 324
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Returns the <xref href="OpenQA.Selenium.ICapabilities" data-throw-if-not-resolved="false"></xref> for the specific browser driver with these
+
+    options included as capabilities. This does not copy the options. Further
+
+    changes will be reflected in the returned capabilities.
+  example: []
+  syntax:
+    content: public abstract ICapabilities ToCapabilities()
+    return:
+      type: OpenQA.Selenium.ICapabilities
+      description: The <xref href="OpenQA.Selenium.ICapabilities" data-throw-if-not-resolved="false"></xref> for browser driver with these options.
+    content.vb: Public MustOverride Function ToCapabilities() As ICapabilities
+  overload: OpenQA.Selenium.DriverOptions.ToCapabilities*
+- uid: OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  commentId: M:OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  id: GetMergeResult(OpenQA.Selenium.DriverOptions)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: GetMergeResult(DriverOptions)
+  nameWithType: DriverOptions.GetMergeResult(DriverOptions)
+  fullName: OpenQA.Selenium.DriverOptions.GetMergeResult(OpenQA.Selenium.DriverOptions)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetMergeResult
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 332
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Compares this <xref href="OpenQA.Selenium.DriverOptions" data-throw-if-not-resolved="false"></xref> object with another to see if there
+
+    are merge conflicts between them.
+  example: []
+  syntax:
+    content: public virtual DriverOptionsMergeResult GetMergeResult(DriverOptions other)
+    parameters:
+    - id: other
+      type: OpenQA.Selenium.DriverOptions
+      description: The <xref href="OpenQA.Selenium.DriverOptions" data-throw-if-not-resolved="false"></xref> object to compare with.
+    return:
+      type: OpenQA.Selenium.Remote.DriverOptionsMergeResult
+      description: A <xref href="OpenQA.Selenium.Remote.DriverOptionsMergeResult" data-throw-if-not-resolved="false"></xref> object containing the status of the attempted merge.
+    content.vb: Public Overridable Function GetMergeResult(other As DriverOptions) As DriverOptionsMergeResult
+  overload: OpenQA.Selenium.DriverOptions.GetMergeResult*
+- uid: OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  commentId: M:OpenQA.Selenium.DriverOptions.SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  id: SetLoggingPreference(System.String,OpenQA.Selenium.LogLevel)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: SetLoggingPreference(string, LogLevel)
+  nameWithType: DriverOptions.SetLoggingPreference(string, LogLevel)
+  fullName: OpenQA.Selenium.DriverOptions.SetLoggingPreference(string, OpenQA.Selenium.LogLevel)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetLoggingPreference
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 386
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Sets the logging preferences for this driver.
+  example: []
+  syntax:
+    content: public void SetLoggingPreference(string logType, LogLevel logLevel)
+    parameters:
+    - id: logType
+      type: System.String
+      description: >-
+        The type of log for which to set the preference.
+            Known log types can be found in the <xref href="OpenQA.Selenium.LogType" data-throw-if-not-resolved="false"></xref> class.
+    - id: logLevel
+      type: OpenQA.Selenium.LogLevel
+      description: The <xref href="OpenQA.Selenium.LogLevel" data-throw-if-not-resolved="false"></xref> value to which to set the log level.
+    content.vb: Public Sub SetLoggingPreference(logType As String, logLevel As LogLevel)
+  overload: OpenQA.Selenium.DriverOptions.SetLoggingPreference*
+  nameWithType.vb: DriverOptions.SetLoggingPreference(String, LogLevel)
+  fullName.vb: OpenQA.Selenium.DriverOptions.SetLoggingPreference(String, OpenQA.Selenium.LogLevel)
+  name.vb: SetLoggingPreference(String, LogLevel)
+- uid: OpenQA.Selenium.DriverOptions.ToString
+  commentId: M:OpenQA.Selenium.DriverOptions.ToString
+  id: ToString
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DriverOptions.ToString()
+  fullName: OpenQA.Selenium.DriverOptions.ToString()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ToString
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 395
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Returns a string representation of this <xref href="OpenQA.Selenium.DriverOptions" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string representation of this <xref href="OpenQA.Selenium.DriverOptions" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: OpenQA.Selenium.DriverOptions.ToString*
+- uid: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.ValidateCapabilityName(System.String)
+  id: ValidateCapabilityName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: ValidateCapabilityName(string)
+  nameWithType: DriverOptions.ValidateCapabilityName(string)
+  fullName: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ValidateCapabilityName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 424
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Validates the name of the capability to verify it is not a capability
+
+    for which a type-safe property or method already exists.
+  example: []
+  syntax:
+    content: protected void ValidateCapabilityName(string capabilityName)
+    parameters:
+    - id: capabilityName
+      type: System.String
+      description: The name of the capability to validate.
+    content.vb: Protected Sub ValidateCapabilityName(capabilityName As String)
+  overload: OpenQA.Selenium.DriverOptions.ValidateCapabilityName*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: >-
+      thrown when attempting to add a capability for which there is already a type safe option, or
+
+      when <code class="paramref">capabilityName</code> is <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> or the empty string.
+  nameWithType.vb: DriverOptions.ValidateCapabilityName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.ValidateCapabilityName(String)
+  name.vb: ValidateCapabilityName(String)
+- uid: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(System.String,System.String)
+  id: AddKnownCapabilityName(System.String,System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: AddKnownCapabilityName(string, string)
+  nameWithType: DriverOptions.AddKnownCapabilityName(string, string)
+  fullName: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddKnownCapabilityName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 445
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Adds a known capability to the list of known capabilities and associates it
+
+    with the type-safe property name of the options class to be used instead.
+  example: []
+  syntax:
+    content: protected void AddKnownCapabilityName(string capabilityName, string typeSafeOptionName)
+    parameters:
+    - id: capabilityName
+      type: System.String
+      description: The name of the capability.
+    - id: typeSafeOptionName
+      type: System.String
+      description: The name of the option property or method to be used instead.
+    content.vb: Protected Sub AddKnownCapabilityName(capabilityName As String, typeSafeOptionName As String)
+  overload: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName*
+  nameWithType.vb: DriverOptions.AddKnownCapabilityName(String, String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName(String, String)
+  name.vb: AddKnownCapabilityName(String, String)
+- uid: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(System.String)
+  id: RemoveKnownCapabilityName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: RemoveKnownCapabilityName(string)
+  nameWithType: DriverOptions.RemoveKnownCapabilityName(string)
+  fullName: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveKnownCapabilityName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 454
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Remove a capability from the list of known capabilities
+  example: []
+  syntax:
+    content: protected void RemoveKnownCapabilityName(string capabilityName)
+    parameters:
+    - id: capabilityName
+      type: System.String
+      description: The name of the capability to be removed.
+    content.vb: Protected Sub RemoveKnownCapabilityName(capabilityName As String)
+  overload: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName*
+  nameWithType.vb: DriverOptions.RemoveKnownCapabilityName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName(String)
+  name.vb: RemoveKnownCapabilityName(String)
+- uid: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(System.String)
+  id: IsKnownCapabilityName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: IsKnownCapabilityName(string)
+  nameWithType: DriverOptions.IsKnownCapabilityName(string)
+  fullName: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IsKnownCapabilityName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 467
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether the specified capability name is a known capability name which has a type-safe option.
+  example: []
+  syntax:
+    content: protected bool IsKnownCapabilityName(string capabilityName)
+    parameters:
+    - id: capabilityName
+      type: System.String
+      description: The name of the capability to check.
+    return:
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the capability name is known; otherwise <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Protected Function IsKnownCapabilityName(capabilityName As String) As Boolean
+  overload: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName*
+  nameWithType.vb: DriverOptions.IsKnownCapabilityName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName(String)
+  name.vb: IsKnownCapabilityName(String)
+- uid: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+  commentId: M:OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(System.String)
+  id: GetTypeSafeOptionName(System.String)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: GetTypeSafeOptionName(string)
+  nameWithType: DriverOptions.GetTypeSafeOptionName(string)
+  fullName: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetTypeSafeOptionName
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 477
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the name of the type-safe option for a given capability name.
+  example: []
+  syntax:
+    content: protected string GetTypeSafeOptionName(string capabilityName)
+    parameters:
+    - id: capabilityName
+      type: System.String
+      description: The name of the capability to check.
+    return:
+      type: System.String
+      description: The name of the type-safe option for the given capability name.
+    content.vb: Protected Function GetTypeSafeOptionName(capabilityName As String) As String
+  overload: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName*
+  nameWithType.vb: DriverOptions.GetTypeSafeOptionName(String)
+  fullName.vb: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName(String)
+  name.vb: GetTypeSafeOptionName(String)
+- uid: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  commentId: M:OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  id: GenerateLoggingPreferencesDictionary
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: GenerateLoggingPreferencesDictionary()
+  nameWithType: DriverOptions.GenerateLoggingPreferencesDictionary()
+  fullName: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GenerateLoggingPreferencesDictionary
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 491
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Generates the logging preferences dictionary for transmission as a desired capability.
+  example: []
+  syntax:
+    content: protected Dictionary<string, object> GenerateLoggingPreferencesDictionary()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Object}
+      description: The dictionary containing the logging preferences.
+    content.vb: Protected Function GenerateLoggingPreferencesDictionary() As Dictionary(Of String, Object)
+  overload: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary*
+- uid: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+  commentId: M:OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(System.Boolean)
+  id: GenerateDesiredCapabilities(System.Boolean)
+  parent: OpenQA.Selenium.DriverOptions
+  langs:
+  - csharp
+  - vb
+  name: GenerateDesiredCapabilities(bool)
+  nameWithType: DriverOptions.GenerateDesiredCapabilities(bool)
+  fullName: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/DriverOptions.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GenerateDesiredCapabilities
+    path: ../src/webdriver/DriverOptions.cs
+    startLine: 512
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Generates the current options as a capabilities object for further processing.
+  example: []
+  syntax:
+    content: protected IWritableCapabilities GenerateDesiredCapabilities(bool isSpecificationCompliant)
+    parameters:
+    - id: isSpecificationCompliant
+      type: System.Boolean
+      description: A value indicating whether to generate capabilities compliant with the W3C WebDriver Specification.
+    return:
+      type: OpenQA.Selenium.IWritableCapabilities
+      description: A <xref href="OpenQA.Selenium.IWritableCapabilities" data-throw-if-not-resolved="false"></xref> object representing the current options for further processing.
+    content.vb: Protected Function GenerateDesiredCapabilities(isSpecificationCompliant As Boolean) As IWritableCapabilities
+  overload: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities*
+  nameWithType.vb: DriverOptions.GenerateDesiredCapabilities(Boolean)
+  fullName.vb: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities(Boolean)
+  name.vb: GenerateDesiredCapabilities(Boolean)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DriverOptions
+  commentId: T:OpenQA.Selenium.DriverOptions
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.DriverOptions.html
+  name: DriverOptions
+  nameWithType: DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions
+- uid: OpenQA.Selenium.DriverOptions.#ctor*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.#ctor
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions__ctor
+  name: DriverOptions
+  nameWithType: DriverOptions.DriverOptions
+  fullName: OpenQA.Selenium.DriverOptions.DriverOptions
+  nameWithType.vb: DriverOptions.New
+  fullName.vb: OpenQA.Selenium.DriverOptions.New
+  name.vb: New
+- uid: OpenQA.Selenium.DriverOptions.BrowserName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.BrowserName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_BrowserName
+  name: BrowserName
+  nameWithType: DriverOptions.BrowserName
+  fullName: OpenQA.Selenium.DriverOptions.BrowserName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DriverOptions.BrowserVersion*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.BrowserVersion
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_BrowserVersion
+  name: BrowserVersion
+  nameWithType: DriverOptions.BrowserVersion
+  fullName: OpenQA.Selenium.DriverOptions.BrowserVersion
+- uid: OpenQA.Selenium.DriverOptions.PlatformName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.PlatformName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_PlatformName
+  name: PlatformName
+  nameWithType: DriverOptions.PlatformName
+  fullName: OpenQA.Selenium.DriverOptions.PlatformName
+- uid: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AcceptInsecureCertificates
+  name: AcceptInsecureCertificates
+  nameWithType: DriverOptions.AcceptInsecureCertificates
+  fullName: OpenQA.Selenium.DriverOptions.AcceptInsecureCertificates
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.UseWebSocketUrl*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_UseWebSocketUrl
+  name: UseWebSocketUrl
+  nameWithType: DriverOptions.UseWebSocketUrl
+  fullName: OpenQA.Selenium.DriverOptions.UseWebSocketUrl
+- uid: OpenQA.Selenium.UnhandledPromptBehavior.Default
+  commentId: F:OpenQA.Selenium.UnhandledPromptBehavior.Default
+  href: OpenQA.Selenium.UnhandledPromptBehavior.html#OpenQA_Selenium_UnhandledPromptBehavior_Default
+  name: Default
+  nameWithType: UnhandledPromptBehavior.Default
+  fullName: OpenQA.Selenium.UnhandledPromptBehavior.Default
+- uid: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_UnhandledPromptBehavior
+  name: UnhandledPromptBehavior
+  nameWithType: DriverOptions.UnhandledPromptBehavior
+  fullName: OpenQA.Selenium.DriverOptions.UnhandledPromptBehavior
+- uid: OpenQA.Selenium.UnhandledPromptBehavior
+  commentId: T:OpenQA.Selenium.UnhandledPromptBehavior
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.UnhandledPromptBehavior.html
+  name: UnhandledPromptBehavior
+  nameWithType: UnhandledPromptBehavior
+  fullName: OpenQA.Selenium.UnhandledPromptBehavior
+- uid: OpenQA.Selenium.PageLoadStrategy.Default
+  commentId: F:OpenQA.Selenium.PageLoadStrategy.Default
+  href: OpenQA.Selenium.PageLoadStrategy.html#OpenQA_Selenium_PageLoadStrategy_Default
+  name: Default
+  nameWithType: PageLoadStrategy.Default
+  fullName: OpenQA.Selenium.PageLoadStrategy.Default
+- uid: OpenQA.Selenium.DriverOptions.PageLoadStrategy*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.PageLoadStrategy
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_PageLoadStrategy
+  name: PageLoadStrategy
+  nameWithType: DriverOptions.PageLoadStrategy
+  fullName: OpenQA.Selenium.DriverOptions.PageLoadStrategy
+- uid: OpenQA.Selenium.PageLoadStrategy
+  commentId: T:OpenQA.Selenium.PageLoadStrategy
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.PageLoadStrategy.html
+  name: PageLoadStrategy
+  nameWithType: PageLoadStrategy
+  fullName: OpenQA.Selenium.PageLoadStrategy
+- uid: OpenQA.Selenium.DriverOptions.Proxy
+  commentId: P:OpenQA.Selenium.DriverOptions.Proxy
+  parent: OpenQA.Selenium.DriverOptions
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_Proxy
+  name: Proxy
+  nameWithType: DriverOptions.Proxy
+  fullName: OpenQA.Selenium.DriverOptions.Proxy
+- uid: OpenQA.Selenium.DriverOptions.Proxy*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.Proxy
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_Proxy
+  name: Proxy
+  nameWithType: DriverOptions.Proxy
+  fullName: OpenQA.Selenium.DriverOptions.Proxy
+- uid: OpenQA.Selenium.Proxy
+  commentId: T:OpenQA.Selenium.Proxy
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.Proxy.html
+  name: Proxy
+  nameWithType: Proxy
+  fullName: OpenQA.Selenium.Proxy
+- uid: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_UseStrictFileInteractability
+  name: UseStrictFileInteractability
+  nameWithType: DriverOptions.UseStrictFileInteractability
+  fullName: OpenQA.Selenium.DriverOptions.UseStrictFileInteractability
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.DriverOptions.EnableDownloads*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.EnableDownloads
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_EnableDownloads
+  name: EnableDownloads
+  nameWithType: DriverOptions.EnableDownloads
+  fullName: OpenQA.Selenium.DriverOptions.EnableDownloads
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  parent: OpenQA.Selenium.IJavaScriptExecutor
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  name: ExecuteAsyncScript(string, params object[])
+  nameWithType: IJavaScriptExecutor.ExecuteAsyncScript(string, params object[])
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(string, params object[])
+  nameWithType.vb: IJavaScriptExecutor.ExecuteAsyncScript(String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(String, ParamArray Object())
+  name.vb: ExecuteAsyncScript(String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+    name: ExecuteAsyncScript
+    href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+    name: ExecuteAsyncScript
+    href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.ScriptTimeout*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.ScriptTimeout
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ScriptTimeout
+  name: ScriptTimeout
+  nameWithType: DriverOptions.ScriptTimeout
+  fullName: OpenQA.Selenium.DriverOptions.ScriptTimeout
+- uid: System.Nullable{System.TimeSpan}
+  commentId: T:System.Nullable{System.TimeSpan}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan?
+  nameWithType: TimeSpan?
+  fullName: System.TimeSpan?
+  spec.csharp:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+  spec.vb:
+  - uid: System.TimeSpan
+    name: TimeSpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.timespan
+  - name: '?'
+- uid: OpenQA.Selenium.IJavaScriptExecutor
+  commentId: T:OpenQA.Selenium.IJavaScriptExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IJavaScriptExecutor.html
+  name: IJavaScriptExecutor
+  nameWithType: IJavaScriptExecutor
+  fullName: OpenQA.Selenium.IJavaScriptExecutor
+- uid: OpenQA.Selenium.IWebDriver.Url
+  commentId: P:OpenQA.Selenium.IWebDriver.Url
+  parent: OpenQA.Selenium.IWebDriver
+  href: OpenQA.Selenium.IWebDriver.html#OpenQA_Selenium_IWebDriver_Url
+  name: Url
+  nameWithType: IWebDriver.Url
+  fullName: OpenQA.Selenium.IWebDriver.Url
+- uid: OpenQA.Selenium.DriverOptions.PageLoadTimeout*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.PageLoadTimeout
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_PageLoadTimeout
+  name: PageLoadTimeout
+  nameWithType: DriverOptions.PageLoadTimeout
+  fullName: OpenQA.Selenium.DriverOptions.PageLoadTimeout
+- uid: OpenQA.Selenium.IWebDriver
+  commentId: T:OpenQA.Selenium.IWebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebDriver.html
+  name: IWebDriver
+  nameWithType: IWebDriver
+  fullName: OpenQA.Selenium.IWebDriver
+- uid: OpenQA.Selenium.NoSuchElementException
+  commentId: T:OpenQA.Selenium.NoSuchElementException
+  href: OpenQA.Selenium.NoSuchElementException.html
+  name: NoSuchElementException
+  nameWithType: NoSuchElementException
+  fullName: OpenQA.Selenium.NoSuchElementException
+- uid: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ImplicitWaitTimeout
+  name: ImplicitWaitTimeout
+  nameWithType: DriverOptions.ImplicitWaitTimeout
+  fullName: OpenQA.Selenium.DriverOptions.ImplicitWaitTimeout
+- uid: OpenQA.Selenium.DriverOptions.BinaryLocation*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.BinaryLocation
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_BinaryLocation
+  name: BinaryLocation
+  nameWithType: DriverOptions.BinaryLocation
+  fullName: OpenQA.Selenium.DriverOptions.BinaryLocation
+- uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  commentId: M:OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+  parent: OpenQA.Selenium.DriverOptions
+  isExternal: true
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  name: AddAdditionalOption(string, object)
+  nameWithType: DriverOptions.AddAdditionalOption(string, object)
+  fullName: OpenQA.Selenium.DriverOptions.AddAdditionalOption(string, object)
+  nameWithType.vb: DriverOptions.AddAdditionalOption(String, Object)
+  fullName.vb: OpenQA.Selenium.DriverOptions.AddAdditionalOption(String, Object)
+  name.vb: AddAdditionalOption(String, Object)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+    name: AddAdditionalOption
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption(System.String,System.Object)
+    name: AddAdditionalOption
+    href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: OpenQA.Selenium.DriverOptions.AddAdditionalOption*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.AddAdditionalOption
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddAdditionalOption_System_String_System_Object_
+  name: AddAdditionalOption
+  nameWithType: DriverOptions.AddAdditionalOption
+  fullName: OpenQA.Selenium.DriverOptions.AddAdditionalOption
+- uid: OpenQA.Selenium.ICapabilities
+  commentId: T:OpenQA.Selenium.ICapabilities
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ICapabilities.html
+  name: ICapabilities
+  nameWithType: ICapabilities
+  fullName: OpenQA.Selenium.ICapabilities
+- uid: OpenQA.Selenium.DriverOptions.ToCapabilities*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.ToCapabilities
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToCapabilities
+  name: ToCapabilities
+  nameWithType: DriverOptions.ToCapabilities
+  fullName: OpenQA.Selenium.DriverOptions.ToCapabilities
+- uid: OpenQA.Selenium.Remote.DriverOptionsMergeResult
+  commentId: T:OpenQA.Selenium.Remote.DriverOptionsMergeResult
+  parent: OpenQA.Selenium.Remote
+  href: OpenQA.Selenium.Remote.DriverOptionsMergeResult.html
+  name: DriverOptionsMergeResult
+  nameWithType: DriverOptionsMergeResult
+  fullName: OpenQA.Selenium.Remote.DriverOptionsMergeResult
+- uid: OpenQA.Selenium.DriverOptions.GetMergeResult*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.GetMergeResult
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetMergeResult_OpenQA_Selenium_DriverOptions_
+  name: GetMergeResult
+  nameWithType: DriverOptions.GetMergeResult
+  fullName: OpenQA.Selenium.DriverOptions.GetMergeResult
+- uid: OpenQA.Selenium.Remote
+  commentId: N:OpenQA.Selenium.Remote
+  href: OpenQA.html
+  name: OpenQA.Selenium.Remote
+  nameWithType: OpenQA.Selenium.Remote
+  fullName: OpenQA.Selenium.Remote
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+- uid: OpenQA.Selenium.LogType
+  commentId: T:OpenQA.Selenium.LogType
+  href: OpenQA.Selenium.LogType.html
+  name: LogType
+  nameWithType: LogType
+  fullName: OpenQA.Selenium.LogType
+- uid: OpenQA.Selenium.LogLevel
+  commentId: T:OpenQA.Selenium.LogLevel
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.LogLevel.html
+  name: LogLevel
+  nameWithType: LogLevel
+  fullName: OpenQA.Selenium.LogLevel
+- uid: OpenQA.Selenium.DriverOptions.SetLoggingPreference*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.SetLoggingPreference
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_SetLoggingPreference_System_String_OpenQA_Selenium_LogLevel_
+  name: SetLoggingPreference
+  nameWithType: DriverOptions.SetLoggingPreference
+  fullName: OpenQA.Selenium.DriverOptions.SetLoggingPreference
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DriverOptions.ToString*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.ToString
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ToString
+  name: ToString
+  nameWithType: DriverOptions.ToString
+  fullName: OpenQA.Selenium.DriverOptions.ToString
+- uid: OpenQA.Selenium.DriverOptions.ValidateCapabilityName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.ValidateCapabilityName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_ValidateCapabilityName_System_String_
+  name: ValidateCapabilityName
+  nameWithType: DriverOptions.ValidateCapabilityName
+  fullName: OpenQA.Selenium.DriverOptions.ValidateCapabilityName
+- uid: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.AddKnownCapabilityName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_AddKnownCapabilityName_System_String_System_String_
+  name: AddKnownCapabilityName
+  nameWithType: DriverOptions.AddKnownCapabilityName
+  fullName: OpenQA.Selenium.DriverOptions.AddKnownCapabilityName
+- uid: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_RemoveKnownCapabilityName_System_String_
+  name: RemoveKnownCapabilityName
+  nameWithType: DriverOptions.RemoveKnownCapabilityName
+  fullName: OpenQA.Selenium.DriverOptions.RemoveKnownCapabilityName
+- uid: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.IsKnownCapabilityName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_IsKnownCapabilityName_System_String_
+  name: IsKnownCapabilityName
+  nameWithType: DriverOptions.IsKnownCapabilityName
+  fullName: OpenQA.Selenium.DriverOptions.IsKnownCapabilityName
+- uid: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GetTypeSafeOptionName_System_String_
+  name: GetTypeSafeOptionName
+  nameWithType: DriverOptions.GetTypeSafeOptionName
+  fullName: OpenQA.Selenium.DriverOptions.GetTypeSafeOptionName
+- uid: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateLoggingPreferencesDictionary
+  name: GenerateLoggingPreferencesDictionary
+  nameWithType: DriverOptions.GenerateLoggingPreferencesDictionary
+  fullName: OpenQA.Selenium.DriverOptions.GenerateLoggingPreferencesDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.Object}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Object}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, object>
+  nameWithType: Dictionary<string, object>
+  fullName: System.Collections.Generic.Dictionary<string, object>
+  nameWithType.vb: Dictionary(Of String, Object)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Object)
+  name.vb: Dictionary(Of String, Object)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.IWritableCapabilities
+  commentId: T:OpenQA.Selenium.IWritableCapabilities
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWritableCapabilities.html
+  name: IWritableCapabilities
+  nameWithType: IWritableCapabilities
+  fullName: OpenQA.Selenium.IWritableCapabilities
+- uid: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities*
+  commentId: Overload:OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities
+  href: OpenQA.Selenium.DriverOptions.html#OpenQA_Selenium_DriverOptions_GenerateDesiredCapabilities_System_Boolean_
+  name: GenerateDesiredCapabilities
+  nameWithType: DriverOptions.GenerateDesiredCapabilities
+  fullName: OpenQA.Selenium.DriverOptions.GenerateDesiredCapabilities

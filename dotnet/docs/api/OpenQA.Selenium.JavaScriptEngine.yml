@@ -1,0 +1,2147 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.JavaScriptEngine
+  commentId: T:OpenQA.Selenium.JavaScriptEngine
+  id: JavaScriptEngine
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.JavaScriptEngine.#ctor(OpenQA.Selenium.IWebDriver)
+  - OpenQA.Selenium.JavaScriptEngine.AddInitializationScript(System.String,System.String)
+  - OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding(System.String)
+  - OpenQA.Selenium.JavaScriptEngine.ClearAll
+  - OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts
+  - OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings
+  - OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring
+  - OpenQA.Selenium.JavaScriptEngine.Dispose
+  - OpenQA.Selenium.JavaScriptEngine.Dispose(System.Boolean)
+  - OpenQA.Selenium.JavaScriptEngine.DomMutated
+  - OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring
+  - OpenQA.Selenium.JavaScriptEngine.InitializationScripts
+  - OpenQA.Selenium.JavaScriptEngine.JavaScriptCallbackExecuted
+  - OpenQA.Selenium.JavaScriptEngine.JavaScriptConsoleApiCalled
+  - OpenQA.Selenium.JavaScriptEngine.JavaScriptExceptionThrown
+  - OpenQA.Selenium.JavaScriptEngine.PinScript(System.String)
+  - OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript(System.String)
+  - OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+  - OpenQA.Selenium.JavaScriptEngine.Reset
+  - OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings
+  - OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring
+  - OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring
+  - OpenQA.Selenium.JavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  langs:
+  - csharp
+  - vb
+  name: JavaScriptEngine
+  nameWithType: JavaScriptEngine
+  fullName: OpenQA.Selenium.JavaScriptEngine
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: JavaScriptEngine
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides methods allowing the user to manage settings in the browser's JavaScript engine.
+  example: []
+  syntax:
+    content: 'public class JavaScriptEngine : IJavaScriptEngine, IDisposable'
+    content.vb: Public Class JavaScriptEngine Implements IJavaScriptEngine, IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.JavaScriptEngine.#ctor(OpenQA.Selenium.IWebDriver)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.#ctor(OpenQA.Selenium.IWebDriver)
+  id: '#ctor(OpenQA.Selenium.IWebDriver)'
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: JavaScriptEngine(IWebDriver)
+  nameWithType: JavaScriptEngine.JavaScriptEngine(IWebDriver)
+  fullName: OpenQA.Selenium.JavaScriptEngine.JavaScriptEngine(OpenQA.Selenium.IWebDriver)
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.JavaScriptEngine" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public JavaScriptEngine(IWebDriver driver)
+    parameters:
+    - id: driver
+      type: OpenQA.Selenium.IWebDriver
+      description: The <xref href="OpenQA.Selenium.IWebDriver" data-throw-if-not-resolved="false"></xref> instance in which the JavaScript engine is executing.
+    content.vb: Public Sub New(driver As IWebDriver)
+  overload: OpenQA.Selenium.JavaScriptEngine.#ctor*
+  nameWithType.vb: JavaScriptEngine.New(IWebDriver)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.New(OpenQA.Selenium.IWebDriver)
+  name.vb: New(IWebDriver)
+- uid: OpenQA.Selenium.JavaScriptEngine.JavaScriptCallbackExecuted
+  commentId: E:OpenQA.Selenium.JavaScriptEngine.JavaScriptCallbackExecuted
+  id: JavaScriptCallbackExecuted
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: JavaScriptCallbackExecuted
+  nameWithType: JavaScriptEngine.JavaScriptCallbackExecuted
+  fullName: OpenQA.Selenium.JavaScriptEngine.JavaScriptCallbackExecuted
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: JavaScriptCallbackExecuted
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 70
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Occurs when a JavaScript callback with a named binding is executed.
+  example: []
+  syntax:
+    content: public event EventHandler<JavaScriptCallbackExecutedEventArgs> JavaScriptCallbackExecuted
+    return:
+      type: System.EventHandler{OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs}
+    content.vb: Public Event JavaScriptCallbackExecuted As EventHandler(Of JavaScriptCallbackExecutedEventArgs)
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.JavaScriptCallbackExecuted
+- uid: OpenQA.Selenium.JavaScriptEngine.JavaScriptExceptionThrown
+  commentId: E:OpenQA.Selenium.JavaScriptEngine.JavaScriptExceptionThrown
+  id: JavaScriptExceptionThrown
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: JavaScriptExceptionThrown
+  nameWithType: JavaScriptEngine.JavaScriptExceptionThrown
+  fullName: OpenQA.Selenium.JavaScriptEngine.JavaScriptExceptionThrown
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: JavaScriptExceptionThrown
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Occurs when an exeception is thrown by JavaScript being executed in the browser.
+  example: []
+  syntax:
+    content: public event EventHandler<JavaScriptExceptionThrownEventArgs> JavaScriptExceptionThrown
+    return:
+      type: System.EventHandler{OpenQA.Selenium.JavaScriptExceptionThrownEventArgs}
+    content.vb: Public Event JavaScriptExceptionThrown As EventHandler(Of JavaScriptExceptionThrownEventArgs)
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.JavaScriptExceptionThrown
+- uid: OpenQA.Selenium.JavaScriptEngine.JavaScriptConsoleApiCalled
+  commentId: E:OpenQA.Selenium.JavaScriptEngine.JavaScriptConsoleApiCalled
+  id: JavaScriptConsoleApiCalled
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: JavaScriptConsoleApiCalled
+  nameWithType: JavaScriptEngine.JavaScriptConsoleApiCalled
+  fullName: OpenQA.Selenium.JavaScriptEngine.JavaScriptConsoleApiCalled
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: JavaScriptConsoleApiCalled
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 80
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Occurs when methods on the JavaScript console are called.
+  example: []
+  syntax:
+    content: public event EventHandler<JavaScriptConsoleApiCalledEventArgs> JavaScriptConsoleApiCalled
+    return:
+      type: System.EventHandler{OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs}
+    content.vb: Public Event JavaScriptConsoleApiCalled As EventHandler(Of JavaScriptConsoleApiCalledEventArgs)
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.JavaScriptConsoleApiCalled
+- uid: OpenQA.Selenium.JavaScriptEngine.DomMutated
+  commentId: E:OpenQA.Selenium.JavaScriptEngine.DomMutated
+  id: DomMutated
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: DomMutated
+  nameWithType: JavaScriptEngine.DomMutated
+  fullName: OpenQA.Selenium.JavaScriptEngine.DomMutated
+  type: Event
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DomMutated
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 85
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Occurs when a value of an attribute in an element is being changed.
+  example: []
+  syntax:
+    content: public event EventHandler<DomMutatedEventArgs> DomMutated
+    return:
+      type: System.EventHandler{OpenQA.Selenium.DomMutatedEventArgs}
+    content.vb: Public Event DomMutated As EventHandler(Of DomMutatedEventArgs)
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.DomMutated
+- uid: OpenQA.Selenium.JavaScriptEngine.InitializationScripts
+  commentId: P:OpenQA.Selenium.JavaScriptEngine.InitializationScripts
+  id: InitializationScripts
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: InitializationScripts
+  nameWithType: JavaScriptEngine.InitializationScripts
+  fullName: OpenQA.Selenium.JavaScriptEngine.InitializationScripts
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InitializationScripts
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 90
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the read-only list of initialization scripts added for this JavaScript engine.
+  example: []
+  syntax:
+    content: public IReadOnlyList<InitializationScript> InitializationScripts { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{OpenQA.Selenium.InitializationScript}
+    content.vb: Public ReadOnly Property InitializationScripts As IReadOnlyList(Of InitializationScript)
+  overload: OpenQA.Selenium.JavaScriptEngine.InitializationScripts*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.InitializationScripts
+- uid: OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings
+  commentId: P:OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings
+  id: ScriptCallbackBindings
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: ScriptCallbackBindings
+  nameWithType: JavaScriptEngine.ScriptCallbackBindings
+  fullName: OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScriptCallbackBindings
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 102
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the read-only list of bindings added for this JavaScript engine.
+  example: []
+  syntax:
+    content: public IReadOnlyList<string> ScriptCallbackBindings { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public ReadOnly Property ScriptCallbackBindings As IReadOnlyList(Of String)
+  overload: OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.ScriptCallbackBindings
+- uid: OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring
+  id: StartEventMonitoring
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: StartEventMonitoring()
+  nameWithType: JavaScriptEngine.StartEventMonitoring()
+  fullName: OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartEventMonitoring
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 115
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously starts monitoring for events from the browser's JavaScript engine.
+  example: []
+  syntax:
+    content: public Task StartEventMonitoring()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function StartEventMonitoring() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.StartEventMonitoring
+- uid: OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring
+  id: StopEventMonitoring
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: StopEventMonitoring()
+  nameWithType: JavaScriptEngine.StopEventMonitoring()
+  fullName: OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StopEventMonitoring
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 126
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Stops monitoring for events from the browser's JavaScript engine.
+  example: []
+  syntax:
+    content: public void StopEventMonitoring()
+    content.vb: Public Sub StopEventMonitoring()
+  overload: OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.StopEventMonitoring
+- uid: OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring
+  id: EnableDomMutationMonitoring
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: EnableDomMutationMonitoring()
+  nameWithType: JavaScriptEngine.EnableDomMutationMonitoring()
+  fullName: OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EnableDomMutationMonitoring
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 137
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Enables monitoring for DOM changes.
+  example: []
+  syntax:
+    content: public Task EnableDomMutationMonitoring()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function EnableDomMutationMonitoring() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.EnableDomMutationMonitoring
+- uid: OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring
+  id: DisableDomMutationMonitoring
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: DisableDomMutationMonitoring()
+  nameWithType: JavaScriptEngine.DisableDomMutationMonitoring()
+  fullName: OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisableDomMutationMonitoring
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 151
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Disables monitoring for DOM changes.
+  example: []
+  syntax:
+    content: public Task DisableDomMutationMonitoring()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function DisableDomMutationMonitoring() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.DisableDomMutationMonitoring
+- uid: OpenQA.Selenium.JavaScriptEngine.AddInitializationScript(System.String,System.String)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.AddInitializationScript(System.String,System.String)
+  id: AddInitializationScript(System.String,System.String)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: AddInitializationScript(string, string)
+  nameWithType: JavaScriptEngine.AddInitializationScript(string, string)
+  fullName: OpenQA.Selenium.JavaScriptEngine.AddInitializationScript(string, string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddInitializationScript
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 163
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously adds JavaScript to be loaded on every document load.
+  example: []
+  syntax:
+    content: public Task<InitializationScript> AddInitializationScript(string scriptName, string script)
+    parameters:
+    - id: scriptName
+      type: System.String
+      description: The friendly name by which to refer to this initialization script.
+    - id: script
+      type: System.String
+      description: The JavaScript to be loaded on every page.
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.InitializationScript}
+      description: A task containing an <xref href="OpenQA.Selenium.InitializationScript" data-throw-if-not-resolved="false"></xref> object representing the script to be loaded on each page.
+    content.vb: Public Function AddInitializationScript(scriptName As String, script As String) As Task(Of InitializationScript)
+  overload: OpenQA.Selenium.JavaScriptEngine.AddInitializationScript*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(System.String,System.String)
+  nameWithType.vb: JavaScriptEngine.AddInitializationScript(String, String)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.AddInitializationScript(String, String)
+  name.vb: AddInitializationScript(String, String)
+- uid: OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript(System.String)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript(System.String)
+  id: RemoveInitializationScript(System.String)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: RemoveInitializationScript(string)
+  nameWithType: JavaScriptEngine.RemoveInitializationScript(string)
+  fullName: OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveInitializationScript
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 189
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously removes JavaScript from being loaded on every document load.
+  example: []
+  syntax:
+    content: public Task RemoveInitializationScript(string scriptName)
+    parameters:
+    - id: scriptName
+      type: System.String
+      description: The friendly name of the initialization script to be removed.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function RemoveInitializationScript(scriptName As String) As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(System.String)
+  nameWithType.vb: JavaScriptEngine.RemoveInitializationScript(String)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript(String)
+  name.vb: RemoveInitializationScript(String)
+- uid: OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts
+  id: ClearInitializationScripts
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: ClearInitializationScripts()
+  nameWithType: JavaScriptEngine.ClearInitializationScripts()
+  fullName: OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearInitializationScripts
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 203
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously removes all intialization scripts from being loaded on every document load.
+  example: []
+  syntax:
+    content: public Task ClearInitializationScripts()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function ClearInitializationScripts() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.ClearInitializationScripts
+- uid: OpenQA.Selenium.JavaScriptEngine.PinScript(System.String)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.PinScript(System.String)
+  id: PinScript(System.String)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: PinScript(string)
+  nameWithType: JavaScriptEngine.PinScript(string)
+  fullName: OpenQA.Selenium.JavaScriptEngine.PinScript(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PinScript
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 220
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Pins a JavaScript snippet for execution in the browser without transmitting the
+
+    entire script across the wire for every execution.
+  example: []
+  syntax:
+    content: public Task<PinnedScript> PinScript(string script)
+    parameters:
+    - id: script
+      type: System.String
+      description: The JavaScript to pin
+    return:
+      type: System.Threading.Tasks.Task{OpenQA.Selenium.PinnedScript}
+      description: A task containing a <xref href="OpenQA.Selenium.PinnedScript" data-throw-if-not-resolved="false"></xref> object to use to execute the script.
+    content.vb: Public Function PinScript(script As String) As Task(Of PinnedScript)
+  overload: OpenQA.Selenium.JavaScriptEngine.PinScript*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.PinScript(System.String)
+  nameWithType.vb: JavaScriptEngine.PinScript(String)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.PinScript(String)
+  name.vb: PinScript(String)
+- uid: OpenQA.Selenium.JavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  id: UnpinScript(OpenQA.Selenium.PinnedScript)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: UnpinScript(PinnedScript)
+  nameWithType: JavaScriptEngine.UnpinScript(PinnedScript)
+  fullName: OpenQA.Selenium.JavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UnpinScript
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 237
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Unpins a previously pinned script from the browser.
+  example: []
+  syntax:
+    content: public Task UnpinScript(PinnedScript script)
+    parameters:
+    - id: script
+      type: OpenQA.Selenium.PinnedScript
+      description: The <xref href="OpenQA.Selenium.PinnedScript" data-throw-if-not-resolved="false"></xref> object to unpin.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function UnpinScript(script As PinnedScript) As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.UnpinScript*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+- uid: OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding(System.String)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding(System.String)
+  id: AddScriptCallbackBinding(System.String)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: AddScriptCallbackBinding(string)
+  nameWithType: JavaScriptEngine.AddScriptCallbackBinding(string)
+  fullName: OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AddScriptCallbackBinding
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 253
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Asynchronously adds a binding to a callback method that will raise an event when the named
+
+    binding is called by JavaScript executing in the browser.
+  example: []
+  syntax:
+    content: public Task AddScriptCallbackBinding(string bindingName)
+    parameters:
+    - id: bindingName
+      type: System.String
+      description: The name of the callback that will trigger events when called by JavaScript executing in the browser.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function AddScriptCallbackBinding(bindingName As String) As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(System.String)
+  nameWithType.vb: JavaScriptEngine.AddScriptCallbackBinding(String)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding(String)
+  name.vb: AddScriptCallbackBinding(String)
+- uid: OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+  id: RemoveScriptCallbackBinding(System.String)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: RemoveScriptCallbackBinding(string)
+  nameWithType: JavaScriptEngine.RemoveScriptCallbackBinding(string)
+  fullName: OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RemoveScriptCallbackBinding
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 269
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously removes a binding to a JavaScript callback.
+  example: []
+  syntax:
+    content: public Task RemoveScriptCallbackBinding(string bindingName)
+    parameters:
+    - id: bindingName
+      type: System.String
+      description: The name of the callback to be removed.
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function RemoveScriptCallbackBinding(bindingName As String) As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+  nameWithType.vb: JavaScriptEngine.RemoveScriptCallbackBinding(String)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding(String)
+  name.vb: RemoveScriptCallbackBinding(String)
+- uid: OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings
+  id: ClearScriptCallbackBindings
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: ClearScriptCallbackBindings()
+  nameWithType: JavaScriptEngine.ClearScriptCallbackBindings()
+  fullName: OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearScriptCallbackBindings
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 279
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Asynchronously removes all bindings to JavaScript callbacks.
+  example: []
+  syntax:
+    content: public Task ClearScriptCallbackBindings()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function ClearScriptCallbackBindings() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.ClearScriptCallbackBindings
+- uid: OpenQA.Selenium.JavaScriptEngine.ClearAll
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.ClearAll
+  id: ClearAll
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: ClearAll()
+  nameWithType: JavaScriptEngine.ClearAll()
+  fullName: OpenQA.Selenium.JavaScriptEngine.ClearAll()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ClearAll
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 296
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Asynchronously removes all bindings to JavaScript callbacks, all
+
+    initialization scripts from being loaded for each document, and unpins
+
+    all pinned scripts.
+  example: []
+  syntax:
+    content: public Task ClearAll()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function ClearAll() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.ClearAll*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.ClearAll
+- uid: OpenQA.Selenium.JavaScriptEngine.Reset
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.Reset
+  id: Reset
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: JavaScriptEngine.Reset()
+  fullName: OpenQA.Selenium.JavaScriptEngine.Reset()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Reset
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 309
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Asynchronously removes all bindings to JavaScript callbacks, all
+
+    initialization scripts from being loaded for each document, all
+
+    pinned scripts, and stops listening for events.
+  example: []
+  syntax:
+    content: public Task Reset()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task that represents the asynchronous operation.
+    content.vb: Public Function Reset() As Task
+  overload: OpenQA.Selenium.JavaScriptEngine.Reset*
+  implements:
+  - OpenQA.Selenium.IJavaScriptEngine.Reset
+- uid: OpenQA.Selenium.JavaScriptEngine.Dispose
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.Dispose
+  id: Dispose
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: JavaScriptEngine.Dispose()
+  fullName: OpenQA.Selenium.JavaScriptEngine.Dispose()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Dispose
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 318
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Releases all resources associated with this <xref href="OpenQA.Selenium.JavaScriptEngine" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: OpenQA.Selenium.JavaScriptEngine.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: OpenQA.Selenium.JavaScriptEngine.Dispose(System.Boolean)
+  commentId: M:OpenQA.Selenium.JavaScriptEngine.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: OpenQA.Selenium.JavaScriptEngine
+  langs:
+  - csharp
+  - vb
+  name: Dispose(bool)
+  nameWithType: JavaScriptEngine.Dispose(bool)
+  fullName: OpenQA.Selenium.JavaScriptEngine.Dispose(bool)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/JavaScriptEngine.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Dispose
+    path: ../src/webdriver/JavaScriptEngine.cs
+    startLine: 327
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Releases all resources associated with this <xref href="OpenQA.Selenium.JavaScriptEngine" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+      description: <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> if the Dispose method was explicitly called; otherwise, <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: OpenQA.Selenium.JavaScriptEngine.Dispose*
+  nameWithType.vb: JavaScriptEngine.Dispose(Boolean)
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.Dispose(Boolean)
+  name.vb: Dispose(Boolean)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.IJavaScriptEngine
+  commentId: T:OpenQA.Selenium.IJavaScriptEngine
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IJavaScriptEngine.html
+  name: IJavaScriptEngine
+  nameWithType: IJavaScriptEngine
+  fullName: OpenQA.Selenium.IJavaScriptEngine
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.JavaScriptEngine
+  commentId: T:OpenQA.Selenium.JavaScriptEngine
+  href: OpenQA.Selenium.JavaScriptEngine.html
+  name: JavaScriptEngine
+  nameWithType: JavaScriptEngine
+  fullName: OpenQA.Selenium.JavaScriptEngine
+- uid: OpenQA.Selenium.IWebDriver
+  commentId: T:OpenQA.Selenium.IWebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebDriver.html
+  name: IWebDriver
+  nameWithType: IWebDriver
+  fullName: OpenQA.Selenium.IWebDriver
+- uid: OpenQA.Selenium.JavaScriptEngine.#ctor*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.#ctor
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine__ctor_OpenQA_Selenium_IWebDriver_
+  name: JavaScriptEngine
+  nameWithType: JavaScriptEngine.JavaScriptEngine
+  fullName: OpenQA.Selenium.JavaScriptEngine.JavaScriptEngine
+  nameWithType.vb: JavaScriptEngine.New
+  fullName.vb: OpenQA.Selenium.JavaScriptEngine.New
+  name.vb: New
+- uid: OpenQA.Selenium.IJavaScriptEngine.JavaScriptCallbackExecuted
+  commentId: E:OpenQA.Selenium.IJavaScriptEngine.JavaScriptCallbackExecuted
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_JavaScriptCallbackExecuted
+  name: JavaScriptCallbackExecuted
+  nameWithType: IJavaScriptEngine.JavaScriptCallbackExecuted
+  fullName: OpenQA.Selenium.IJavaScriptEngine.JavaScriptCallbackExecuted
+- uid: System.EventHandler{OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<JavaScriptCallbackExecutedEventArgs>
+  nameWithType: EventHandler<JavaScriptCallbackExecutedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs>
+  nameWithType.vb: EventHandler(Of JavaScriptCallbackExecutedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs)
+  name.vb: EventHandler(Of JavaScriptCallbackExecutedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs
+    name: JavaScriptCallbackExecutedEventArgs
+    href: OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs
+    name: JavaScriptCallbackExecutedEventArgs
+    href: OpenQA.Selenium.JavaScriptCallbackExecutedEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: OpenQA.Selenium.IJavaScriptEngine.JavaScriptExceptionThrown
+  commentId: E:OpenQA.Selenium.IJavaScriptEngine.JavaScriptExceptionThrown
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_JavaScriptExceptionThrown
+  name: JavaScriptExceptionThrown
+  nameWithType: IJavaScriptEngine.JavaScriptExceptionThrown
+  fullName: OpenQA.Selenium.IJavaScriptEngine.JavaScriptExceptionThrown
+- uid: System.EventHandler{OpenQA.Selenium.JavaScriptExceptionThrownEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.JavaScriptExceptionThrownEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<JavaScriptExceptionThrownEventArgs>
+  nameWithType: EventHandler<JavaScriptExceptionThrownEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.JavaScriptExceptionThrownEventArgs>
+  nameWithType.vb: EventHandler(Of JavaScriptExceptionThrownEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.JavaScriptExceptionThrownEventArgs)
+  name.vb: EventHandler(Of JavaScriptExceptionThrownEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.JavaScriptExceptionThrownEventArgs
+    name: JavaScriptExceptionThrownEventArgs
+    href: OpenQA.Selenium.JavaScriptExceptionThrownEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.JavaScriptExceptionThrownEventArgs
+    name: JavaScriptExceptionThrownEventArgs
+    href: OpenQA.Selenium.JavaScriptExceptionThrownEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.IJavaScriptEngine.JavaScriptConsoleApiCalled
+  commentId: E:OpenQA.Selenium.IJavaScriptEngine.JavaScriptConsoleApiCalled
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_JavaScriptConsoleApiCalled
+  name: JavaScriptConsoleApiCalled
+  nameWithType: IJavaScriptEngine.JavaScriptConsoleApiCalled
+  fullName: OpenQA.Selenium.IJavaScriptEngine.JavaScriptConsoleApiCalled
+- uid: System.EventHandler{OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<JavaScriptConsoleApiCalledEventArgs>
+  nameWithType: EventHandler<JavaScriptConsoleApiCalledEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs>
+  nameWithType.vb: EventHandler(Of JavaScriptConsoleApiCalledEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs)
+  name.vb: EventHandler(Of JavaScriptConsoleApiCalledEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs
+    name: JavaScriptConsoleApiCalledEventArgs
+    href: OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs
+    name: JavaScriptConsoleApiCalledEventArgs
+    href: OpenQA.Selenium.JavaScriptConsoleApiCalledEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.IJavaScriptEngine.DomMutated
+  commentId: E:OpenQA.Selenium.IJavaScriptEngine.DomMutated
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_DomMutated
+  name: DomMutated
+  nameWithType: IJavaScriptEngine.DomMutated
+  fullName: OpenQA.Selenium.IJavaScriptEngine.DomMutated
+- uid: System.EventHandler{OpenQA.Selenium.DomMutatedEventArgs}
+  commentId: T:System.EventHandler{OpenQA.Selenium.DomMutatedEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<DomMutatedEventArgs>
+  nameWithType: EventHandler<DomMutatedEventArgs>
+  fullName: System.EventHandler<OpenQA.Selenium.DomMutatedEventArgs>
+  nameWithType.vb: EventHandler(Of DomMutatedEventArgs)
+  fullName.vb: System.EventHandler(Of OpenQA.Selenium.DomMutatedEventArgs)
+  name.vb: EventHandler(Of DomMutatedEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: OpenQA.Selenium.DomMutatedEventArgs
+    name: DomMutatedEventArgs
+    href: OpenQA.Selenium.DomMutatedEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DomMutatedEventArgs
+    name: DomMutatedEventArgs
+    href: OpenQA.Selenium.DomMutatedEventArgs.html
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.InitializationScripts*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.InitializationScripts
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_InitializationScripts
+  name: InitializationScripts
+  nameWithType: JavaScriptEngine.InitializationScripts
+  fullName: OpenQA.Selenium.JavaScriptEngine.InitializationScripts
+- uid: OpenQA.Selenium.IJavaScriptEngine.InitializationScripts
+  commentId: P:OpenQA.Selenium.IJavaScriptEngine.InitializationScripts
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_InitializationScripts
+  name: InitializationScripts
+  nameWithType: IJavaScriptEngine.InitializationScripts
+  fullName: OpenQA.Selenium.IJavaScriptEngine.InitializationScripts
+- uid: System.Collections.Generic.IReadOnlyList{OpenQA.Selenium.InitializationScript}
+  commentId: T:System.Collections.Generic.IReadOnlyList{OpenQA.Selenium.InitializationScript}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<InitializationScript>
+  nameWithType: IReadOnlyList<InitializationScript>
+  fullName: System.Collections.Generic.IReadOnlyList<OpenQA.Selenium.InitializationScript>
+  nameWithType.vb: IReadOnlyList(Of InitializationScript)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of OpenQA.Selenium.InitializationScript)
+  name.vb: IReadOnlyList(Of InitializationScript)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: OpenQA.Selenium.InitializationScript
+    name: InitializationScript
+    href: OpenQA.Selenium.InitializationScript.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.InitializationScript
+    name: InitializationScript
+    href: OpenQA.Selenium.InitializationScript.html
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_ScriptCallbackBindings
+  name: ScriptCallbackBindings
+  nameWithType: JavaScriptEngine.ScriptCallbackBindings
+  fullName: OpenQA.Selenium.JavaScriptEngine.ScriptCallbackBindings
+- uid: OpenQA.Selenium.IJavaScriptEngine.ScriptCallbackBindings
+  commentId: P:OpenQA.Selenium.IJavaScriptEngine.ScriptCallbackBindings
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ScriptCallbackBindings
+  name: ScriptCallbackBindings
+  nameWithType: IJavaScriptEngine.ScriptCallbackBindings
+  fullName: OpenQA.Selenium.IJavaScriptEngine.ScriptCallbackBindings
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_StartEventMonitoring
+  name: StartEventMonitoring
+  nameWithType: JavaScriptEngine.StartEventMonitoring
+  fullName: OpenQA.Selenium.JavaScriptEngine.StartEventMonitoring
+- uid: OpenQA.Selenium.IJavaScriptEngine.StartEventMonitoring
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.StartEventMonitoring
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_StartEventMonitoring
+  name: StartEventMonitoring()
+  nameWithType: IJavaScriptEngine.StartEventMonitoring()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.StartEventMonitoring()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.StartEventMonitoring
+    name: StartEventMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_StartEventMonitoring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.StartEventMonitoring
+    name: StartEventMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_StartEventMonitoring
+  - name: (
+  - name: )
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_StopEventMonitoring
+  name: StopEventMonitoring
+  nameWithType: JavaScriptEngine.StopEventMonitoring
+  fullName: OpenQA.Selenium.JavaScriptEngine.StopEventMonitoring
+- uid: OpenQA.Selenium.IJavaScriptEngine.StopEventMonitoring
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.StopEventMonitoring
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_StopEventMonitoring
+  name: StopEventMonitoring()
+  nameWithType: IJavaScriptEngine.StopEventMonitoring()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.StopEventMonitoring()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.StopEventMonitoring
+    name: StopEventMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_StopEventMonitoring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.StopEventMonitoring
+    name: StopEventMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_StopEventMonitoring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_EnableDomMutationMonitoring
+  name: EnableDomMutationMonitoring
+  nameWithType: JavaScriptEngine.EnableDomMutationMonitoring
+  fullName: OpenQA.Selenium.JavaScriptEngine.EnableDomMutationMonitoring
+- uid: OpenQA.Selenium.IJavaScriptEngine.EnableDomMutationMonitoring
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.EnableDomMutationMonitoring
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_EnableDomMutationMonitoring
+  name: EnableDomMutationMonitoring()
+  nameWithType: IJavaScriptEngine.EnableDomMutationMonitoring()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.EnableDomMutationMonitoring()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.EnableDomMutationMonitoring
+    name: EnableDomMutationMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_EnableDomMutationMonitoring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.EnableDomMutationMonitoring
+    name: EnableDomMutationMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_EnableDomMutationMonitoring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_DisableDomMutationMonitoring
+  name: DisableDomMutationMonitoring
+  nameWithType: JavaScriptEngine.DisableDomMutationMonitoring
+  fullName: OpenQA.Selenium.JavaScriptEngine.DisableDomMutationMonitoring
+- uid: OpenQA.Selenium.IJavaScriptEngine.DisableDomMutationMonitoring
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.DisableDomMutationMonitoring
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_DisableDomMutationMonitoring
+  name: DisableDomMutationMonitoring()
+  nameWithType: IJavaScriptEngine.DisableDomMutationMonitoring()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.DisableDomMutationMonitoring()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.DisableDomMutationMonitoring
+    name: DisableDomMutationMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_DisableDomMutationMonitoring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.DisableDomMutationMonitoring
+    name: DisableDomMutationMonitoring
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_DisableDomMutationMonitoring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.InitializationScript
+  commentId: T:OpenQA.Selenium.InitializationScript
+  href: OpenQA.Selenium.InitializationScript.html
+  name: InitializationScript
+  nameWithType: InitializationScript
+  fullName: OpenQA.Selenium.InitializationScript
+- uid: OpenQA.Selenium.JavaScriptEngine.AddInitializationScript*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.AddInitializationScript
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_AddInitializationScript_System_String_System_String_
+  name: AddInitializationScript
+  nameWithType: JavaScriptEngine.AddInitializationScript
+  fullName: OpenQA.Selenium.JavaScriptEngine.AddInitializationScript
+- uid: OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(System.String,System.String)
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(System.String,System.String)
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_AddInitializationScript_System_String_System_String_
+  name: AddInitializationScript(string, string)
+  nameWithType: IJavaScriptEngine.AddInitializationScript(string, string)
+  fullName: OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(string, string)
+  nameWithType.vb: IJavaScriptEngine.AddInitializationScript(String, String)
+  fullName.vb: OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(String, String)
+  name.vb: AddInitializationScript(String, String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(System.String,System.String)
+    name: AddInitializationScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_AddInitializationScript_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.AddInitializationScript(System.String,System.String)
+    name: AddInitializationScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_AddInitializationScript_System_String_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.InitializationScript}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.InitializationScript}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<InitializationScript>
+  nameWithType: Task<InitializationScript>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.InitializationScript>
+  nameWithType.vb: Task(Of InitializationScript)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.InitializationScript)
+  name.vb: Task(Of InitializationScript)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.InitializationScript
+    name: InitializationScript
+    href: OpenQA.Selenium.InitializationScript.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.InitializationScript
+    name: InitializationScript
+    href: OpenQA.Selenium.InitializationScript.html
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_RemoveInitializationScript_System_String_
+  name: RemoveInitializationScript
+  nameWithType: JavaScriptEngine.RemoveInitializationScript
+  fullName: OpenQA.Selenium.JavaScriptEngine.RemoveInitializationScript
+- uid: OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(System.String)
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(System.String)
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_RemoveInitializationScript_System_String_
+  name: RemoveInitializationScript(string)
+  nameWithType: IJavaScriptEngine.RemoveInitializationScript(string)
+  fullName: OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(string)
+  nameWithType.vb: IJavaScriptEngine.RemoveInitializationScript(String)
+  fullName.vb: OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(String)
+  name.vb: RemoveInitializationScript(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(System.String)
+    name: RemoveInitializationScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_RemoveInitializationScript_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.RemoveInitializationScript(System.String)
+    name: RemoveInitializationScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_RemoveInitializationScript_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_ClearInitializationScripts
+  name: ClearInitializationScripts
+  nameWithType: JavaScriptEngine.ClearInitializationScripts
+  fullName: OpenQA.Selenium.JavaScriptEngine.ClearInitializationScripts
+- uid: OpenQA.Selenium.IJavaScriptEngine.ClearInitializationScripts
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.ClearInitializationScripts
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearInitializationScripts
+  name: ClearInitializationScripts()
+  nameWithType: IJavaScriptEngine.ClearInitializationScripts()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.ClearInitializationScripts()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.ClearInitializationScripts
+    name: ClearInitializationScripts
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearInitializationScripts
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.ClearInitializationScripts
+    name: ClearInitializationScripts
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearInitializationScripts
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.PinnedScript
+  commentId: T:OpenQA.Selenium.PinnedScript
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.PinnedScript.html
+  name: PinnedScript
+  nameWithType: PinnedScript
+  fullName: OpenQA.Selenium.PinnedScript
+- uid: OpenQA.Selenium.JavaScriptEngine.PinScript*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.PinScript
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_PinScript_System_String_
+  name: PinScript
+  nameWithType: JavaScriptEngine.PinScript
+  fullName: OpenQA.Selenium.JavaScriptEngine.PinScript
+- uid: OpenQA.Selenium.IJavaScriptEngine.PinScript(System.String)
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.PinScript(System.String)
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_PinScript_System_String_
+  name: PinScript(string)
+  nameWithType: IJavaScriptEngine.PinScript(string)
+  fullName: OpenQA.Selenium.IJavaScriptEngine.PinScript(string)
+  nameWithType.vb: IJavaScriptEngine.PinScript(String)
+  fullName.vb: OpenQA.Selenium.IJavaScriptEngine.PinScript(String)
+  name.vb: PinScript(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.PinScript(System.String)
+    name: PinScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_PinScript_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.PinScript(System.String)
+    name: PinScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_PinScript_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Threading.Tasks.Task{OpenQA.Selenium.PinnedScript}
+  commentId: T:System.Threading.Tasks.Task{OpenQA.Selenium.PinnedScript}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<PinnedScript>
+  nameWithType: Task<PinnedScript>
+  fullName: System.Threading.Tasks.Task<OpenQA.Selenium.PinnedScript>
+  nameWithType.vb: Task(Of PinnedScript)
+  fullName.vb: System.Threading.Tasks.Task(Of OpenQA.Selenium.PinnedScript)
+  name.vb: Task(Of PinnedScript)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: OpenQA.Selenium.PinnedScript
+    name: PinnedScript
+    href: OpenQA.Selenium.PinnedScript.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.PinnedScript
+    name: PinnedScript
+    href: OpenQA.Selenium.PinnedScript.html
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.UnpinScript*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.UnpinScript
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_UnpinScript_OpenQA_Selenium_PinnedScript_
+  name: UnpinScript
+  nameWithType: JavaScriptEngine.UnpinScript
+  fullName: OpenQA.Selenium.JavaScriptEngine.UnpinScript
+- uid: OpenQA.Selenium.IJavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_UnpinScript_OpenQA_Selenium_PinnedScript_
+  name: UnpinScript(PinnedScript)
+  nameWithType: IJavaScriptEngine.UnpinScript(PinnedScript)
+  fullName: OpenQA.Selenium.IJavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+    name: UnpinScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_UnpinScript_OpenQA_Selenium_PinnedScript_
+  - name: (
+  - uid: OpenQA.Selenium.PinnedScript
+    name: PinnedScript
+    href: OpenQA.Selenium.PinnedScript.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.UnpinScript(OpenQA.Selenium.PinnedScript)
+    name: UnpinScript
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_UnpinScript_OpenQA_Selenium_PinnedScript_
+  - name: (
+  - uid: OpenQA.Selenium.PinnedScript
+    name: PinnedScript
+    href: OpenQA.Selenium.PinnedScript.html
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_AddScriptCallbackBinding_System_String_
+  name: AddScriptCallbackBinding
+  nameWithType: JavaScriptEngine.AddScriptCallbackBinding
+  fullName: OpenQA.Selenium.JavaScriptEngine.AddScriptCallbackBinding
+- uid: OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(System.String)
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(System.String)
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_AddScriptCallbackBinding_System_String_
+  name: AddScriptCallbackBinding(string)
+  nameWithType: IJavaScriptEngine.AddScriptCallbackBinding(string)
+  fullName: OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(string)
+  nameWithType.vb: IJavaScriptEngine.AddScriptCallbackBinding(String)
+  fullName.vb: OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(String)
+  name.vb: AddScriptCallbackBinding(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(System.String)
+    name: AddScriptCallbackBinding
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_AddScriptCallbackBinding_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.AddScriptCallbackBinding(System.String)
+    name: AddScriptCallbackBinding
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_AddScriptCallbackBinding_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_RemoveScriptCallbackBinding_System_String_
+  name: RemoveScriptCallbackBinding
+  nameWithType: JavaScriptEngine.RemoveScriptCallbackBinding
+  fullName: OpenQA.Selenium.JavaScriptEngine.RemoveScriptCallbackBinding
+- uid: OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_RemoveScriptCallbackBinding_System_String_
+  name: RemoveScriptCallbackBinding(string)
+  nameWithType: IJavaScriptEngine.RemoveScriptCallbackBinding(string)
+  fullName: OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(string)
+  nameWithType.vb: IJavaScriptEngine.RemoveScriptCallbackBinding(String)
+  fullName.vb: OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(String)
+  name.vb: RemoveScriptCallbackBinding(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+    name: RemoveScriptCallbackBinding
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_RemoveScriptCallbackBinding_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.RemoveScriptCallbackBinding(System.String)
+    name: RemoveScriptCallbackBinding
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_RemoveScriptCallbackBinding_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_ClearScriptCallbackBindings
+  name: ClearScriptCallbackBindings
+  nameWithType: JavaScriptEngine.ClearScriptCallbackBindings
+  fullName: OpenQA.Selenium.JavaScriptEngine.ClearScriptCallbackBindings
+- uid: OpenQA.Selenium.IJavaScriptEngine.ClearScriptCallbackBindings
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.ClearScriptCallbackBindings
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearScriptCallbackBindings
+  name: ClearScriptCallbackBindings()
+  nameWithType: IJavaScriptEngine.ClearScriptCallbackBindings()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.ClearScriptCallbackBindings()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.ClearScriptCallbackBindings
+    name: ClearScriptCallbackBindings
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearScriptCallbackBindings
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.ClearScriptCallbackBindings
+    name: ClearScriptCallbackBindings
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearScriptCallbackBindings
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.ClearAll*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.ClearAll
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_ClearAll
+  name: ClearAll
+  nameWithType: JavaScriptEngine.ClearAll
+  fullName: OpenQA.Selenium.JavaScriptEngine.ClearAll
+- uid: OpenQA.Selenium.IJavaScriptEngine.ClearAll
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.ClearAll
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearAll
+  name: ClearAll()
+  nameWithType: IJavaScriptEngine.ClearAll()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.ClearAll()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.ClearAll
+    name: ClearAll
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearAll
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.ClearAll
+    name: ClearAll
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_ClearAll
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.Reset*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.Reset
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_Reset
+  name: Reset
+  nameWithType: JavaScriptEngine.Reset
+  fullName: OpenQA.Selenium.JavaScriptEngine.Reset
+- uid: OpenQA.Selenium.IJavaScriptEngine.Reset
+  commentId: M:OpenQA.Selenium.IJavaScriptEngine.Reset
+  parent: OpenQA.Selenium.IJavaScriptEngine
+  href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_Reset
+  name: Reset()
+  nameWithType: IJavaScriptEngine.Reset()
+  fullName: OpenQA.Selenium.IJavaScriptEngine.Reset()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.Reset
+    name: Reset
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_Reset
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptEngine.Reset
+    name: Reset
+    href: OpenQA.Selenium.IJavaScriptEngine.html#OpenQA_Selenium_IJavaScriptEngine_Reset
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.JavaScriptEngine.Dispose*
+  commentId: Overload:OpenQA.Selenium.JavaScriptEngine.Dispose
+  href: OpenQA.Selenium.JavaScriptEngine.html#OpenQA_Selenium_JavaScriptEngine_Dispose
+  name: Dispose
+  nameWithType: JavaScriptEngine.Dispose
+  fullName: OpenQA.Selenium.JavaScriptEngine.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

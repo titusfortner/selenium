@@ -1,0 +1,719 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  commentId: T:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  id: W3CWireProtocolCommandInfoRepository
+  parent: OpenQA.Selenium.Remote
+  children:
+  - OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.#ctor
+  - OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary
+  - OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  - OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  langs:
+  - csharp
+  - vb
+  name: W3CWireProtocolCommandInfoRepository
+  nameWithType: W3CWireProtocolCommandInfoRepository
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: W3CWireProtocolCommandInfoRepository
+    path: ../src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: >-
+    Holds the information about all commands specified by the JSON wire protocol.
+
+    This class cannot be inherited, as it is intended to be a singleton, and
+
+    allowing subclasses introduces the possibility of multiple instances.
+  example: []
+  syntax:
+    content: 'public sealed class W3CWireProtocolCommandInfoRepository : CommandInfoRepository'
+    content.vb: Public NotInheritable Class W3CWireProtocolCommandInfoRepository Inherits CommandInfoRepository
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.CommandInfoRepository
+  inheritedMembers:
+  - OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(System.String)
+  - OpenQA.Selenium.CommandInfoRepository.FindCommandName(OpenQA.Selenium.CommandInfo)
+  - OpenQA.Selenium.CommandInfoRepository.GetCommandInfo``1(System.String)
+  - OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,{T})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.#ctor
+  commentId: M:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  langs:
+  - csharp
+  - vb
+  name: W3CWireProtocolCommandInfoRepository()
+  nameWithType: W3CWireProtocolCommandInfoRepository.W3CWireProtocolCommandInfoRepository()
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.W3CWireProtocolCommandInfoRepository()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Initializes a new instance of the <xref href="OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public W3CWireProtocolCommandInfoRepository()
+    content.vb: Public Sub New()
+  overload: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.#ctor*
+  nameWithType.vb: W3CWireProtocolCommandInfoRepository.New()
+  fullName.vb: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  commentId: P:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  id: SpecificationLevel
+  parent: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  langs:
+  - csharp
+  - vb
+  name: SpecificationLevel
+  nameWithType: W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SpecificationLevel
+    path: ../src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Gets the level of the W3C WebDriver specification that this repository supports.
+  example: []
+  syntax:
+    content: public override int SpecificationLevel { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Overrides ReadOnly Property SpecificationLevel As Integer
+  overridden: OpenQA.Selenium.CommandInfoRepository.SpecificationLevel
+  overload: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel*
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  commentId: P:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  id: RepositoryCommandInfoType
+  parent: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  langs:
+  - csharp
+  - vb
+  name: RepositoryCommandInfoType
+  nameWithType: W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RepositoryCommandInfoType
+    path: ../src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Gets the <xref href="System.Type" data-throw-if-not-resolved="false"></xref> that is valid for this <xref href="OpenQA.Selenium.CommandInfoRepository" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: protected override Type RepositoryCommandInfoType { get; }
+    parameters: []
+    return:
+      type: System.Type
+    content.vb: Protected Overrides ReadOnly Property RepositoryCommandInfoType As Type
+  overridden: OpenQA.Selenium.CommandInfoRepository.RepositoryCommandInfoType
+  overload: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType*
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary
+  commentId: M:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary
+  id: InitializeCommandDictionary
+  parent: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  langs:
+  - csharp
+  - vb
+  name: InitializeCommandDictionary()
+  nameWithType: W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary()
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: InitializeCommandDictionary
+    path: ../src/webdriver/Remote/W3CWireProtocolCommandInfoRepository.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.Remote
+  summary: Initializes the dictionary of commands for the CommandInfoRepository
+  example: []
+  syntax:
+    content: protected override void InitializeCommandDictionary()
+    content.vb: Protected Overrides Sub InitializeCommandDictionary()
+  overridden: OpenQA.Selenium.CommandInfoRepository.InitializeCommandDictionary
+  overload: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary*
+references:
+- uid: OpenQA.Selenium.Remote
+  commentId: N:OpenQA.Selenium.Remote
+  href: OpenQA.html
+  name: OpenQA.Selenium.Remote
+  nameWithType: OpenQA.Selenium.Remote
+  fullName: OpenQA.Selenium.Remote
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.Remote
+    name: Remote
+    href: OpenQA.Selenium.Remote.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.CommandInfoRepository
+  commentId: T:OpenQA.Selenium.CommandInfoRepository
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.CommandInfoRepository.html
+  name: CommandInfoRepository
+  nameWithType: CommandInfoRepository
+  fullName: OpenQA.Selenium.CommandInfoRepository
+- uid: OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(System.String)
+  commentId: M:OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(System.String)
+  parent: OpenQA.Selenium.CommandInfoRepository
+  isExternal: true
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_IsCommandNameDefined_System_String_
+  name: IsCommandNameDefined(string)
+  nameWithType: CommandInfoRepository.IsCommandNameDefined(string)
+  fullName: OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(string)
+  nameWithType.vb: CommandInfoRepository.IsCommandNameDefined(String)
+  fullName.vb: OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(String)
+  name.vb: IsCommandNameDefined(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(System.String)
+    name: IsCommandNameDefined
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_IsCommandNameDefined_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.CommandInfoRepository.IsCommandNameDefined(System.String)
+    name: IsCommandNameDefined
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_IsCommandNameDefined_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.CommandInfoRepository.FindCommandName(OpenQA.Selenium.CommandInfo)
+  commentId: M:OpenQA.Selenium.CommandInfoRepository.FindCommandName(OpenQA.Selenium.CommandInfo)
+  parent: OpenQA.Selenium.CommandInfoRepository
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_FindCommandName_OpenQA_Selenium_CommandInfo_
+  name: FindCommandName(CommandInfo)
+  nameWithType: CommandInfoRepository.FindCommandName(CommandInfo)
+  fullName: OpenQA.Selenium.CommandInfoRepository.FindCommandName(OpenQA.Selenium.CommandInfo)
+  spec.csharp:
+  - uid: OpenQA.Selenium.CommandInfoRepository.FindCommandName(OpenQA.Selenium.CommandInfo)
+    name: FindCommandName
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_FindCommandName_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.CommandInfoRepository.FindCommandName(OpenQA.Selenium.CommandInfo)
+    name: FindCommandName
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_FindCommandName_OpenQA_Selenium_CommandInfo_
+  - name: (
+  - uid: OpenQA.Selenium.CommandInfo
+    name: CommandInfo
+    href: OpenQA.Selenium.CommandInfo.html
+  - name: )
+- uid: OpenQA.Selenium.CommandInfoRepository.GetCommandInfo``1(System.String)
+  commentId: M:OpenQA.Selenium.CommandInfoRepository.GetCommandInfo``1(System.String)
+  parent: OpenQA.Selenium.CommandInfoRepository
+  isExternal: true
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_GetCommandInfo__1_System_String_
+  name: GetCommandInfo<T>(string)
+  nameWithType: CommandInfoRepository.GetCommandInfo<T>(string)
+  fullName: OpenQA.Selenium.CommandInfoRepository.GetCommandInfo<T>(string)
+  nameWithType.vb: CommandInfoRepository.GetCommandInfo(Of T)(String)
+  fullName.vb: OpenQA.Selenium.CommandInfoRepository.GetCommandInfo(Of T)(String)
+  name.vb: GetCommandInfo(Of T)(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.CommandInfoRepository.GetCommandInfo``1(System.String)
+    name: GetCommandInfo
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_GetCommandInfo__1_System_String_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.CommandInfoRepository.GetCommandInfo``1(System.String)
+    name: GetCommandInfo
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_GetCommandInfo__1_System_String_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,{T})
+  commentId: M:OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+  parent: OpenQA.Selenium.CommandInfoRepository
+  definition: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_TryAddCommand__1_System_String___0_
+  name: TryAddCommand<T>(string, T)
+  nameWithType: CommandInfoRepository.TryAddCommand<T>(string, T)
+  fullName: OpenQA.Selenium.CommandInfoRepository.TryAddCommand<T>(string, T)
+  nameWithType.vb: CommandInfoRepository.TryAddCommand(Of T)(String, T)
+  fullName.vb: OpenQA.Selenium.CommandInfoRepository.TryAddCommand(Of T)(String, T)
+  name.vb: TryAddCommand(Of T)(String, T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+    name: TryAddCommand
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_TryAddCommand__1_System_String___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+    name: TryAddCommand
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_TryAddCommand__1_System_String___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+  commentId: M:OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+  isExternal: true
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_TryAddCommand__1_System_String___0_
+  name: TryAddCommand<T>(string, T)
+  nameWithType: CommandInfoRepository.TryAddCommand<T>(string, T)
+  fullName: OpenQA.Selenium.CommandInfoRepository.TryAddCommand<T>(string, T)
+  nameWithType.vb: CommandInfoRepository.TryAddCommand(Of T)(String, T)
+  fullName.vb: OpenQA.Selenium.CommandInfoRepository.TryAddCommand(Of T)(String, T)
+  name.vb: TryAddCommand(Of T)(String, T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+    name: TryAddCommand
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_TryAddCommand__1_System_String___0_
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.CommandInfoRepository.TryAddCommand``1(System.String,``0)
+    name: TryAddCommand
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_TryAddCommand__1_System_String___0_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  commentId: T:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+  href: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.html
+  name: W3CWireProtocolCommandInfoRepository
+  nameWithType: W3CWireProtocolCommandInfoRepository
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.#ctor*
+  commentId: Overload:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.#ctor
+  href: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.html#OpenQA_Selenium_Remote_W3CWireProtocolCommandInfoRepository__ctor
+  name: W3CWireProtocolCommandInfoRepository
+  nameWithType: W3CWireProtocolCommandInfoRepository.W3CWireProtocolCommandInfoRepository
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.W3CWireProtocolCommandInfoRepository
+  nameWithType.vb: W3CWireProtocolCommandInfoRepository.New
+  fullName.vb: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.New
+  name.vb: New
+- uid: OpenQA.Selenium.CommandInfoRepository.SpecificationLevel
+  commentId: P:OpenQA.Selenium.CommandInfoRepository.SpecificationLevel
+  parent: OpenQA.Selenium.CommandInfoRepository
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_SpecificationLevel
+  name: SpecificationLevel
+  nameWithType: CommandInfoRepository.SpecificationLevel
+  fullName: OpenQA.Selenium.CommandInfoRepository.SpecificationLevel
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel*
+  commentId: Overload:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  href: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.html#OpenQA_Selenium_Remote_W3CWireProtocolCommandInfoRepository_SpecificationLevel
+  name: SpecificationLevel
+  nameWithType: W3CWireProtocolCommandInfoRepository.SpecificationLevel
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.SpecificationLevel
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Type
+  commentId: T:System.Type
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.type
+  name: Type
+  nameWithType: Type
+  fullName: System.Type
+- uid: OpenQA.Selenium.CommandInfoRepository.RepositoryCommandInfoType
+  commentId: P:OpenQA.Selenium.CommandInfoRepository.RepositoryCommandInfoType
+  parent: OpenQA.Selenium.CommandInfoRepository
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_RepositoryCommandInfoType
+  name: RepositoryCommandInfoType
+  nameWithType: CommandInfoRepository.RepositoryCommandInfoType
+  fullName: OpenQA.Selenium.CommandInfoRepository.RepositoryCommandInfoType
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType*
+  commentId: Overload:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  href: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.html#OpenQA_Selenium_Remote_W3CWireProtocolCommandInfoRepository_RepositoryCommandInfoType
+  name: RepositoryCommandInfoType
+  nameWithType: W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.RepositoryCommandInfoType
+- uid: OpenQA.Selenium.CommandInfoRepository.InitializeCommandDictionary
+  commentId: M:OpenQA.Selenium.CommandInfoRepository.InitializeCommandDictionary
+  parent: OpenQA.Selenium.CommandInfoRepository
+  href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_InitializeCommandDictionary
+  name: InitializeCommandDictionary()
+  nameWithType: CommandInfoRepository.InitializeCommandDictionary()
+  fullName: OpenQA.Selenium.CommandInfoRepository.InitializeCommandDictionary()
+  spec.csharp:
+  - uid: OpenQA.Selenium.CommandInfoRepository.InitializeCommandDictionary
+    name: InitializeCommandDictionary
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_InitializeCommandDictionary
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.CommandInfoRepository.InitializeCommandDictionary
+    name: InitializeCommandDictionary
+    href: OpenQA.Selenium.CommandInfoRepository.html#OpenQA_Selenium_CommandInfoRepository_InitializeCommandDictionary
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary*
+  commentId: Overload:OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary
+  href: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.html#OpenQA_Selenium_Remote_W3CWireProtocolCommandInfoRepository_InitializeCommandDictionary
+  name: InitializeCommandDictionary
+  nameWithType: W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary
+  fullName: OpenQA.Selenium.Remote.W3CWireProtocolCommandInfoRepository.InitializeCommandDictionary

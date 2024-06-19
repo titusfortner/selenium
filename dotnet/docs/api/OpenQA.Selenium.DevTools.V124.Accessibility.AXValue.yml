@@ -1,0 +1,560 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  commentId: T:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  id: AXValue
+  parent: OpenQA.Selenium.DevTools.V124.Accessibility
+  children:
+  - OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes
+  - OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources
+  - OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type
+  - OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value
+  langs:
+  - csharp
+  - vb
+  name: AXValue
+  nameWithType: AXValue
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AXValue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Accessibility
+  summary: A single computed AX property.
+  example: []
+  syntax:
+    content: public sealed class AXValue
+    content.vb: Public NotInheritable Class AXValue
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type
+  commentId: P:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type
+  id: Type
+  parent: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: AXValue.Type
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Type
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Accessibility
+  summary: The type of this value.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("type")]
+
+      public AXValueType Type { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueType
+    content.vb: >-
+      <JsonProperty("type")>
+
+      Public Property Type As AXValueType
+  overload: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: type
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value
+  commentId: P:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value
+  id: Value
+  parent: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: AXValue.Value
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Value
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Accessibility
+  summary: The computed value of this property.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("value", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public object Value { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: >-
+      <JsonProperty("value", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Value As Object
+  overload: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: value
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes
+  commentId: P:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes
+  id: RelatedNodes
+  parent: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  langs:
+  - csharp
+  - vb
+  name: RelatedNodes
+  nameWithType: AXValue.RelatedNodes
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RelatedNodes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Accessibility
+  summary: One or more related nodes, if applicable.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("relatedNodes", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AXRelatedNode[] RelatedNodes { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode[]
+    content.vb: >-
+      <JsonProperty("relatedNodes", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property RelatedNodes As AXRelatedNode()
+  overload: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: relatedNodes
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources
+  commentId: P:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources
+  id: Sources
+  parent: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue
+  langs:
+  - csharp
+  - vb
+  name: Sources
+  nameWithType: AXValue.Sources
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Sources
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Accessibility/AXValue.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Accessibility
+  summary: The sources which contributed to the computation of this property.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("sources", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public AXValueSource[] Sources { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource[]
+    content.vb: >-
+      <JsonProperty("sources", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Sources As AXValueSource()
+  overload: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: sources
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility
+  commentId: N:OpenQA.Selenium.DevTools.V124.Accessibility
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Accessibility
+  nameWithType: OpenQA.Selenium.DevTools.V124.Accessibility
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Accessibility
+    name: Accessibility
+    href: OpenQA.Selenium.DevTools.V124.Accessibility.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Accessibility
+    name: Accessibility
+    href: OpenQA.Selenium.DevTools.V124.Accessibility.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.html#OpenQA_Selenium_DevTools_V124_Accessibility_AXValue_Type
+  name: Type
+  nameWithType: AXValue.Type
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Type
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueType
+  commentId: T:OpenQA.Selenium.DevTools.V124.Accessibility.AXValueType
+  parent: OpenQA.Selenium.DevTools.V124.Accessibility
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueType.html
+  name: AXValueType
+  nameWithType: AXValueType
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueType
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.html#OpenQA_Selenium_DevTools_V124_Accessibility_AXValue_Value
+  name: Value
+  nameWithType: AXValue.Value
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Value
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.html#OpenQA_Selenium_DevTools_V124_Accessibility_AXValue_RelatedNodes
+  name: RelatedNodes
+  nameWithType: AXValue.RelatedNodes
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.RelatedNodes
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode.html
+  name: AXRelatedNode[]
+  nameWithType: AXRelatedNode[]
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode[]
+  nameWithType.vb: AXRelatedNode()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode()
+  name.vb: AXRelatedNode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode
+    name: AXRelatedNode
+    href: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode
+    name: AXRelatedNode
+    href: OpenQA.Selenium.DevTools.V124.Accessibility.AXRelatedNode.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.html#OpenQA_Selenium_DevTools_V124_Accessibility_AXValue_Sources
+  name: Sources
+  nameWithType: AXValue.Sources
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValue.Sources
+- uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource.html
+  name: AXValueSource[]
+  nameWithType: AXValueSource[]
+  fullName: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource[]
+  nameWithType.vb: AXValueSource()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource()
+  name.vb: AXValueSource()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource
+    name: AXValueSource
+    href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource
+    name: AXValueSource
+    href: OpenQA.Selenium.DevTools.V124.Accessibility.AXValueSource.html
+  - name: (
+  - name: )

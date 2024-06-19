@@ -1,0 +1,499 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+  commentId: T:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+  id: CSSLayerData
+  parent: OpenQA.Selenium.DevTools.V124.CSS
+  children:
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order
+  - OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers
+  langs:
+  - csharp
+  - vb
+  name: CSSLayerData
+  nameWithType: CSSLayerData
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CSSLayerData
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: CSS Layer data.
+  example: []
+  syntax:
+    content: public sealed class CSSLayerData
+    content.vb: Public NotInheritable Class CSSLayerData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name
+  id: Name
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: CSSLayerData.Name
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: Layer name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public Property Name As String
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers
+  id: SubLayers
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+  langs:
+  - csharp
+  - vb
+  name: SubLayers
+  nameWithType: CSSLayerData.SubLayers
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SubLayers
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: Direct sub-layers
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("subLayers", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public CSSLayerData[] SubLayers { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData[]
+    content.vb: >-
+      <JsonProperty("subLayers", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SubLayers As CSSLayerData()
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: subLayers
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order
+  commentId: P:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order
+  id: Order
+  parent: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+  langs:
+  - csharp
+  - vb
+  name: Order
+  nameWithType: CSSLayerData.Order
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Order
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/CSS/CSSLayerData.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.CSS
+  summary: >-
+    Layer order. The order determines the order of the layer in the cascade order.
+
+    A higher number has higher priority in the cascade order.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("order")]
+
+      public double Order { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("order")>
+
+      Public Property Order As Double
+  overload: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: order
+references:
+- uid: OpenQA.Selenium.DevTools.V124.CSS
+  commentId: N:OpenQA.Selenium.DevTools.V124.CSS
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.CSS
+  nameWithType: OpenQA.Selenium.DevTools.V124.CSS
+  fullName: OpenQA.Selenium.DevTools.V124.CSS
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V124.CSS.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V124.CSS.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.html#OpenQA_Selenium_DevTools_V124_CSS_CSSLayerData_Name
+  name: Name
+  nameWithType: CSSLayerData.Name
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.html#OpenQA_Selenium_DevTools_V124_CSS_CSSLayerData_SubLayers
+  name: SubLayers
+  nameWithType: CSSLayerData.SubLayers
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.SubLayers
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.html
+  name: CSSLayerData[]
+  nameWithType: CSSLayerData[]
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData[]
+  nameWithType.vb: CSSLayerData()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData()
+  name.vb: CSSLayerData()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+    name: CSSLayerData
+    href: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData
+    name: CSSLayerData
+    href: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order
+  href: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.html#OpenQA_Selenium_DevTools_V124_CSS_CSSLayerData_Order
+  name: Order
+  nameWithType: CSSLayerData.Order
+  fullName: OpenQA.Selenium.DevTools.V124.CSS.CSSLayerData.Order
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double

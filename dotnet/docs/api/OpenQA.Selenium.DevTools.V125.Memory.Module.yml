@@ -1,0 +1,524 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module
+  commentId: T:OpenQA.Selenium.DevTools.V125.Memory.Module
+  id: Module
+  parent: OpenQA.Selenium.DevTools.V125.Memory
+  children:
+  - OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress
+  - OpenQA.Selenium.DevTools.V125.Memory.Module.Name
+  - OpenQA.Selenium.DevTools.V125.Memory.Module.Size
+  - OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid
+  langs:
+  - csharp
+  - vb
+  name: Module
+  nameWithType: Module
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Module
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Memory
+  summary: Executable module information
+  example: []
+  syntax:
+    content: public sealed class Module
+    content.vb: Public NotInheritable Class [Module]
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.Name
+  commentId: P:OpenQA.Selenium.DevTools.V125.Memory.Module.Name
+  id: Name
+  parent: OpenQA.Selenium.DevTools.V125.Memory.Module
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Module.Name
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.Name
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Name
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Memory
+  summary: Name of the module.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("name")]
+
+      public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("name")>
+
+      Public Property Name As String
+  overload: OpenQA.Selenium.DevTools.V125.Memory.Module.Name*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: name
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid
+  commentId: P:OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid
+  id: Uuid
+  parent: OpenQA.Selenium.DevTools.V125.Memory.Module
+  langs:
+  - csharp
+  - vb
+  name: Uuid
+  nameWithType: Module.Uuid
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Uuid
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Memory
+  summary: UUID of the module.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("uuid")]
+
+      public string Uuid { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("uuid")>
+
+      Public Property Uuid As String
+  overload: OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: uuid
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress
+  commentId: P:OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress
+  id: BaseAddress
+  parent: OpenQA.Selenium.DevTools.V125.Memory.Module
+  langs:
+  - csharp
+  - vb
+  name: BaseAddress
+  nameWithType: Module.BaseAddress
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BaseAddress
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Memory
+  summary: >-
+    Base address where the module is loaded into memory. Encoded as a decimal
+
+    or hexadecimal (0x prefixed) string.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("baseAddress")]
+
+      public string BaseAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("baseAddress")>
+
+      Public Property BaseAddress As String
+  overload: OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: baseAddress
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.Size
+  commentId: P:OpenQA.Selenium.DevTools.V125.Memory.Module.Size
+  id: Size
+  parent: OpenQA.Selenium.DevTools.V125.Memory.Module
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: Module.Size
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.Size
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Size
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Memory/Module.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Memory
+  summary: Size of the module in bytes.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("size")]
+
+      public double Size { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("size")>
+
+      Public Property Size As Double
+  overload: OpenQA.Selenium.DevTools.V125.Memory.Module.Size*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: size
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Memory
+  commentId: N:OpenQA.Selenium.DevTools.V125.Memory
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Memory
+  nameWithType: OpenQA.Selenium.DevTools.V125.Memory
+  fullName: OpenQA.Selenium.DevTools.V125.Memory
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Memory
+    name: Memory
+    href: OpenQA.Selenium.DevTools.V125.Memory.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Memory
+    name: Memory
+    href: OpenQA.Selenium.DevTools.V125.Memory.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.Name*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Memory.Module.Name
+  href: OpenQA.Selenium.DevTools.V125.Memory.Module.html#OpenQA_Selenium_DevTools_V125_Memory_Module_Name
+  name: Name
+  nameWithType: Module.Name
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid
+  href: OpenQA.Selenium.DevTools.V125.Memory.Module.html#OpenQA_Selenium_DevTools_V125_Memory_Module_Uuid
+  name: Uuid
+  nameWithType: Module.Uuid
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.Uuid
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress
+  href: OpenQA.Selenium.DevTools.V125.Memory.Module.html#OpenQA_Selenium_DevTools_V125_Memory_Module_BaseAddress
+  name: BaseAddress
+  nameWithType: Module.BaseAddress
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.BaseAddress
+- uid: OpenQA.Selenium.DevTools.V125.Memory.Module.Size*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Memory.Module.Size
+  href: OpenQA.Selenium.DevTools.V125.Memory.Module.html#OpenQA_Selenium_DevTools_V125_Memory_Module_Size
+  name: Size
+  nameWithType: Module.Size
+  fullName: OpenQA.Selenium.DevTools.V125.Memory.Module.Size
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double

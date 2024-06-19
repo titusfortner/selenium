@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  commentId: T:OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  id: BlockedReason
+  parent: OpenQA.Selenium.DevTools.V124.Network
+  children:
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoepFrameResourceNeedsCoepHeader
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.ContentType
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoopSandboxedIframeCannotNavigateToCoopPage
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOrigin
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameSite
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Csp
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Inspector
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.MixedContent
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Origin
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Other
+  - OpenQA.Selenium.DevTools.V124.Network.BlockedReason.SubresourceFilter
+  langs:
+  - csharp
+  - vb
+  name: BlockedReason
+  nameWithType: BlockedReason
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: BlockedReason
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 10
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: The reason why request was blocked.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum BlockedReason
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum BlockedReason
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Other
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Other
+  id: Other
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: Other
+  nameWithType: BlockedReason.Other
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Other
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Other
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the other value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "other")]
+
+      Other = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="other")>
+
+      Other = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: other
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Csp
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Csp
+  id: Csp
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: Csp
+  nameWithType: BlockedReason.Csp
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Csp
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Csp
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 21
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the csp value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "csp")]
+
+      Csp = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="csp")>
+
+      Csp = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: csp
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.MixedContent
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.MixedContent
+  id: MixedContent
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: MixedContent
+  nameWithType: BlockedReason.MixedContent
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.MixedContent
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MixedContent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the mixed-content value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "mixed-content")]
+
+      MixedContent = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="mixed-content")>
+
+      MixedContent = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: mixed-content
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Origin
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Origin
+  id: Origin
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: BlockedReason.Origin
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Origin
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Origin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the origin value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "origin")]
+
+      Origin = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="origin")>
+
+      Origin = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: origin
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Inspector
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Inspector
+  id: Inspector
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: Inspector
+  nameWithType: BlockedReason.Inspector
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.Inspector
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Inspector
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the inspector value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "inspector")]
+
+      Inspector = 4
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="inspector")>
+
+      Inspector = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: inspector
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.SubresourceFilter
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.SubresourceFilter
+  id: SubresourceFilter
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: SubresourceFilter
+  nameWithType: BlockedReason.SubresourceFilter
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.SubresourceFilter
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SubresourceFilter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the subresource-filter value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "subresource-filter")]
+
+      SubresourceFilter = 5
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="subresource-filter")>
+
+      SubresourceFilter = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: subresource-filter
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.ContentType
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.ContentType
+  id: ContentType
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: ContentType
+  nameWithType: BlockedReason.ContentType
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.ContentType
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the content-type value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "content-type")]
+
+      ContentType = 6
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="content-type")>
+
+      ContentType = 6
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: content-type
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoepFrameResourceNeedsCoepHeader
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoepFrameResourceNeedsCoepHeader
+  id: CoepFrameResourceNeedsCoepHeader
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: CoepFrameResourceNeedsCoepHeader
+  nameWithType: BlockedReason.CoepFrameResourceNeedsCoepHeader
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoepFrameResourceNeedsCoepHeader
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CoepFrameResourceNeedsCoepHeader
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 51
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the coep-frame-resource-needs-coep-header value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "coep-frame-resource-needs-coep-header")]
+
+      CoepFrameResourceNeedsCoepHeader = 7
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="coep-frame-resource-needs-coep-header")>
+
+      CoepFrameResourceNeedsCoepHeader = 7
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: coep-frame-resource-needs-coep-header
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoopSandboxedIframeCannotNavigateToCoopPage
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoopSandboxedIframeCannotNavigateToCoopPage
+  id: CoopSandboxedIframeCannotNavigateToCoopPage
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: CoopSandboxedIframeCannotNavigateToCoopPage
+  nameWithType: BlockedReason.CoopSandboxedIframeCannotNavigateToCoopPage
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CoopSandboxedIframeCannotNavigateToCoopPage
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CoopSandboxedIframeCannotNavigateToCoopPage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 56
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the coop-sandboxed-iframe-cannot-navigate-to-coop-page value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "coop-sandboxed-iframe-cannot-navigate-to-coop-page")]
+
+      CoopSandboxedIframeCannotNavigateToCoopPage = 8
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="coop-sandboxed-iframe-cannot-navigate-to-coop-page")>
+
+      CoopSandboxedIframeCannotNavigateToCoopPage = 8
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: coop-sandboxed-iframe-cannot-navigate-to-coop-page
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOrigin
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOrigin
+  id: CorpNotSameOrigin
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: CorpNotSameOrigin
+  nameWithType: BlockedReason.CorpNotSameOrigin
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOrigin
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CorpNotSameOrigin
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 61
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the corp-not-same-origin value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "corp-not-same-origin")]
+
+      CorpNotSameOrigin = 9
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="corp-not-same-origin")>
+
+      CorpNotSameOrigin = 9
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: corp-not-same-origin
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  id: CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  nameWithType: BlockedReason.CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CorpNotSameOriginAfterDefaultedToSameOriginByCoep
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 66
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the corp-not-same-origin-after-defaulted-to-same-origin-by-coep value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "corp-not-same-origin-after-defaulted-to-same-origin-by-coep")]
+
+      CorpNotSameOriginAfterDefaultedToSameOriginByCoep = 10
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="corp-not-same-origin-after-defaulted-to-same-origin-by-coep")>
+
+      CorpNotSameOriginAfterDefaultedToSameOriginByCoep = 10
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: corp-not-same-origin-after-defaulted-to-same-origin-by-coep
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameSite
+  commentId: F:OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameSite
+  id: CorpNotSameSite
+  parent: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  langs:
+  - csharp
+  - vb
+  name: CorpNotSameSite
+  nameWithType: BlockedReason.CorpNotSameSite
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.CorpNotSameSite
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CorpNotSameSite
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Network/BlockedReason.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Network
+  summary: Enumerated member for the corp-not-same-site value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "corp-not-same-site")]
+
+      CorpNotSameSite = 11
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+    content.vb: >-
+      <EnumMember(Value:="corp-not-same-site")>
+
+      CorpNotSameSite = 11
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: corp-not-same-site
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Network
+  commentId: N:OpenQA.Selenium.DevTools.V124.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Network
+  nameWithType: OpenQA.Selenium.DevTools.V124.Network
+  fullName: OpenQA.Selenium.DevTools.V124.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V124.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V124.Network.html
+- uid: OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  commentId: T:OpenQA.Selenium.DevTools.V124.Network.BlockedReason
+  parent: OpenQA.Selenium.DevTools.V124.Network
+  href: OpenQA.Selenium.DevTools.V124.Network.BlockedReason.html
+  name: BlockedReason
+  nameWithType: BlockedReason
+  fullName: OpenQA.Selenium.DevTools.V124.Network.BlockedReason

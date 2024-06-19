@@ -1,0 +1,297 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.ITimeouts
+  commentId: T:OpenQA.Selenium.ITimeouts
+  id: ITimeouts
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.ITimeouts.AsynchronousJavaScript
+  - OpenQA.Selenium.ITimeouts.ImplicitWait
+  - OpenQA.Selenium.ITimeouts.PageLoad
+  langs:
+  - csharp
+  - vb
+  name: ITimeouts
+  nameWithType: ITimeouts
+  fullName: OpenQA.Selenium.ITimeouts
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITimeouts.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ITimeouts
+    path: ../src/webdriver/ITimeouts.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines the interface through which the user can define timeouts.
+  example: []
+  syntax:
+    content: public interface ITimeouts
+    content.vb: Public Interface ITimeouts
+- uid: OpenQA.Selenium.ITimeouts.ImplicitWait
+  commentId: P:OpenQA.Selenium.ITimeouts.ImplicitWait
+  id: ImplicitWait
+  parent: OpenQA.Selenium.ITimeouts
+  langs:
+  - csharp
+  - vb
+  name: ImplicitWait
+  nameWithType: ITimeouts.ImplicitWait
+  fullName: OpenQA.Selenium.ITimeouts.ImplicitWait
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITimeouts.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ImplicitWait
+    path: ../src/webdriver/ITimeouts.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the implicit wait timeout, which is the  amount of time the
+
+    driver should wait when searching for an element if it is not immediately
+
+    present.
+  remarks: >-
+    When searching for a single element, the driver should poll the page
+
+    until the element has been found, or this timeout expires before throwing
+
+    a <xref href="OpenQA.Selenium.NoSuchElementException" data-throw-if-not-resolved="false"></xref>. When searching for multiple elements,
+
+    the driver should poll the page until at least one element has been found
+
+    or this timeout has expired.
+
+    <p>
+
+    Increasing the implicit wait timeout should be used judiciously as it
+
+    will have an adverse effect on test run time, especially when used with
+
+    slower location strategies like XPath.
+
+    </p>
+  example: []
+  syntax:
+    content: TimeSpan ImplicitWait { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Property ImplicitWait As TimeSpan
+  overload: OpenQA.Selenium.ITimeouts.ImplicitWait*
+- uid: OpenQA.Selenium.ITimeouts.AsynchronousJavaScript
+  commentId: P:OpenQA.Selenium.ITimeouts.AsynchronousJavaScript
+  id: AsynchronousJavaScript
+  parent: OpenQA.Selenium.ITimeouts
+  langs:
+  - csharp
+  - vb
+  name: AsynchronousJavaScript
+  nameWithType: ITimeouts.AsynchronousJavaScript
+  fullName: OpenQA.Selenium.ITimeouts.AsynchronousJavaScript
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITimeouts.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AsynchronousJavaScript
+    path: ../src/webdriver/ITimeouts.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the asynchronous script timeout, which is the amount
+
+    of time the driver should wait when executing JavaScript asynchronously.
+
+    This timeout only affects the <xref href="OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String%2cSystem.Object%5b%5d)" data-throw-if-not-resolved="false"></xref>
+
+    method.
+  example: []
+  syntax:
+    content: TimeSpan AsynchronousJavaScript { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Property AsynchronousJavaScript As TimeSpan
+  overload: OpenQA.Selenium.ITimeouts.AsynchronousJavaScript*
+- uid: OpenQA.Selenium.ITimeouts.PageLoad
+  commentId: P:OpenQA.Selenium.ITimeouts.PageLoad
+  id: PageLoad
+  parent: OpenQA.Selenium.ITimeouts
+  langs:
+  - csharp
+  - vb
+  name: PageLoad
+  nameWithType: ITimeouts.PageLoad
+  fullName: OpenQA.Selenium.ITimeouts.PageLoad
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/ITimeouts.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PageLoad
+    path: ../src/webdriver/ITimeouts.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets or sets the page load timeout, which is the amount of time the driver
+
+    should wait for a page to load when setting the <xref href="OpenQA.Selenium.IWebDriver.Url" data-throw-if-not-resolved="false"></xref>
+
+    property.
+  example: []
+  syntax:
+    content: TimeSpan PageLoad { get; set; }
+    parameters: []
+    return:
+      type: System.TimeSpan
+    content.vb: Property PageLoad As TimeSpan
+  overload: OpenQA.Selenium.ITimeouts.PageLoad*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.NoSuchElementException
+  commentId: T:OpenQA.Selenium.NoSuchElementException
+  href: OpenQA.Selenium.NoSuchElementException.html
+  name: NoSuchElementException
+  nameWithType: NoSuchElementException
+  fullName: OpenQA.Selenium.NoSuchElementException
+- uid: OpenQA.Selenium.ITimeouts.ImplicitWait*
+  commentId: Overload:OpenQA.Selenium.ITimeouts.ImplicitWait
+  href: OpenQA.Selenium.ITimeouts.html#OpenQA_Selenium_ITimeouts_ImplicitWait
+  name: ImplicitWait
+  nameWithType: ITimeouts.ImplicitWait
+  fullName: OpenQA.Selenium.ITimeouts.ImplicitWait
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.timespan
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: System.TimeSpan
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  commentId: M:OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+  parent: OpenQA.Selenium.IJavaScriptExecutor
+  isExternal: true
+  href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  name: ExecuteAsyncScript(string, params object[])
+  nameWithType: IJavaScriptExecutor.ExecuteAsyncScript(string, params object[])
+  fullName: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(string, params object[])
+  nameWithType.vb: IJavaScriptExecutor.ExecuteAsyncScript(String, ParamArray Object())
+  fullName.vb: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(String, ParamArray Object())
+  name.vb: ExecuteAsyncScript(String, ParamArray Object())
+  spec.csharp:
+  - uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+    name: ExecuteAsyncScript
+    href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: params
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IJavaScriptExecutor.ExecuteAsyncScript(System.String,System.Object[])
+    name: ExecuteAsyncScript
+    href: OpenQA.Selenium.IJavaScriptExecutor.html#OpenQA_Selenium_IJavaScriptExecutor_ExecuteAsyncScript_System_String_System_Object___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: ParamArray
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: (
+  - name: )
+  - name: )
+- uid: OpenQA.Selenium.ITimeouts.AsynchronousJavaScript*
+  commentId: Overload:OpenQA.Selenium.ITimeouts.AsynchronousJavaScript
+  href: OpenQA.Selenium.ITimeouts.html#OpenQA_Selenium_ITimeouts_AsynchronousJavaScript
+  name: AsynchronousJavaScript
+  nameWithType: ITimeouts.AsynchronousJavaScript
+  fullName: OpenQA.Selenium.ITimeouts.AsynchronousJavaScript
+- uid: OpenQA.Selenium.IJavaScriptExecutor
+  commentId: T:OpenQA.Selenium.IJavaScriptExecutor
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IJavaScriptExecutor.html
+  name: IJavaScriptExecutor
+  nameWithType: IJavaScriptExecutor
+  fullName: OpenQA.Selenium.IJavaScriptExecutor
+- uid: OpenQA.Selenium.IWebDriver.Url
+  commentId: P:OpenQA.Selenium.IWebDriver.Url
+  parent: OpenQA.Selenium.IWebDriver
+  href: OpenQA.Selenium.IWebDriver.html#OpenQA_Selenium_IWebDriver_Url
+  name: Url
+  nameWithType: IWebDriver.Url
+  fullName: OpenQA.Selenium.IWebDriver.Url
+- uid: OpenQA.Selenium.ITimeouts.PageLoad*
+  commentId: Overload:OpenQA.Selenium.ITimeouts.PageLoad
+  href: OpenQA.Selenium.ITimeouts.html#OpenQA_Selenium_ITimeouts_PageLoad
+  name: PageLoad
+  nameWithType: ITimeouts.PageLoad
+  fullName: OpenQA.Selenium.ITimeouts.PageLoad
+- uid: OpenQA.Selenium.IWebDriver
+  commentId: T:OpenQA.Selenium.IWebDriver
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebDriver.html
+  name: IWebDriver
+  nameWithType: IWebDriver
+  fullName: OpenQA.Selenium.IWebDriver

@@ -1,0 +1,809 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  commentId: T:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  id: SignedExchangeSignature
+  parent: OpenQA.Selenium.DevTools.V125.Network
+  children:
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature
+  - OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl
+  langs:
+  - csharp
+  - vb
+  name: SignedExchangeSignature
+  nameWithType: SignedExchangeSignature
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SignedExchangeSignature
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: >-
+    Information about a signed exchange signature.
+
+    https://wicg.github.io/webpackage/draft-yasskin-httpbis-origin-signed-exchanges-impl.html#rfc.section.3.1
+  example: []
+  syntax:
+    content: public sealed class SignedExchangeSignature
+    content.vb: Public NotInheritable Class SignedExchangeSignature
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label
+  id: Label
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: Label
+  nameWithType: SignedExchangeSignature.Label
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Label
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Signed exchange signature label.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("label")]
+
+      public string Label { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("label")>
+
+      Public Property Label As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: label
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature
+  id: Signature
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: Signature
+  nameWithType: SignedExchangeSignature.Signature
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Signature
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The hex string of signed exchange signature.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("signature")]
+
+      public string Signature { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("signature")>
+
+      Public Property Signature As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: signature
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity
+  id: Integrity
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: Integrity
+  nameWithType: SignedExchangeSignature.Integrity
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Integrity
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Signed exchange signature integrity.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("integrity")]
+
+      public string Integrity { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("integrity")>
+
+      Public Property Integrity As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: integrity
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl
+  id: CertUrl
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: CertUrl
+  nameWithType: SignedExchangeSignature.CertUrl
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CertUrl
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Signed exchange signature cert Url.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("certUrl", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string CertUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("certUrl", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CertUrl As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: certUrl
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256
+  id: CertSha256
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: CertSha256
+  nameWithType: SignedExchangeSignature.CertSha256
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CertSha256
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The hex string of signed exchange signature cert sha256.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("certSha256", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string CertSha256 { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("certSha256", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CertSha256 As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: certSha256
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl
+  id: ValidityUrl
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: ValidityUrl
+  nameWithType: SignedExchangeSignature.ValidityUrl
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ValidityUrl
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 59
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Signed exchange signature validity Url.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("validityUrl")]
+
+      public string ValidityUrl { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("validityUrl")>
+
+      Public Property ValidityUrl As String
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: validityUrl
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date
+  id: Date
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: SignedExchangeSignature.Date
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Date
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 68
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Signed exchange signature date.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("date")]
+
+      public long Date { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("date")>
+
+      Public Property [Date] As Long
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: date
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires
+  id: Expires
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: Expires
+  nameWithType: SignedExchangeSignature.Expires
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Expires
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: Signed exchange signature expires.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("expires")]
+
+      public long Expires { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("expires")>
+
+      Public Property Expires As Long
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: expires
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates
+  commentId: P:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates
+  id: Certificates
+  parent: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature
+  langs:
+  - csharp
+  - vb
+  name: Certificates
+  nameWithType: SignedExchangeSignature.Certificates
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Certificates
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Network/SignedExchangeSignature.cs
+    startLine: 86
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Network
+  summary: The encoded certificates.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("certificates", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] Certificates { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("certificates", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Certificates As String()
+  overload: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: certificates
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Network
+  commentId: N:OpenQA.Selenium.DevTools.V125.Network
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Network
+  nameWithType: OpenQA.Selenium.DevTools.V125.Network
+  fullName: OpenQA.Selenium.DevTools.V125.Network
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Network
+    name: Network
+    href: OpenQA.Selenium.DevTools.V125.Network.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_Label
+  name: Label
+  nameWithType: SignedExchangeSignature.Label
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Label
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_Signature
+  name: Signature
+  nameWithType: SignedExchangeSignature.Signature
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Signature
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_Integrity
+  name: Integrity
+  nameWithType: SignedExchangeSignature.Integrity
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Integrity
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_CertUrl
+  name: CertUrl
+  nameWithType: SignedExchangeSignature.CertUrl
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertUrl
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_CertSha256
+  name: CertSha256
+  nameWithType: SignedExchangeSignature.CertSha256
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.CertSha256
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_ValidityUrl
+  name: ValidityUrl
+  nameWithType: SignedExchangeSignature.ValidityUrl
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.ValidityUrl
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_Date
+  name: Date
+  nameWithType: SignedExchangeSignature.Date
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Date
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_Expires
+  name: Expires
+  nameWithType: SignedExchangeSignature.Expires
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Expires
+- uid: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates
+  href: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.html#OpenQA_Selenium_DevTools_V125_Network_SignedExchangeSignature_Certificates
+  name: Certificates
+  nameWithType: SignedExchangeSignature.Certificates
+  fullName: OpenQA.Selenium.DevTools.V125.Network.SignedExchangeSignature.Certificates
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )

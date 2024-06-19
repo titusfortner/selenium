@@ -1,0 +1,624 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  commentId: T:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  id: CSSStyle
+  parent: OpenQA.Selenium.DevTools.V126.CSS
+  children:
+  - OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties
+  - OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText
+  - OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range
+  - OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries
+  - OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId
+  langs:
+  - csharp
+  - vb
+  name: CSSStyle
+  nameWithType: CSSStyle
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CSSStyle
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.CSS
+  summary: CSS style representation.
+  example: []
+  syntax:
+    content: public sealed class CSSStyle
+    content.vb: Public NotInheritable Class CSSStyle
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId
+  commentId: P:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId
+  id: StyleSheetId
+  parent: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  langs:
+  - csharp
+  - vb
+  name: StyleSheetId
+  nameWithType: CSSStyle.StyleSheetId
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StyleSheetId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+    startLine: 14
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.CSS
+  summary: >-
+    The css style sheet identifier (absent for user agent stylesheet and user-specified
+
+    stylesheet rules) this rule came from.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("styleSheetId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string StyleSheetId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("styleSheetId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property StyleSheetId As String
+  overload: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: styleSheetId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties
+  commentId: P:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties
+  id: CssProperties
+  parent: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  langs:
+  - csharp
+  - vb
+  name: CssProperties
+  nameWithType: CSSStyle.CssProperties
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CssProperties
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.CSS
+  summary: CSS properties in the style.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cssProperties")]
+
+      public CSSProperty[] CssProperties { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty[]
+    content.vb: >-
+      <JsonProperty("cssProperties")>
+
+      Public Property CssProperties As CSSProperty()
+  overload: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cssProperties
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries
+  commentId: P:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries
+  id: ShorthandEntries
+  parent: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  langs:
+  - csharp
+  - vb
+  name: ShorthandEntries
+  nameWithType: CSSStyle.ShorthandEntries
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ShorthandEntries
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.CSS
+  summary: Computed values for all shorthands found in the style.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("shorthandEntries")]
+
+      public ShorthandEntry[] ShorthandEntries { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry[]
+    content.vb: >-
+      <JsonProperty("shorthandEntries")>
+
+      Public Property ShorthandEntries As ShorthandEntry()
+  overload: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: shorthandEntries
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText
+  commentId: P:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText
+  id: CssText
+  parent: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  langs:
+  - csharp
+  - vb
+  name: CssText
+  nameWithType: CSSStyle.CssText
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CssText
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+    startLine: 41
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.CSS
+  summary: Style declaration text (if available).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cssText", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string CssText { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("cssText", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property CssText As String
+  overload: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cssText
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range
+  commentId: P:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range
+  id: Range
+  parent: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle
+  langs:
+  - csharp
+  - vb
+  name: Range
+  nameWithType: CSSStyle.Range
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Range
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/CSS/CSSStyle.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.CSS
+  summary: Style declaration range in the enclosing stylesheet (if available).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("range", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SourceRange Range { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.CSS.SourceRange
+    content.vb: >-
+      <JsonProperty("range", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Range As SourceRange
+  overload: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: range
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V126.CSS
+  commentId: N:OpenQA.Selenium.DevTools.V126.CSS
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.CSS
+  nameWithType: OpenQA.Selenium.DevTools.V126.CSS
+  fullName: OpenQA.Selenium.DevTools.V126.CSS
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V126.CSS.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.CSS
+    name: CSS
+    href: OpenQA.Selenium.DevTools.V126.CSS.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId
+  href: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.html#OpenQA_Selenium_DevTools_V126_CSS_CSSStyle_StyleSheetId
+  name: StyleSheetId
+  nameWithType: CSSStyle.StyleSheetId
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.StyleSheetId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties
+  href: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.html#OpenQA_Selenium_DevTools_V126_CSS_CSSStyle_CssProperties
+  name: CssProperties
+  nameWithType: CSSStyle.CssProperties
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssProperties
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty.html
+  name: CSSProperty[]
+  nameWithType: CSSProperty[]
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty[]
+  nameWithType.vb: CSSProperty()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty()
+  name.vb: CSSProperty()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty
+    name: CSSProperty
+    href: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty
+    name: CSSProperty
+    href: OpenQA.Selenium.DevTools.V126.CSS.CSSProperty.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries
+  href: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.html#OpenQA_Selenium_DevTools_V126_CSS_CSSStyle_ShorthandEntries
+  name: ShorthandEntries
+  nameWithType: CSSStyle.ShorthandEntries
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.ShorthandEntries
+- uid: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry.html
+  name: ShorthandEntry[]
+  nameWithType: ShorthandEntry[]
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry[]
+  nameWithType.vb: ShorthandEntry()
+  fullName.vb: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry()
+  name.vb: ShorthandEntry()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry
+    name: ShorthandEntry
+    href: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry
+    name: ShorthandEntry
+    href: OpenQA.Selenium.DevTools.V126.CSS.ShorthandEntry.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText
+  href: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.html#OpenQA_Selenium_DevTools_V126_CSS_CSSStyle_CssText
+  name: CssText
+  nameWithType: CSSStyle.CssText
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.CssText
+- uid: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range
+  href: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.html#OpenQA_Selenium_DevTools_V126_CSS_CSSStyle_Range
+  name: Range
+  nameWithType: CSSStyle.Range
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.CSSStyle.Range
+- uid: OpenQA.Selenium.DevTools.V126.CSS.SourceRange
+  commentId: T:OpenQA.Selenium.DevTools.V126.CSS.SourceRange
+  parent: OpenQA.Selenium.DevTools.V126.CSS
+  href: OpenQA.Selenium.DevTools.V126.CSS.SourceRange.html
+  name: SourceRange
+  nameWithType: SourceRange
+  fullName: OpenQA.Selenium.DevTools.V126.CSS.SourceRange

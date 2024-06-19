@@ -1,0 +1,1463 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  commentId: T:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  id: PrefetchStatus
+  parent: OpenQA.Selenium.DevTools.V124.Preload
+  children:
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchAllowed
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedAfterCandidateRemoved
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedForNewerPrefetch
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedIneligibleRedirect
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedInvalidRedirect
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedMIMENotSupported
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNetError
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNon2XX
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedPerPageLimitExceeded
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchHeldback
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIneligibleRetryAfter
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsPrivacyDecoy
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsStale
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBatterySaverEnabled
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBrowserContextOffTheRecord
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleDataSaverEnabled
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleExistingProxy
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleHostIsNonUnique
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleNonDefaultStoragePartition
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligiblePreloadingDisabled
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSchemeIsNotHttps
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasCookies
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasServiceWorker
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotFinishedInTime
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotStarted
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedCookiesChanged
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedProbeFailed
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchProxyNotAvailable
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchResponseUsed
+  - OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchSuccessfulButNotUsed
+  langs:
+  - csharp
+  - vb
+  name: PrefetchStatus
+  nameWithType: PrefetchStatus
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchStatus
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 11
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: >-
+    TODO(https://crbug.com/1384419): revisit the list of PrefetchStatus and
+
+    filter out the ones that aren't necessary to the developers.
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum PrefetchStatus
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum PrefetchStatus
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchAllowed
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchAllowed
+  id: PrefetchAllowed
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchAllowed
+  nameWithType: PrefetchStatus.PrefetchAllowed
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchAllowed
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchAllowed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 17
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchAllowed value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchAllowed")]
+
+      PrefetchAllowed = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchAllowed")>
+
+      PrefetchAllowed = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchAllowed
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedIneligibleRedirect
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedIneligibleRedirect
+  id: PrefetchFailedIneligibleRedirect
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchFailedIneligibleRedirect
+  nameWithType: PrefetchStatus.PrefetchFailedIneligibleRedirect
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedIneligibleRedirect
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchFailedIneligibleRedirect
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchFailedIneligibleRedirect value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchFailedIneligibleRedirect")]
+
+      PrefetchFailedIneligibleRedirect = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchFailedIneligibleRedirect")>
+
+      PrefetchFailedIneligibleRedirect = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchFailedIneligibleRedirect
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedInvalidRedirect
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedInvalidRedirect
+  id: PrefetchFailedInvalidRedirect
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchFailedInvalidRedirect
+  nameWithType: PrefetchStatus.PrefetchFailedInvalidRedirect
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedInvalidRedirect
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchFailedInvalidRedirect
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 27
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchFailedInvalidRedirect value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchFailedInvalidRedirect")]
+
+      PrefetchFailedInvalidRedirect = 2
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchFailedInvalidRedirect")>
+
+      PrefetchFailedInvalidRedirect = 2
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchFailedInvalidRedirect
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedMIMENotSupported
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedMIMENotSupported
+  id: PrefetchFailedMIMENotSupported
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchFailedMIMENotSupported
+  nameWithType: PrefetchStatus.PrefetchFailedMIMENotSupported
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedMIMENotSupported
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchFailedMIMENotSupported
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 32
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchFailedMIMENotSupported value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchFailedMIMENotSupported")]
+
+      PrefetchFailedMIMENotSupported = 3
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchFailedMIMENotSupported")>
+
+      PrefetchFailedMIMENotSupported = 3
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchFailedMIMENotSupported
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNetError
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNetError
+  id: PrefetchFailedNetError
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchFailedNetError
+  nameWithType: PrefetchStatus.PrefetchFailedNetError
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNetError
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchFailedNetError
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 37
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchFailedNetError value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchFailedNetError")]
+
+      PrefetchFailedNetError = 4
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchFailedNetError")>
+
+      PrefetchFailedNetError = 4
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchFailedNetError
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNon2XX
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNon2XX
+  id: PrefetchFailedNon2XX
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchFailedNon2XX
+  nameWithType: PrefetchStatus.PrefetchFailedNon2XX
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedNon2XX
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchFailedNon2XX
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchFailedNon2XX value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchFailedNon2XX")]
+
+      PrefetchFailedNon2XX = 5
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchFailedNon2XX")>
+
+      PrefetchFailedNon2XX = 5
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchFailedNon2XX
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedPerPageLimitExceeded
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedPerPageLimitExceeded
+  id: PrefetchFailedPerPageLimitExceeded
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchFailedPerPageLimitExceeded
+  nameWithType: PrefetchStatus.PrefetchFailedPerPageLimitExceeded
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchFailedPerPageLimitExceeded
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchFailedPerPageLimitExceeded
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 47
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchFailedPerPageLimitExceeded value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchFailedPerPageLimitExceeded")]
+
+      PrefetchFailedPerPageLimitExceeded = 6
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchFailedPerPageLimitExceeded")>
+
+      PrefetchFailedPerPageLimitExceeded = 6
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchFailedPerPageLimitExceeded
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedAfterCandidateRemoved
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedAfterCandidateRemoved
+  id: PrefetchEvictedAfterCandidateRemoved
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchEvictedAfterCandidateRemoved
+  nameWithType: PrefetchStatus.PrefetchEvictedAfterCandidateRemoved
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedAfterCandidateRemoved
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchEvictedAfterCandidateRemoved
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchEvictedAfterCandidateRemoved value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchEvictedAfterCandidateRemoved")]
+
+      PrefetchEvictedAfterCandidateRemoved = 7
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchEvictedAfterCandidateRemoved")>
+
+      PrefetchEvictedAfterCandidateRemoved = 7
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchEvictedAfterCandidateRemoved
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedForNewerPrefetch
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedForNewerPrefetch
+  id: PrefetchEvictedForNewerPrefetch
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchEvictedForNewerPrefetch
+  nameWithType: PrefetchStatus.PrefetchEvictedForNewerPrefetch
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchEvictedForNewerPrefetch
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchEvictedForNewerPrefetch
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 57
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchEvictedForNewerPrefetch value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchEvictedForNewerPrefetch")]
+
+      PrefetchEvictedForNewerPrefetch = 8
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchEvictedForNewerPrefetch")>
+
+      PrefetchEvictedForNewerPrefetch = 8
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchEvictedForNewerPrefetch
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchHeldback
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchHeldback
+  id: PrefetchHeldback
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchHeldback
+  nameWithType: PrefetchStatus.PrefetchHeldback
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchHeldback
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchHeldback
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchHeldback value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchHeldback")]
+
+      PrefetchHeldback = 9
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchHeldback")>
+
+      PrefetchHeldback = 9
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchHeldback
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIneligibleRetryAfter
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIneligibleRetryAfter
+  id: PrefetchIneligibleRetryAfter
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchIneligibleRetryAfter
+  nameWithType: PrefetchStatus.PrefetchIneligibleRetryAfter
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIneligibleRetryAfter
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchIneligibleRetryAfter
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchIneligibleRetryAfter value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchIneligibleRetryAfter")]
+
+      PrefetchIneligibleRetryAfter = 10
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchIneligibleRetryAfter")>
+
+      PrefetchIneligibleRetryAfter = 10
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchIneligibleRetryAfter
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsPrivacyDecoy
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsPrivacyDecoy
+  id: PrefetchIsPrivacyDecoy
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchIsPrivacyDecoy
+  nameWithType: PrefetchStatus.PrefetchIsPrivacyDecoy
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsPrivacyDecoy
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchIsPrivacyDecoy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchIsPrivacyDecoy value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchIsPrivacyDecoy")]
+
+      PrefetchIsPrivacyDecoy = 11
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchIsPrivacyDecoy")>
+
+      PrefetchIsPrivacyDecoy = 11
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchIsPrivacyDecoy
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsStale
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsStale
+  id: PrefetchIsStale
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchIsStale
+  nameWithType: PrefetchStatus.PrefetchIsStale
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchIsStale
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchIsStale
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 77
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchIsStale value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchIsStale")]
+
+      PrefetchIsStale = 12
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchIsStale")>
+
+      PrefetchIsStale = 12
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchIsStale
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBrowserContextOffTheRecord
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBrowserContextOffTheRecord
+  id: PrefetchNotEligibleBrowserContextOffTheRecord
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleBrowserContextOffTheRecord
+  nameWithType: PrefetchStatus.PrefetchNotEligibleBrowserContextOffTheRecord
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBrowserContextOffTheRecord
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleBrowserContextOffTheRecord
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 82
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleBrowserContextOffTheRecord value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleBrowserContextOffTheRecord")]
+
+      PrefetchNotEligibleBrowserContextOffTheRecord = 13
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleBrowserContextOffTheRecord")>
+
+      PrefetchNotEligibleBrowserContextOffTheRecord = 13
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleBrowserContextOffTheRecord
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleDataSaverEnabled
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleDataSaverEnabled
+  id: PrefetchNotEligibleDataSaverEnabled
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleDataSaverEnabled
+  nameWithType: PrefetchStatus.PrefetchNotEligibleDataSaverEnabled
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleDataSaverEnabled
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleDataSaverEnabled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 87
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleDataSaverEnabled value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleDataSaverEnabled")]
+
+      PrefetchNotEligibleDataSaverEnabled = 14
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleDataSaverEnabled")>
+
+      PrefetchNotEligibleDataSaverEnabled = 14
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleDataSaverEnabled
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleExistingProxy
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleExistingProxy
+  id: PrefetchNotEligibleExistingProxy
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleExistingProxy
+  nameWithType: PrefetchStatus.PrefetchNotEligibleExistingProxy
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleExistingProxy
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleExistingProxy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 92
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleExistingProxy value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleExistingProxy")]
+
+      PrefetchNotEligibleExistingProxy = 15
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleExistingProxy")>
+
+      PrefetchNotEligibleExistingProxy = 15
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleExistingProxy
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleHostIsNonUnique
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleHostIsNonUnique
+  id: PrefetchNotEligibleHostIsNonUnique
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleHostIsNonUnique
+  nameWithType: PrefetchStatus.PrefetchNotEligibleHostIsNonUnique
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleHostIsNonUnique
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleHostIsNonUnique
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 97
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleHostIsNonUnique value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleHostIsNonUnique")]
+
+      PrefetchNotEligibleHostIsNonUnique = 16
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleHostIsNonUnique")>
+
+      PrefetchNotEligibleHostIsNonUnique = 16
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleHostIsNonUnique
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleNonDefaultStoragePartition
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleNonDefaultStoragePartition
+  id: PrefetchNotEligibleNonDefaultStoragePartition
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleNonDefaultStoragePartition
+  nameWithType: PrefetchStatus.PrefetchNotEligibleNonDefaultStoragePartition
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleNonDefaultStoragePartition
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleNonDefaultStoragePartition
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 102
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleNonDefaultStoragePartition value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleNonDefaultStoragePartition")]
+
+      PrefetchNotEligibleNonDefaultStoragePartition = 17
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleNonDefaultStoragePartition")>
+
+      PrefetchNotEligibleNonDefaultStoragePartition = 17
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleNonDefaultStoragePartition
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  id: PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  nameWithType: PrefetchStatus.PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 107
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy")]
+
+      PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy = 18
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy")>
+
+      PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy = 18
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleSameSiteCrossOriginPrefetchRequiredProxy
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSchemeIsNotHttps
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSchemeIsNotHttps
+  id: PrefetchNotEligibleSchemeIsNotHttps
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleSchemeIsNotHttps
+  nameWithType: PrefetchStatus.PrefetchNotEligibleSchemeIsNotHttps
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleSchemeIsNotHttps
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleSchemeIsNotHttps
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 112
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleSchemeIsNotHttps value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleSchemeIsNotHttps")]
+
+      PrefetchNotEligibleSchemeIsNotHttps = 19
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleSchemeIsNotHttps")>
+
+      PrefetchNotEligibleSchemeIsNotHttps = 19
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleSchemeIsNotHttps
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasCookies
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasCookies
+  id: PrefetchNotEligibleUserHasCookies
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleUserHasCookies
+  nameWithType: PrefetchStatus.PrefetchNotEligibleUserHasCookies
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasCookies
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleUserHasCookies
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 117
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleUserHasCookies value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleUserHasCookies")]
+
+      PrefetchNotEligibleUserHasCookies = 20
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleUserHasCookies")>
+
+      PrefetchNotEligibleUserHasCookies = 20
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleUserHasCookies
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasServiceWorker
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasServiceWorker
+  id: PrefetchNotEligibleUserHasServiceWorker
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleUserHasServiceWorker
+  nameWithType: PrefetchStatus.PrefetchNotEligibleUserHasServiceWorker
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleUserHasServiceWorker
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleUserHasServiceWorker
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 122
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleUserHasServiceWorker value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleUserHasServiceWorker")]
+
+      PrefetchNotEligibleUserHasServiceWorker = 21
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleUserHasServiceWorker")>
+
+      PrefetchNotEligibleUserHasServiceWorker = 21
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleUserHasServiceWorker
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBatterySaverEnabled
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBatterySaverEnabled
+  id: PrefetchNotEligibleBatterySaverEnabled
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligibleBatterySaverEnabled
+  nameWithType: PrefetchStatus.PrefetchNotEligibleBatterySaverEnabled
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligibleBatterySaverEnabled
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligibleBatterySaverEnabled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 127
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligibleBatterySaverEnabled value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligibleBatterySaverEnabled")]
+
+      PrefetchNotEligibleBatterySaverEnabled = 22
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligibleBatterySaverEnabled")>
+
+      PrefetchNotEligibleBatterySaverEnabled = 22
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligibleBatterySaverEnabled
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligiblePreloadingDisabled
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligiblePreloadingDisabled
+  id: PrefetchNotEligiblePreloadingDisabled
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotEligiblePreloadingDisabled
+  nameWithType: PrefetchStatus.PrefetchNotEligiblePreloadingDisabled
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotEligiblePreloadingDisabled
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotEligiblePreloadingDisabled
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 132
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotEligiblePreloadingDisabled value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotEligiblePreloadingDisabled")]
+
+      PrefetchNotEligiblePreloadingDisabled = 23
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotEligiblePreloadingDisabled")>
+
+      PrefetchNotEligiblePreloadingDisabled = 23
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotEligiblePreloadingDisabled
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotFinishedInTime
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotFinishedInTime
+  id: PrefetchNotFinishedInTime
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotFinishedInTime
+  nameWithType: PrefetchStatus.PrefetchNotFinishedInTime
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotFinishedInTime
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotFinishedInTime
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 137
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotFinishedInTime value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotFinishedInTime")]
+
+      PrefetchNotFinishedInTime = 24
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotFinishedInTime")>
+
+      PrefetchNotFinishedInTime = 24
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotFinishedInTime
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotStarted
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotStarted
+  id: PrefetchNotStarted
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotStarted
+  nameWithType: PrefetchStatus.PrefetchNotStarted
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotStarted
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotStarted
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 142
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotStarted value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotStarted")]
+
+      PrefetchNotStarted = 25
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotStarted")>
+
+      PrefetchNotStarted = 25
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotStarted
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedCookiesChanged
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedCookiesChanged
+  id: PrefetchNotUsedCookiesChanged
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotUsedCookiesChanged
+  nameWithType: PrefetchStatus.PrefetchNotUsedCookiesChanged
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedCookiesChanged
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotUsedCookiesChanged
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 147
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotUsedCookiesChanged value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotUsedCookiesChanged")]
+
+      PrefetchNotUsedCookiesChanged = 26
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotUsedCookiesChanged")>
+
+      PrefetchNotUsedCookiesChanged = 26
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotUsedCookiesChanged
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchProxyNotAvailable
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchProxyNotAvailable
+  id: PrefetchProxyNotAvailable
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchProxyNotAvailable
+  nameWithType: PrefetchStatus.PrefetchProxyNotAvailable
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchProxyNotAvailable
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchProxyNotAvailable
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 152
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchProxyNotAvailable value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchProxyNotAvailable")]
+
+      PrefetchProxyNotAvailable = 27
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchProxyNotAvailable")>
+
+      PrefetchProxyNotAvailable = 27
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchProxyNotAvailable
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchResponseUsed
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchResponseUsed
+  id: PrefetchResponseUsed
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchResponseUsed
+  nameWithType: PrefetchStatus.PrefetchResponseUsed
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchResponseUsed
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchResponseUsed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 157
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchResponseUsed value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchResponseUsed")]
+
+      PrefetchResponseUsed = 28
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchResponseUsed")>
+
+      PrefetchResponseUsed = 28
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchResponseUsed
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchSuccessfulButNotUsed
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchSuccessfulButNotUsed
+  id: PrefetchSuccessfulButNotUsed
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchSuccessfulButNotUsed
+  nameWithType: PrefetchStatus.PrefetchSuccessfulButNotUsed
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchSuccessfulButNotUsed
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchSuccessfulButNotUsed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 162
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchSuccessfulButNotUsed value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchSuccessfulButNotUsed")]
+
+      PrefetchSuccessfulButNotUsed = 29
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchSuccessfulButNotUsed")>
+
+      PrefetchSuccessfulButNotUsed = 29
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchSuccessfulButNotUsed
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedProbeFailed
+  commentId: F:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedProbeFailed
+  id: PrefetchNotUsedProbeFailed
+  parent: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  langs:
+  - csharp
+  - vb
+  name: PrefetchNotUsedProbeFailed
+  nameWithType: PrefetchStatus.PrefetchNotUsedProbeFailed
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.PrefetchNotUsedProbeFailed
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: PrefetchNotUsedProbeFailed
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Preload/PrefetchStatus.cs
+    startLine: 167
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Preload
+  summary: Enumerated member for the PrefetchNotUsedProbeFailed value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "PrefetchNotUsedProbeFailed")]
+
+      PrefetchNotUsedProbeFailed = 30
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+    content.vb: >-
+      <EnumMember(Value:="PrefetchNotUsedProbeFailed")>
+
+      PrefetchNotUsedProbeFailed = 30
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: PrefetchNotUsedProbeFailed
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Preload
+  commentId: N:OpenQA.Selenium.DevTools.V124.Preload
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Preload
+  nameWithType: OpenQA.Selenium.DevTools.V124.Preload
+  fullName: OpenQA.Selenium.DevTools.V124.Preload
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V124.Preload.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Preload
+    name: Preload
+    href: OpenQA.Selenium.DevTools.V124.Preload.html
+- uid: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  commentId: T:OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus
+  parent: OpenQA.Selenium.DevTools.V124.Preload
+  href: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus.html
+  name: PrefetchStatus
+  nameWithType: PrefetchStatus
+  fullName: OpenQA.Selenium.DevTools.V124.Preload.PrefetchStatus

@@ -1,0 +1,1244 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  id: CallFunctionOnCommandSettings
+  parent: OpenQA.Selenium.DevTools.V125.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId
+  - OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture
+  langs:
+  - csharp
+  - vb
+  name: CallFunctionOnCommandSettings
+  nameWithType: CallFunctionOnCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CallFunctionOnCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Calls function with given declaration on the given object. Object group of the result is
+
+    inherited from the target object.
+  example: []
+  syntax:
+    content: 'public sealed class CallFunctionOnCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class CallFunctionOnCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: CallFunctionOnCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration
+  id: FunctionDeclaration
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: FunctionDeclaration
+  nameWithType: CallFunctionOnCommandSettings.FunctionDeclaration
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FunctionDeclaration
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 25
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Declaration of the function to call.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("functionDeclaration")]
+
+      public string FunctionDeclaration { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("functionDeclaration")>
+
+      Public Property FunctionDeclaration As String
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: functionDeclaration
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId
+  id: ObjectId
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ObjectId
+  nameWithType: CallFunctionOnCommandSettings.ObjectId
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ObjectId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Identifier of the object to call function on. Either objectId or executionContextId should
+
+    be specified.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("objectId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ObjectId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("objectId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ObjectId As String
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: objectId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments
+  id: Arguments
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Arguments
+  nameWithType: CallFunctionOnCommandSettings.Arguments
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Arguments
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 45
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Call arguments. All call arguments must belong to the same JavaScript world as the target
+
+    object.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("arguments", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public CallArgument[] Arguments { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument[]
+    content.vb: >-
+      <JsonProperty("arguments", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Arguments As CallArgument()
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: arguments
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent
+  id: Silent
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Silent
+  nameWithType: CallFunctionOnCommandSettings.Silent
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Silent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 55
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    In silent mode exceptions thrown during evaluation are not reported and do not pause
+
+    execution. Overrides `setPauseOnException` state.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Silent { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("silent", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Silent As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: silent
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue
+  id: ReturnByValue
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ReturnByValue
+  nameWithType: CallFunctionOnCommandSettings.ReturnByValue
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReturnByValue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 65
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Whether the result is expected to be a JSON object which should be sent by value.
+
+    Can be overriden by `serializationOptions`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("returnByValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ReturnByValue { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("returnByValue", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ReturnByValue As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: returnByValue
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview
+  id: GeneratePreview
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: GeneratePreview
+  nameWithType: CallFunctionOnCommandSettings.GeneratePreview
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GeneratePreview
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 74
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Whether preview should be generated for the result.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? GeneratePreview { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("generatePreview", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property GeneratePreview As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: generatePreview
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture
+  id: UserGesture
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: UserGesture
+  nameWithType: CallFunctionOnCommandSettings.UserGesture
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserGesture
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Whether execution should be treated as initiated by user in the UI.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("userGesture", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? UserGesture { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("userGesture", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UserGesture As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userGesture
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise
+  id: AwaitPromise
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: AwaitPromise
+  nameWithType: CallFunctionOnCommandSettings.AwaitPromise
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AwaitPromise
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 93
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Whether execution should `await` for resulting value and return once awaited promise is
+
+    resolved.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? AwaitPromise { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("awaitPromise", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AwaitPromise As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: awaitPromise
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId
+  id: ExecutionContextId
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ExecutionContextId
+  nameWithType: CallFunctionOnCommandSettings.ExecutionContextId
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ExecutionContextId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 103
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Specifies execution context which global object will be used to call function on. Either
+
+    executionContextId or objectId should be specified.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("executionContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ExecutionContextId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("executionContextId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ExecutionContextId As Long?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: executionContextId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup
+  id: ObjectGroup
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ObjectGroup
+  nameWithType: CallFunctionOnCommandSettings.ObjectGroup
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ObjectGroup
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 113
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Symbolic group name that can be used to release multiple objects. If objectGroup is not
+
+    specified and objectId is, objectGroup will be inherited from object.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ObjectGroup { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("objectGroup", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ObjectGroup As String
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: objectGroup
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect
+  id: ThrowOnSideEffect
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ThrowOnSideEffect
+  nameWithType: CallFunctionOnCommandSettings.ThrowOnSideEffect
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ThrowOnSideEffect
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 122
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: Whether to throw an exception if side effect cannot be ruled out during evaluation.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("throwOnSideEffect", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ThrowOnSideEffect { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("throwOnSideEffect", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ThrowOnSideEffect As Boolean?
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: throwOnSideEffect
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId
+  id: UniqueContextId
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: UniqueContextId
+  nameWithType: CallFunctionOnCommandSettings.UniqueContextId
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UniqueContextId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 136
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    An alternative way to specify the execution context to call function on.
+
+    Compared to contextId that may be reused across processes, this is guaranteed to be
+
+    system-unique, so it can be used to prevent accidental function call
+
+    in context different than intended (e.g. as a result of navigation across process
+
+    boundaries).
+
+    This is mutually exclusive with `executionContextId`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("uniqueContextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string UniqueContextId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("uniqueContextId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UniqueContextId As String
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: uniqueContextId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions
+  commentId: P:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions
+  id: SerializationOptions
+  parent: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: SerializationOptions
+  nameWithType: CallFunctionOnCommandSettings.SerializationOptions
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SerializationOptions
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Runtime/CallFunctionOnCommand.cs
+    startLine: 146
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Runtime
+  summary: >-
+    Specifies the result serialization. If provided, overrides
+
+    `generatePreview` and `returnByValue`.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("serializationOptions", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public SerializationOptions SerializationOptions { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Runtime.SerializationOptions
+    content.vb: >-
+      <JsonProperty("serializationOptions", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property SerializationOptions As SerializationOptions
+  overload: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: serializationOptions
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V125.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V125.Runtime
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V125.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V125.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_CommandName
+  name: CommandName
+  nameWithType: CallFunctionOnCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_FunctionDeclaration
+  name: FunctionDeclaration
+  nameWithType: CallFunctionOnCommandSettings.FunctionDeclaration
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.FunctionDeclaration
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_ObjectId
+  name: ObjectId
+  nameWithType: CallFunctionOnCommandSettings.ObjectId
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectId
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_Arguments
+  name: Arguments
+  nameWithType: CallFunctionOnCommandSettings.Arguments
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Arguments
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument.html
+  name: CallArgument[]
+  nameWithType: CallArgument[]
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument[]
+  nameWithType.vb: CallArgument()
+  fullName.vb: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument()
+  name.vb: CallArgument()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument
+    name: CallArgument
+    href: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument
+    name: CallArgument
+    href: OpenQA.Selenium.DevTools.V125.Runtime.CallArgument.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_Silent
+  name: Silent
+  nameWithType: CallFunctionOnCommandSettings.Silent
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.Silent
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_ReturnByValue
+  name: ReturnByValue
+  nameWithType: CallFunctionOnCommandSettings.ReturnByValue
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ReturnByValue
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_GeneratePreview
+  name: GeneratePreview
+  nameWithType: CallFunctionOnCommandSettings.GeneratePreview
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.GeneratePreview
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_UserGesture
+  name: UserGesture
+  nameWithType: CallFunctionOnCommandSettings.UserGesture
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UserGesture
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_AwaitPromise
+  name: AwaitPromise
+  nameWithType: CallFunctionOnCommandSettings.AwaitPromise
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.AwaitPromise
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_ExecutionContextId
+  name: ExecutionContextId
+  nameWithType: CallFunctionOnCommandSettings.ExecutionContextId
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ExecutionContextId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_ObjectGroup
+  name: ObjectGroup
+  nameWithType: CallFunctionOnCommandSettings.ObjectGroup
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ObjectGroup
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_ThrowOnSideEffect
+  name: ThrowOnSideEffect
+  nameWithType: CallFunctionOnCommandSettings.ThrowOnSideEffect
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.ThrowOnSideEffect
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_UniqueContextId
+  name: UniqueContextId
+  nameWithType: CallFunctionOnCommandSettings.UniqueContextId
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.UniqueContextId
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions
+  href: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.html#OpenQA_Selenium_DevTools_V125_Runtime_CallFunctionOnCommandSettings_SerializationOptions
+  name: SerializationOptions
+  nameWithType: CallFunctionOnCommandSettings.SerializationOptions
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.CallFunctionOnCommandSettings.SerializationOptions
+- uid: OpenQA.Selenium.DevTools.V125.Runtime.SerializationOptions
+  commentId: T:OpenQA.Selenium.DevTools.V125.Runtime.SerializationOptions
+  parent: OpenQA.Selenium.DevTools.V125.Runtime
+  href: OpenQA.Selenium.DevTools.V125.Runtime.SerializationOptions.html
+  name: SerializationOptions
+  nameWithType: SerializationOptions
+  fullName: OpenQA.Selenium.DevTools.V125.Runtime.SerializationOptions

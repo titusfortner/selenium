@@ -1,0 +1,267 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IWritableCapabilities
+  commentId: T:OpenQA.Selenium.IWritableCapabilities
+  id: IWritableCapabilities
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IWritableCapabilities.AsReadOnly
+  - OpenQA.Selenium.IWritableCapabilities.SetCapability(System.String,System.Object)
+  langs:
+  - csharp
+  - vb
+  name: IWritableCapabilities
+  nameWithType: IWritableCapabilities
+  fullName: OpenQA.Selenium.IWritableCapabilities
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWritableCapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IWritableCapabilities
+    path: ../src/webdriver/IWritableCapabilities.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Capabilities of the browser that you are going to use
+  example: []
+  syntax:
+    content: 'public interface IWritableCapabilities : ICapabilities'
+    content.vb: Public Interface IWritableCapabilities Inherits ICapabilities
+  inheritedMembers:
+  - OpenQA.Selenium.ICapabilities.Item(System.String)
+  - OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+  - OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+- uid: OpenQA.Selenium.IWritableCapabilities.SetCapability(System.String,System.Object)
+  commentId: M:OpenQA.Selenium.IWritableCapabilities.SetCapability(System.String,System.Object)
+  id: SetCapability(System.String,System.Object)
+  parent: OpenQA.Selenium.IWritableCapabilities
+  langs:
+  - csharp
+  - vb
+  name: SetCapability(string, object)
+  nameWithType: IWritableCapabilities.SetCapability(string, object)
+  fullName: OpenQA.Selenium.IWritableCapabilities.SetCapability(string, object)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWritableCapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetCapability
+    path: ../src/webdriver/IWritableCapabilities.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Sets a capability of the browser.
+  example: []
+  syntax:
+    content: void SetCapability(string capability, object capabilityValue)
+    parameters:
+    - id: capability
+      type: System.String
+      description: The capability to set.
+    - id: capabilityValue
+      type: System.Object
+      description: The value for the capability.
+    content.vb: Sub SetCapability(capability As String, capabilityValue As Object)
+  overload: OpenQA.Selenium.IWritableCapabilities.SetCapability*
+  nameWithType.vb: IWritableCapabilities.SetCapability(String, Object)
+  fullName.vb: OpenQA.Selenium.IWritableCapabilities.SetCapability(String, Object)
+  name.vb: SetCapability(String, Object)
+- uid: OpenQA.Selenium.IWritableCapabilities.AsReadOnly
+  commentId: M:OpenQA.Selenium.IWritableCapabilities.AsReadOnly
+  id: AsReadOnly
+  parent: OpenQA.Selenium.IWritableCapabilities
+  langs:
+  - csharp
+  - vb
+  name: AsReadOnly()
+  nameWithType: IWritableCapabilities.AsReadOnly()
+  fullName: OpenQA.Selenium.IWritableCapabilities.AsReadOnly()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWritableCapabilities.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AsReadOnly
+    path: ../src/webdriver/IWritableCapabilities.cs
+    startLine: 36
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets this capabilities object as a read-only object.
+  example: []
+  syntax:
+    content: ICapabilities AsReadOnly()
+    return:
+      type: OpenQA.Selenium.ICapabilities
+      description: The capabilities object as a read-only object.
+    content.vb: Function AsReadOnly() As ICapabilities
+  overload: OpenQA.Selenium.IWritableCapabilities.AsReadOnly*
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.ICapabilities.Item(System.String)
+  commentId: P:OpenQA.Selenium.ICapabilities.Item(System.String)
+  parent: OpenQA.Selenium.ICapabilities
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: this[string]
+  nameWithType: ICapabilities.this[string]
+  fullName: OpenQA.Selenium.ICapabilities.this[string]
+  nameWithType.vb: ICapabilities.this[](String)
+  fullName.vb: OpenQA.Selenium.ICapabilities.this[](String)
+  name.vb: this[](String)
+  spec.csharp:
+  - name: this
+  - name: '['
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.ICapabilities.Item(System.String)
+    name: this[]
+    href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_Item_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+  commentId: M:OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+  parent: OpenQA.Selenium.ICapabilities
+  isExternal: true
+  href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_HasCapability_System_String_
+  name: HasCapability(string)
+  nameWithType: ICapabilities.HasCapability(string)
+  fullName: OpenQA.Selenium.ICapabilities.HasCapability(string)
+  nameWithType.vb: ICapabilities.HasCapability(String)
+  fullName.vb: OpenQA.Selenium.ICapabilities.HasCapability(String)
+  name.vb: HasCapability(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+    name: HasCapability
+    href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_HasCapability_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ICapabilities.HasCapability(System.String)
+    name: HasCapability
+    href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_HasCapability_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+  commentId: M:OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+  parent: OpenQA.Selenium.ICapabilities
+  isExternal: true
+  href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_GetCapability_System_String_
+  name: GetCapability(string)
+  nameWithType: ICapabilities.GetCapability(string)
+  fullName: OpenQA.Selenium.ICapabilities.GetCapability(string)
+  nameWithType.vb: ICapabilities.GetCapability(String)
+  fullName.vb: OpenQA.Selenium.ICapabilities.GetCapability(String)
+  name.vb: GetCapability(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+    name: GetCapability
+    href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_GetCapability_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ICapabilities.GetCapability(System.String)
+    name: GetCapability
+    href: OpenQA.Selenium.ICapabilities.html#OpenQA_Selenium_ICapabilities_GetCapability_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.ICapabilities
+  commentId: T:OpenQA.Selenium.ICapabilities
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ICapabilities.html
+  name: ICapabilities
+  nameWithType: ICapabilities
+  fullName: OpenQA.Selenium.ICapabilities
+- uid: OpenQA.Selenium.IWritableCapabilities.SetCapability*
+  commentId: Overload:OpenQA.Selenium.IWritableCapabilities.SetCapability
+  href: OpenQA.Selenium.IWritableCapabilities.html#OpenQA_Selenium_IWritableCapabilities_SetCapability_System_String_System_Object_
+  name: SetCapability
+  nameWithType: IWritableCapabilities.SetCapability
+  fullName: OpenQA.Selenium.IWritableCapabilities.SetCapability
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.IWritableCapabilities.AsReadOnly*
+  commentId: Overload:OpenQA.Selenium.IWritableCapabilities.AsReadOnly
+  href: OpenQA.Selenium.IWritableCapabilities.html#OpenQA_Selenium_IWritableCapabilities_AsReadOnly
+  name: AsReadOnly
+  nameWithType: IWritableCapabilities.AsReadOnly
+  fullName: OpenQA.Selenium.IWritableCapabilities.AsReadOnly

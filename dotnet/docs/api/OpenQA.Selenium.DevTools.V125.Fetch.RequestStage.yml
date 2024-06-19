@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  id: RequestStage
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  children:
+  - OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Request
+  - OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Response
+  langs:
+  - csharp
+  - vb
+  name: RequestStage
+  nameWithType: RequestStage
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  type: Enum
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/RequestStage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestStage
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/RequestStage.cs
+    startLine: 12
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: >-
+    Stages of the request to handle. Request will intercept before the request is
+
+    sent. Response will intercept after the response is received (but before response
+
+    body is received).
+  example: []
+  syntax:
+    content: >-
+      [JsonConverter(typeof(StringEnumConverter))]
+
+      public enum RequestStage
+    content.vb: >-
+      <JsonConverter(GetType(StringEnumConverter))>
+
+      Public Enum RequestStage
+  attributes:
+  - type: Newtonsoft.Json.JsonConverterAttribute
+    ctor: Newtonsoft.Json.JsonConverterAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: Newtonsoft.Json.Converters.StringEnumConverter
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Request
+  commentId: F:OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Request
+  id: Request
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  langs:
+  - csharp
+  - vb
+  name: Request
+  nameWithType: RequestStage.Request
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Request
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/RequestStage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Request
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/RequestStage.cs
+    startLine: 18
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Enumerated member for the Request value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Request")]
+
+      Request = 0
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+    content.vb: >-
+      <EnumMember(Value:="Request")>
+
+      Request = 0
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Request
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Response
+  commentId: F:OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Response
+  id: Response
+  parent: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  langs:
+  - csharp
+  - vb
+  name: Response
+  nameWithType: RequestStage.Response
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.Response
+  type: Field
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/RequestStage.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Response
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Fetch/RequestStage.cs
+    startLine: 23
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Fetch
+  summary: Enumerated member for the Response value.
+  example: []
+  syntax:
+    content: >-
+      [EnumMember(Value = "Response")]
+
+      Response = 1
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+    content.vb: >-
+      <EnumMember(Value:="Response")>
+
+      Response = 1
+  attributes:
+  - type: System.Runtime.Serialization.EnumMemberAttribute
+    ctor: System.Runtime.Serialization.EnumMemberAttribute.#ctor
+    arguments: []
+    namedArguments:
+    - name: Value
+      type: System.String
+      value: Response
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Fetch
+  commentId: N:OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Fetch
+  nameWithType: OpenQA.Selenium.DevTools.V125.Fetch
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V125.Fetch.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Fetch
+    name: Fetch
+    href: OpenQA.Selenium.DevTools.V125.Fetch.html
+- uid: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  commentId: T:OpenQA.Selenium.DevTools.V125.Fetch.RequestStage
+  parent: OpenQA.Selenium.DevTools.V125.Fetch
+  href: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage.html
+  name: RequestStage
+  nameWithType: RequestStage
+  fullName: OpenQA.Selenium.DevTools.V125.Fetch.RequestStage

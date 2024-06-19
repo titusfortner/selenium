@@ -1,0 +1,676 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  id: SetVariableValueCommandSettings
+  parent: OpenQA.Selenium.DevTools.V126.Debugger
+  children:
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber
+  - OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName
+  langs:
+  - csharp
+  - vb
+  name: SetVariableValueCommandSettings
+  nameWithType: SetVariableValueCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SetVariableValueCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+    startLine: 9
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: >-
+    Changes value of variable in a callframe. Object-based scopes are not supported and must be
+
+    mutated manually.
+  example: []
+  syntax:
+    content: 'public sealed class SetVariableValueCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class SetVariableValueCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: SetVariableValueCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+    startLine: 16
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber
+  id: ScopeNumber
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ScopeNumber
+  nameWithType: SetVariableValueCommandSettings.ScopeNumber
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ScopeNumber
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: >-
+    0-based number of scope as was listed in scope chain. Only 'local', 'closure' and 'catch'
+
+    scope types are allowed. Other scopes could be manipulated manually.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("scopeNumber")]
+
+      public long ScopeNumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("scopeNumber")>
+
+      Public Property ScopeNumber As Long
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: scopeNumber
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName
+  id: VariableName
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: VariableName
+  nameWithType: SetVariableValueCommandSettings.VariableName
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VariableName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Variable name.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("variableName")]
+
+      public string VariableName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("variableName")>
+
+      Public Property VariableName As String
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: variableName
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue
+  id: NewValue
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SetVariableValueCommandSettings.NewValue
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: NewValue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+    startLine: 44
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: New variable value.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("newValue")]
+
+      public CallArgument NewValue { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V126.Runtime.CallArgument
+    content.vb: >-
+      <JsonProperty("newValue")>
+
+      Public Property NewValue As CallArgument
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: newValue
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId
+  id: CallFrameId
+  parent: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CallFrameId
+  nameWithType: SetVariableValueCommandSettings.CallFrameId
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CallFrameId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Debugger/SetVariableValueCommand.cs
+    startLine: 53
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Debugger
+  summary: Id of callframe that holds variable.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("callFrameId")]
+
+      public string CallFrameId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("callFrameId")>
+
+      Public Property CallFrameId As String
+  overload: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: callFrameId
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Debugger
+  commentId: N:OpenQA.Selenium.DevTools.V126.Debugger
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Debugger
+  nameWithType: OpenQA.Selenium.DevTools.V126.Debugger
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger
+    name: Debugger
+    href: OpenQA.Selenium.DevTools.V126.Debugger.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Debugger
+    name: Debugger
+    href: OpenQA.Selenium.DevTools.V126.Debugger.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.html#OpenQA_Selenium_DevTools_V126_Debugger_SetVariableValueCommandSettings_CommandName
+  name: CommandName
+  nameWithType: SetVariableValueCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.html#OpenQA_Selenium_DevTools_V126_Debugger_SetVariableValueCommandSettings_ScopeNumber
+  name: ScopeNumber
+  nameWithType: SetVariableValueCommandSettings.ScopeNumber
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.ScopeNumber
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.html#OpenQA_Selenium_DevTools_V126_Debugger_SetVariableValueCommandSettings_VariableName
+  name: VariableName
+  nameWithType: SetVariableValueCommandSettings.VariableName
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.VariableName
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.html#OpenQA_Selenium_DevTools_V126_Debugger_SetVariableValueCommandSettings_NewValue
+  name: NewValue
+  nameWithType: SetVariableValueCommandSettings.NewValue
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.NewValue
+- uid: OpenQA.Selenium.DevTools.V126.Runtime.CallArgument
+  commentId: T:OpenQA.Selenium.DevTools.V126.Runtime.CallArgument
+  parent: OpenQA.Selenium.DevTools.V126.Runtime
+  href: OpenQA.Selenium.DevTools.V126.Runtime.CallArgument.html
+  name: CallArgument
+  nameWithType: CallArgument
+  fullName: OpenQA.Selenium.DevTools.V126.Runtime.CallArgument
+- uid: OpenQA.Selenium.DevTools.V126.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V126.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V126.Runtime
+  fullName: OpenQA.Selenium.DevTools.V126.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V126.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V126.Runtime.html
+- uid: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId
+  href: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.html#OpenQA_Selenium_DevTools_V126_Debugger_SetVariableValueCommandSettings_CallFrameId
+  name: CallFrameId
+  nameWithType: SetVariableValueCommandSettings.CallFrameId
+  fullName: OpenQA.Selenium.DevTools.V126.Debugger.SetVariableValueCommandSettings.CallFrameId

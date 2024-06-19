@@ -1,0 +1,843 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  id: GetLayoutMetricsCommandResponse
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  children:
+  - OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize
+  - OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize
+  - OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport
+  - OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport
+  - OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport
+  - OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport
+  langs:
+  - csharp
+  - vb
+  name: GetLayoutMetricsCommandResponse
+  nameWithType: GetLayoutMetricsCommandResponse
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetLayoutMetricsCommandResponse
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Response for Returns metrics relating to the layouting of the page, such as viewport bounds/scale.
+  example: []
+  syntax:
+    content: 'public sealed class GetLayoutMetricsCommandResponse : ICommandResponse<GetLayoutMetricsCommandSettings>, ICommandResponse'
+    content.vb: Public NotInheritable Class GetLayoutMetricsCommandResponse Implements ICommandResponse(Of GetLayoutMetricsCommandSettings), ICommandResponse
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings}
+  - OpenQA.Selenium.DevTools.ICommandResponse
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport
+  id: LayoutViewport
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: LayoutViewport
+  nameWithType: GetLayoutMetricsCommandResponse.LayoutViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LayoutViewport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Deprecated metrics relating to the layout viewport. Is in device pixels. Use `cssLayoutViewport` instead.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("layoutViewport")]
+
+      public LayoutViewport LayoutViewport { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.LayoutViewport
+    content.vb: >-
+      <JsonProperty("layoutViewport")>
+
+      Public Property LayoutViewport As LayoutViewport
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: layoutViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport
+  id: VisualViewport
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: VisualViewport
+  nameWithType: GetLayoutMetricsCommandResponse.VisualViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: VisualViewport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Deprecated metrics relating to the visual viewport. Is in device pixels. Use `cssVisualViewport` instead.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("visualViewport")]
+
+      public VisualViewport VisualViewport { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.VisualViewport
+    content.vb: >-
+      <JsonProperty("visualViewport")>
+
+      Public Property VisualViewport As VisualViewport
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: visualViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize
+  id: ContentSize
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: ContentSize
+  nameWithType: GetLayoutMetricsCommandResponse.ContentSize
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContentSize
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Deprecated size of scrollable area. Is in DP. Use `cssContentSize` instead.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contentSize")]
+
+      public Rect ContentSize { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Rect
+    content.vb: >-
+      <JsonProperty("contentSize")>
+
+      Public Property ContentSize As Rect
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contentSize
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport
+  id: CssLayoutViewport
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: CssLayoutViewport
+  nameWithType: GetLayoutMetricsCommandResponse.CssLayoutViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CssLayoutViewport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Metrics relating to the layout viewport in CSS pixels.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cssLayoutViewport")]
+
+      public LayoutViewport CssLayoutViewport { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.LayoutViewport
+    content.vb: >-
+      <JsonProperty("cssLayoutViewport")>
+
+      Public Property CssLayoutViewport As LayoutViewport
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cssLayoutViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport
+  id: CssVisualViewport
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: CssVisualViewport
+  nameWithType: GetLayoutMetricsCommandResponse.CssVisualViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CssVisualViewport
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Metrics relating to the visual viewport in CSS pixels.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cssVisualViewport")]
+
+      public VisualViewport CssVisualViewport { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.Page.VisualViewport
+    content.vb: >-
+      <JsonProperty("cssVisualViewport")>
+
+      Public Property CssVisualViewport As VisualViewport
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cssVisualViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize
+  commentId: P:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize
+  id: CssContentSize
+  parent: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse
+  langs:
+  - csharp
+  - vb
+  name: CssContentSize
+  nameWithType: GetLayoutMetricsCommandResponse.CssContentSize
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CssContentSize
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v125/Page/GetLayoutMetricsCommand.cs
+    startLine: 76
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V125.Page
+  summary: Size of scrollable area in CSS pixels.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("cssContentSize")]
+
+      public Rect CssContentSize { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V125.DOM.Rect
+    content.vb: >-
+      <JsonProperty("cssContentSize")>
+
+      Public Property CssContentSize As Rect
+  overload: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: cssContentSize
+references:
+- uid: OpenQA.Selenium.DevTools.V125.Page
+  commentId: N:OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.Page
+  nameWithType: OpenQA.Selenium.DevTools.V125.Page
+  fullName: OpenQA.Selenium.DevTools.V125.Page
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V125.Page.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.Page
+    name: Page
+    href: OpenQA.Selenium.DevTools.V125.Page.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings}
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse{OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings}
+  parent: OpenQA.Selenium.DevTools
+  definition: OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<GetLayoutMetricsCommandSettings>
+  nameWithType: ICommandResponse<GetLayoutMetricsCommandSettings>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings>
+  nameWithType.vb: ICommandResponse(Of GetLayoutMetricsCommandSettings)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings)
+  name.vb: ICommandResponse(Of GetLayoutMetricsCommandSettings)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings
+    name: GetLayoutMetricsCommandSettings
+    href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings.html
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings
+    name: GetLayoutMetricsCommandSettings
+    href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandSettings.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  name: ICommandResponse
+  nameWithType: ICommandResponse
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponse.OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  parent: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  definition: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponse`1
+  href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  name: ICommandResponse<T>
+  nameWithType: ICommandResponse<T>
+  fullName: OpenQA.Selenium.DevTools.ICommandResponse<T>
+  nameWithType.vb: ICommandResponse(Of T)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponse(Of T)
+  name.vb: ICommandResponse(Of T)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse`1
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  commentId: M:OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  name: GetResponse<TCommandResponse>(ICommandResponse)
+  nameWithType: ICommandResponseExtensions.GetResponse<TCommandResponse>(ICommandResponse)
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse<TCommandResponse>(OpenQA.Selenium.DevTools.ICommandResponse)
+  nameWithType.vb: ICommandResponseExtensions.GetResponse(Of TCommandResponse)(ICommandResponse)
+  fullName.vb: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse(Of TCommandResponse)(OpenQA.Selenium.DevTools.ICommandResponse)
+  name.vb: GetResponse(Of TCommandResponse)(ICommandResponse)
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: <
+  - name: TCommandResponse
+  - name: '>'
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions.GetResponse``1(OpenQA.Selenium.DevTools.ICommandResponse)
+    name: GetResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html#OpenQA_Selenium_DevTools_ICommandResponseExtensions_GetResponse__1_OpenQA_Selenium_DevTools_ICommandResponse_
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TCommandResponse
+  - name: )
+  - name: (
+  - uid: OpenQA.Selenium.DevTools.ICommandResponse
+    name: ICommandResponse
+    href: OpenQA.Selenium.DevTools.ICommandResponse.html
+  - name: )
+- uid: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  commentId: T:OpenQA.Selenium.DevTools.ICommandResponseExtensions
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommandResponseExtensions.html
+  name: ICommandResponseExtensions
+  nameWithType: ICommandResponseExtensions
+  fullName: OpenQA.Selenium.DevTools.ICommandResponseExtensions
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport
+  href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetLayoutMetricsCommandResponse_LayoutViewport
+  name: LayoutViewport
+  nameWithType: GetLayoutMetricsCommandResponse.LayoutViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.LayoutViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.LayoutViewport
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.LayoutViewport
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.Selenium.DevTools.V125.Page.LayoutViewport.html
+  name: LayoutViewport
+  nameWithType: LayoutViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.LayoutViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport
+  href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetLayoutMetricsCommandResponse_VisualViewport
+  name: VisualViewport
+  nameWithType: GetLayoutMetricsCommandResponse.VisualViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.VisualViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.VisualViewport
+  commentId: T:OpenQA.Selenium.DevTools.V125.Page.VisualViewport
+  parent: OpenQA.Selenium.DevTools.V125.Page
+  href: OpenQA.Selenium.DevTools.V125.Page.VisualViewport.html
+  name: VisualViewport
+  nameWithType: VisualViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.VisualViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize
+  href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetLayoutMetricsCommandResponse_ContentSize
+  name: ContentSize
+  nameWithType: GetLayoutMetricsCommandResponse.ContentSize
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.ContentSize
+- uid: OpenQA.Selenium.DevTools.V125.DOM.Rect
+  commentId: T:OpenQA.Selenium.DevTools.V125.DOM.Rect
+  parent: OpenQA.Selenium.DevTools.V125.DOM
+  href: OpenQA.Selenium.DevTools.V125.DOM.Rect.html
+  name: Rect
+  nameWithType: Rect
+  fullName: OpenQA.Selenium.DevTools.V125.DOM.Rect
+- uid: OpenQA.Selenium.DevTools.V125.DOM
+  commentId: N:OpenQA.Selenium.DevTools.V125.DOM
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V125.DOM
+  nameWithType: OpenQA.Selenium.DevTools.V125.DOM
+  fullName: OpenQA.Selenium.DevTools.V125.DOM
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V125.DOM.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125
+    name: V125
+    href: OpenQA.Selenium.DevTools.V125.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V125.DOM
+    name: DOM
+    href: OpenQA.Selenium.DevTools.V125.DOM.html
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport
+  href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetLayoutMetricsCommandResponse_CssLayoutViewport
+  name: CssLayoutViewport
+  nameWithType: GetLayoutMetricsCommandResponse.CssLayoutViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssLayoutViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport
+  href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetLayoutMetricsCommandResponse_CssVisualViewport
+  name: CssVisualViewport
+  nameWithType: GetLayoutMetricsCommandResponse.CssVisualViewport
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssVisualViewport
+- uid: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize*
+  commentId: Overload:OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize
+  href: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.html#OpenQA_Selenium_DevTools_V125_Page_GetLayoutMetricsCommandResponse_CssContentSize
+  name: CssContentSize
+  nameWithType: GetLayoutMetricsCommandResponse.CssContentSize
+  fullName: OpenQA.Selenium.DevTools.V125.Page.GetLayoutMetricsCommandResponse.CssContentSize

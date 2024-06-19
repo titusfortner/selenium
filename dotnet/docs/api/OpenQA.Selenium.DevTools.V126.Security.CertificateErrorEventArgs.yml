@@ -1,0 +1,496 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs
+  commentId: T:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs
+  id: CertificateErrorEventArgs
+  parent: OpenQA.Selenium.DevTools.V126.Security
+  children:
+  - OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType
+  - OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId
+  - OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL
+  langs:
+  - csharp
+  - vb
+  name: CertificateErrorEventArgs
+  nameWithType: CertificateErrorEventArgs
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CertificateErrorEventArgs
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+    startLine: 12
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Security
+  summary: >-
+    There is a certificate error. If overriding certificate errors is enabled, then it should be
+
+    handled with the `handleCertificateError` command. Note: this event does not fire if the
+
+    certificate error has been allowed internally. Only one client per target should override
+
+    certificate errors at the same time.
+  example: []
+  syntax:
+    content: 'public sealed class CertificateErrorEventArgs : EventArgs'
+    content.vb: Public NotInheritable Class CertificateErrorEventArgs Inherits EventArgs
+  inheritance:
+  - System.Object
+  - System.EventArgs
+  inheritedMembers:
+  - System.EventArgs.Empty
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId
+  commentId: P:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId
+  id: EventId
+  parent: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs
+  langs:
+  - csharp
+  - vb
+  name: EventId
+  nameWithType: CertificateErrorEventArgs.EventId
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EventId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+    startLine: 17
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Security
+  summary: The ID of the event.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("eventId")]
+
+      public long EventId { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: >-
+      <JsonProperty("eventId")>
+
+      Public Property EventId As Long
+  overload: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: eventId
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType
+  commentId: P:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType
+  id: ErrorType
+  parent: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs
+  langs:
+  - csharp
+  - vb
+  name: ErrorType
+  nameWithType: CertificateErrorEventArgs.ErrorType
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ErrorType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+    startLine: 26
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Security
+  summary: The type of the error.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("errorType")]
+
+      public string ErrorType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("errorType")>
+
+      Public Property ErrorType As String
+  overload: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: errorType
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL
+  commentId: P:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL
+  id: RequestURL
+  parent: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs
+  langs:
+  - csharp
+  - vb
+  name: RequestURL
+  nameWithType: CertificateErrorEventArgs.RequestURL
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RequestURL
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v126/Security/CertificateErrorEventArgs.cs
+    startLine: 35
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V126.Security
+  summary: The url that was requested.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("requestURL")]
+
+      public string RequestURL { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("requestURL")>
+
+      Public Property RequestURL As String
+  overload: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: requestURL
+references:
+- uid: OpenQA.Selenium.DevTools.V126.Security
+  commentId: N:OpenQA.Selenium.DevTools.V126.Security
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V126.Security
+  nameWithType: OpenQA.Selenium.DevTools.V126.Security
+  fullName: OpenQA.Selenium.DevTools.V126.Security
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V126.Security.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126
+    name: V126
+    href: OpenQA.Selenium.DevTools.V126.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V126.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V126.Security.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs
+- uid: System.EventArgs.Empty
+  commentId: F:System.EventArgs.Empty
+  parent: System.EventArgs
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs.empty
+  name: Empty
+  nameWithType: EventArgs.Empty
+  fullName: System.EventArgs.Empty
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId
+  href: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.html#OpenQA_Selenium_DevTools_V126_Security_CertificateErrorEventArgs_EventId
+  name: EventId
+  nameWithType: CertificateErrorEventArgs.EventId
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.EventId
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long
+  nameWithType: long
+  fullName: long
+  nameWithType.vb: Long
+  fullName.vb: Long
+  name.vb: Long
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType
+  href: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.html#OpenQA_Selenium_DevTools_V126_Security_CertificateErrorEventArgs_ErrorType
+  name: ErrorType
+  nameWithType: CertificateErrorEventArgs.ErrorType
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.ErrorType
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL*
+  commentId: Overload:OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL
+  href: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.html#OpenQA_Selenium_DevTools_V126_Security_CertificateErrorEventArgs_RequestURL
+  name: RequestURL
+  nameWithType: CertificateErrorEventArgs.RequestURL
+  fullName: OpenQA.Selenium.DevTools.V126.Security.CertificateErrorEventArgs.RequestURL

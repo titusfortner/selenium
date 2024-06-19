@@ -1,0 +1,701 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  commentId: T:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  id: SecurityStateExplanation
+  parent: OpenQA.Selenium.DevTools.V85.Security
+  children:
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary
+  - OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title
+  langs:
+  - csharp
+  - vb
+  name: SecurityStateExplanation
+  nameWithType: SecurityStateExplanation
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityStateExplanation
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: An explanation of an factor contributing to the security state.
+  example: []
+  syntax:
+    content: public sealed class SecurityStateExplanation
+    content.vb: Public NotInheritable Class SecurityStateExplanation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState
+  id: SecurityState
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: SecurityState
+  nameWithType: SecurityStateExplanation.SecurityState
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SecurityState
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: Security state representing the severity of the factor being explained.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("securityState")]
+
+      public SecurityState SecurityState { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Security.SecurityState
+    content.vb: >-
+      <JsonProperty("securityState")>
+
+      Public Property SecurityState As SecurityState
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: securityState
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title
+  id: Title
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: SecurityStateExplanation.Title
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Title
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: Title describing the type of factor.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("title")]
+
+      public string Title { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("title")>
+
+      Public Property Title As String
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: title
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary
+  id: Summary
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: SecurityStateExplanation.Summary
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Summary
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: Short phrase describing the type of factor.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("summary")]
+
+      public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("summary")>
+
+      Public Property Summary As String
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: summary
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description
+  id: Description
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SecurityStateExplanation.Description
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Description
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: Full text explanation of the factor.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("description")]
+
+      public string Description { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("description")>
+
+      Public Property Description As String
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: description
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType
+  id: MixedContentType
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: MixedContentType
+  nameWithType: SecurityStateExplanation.MixedContentType
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: MixedContentType
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 49
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: The type of mixed content described by the explanation.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("mixedContentType")]
+
+      public MixedContentType MixedContentType { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V85.Security.MixedContentType
+    content.vb: >-
+      <JsonProperty("mixedContentType")>
+
+      Public Property MixedContentType As MixedContentType
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: mixedContentType
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate
+  id: Certificate
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: Certificate
+  nameWithType: SecurityStateExplanation.Certificate
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Certificate
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 58
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: Page certificate.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("certificate")]
+
+      public string[] Certificate { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("certificate")>
+
+      Public Property Certificate As String()
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: certificate
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations
+  commentId: P:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations
+  id: Recommendations
+  parent: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation
+  langs:
+  - csharp
+  - vb
+  name: Recommendations
+  nameWithType: SecurityStateExplanation.Recommendations
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Recommendations
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Security/SecurityStateExplanation.cs
+    startLine: 67
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Security
+  summary: Recommendations to fix any issues.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("recommendations", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string[] Recommendations { get; set; }
+    parameters: []
+    return:
+      type: System.String[]
+    content.vb: >-
+      <JsonProperty("recommendations", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Recommendations As String()
+  overload: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: recommendations
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Security
+  commentId: N:OpenQA.Selenium.DevTools.V85.Security
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Security
+  nameWithType: OpenQA.Selenium.DevTools.V85.Security
+  fullName: OpenQA.Selenium.DevTools.V85.Security
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V85.Security.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Security
+    name: Security
+    href: OpenQA.Selenium.DevTools.V85.Security.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_SecurityState
+  name: SecurityState
+  nameWithType: SecurityStateExplanation.SecurityState
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.SecurityState
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityState
+  commentId: T:OpenQA.Selenium.DevTools.V85.Security.SecurityState
+  parent: OpenQA.Selenium.DevTools.V85.Security
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityState.html
+  name: SecurityState
+  nameWithType: SecurityState
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityState
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_Title
+  name: Title
+  nameWithType: SecurityStateExplanation.Title
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Title
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_Summary
+  name: Summary
+  nameWithType: SecurityStateExplanation.Summary
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Summary
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_Description
+  name: Description
+  nameWithType: SecurityStateExplanation.Description
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Description
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_MixedContentType
+  name: MixedContentType
+  nameWithType: SecurityStateExplanation.MixedContentType
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.MixedContentType
+- uid: OpenQA.Selenium.DevTools.V85.Security.MixedContentType
+  commentId: T:OpenQA.Selenium.DevTools.V85.Security.MixedContentType
+  parent: OpenQA.Selenium.DevTools.V85.Security
+  href: OpenQA.Selenium.DevTools.V85.Security.MixedContentType.html
+  name: MixedContentType
+  nameWithType: MixedContentType
+  fullName: OpenQA.Selenium.DevTools.V85.Security.MixedContentType
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_Certificate
+  name: Certificate
+  nameWithType: SecurityStateExplanation.Certificate
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Certificate
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations
+  href: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.html#OpenQA_Selenium_DevTools_V85_Security_SecurityStateExplanation_Recommendations
+  name: Recommendations
+  nameWithType: SecurityStateExplanation.Recommendations
+  fullName: OpenQA.Selenium.DevTools.V85.Security.SecurityStateExplanation.Recommendations

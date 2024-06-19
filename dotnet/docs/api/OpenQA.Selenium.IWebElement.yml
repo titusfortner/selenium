@@ -1,0 +1,1174 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  id: IWebElement
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.IWebElement.Clear
+  - OpenQA.Selenium.IWebElement.Click
+  - OpenQA.Selenium.IWebElement.Displayed
+  - OpenQA.Selenium.IWebElement.Enabled
+  - OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+  - OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+  - OpenQA.Selenium.IWebElement.GetDomAttribute(System.String)
+  - OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+  - OpenQA.Selenium.IWebElement.GetShadowRoot
+  - OpenQA.Selenium.IWebElement.Location
+  - OpenQA.Selenium.IWebElement.Selected
+  - OpenQA.Selenium.IWebElement.SendKeys(System.String)
+  - OpenQA.Selenium.IWebElement.Size
+  - OpenQA.Selenium.IWebElement.Submit
+  - OpenQA.Selenium.IWebElement.TagName
+  - OpenQA.Selenium.IWebElement.Text
+  langs:
+  - csharp
+  - vb
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+  type: Interface
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IWebElement
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 29
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Defines the interface through which the user controls elements on the page.
+  remarks: >-
+    The <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref> interface represents an HTML element.
+        Generally, all interesting operations to do with interacting with a page will
+        be performed through this interface.
+  example: []
+  syntax:
+    content: 'public interface IWebElement : ISearchContext'
+    content.vb: Public Interface IWebElement Inherits ISearchContext
+  inheritedMembers:
+  - OpenQA.Selenium.ISearchContext.FindElement(OpenQA.Selenium.By)
+  - OpenQA.Selenium.ISearchContext.FindElements(OpenQA.Selenium.By)
+- uid: OpenQA.Selenium.IWebElement.TagName
+  commentId: P:OpenQA.Selenium.IWebElement.TagName
+  id: TagName
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: TagName
+  nameWithType: IWebElement.TagName
+  fullName: OpenQA.Selenium.IWebElement.TagName
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TagName
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the tag name of this element.
+  remarks: >-
+    The <xref href="OpenQA.Selenium.IWebElement.TagName" data-throw-if-not-resolved="false"></xref> property returns the tag name of the
+
+    element, not the value of the name attribute. For example, it will return
+
+    "input" for an element specified by the HTML markup &lt;input name="foo" /&gt;.
+  example: []
+  syntax:
+    content: string TagName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property TagName As String
+  overload: OpenQA.Selenium.IWebElement.TagName*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Text
+  commentId: P:OpenQA.Selenium.IWebElement.Text
+  id: Text
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: IWebElement.Text
+  fullName: OpenQA.Selenium.IWebElement.Text
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Text
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 46
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Get the visible (i.e. not hidden by CSS) text of this element, including sub-elements.
+  example: []
+  syntax:
+    content: string Text { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Text As String
+  overload: OpenQA.Selenium.IWebElement.Text*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Enabled
+  commentId: P:OpenQA.Selenium.IWebElement.Enabled
+  id: Enabled
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Enabled
+  nameWithType: IWebElement.Enabled
+  fullName: OpenQA.Selenium.IWebElement.Enabled
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Enabled
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 54
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether or not this element is enabled.
+  remarks: >-
+    The <xref href="OpenQA.Selenium.IWebElement.Enabled" data-throw-if-not-resolved="false"></xref> property will generally
+        return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">true</a> for everything except explicitly disabled input elements.
+  example: []
+  syntax:
+    content: bool Enabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property Enabled As Boolean
+  overload: OpenQA.Selenium.IWebElement.Enabled*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Selected
+  commentId: P:OpenQA.Selenium.IWebElement.Selected
+  id: Selected
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Selected
+  nameWithType: IWebElement.Selected
+  fullName: OpenQA.Selenium.IWebElement.Selected
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Selected
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether or not this element is selected.
+  remarks: >-
+    This operation only applies to input elements such as checkboxes,
+        options in a select element and radio buttons.
+  example: []
+  syntax:
+    content: bool Selected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property Selected As Boolean
+  overload: OpenQA.Selenium.IWebElement.Selected*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Location
+  commentId: P:OpenQA.Selenium.IWebElement.Location
+  id: Location
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: IWebElement.Location
+  fullName: OpenQA.Selenium.IWebElement.Location
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Location
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 69
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: >-
+    Gets a <xref href="System.Drawing.Point" data-throw-if-not-resolved="false"></xref> object containing the coordinates of the upper-left corner
+
+    of this element relative to the upper-left corner of the page.
+  example: []
+  syntax:
+    content: Point Location { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Point
+    content.vb: ReadOnly Property Location As Point
+  overload: OpenQA.Selenium.IWebElement.Location*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Size
+  commentId: P:OpenQA.Selenium.IWebElement.Size
+  id: Size
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Size
+  nameWithType: IWebElement.Size
+  fullName: OpenQA.Selenium.IWebElement.Size
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Size
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 75
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a <xref href="OpenQA.Selenium.IWebElement.Size" data-throw-if-not-resolved="false"></xref> object containing the height and width of this element.
+  example: []
+  syntax:
+    content: Size Size { get; }
+    parameters: []
+    return:
+      type: System.Drawing.Size
+    content.vb: ReadOnly Property Size As Size
+  overload: OpenQA.Selenium.IWebElement.Size*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Displayed
+  commentId: P:OpenQA.Selenium.IWebElement.Displayed
+  id: Displayed
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Displayed
+  nameWithType: IWebElement.Displayed
+  fullName: OpenQA.Selenium.IWebElement.Displayed
+  type: Property
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Displayed
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 84
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets a value indicating whether or not this element is displayed.
+  remarks: >-
+    The <xref href="OpenQA.Selenium.IWebElement.Displayed" data-throw-if-not-resolved="false"></xref> property avoids the problem
+        of having to parse an element's "style" attribute to determine
+        visibility of an element.
+  example: []
+  syntax:
+    content: bool Displayed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: ReadOnly Property Displayed As Boolean
+  overload: OpenQA.Selenium.IWebElement.Displayed*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Clear
+  commentId: M:OpenQA.Selenium.IWebElement.Clear
+  id: Clear
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: IWebElement.Clear()
+  fullName: OpenQA.Selenium.IWebElement.Clear()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Clear
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 93
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Clears the content of this element.
+  remarks: >-
+    If this element is a text entry element, the <xref href="OpenQA.Selenium.IWebElement.Clear" data-throw-if-not-resolved="false"></xref>
+        method will clear the value. It has no effect on other elements. Text entry elements
+        are defined as elements with INPUT or TEXTAREA tags.
+  example: []
+  syntax:
+    content: void Clear()
+    content.vb: Sub Clear()
+  overload: OpenQA.Selenium.IWebElement.Clear*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.SendKeys(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.SendKeys(System.String)
+  id: SendKeys(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: SendKeys(string)
+  nameWithType: IWebElement.SendKeys(string)
+  fullName: OpenQA.Selenium.IWebElement.SendKeys(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: SendKeys
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 106
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Simulates typing text into the element.
+  remarks: >-
+    The text to be typed may include special characters like arrow keys,
+        backspaces, function keys, and so on. Valid special keys are defined in
+        <xref href="OpenQA.Selenium.Keys" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: void SendKeys(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: The text to type into the element.
+    content.vb: Sub SendKeys(text As String)
+  overload: OpenQA.Selenium.IWebElement.SendKeys*
+  exceptions:
+  - type: OpenQA.Selenium.InvalidElementStateException
+    commentId: T:OpenQA.Selenium.InvalidElementStateException
+    description: Thrown when the target element is not enabled.
+  - type: OpenQA.Selenium.ElementNotVisibleException
+    commentId: T:OpenQA.Selenium.ElementNotVisibleException
+    description: Thrown when the target element is not visible.
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+  seealso:
+  - linkId: OpenQA.Selenium.Keys
+    commentId: T:OpenQA.Selenium.Keys
+  nameWithType.vb: IWebElement.SendKeys(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.SendKeys(String)
+  name.vb: SendKeys(String)
+- uid: OpenQA.Selenium.IWebElement.Submit
+  commentId: M:OpenQA.Selenium.IWebElement.Submit
+  id: Submit
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Submit()
+  nameWithType: IWebElement.Submit()
+  fullName: OpenQA.Selenium.IWebElement.Submit()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Submit
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 115
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Submits this element to the web server.
+  remarks: >-
+    If this current element is a form, or an element within a form,
+        then this will be submitted to the web server. If this causes the current
+        page to change, then this method will block until the new page is loaded.
+  example: []
+  syntax:
+    content: void Submit()
+    content.vb: Sub Submit()
+  overload: OpenQA.Selenium.IWebElement.Submit*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.Click
+  commentId: M:OpenQA.Selenium.IWebElement.Click
+  id: Click
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: Click()
+  nameWithType: IWebElement.Click()
+  fullName: OpenQA.Selenium.IWebElement.Click()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Click
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 136
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Clicks this element.
+  remarks: >-
+    <p>
+
+    Click this element. If the click causes a new page to load, the <xref href="OpenQA.Selenium.IWebElement.Click" data-throw-if-not-resolved="false"></xref>
+
+    method will attempt to block until the page has loaded. After calling the
+
+    <xref href="OpenQA.Selenium.IWebElement.Click" data-throw-if-not-resolved="false"></xref> method, you should discard all references to this
+
+    element unless you know that the element and the page will still be present.
+
+    Otherwise, any further operations performed on this element will have an undefined.
+
+    behavior.
+
+    </p>
+
+    <p>
+
+    If this element is not clickable, then this operation is ignored. This allows you to
+
+    simulate a users to accidentally missing the target when clicking.
+
+    </p>
+  example: []
+  syntax:
+    content: void Click()
+    content.vb: Sub Click()
+  overload: OpenQA.Selenium.IWebElement.Click*
+  exceptions:
+  - type: OpenQA.Selenium.ElementNotVisibleException
+    commentId: T:OpenQA.Selenium.ElementNotVisibleException
+    description: Thrown when the target element is not visible.
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+- uid: OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+  id: GetAttribute(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: GetAttribute(string)
+  nameWithType: IWebElement.GetAttribute(string)
+  fullName: OpenQA.Selenium.IWebElement.GetAttribute(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetAttribute
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 172
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the value of the specified attribute for this element.
+  remarks: >-
+    The <xref href="OpenQA.Selenium.IWebElement.GetAttribute(System.String)" data-throw-if-not-resolved="false"></xref> method will return the current value
+        of the attribute, even if the value has been modified after the page has been
+        loaded. Note that the value of the following attributes will be returned even if
+        there is no explicit attribute on the element:
+        <table><thead><tr><th class="term">Attribute name</th><th class="term">Value returned if not explicitly specified</th><th class="term">Valid element types</th></tr></thead><tbody><tr><td class="description">checked</td><td class="description">checked</td><td class="description">Check Box</td></tr><tr><td class="description">selected</td><td class="description">selected</td><td class="description">Options in Select elements</td></tr><tr><td class="description">disabled</td><td class="description">disabled</td><td class="description">Input and other UI elements</td></tr></tbody></table>
+  example: []
+  syntax:
+    content: string GetAttribute(string attributeName)
+    parameters:
+    - id: attributeName
+      type: System.String
+      description: The name of the attribute.
+    return:
+      type: System.String
+      description: >-
+        The attribute's current value. Returns a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the
+            value is not set.
+    content.vb: Function GetAttribute(attributeName As String) As String
+  overload: OpenQA.Selenium.IWebElement.GetAttribute*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+  nameWithType.vb: IWebElement.GetAttribute(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetAttribute(String)
+  name.vb: GetAttribute(String)
+- uid: OpenQA.Selenium.IWebElement.GetDomAttribute(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetDomAttribute(System.String)
+  id: GetDomAttribute(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: GetDomAttribute(string)
+  nameWithType: IWebElement.GetDomAttribute(string)
+  fullName: OpenQA.Selenium.IWebElement.GetDomAttribute(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDomAttribute
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 187
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the value of a declared HTML attribute of this element.
+  remarks: >-
+    As opposed to the <xref href="OpenQA.Selenium.IWebElement.GetAttribute(System.String)" data-throw-if-not-resolved="false"></xref> method, this method
+
+    only returns attributes declared in the element's HTML markup. To access the value
+
+    of an IDL property of the element, either use the <xref href="OpenQA.Selenium.IWebElement.GetAttribute(System.String)" data-throw-if-not-resolved="false"></xref>
+
+    method or the <xref href="OpenQA.Selenium.IWebElement.GetDomProperty(System.String)" data-throw-if-not-resolved="false"></xref> method.
+  example: []
+  syntax:
+    content: string GetDomAttribute(string attributeName)
+    parameters:
+    - id: attributeName
+      type: System.String
+      description: The name of the HTML attribute to get the value of.
+    return:
+      type: System.String
+      description: >-
+        The HTML attribute's current value. Returns a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the
+            value is not set or the declared attribute does not exist.
+    content.vb: Function GetDomAttribute(attributeName As String) As String
+  overload: OpenQA.Selenium.IWebElement.GetDomAttribute*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+  nameWithType.vb: IWebElement.GetDomAttribute(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetDomAttribute(String)
+  name.vb: GetDomAttribute(String)
+- uid: OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+  id: GetDomProperty(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: GetDomProperty(string)
+  nameWithType: IWebElement.GetDomProperty(string)
+  fullName: OpenQA.Selenium.IWebElement.GetDomProperty(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetDomProperty
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 196
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the value of a JavaScript property of this element.
+  example: []
+  syntax:
+    content: string GetDomProperty(string propertyName)
+    parameters:
+    - id: propertyName
+      type: System.String
+      description: The name of the JavaScript property to get the value of.
+    return:
+      type: System.String
+      description: >-
+        The JavaScript property's current value. Returns a <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/keywords/null">null</a> if the
+            value is not set or the property does not exist.
+    content.vb: Function GetDomProperty(propertyName As String) As String
+  overload: OpenQA.Selenium.IWebElement.GetDomProperty*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+  nameWithType.vb: IWebElement.GetDomProperty(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetDomProperty(String)
+  name.vb: GetDomProperty(String)
+- uid: OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+  id: GetCssValue(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: GetCssValue(string)
+  nameWithType: IWebElement.GetCssValue(string)
+  fullName: OpenQA.Selenium.IWebElement.GetCssValue(string)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetCssValue
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 209
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the value of a CSS property of this element.
+  remarks: >-
+    The value returned by the <xref href="OpenQA.Selenium.IWebElement.GetCssValue(System.String)" data-throw-if-not-resolved="false"></xref>
+        method is likely to be unpredictable in a cross-browser environment.
+        Color values should be returned as hex strings. For example, a
+        "background-color" property set as "green" in the HTML source, will
+        return "#008000" for its value.
+  example: []
+  syntax:
+    content: string GetCssValue(string propertyName)
+    parameters:
+    - id: propertyName
+      type: System.String
+      description: The name of the CSS property to get the value of.
+    return:
+      type: System.String
+      description: The value of the specified CSS property.
+    content.vb: Function GetCssValue(propertyName As String) As String
+  overload: OpenQA.Selenium.IWebElement.GetCssValue*
+  exceptions:
+  - type: OpenQA.Selenium.StaleElementReferenceException
+    commentId: T:OpenQA.Selenium.StaleElementReferenceException
+    description: Thrown when the target element is no longer valid in the document DOM.
+  nameWithType.vb: IWebElement.GetCssValue(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetCssValue(String)
+  name.vb: GetCssValue(String)
+- uid: OpenQA.Selenium.IWebElement.GetShadowRoot
+  commentId: M:OpenQA.Selenium.IWebElement.GetShadowRoot
+  id: GetShadowRoot
+  parent: OpenQA.Selenium.IWebElement
+  langs:
+  - csharp
+  - vb
+  name: GetShadowRoot()
+  nameWithType: IWebElement.GetShadowRoot()
+  fullName: OpenQA.Selenium.IWebElement.GetShadowRoot()
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/IWebElement.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GetShadowRoot
+    path: ../src/webdriver/IWebElement.cs
+    startLine: 216
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Gets the representation of an element's shadow root for accessing the shadow DOM of a web component.
+  example: []
+  syntax:
+    content: ISearchContext GetShadowRoot()
+    return:
+      type: OpenQA.Selenium.ISearchContext
+      description: A shadow root representation.
+    content.vb: Function GetShadowRoot() As ISearchContext
+  overload: OpenQA.Selenium.IWebElement.GetShadowRoot*
+  exceptions:
+  - type: OpenQA.Selenium.NoSuchShadowRootException
+    commentId: T:OpenQA.Selenium.NoSuchShadowRootException
+    description: Thrown when this element does not have a shadow root.
+references:
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebElement.html
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: OpenQA.Selenium.ISearchContext.FindElement(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.ISearchContext.FindElement(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.ISearchContext
+  href: OpenQA.Selenium.ISearchContext.html#OpenQA_Selenium_ISearchContext_FindElement_OpenQA_Selenium_By_
+  name: FindElement(By)
+  nameWithType: ISearchContext.FindElement(By)
+  fullName: OpenQA.Selenium.ISearchContext.FindElement(OpenQA.Selenium.By)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ISearchContext.FindElement(OpenQA.Selenium.By)
+    name: FindElement
+    href: OpenQA.Selenium.ISearchContext.html#OpenQA_Selenium_ISearchContext_FindElement_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ISearchContext.FindElement(OpenQA.Selenium.By)
+    name: FindElement
+    href: OpenQA.Selenium.ISearchContext.html#OpenQA_Selenium_ISearchContext_FindElement_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+- uid: OpenQA.Selenium.ISearchContext.FindElements(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.ISearchContext.FindElements(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.ISearchContext
+  href: OpenQA.Selenium.ISearchContext.html#OpenQA_Selenium_ISearchContext_FindElements_OpenQA_Selenium_By_
+  name: FindElements(By)
+  nameWithType: ISearchContext.FindElements(By)
+  fullName: OpenQA.Selenium.ISearchContext.FindElements(OpenQA.Selenium.By)
+  spec.csharp:
+  - uid: OpenQA.Selenium.ISearchContext.FindElements(OpenQA.Selenium.By)
+    name: FindElements
+    href: OpenQA.Selenium.ISearchContext.html#OpenQA_Selenium_ISearchContext_FindElements_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.ISearchContext.FindElements(OpenQA.Selenium.By)
+    name: FindElements
+    href: OpenQA.Selenium.ISearchContext.html#OpenQA_Selenium_ISearchContext_FindElements_OpenQA_Selenium_By_
+  - name: (
+  - uid: OpenQA.Selenium.By
+    name: By
+    href: OpenQA.Selenium.By.html
+  - name: )
+- uid: OpenQA.Selenium.ISearchContext
+  commentId: T:OpenQA.Selenium.ISearchContext
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ISearchContext.html
+  name: ISearchContext
+  nameWithType: ISearchContext
+  fullName: OpenQA.Selenium.ISearchContext
+- uid: OpenQA.Selenium.IWebElement.TagName
+  commentId: P:OpenQA.Selenium.IWebElement.TagName
+  parent: OpenQA.Selenium.IWebElement
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_TagName
+  name: TagName
+  nameWithType: IWebElement.TagName
+  fullName: OpenQA.Selenium.IWebElement.TagName
+- uid: OpenQA.Selenium.StaleElementReferenceException
+  commentId: T:OpenQA.Selenium.StaleElementReferenceException
+  href: OpenQA.Selenium.StaleElementReferenceException.html
+  name: StaleElementReferenceException
+  nameWithType: StaleElementReferenceException
+  fullName: OpenQA.Selenium.StaleElementReferenceException
+- uid: OpenQA.Selenium.IWebElement.TagName*
+  commentId: Overload:OpenQA.Selenium.IWebElement.TagName
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_TagName
+  name: TagName
+  nameWithType: IWebElement.TagName
+  fullName: OpenQA.Selenium.IWebElement.TagName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.IWebElement.Text*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Text
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Text
+  name: Text
+  nameWithType: IWebElement.Text
+  fullName: OpenQA.Selenium.IWebElement.Text
+- uid: OpenQA.Selenium.IWebElement.Enabled
+  commentId: P:OpenQA.Selenium.IWebElement.Enabled
+  parent: OpenQA.Selenium.IWebElement
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Enabled
+  name: Enabled
+  nameWithType: IWebElement.Enabled
+  fullName: OpenQA.Selenium.IWebElement.Enabled
+- uid: OpenQA.Selenium.IWebElement.Enabled*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Enabled
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Enabled
+  name: Enabled
+  nameWithType: IWebElement.Enabled
+  fullName: OpenQA.Selenium.IWebElement.Enabled
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: OpenQA.Selenium.IWebElement.Selected*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Selected
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Selected
+  name: Selected
+  nameWithType: IWebElement.Selected
+  fullName: OpenQA.Selenium.IWebElement.Selected
+- uid: System.Drawing.Point
+  commentId: T:System.Drawing.Point
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.point
+  name: Point
+  nameWithType: Point
+  fullName: System.Drawing.Point
+- uid: OpenQA.Selenium.IWebElement.Location*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Location
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Location
+  name: Location
+  nameWithType: IWebElement.Location
+  fullName: OpenQA.Selenium.IWebElement.Location
+- uid: System.Drawing
+  commentId: N:System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Drawing
+  nameWithType: System.Drawing
+  fullName: System.Drawing
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Drawing
+    name: Drawing
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.drawing
+- uid: OpenQA.Selenium.IWebElement.Size
+  commentId: P:OpenQA.Selenium.IWebElement.Size
+  parent: OpenQA.Selenium.IWebElement
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Size
+  name: Size
+  nameWithType: IWebElement.Size
+  fullName: OpenQA.Selenium.IWebElement.Size
+- uid: OpenQA.Selenium.IWebElement.Size*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Size
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Size
+  name: Size
+  nameWithType: IWebElement.Size
+  fullName: OpenQA.Selenium.IWebElement.Size
+- uid: System.Drawing.Size
+  commentId: T:System.Drawing.Size
+  parent: System.Drawing
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.drawing.size
+  name: Size
+  nameWithType: Size
+  fullName: System.Drawing.Size
+- uid: OpenQA.Selenium.IWebElement.Displayed
+  commentId: P:OpenQA.Selenium.IWebElement.Displayed
+  parent: OpenQA.Selenium.IWebElement
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Displayed
+  name: Displayed
+  nameWithType: IWebElement.Displayed
+  fullName: OpenQA.Selenium.IWebElement.Displayed
+- uid: OpenQA.Selenium.IWebElement.Displayed*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Displayed
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Displayed
+  name: Displayed
+  nameWithType: IWebElement.Displayed
+  fullName: OpenQA.Selenium.IWebElement.Displayed
+- uid: OpenQA.Selenium.IWebElement.Clear
+  commentId: M:OpenQA.Selenium.IWebElement.Clear
+  parent: OpenQA.Selenium.IWebElement
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Clear
+  name: Clear()
+  nameWithType: IWebElement.Clear()
+  fullName: OpenQA.Selenium.IWebElement.Clear()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IWebElement.Clear
+    name: Clear
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Clear
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IWebElement.Clear
+    name: Clear
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Clear
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.IWebElement.Clear*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Clear
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Clear
+  name: Clear
+  nameWithType: IWebElement.Clear
+  fullName: OpenQA.Selenium.IWebElement.Clear
+- uid: OpenQA.Selenium.Keys
+  commentId: T:OpenQA.Selenium.Keys
+  href: OpenQA.Selenium.Keys.html
+  name: Keys
+  nameWithType: Keys
+  fullName: OpenQA.Selenium.Keys
+- uid: OpenQA.Selenium.InvalidElementStateException
+  commentId: T:OpenQA.Selenium.InvalidElementStateException
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.InvalidElementStateException.html
+  name: InvalidElementStateException
+  nameWithType: InvalidElementStateException
+  fullName: OpenQA.Selenium.InvalidElementStateException
+- uid: OpenQA.Selenium.ElementNotVisibleException
+  commentId: T:OpenQA.Selenium.ElementNotVisibleException
+  href: OpenQA.Selenium.ElementNotVisibleException.html
+  name: ElementNotVisibleException
+  nameWithType: ElementNotVisibleException
+  fullName: OpenQA.Selenium.ElementNotVisibleException
+- uid: OpenQA.Selenium.IWebElement.SendKeys*
+  commentId: Overload:OpenQA.Selenium.IWebElement.SendKeys
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_SendKeys_System_String_
+  name: SendKeys
+  nameWithType: IWebElement.SendKeys
+  fullName: OpenQA.Selenium.IWebElement.SendKeys
+- uid: OpenQA.Selenium.IWebElement.Submit*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Submit
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Submit
+  name: Submit
+  nameWithType: IWebElement.Submit
+  fullName: OpenQA.Selenium.IWebElement.Submit
+- uid: OpenQA.Selenium.IWebElement.Click
+  commentId: M:OpenQA.Selenium.IWebElement.Click
+  parent: OpenQA.Selenium.IWebElement
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Click
+  name: Click()
+  nameWithType: IWebElement.Click()
+  fullName: OpenQA.Selenium.IWebElement.Click()
+  spec.csharp:
+  - uid: OpenQA.Selenium.IWebElement.Click
+    name: Click
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Click
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IWebElement.Click
+    name: Click
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Click
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.IWebElement.Click*
+  commentId: Overload:OpenQA.Selenium.IWebElement.Click
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_Click
+  name: Click
+  nameWithType: IWebElement.Click
+  fullName: OpenQA.Selenium.IWebElement.Click
+- uid: OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  isExternal: true
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetAttribute_System_String_
+  name: GetAttribute(string)
+  nameWithType: IWebElement.GetAttribute(string)
+  fullName: OpenQA.Selenium.IWebElement.GetAttribute(string)
+  nameWithType.vb: IWebElement.GetAttribute(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetAttribute(String)
+  name.vb: GetAttribute(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+    name: GetAttribute
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IWebElement.GetAttribute(System.String)
+    name: GetAttribute
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetAttribute_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.IWebElement.GetAttribute*
+  commentId: Overload:OpenQA.Selenium.IWebElement.GetAttribute
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetAttribute_System_String_
+  name: GetAttribute
+  nameWithType: IWebElement.GetAttribute
+  fullName: OpenQA.Selenium.IWebElement.GetAttribute
+- uid: OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  isExternal: true
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetDomProperty_System_String_
+  name: GetDomProperty(string)
+  nameWithType: IWebElement.GetDomProperty(string)
+  fullName: OpenQA.Selenium.IWebElement.GetDomProperty(string)
+  nameWithType.vb: IWebElement.GetDomProperty(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetDomProperty(String)
+  name.vb: GetDomProperty(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+    name: GetDomProperty
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetDomProperty_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IWebElement.GetDomProperty(System.String)
+    name: GetDomProperty
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetDomProperty_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.IWebElement.GetDomAttribute*
+  commentId: Overload:OpenQA.Selenium.IWebElement.GetDomAttribute
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetDomAttribute_System_String_
+  name: GetDomAttribute
+  nameWithType: IWebElement.GetDomAttribute
+  fullName: OpenQA.Selenium.IWebElement.GetDomAttribute
+- uid: OpenQA.Selenium.IWebElement.GetDomProperty*
+  commentId: Overload:OpenQA.Selenium.IWebElement.GetDomProperty
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetDomProperty_System_String_
+  name: GetDomProperty
+  nameWithType: IWebElement.GetDomProperty
+  fullName: OpenQA.Selenium.IWebElement.GetDomProperty
+- uid: OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+  commentId: M:OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+  parent: OpenQA.Selenium.IWebElement
+  isExternal: true
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetCssValue_System_String_
+  name: GetCssValue(string)
+  nameWithType: IWebElement.GetCssValue(string)
+  fullName: OpenQA.Selenium.IWebElement.GetCssValue(string)
+  nameWithType.vb: IWebElement.GetCssValue(String)
+  fullName.vb: OpenQA.Selenium.IWebElement.GetCssValue(String)
+  name.vb: GetCssValue(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+    name: GetCssValue
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetCssValue_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.IWebElement.GetCssValue(System.String)
+    name: GetCssValue
+    href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetCssValue_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.IWebElement.GetCssValue*
+  commentId: Overload:OpenQA.Selenium.IWebElement.GetCssValue
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetCssValue_System_String_
+  name: GetCssValue
+  nameWithType: IWebElement.GetCssValue
+  fullName: OpenQA.Selenium.IWebElement.GetCssValue
+- uid: OpenQA.Selenium.NoSuchShadowRootException
+  commentId: T:OpenQA.Selenium.NoSuchShadowRootException
+  href: OpenQA.Selenium.NoSuchShadowRootException.html
+  name: NoSuchShadowRootException
+  nameWithType: NoSuchShadowRootException
+  fullName: OpenQA.Selenium.NoSuchShadowRootException
+- uid: OpenQA.Selenium.IWebElement.GetShadowRoot*
+  commentId: Overload:OpenQA.Selenium.IWebElement.GetShadowRoot
+  href: OpenQA.Selenium.IWebElement.html#OpenQA_Selenium_IWebElement_GetShadowRoot
+  name: GetShadowRoot
+  nameWithType: IWebElement.GetShadowRoot
+  fullName: OpenQA.Selenium.IWebElement.GetShadowRoot

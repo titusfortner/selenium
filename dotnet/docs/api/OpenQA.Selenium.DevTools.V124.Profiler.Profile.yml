@@ -1,0 +1,615 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  commentId: T:OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  id: Profile
+  parent: OpenQA.Selenium.DevTools.V124.Profiler
+  children:
+  - OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime
+  - OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes
+  - OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples
+  - OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime
+  - OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas
+  langs:
+  - csharp
+  - vb
+  name: Profile
+  nameWithType: Profile
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Profile
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Profile.
+  example: []
+  syntax:
+    content: public sealed class Profile
+    content.vb: Public NotInheritable Class Profile
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes
+  commentId: P:OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes
+  id: Nodes
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  langs:
+  - csharp
+  - vb
+  name: Nodes
+  nameWithType: Profile.Nodes
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Nodes
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+    startLine: 13
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: The list of profile nodes. First item is the root node.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("nodes")]
+
+      public ProfileNode[] Nodes { get; set; }
+    parameters: []
+    return:
+      type: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode[]
+    content.vb: >-
+      <JsonProperty("nodes")>
+
+      Public Property Nodes As ProfileNode()
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: nodes
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime
+  commentId: P:OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime
+  id: StartTime
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  langs:
+  - csharp
+  - vb
+  name: StartTime
+  nameWithType: Profile.StartTime
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: StartTime
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+    startLine: 22
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Profiling start timestamp in microseconds.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("startTime")]
+
+      public double StartTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("startTime")>
+
+      Public Property StartTime As Double
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: startTime
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime
+  commentId: P:OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime
+  id: EndTime
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  langs:
+  - csharp
+  - vb
+  name: EndTime
+  nameWithType: Profile.EndTime
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EndTime
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+    startLine: 31
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Profiling end timestamp in microseconds.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("endTime")]
+
+      public double EndTime { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: >-
+      <JsonProperty("endTime")>
+
+      Public Property EndTime As Double
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: endTime
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples
+  commentId: P:OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples
+  id: Samples
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  langs:
+  - csharp
+  - vb
+  name: Samples
+  nameWithType: Profile.Samples
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Samples
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+    startLine: 40
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: Ids of samples top nodes.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("samples", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long[] Samples { get; set; }
+    parameters: []
+    return:
+      type: System.Int64[]
+    content.vb: >-
+      <JsonProperty("samples", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Samples As Long()
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: samples
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas
+  commentId: P:OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas
+  id: TimeDeltas
+  parent: OpenQA.Selenium.DevTools.V124.Profiler.Profile
+  langs:
+  - csharp
+  - vb
+  name: TimeDeltas
+  nameWithType: Profile.TimeDeltas
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: TimeDeltas
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v124/Profiler/Profile.cs
+    startLine: 50
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V124.Profiler
+  summary: >-
+    Time intervals between adjacent samples in microseconds. The first delta is relative to the
+
+    profile startTime.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("timeDeltas", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long[] TimeDeltas { get; set; }
+    parameters: []
+    return:
+      type: System.Int64[]
+    content.vb: >-
+      <JsonProperty("timeDeltas", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property TimeDeltas As Long()
+  overload: OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timeDeltas
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V124.Profiler
+  commentId: N:OpenQA.Selenium.DevTools.V124.Profiler
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V124.Profiler
+  nameWithType: OpenQA.Selenium.DevTools.V124.Profiler
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler
+    name: Profiler
+    href: OpenQA.Selenium.DevTools.V124.Profiler.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124
+    name: V124
+    href: OpenQA.Selenium.DevTools.V124.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler
+    name: Profiler
+    href: OpenQA.Selenium.DevTools.V124.Profiler.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes
+  href: OpenQA.Selenium.DevTools.V124.Profiler.Profile.html#OpenQA_Selenium_DevTools_V124_Profiler_Profile_Nodes
+  name: Nodes
+  nameWithType: Profile.Nodes
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Nodes
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode[]
+  isExternal: true
+  href: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode.html
+  name: ProfileNode[]
+  nameWithType: ProfileNode[]
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode[]
+  nameWithType.vb: ProfileNode()
+  fullName.vb: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode()
+  name.vb: ProfileNode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode
+    name: ProfileNode
+    href: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode.html
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode
+    name: ProfileNode
+    href: OpenQA.Selenium.DevTools.V124.Profiler.ProfileNode.html
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime
+  href: OpenQA.Selenium.DevTools.V124.Profiler.Profile.html#OpenQA_Selenium_DevTools_V124_Profiler_Profile_StartTime
+  name: StartTime
+  nameWithType: Profile.StartTime
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.StartTime
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime
+  href: OpenQA.Selenium.DevTools.V124.Profiler.Profile.html#OpenQA_Selenium_DevTools_V124_Profiler_Profile_EndTime
+  name: EndTime
+  nameWithType: Profile.EndTime
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.EndTime
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples
+  href: OpenQA.Selenium.DevTools.V124.Profiler.Profile.html#OpenQA_Selenium_DevTools_V124_Profiler_Profile_Samples
+  name: Samples
+  nameWithType: Profile.Samples
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.Samples
+- uid: System.Int64[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long[]
+  nameWithType: long[]
+  fullName: long[]
+  nameWithType.vb: Long()
+  fullName.vb: Long()
+  name.vb: Long()
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas*
+  commentId: Overload:OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas
+  href: OpenQA.Selenium.DevTools.V124.Profiler.Profile.html#OpenQA_Selenium_DevTools_V124_Profiler_Profile_TimeDeltas
+  name: TimeDeltas
+  nameWithType: Profile.TimeDeltas
+  fullName: OpenQA.Selenium.DevTools.V124.Profiler.Profile.TimeDeltas

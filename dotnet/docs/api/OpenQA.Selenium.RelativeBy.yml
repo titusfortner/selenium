@@ -1,0 +1,1417 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.RelativeBy
+  commentId: T:OpenQA.Selenium.RelativeBy
+  id: RelativeBy
+  parent: OpenQA.Selenium
+  children:
+  - OpenQA.Selenium.RelativeBy.#ctor
+  - OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.By)
+  - OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.By)
+  - OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.RelativeBy.FindElement(OpenQA.Selenium.ISearchContext)
+  - OpenQA.Selenium.RelativeBy.FindElements(OpenQA.Selenium.ISearchContext)
+  - OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.By)
+  - OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By)
+  - OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By,System.Int32)
+  - OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement,System.Int32)
+  - OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.By)
+  - OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.IWebElement)
+  - OpenQA.Selenium.RelativeBy.WithLocator(OpenQA.Selenium.By)
+  langs:
+  - csharp
+  - vb
+  name: RelativeBy
+  nameWithType: RelativeBy
+  fullName: OpenQA.Selenium.RelativeBy
+  type: Class
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RelativeBy
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 30
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Provides a mechanism for finding elements spatially relative to other elements.
+  example: []
+  syntax:
+    content: 'public class RelativeBy : By'
+    content.vb: Public Class RelativeBy Inherits By
+  inheritance:
+  - System.Object
+  - OpenQA.Selenium.By
+  inheritedMembers:
+  - OpenQA.Selenium.By.Mechanism
+  - OpenQA.Selenium.By.Criteria
+  - OpenQA.Selenium.By.Description
+  - OpenQA.Selenium.By.FindElementMethod
+  - OpenQA.Selenium.By.FindElementsMethod
+  - OpenQA.Selenium.By.Id(System.String)
+  - OpenQA.Selenium.By.LinkText(System.String)
+  - OpenQA.Selenium.By.Name(System.String)
+  - OpenQA.Selenium.By.XPath(System.String)
+  - OpenQA.Selenium.By.ClassName(System.String)
+  - OpenQA.Selenium.By.PartialLinkText(System.String)
+  - OpenQA.Selenium.By.TagName(System.String)
+  - OpenQA.Selenium.By.CssSelector(System.String)
+  - OpenQA.Selenium.By.ToString
+  - OpenQA.Selenium.By.Equals(System.Object)
+  - OpenQA.Selenium.By.GetHashCode
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: OpenQA.Selenium.RelativeBy.#ctor
+  commentId: M:OpenQA.Selenium.RelativeBy.#ctor
+  id: '#ctor'
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: RelativeBy()
+  nameWithType: RelativeBy.RelativeBy()
+  fullName: OpenQA.Selenium.RelativeBy.RelativeBy()
+  type: Constructor
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: .ctor
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 39
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Prevents a default instance of the <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: protected RelativeBy()
+    content.vb: Protected Sub New()
+  overload: OpenQA.Selenium.RelativeBy.#ctor*
+  nameWithType.vb: RelativeBy.New()
+  fullName.vb: OpenQA.Selenium.RelativeBy.New()
+  name.vb: New()
+- uid: OpenQA.Selenium.RelativeBy.WithLocator(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.RelativeBy.WithLocator(OpenQA.Selenium.By)
+  id: WithLocator(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: WithLocator(By)
+  nameWithType: RelativeBy.WithLocator(By)
+  fullName: OpenQA.Selenium.RelativeBy.WithLocator(OpenQA.Selenium.By)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: WithLocator
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 72
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Creates a new <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> for finding elements with the specified tag name.
+  example: []
+  syntax:
+    content: public static RelativeBy WithLocator(By by)
+    parameters:
+    - id: by
+      type: OpenQA.Selenium.By
+      description: A By object that will be used to find the initial element.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object to be used in finding the elements.
+    content.vb: Public Shared Function WithLocator(by As By) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.WithLocator*
+- uid: OpenQA.Selenium.RelativeBy.FindElement(OpenQA.Selenium.ISearchContext)
+  commentId: M:OpenQA.Selenium.RelativeBy.FindElement(OpenQA.Selenium.ISearchContext)
+  id: FindElement(OpenQA.Selenium.ISearchContext)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: FindElement(ISearchContext)
+  nameWithType: RelativeBy.FindElement(ISearchContext)
+  fullName: OpenQA.Selenium.RelativeBy.FindElement(OpenQA.Selenium.ISearchContext)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FindElement
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 83
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Finds the first element matching the criteria.
+  example: []
+  syntax:
+    content: public override IWebElement FindElement(ISearchContext context)
+    parameters:
+    - id: context
+      type: OpenQA.Selenium.ISearchContext
+      description: An <xref href="OpenQA.Selenium.ISearchContext" data-throw-if-not-resolved="false"></xref> object to use to search for the elements.
+    return:
+      type: OpenQA.Selenium.IWebElement
+      description: The first matching <xref href="OpenQA.Selenium.IWebElement" data-throw-if-not-resolved="false"></xref> on the current context.
+    content.vb: Public Overrides Function FindElement(context As ISearchContext) As IWebElement
+  overridden: OpenQA.Selenium.By.FindElement(OpenQA.Selenium.ISearchContext)
+  overload: OpenQA.Selenium.RelativeBy.FindElement*
+- uid: OpenQA.Selenium.RelativeBy.FindElements(OpenQA.Selenium.ISearchContext)
+  commentId: M:OpenQA.Selenium.RelativeBy.FindElements(OpenQA.Selenium.ISearchContext)
+  id: FindElements(OpenQA.Selenium.ISearchContext)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: FindElements(ISearchContext)
+  nameWithType: RelativeBy.FindElements(ISearchContext)
+  fullName: OpenQA.Selenium.RelativeBy.FindElements(OpenQA.Selenium.ISearchContext)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: FindElements
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 100
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Finds all elements matching the criteria.
+  example: []
+  syntax:
+    content: public override ReadOnlyCollection<IWebElement> FindElements(ISearchContext context)
+    parameters:
+    - id: context
+      type: OpenQA.Selenium.ISearchContext
+      description: An <xref href="OpenQA.Selenium.ISearchContext" data-throw-if-not-resolved="false"></xref> object to use to search for the elements.
+    return:
+      type: System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.IWebElement}
+      description: >-
+        A <xref href="System.Collections.ObjectModel.ReadOnlyCollection%601" data-throw-if-not-resolved="false"></xref> of all <xref href="OpenQA.Selenium.IWebElement?text=WebElements" data-throw-if-not-resolved="false"></xref>
+            matching the current criteria, or an empty list if nothing matches.
+    content.vb: Public Overrides Function FindElements(context As ISearchContext) As ReadOnlyCollection(Of IWebElement)
+  overridden: OpenQA.Selenium.By.FindElements(OpenQA.Selenium.ISearchContext)
+  overload: OpenQA.Selenium.RelativeBy.FindElements*
+- uid: OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.IWebElement)
+  id: Above(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Above(IWebElement)
+  nameWithType: RelativeBy.Above(IWebElement)
+  fullName: OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Above
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 118
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element above the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Above(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to look above for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Above(element As IWebElement) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Above*
+- uid: OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.By)
+  id: Above(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Above(By)
+  nameWithType: RelativeBy.Above(By)
+  fullName: OpenQA.Selenium.RelativeBy.Above(OpenQA.Selenium.By)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Above
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 133
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element above the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Above(By locator)
+    parameters:
+    - id: locator
+      type: OpenQA.Selenium.By
+      description: The locator describing the element to look above for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Above(locator As By) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Above*
+- uid: OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.IWebElement)
+  id: Below(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Below(IWebElement)
+  nameWithType: RelativeBy.Below(IWebElement)
+  fullName: OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Below
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 148
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element below the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Below(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to look below for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Below(element As IWebElement) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Below*
+- uid: OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.By)
+  id: Below(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Below(By)
+  nameWithType: RelativeBy.Below(By)
+  fullName: OpenQA.Selenium.RelativeBy.Below(OpenQA.Selenium.By)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Below
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 163
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element below the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Below(By locator)
+    parameters:
+    - id: locator
+      type: OpenQA.Selenium.By
+      description: The locator describing the element to look below for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Below(locator As By) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Below*
+- uid: OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.IWebElement)
+  id: LeftOf(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: LeftOf(IWebElement)
+  nameWithType: RelativeBy.LeftOf(IWebElement)
+  fullName: OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LeftOf
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 178
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element to the left of the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy LeftOf(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to look to the left of for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function LeftOf(element As IWebElement) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.LeftOf*
+- uid: OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.By)
+  id: LeftOf(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: LeftOf(By)
+  nameWithType: RelativeBy.LeftOf(By)
+  fullName: OpenQA.Selenium.RelativeBy.LeftOf(OpenQA.Selenium.By)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: LeftOf
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 193
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element to the left of the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy LeftOf(By locator)
+    parameters:
+    - id: locator
+      type: OpenQA.Selenium.By
+      description: The locator describing the element to look to the left of for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function LeftOf(locator As By) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.LeftOf*
+- uid: OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.IWebElement)
+  id: RightOf(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: RightOf(IWebElement)
+  nameWithType: RelativeBy.RightOf(IWebElement)
+  fullName: OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RightOf
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 208
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element to the right of the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy RightOf(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to look to the right of for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function RightOf(element As IWebElement) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.RightOf*
+- uid: OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.By)
+  id: RightOf(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: RightOf(By)
+  nameWithType: RelativeBy.RightOf(By)
+  fullName: OpenQA.Selenium.RelativeBy.RightOf(OpenQA.Selenium.By)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: RightOf
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 223
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element to the right of the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy RightOf(By locator)
+    parameters:
+    - id: locator
+      type: OpenQA.Selenium.By
+      description: The locator describing the element to look to the right of for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function RightOf(locator As By) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.RightOf*
+- uid: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement)
+  commentId: M:OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement)
+  id: Near(OpenQA.Selenium.IWebElement)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Near(IWebElement)
+  nameWithType: RelativeBy.Near(IWebElement)
+  fullName: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Near
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 238
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element near the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Near(IWebElement element)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to look near for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Near(element As IWebElement) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Near*
+- uid: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement,System.Int32)
+  commentId: M:OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement,System.Int32)
+  id: Near(OpenQA.Selenium.IWebElement,System.Int32)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Near(IWebElement, int)
+  nameWithType: RelativeBy.Near(IWebElement, int)
+  fullName: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Near
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 249
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element near the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Near(IWebElement element, int atMostDistanceInPixels)
+    parameters:
+    - id: element
+      type: OpenQA.Selenium.IWebElement
+      description: The element to look near for elements.
+    - id: atMostDistanceInPixels
+      type: System.Int32
+      description: The maximum distance from the element to be considered "near."
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Near(element As IWebElement, atMostDistanceInPixels As Integer) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Near*
+  nameWithType.vb: RelativeBy.Near(IWebElement, Integer)
+  fullName.vb: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.IWebElement, Integer)
+  name.vb: Near(IWebElement, Integer)
+- uid: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By)
+  commentId: M:OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By)
+  id: Near(OpenQA.Selenium.By)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Near(By)
+  nameWithType: RelativeBy.Near(By)
+  fullName: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Near
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 259
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element near the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Near(By locator)
+    parameters:
+    - id: locator
+      type: OpenQA.Selenium.By
+      description: The locator describing the element to look near for elements.
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Near(locator As By) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Near*
+- uid: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By,System.Int32)
+  commentId: M:OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By,System.Int32)
+  id: Near(OpenQA.Selenium.By,System.Int32)
+  parent: OpenQA.Selenium.RelativeBy
+  langs:
+  - csharp
+  - vb
+  name: Near(By, int)
+  nameWithType: RelativeBy.Near(By, int)
+  fullName: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By, int)
+  type: Method
+  source:
+    remote:
+      path: dotnet/src/webdriver/RelativeBy.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Near
+    path: ../src/webdriver/RelativeBy.cs
+    startLine: 270
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium
+  summary: Locates an element near the specified element.
+  example: []
+  syntax:
+    content: public RelativeBy Near(By locator, int atMostDistanceInPixels)
+    parameters:
+    - id: locator
+      type: OpenQA.Selenium.By
+      description: The locator describing the element to look near for elements.
+    - id: atMostDistanceInPixels
+      type: System.Int32
+      description: The maximum distance from the element to be considered "near."
+    return:
+      type: OpenQA.Selenium.RelativeBy
+      description: A <xref href="OpenQA.Selenium.RelativeBy" data-throw-if-not-resolved="false"></xref> object for use in finding the elements.
+    content.vb: Public Function Near(locator As By, atMostDistanceInPixels As Integer) As RelativeBy
+  overload: OpenQA.Selenium.RelativeBy.Near*
+  nameWithType.vb: RelativeBy.Near(By, Integer)
+  fullName.vb: OpenQA.Selenium.RelativeBy.Near(OpenQA.Selenium.By, Integer)
+  name.vb: Near(By, Integer)
+references:
+- uid: OpenQA.Selenium
+  commentId: N:OpenQA.Selenium
+  href: OpenQA.html
+  name: OpenQA.Selenium
+  nameWithType: OpenQA.Selenium
+  fullName: OpenQA.Selenium
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.By
+  commentId: T:OpenQA.Selenium.By
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.By.html
+  name: By
+  nameWithType: By
+  fullName: OpenQA.Selenium.By
+- uid: OpenQA.Selenium.By.Mechanism
+  commentId: P:OpenQA.Selenium.By.Mechanism
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Mechanism
+  name: Mechanism
+  nameWithType: By.Mechanism
+  fullName: OpenQA.Selenium.By.Mechanism
+- uid: OpenQA.Selenium.By.Criteria
+  commentId: P:OpenQA.Selenium.By.Criteria
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Criteria
+  name: Criteria
+  nameWithType: By.Criteria
+  fullName: OpenQA.Selenium.By.Criteria
+- uid: OpenQA.Selenium.By.Description
+  commentId: P:OpenQA.Selenium.By.Description
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Description
+  name: Description
+  nameWithType: By.Description
+  fullName: OpenQA.Selenium.By.Description
+- uid: OpenQA.Selenium.By.FindElementMethod
+  commentId: P:OpenQA.Selenium.By.FindElementMethod
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElementMethod
+  name: FindElementMethod
+  nameWithType: By.FindElementMethod
+  fullName: OpenQA.Selenium.By.FindElementMethod
+- uid: OpenQA.Selenium.By.FindElementsMethod
+  commentId: P:OpenQA.Selenium.By.FindElementsMethod
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElementsMethod
+  name: FindElementsMethod
+  nameWithType: By.FindElementsMethod
+  fullName: OpenQA.Selenium.By.FindElementsMethod
+- uid: OpenQA.Selenium.By.Id(System.String)
+  commentId: M:OpenQA.Selenium.By.Id(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Id_System_String_
+  name: Id(string)
+  nameWithType: By.Id(string)
+  fullName: OpenQA.Selenium.By.Id(string)
+  nameWithType.vb: By.Id(String)
+  fullName.vb: OpenQA.Selenium.By.Id(String)
+  name.vb: Id(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.Id(System.String)
+    name: Id
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Id_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.Id(System.String)
+    name: Id
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Id_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.LinkText(System.String)
+  commentId: M:OpenQA.Selenium.By.LinkText(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_LinkText_System_String_
+  name: LinkText(string)
+  nameWithType: By.LinkText(string)
+  fullName: OpenQA.Selenium.By.LinkText(string)
+  nameWithType.vb: By.LinkText(String)
+  fullName.vb: OpenQA.Selenium.By.LinkText(String)
+  name.vb: LinkText(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.LinkText(System.String)
+    name: LinkText
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_LinkText_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.LinkText(System.String)
+    name: LinkText
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_LinkText_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.Name(System.String)
+  commentId: M:OpenQA.Selenium.By.Name(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Name_System_String_
+  name: Name(string)
+  nameWithType: By.Name(string)
+  fullName: OpenQA.Selenium.By.Name(string)
+  nameWithType.vb: By.Name(String)
+  fullName.vb: OpenQA.Selenium.By.Name(String)
+  name.vb: Name(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.Name(System.String)
+    name: Name
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Name_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.Name(System.String)
+    name: Name
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Name_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.XPath(System.String)
+  commentId: M:OpenQA.Selenium.By.XPath(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_XPath_System_String_
+  name: XPath(string)
+  nameWithType: By.XPath(string)
+  fullName: OpenQA.Selenium.By.XPath(string)
+  nameWithType.vb: By.XPath(String)
+  fullName.vb: OpenQA.Selenium.By.XPath(String)
+  name.vb: XPath(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.XPath(System.String)
+    name: XPath
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_XPath_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.XPath(System.String)
+    name: XPath
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_XPath_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.ClassName(System.String)
+  commentId: M:OpenQA.Selenium.By.ClassName(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_ClassName_System_String_
+  name: ClassName(string)
+  nameWithType: By.ClassName(string)
+  fullName: OpenQA.Selenium.By.ClassName(string)
+  nameWithType.vb: By.ClassName(String)
+  fullName.vb: OpenQA.Selenium.By.ClassName(String)
+  name.vb: ClassName(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.ClassName(System.String)
+    name: ClassName
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_ClassName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.ClassName(System.String)
+    name: ClassName
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_ClassName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.PartialLinkText(System.String)
+  commentId: M:OpenQA.Selenium.By.PartialLinkText(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_PartialLinkText_System_String_
+  name: PartialLinkText(string)
+  nameWithType: By.PartialLinkText(string)
+  fullName: OpenQA.Selenium.By.PartialLinkText(string)
+  nameWithType.vb: By.PartialLinkText(String)
+  fullName.vb: OpenQA.Selenium.By.PartialLinkText(String)
+  name.vb: PartialLinkText(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.PartialLinkText(System.String)
+    name: PartialLinkText
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_PartialLinkText_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.PartialLinkText(System.String)
+    name: PartialLinkText
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_PartialLinkText_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.TagName(System.String)
+  commentId: M:OpenQA.Selenium.By.TagName(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_TagName_System_String_
+  name: TagName(string)
+  nameWithType: By.TagName(string)
+  fullName: OpenQA.Selenium.By.TagName(string)
+  nameWithType.vb: By.TagName(String)
+  fullName.vb: OpenQA.Selenium.By.TagName(String)
+  name.vb: TagName(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.TagName(System.String)
+    name: TagName
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_TagName_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.TagName(System.String)
+    name: TagName
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_TagName_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.CssSelector(System.String)
+  commentId: M:OpenQA.Selenium.By.CssSelector(System.String)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_CssSelector_System_String_
+  name: CssSelector(string)
+  nameWithType: By.CssSelector(string)
+  fullName: OpenQA.Selenium.By.CssSelector(string)
+  nameWithType.vb: By.CssSelector(String)
+  fullName.vb: OpenQA.Selenium.By.CssSelector(String)
+  name.vb: CssSelector(String)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.CssSelector(System.String)
+    name: CssSelector
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_CssSelector_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.CssSelector(System.String)
+    name: CssSelector
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_CssSelector_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: OpenQA.Selenium.By.ToString
+  commentId: M:OpenQA.Selenium.By.ToString
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_ToString
+  name: ToString()
+  nameWithType: By.ToString()
+  fullName: OpenQA.Selenium.By.ToString()
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.ToString
+    name: ToString
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_ToString
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.ToString
+    name: ToString
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_ToString
+  - name: (
+  - name: )
+- uid: OpenQA.Selenium.By.Equals(System.Object)
+  commentId: M:OpenQA.Selenium.By.Equals(System.Object)
+  parent: OpenQA.Selenium.By
+  isExternal: true
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Equals_System_Object_
+  name: Equals(object)
+  nameWithType: By.Equals(object)
+  fullName: OpenQA.Selenium.By.Equals(object)
+  nameWithType.vb: By.Equals(Object)
+  fullName.vb: OpenQA.Selenium.By.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.Equals(System.Object)
+    name: Equals
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.Equals(System.Object)
+    name: Equals
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_Equals_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: OpenQA.Selenium.By.GetHashCode
+  commentId: M:OpenQA.Selenium.By.GetHashCode
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_GetHashCode
+  name: GetHashCode()
+  nameWithType: By.GetHashCode()
+  fullName: OpenQA.Selenium.By.GetHashCode()
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_GetHashCode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.GetHashCode
+    name: GetHashCode
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_GetHashCode
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.RelativeBy
+  commentId: T:OpenQA.Selenium.RelativeBy
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.RelativeBy.html
+  name: RelativeBy
+  nameWithType: RelativeBy
+  fullName: OpenQA.Selenium.RelativeBy
+- uid: OpenQA.Selenium.RelativeBy.#ctor*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.#ctor
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy__ctor
+  name: RelativeBy
+  nameWithType: RelativeBy.RelativeBy
+  fullName: OpenQA.Selenium.RelativeBy.RelativeBy
+  nameWithType.vb: RelativeBy.New
+  fullName.vb: OpenQA.Selenium.RelativeBy.New
+  name.vb: New
+- uid: OpenQA.Selenium.RelativeBy.WithLocator*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.WithLocator
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_WithLocator_OpenQA_Selenium_By_
+  name: WithLocator
+  nameWithType: RelativeBy.WithLocator
+  fullName: OpenQA.Selenium.RelativeBy.WithLocator
+- uid: OpenQA.Selenium.ISearchContext
+  commentId: T:OpenQA.Selenium.ISearchContext
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.ISearchContext.html
+  name: ISearchContext
+  nameWithType: ISearchContext
+  fullName: OpenQA.Selenium.ISearchContext
+- uid: OpenQA.Selenium.IWebElement
+  commentId: T:OpenQA.Selenium.IWebElement
+  parent: OpenQA.Selenium
+  href: OpenQA.Selenium.IWebElement.html
+  name: IWebElement
+  nameWithType: IWebElement
+  fullName: OpenQA.Selenium.IWebElement
+- uid: OpenQA.Selenium.By.FindElement(OpenQA.Selenium.ISearchContext)
+  commentId: M:OpenQA.Selenium.By.FindElement(OpenQA.Selenium.ISearchContext)
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElement_OpenQA_Selenium_ISearchContext_
+  name: FindElement(ISearchContext)
+  nameWithType: By.FindElement(ISearchContext)
+  fullName: OpenQA.Selenium.By.FindElement(OpenQA.Selenium.ISearchContext)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.FindElement(OpenQA.Selenium.ISearchContext)
+    name: FindElement
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElement_OpenQA_Selenium_ISearchContext_
+  - name: (
+  - uid: OpenQA.Selenium.ISearchContext
+    name: ISearchContext
+    href: OpenQA.Selenium.ISearchContext.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.FindElement(OpenQA.Selenium.ISearchContext)
+    name: FindElement
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElement_OpenQA_Selenium_ISearchContext_
+  - name: (
+  - uid: OpenQA.Selenium.ISearchContext
+    name: ISearchContext
+    href: OpenQA.Selenium.ISearchContext.html
+  - name: )
+- uid: OpenQA.Selenium.RelativeBy.FindElement*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.FindElement
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_FindElement_OpenQA_Selenium_ISearchContext_
+  name: FindElement
+  nameWithType: RelativeBy.FindElement
+  fullName: OpenQA.Selenium.RelativeBy.FindElement
+- uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<T>
+  nameWithType: ReadOnlyCollection<T>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<T>
+  nameWithType.vb: ReadOnlyCollection(Of T)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of T)
+  name.vb: ReadOnlyCollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.By.FindElements(OpenQA.Selenium.ISearchContext)
+  commentId: M:OpenQA.Selenium.By.FindElements(OpenQA.Selenium.ISearchContext)
+  parent: OpenQA.Selenium.By
+  href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElements_OpenQA_Selenium_ISearchContext_
+  name: FindElements(ISearchContext)
+  nameWithType: By.FindElements(ISearchContext)
+  fullName: OpenQA.Selenium.By.FindElements(OpenQA.Selenium.ISearchContext)
+  spec.csharp:
+  - uid: OpenQA.Selenium.By.FindElements(OpenQA.Selenium.ISearchContext)
+    name: FindElements
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElements_OpenQA_Selenium_ISearchContext_
+  - name: (
+  - uid: OpenQA.Selenium.ISearchContext
+    name: ISearchContext
+    href: OpenQA.Selenium.ISearchContext.html
+  - name: )
+  spec.vb:
+  - uid: OpenQA.Selenium.By.FindElements(OpenQA.Selenium.ISearchContext)
+    name: FindElements
+    href: OpenQA.Selenium.By.html#OpenQA_Selenium_By_FindElements_OpenQA_Selenium_ISearchContext_
+  - name: (
+  - uid: OpenQA.Selenium.ISearchContext
+    name: ISearchContext
+    href: OpenQA.Selenium.ISearchContext.html
+  - name: )
+- uid: OpenQA.Selenium.RelativeBy.FindElements*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.FindElements
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_FindElements_OpenQA_Selenium_ISearchContext_
+  name: FindElements
+  nameWithType: RelativeBy.FindElements
+  fullName: OpenQA.Selenium.RelativeBy.FindElements
+- uid: System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.IWebElement}
+  commentId: T:System.Collections.ObjectModel.ReadOnlyCollection{OpenQA.Selenium.IWebElement}
+  parent: System.Collections.ObjectModel
+  definition: System.Collections.ObjectModel.ReadOnlyCollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  name: ReadOnlyCollection<IWebElement>
+  nameWithType: ReadOnlyCollection<IWebElement>
+  fullName: System.Collections.ObjectModel.ReadOnlyCollection<OpenQA.Selenium.IWebElement>
+  nameWithType.vb: ReadOnlyCollection(Of IWebElement)
+  fullName.vb: System.Collections.ObjectModel.ReadOnlyCollection(Of OpenQA.Selenium.IWebElement)
+  name.vb: ReadOnlyCollection(Of IWebElement)
+  spec.csharp:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: <
+  - uid: OpenQA.Selenium.IWebElement
+    name: IWebElement
+    href: OpenQA.Selenium.IWebElement.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.ObjectModel.ReadOnlyCollection`1
+    name: ReadOnlyCollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel.readonlycollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: OpenQA.Selenium.IWebElement
+    name: IWebElement
+    href: OpenQA.Selenium.IWebElement.html
+  - name: )
+- uid: System.Collections.ObjectModel
+  commentId: N:System.Collections.ObjectModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.ObjectModel
+  nameWithType: System.Collections.ObjectModel
+  fullName: System.Collections.ObjectModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.ObjectModel
+    name: ObjectModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.objectmodel
+- uid: OpenQA.Selenium.RelativeBy.Above*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.Above
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_Above_OpenQA_Selenium_IWebElement_
+  name: Above
+  nameWithType: RelativeBy.Above
+  fullName: OpenQA.Selenium.RelativeBy.Above
+- uid: OpenQA.Selenium.RelativeBy.Below*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.Below
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_Below_OpenQA_Selenium_IWebElement_
+  name: Below
+  nameWithType: RelativeBy.Below
+  fullName: OpenQA.Selenium.RelativeBy.Below
+- uid: OpenQA.Selenium.RelativeBy.LeftOf*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.LeftOf
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_LeftOf_OpenQA_Selenium_IWebElement_
+  name: LeftOf
+  nameWithType: RelativeBy.LeftOf
+  fullName: OpenQA.Selenium.RelativeBy.LeftOf
+- uid: OpenQA.Selenium.RelativeBy.RightOf*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.RightOf
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_RightOf_OpenQA_Selenium_IWebElement_
+  name: RightOf
+  nameWithType: RelativeBy.RightOf
+  fullName: OpenQA.Selenium.RelativeBy.RightOf
+- uid: OpenQA.Selenium.RelativeBy.Near*
+  commentId: Overload:OpenQA.Selenium.RelativeBy.Near
+  href: OpenQA.Selenium.RelativeBy.html#OpenQA_Selenium_RelativeBy_Near_OpenQA_Selenium_IWebElement_
+  name: Near
+  nameWithType: RelativeBy.Near
+  fullName: OpenQA.Selenium.RelativeBy.Near
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer

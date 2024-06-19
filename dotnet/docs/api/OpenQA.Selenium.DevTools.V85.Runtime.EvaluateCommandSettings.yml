@@ -1,0 +1,1279 @@
+### YamlMime:ManagedReference
+items:
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  commentId: T:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  id: EvaluateCommandSettings
+  parent: OpenQA.Selenium.DevTools.V85.Runtime
+  children:
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout
+  - OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture
+  langs:
+  - csharp
+  - vb
+  name: EvaluateCommandSettings
+  nameWithType: EvaluateCommandSettings
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  type: Class
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: EvaluateCommandSettings
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 8
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Evaluates expression on global object.
+  example: []
+  syntax:
+    content: 'public sealed class EvaluateCommandSettings : ICommand'
+    content.vb: Public NotInheritable Class EvaluateCommandSettings Implements ICommand
+  inheritance:
+  - System.Object
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName
+  id: CommandName
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: CommandName
+  nameWithType: EvaluateCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: CommandName
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 15
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Gets the name of the command.
+  example: []
+  syntax:
+    content: >-
+      [JsonIgnore]
+
+      public string CommandName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonIgnore>
+
+      Public ReadOnly Property CommandName As String
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName*
+  implements:
+  - OpenQA.Selenium.DevTools.ICommand.CommandName
+  attributes:
+  - type: Newtonsoft.Json.JsonIgnoreAttribute
+    ctor: Newtonsoft.Json.JsonIgnoreAttribute.#ctor
+    arguments: []
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression
+  id: Expression
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Expression
+  nameWithType: EvaluateCommandSettings.Expression
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Expression
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 24
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Expression to evaluate.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("expression")]
+
+      public string Expression { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("expression")>
+
+      Public Property Expression As String
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: expression
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup
+  id: ObjectGroup
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ObjectGroup
+  nameWithType: EvaluateCommandSettings.ObjectGroup
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ObjectGroup
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 33
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Symbolic group name that can be used to release multiple objects.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("objectGroup", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public string ObjectGroup { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: >-
+      <JsonProperty("objectGroup", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ObjectGroup As String
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: objectGroup
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI
+  id: IncludeCommandLineAPI
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: IncludeCommandLineAPI
+  nameWithType: EvaluateCommandSettings.IncludeCommandLineAPI
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: IncludeCommandLineAPI
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 42
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Determines whether Command Line API should be available during the evaluation.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("includeCommandLineAPI", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? IncludeCommandLineAPI { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("includeCommandLineAPI", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property IncludeCommandLineAPI As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: includeCommandLineAPI
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent
+  id: Silent
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Silent
+  nameWithType: EvaluateCommandSettings.Silent
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Silent
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 52
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    In silent mode exceptions thrown during evaluation are not reported and do not pause
+
+    execution. Overrides `setPauseOnException` state.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("silent", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? Silent { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("silent", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Silent As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: silent
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId
+  id: ContextId
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ContextId
+  nameWithType: EvaluateCommandSettings.ContextId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ContextId
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 62
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    Specifies in which execution context to perform evaluation. If the parameter is omitted the
+
+    evaluation will be performed in the context of the inspected page.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("contextId", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public long? ContextId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: >-
+      <JsonProperty("contextId", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ContextId As Long?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: contextId
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue
+  id: ReturnByValue
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ReturnByValue
+  nameWithType: EvaluateCommandSettings.ReturnByValue
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReturnByValue
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 71
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Whether the result is expected to be a JSON object that should be sent by value.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("returnByValue", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ReturnByValue { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("returnByValue", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ReturnByValue As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: returnByValue
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview
+  id: GeneratePreview
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: GeneratePreview
+  nameWithType: EvaluateCommandSettings.GeneratePreview
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: GeneratePreview
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 80
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Whether preview should be generated for the result.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("generatePreview", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? GeneratePreview { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("generatePreview", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property GeneratePreview As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: generatePreview
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture
+  id: UserGesture
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: UserGesture
+  nameWithType: EvaluateCommandSettings.UserGesture
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: UserGesture
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 89
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Whether execution should be treated as initiated by user in the UI.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("userGesture", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? UserGesture { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("userGesture", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property UserGesture As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: userGesture
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise
+  id: AwaitPromise
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: AwaitPromise
+  nameWithType: EvaluateCommandSettings.AwaitPromise
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AwaitPromise
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 99
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    Whether execution should `await` for resulting value and return once awaited promise is
+
+    resolved.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("awaitPromise", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? AwaitPromise { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("awaitPromise", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AwaitPromise As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: awaitPromise
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect
+  id: ThrowOnSideEffect
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ThrowOnSideEffect
+  nameWithType: EvaluateCommandSettings.ThrowOnSideEffect
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ThrowOnSideEffect
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 109
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    Whether to throw an exception if side effect cannot be ruled out during evaluation.
+
+    This implies `disableBreaks` below.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("throwOnSideEffect", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ThrowOnSideEffect { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("throwOnSideEffect", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ThrowOnSideEffect As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: throwOnSideEffect
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout
+  id: Timeout
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: Timeout
+  nameWithType: EvaluateCommandSettings.Timeout
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: Timeout
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 118
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Terminate execution after timing out (number of milliseconds).
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("timeout", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public double? Timeout { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: >-
+      <JsonProperty("timeout", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property Timeout As Double?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: timeout
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks
+  id: DisableBreaks
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: DisableBreaks
+  nameWithType: EvaluateCommandSettings.DisableBreaks
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: DisableBreaks
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 127
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: Disable breakpoints during execution.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("disableBreaks", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? DisableBreaks { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("disableBreaks", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property DisableBreaks As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: disableBreaks
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode
+  id: ReplMode
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: ReplMode
+  nameWithType: EvaluateCommandSettings.ReplMode
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: ReplMode
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 138
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    Setting this flag to true enables `let` re-declaration and top-level `await`.
+
+    Note that `let` variables can only be re-declared if they originate from
+
+    `replMode` themselves.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("replMode", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? ReplMode { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("replMode", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property ReplMode As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: replMode
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  commentId: P:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  id: AllowUnsafeEvalBlockedByCSP
+  parent: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings
+  langs:
+  - csharp
+  - vb
+  name: AllowUnsafeEvalBlockedByCSP
+  nameWithType: EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  type: Property
+  source:
+    remote:
+      path: bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+      branch: temp_trunk
+      repo: https://github.com/titusfortner/selenium
+    id: AllowUnsafeEvalBlockedByCSP
+    path: ../../bazel-bin/dotnet/src/webdriver/cdp/v85/Runtime/EvaluateCommand.cs
+    startLine: 150
+  assemblies:
+  - WebDriver
+  namespace: OpenQA.Selenium.DevTools.V85.Runtime
+  summary: >-
+    The Content Security Policy (CSP) for the target might block 'unsafe-eval'
+
+    which includes eval(), Function(), setTimeout() and setInterval()
+
+    when called with non-callable arguments. This flag bypasses CSP for this
+
+    evaluation and allows unsafe-eval. Defaults to true.
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("allowUnsafeEvalBlockedByCSP", DefaultValueHandling = DefaultValueHandling.Ignore)]
+
+      public bool? AllowUnsafeEvalBlockedByCSP { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: >-
+      <JsonProperty("allowUnsafeEvalBlockedByCSP", DefaultValueHandling:=DefaultValueHandling.Ignore)>
+
+      Public Property AllowUnsafeEvalBlockedByCSP As Boolean?
+  overload: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: allowUnsafeEvalBlockedByCSP
+    namedArguments:
+    - name: DefaultValueHandling
+      type: Newtonsoft.Json.DefaultValueHandling
+      value: 1
+references:
+- uid: OpenQA.Selenium.DevTools.V85.Runtime
+  commentId: N:OpenQA.Selenium.DevTools.V85.Runtime
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools.V85.Runtime
+  nameWithType: OpenQA.Selenium.DevTools.V85.Runtime
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V85.Runtime.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85
+    name: V85
+    href: OpenQA.Selenium.DevTools.V85.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools.V85.Runtime
+    name: Runtime
+    href: OpenQA.Selenium.DevTools.V85.Runtime.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: OpenQA.Selenium.DevTools.ICommand
+  commentId: T:OpenQA.Selenium.DevTools.ICommand
+  parent: OpenQA.Selenium.DevTools
+  href: OpenQA.Selenium.DevTools.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: OpenQA.Selenium.DevTools.ICommand
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: OpenQA.Selenium.DevTools
+  commentId: N:OpenQA.Selenium.DevTools
+  href: OpenQA.html
+  name: OpenQA.Selenium.DevTools
+  nameWithType: OpenQA.Selenium.DevTools
+  fullName: OpenQA.Selenium.DevTools
+  spec.csharp:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+  spec.vb:
+  - uid: OpenQA
+    name: OpenQA
+    href: OpenQA.html
+  - name: .
+  - uid: OpenQA.Selenium
+    name: Selenium
+    href: OpenQA.Selenium.html
+  - name: .
+  - uid: OpenQA.Selenium.DevTools
+    name: DevTools
+    href: OpenQA.Selenium.DevTools.html
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_CommandName
+  name: CommandName
+  nameWithType: EvaluateCommandSettings.CommandName
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.CommandName
+- uid: OpenQA.Selenium.DevTools.ICommand.CommandName
+  commentId: P:OpenQA.Selenium.DevTools.ICommand.CommandName
+  parent: OpenQA.Selenium.DevTools.ICommand
+  href: OpenQA.Selenium.DevTools.ICommand.html#OpenQA_Selenium_DevTools_ICommand_CommandName
+  name: CommandName
+  nameWithType: ICommand.CommandName
+  fullName: OpenQA.Selenium.DevTools.ICommand.CommandName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_Expression
+  name: Expression
+  nameWithType: EvaluateCommandSettings.Expression
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Expression
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_ObjectGroup
+  name: ObjectGroup
+  nameWithType: EvaluateCommandSettings.ObjectGroup
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ObjectGroup
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_IncludeCommandLineAPI
+  name: IncludeCommandLineAPI
+  nameWithType: EvaluateCommandSettings.IncludeCommandLineAPI
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.IncludeCommandLineAPI
+- uid: System.Nullable{System.Boolean}
+  commentId: T:System.Nullable{System.Boolean}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool?
+  nameWithType: bool?
+  fullName: bool?
+  nameWithType.vb: Boolean?
+  fullName.vb: Boolean?
+  name.vb: Boolean?
+  spec.csharp:
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+  spec.vb:
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_Silent
+  name: Silent
+  nameWithType: EvaluateCommandSettings.Silent
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Silent
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_ContextId
+  name: ContextId
+  nameWithType: EvaluateCommandSettings.ContextId
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ContextId
+- uid: System.Nullable{System.Int64}
+  commentId: T:System.Nullable{System.Int64}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int64
+  name: long?
+  nameWithType: long?
+  fullName: long?
+  nameWithType.vb: Long?
+  fullName.vb: Long?
+  name.vb: Long?
+  spec.csharp:
+  - uid: System.Int64
+    name: long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+  spec.vb:
+  - uid: System.Int64
+    name: Long
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int64
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_ReturnByValue
+  name: ReturnByValue
+  nameWithType: EvaluateCommandSettings.ReturnByValue
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReturnByValue
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_GeneratePreview
+  name: GeneratePreview
+  nameWithType: EvaluateCommandSettings.GeneratePreview
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.GeneratePreview
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_UserGesture
+  name: UserGesture
+  nameWithType: EvaluateCommandSettings.UserGesture
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.UserGesture
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_AwaitPromise
+  name: AwaitPromise
+  nameWithType: EvaluateCommandSettings.AwaitPromise
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AwaitPromise
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_ThrowOnSideEffect
+  name: ThrowOnSideEffect
+  nameWithType: EvaluateCommandSettings.ThrowOnSideEffect
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ThrowOnSideEffect
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_Timeout
+  name: Timeout
+  nameWithType: EvaluateCommandSettings.Timeout
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.Timeout
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double?
+  nameWithType: double?
+  fullName: double?
+  nameWithType.vb: Double?
+  fullName.vb: Double?
+  name.vb: Double?
+  spec.csharp:
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '?'
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_DisableBreaks
+  name: DisableBreaks
+  nameWithType: EvaluateCommandSettings.DisableBreaks
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.DisableBreaks
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_ReplMode
+  name: ReplMode
+  nameWithType: EvaluateCommandSettings.ReplMode
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.ReplMode
+- uid: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP*
+  commentId: Overload:OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  href: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.html#OpenQA_Selenium_DevTools_V85_Runtime_EvaluateCommandSettings_AllowUnsafeEvalBlockedByCSP
+  name: AllowUnsafeEvalBlockedByCSP
+  nameWithType: EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
+  fullName: OpenQA.Selenium.DevTools.V85.Runtime.EvaluateCommandSettings.AllowUnsafeEvalBlockedByCSP
