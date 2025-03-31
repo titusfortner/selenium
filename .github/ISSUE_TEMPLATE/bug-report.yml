@@ -29,12 +29,17 @@ body:
     validations:
       required: true
   - type: markdown
-    id: logs
+    id: log-link
     attributes:
       value: |
-        ## Turn on logging so we can see exactly what is happening
-
         Set log level to debug following the instructions in our [logging documentation](https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/).
+  - type: textarea
+    id: logs
+    attributes:
+      label: Debug logs
+      placeholder: |
+        * Note: this is for debugging logs, the stack trace should be copied above
+      render: logs
   - type: markdown
     id: start
     attributes:
