@@ -14,6 +14,7 @@ body:
       label: Explain what happened and what you expected to happen
       placeholder: |
         Please add as many details as possible:
+
         * How do you trigger this bug? (step by step)
         * What error message do you get?
         * What is the stacktrace?
@@ -28,10 +29,7 @@ body:
 
         Issues without a reproduction script are more likely to be closed.
         If more than one file is needed, create a new GitHub repository and link it here.
-        Reproduction should be [SSCCE](http://sscce.org/)
-        * Short
-        * Self Contained
-        * Correct (compilable)
+        Reproduction should be SSCCE: Short, Self Contained, Correct (Compilable), Example.
       render: shell
     validations:
       required: true
@@ -46,7 +44,8 @@ body:
     id: start
     attributes:
       value: |
-        ## Important: Help us Understand Your Issue
+        ---
+        ### Important: Help us Understand Your Issue
   - type: dropdown
     id: issue-history
     attributes:
