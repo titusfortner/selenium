@@ -47,7 +47,7 @@ body:
   - type: checkboxes
     id: prerequisites
     attributes:
-      label: First, please verify the following
+      label: The following statements are true
       options:
         - label: This applies to the most recent version of Selenium (we can't fix old versions)
           required: true
@@ -76,6 +76,7 @@ body:
     attributes:
       label: Operating System
       options:
+        - "--"
         - Windows
         - macOS
         - Linux (please specify in the description)
@@ -86,6 +87,7 @@ body:
     attributes:
       label: Selenium Language Binding
       options:
+        - "--"
         - Java
         - Python
         - JavaScript/Node.js
@@ -104,8 +106,6 @@ body:
         - Edge
         - Safari
         - N/A
-    validations:
-      required: true
   - type: dropdown
     id: using-grid
     attributes:
@@ -113,6 +113,3 @@ body:
       options:
         - "No"
         - "Yes"
-    validations:
-      required: true
-
