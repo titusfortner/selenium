@@ -7,18 +7,16 @@ body:
     id: start
     attributes:
       value: |
-        *Thanks for taking the time to fill out this bug report!*
         ## Categorize the issue
+        *Thanks for taking the time to fill out this bug report!*
         Help us understand what kind of issue this is by providing the following information:
   - type: dropdown
     id: issue-history
     attributes:
-      label: Issue History
-      description: Was this working for you in a previous version?
+      label: Did this work for you before?
       options:
-        - This is a regression (used to work in a previous version)
-        - This is my first time trying this functionality
-        - Not sure
+        - Yes, this is a regression
+        - Not sure, this is my first time trying it
     validations:
       required: true
   - type: checkboxes
