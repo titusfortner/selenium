@@ -27,9 +27,9 @@ body:
       placeholder: |
         (This section renders as code, no need for backticks)
 
-        Issues without a reproduction script are more likely to be closed.
-        If more than one file is needed, create a new GitHub repository and link it here.
-        Reproduction should be SSCCE: Short, Self Contained, Correct (Compilable), Example.
+        * Issues without a reproduction script are more likely to be closed.
+        * If more than one file is needed, create a new GitHub repository and link it here.
+        * Reproduction should be SSCCE: Short, Self Contained, Correct (Compilable), Example.
       render: shell
     validations:
       required: true
@@ -44,8 +44,9 @@ body:
     id: start
     attributes:
       value: |
+
         ---
-        ### Important: Help us Understand Your Issue
+        ## Important: Help us Understand Your Issue
   - type: dropdown
     id: issue-history
     attributes:
@@ -58,21 +59,16 @@ body:
   - type: checkboxes
     id: prerequisites
     attributes:
-      label: Prerequisites
-      description: Please confirm you've completed the following steps before submitting your bug report.
+      label: Please verify the following-
       options:
-        - label: I confirm this issue applies to the most recent version of Selenium
-        - label: I have checked that this issue hasn't already been reported in the existing issues
+        - label: This applies to the most recent version of Selenium (we can't fix old versions)
           required: true
-        - label: I have verified this is a Selenium issue and not a browser driver-specific issue
-          required: true
-        - label: I have included a minimal reproducible example in my report
+        - label: This hasn't already been reported
           required: true
   - type: dropdown
     id: operating-system
     attributes:
       label: Operating System
-      description: What host operating system are you using to run Selenium?
       options:
         - Windows
         - macOS
@@ -83,7 +79,6 @@ body:
     id: language
     attributes:
       label: Selenium Language Binding
-      description: Which Selenium language binding are you using?
       options:
         - Java
         - Python
@@ -102,7 +97,7 @@ body:
         - Firefox
         - Edge
         - Safari
-        - Other (please specify in the description)
+        - N/A
     validations:
       required: true
   - type: dropdown
