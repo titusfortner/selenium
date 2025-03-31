@@ -14,7 +14,8 @@ body:
       label: Explain what happened and what you expected to happen
       placeholder: |
         Please add as many details as possible to avoid assumptions from our side. How do you
-        trigger this bug? Please walk us through it step by step.
+        trigger this bug? Please walk us through it step by step. Include error messages and
+        stacktrace information if applicable.
     validations:
       required: true
   - type: textarea
@@ -22,6 +23,8 @@ body:
     attributes:
       label: How can we reproduce the issue?
       placeholder: |
+        (This section renders as code, no need for backticks)
+
         Please share the code to reproduce the issue. If more than one file is needed,
         create a GitHub repository and share the link.
         Be sure to include an SSCCE (Short, Self Contained, Correct
@@ -34,16 +37,14 @@ body:
     id: logs
     attributes:
       label: Turn on logging to help us debug the problem
-      description: |
+      placeholder: |
         Set log level to debug: https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/
-      render: shell
-
+      render: logs
   - type: markdown
     id: start
     attributes:
       value: |
         ## Important: Help us Understand Your Issue
-        *Thanks for taking the time to fill out this bug report!*
   - type: dropdown
     id: issue-history
     attributes:
