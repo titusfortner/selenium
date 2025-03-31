@@ -1,0 +1,36 @@
+name: Issue Form Labeler
+on:
+  issues:
+    types: [ opened ]
+
+jobs:
+  label-issues:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: dessant/label-actions@v3
+        with:
+          config-path: '.github/issue-labeler-config.yml'
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions-cool/issues-helper@v3
+        with:
+          actions: 'add-labels, update-issue'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            ${{
+              github.event.issue.body
+                .replace(/### The following statements are true[\s\S]*?(?=###|$)/, '')
+                .replace(/### Did this work for you before\?\n\n\n\nYes, this is a regression\n\n\n\n### If yes, what version of Selenium did it work with\?\n\n\n\n([^#\n]+)/, '\n\n---\n**Regression from version:** $1')
+                .replace(/### Did this work for you before\?[\s\S]*?(?=###|$)/, '')
+                .replace(/### If yes, what version of Selenium did it work with\?[\s\S]*?(?=###|$)/, '')
+                .replace(/### Operating System[\s\S]*?(?=###|$)/, '')
+                .replace(/### Selenium Language Binding[\s\S]*?(?=###|$)/, '')
+                .replace(/### Which browsers are you experiencing the issue with\?[\s\S]*?(?=###|$)/, '')
+                .replace(/### Are you using Selenium Grid\?[\s\S]*?(?=###|$)/, '')
+                .replace(/### Does this apply to specific language bindings\?[\s\S]*?(?=###|$)/, '')
+                .replace(/### What part\(s\) of Selenium does this relate to\?[\s\S]*?(?=###|$)/, '')
+                .replace(/\n{3,}/g, '\n\n')
+            }}
