@@ -28,14 +28,13 @@ body:
       render: shell
     validations:
       required: true
-  - type: textarea
+  - type: markdown
     id: logs
     attributes:
-      label: Logged output - https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/
-      placeholder: |
-        * This is for console logs, the stack trace should be copied above
-        * Make sure the level is set to debug
-      render: logs
+    value: |
+      ## Turn on logging so we can see exactly what is happening
+
+      Set log level to debug following the instructions in our [logging documentation](https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/).
   - type: markdown
     id: start
     attributes:
