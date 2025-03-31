@@ -13,9 +13,10 @@ body:
     attributes:
       label: Explain what happened and what you expected to happen
       placeholder: |
-        Please add as many details as possible to avoid assumptions from our side. How do you
-        trigger this bug? Please walk us through it step by step. Include error messages and
-        stacktrace information if applicable.
+        Please add as many details as possible:
+        * How do you trigger this bug? (step by step)
+        * What error message do you get?
+        * What is the stacktrace?
     validations:
       required: true
   - type: textarea
@@ -25,11 +26,12 @@ body:
       placeholder: |
         (This section renders as code, no need for backticks)
 
-        Please share the code to reproduce the issue. If more than one file is needed,
-        create a GitHub repository and share the link.
-        Be sure to include an SSCCE (Short, Self Contained, Correct
-        [compilable] example) http://sscce.org/
-        Issues without a reproduction script are likely to stall and eventually be closed.
+        Issues without a reproduction script are more likely to be closed.
+        If more than one file is needed, create a new GitHub repository and link it here.
+        Reproduction should be [SSCCE](http://sscce.org/)
+        * Short
+        * Self Contained
+        * Correct (compilable)
       render: shell
     validations:
       required: true
