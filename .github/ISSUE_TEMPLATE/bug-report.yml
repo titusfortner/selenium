@@ -71,12 +71,10 @@ body:
   - type: input
     id: last-working-version
     attributes:
-      label: Last working version
-      description: What was the last version where this feature worked correctly?
+      label: If yes, what version of Selenium did it work with?
       placeholder: "e.g., 4.8.0"
     validations:
       required: false
-    if: ${{ contains(body.issue-history, 'Yes, this is a regression') }}
   - type: dropdown
     id: operating-system
     attributes:
