@@ -27,7 +27,7 @@ body:
       placeholder: |
         (This section renders as code, no need for backticks)
 
-        * Issues without a reproduction script are more likely to be closed.
+        * We can't fix an issue we can't reproduce.
         * If more than one file is needed, create a new GitHub repository and link it here.
         * Reproduction should be SSCCE: Short, Self Contained, Correct (Compilable), Example.
       render: shell
@@ -36,17 +36,17 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Turn on logging to help us debug the problem
+      label: Logged output - https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/
       placeholder: |
-        Set log level to debug: https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/
+        * This is for console logs, the stack trace should be copied above
+        * Make sure the level is set to debug
       render: logs
   - type: markdown
     id: start
     attributes:
       value: |
 
-        ---
-        ## Important: Help us Understand Your Issue
+        ## Help us Understand Your Issue
   - type: dropdown
     id: issue-history
     attributes:
@@ -59,11 +59,13 @@ body:
   - type: checkboxes
     id: prerequisites
     attributes:
-      label: Please verify the following-
+      label: Please verify the following
       options:
         - label: This applies to the most recent version of Selenium (we can't fix old versions)
           required: true
         - label: This hasn't already been reported
+          required: true
+        - label: All information necessary to reproduce the issue has been provided above
           required: true
   - type: dropdown
     id: operating-system
