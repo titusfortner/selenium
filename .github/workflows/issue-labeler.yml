@@ -99,5 +99,5 @@ jobs:
               issue_number: issueNumber,
               body: finalBody
             });
-          env:
-            FORM_JSON: ${{ steps.bug-parser.outputs.jsonString }}
+        env:
+          FORM_JSON: ${{ steps.bug-parser.outputs.jsonString }}
