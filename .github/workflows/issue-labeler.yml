@@ -67,37 +67,44 @@ jobs:
             const cleanedLines = [];
 
             let skip = false;
-            for (let line of lines) {
-              if (headingsToRemove.includes(line.trim())) {
+            for (let i = 0; i < lines.length; i++) {
+              const line = lines[i];
+              const trimmed = line.trim();
+
+              // Start skipping at a matching heading
+              if (headingsToRemove.includes(trimmed)) {
                 skip = true;
                 continue;
               }
 
-              if (skip) {
-                if (line.trim().startsWith('###') || line.trim() === '') {
-                  skip = false;
-                } else {
-                  continue;
-                }
+            // Stop skipping at next heading (or keep skipping)
+            if (skip) {
+              if (trimmed.startsWith('###')) {
+                skip = false;
+                // Process the new heading in next iteration
+                i--; // go back one line to reprocess this heading
               }
-
-              if (!skip) cleanedLines.push(line);
+              continue;
             }
 
-            let finalBody = cleanedLines.join('\n').trim();
+            // Keep lines that aren't in skipped blocks
+            cleanedLines.push(line);
+        }
 
-            const form = JSON.parse(process.env.FORM_JSON || '{}');
-            const lastGood = form?.["last-good"]?.trim();
+          let finalBody = cleanedLines.join('\n').trim();
 
-            if (lastGood) {
-              finalBody += `\n\n---\nℹ️ **Last known working version:** \`${lastGood}\``;
-            }
+          const form = JSON.parse(process.env.FORM_JSON || '{}');
+          const lastGood = form?.["last-good"]?.trim();
 
-            await github.rest.issues.update({
-              owner,
-              repo,
-              issue_number: issueNumber,
-              body: finalBody
-            });
+          if (lastGood) {
+          finalBody += `\n\n---\nℹ️ **Last known working version:** \`${lastGood}\``;
+          }
+
+          await github.rest.issues.update({
+            owner,
+            repo,
+            issue_number: issueNumber,
+            body: finalBody
+          });
         env:
           FORM_JSON: ${{ steps.bug-parser.outputs.jsonString }}
