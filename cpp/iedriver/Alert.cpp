@@ -26,6 +26,7 @@
 
 #define INVALID_CONTROL_ID -1
 
+// Changing this one for sure
 namespace webdriver {
 
 Alert::Alert(std::shared_ptr<DocumentHost> browser, HWND handle) {
@@ -81,7 +82,7 @@ int Alert::Accept() {
     LOG(INFO) << "OK button does not exist on dialog; looking for Cancel button";
     button_info = this->GetDialogButton(CANCEL);
   }
-    
+
   if (!button_info.button_exists) {
     LOG(WARN) << "OK and Cancel button do not exist on alert";
     return EUNHANDLEDERROR;
@@ -239,7 +240,7 @@ std::string Alert::GetStandardDialogText() {
                        &Alert::FindTextLabel,
                        reinterpret_cast<LPARAM>(&info));
   }
-  
+
   std::string alert_text_value;
   if (info.label_handle == NULL) {
     alert_text_value = "";
