@@ -1,8 +1,5 @@
-**Thanks for contributing to Selenium!**
-
-* Read our [contributing guidelines](https://github.com/SeleniumHQ/selenium/blob/trunk/CONTRIBUTING.md)!
-* Keep PRs as small and focused as possible
-* Mark your PR as **Draft** if it's not yet ready to merge
+<!-- Thanks for Contributing to Selenium! -->
+<!-- Please read our contribution guidelines: https://github.com/SeleniumHQ/selenium/blob/trunk/CONTRIBUTING.md -->
 
 ### 🔗 Related Issues
 <!-- Example: Fixes #1234 or Closes #5678 -->

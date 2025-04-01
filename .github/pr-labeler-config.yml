@@ -1,61 +1,76 @@
 C-java:
-  - patterns:
-      - java/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'java/**'
+      - 'common/src/org/openqa/selenium/**'
 
 C-py:
-  - patterns:
-      - py/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'py/**'
 
 C-dotnet:
-  - patterns:
-      - dotnet/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'dotnet/**'
+      - 'common/src/Support/**'
 
 C-rb:
-  - patterns:
-      - rb/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'rb/**'
 
 C-nodejs:
-  - patterns:
-      - javascript/selenium-webdriver/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'javascript/selenium-webdriver/**'
 
 C-cpp:
-  - patterns:
-      - cpp/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'cpp/**'
 
 C-rust:
-  - patterns:
-      - rust/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'rust/**'
 
 B-atoms:
-  - patterns:
-      - javascript/atoms/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'javascript/atoms/**'
 
 B-grid:
-  - patterns:
-      - java/src/org/openqa/selenium/grid/**
-      - javascript/grid-ui/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'java/src/org/openqa/selenium/grid/**'
+      - 'javascript/grid-ui/**'
 
 B-manager:
-  - patterns:
-      - rust/**
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'rust/src/manager/**'
 
 B-devtools:
-  - patterns:
-      - common/devtools/**
-      - "**/devtools/**"
-      - "**/bidi/**"
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'common/devtools/**'
+      - '**/devtools/**'
+      - '**/bidi/**'
 
 B-build:
-  - patterns:
-      - .github/**
-      - scripts/**
-      - rake_tasks/**
-      - Rakefile
-      - BUILD.bazel
-      - "**/*.bazel"
-      - "**/*.bzl"
-      - .bazel*
+  - changed-files:
+    - any-glob-to-any-file:
+      - '.github/**'
+      - 'scripts/**'
+      - 'rake_tasks/**'
+      - 'Rakefile'
+      - 'BUILD.bazel'
+      - '**/*.bazel'
+      - '**/*.bzl'
+      - '.bazel*'
 
 B-support:
-  - patterns:
-      - "**/support/**"
+  - changed-files:
+    - any-glob-to-any-file:
+      - '**/support/**'
