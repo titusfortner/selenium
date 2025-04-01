@@ -72,6 +72,19 @@ class DefaultKeyboardTest extends JupiterTestBase {
   }
 
   @Test
+  void testSomethingElse() {
+    driver.get(appServer.whereIs("single_text_input.html"));
+
+    WebElement input = driver.findElement(By.id("textInput"));
+
+    Actions sendLowercase = getBuilder(driver).sendKeys(input, "12345");
+
+    inputModule.perform(windowHandle, sendLowercase.getSequences());
+
+    shortWait.until(ExpectedConditions.attributeToBe(input, "value", "12345"));
+  }
+
+  @Test
   @NotYetImplemented(SAFARI)
   public void testSendingKeyDownOnly() {
     driver.get(appServer.whereIs("key_logger.html"));
