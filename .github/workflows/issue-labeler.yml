@@ -63,6 +63,14 @@ jobs:
               '### What part(s) of Selenium does this relate to?'
             ];
 
+            // Conditionally remove Debugging Logs
+            const logs = form?.logs?.trim();
+            const isLogsEmpty = !logs || logs === '```logs\n\n```' || logs === '```logs```';
+
+            if (isLogsEmpty) {
+              headingsToRemove.push('### Debugging Logs');
+            }
+
             const lines = originalBody.split(/\r?\n/);
             const cleanedLines = [];
 
