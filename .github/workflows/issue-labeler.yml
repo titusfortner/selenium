@@ -63,6 +63,9 @@ jobs:
               '### What part(s) of Selenium does this relate to?'
             ];
 
+            const form = JSON.parse(process.env.FORM_JSON || '{}');
+            const lastGood = form?.["last-good"]?.trim();
+
             // Conditionally remove Debugging Logs
             const logs = form?.logs?.trim();
             const isLogsEmpty = !logs || logs === '```logs\n\n```' || logs === '```logs```';
@@ -97,9 +100,6 @@ jobs:
 
             let finalBody = cleanedLines.join('\n').trim();
 
-            const form = JSON.parse(process.env.FORM_JSON || '{}');
-            const lastGood = form?.["last-good"]?.trim();
-
             if (lastGood) {
               finalBody += `\n\n---\nℹ️ **Last known working version:** \`${lastGood}\``;
             }
@@ -112,3 +112,71 @@ jobs:
             });
         env:
           FORM_JSON: ${{ steps.bug-parser.outputs.jsonString }}
+
+      - name: Get latest Selenium version
+        id: get-version
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { data: latestRelease } = await github.rest.repos.getLatestRelease({
+              owner: 'SeleniumHQ',
+              repo: 'selenium'
+            });
+
+            const latestTag = latestRelease.tag_name;
+            const versionMatch = latestTag.match(/[vV]?(?:selenium-)?(\d+\.\d+(?:\.\d+)?)/);
+
+            if (!versionMatch) {
+              core.setFailed(`Couldn't parse version from tag: ${latestTag}`);
+              return;
+            }
+
+            const fullVersion = versionMatch[1];
+            const [major, minor] = fullVersion.split('.');
+            const latestVersion = `${major}.${minor}`;
+
+            console.log(`Latest version: ${latestVersion}`);
+            core.setOutput('version', latestVersion);
+
+      - name: Compare user version
+        id: version-check
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const form = JSON.parse(process.env.FORM_JSON || '{}');
+            const userVersion = form?.["selenium-version"]?.trim() || "";
+            const latest = process.env.LATEST_VERSION;
+
+            const [umaj, umin] = userVersion.split('.').map(n => parseInt(n, 10));
+            const [lmaj, lmin] = latest.split('.').map(n => parseInt(n, 10));
+
+            const isOutdated = umaj < lmaj || (umaj === lmaj && umin < lmin);
+
+            core.setOutput("user-version", userVersion);
+            core.setOutput("latest-version", latest);
+            core.setOutput("is-outdated", isOutdated);
+        env:
+          FORM_JSON: ${{ steps.bug-parser.outputs.jsonString }}
+          LATEST_VERSION: ${{ steps.get-version.outputs.version }}
+
+      - name: Comment if version is outdated
+        id: comment-version
+        if: steps.version-check.outputs.is-outdated == 'true'
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            ⚠️ You reported using Selenium version `${{ steps.version-check.outputs.user-version }}`, but the latest release is `${{ steps.version-check.outputs.latest-version }}`.
+
+            Please verify that this issue still occurs with the latest version. If it no longer applies, you can close this issue or update your comment.
+
+            *This issue will be marked "awaiting answer" and may be closed automatically if no response is received.*
+
+      - name: Add label
+        if: steps.version-check.outputs.is-outdated == 'true'
+        uses: actions-ecosystem/action-add-labels@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          labels: J-awaiting answer

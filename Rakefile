@@ -1209,7 +1209,17 @@ namespace :all do
     Rake::Task['dotnet:version'].invoke(version)
     Rake::Task['rust:version'].invoke(version)
 
-    Rake::Task['all:changelogs'] unless version == 'nightly'
+    unless version == 'nightly'
+      Rake::Task['all:changelogs']
+
+      major_minor = arguments[:version][/^\d+\.\d+/]
+      file = '.github/ISSUE_TEMPLATE/bug-report.yml'
+      old_version_pattern = /The latest released version of Selenium is (\d+\.\d+)/
+
+      text = File.read(file).gsub(old_version_pattern, "The latest released version of Selenium is #{major_minor}")
+      File.write(file, text)
+      @git.add(file)
+    end
   end
 
   desc 'Update all changelogs'
