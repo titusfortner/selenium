@@ -17,7 +17,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: repro-command
+    id: reproduction
     attributes:
       label: Reproducible Code
       placeholder: |
@@ -38,7 +38,7 @@ body:
         Instructions for enabling logging can be found in the link below
       render: logs
   - type: markdown
-    id: start
+    id: link
     attributes:
       value: |
         **Read our [logging documentation](https://www.selenium.dev/documentation/webdriver/troubleshooting/logging/)**
@@ -57,7 +57,7 @@ body:
         - label: All information necessary to reproduce the issue has been provided above
           required: true
   - type: dropdown
-    id: issue-history
+    id: regression
     attributes:
       label: Did this work for you before?
       options:
@@ -66,7 +66,7 @@ body:
     validations:
       required: true
   - type: input
-    id: last-working-version
+    id: last-good
     attributes:
       label: If yes, what version of Selenium did it work with?
       placeholder: "e.g., 4.8.0"
@@ -80,11 +80,11 @@ body:
         - "--"
         - Windows
         - macOS
-        - Linux (please specify in the description)
+        - Linux (specify in the description)
     validations:
       required: true
   - type: dropdown
-    id: language
+    id: bindings
     attributes:
       label: Selenium Language Binding
       options:
@@ -109,7 +109,7 @@ body:
         - IE
         - Other (please specify in the description)
   - type: dropdown
-    id: using-grid
+    id: grid
     attributes:
       label: Are you using Selenium Grid?
       options:
