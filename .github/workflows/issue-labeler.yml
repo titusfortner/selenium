@@ -44,8 +44,9 @@ jobs:
       - name: Clean up labeled sections
         uses: actions/github-script@v6
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const issueNumber = context.payload.issue.number;
+            const issueNumber = context.issue.number;
             const originalBody = context.payload.issue.body;
             const owner = context.repo.owner;
             const repo = context.repo.repo;
@@ -84,7 +85,9 @@ jobs:
             }
 
             let finalBody = cleanedLines.join('\n').trim();
-            const lastGood = JSON.parse(steps["bug-parser"].outputs.jsonString)?.["last-good"]?.trim();
+
+            const form = JSON.parse(process.env.FORM_JSON || '{}');
+            const lastGood = form?.["last-good"]?.trim();
 
             if (lastGood) {
               finalBody += `\n\n---\nℹ️ **Last known working version:** \`${lastGood}\``;
@@ -96,5 +99,5 @@ jobs:
               issue_number: issueNumber,
               body: finalBody
             });
-
-            console.log("Issue body updated.");
+          env:
+            FORM_JSON: ${{ steps.bug-parser.outputs.jsonString }}
