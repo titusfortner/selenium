@@ -3,6 +3,14 @@
 # 3. Execute: `Set-ExecutionPolicy Bypass -Scope Process -Force`
 # 4. Run this script in the PowerShell terminal
 
+$ErrorActionPreference = 'Stop'
+
+Function Write-ErrorAndExit {
+  param ([string]$Message)
+  Write-Host "ERROR: $Message" -ForegroundColor Red
+  exit 1
+}
+
 Function Install-ChocoPackage {
   param (
     [string]$PackageName,
@@ -13,8 +21,15 @@ Function Install-ChocoPackage {
   Write-Host "Checking installation of $PackageName"
   if (-Not (Get-Command $ExecutableName -ErrorAction SilentlyContinue)) {
     Write-Host "Installing $PackageName..."
-    choco install $PackageName -y $AdditionalParams
-    refreshenv
+    try {
+      choco install $PackageName -y $AdditionalParams
+      if ($LASTEXITCODE -ne 0) {
+        throw "Chocolatey returned exit code $LASTEXITCODE"
+      }
+      refreshenv
+    } catch {
+      Write-ErrorAndExit "Failed to install $PackageName : $_"
+    }
   } else {
     Write-Host "$PackageName is already installed."
   }
@@ -32,7 +47,11 @@ Function Install-JDK17 {
 }
 
 Function Set-JavaEnvironmentVariable {
-  $javacPath = Get-ChildItem -Path 'C:\Program Files\' -Recurse -Filter 'javac.exe' | Select-Object -First 1 -ExpandProperty DirectoryName
+  Write-Host "Searching for javac.exe..."
+  $javacPath = Get-ChildItem -Path 'C:\Program Files\' -Recurse -Filter 'javac.exe' -ErrorAction SilentlyContinue | Select-Object -First 1 -ExpandProperty DirectoryName
+  if (-Not $javacPath) {
+    Write-ErrorAndExit "Could not find javac.exe in 'C:\Program Files\'. JDK installation may have failed."
+  }
   $javaHome = Split-Path -Path $javacPath
   Write-Host "Set JAVA_HOME environment variable to $javaHome"
   [System.Environment]::SetEnvironmentVariable('JAVA_HOME', $javaHome, [System.EnvironmentVariableTarget]::Machine)
@@ -78,8 +97,14 @@ Function Clone-Repository {
     }
 
     $gitPath = "C:\Program Files\Git\bin\git.exe"
+    if (-Not (Test-Path $gitPath)) {
+      Write-ErrorAndExit "Git not found at $gitPath. Git installation may have failed."
+    }
     Write-Host "$gitPath clone $RepoUrl $cloneOptions"
     & $gitPath clone $RepoUrl $cloneOptions
+    if ($LASTEXITCODE -ne 0) {
+      Write-ErrorAndExit "Git clone failed with exit code $LASTEXITCODE"
+    }
   }
 }
 
@@ -87,7 +112,13 @@ Function Install-IntelliJ {
   Install-ChocoPackage -PackageName "intellijidea-community" -ExecutableName "idea64"
 
   $ideaPath = Get-ChildItem -Path "C:\Program Files\JetBrains" -Filter idea64.exe -Recurse -ErrorAction SilentlyContinue -Force | Select-Object -First 1 -ExpandProperty FullName
+  if (-Not $ideaPath) {
+    Write-ErrorAndExit "Could not find idea64.exe in 'C:\Program Files\JetBrains'. IntelliJ installation may have failed."
+  }
+
+  Write-Host "Installing Bazel plugin..."
   & $ideaPath installPlugins "com.google.idea.bazel.ijwb"
+  Write-Host "Installing google-java-format plugin..."
   & $ideaPath installPlugins "google-java-format"
 
   Write-Host "Setting up Java Format IntelliJ plugin"
@@ -98,35 +129,46 @@ Function Install-IntelliJ {
   $intelliJVersionName = "IdeaIC" + (($fullVersion -split '\.')[0,1] -join '.')
   $ideaDataPath = Join-Path -Path $env:APPDATA -ChildPath "JetBrains\$intelliJVersionName"
 
-  if (-not (Test-Path -Path $ideaDataPath)) {
-    New-Item -ItemType Directory -Path $ideaDataPath -Force | Out-Null
-  }
+  try {
+    if (-not (Test-Path -Path $ideaDataPath)) {
+      New-Item -ItemType Directory -Path $ideaDataPath -Force | Out-Null
+    }
 
-  $vmOptionsFilePath = Join-Path -Path $ideaDataPath -ChildPath "idea64.exe.vmoptions"
-  if (-not (Test-Path -Path $vmOptionsFilePath)) {
-    New-Item -ItemType File -Path $vmOptionsFilePath | Out-Null
+    $vmOptionsFilePath = Join-Path -Path $ideaDataPath -ChildPath "idea64.exe.vmoptions"
+    if (-not (Test-Path -Path $vmOptionsFilePath)) {
+      New-Item -ItemType File -Path $vmOptionsFilePath | Out-Null
+    }
+    $linesToAdd = @(
+      "--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED",
+      "--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED",
+      "--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED",
+      "--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED",
+      "--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED",
+      "--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED"
+    )
+    Add-Content -Path $vmOptionsFilePath -Value $linesToAdd
+  } catch {
+    Write-Host "WARNING: Failed to configure IntelliJ VM options: $_" -ForegroundColor Yellow
   }
-  $linesToAdd = @(
-    "--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED",
-    "--add-exports=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED",
-    "--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED",
-    "--add-exports=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED",
-    "--add-exports=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED",
-    "--add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED"
-  )
-  Add-Content -Path $vmOptionsFilePath -Value $linesToAdd
 }
 
-Write-Host "Set Execution Policy for future processes; (Ignore Warning)"
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+Write-Host "Set Execution Policy for future processes"
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -ErrorAction SilentlyContinue
 
 Write-Host "Enable Developer Mode"
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
 
 Write-Host "Install Chocolatey if not already installed"
 if (-Not (Get-Command choco -ErrorAction SilentlyContinue)) {
-    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
-    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    try {
+        [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
+        iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    } catch {
+        Write-ErrorAndExit "Failed to install Chocolatey: $_"
+    }
+    if (-Not (Get-Command choco -ErrorAction SilentlyContinue)) {
+        Write-ErrorAndExit "Chocolatey installation completed but 'choco' command not found. Try restarting PowerShell."
+    }
 }
 
 Install-JDK17
@@ -142,9 +184,19 @@ Start-Process "C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.ex
 Read-Host -Prompt "Install C++ in Visual Studio then Press Enter to continue"
 
 $bazelVcPath = "C:\Program Files\Microsoft Visual Studio\2022\Community\VC"
+if (-Not (Test-Path $bazelVcPath)) {
+  Write-ErrorAndExit "Visual Studio VC path not found at $bazelVcPath. Ensure C++ workload was installed."
+}
 Update-EnvironmentVariable -VariableName "BAZEL_VC" -Value $bazelVcPath
 
-$vcToolsPath = Get-ChildItem -Path "$bazelVcPath\Tools\MSVC" | Sort-Object Name -Descending | Select-Object -First 1
+$vcToolsBasePath = "$bazelVcPath\Tools\MSVC"
+if (-Not (Test-Path $vcToolsBasePath)) {
+  Write-ErrorAndExit "MSVC Tools not found at $vcToolsBasePath. Ensure C++ workload was installed in Visual Studio."
+}
+$vcToolsPath = Get-ChildItem -Path $vcToolsBasePath | Sort-Object Name -Descending | Select-Object -First 1
+if (-Not $vcToolsPath) {
+  Write-ErrorAndExit "No MSVC toolchain versions found in $vcToolsBasePath"
+}
 $vcToolsVersion = $vcToolsPath.Name
 Update-EnvironmentVariable -VariableName "BAZEL_VC_FULL_VERSION" -Value $vcToolsVersion
 
