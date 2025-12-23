@@ -14,7 +14,7 @@ Function Install-ChocoPackage {
   if (-Not (Get-Command $ExecutableName -ErrorAction SilentlyContinue)) {
     Write-Host "Installing $PackageName..."
     choco install $PackageName -y $AdditionalParams
-    refreshenv -Path ...
+    refreshenv
   } else {
     Write-Host "$PackageName is already installed."
   }
@@ -22,9 +22,9 @@ Function Install-ChocoPackage {
 
 Function Install-JDK17 {
   $javacInstalled = Get-Command javac -ErrorAction SilentlyContinue
-  $javaVersion = if ($javacInstalled) { & javac -version 2>&1 | Select-String -Pattern '"(\d+)' | ForEach-Object { $_.Matches.Groups[1].Value } }
+  $javaVersion = if ($javacInstalled) { & javac -version 2>&1 | Select-String -Pattern 'javac (\d+)' | ForEach-Object { $_.Matches.Groups[1].Value } }
 
-  if (-Not $javacInstalled -or [int]$javaVersion -ne 17) {
+  if (-Not $javacInstalled -or -Not $javaVersion -or [int]$javaVersion -lt 17) {
     Install-ChocoPackage -PackageName "openjdk17" -ExecutableName "javac"
   } else {
     Write-Host "JDK 17 is already installed."
@@ -36,18 +36,31 @@ Function Set-JavaEnvironmentVariable {
   $javaHome = Split-Path -Path $javacPath
   Write-Host "Set JAVA_HOME environment variable to $javaHome"
   [System.Environment]::SetEnvironmentVariable('JAVA_HOME', $javaHome, [System.EnvironmentVariableTarget]::Machine)
-  refreshenv -JAVA_HOME ...
+  refreshenv
 }
 
-Function Update-EnvironmentVariables {
+Function Update-EnvironmentVariable {
   Param ([string]$VariableName, [string]$Value)
   $currentValue = [Environment]::GetEnvironmentVariable($VariableName, [EnvironmentVariableTarget]::User)
   if (-not $currentValue -or $currentValue -ne $Value) {
     Write-Host "Setting $VariableName to $Value"
     [Environment]::SetEnvironmentVariable($VariableName, $Value, [System.EnvironmentVariableTarget]::User)
-    refreshenv -$VariableName ...
+    refreshenv
   } else {
     Write-Host "$VariableName is already set to $currentValue"
+  }
+}
+
+Function Add-ToPath {
+  Param ([string]$PathToAdd)
+  $currentPath = [Environment]::GetEnvironmentVariable("PATH", [EnvironmentVariableTarget]::User)
+  if ($currentPath -and $currentPath.Split(';') -contains $PathToAdd) {
+    Write-Host "$PathToAdd is already in PATH"
+  } else {
+    Write-Host "Adding $PathToAdd to PATH"
+    $newPath = if ($currentPath) { "$currentPath;$PathToAdd" } else { $PathToAdd }
+    [Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::User)
+    refreshenv
   }
 }
 
@@ -113,7 +126,7 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUn
 Write-Host "Install Chocolatey if not already installed"
 if (-Not (Get-Command choco -ErrorAction SilentlyContinue)) {
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072
-    iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 }
 
 Install-JDK17
@@ -121,19 +134,19 @@ Set-JavaEnvironmentVariable
 Install-ChocoPackage -PackageName "git" -ExecutableName "git"
 Install-ChocoPackage -PackageName "bazelisk" -ExecutableName "bazel"
 Install-ChocoPackage -PackageName "msys2" -ExecutableName "C:\tools\msys64\usr\bin\bash.exe" -AdditionalParams "--params '/InstallDir=C:\tools\msys64'"
-Update-EnvironmentVariables -VariableName "PATH" -Value "C:\tools\msys64\usr\bin"
-Update-EnvironmentVariables -VariableName "BAZEL_SH" -Value "C:\tools\msys64\usr\bin\bash.exe"
+Add-ToPath -PathToAdd "C:\tools\msys64\usr\bin"
+Update-EnvironmentVariable -VariableName "BAZEL_SH" -Value "C:\tools\msys64\usr\bin\bash.exe"
 Install-ChocoPackage -PackageName "visualstudio2022community" -ExecutableName "devenv"
 
 Start-Process "C:\Program Files (x86)\Microsoft Visual Studio\Installer\setup.exe"
 Read-Host -Prompt "Install C++ in Visual Studio then Press Enter to continue"
 
 $bazelVcPath = "C:\Program Files\Microsoft Visual Studio\2022\Community\VC"
-Update-EnvironmentVariables -VariableName "BAZEL_VC" -Value $bazelVcPath
+Update-EnvironmentVariable -VariableName "BAZEL_VC" -Value $bazelVcPath
 
 $vcToolsPath = Get-ChildItem -Path "$bazelVcPath\Tools\MSVC" | Sort-Object Name -Descending | Select-Object -First 1
 $vcToolsVersion = $vcToolsPath.Name
-Update-EnvironmentVariables -VariableName "BAZEL_VC_FULL_VERSION" -Value $vcToolsVersion
+Update-EnvironmentVariable -VariableName "BAZEL_VC_FULL_VERSION" -Value $vcToolsVersion
 
 Clone-Repository -RepoUrl "https://github.com/SeleniumHQ/selenium.git"
 
