@@ -37,7 +37,11 @@ jobs:
       name: ${{ matrix.os }}
       os: ${{ matrix.os }}
       cache-save: true
+      # --pin_browsers=false flips select() branches so the pinned
+      # browser/driver repositories never enter the analysis graph.
+      # Browsers turn over too often to benefit from caching here, and
+      # dragging them in bloats the cache past the 10 GB ceiling.
       run: >-
-        bazel build --nobuild --build_tests_only --keep_going --repo_contents_cache=
+        bazel build --nobuild --build_tests_only --keep_going --pin_browsers=false
         //java/test/... //py:* //rb/spec/... //rust/tests/...
         //javascript/selenium-webdriver:* //dotnet/test/...

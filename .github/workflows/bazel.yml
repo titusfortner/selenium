@@ -167,28 +167,7 @@ jobs:
           # Workaround for long path issues: https://github.com/bazelbuild/bazel/pull/22532
           output-base: ${{ inputs.os == 'windows' && 'D://b' || '' }}
           disk-cache: false
-          external-cache: |
-            manifest:
-              crates: rust/Cargo.Bazel.lock
-              "rules_ruby++ruby+ruby": false
-              "+pin_browsers_extension+linux_beta_chrome": false
-              "+pin_browsers_extension+linux_beta_chromedriver": true
-              "+pin_browsers_extension+linux_beta_firefox": false
-              "+pin_browsers_extension+linux_chrome": false
-              "+pin_browsers_extension+linux_chromedriver": true
-              "+pin_browsers_extension+linux_edge": false
-              "+pin_browsers_extension+linux_edgedriver": true
-              "+pin_browsers_extension+linux_firefox": false
-              "+pin_browsers_extension+linux_geckodriver": true
-              "+pin_browsers_extension+mac_beta_chrome": false
-              "+pin_browsers_extension+mac_beta_chromedriver": false
-              "+pin_browsers_extension+mac_beta_firefox": false
-              "+pin_browsers_extension+mac_chrome": false
-              "+pin_browsers_extension+mac_chromedriver": false
-              "+pin_browsers_extension+mac_edge": false
-              "+pin_browsers_extension+mac_edgedriver": false
-              "+pin_browsers_extension+mac_firefox": false
-              "+pin_browsers_extension+mac_geckodriver": false
+          external-cache: false
           repository-cache: true
       - name: Setup Bazel without caching
         if: steps.setup-bazel-cached.outcome == 'failure'
@@ -196,9 +175,7 @@ jobs:
         with:
           cache-save: false
           bazelisk-cache: true
-          external-cache: |
-            manifest:
-              crates: rust/Cargo.Bazel.lock
+          external-cache: false
           repository-cache: true
           bazelrc: common --color=yes
       - name: Disk status after cache restore
