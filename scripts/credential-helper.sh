@@ -34,12 +34,12 @@ function get() {
     exit 0
   fi
 
-  if [ -n "$GITHUB_TOKEN" ]; then
-    emit_headers "$GITHUB_TOKEN"
-  fi
-
   if [ -n "$ENGFLOW_GITHUB_TOKEN" ]; then
     emit_headers "${ENGFLOW_GITHUB_TOKEN}"
+  fi
+
+  if [ -n "$GITHUB_TOKEN" ]; then
+    emit_headers "$GITHUB_TOKEN"
   fi
 
   NETRC="$(netrc_password github.com)"

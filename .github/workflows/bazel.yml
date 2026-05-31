@@ -88,6 +88,7 @@ jobs:
     runs-on: ${{ contains(inputs.os, '-') && inputs.os || format('{0}-latest', inputs.os) }}
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      ENGFLOW_GITHUB_TOKEN: ${{ secrets.ENGFLOW_GITHUB_TOKEN }}
       SEL_M2_USER: ${{ secrets.SEL_M2_USER }}
       SEL_M2_PASS: ${{ secrets.SEL_M2_PASS }}
       TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}

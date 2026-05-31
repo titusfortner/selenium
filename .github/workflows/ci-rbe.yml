@@ -25,11 +25,11 @@ permissions:
 jobs:
   test:
     name: Test
-    if: github.event.repository.fork == false
     uses: ./.github/workflows/bazel.yml
+    secrets: inherit
     with:
       name: All RBE tests
-      cache-save: ${{ github.ref_name == 'trunk' }}
+      cache-save: true
       rerun-with-debug: true
       ruby-version: jruby-10.1.0.0
       run: ./scripts/github-actions/ci-build.sh ${{ github.event.inputs.disable_test_cache }}
