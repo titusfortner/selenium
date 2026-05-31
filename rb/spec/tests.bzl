@@ -222,11 +222,11 @@ def rb_integration_test(
                     data = BROWSERS[browser]["data"] + data + [
                         "//common/src/web",
                         "//java/src/org/openqa/selenium/grid:selenium_server_deploy.jar",
-                        "//rb/spec:java-location",
+                        "//rb/spec:java-home",
                         "@bazel_tools//tools/jdk:current_java_runtime",
                     ],
                     env = BROWSERS[browser]["env"] | {
-                        "WD_BAZEL_JAVA_LOCATION": "$(rootpath //rb/spec:java-location)",
+                        "WD_BAZEL_JAVA_HOME": "$(rootpath //rb/spec:java-home)",
                         "WD_SPEC_DRIVER": "remote",
                     },
                     main = "@bundle//bin:rspec",

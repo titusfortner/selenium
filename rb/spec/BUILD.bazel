@@ -113,10 +113,10 @@ rb_library(
 )
 
 genrule(
-    name = "java-location",
+    name = "java-home",
     srcs = [],
-    outs = ["java-location.txt"],
-    cmd = "echo $(JAVA) > $@",
+    outs = ["java-home.txt"],
+    cmd = "echo $(JAVABASE) > $@",
     toolchains = ["@bazel_tools//tools/jdk:current_java_runtime"],
     visibility = ["//rb/spec:__subpackages__"],
 )

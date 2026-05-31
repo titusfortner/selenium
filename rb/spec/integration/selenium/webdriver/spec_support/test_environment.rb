@@ -134,10 +134,18 @@ module Selenium
         end
 
         def bazel_java
-          return unless ENV.key?('WD_BAZEL_JAVA_LOCATION')
+          return unless ENV.key?('WD_BAZEL_JAVA_HOME')
 
-          java_path = File.read(File.expand_path(ENV.fetch('WD_BAZEL_JAVA_LOCATION'))).chomp
-          rlocation(java_path)
+          java_home = File.read(File.expand_path(ENV.fetch('WD_BAZEL_JAVA_HOME'))).chomp
+          resolved = rlocation(java_home)
+
+          # On Windows the runfiles tree is a symlink farm where the JDK's lib\modules ends up as
+          # a symlink, tripping a JDK bug when the server JVM maps the module image. Resolve to
+          # the real path under Bazel's external cache, which has lib\modules as a regular file.
+          # TODO: drop once rules_ruby exposes a realpath-aware rlocation helper.
+          resolved = File.realpath(resolved) if Platform.windows? && File.exist?(resolved)
+
+          File.join(resolved, 'bin', Platform.windows? ? 'java.exe' : 'java')
         end
 
         def rbe?
