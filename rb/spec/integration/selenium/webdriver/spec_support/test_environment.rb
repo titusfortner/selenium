@@ -17,6 +17,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
+require 'bazel/runfiles'
+
 module Selenium
   module WebDriver
     module SpecSupport
@@ -137,13 +139,7 @@ module Selenium
           return unless ENV.key?('WD_BAZEL_JAVA_HOME')
 
           java_home = File.read(File.expand_path(ENV.fetch('WD_BAZEL_JAVA_HOME'))).chomp
-          resolved = rlocation(java_home)
-
-          # On Windows the runfiles tree is a symlink farm where the JDK's lib\modules ends up as
-          # a symlink, tripping a JDK bug when the server JVM maps the module image. Resolve to
-          # the real path under Bazel's external cache, which has lib\modules as a regular file.
-          # TODO: drop once rules_ruby exposes a realpath-aware rlocation helper.
-          resolved = File.realpath(resolved) if Platform.windows? && File.exist?(resolved)
+          resolved = real_rlocation(java_home)
 
           File.join(resolved, 'bin', Platform.windows? ? 'java.exe' : 'java')
         end
@@ -387,20 +383,24 @@ module Selenium
           sock.close
         end
 
-        # Resolves a Bazel rootpath to an absolute path using the runfiles tree.
-        # $(location) returns rootpath like "external/<repo>/<path>" but Bazel 9
-        # runfiles use rlocation paths like "<repo>/<path>" (no "external/" prefix).
+        def runfiles
+          @runfiles ||= Bazel::Runfiles.create
+        end
+
+        # $(location) returns rootpaths like "external/<repo>/<path>" but Bazel 9 runfiles
+        # use rlocation paths like "<repo>/<path>" (no "external/" prefix).
         def rlocation(path)
           return path if path.nil? || File.exist?(path)
 
-          runfiles_dir = ENV.fetch('RUNFILES_DIR', nil)
-          return path unless runfiles_dir
+          resolved = runfiles.rlocation(path.sub(%r{^external/}, ''))
+          resolved && File.exist?(resolved) ? resolved : path
+        end
 
-          rlocation_path = path.sub(%r{^external/}, '')
-          resolved = File.join(runfiles_dir, rlocation_path)
-          return resolved if File.exist?(resolved)
+        def real_rlocation(path)
+          return path if path.nil?
 
-          path
+          resolved = runfiles.real_rlocation(path.sub(%r{^external/}, ''))
+          resolved && File.exist?(resolved) ? resolved : path
         end
       end
     end # SpecSupport
