@@ -566,10 +566,18 @@ def server(request):
     if Runfiles is not None:
         # Find bazel's Java
         r = Runfiles.Create()
-        java_location_txt = r.Rlocation("_main/" + os.environ.get("SE_BAZEL_JAVA_LOCATION"))
+        java_home_txt = r.Rlocation("_main/" + os.environ.get("SE_BAZEL_JAVA_HOME"))
         try:
-            rel_path = Path(java_location_txt).read_text().strip().removeprefix("external/")
-            server.java_path = r.Rlocation(rel_path)
+            rel_path = Path(java_home_txt).read_text().strip().removeprefix("external/")
+            java_home = r.Rlocation(rel_path)
+            # On Windows the runfiles tree is a symlink farm where the JDK's lib\modules ends up
+            # as a symlink, tripping a JDK bug when the server JVM maps the module image. Resolve
+            # to the real path under Bazel's external cache, which has lib\modules as a regular
+            # file. TODO: drop once rules_python exposes a realpath-aware Rlocation.
+            if sys.platform == "win32" and java_home and os.path.exists(java_home):
+                java_home = os.path.realpath(java_home)
+            java_bin = "java.exe" if sys.platform == "win32" else "java"
+            server.java_path = os.path.join(java_home, "bin", java_bin)
         except Exception:
             pass
 

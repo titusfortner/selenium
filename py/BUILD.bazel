@@ -95,10 +95,10 @@ TEST_DEPS = [
 ]
 
 genrule(
-    name = "java-location",
+    name = "java-home",
     srcs = [],
-    outs = ["java-location.txt"],
-    cmd = "echo $(JAVA) > $@",
+    outs = ["java-home.txt"],
+    cmd = "echo $(JAVABASE) > $@",
     toolchains = ["@bazel_tools//tools/jdk:current_java_runtime"],
 )
 
@@ -812,12 +812,12 @@ DEFAULT_BROWSER_TESTS = [b for b in BROWSER_TESTS if b != "ie"]
             "--remote",
         ] + BROWSERS[browser]["args"],
         data = BROWSERS[browser]["data"] + [
-            ":java-location",
+            ":java-home",
             "//java/src/org/openqa/selenium/grid:selenium_server_deploy.jar",
             "@bazel_tools//tools/jdk:current_java_runtime",
         ],
         env = {
-            "SE_BAZEL_JAVA_LOCATION": "$(rootpath :java-location)",
+            "SE_BAZEL_JAVA_HOME": "$(rootpath :java-home)",
         },
         env_inherit = ["DISPLAY"],
         tags = [
