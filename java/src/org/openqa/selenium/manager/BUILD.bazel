@@ -11,11 +11,9 @@ java_export(
     ],
     pom_template = "//java/src/org/openqa/selenium:template-pom",
     resources = [
-        ":manager-linux",
-        ":manager-macos",
         ":manager-notice",
         ":manager-sbom",
-        ":manager-windows",
+        "//common/manager:selenium-manager-files",
     ],
     tags = [
         "release-artifact",
@@ -29,24 +27,6 @@ java_export(
         "//java/src/org/openqa/selenium/os",
         "@maven//:org_jspecify_jspecify",
     ],
-)
-
-copy_file(
-    name = "manager-linux",
-    src = "//common/manager:selenium-manager-linux",
-    out = "linux/selenium-manager",
-)
-
-copy_file(
-    name = "manager-macos",
-    src = "//common/manager:selenium-manager-macos",
-    out = "macos/selenium-manager",
-)
-
-copy_file(
-    name = "manager-windows",
-    src = "//common/manager:selenium-manager-windows",
-    out = "windows/selenium-manager.exe",
 )
 
 copy_file(
