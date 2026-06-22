@@ -1,5 +1,6 @@
 load(
     "@rules_ruby//ruby:defs.bzl",
+    "rb_binary",
     "rb_library",
 )
 
@@ -22,6 +23,24 @@ rb_library(
         "bidi.rb",
     ]),
     deps = [":common"],
+)
+
+# Regenerates the checked-in BiDi protocol modules in place from the shared,
+# binding-neutral schema. Check-in-output mode: `bazel run` writes back into the
+# source tree (via BUILD_WORKSPACE_DIRECTORY) so each regeneration is a reviewable
+# diff, mirroring //rb:selenium-webdriver-bump-nightly-version.
+rb_binary(
+    name = "bidi-generate",
+    srcs = ["bidi/support/bidi-generate.rb"],
+    args = [
+        "$(location //javascript/selenium-webdriver:create-bidi-src_schema)",
+        "rb/lib/selenium/webdriver/bidi/protocol",
+    ],
+    data = [
+        "bidi/support/templates/module.rb.erb",
+        "//javascript/selenium-webdriver:create-bidi-src_schema",
+    ],
+    main = "bidi/support/bidi-generate.rb",
 )
 
 rb_library(
