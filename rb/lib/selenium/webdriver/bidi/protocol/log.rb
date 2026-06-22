@@ -20,6 +20,60 @@ module Selenium
             error: 'error',
           }.freeze
 
+          class Entry < Union
+            discriminator_wire 'type'
+            fallback 'Log::GenericLogEntry'
+            variant 'console', 'Log::ConsoleLogEntry'
+            variant 'javascript', 'Log::JavascriptLogEntry'
+          end
+
+          class BaseLogEntry < ::Data.define(:level, :source, :text, :timestamp, :stack_trace)
+            include Serializable
+            field :level, wire: 'level', required: true
+            field :source, wire: 'source', required: true, ref: 'Script::Source'
+            field :text, wire: 'text', required: true, nullable: true
+            field :timestamp, wire: 'timestamp', required: true
+            field :stack_trace, wire: 'stackTrace', ref: 'Script::StackTrace'
+          end
+
+          class GenericLogEntry < ::Data.define(:level, :source, :text, :timestamp, :stack_trace, :type)
+            include Serializable
+            field :level, wire: 'level', required: true
+            field :source, wire: 'source', required: true, ref: 'Script::Source'
+            field :text, wire: 'text', required: true, nullable: true
+            field :timestamp, wire: 'timestamp', required: true
+            field :stack_trace, wire: 'stackTrace', ref: 'Script::StackTrace'
+            field :type, wire: 'type', required: true
+          end
+
+          class ConsoleLogEntry < ::Data.define(:level, :source, :text, :timestamp, :stack_trace, :method_, :args)
+            include Serializable
+            discriminator wire: 'type', value: 'console'
+            field :level, wire: 'level', required: true
+            field :source, wire: 'source', required: true, ref: 'Script::Source'
+            field :text, wire: 'text', required: true, nullable: true
+            field :timestamp, wire: 'timestamp', required: true
+            field :stack_trace, wire: 'stackTrace', ref: 'Script::StackTrace'
+            field :method_, wire: 'method', required: true
+            field :args, wire: 'args', required: true, ref: 'Script::RemoteValue', list: true
+          end
+
+          class JavascriptLogEntry < ::Data.define(:level, :source, :text, :timestamp, :stack_trace)
+            include Serializable
+            discriminator wire: 'type', value: 'javascript'
+            field :level, wire: 'level', required: true
+            field :source, wire: 'source', required: true, ref: 'Script::Source'
+            field :text, wire: 'text', required: true, nullable: true
+            field :timestamp, wire: 'timestamp', required: true
+            field :stack_trace, wire: 'stackTrace', ref: 'Script::StackTrace'
+          end
+
+          class EntryAdded < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'log.entryAdded'
+            field :params, wire: 'params', required: true, ref: 'Log::Entry'
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end

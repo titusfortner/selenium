@@ -49,16 +49,628 @@ module Selenium
             all: 'all',
           }.freeze
 
+          class ChannelValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'channel'
+            field :value, wire: 'value', required: true, ref: 'Script::ChannelProperties'
+          end
+
+          class ChannelProperties < ::Data.define(:channel, :serialization_options, :ownership)
+            include Serializable
+            field :channel, wire: 'channel', required: true
+            field :serialization_options, wire: 'serializationOptions', ref: 'Script::SerializationOptions'
+            field :ownership, wire: 'ownership'
+          end
+
+          class EvaluateResult < Union
+            discriminator_wire 'type'
+            variant 'success', 'Script::EvaluateResultSuccess'
+            variant 'exception', 'Script::EvaluateResultException'
+          end
+
+          class EvaluateResultSuccess < ::Data.define(:result, :realm)
+            include Serializable
+            discriminator wire: 'type', value: 'success'
+            field :result, wire: 'result', required: true, ref: 'Script::RemoteValue'
+            field :realm, wire: 'realm', required: true
+          end
+
+          class EvaluateResultException < ::Data.define(:exception_details, :realm)
+            include Serializable
+            discriminator wire: 'type', value: 'exception'
+            field :exception_details, wire: 'exceptionDetails', required: true, ref: 'Script::ExceptionDetails'
+            field :realm, wire: 'realm', required: true
+          end
+
+          class ExceptionDetails < ::Data.define(:column_number, :exception, :line_number, :stack_trace, :text)
+            include Serializable
+            field :column_number, wire: 'columnNumber', required: true
+            field :exception, wire: 'exception', required: true, ref: 'Script::RemoteValue'
+            field :line_number, wire: 'lineNumber', required: true
+            field :stack_trace, wire: 'stackTrace', required: true, ref: 'Script::StackTrace'
+            field :text, wire: 'text', required: true
+          end
+
+          class LocalValue < Union
+            discriminator_wire 'type'
+            presence_variant 'Script::SharedReference', requires: ['sharedId']
+            presence_variant 'Script::RemoteObjectReference', requires: ['handle']
+            variant 'undefined', 'Script::UndefinedValue'
+            presence_variant 'Script::NullValue', requires: ['type']
+            variant 'string', 'Script::StringValue'
+            variant 'number', 'Script::NumberValue'
+            variant 'boolean', 'Script::BooleanValue'
+            variant 'bigint', 'Script::BigIntValue'
+            variant 'channel', 'Script::ChannelValue'
+            variant 'array', 'Script::ArrayLocalValue'
+            variant 'date', 'Script::DateLocalValue'
+            variant 'map', 'Script::MapLocalValue'
+            variant 'object', 'Script::ObjectLocalValue'
+            variant 'regexp', 'Script::RegExpLocalValue'
+            variant 'set', 'Script::SetLocalValue'
+          end
+
+          class ArrayLocalValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'array'
+            field :value, wire: 'value', required: true, ref: 'Script::LocalValue', list: true
+          end
+
+          class DateLocalValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'date'
+            field :value, wire: 'value', required: true
+          end
+
+          class MapLocalValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'map'
+            field :value, wire: 'value', required: true, list: true
+          end
+
+          class ObjectLocalValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'object'
+            field :value, wire: 'value', required: true, list: true
+          end
+
+          class RegExpValue < ::Data.define(:pattern, :flags)
+            include Serializable
+            field :pattern, wire: 'pattern', required: true
+            field :flags, wire: 'flags'
+          end
+
+          class RegExpLocalValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'regexp'
+            field :value, wire: 'value', required: true, ref: 'Script::RegExpValue'
+          end
+
+          class SetLocalValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'set'
+            field :value, wire: 'value', required: true, ref: 'Script::LocalValue', list: true
+          end
+
+          class PrimitiveProtocolValue < Union
+            discriminator_wire 'type'
+            variant 'undefined', 'Script::UndefinedValue'
+            fallback 'Script::NullValue'
+            variant 'string', 'Script::StringValue'
+            variant 'number', 'Script::NumberValue'
+            variant 'boolean', 'Script::BooleanValue'
+            variant 'bigint', 'Script::BigIntValue'
+          end
+
+          class UndefinedValue < ::Data.define
+            include Serializable
+            discriminator wire: 'type', value: 'undefined'
+          end
+
+          class NullValue < ::Data.define(:type)
+            include Serializable
+            field :type, wire: 'type', required: true, nullable: true
+          end
+
+          class StringValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'string'
+            field :value, wire: 'value', required: true
+          end
+
+          class NumberValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'number'
+            field :value, wire: 'value', required: true
+          end
+
+          class BooleanValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'boolean'
+            field :value, wire: 'value', required: true
+          end
+
+          class BigIntValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'bigint'
+            field :value, wire: 'value', required: true
+          end
+
+          class RealmInfo < Union
+            discriminator_wire 'type'
+            variant 'window', 'Script::WindowRealmInfo'
+            variant 'dedicated-worker', 'Script::DedicatedWorkerRealmInfo'
+            variant 'shared-worker', 'Script::SharedWorkerRealmInfo'
+            variant 'service-worker', 'Script::ServiceWorkerRealmInfo'
+            variant 'worker', 'Script::WorkerRealmInfo'
+            variant 'paint-worklet', 'Script::PaintWorkletRealmInfo'
+            variant 'audio-worklet', 'Script::AudioWorkletRealmInfo'
+            variant 'worklet', 'Script::WorkletRealmInfo'
+          end
+
+          class BaseRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class WindowRealmInfo < ::Data.define(:realm, :origin, :context, :user_context, :sandbox)
+            include Serializable
+            discriminator wire: 'type', value: 'window'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+            field :context, wire: 'context', required: true
+            field :user_context, wire: 'userContext'
+            field :sandbox, wire: 'sandbox'
+          end
+
+          class DedicatedWorkerRealmInfo < ::Data.define(:realm, :origin, :owners)
+            include Serializable
+            discriminator wire: 'type', value: 'dedicated-worker'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+            field :owners, wire: 'owners', required: true, list: true
+          end
+
+          class SharedWorkerRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            discriminator wire: 'type', value: 'shared-worker'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class ServiceWorkerRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            discriminator wire: 'type', value: 'service-worker'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class WorkerRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            discriminator wire: 'type', value: 'worker'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class PaintWorkletRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            discriminator wire: 'type', value: 'paint-worklet'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class AudioWorkletRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            discriminator wire: 'type', value: 'audio-worklet'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class WorkletRealmInfo < ::Data.define(:realm, :origin)
+            include Serializable
+            discriminator wire: 'type', value: 'worklet'
+            field :realm, wire: 'realm', required: true
+            field :origin, wire: 'origin', required: true
+          end
+
+          class RemoteReference < Union
+            presence_variant 'Script::SharedReference', requires: ['sharedId']
+            presence_variant 'Script::RemoteObjectReference', requires: ['handle']
+          end
+
+          class SharedReference < ::Data.define(:shared_id, :handle, :extensions)
+            include Serializable
+            extensible!
+            field :shared_id, wire: 'sharedId', required: true
+            field :handle, wire: 'handle'
+          end
+
+          class RemoteObjectReference < ::Data.define(:handle, :shared_id, :extensions)
+            include Serializable
+            extensible!
+            field :handle, wire: 'handle', required: true
+            field :shared_id, wire: 'sharedId'
+          end
+
+          class RemoteValue < Union
+            discriminator_wire 'type'
+            variant 'undefined', 'Script::UndefinedValue'
+            fallback 'Script::NullValue'
+            variant 'string', 'Script::StringValue'
+            variant 'number', 'Script::NumberValue'
+            variant 'boolean', 'Script::BooleanValue'
+            variant 'bigint', 'Script::BigIntValue'
+            variant 'symbol', 'Script::SymbolRemoteValue'
+            variant 'array', 'Script::ArrayRemoteValue'
+            variant 'object', 'Script::ObjectRemoteValue'
+            variant 'function', 'Script::FunctionRemoteValue'
+            variant 'regexp', 'Script::RegExpRemoteValue'
+            variant 'date', 'Script::DateRemoteValue'
+            variant 'map', 'Script::MapRemoteValue'
+            variant 'set', 'Script::SetRemoteValue'
+            variant 'weakmap', 'Script::WeakMapRemoteValue'
+            variant 'weakset', 'Script::WeakSetRemoteValue'
+            variant 'generator', 'Script::GeneratorRemoteValue'
+            variant 'error', 'Script::ErrorRemoteValue'
+            variant 'proxy', 'Script::ProxyRemoteValue'
+            variant 'promise', 'Script::PromiseRemoteValue'
+            variant 'typedarray', 'Script::TypedArrayRemoteValue'
+            variant 'arraybuffer', 'Script::ArrayBufferRemoteValue'
+            variant 'nodelist', 'Script::NodeListRemoteValue'
+            variant 'htmlcollection', 'Script::HTMLCollectionRemoteValue'
+            variant 'node', 'Script::NodeRemoteValue'
+            variant 'window', 'Script::WindowProxyRemoteValue'
+          end
+
+          class SymbolRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'symbol'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class ArrayRemoteValue < ::Data.define(:handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'array'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', ref: 'Script::RemoteValue', list: true
+          end
+
+          class ObjectRemoteValue < ::Data.define(:handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'object'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', list: true
+          end
+
+          class FunctionRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'function'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class RegExpRemoteValue < ::Data.define(:value, :handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'regexp'
+            field :value, wire: 'value', required: true, ref: 'Script::RegExpValue'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class DateRemoteValue < ::Data.define(:value, :handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'date'
+            field :value, wire: 'value', required: true
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class MapRemoteValue < ::Data.define(:handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'map'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', list: true
+          end
+
+          class SetRemoteValue < ::Data.define(:handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'set'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', ref: 'Script::RemoteValue', list: true
+          end
+
+          class WeakMapRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'weakmap'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class WeakSetRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'weakset'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class GeneratorRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'generator'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class ErrorRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'error'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class ProxyRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'proxy'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class PromiseRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'promise'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class TypedArrayRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'typedarray'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class ArrayBufferRemoteValue < ::Data.define(:handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'arraybuffer'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class NodeListRemoteValue < ::Data.define(:handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'nodelist'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', ref: 'Script::RemoteValue', list: true
+          end
+
+          class HTMLCollectionRemoteValue < ::Data.define(:handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'htmlcollection'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', ref: 'Script::RemoteValue', list: true
+          end
+
+          class NodeRemoteValue < ::Data.define(:shared_id, :handle, :internal_id, :value)
+            include Serializable
+            discriminator wire: 'type', value: 'node'
+            field :shared_id, wire: 'sharedId'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+            field :value, wire: 'value', ref: 'Script::NodeProperties'
+          end
+
+          class NodeProperties < ::Data.define(:node_type, :child_node_count, :attributes, :children, :local_name, :mode, :namespace_uri, :node_value, :shadow_root)
+            include Serializable
+            field :node_type, wire: 'nodeType', required: true
+            field :child_node_count, wire: 'childNodeCount', required: true
+            field :attributes, wire: 'attributes'
+            field :children, wire: 'children', ref: 'Script::NodeRemoteValue', list: true
+            field :local_name, wire: 'localName'
+            field :mode, wire: 'mode'
+            field :namespace_uri, wire: 'namespaceURI'
+            field :node_value, wire: 'nodeValue'
+            field :shadow_root, wire: 'shadowRoot', nullable: true, ref: 'Script::NodeRemoteValue'
+          end
+
+          class WindowProxyRemoteValue < ::Data.define(:value, :handle, :internal_id)
+            include Serializable
+            discriminator wire: 'type', value: 'window'
+            field :value, wire: 'value', required: true, ref: 'Script::WindowProxyProperties'
+            field :handle, wire: 'handle'
+            field :internal_id, wire: 'internalId'
+          end
+
+          class WindowProxyProperties < ::Data.define(:context)
+            include Serializable
+            field :context, wire: 'context', required: true
+          end
+
+          class SerializationOptions < ::Data.define(:max_dom_depth, :max_object_depth, :include_shadow_tree)
+            include Serializable
+            field :max_dom_depth, wire: 'maxDomDepth', nullable: true
+            field :max_object_depth, wire: 'maxObjectDepth', nullable: true
+            field :include_shadow_tree, wire: 'includeShadowTree'
+          end
+
+          class StackFrame < ::Data.define(:column_number, :function_name, :line_number, :url)
+            include Serializable
+            field :column_number, wire: 'columnNumber', required: true
+            field :function_name, wire: 'functionName', required: true
+            field :line_number, wire: 'lineNumber', required: true
+            field :url, wire: 'url', required: true
+          end
+
+          class StackTrace < ::Data.define(:call_frames)
+            include Serializable
+            field :call_frames, wire: 'callFrames', required: true, ref: 'Script::StackFrame', list: true
+          end
+
+          class Source < ::Data.define(:realm, :context, :user_context)
+            include Serializable
+            field :realm, wire: 'realm', required: true
+            field :context, wire: 'context'
+            field :user_context, wire: 'userContext'
+          end
+
+          class RealmTarget < ::Data.define(:realm)
+            include Serializable
+            field :realm, wire: 'realm', required: true
+          end
+
+          class ContextTarget < ::Data.define(:context, :sandbox)
+            include Serializable
+            field :context, wire: 'context', required: true
+            field :sandbox, wire: 'sandbox'
+          end
+
+          class Target < Union
+            presence_variant 'Script::ContextTarget', requires: ['context']
+            presence_variant 'Script::RealmTarget', requires: ['realm']
+          end
+
+          class AddPreloadScript < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.addPreloadScript'
+            field :params, wire: 'params', required: true, ref: 'Script::AddPreloadScriptParameters'
+          end
+
+          class AddPreloadScriptParameters < ::Data.define(:function_declaration, :arguments, :contexts, :user_contexts, :sandbox)
+            include Serializable
+            field :function_declaration, wire: 'functionDeclaration', required: true
+            field :arguments, wire: 'arguments', ref: 'Script::ChannelValue', list: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+            field :sandbox, wire: 'sandbox'
+          end
+
+          class AddPreloadScriptResult < ::Data.define(:script)
+            include Serializable
+            field :script, wire: 'script', required: true
+          end
+
+          class Disown < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.disown'
+            field :params, wire: 'params', required: true, ref: 'Script::DisownParameters'
+          end
+
+          class DisownParameters < ::Data.define(:handles, :target)
+            include Serializable
+            field :handles, wire: 'handles', required: true, list: true
+            field :target, wire: 'target', required: true, ref: 'Script::Target'
+          end
+
+          class CallFunction < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.callFunction'
+            field :params, wire: 'params', required: true, ref: 'Script::CallFunctionParameters'
+          end
+
+          class CallFunctionParameters < ::Data.define(:function_declaration, :await_promise, :target, :arguments, :result_ownership, :serialization_options, :this, :user_activation)
+            include Serializable
+            field :function_declaration, wire: 'functionDeclaration', required: true
+            field :await_promise, wire: 'awaitPromise', required: true
+            field :target, wire: 'target', required: true, ref: 'Script::Target'
+            field :arguments, wire: 'arguments', ref: 'Script::LocalValue', list: true
+            field :result_ownership, wire: 'resultOwnership'
+            field :serialization_options, wire: 'serializationOptions', ref: 'Script::SerializationOptions'
+            field :this, wire: 'this', ref: 'Script::LocalValue'
+            field :user_activation, wire: 'userActivation'
+          end
+
+          class Evaluate < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.evaluate'
+            field :params, wire: 'params', required: true, ref: 'Script::EvaluateParameters'
+          end
+
+          class EvaluateParameters < ::Data.define(:expression, :target, :await_promise, :result_ownership, :serialization_options, :user_activation)
+            include Serializable
+            field :expression, wire: 'expression', required: true
+            field :target, wire: 'target', required: true, ref: 'Script::Target'
+            field :await_promise, wire: 'awaitPromise', required: true
+            field :result_ownership, wire: 'resultOwnership'
+            field :serialization_options, wire: 'serializationOptions', ref: 'Script::SerializationOptions'
+            field :user_activation, wire: 'userActivation'
+          end
+
+          class GetRealms < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.getRealms'
+            field :params, wire: 'params', required: true, ref: 'Script::GetRealmsParameters'
+          end
+
+          class GetRealmsParameters < ::Data.define(:context, :type)
+            include Serializable
+            field :context, wire: 'context'
+            field :type, wire: 'type'
+          end
+
+          class GetRealmsResult < ::Data.define(:realms)
+            include Serializable
+            field :realms, wire: 'realms', required: true, ref: 'Script::RealmInfo', list: true
+          end
+
+          class RemovePreloadScript < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.removePreloadScript'
+            field :params, wire: 'params', required: true, ref: 'Script::RemovePreloadScriptParameters'
+          end
+
+          class RemovePreloadScriptParameters < ::Data.define(:script)
+            include Serializable
+            field :script, wire: 'script', required: true
+          end
+
+          class Message < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.message'
+            field :params, wire: 'params', required: true, ref: 'Script::MessageParameters'
+          end
+
+          class MessageParameters < ::Data.define(:channel, :data, :source)
+            include Serializable
+            field :channel, wire: 'channel', required: true
+            field :data, wire: 'data', required: true, ref: 'Script::RemoteValue'
+            field :source, wire: 'source', required: true, ref: 'Script::Source'
+          end
+
+          class RealmCreated < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.realmCreated'
+            field :params, wire: 'params', required: true, ref: 'Script::RealmInfo'
+          end
+
+          class RealmDestroyed < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'script.realmDestroyed'
+            field :params, wire: 'params', required: true, ref: 'Script::RealmDestroyedParameters'
+          end
+
+          class RealmDestroyedParameters < ::Data.define(:realm)
+            include Serializable
+            field :realm, wire: 'realm', required: true
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end
 
           def add_preload_script(function_declaration:, arguments: nil, contexts: nil, user_contexts: nil, sandbox: nil)
-            @bidi.send_cmd('script.addPreloadScript', functionDeclaration: function_declaration, arguments: arguments, contexts: contexts, userContexts: user_contexts, sandbox: sandbox)
+            result = @bidi.send_cmd('script.addPreloadScript', functionDeclaration: function_declaration, arguments: arguments, contexts: contexts, userContexts: user_contexts, sandbox: sandbox)
+            Protocol.const_get('Script::AddPreloadScriptResult').from_wire(result)
           end
 
           def call_function(function_declaration:, await_promise:, target:, arguments: nil, result_ownership: nil, serialization_options: nil, this: nil, user_activation: nil)
-            @bidi.send_cmd('script.callFunction', functionDeclaration: function_declaration, awaitPromise: await_promise, target: target, arguments: arguments, resultOwnership: result_ownership, serializationOptions: serialization_options, this: this, userActivation: user_activation)
+            result = @bidi.send_cmd('script.callFunction', functionDeclaration: function_declaration, awaitPromise: await_promise, target: target, arguments: arguments, resultOwnership: result_ownership, serializationOptions: serialization_options, this: this, userActivation: user_activation)
+            Protocol.const_get('Script::EvaluateResult').from_wire(result)
           end
 
           def disown(handles:, target:)
@@ -66,11 +678,13 @@ module Selenium
           end
 
           def evaluate(expression:, target:, await_promise:, result_ownership: nil, serialization_options: nil, user_activation: nil)
-            @bidi.send_cmd('script.evaluate', expression: expression, target: target, awaitPromise: await_promise, resultOwnership: result_ownership, serializationOptions: serialization_options, userActivation: user_activation)
+            result = @bidi.send_cmd('script.evaluate', expression: expression, target: target, awaitPromise: await_promise, resultOwnership: result_ownership, serializationOptions: serialization_options, userActivation: user_activation)
+            Protocol.const_get('Script::EvaluateResult').from_wire(result)
           end
 
           def get_realms(context: nil, type: nil)
-            @bidi.send_cmd('script.getRealms', context: context, type: type)
+            result = @bidi.send_cmd('script.getRealms', context: context, type: type)
+            Protocol.const_get('Script::GetRealmsResult').from_wire(result)
           end
 
           def remove_preload_script(script:)

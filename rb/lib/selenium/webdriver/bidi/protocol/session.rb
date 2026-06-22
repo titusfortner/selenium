@@ -15,6 +15,172 @@ module Selenium
             ignore: 'ignore',
           }.freeze
 
+          class CapabilitiesRequest < ::Data.define(:always_match, :first_match)
+            include Serializable
+            field :always_match, wire: 'alwaysMatch', ref: 'Session::CapabilityRequest'
+            field :first_match, wire: 'firstMatch', ref: 'Session::CapabilityRequest', list: true
+          end
+
+          class CapabilityRequest < ::Data.define(:accept_insecure_certs, :browser_name, :browser_version, :platform_name, :proxy, :unhandled_prompt_behavior, :extensions)
+            include Serializable
+            extensible!
+            field :accept_insecure_certs, wire: 'acceptInsecureCerts'
+            field :browser_name, wire: 'browserName'
+            field :browser_version, wire: 'browserVersion'
+            field :platform_name, wire: 'platformName'
+            field :proxy, wire: 'proxy', ref: 'Session::ProxyConfiguration'
+            field :unhandled_prompt_behavior, wire: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'
+          end
+
+          class ProxyConfiguration < Union
+            discriminator_wire 'proxyType'
+            variant 'autodetect', 'Session::AutodetectProxyConfiguration'
+            variant 'direct', 'Session::DirectProxyConfiguration'
+            variant 'manual', 'Session::ManualProxyConfiguration'
+            variant 'pac', 'Session::PacProxyConfiguration'
+            variant 'system', 'Session::SystemProxyConfiguration'
+          end
+
+          class AutodetectProxyConfiguration < ::Data.define(:extensions)
+            include Serializable
+            discriminator wire: 'proxyType', value: 'autodetect'
+            extensible!
+          end
+
+          class DirectProxyConfiguration < ::Data.define(:extensions)
+            include Serializable
+            discriminator wire: 'proxyType', value: 'direct'
+            extensible!
+          end
+
+          class ManualProxyConfiguration < ::Data.define(:http_proxy, :ssl_proxy, :socks_proxy, :socks_version, :no_proxy, :extensions)
+            include Serializable
+            discriminator wire: 'proxyType', value: 'manual'
+            extensible!
+            field :http_proxy, wire: 'httpProxy'
+            field :ssl_proxy, wire: 'sslProxy'
+            field :socks_proxy, wire: 'socksProxy', required: true
+            field :socks_version, wire: 'socksVersion', required: true
+            field :no_proxy, wire: 'noProxy', list: true
+          end
+
+          class SocksProxyConfiguration < ::Data.define(:socks_proxy, :socks_version)
+            include Serializable
+            field :socks_proxy, wire: 'socksProxy', required: true
+            field :socks_version, wire: 'socksVersion', required: true
+          end
+
+          class PacProxyConfiguration < ::Data.define(:proxy_autoconfig_url, :extensions)
+            include Serializable
+            discriminator wire: 'proxyType', value: 'pac'
+            extensible!
+            field :proxy_autoconfig_url, wire: 'proxyAutoconfigUrl', required: true
+          end
+
+          class SystemProxyConfiguration < ::Data.define(:extensions)
+            include Serializable
+            discriminator wire: 'proxyType', value: 'system'
+            extensible!
+          end
+
+          class UserPromptHandler < ::Data.define(:alert, :before_unload, :confirm, :default, :file, :prompt)
+            include Serializable
+            field :alert, wire: 'alert'
+            field :before_unload, wire: 'beforeUnload'
+            field :confirm, wire: 'confirm'
+            field :default, wire: 'default'
+            field :file, wire: 'file'
+            field :prompt, wire: 'prompt'
+          end
+
+          class SubscribeParameters < ::Data.define(:events, :contexts, :user_contexts)
+            include Serializable
+            field :events, wire: 'events', required: true, list: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class UnsubscribeByIDRequest < ::Data.define(:subscriptions)
+            include Serializable
+            field :subscriptions, wire: 'subscriptions', required: true, list: true
+          end
+
+          class UnsubscribeByAttributesRequest < ::Data.define(:events)
+            include Serializable
+            field :events, wire: 'events', required: true, list: true
+          end
+
+          class Status < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'session.status'
+            field :params, wire: 'params', required: true
+          end
+
+          class StatusResult < ::Data.define(:ready, :message)
+            include Serializable
+            field :ready, wire: 'ready', required: true
+            field :message, wire: 'message', required: true
+          end
+
+          class New < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'session.new'
+            field :params, wire: 'params', required: true, ref: 'Session::NewParameters'
+          end
+
+          class NewParameters < ::Data.define(:capabilities)
+            include Serializable
+            field :capabilities, wire: 'capabilities', required: true, ref: 'Session::CapabilitiesRequest'
+          end
+
+          class NewResult < ::Data.define(:session_id, :capabilities)
+            include Serializable
+            field :session_id, wire: 'sessionId', required: true
+            field :capabilities, wire: 'capabilities', required: true, ref: 'Session::NewResultCapabilities'
+          end
+
+          class End < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'session.end'
+            field :params, wire: 'params', required: true
+          end
+
+          class Subscribe < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'session.subscribe'
+            field :params, wire: 'params', required: true, ref: 'Session::SubscribeParameters'
+          end
+
+          class SubscribeResult < ::Data.define(:subscription)
+            include Serializable
+            field :subscription, wire: 'subscription', required: true
+          end
+
+          class Unsubscribe < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'session.unsubscribe'
+            field :params, wire: 'params', required: true, ref: 'Session::UnsubscribeParameters'
+          end
+
+          class UnsubscribeParameters < Union
+            presence_variant 'Session::UnsubscribeByAttributesRequest', requires: ['events']
+            presence_variant 'Session::UnsubscribeByIDRequest', requires: ['subscriptions']
+          end
+
+          class NewResultCapabilities < ::Data.define(:accept_insecure_certs, :browser_name, :browser_version, :platform_name, :set_window_rect, :user_agent, :proxy, :unhandled_prompt_behavior, :web_socket_url, :extensions)
+            include Serializable
+            extensible!
+            field :accept_insecure_certs, wire: 'acceptInsecureCerts', required: true
+            field :browser_name, wire: 'browserName', required: true
+            field :browser_version, wire: 'browserVersion', required: true
+            field :platform_name, wire: 'platformName', required: true
+            field :set_window_rect, wire: 'setWindowRect', required: true
+            field :user_agent, wire: 'userAgent', required: true
+            field :proxy, wire: 'proxy', ref: 'Session::ProxyConfiguration'
+            field :unhandled_prompt_behavior, wire: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'
+            field :web_socket_url, wire: 'webSocketUrl'
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end
@@ -24,15 +190,18 @@ module Selenium
           end
 
           def new(capabilities:)
-            @bidi.send_cmd('session.new', capabilities: capabilities)
+            result = @bidi.send_cmd('session.new', capabilities: capabilities)
+            Protocol.const_get('Session::NewResult').from_wire(result)
           end
 
           def status
-            @bidi.send_cmd('session.status')
+            result = @bidi.send_cmd('session.status')
+            Protocol.const_get('Session::StatusResult').from_wire(result)
           end
 
           def subscribe(events:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('session.subscribe', events: events, contexts: contexts, userContexts: user_contexts)
+            result = @bidi.send_cmd('session.subscribe', events: events, contexts: contexts, userContexts: user_contexts)
+            Protocol.const_get('Session::SubscribeResult').from_wire(result)
           end
 
           def unsubscribe(events: nil, subscriptions: nil)

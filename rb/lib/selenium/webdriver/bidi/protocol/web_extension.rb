@@ -9,12 +9,65 @@ module Selenium
     class BiDi
       module Protocol
         class WebExtension
+          class Install < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'webExtension.install'
+            field :params, wire: 'params', required: true, ref: 'WebExtension::InstallParameters'
+          end
+
+          class InstallParameters < ::Data.define(:extension_data)
+            include Serializable
+            field :extension_data, wire: 'extensionData', required: true, ref: 'WebExtension::ExtensionData'
+          end
+
+          class ExtensionData < Union
+            discriminator_wire 'type'
+            variant 'archivePath', 'WebExtension::ExtensionArchivePath'
+            variant 'base64', 'WebExtension::ExtensionBase64Encoded'
+            variant 'path', 'WebExtension::ExtensionPath'
+          end
+
+          class ExtensionPath < ::Data.define(:path)
+            include Serializable
+            discriminator wire: 'type', value: 'path'
+            field :path, wire: 'path', required: true
+          end
+
+          class ExtensionArchivePath < ::Data.define(:path)
+            include Serializable
+            discriminator wire: 'type', value: 'archivePath'
+            field :path, wire: 'path', required: true
+          end
+
+          class ExtensionBase64Encoded < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'base64'
+            field :value, wire: 'value', required: true
+          end
+
+          class InstallResult < ::Data.define(:extension)
+            include Serializable
+            field :extension, wire: 'extension', required: true
+          end
+
+          class Uninstall < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'webExtension.uninstall'
+            field :params, wire: 'params', required: true, ref: 'WebExtension::UninstallParameters'
+          end
+
+          class UninstallParameters < ::Data.define(:extension)
+            include Serializable
+            field :extension, wire: 'extension', required: true
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end
 
           def install(extension_data:)
-            @bidi.send_cmd('webExtension.install', extensionData: extension_data)
+            result = @bidi.send_cmd('webExtension.install', extensionData: extension_data)
+            Protocol.const_get('WebExtension::InstallResult').from_wire(result)
           end
 
           def uninstall(extension:)

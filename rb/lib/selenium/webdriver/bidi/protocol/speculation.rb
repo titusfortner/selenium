@@ -20,6 +20,19 @@ module Selenium
             failure: 'failure',
           }.freeze
 
+          class PrefetchStatusUpdated < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'speculation.prefetchStatusUpdated'
+            field :params, wire: 'params', required: true, ref: 'Speculation::PrefetchStatusUpdatedParameters'
+          end
+
+          class PrefetchStatusUpdatedParameters < ::Data.define(:context, :url, :status)
+            include Serializable
+            field :context, wire: 'context', required: true
+            field :url, wire: 'url', required: true
+            field :status, wire: 'status', required: true
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end

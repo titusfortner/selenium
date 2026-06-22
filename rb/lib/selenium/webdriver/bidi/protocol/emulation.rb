@@ -26,6 +26,194 @@ module Selenium
             landscape_secondary: 'landscape-secondary',
           }.freeze
 
+          class SetForcedColorsModeThemeOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setForcedColorsModeThemeOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetForcedColorsModeThemeOverrideParameters'
+          end
+
+          class SetForcedColorsModeThemeOverrideParameters < ::Data.define(:theme, :contexts, :user_contexts)
+            include Serializable
+            field :theme, wire: 'theme', required: true, nullable: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetGeolocationOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setGeolocationOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetGeolocationOverrideParameters'
+          end
+
+          class SetGeolocationOverrideParameters < Union
+            presence_variant 'Emulation::SetGeolocationOverrideParameters_Coordinates', requires: ['coordinates']
+            presence_variant 'Emulation::SetGeolocationOverrideParameters_Error', requires: ['error']
+          end
+
+          class GeolocationCoordinates < ::Data.define(:latitude, :longitude, :accuracy, :altitude, :altitude_accuracy, :heading, :speed)
+            include Serializable
+            field :latitude, wire: 'latitude', required: true
+            field :longitude, wire: 'longitude', required: true
+            field :accuracy, wire: 'accuracy'
+            field :altitude, wire: 'altitude', nullable: true
+            field :altitude_accuracy, wire: 'altitudeAccuracy', nullable: true
+            field :heading, wire: 'heading', nullable: true
+            field :speed, wire: 'speed', nullable: true
+          end
+
+          class GeolocationPositionError < ::Data.define
+            include Serializable
+            discriminator wire: 'type', value: 'positionUnavailable'
+          end
+
+          class SetLocaleOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setLocaleOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetLocaleOverrideParameters'
+          end
+
+          class SetLocaleOverrideParameters < ::Data.define(:locale, :contexts, :user_contexts)
+            include Serializable
+            field :locale, wire: 'locale', required: true, nullable: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetNetworkConditions < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setNetworkConditions'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetNetworkConditionsParameters'
+          end
+
+          class SetNetworkConditionsParameters < ::Data.define(:network_conditions, :contexts, :user_contexts)
+            include Serializable
+            field :network_conditions, wire: 'networkConditions', required: true, nullable: true, ref: 'Emulation::NetworkConditionsOffline'
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class NetworkConditionsOffline < ::Data.define
+            include Serializable
+            discriminator wire: 'type', value: 'offline'
+          end
+
+          class SetScreenSettingsOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setScreenSettingsOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetScreenSettingsOverrideParameters'
+          end
+
+          class ScreenArea < ::Data.define(:width, :height)
+            include Serializable
+            field :width, wire: 'width', required: true
+            field :height, wire: 'height', required: true
+          end
+
+          class SetScreenSettingsOverrideParameters < ::Data.define(:screen_area, :contexts, :user_contexts)
+            include Serializable
+            field :screen_area, wire: 'screenArea', required: true, nullable: true, ref: 'Emulation::ScreenArea'
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetScreenOrientationOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setScreenOrientationOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetScreenOrientationOverrideParameters'
+          end
+
+          class ScreenOrientation < ::Data.define(:natural, :type)
+            include Serializable
+            field :natural, wire: 'natural', required: true
+            field :type, wire: 'type', required: true
+          end
+
+          class SetScreenOrientationOverrideParameters < ::Data.define(:screen_orientation, :contexts, :user_contexts)
+            include Serializable
+            field :screen_orientation, wire: 'screenOrientation', required: true, nullable: true, ref: 'Emulation::ScreenOrientation'
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetUserAgentOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setUserAgentOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetUserAgentOverrideParameters'
+          end
+
+          class SetUserAgentOverrideParameters < ::Data.define(:user_agent, :contexts, :user_contexts)
+            include Serializable
+            field :user_agent, wire: 'userAgent', required: true, nullable: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetScriptingEnabled < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setScriptingEnabled'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetScriptingEnabledParameters'
+          end
+
+          class SetScriptingEnabledParameters < ::Data.define(:contexts, :user_contexts)
+            include Serializable
+            discriminator wire: 'enabled', value: false
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetScrollbarTypeOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setScrollbarTypeOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetScrollbarTypeOverrideParameters'
+          end
+
+          class SetScrollbarTypeOverrideParameters < ::Data.define(:scrollbar_type, :contexts, :user_contexts)
+            include Serializable
+            field :scrollbar_type, wire: 'scrollbarType', required: true, nullable: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetTimezoneOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setTimezoneOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetTimezoneOverrideParameters'
+          end
+
+          class SetTimezoneOverrideParameters < ::Data.define(:timezone, :contexts, :user_contexts)
+            include Serializable
+            field :timezone, wire: 'timezone', required: true, nullable: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetTouchOverride < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'emulation.setTouchOverride'
+            field :params, wire: 'params', required: true, ref: 'Emulation::SetTouchOverrideParameters'
+          end
+
+          class SetTouchOverrideParameters < ::Data.define(:max_touch_points, :contexts, :user_contexts)
+            include Serializable
+            field :max_touch_points, wire: 'maxTouchPoints', required: true, nullable: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class SetGeolocationOverrideParameters_Coordinates < ::Data.define(:contexts, :user_contexts, :coordinates)
+            include Serializable
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+            field :coordinates, wire: 'coordinates', required: true, nullable: true, ref: 'Emulation::GeolocationCoordinates'
+          end
+
+          class SetGeolocationOverrideParameters_Error < ::Data.define(:contexts, :user_contexts, :error)
+            include Serializable
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+            field :error, wire: 'error', required: true, ref: 'Emulation::GeolocationPositionError'
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end

@@ -56,16 +56,479 @@ module Selenium
             bypass: 'bypass',
           }.freeze
 
+          class AuthChallenge < ::Data.define(:scheme, :realm)
+            include Serializable
+            field :scheme, wire: 'scheme', required: true
+            field :realm, wire: 'realm', required: true
+          end
+
+          class AuthCredentials < ::Data.define(:username, :password)
+            include Serializable
+            discriminator wire: 'type', value: 'password'
+            field :username, wire: 'username', required: true
+            field :password, wire: 'password', required: true
+          end
+
+          class BaseParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts)
+            include Serializable
+            field :context, wire: 'context', required: true, nullable: true
+            field :is_blocked, wire: 'isBlocked', required: true
+            field :navigation, wire: 'navigation', required: true, nullable: true
+            field :redirect_count, wire: 'redirectCount', required: true
+            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
+            field :timestamp, wire: 'timestamp', required: true
+            field :user_context, wire: 'userContext', nullable: true
+            field :intercepts, wire: 'intercepts', list: true
+          end
+
+          class BytesValue < Union
+            discriminator_wire 'type'
+            variant 'string', 'Network::StringValue'
+            variant 'base64', 'Network::Base64Value'
+          end
+
+          class StringValue < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'string'
+            field :value, wire: 'value', required: true
+          end
+
+          class Base64Value < ::Data.define(:value)
+            include Serializable
+            discriminator wire: 'type', value: 'base64'
+            field :value, wire: 'value', required: true
+          end
+
+          class Cookie < ::Data.define(:name, :value, :domain, :path, :size, :http_only, :secure, :same_site, :expiry, :extensions)
+            include Serializable
+            extensible!
+            field :name, wire: 'name', required: true
+            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
+            field :domain, wire: 'domain', required: true
+            field :path, wire: 'path', required: true
+            field :size, wire: 'size', required: true
+            field :http_only, wire: 'httpOnly', required: true
+            field :secure, wire: 'secure', required: true
+            field :same_site, wire: 'sameSite', required: true
+            field :expiry, wire: 'expiry'
+          end
+
+          class CookieHeader < ::Data.define(:name, :value)
+            include Serializable
+            field :name, wire: 'name', required: true
+            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
+          end
+
+          class FetchTimingInfo < ::Data.define(:time_origin, :request_time, :redirect_start, :redirect_end, :fetch_start, :dns_start, :dns_end, :connect_start, :connect_end, :tls_start, :request_start, :response_start, :response_end)
+            include Serializable
+            field :time_origin, wire: 'timeOrigin', required: true
+            field :request_time, wire: 'requestTime', required: true
+            field :redirect_start, wire: 'redirectStart', required: true
+            field :redirect_end, wire: 'redirectEnd', required: true
+            field :fetch_start, wire: 'fetchStart', required: true
+            field :dns_start, wire: 'dnsStart', required: true
+            field :dns_end, wire: 'dnsEnd', required: true
+            field :connect_start, wire: 'connectStart', required: true
+            field :connect_end, wire: 'connectEnd', required: true
+            field :tls_start, wire: 'tlsStart', required: true
+            field :request_start, wire: 'requestStart', required: true
+            field :response_start, wire: 'responseStart', required: true
+            field :response_end, wire: 'responseEnd', required: true
+          end
+
+          class Header < ::Data.define(:name, :value)
+            include Serializable
+            field :name, wire: 'name', required: true
+            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
+          end
+
+          class Initiator < ::Data.define(:column_number, :line_number, :request, :stack_trace, :type)
+            include Serializable
+            field :column_number, wire: 'columnNumber'
+            field :line_number, wire: 'lineNumber'
+            field :request, wire: 'request'
+            field :stack_trace, wire: 'stackTrace', ref: 'Script::StackTrace'
+            field :type, wire: 'type'
+          end
+
+          class RequestData < ::Data.define(:request, :url, :method_, :headers, :cookies, :headers_size, :body_size, :destination, :initiator_type, :timings)
+            include Serializable
+            field :request, wire: 'request', required: true
+            field :url, wire: 'url', required: true
+            field :method_, wire: 'method', required: true
+            field :headers, wire: 'headers', required: true, ref: 'Network::Header', list: true
+            field :cookies, wire: 'cookies', required: true, ref: 'Network::Cookie', list: true
+            field :headers_size, wire: 'headersSize', required: true
+            field :body_size, wire: 'bodySize', required: true, nullable: true
+            field :destination, wire: 'destination', required: true
+            field :initiator_type, wire: 'initiatorType', required: true, nullable: true
+            field :timings, wire: 'timings', required: true, ref: 'Network::FetchTimingInfo'
+          end
+
+          class ResponseContent < ::Data.define(:size)
+            include Serializable
+            field :size, wire: 'size', required: true
+          end
+
+          class ResponseData < ::Data.define(:url, :protocol, :status, :status_text, :from_cache, :headers, :mime_type, :bytes_received, :headers_size, :body_size, :content, :auth_challenges)
+            include Serializable
+            field :url, wire: 'url', required: true
+            field :protocol, wire: 'protocol', required: true
+            field :status, wire: 'status', required: true
+            field :status_text, wire: 'statusText', required: true
+            field :from_cache, wire: 'fromCache', required: true
+            field :headers, wire: 'headers', required: true, ref: 'Network::Header', list: true
+            field :mime_type, wire: 'mimeType', required: true
+            field :bytes_received, wire: 'bytesReceived', required: true
+            field :headers_size, wire: 'headersSize', required: true, nullable: true
+            field :body_size, wire: 'bodySize', required: true, nullable: true
+            field :content, wire: 'content', required: true, ref: 'Network::ResponseContent'
+            field :auth_challenges, wire: 'authChallenges', ref: 'Network::AuthChallenge', list: true
+          end
+
+          class SetCookieHeader < ::Data.define(:name, :value, :domain, :http_only, :expiry, :max_age, :path, :same_site, :secure)
+            include Serializable
+            field :name, wire: 'name', required: true
+            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
+            field :domain, wire: 'domain'
+            field :http_only, wire: 'httpOnly'
+            field :expiry, wire: 'expiry'
+            field :max_age, wire: 'maxAge'
+            field :path, wire: 'path'
+            field :same_site, wire: 'sameSite'
+            field :secure, wire: 'secure'
+          end
+
+          class UrlPattern < Union
+            discriminator_wire 'type'
+            variant 'pattern', 'Network::UrlPatternPattern'
+            variant 'string', 'Network::UrlPatternString'
+          end
+
+          class UrlPatternPattern < ::Data.define(:protocol, :hostname, :port, :pathname, :search)
+            include Serializable
+            discriminator wire: 'type', value: 'pattern'
+            field :protocol, wire: 'protocol'
+            field :hostname, wire: 'hostname'
+            field :port, wire: 'port'
+            field :pathname, wire: 'pathname'
+            field :search, wire: 'search'
+          end
+
+          class UrlPatternString < ::Data.define(:pattern)
+            include Serializable
+            discriminator wire: 'type', value: 'string'
+            field :pattern, wire: 'pattern', required: true
+          end
+
+          class AddDataCollector < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.addDataCollector'
+            field :params, wire: 'params', required: true, ref: 'Network::AddDataCollectorParameters'
+          end
+
+          class AddDataCollectorParameters < ::Data.define(:data_types, :max_encoded_data_size, :collector_type, :contexts, :user_contexts)
+            include Serializable
+            field :data_types, wire: 'dataTypes', required: true, list: true
+            field :max_encoded_data_size, wire: 'maxEncodedDataSize', required: true
+            field :collector_type, wire: 'collectorType'
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class AddDataCollectorResult < ::Data.define(:collector)
+            include Serializable
+            field :collector, wire: 'collector', required: true
+          end
+
+          class AddIntercept < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.addIntercept'
+            field :params, wire: 'params', required: true, ref: 'Network::AddInterceptParameters'
+          end
+
+          class AddInterceptParameters < ::Data.define(:phases, :contexts, :url_patterns)
+            include Serializable
+            field :phases, wire: 'phases', required: true, list: true
+            field :contexts, wire: 'contexts', list: true
+            field :url_patterns, wire: 'urlPatterns', ref: 'Network::UrlPattern', list: true
+          end
+
+          class AddInterceptResult < ::Data.define(:intercept)
+            include Serializable
+            field :intercept, wire: 'intercept', required: true
+          end
+
+          class ContinueRequest < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.continueRequest'
+            field :params, wire: 'params', required: true, ref: 'Network::ContinueRequestParameters'
+          end
+
+          class ContinueRequestParameters < ::Data.define(:request, :body, :cookies, :headers, :method_, :url)
+            include Serializable
+            field :request, wire: 'request', required: true
+            field :body, wire: 'body', ref: 'Network::BytesValue'
+            field :cookies, wire: 'cookies', ref: 'Network::CookieHeader', list: true
+            field :headers, wire: 'headers', ref: 'Network::Header', list: true
+            field :method_, wire: 'method'
+            field :url, wire: 'url'
+          end
+
+          class ContinueResponse < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.continueResponse'
+            field :params, wire: 'params', required: true, ref: 'Network::ContinueResponseParameters'
+          end
+
+          class ContinueResponseParameters < ::Data.define(:request, :cookies, :credentials, :headers, :reason_phrase, :status_code)
+            include Serializable
+            field :request, wire: 'request', required: true
+            field :cookies, wire: 'cookies', ref: 'Network::SetCookieHeader', list: true
+            field :credentials, wire: 'credentials', ref: 'Network::AuthCredentials'
+            field :headers, wire: 'headers', ref: 'Network::Header', list: true
+            field :reason_phrase, wire: 'reasonPhrase'
+            field :status_code, wire: 'statusCode'
+          end
+
+          class ContinueWithAuth < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.continueWithAuth'
+            field :params, wire: 'params', required: true, ref: 'Network::ContinueWithAuthParameters'
+          end
+
+          class ContinueWithAuthParameters < Union
+            discriminator_wire 'action'
+            variant 'provideCredentials', 'Network::ContinueWithAuthParameters_Credentials'
+            fallback 'Network::ContinueWithAuthParameters_NoCredentials'
+          end
+
+          class DisownData < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.disownData'
+            field :params, wire: 'params', required: true, ref: 'Network::DisownDataParameters'
+          end
+
+          class DisownDataParameters < ::Data.define(:data_type, :collector, :request)
+            include Serializable
+            field :data_type, wire: 'dataType', required: true
+            field :collector, wire: 'collector', required: true
+            field :request, wire: 'request', required: true
+          end
+
+          class FailRequest < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.failRequest'
+            field :params, wire: 'params', required: true, ref: 'Network::FailRequestParameters'
+          end
+
+          class FailRequestParameters < ::Data.define(:request)
+            include Serializable
+            field :request, wire: 'request', required: true
+          end
+
+          class GetData < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.getData'
+            field :params, wire: 'params', required: true, ref: 'Network::GetDataParameters'
+          end
+
+          class GetDataParameters < ::Data.define(:data_type, :collector, :disown, :request)
+            include Serializable
+            field :data_type, wire: 'dataType', required: true
+            field :collector, wire: 'collector'
+            field :disown, wire: 'disown'
+            field :request, wire: 'request', required: true
+          end
+
+          class GetDataResult < ::Data.define(:bytes)
+            include Serializable
+            field :bytes, wire: 'bytes', required: true, ref: 'Network::BytesValue'
+          end
+
+          class ProvideResponse < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.provideResponse'
+            field :params, wire: 'params', required: true, ref: 'Network::ProvideResponseParameters'
+          end
+
+          class ProvideResponseParameters < ::Data.define(:request, :body, :cookies, :headers, :reason_phrase, :status_code)
+            include Serializable
+            field :request, wire: 'request', required: true
+            field :body, wire: 'body', ref: 'Network::BytesValue'
+            field :cookies, wire: 'cookies', ref: 'Network::SetCookieHeader', list: true
+            field :headers, wire: 'headers', ref: 'Network::Header', list: true
+            field :reason_phrase, wire: 'reasonPhrase'
+            field :status_code, wire: 'statusCode'
+          end
+
+          class RemoveDataCollector < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.removeDataCollector'
+            field :params, wire: 'params', required: true, ref: 'Network::RemoveDataCollectorParameters'
+          end
+
+          class RemoveDataCollectorParameters < ::Data.define(:collector)
+            include Serializable
+            field :collector, wire: 'collector', required: true
+          end
+
+          class RemoveIntercept < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.removeIntercept'
+            field :params, wire: 'params', required: true, ref: 'Network::RemoveInterceptParameters'
+          end
+
+          class RemoveInterceptParameters < ::Data.define(:intercept)
+            include Serializable
+            field :intercept, wire: 'intercept', required: true
+          end
+
+          class SetCacheBehavior < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.setCacheBehavior'
+            field :params, wire: 'params', required: true, ref: 'Network::SetCacheBehaviorParameters'
+          end
+
+          class SetCacheBehaviorParameters < ::Data.define(:cache_behavior, :contexts)
+            include Serializable
+            field :cache_behavior, wire: 'cacheBehavior', required: true
+            field :contexts, wire: 'contexts', list: true
+          end
+
+          class SetExtraHeaders < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.setExtraHeaders'
+            field :params, wire: 'params', required: true, ref: 'Network::SetExtraHeadersParameters'
+          end
+
+          class SetExtraHeadersParameters < ::Data.define(:headers, :contexts, :user_contexts)
+            include Serializable
+            field :headers, wire: 'headers', required: true, ref: 'Network::Header', list: true
+            field :contexts, wire: 'contexts', list: true
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class AuthRequired < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.authRequired'
+            field :params, wire: 'params', required: true, ref: 'Network::AuthRequiredParameters'
+          end
+
+          class AuthRequiredParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :response)
+            include Serializable
+            field :context, wire: 'context', required: true, nullable: true
+            field :is_blocked, wire: 'isBlocked', required: true
+            field :navigation, wire: 'navigation', required: true, nullable: true
+            field :redirect_count, wire: 'redirectCount', required: true
+            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
+            field :timestamp, wire: 'timestamp', required: true
+            field :user_context, wire: 'userContext', nullable: true
+            field :intercepts, wire: 'intercepts', list: true
+            field :response, wire: 'response', required: true, ref: 'Network::ResponseData'
+          end
+
+          class BeforeRequestSent < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.beforeRequestSent'
+            field :params, wire: 'params', required: true, ref: 'Network::BeforeRequestSentParameters'
+          end
+
+          class BeforeRequestSentParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :initiator)
+            include Serializable
+            field :context, wire: 'context', required: true, nullable: true
+            field :is_blocked, wire: 'isBlocked', required: true
+            field :navigation, wire: 'navigation', required: true, nullable: true
+            field :redirect_count, wire: 'redirectCount', required: true
+            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
+            field :timestamp, wire: 'timestamp', required: true
+            field :user_context, wire: 'userContext', nullable: true
+            field :intercepts, wire: 'intercepts', list: true
+            field :initiator, wire: 'initiator', ref: 'Network::Initiator'
+          end
+
+          class FetchError < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.fetchError'
+            field :params, wire: 'params', required: true, ref: 'Network::FetchErrorParameters'
+          end
+
+          class FetchErrorParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :error_text)
+            include Serializable
+            field :context, wire: 'context', required: true, nullable: true
+            field :is_blocked, wire: 'isBlocked', required: true
+            field :navigation, wire: 'navigation', required: true, nullable: true
+            field :redirect_count, wire: 'redirectCount', required: true
+            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
+            field :timestamp, wire: 'timestamp', required: true
+            field :user_context, wire: 'userContext', nullable: true
+            field :intercepts, wire: 'intercepts', list: true
+            field :error_text, wire: 'errorText', required: true
+          end
+
+          class ResponseCompleted < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.responseCompleted'
+            field :params, wire: 'params', required: true, ref: 'Network::ResponseCompletedParameters'
+          end
+
+          class ResponseCompletedParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :response)
+            include Serializable
+            field :context, wire: 'context', required: true, nullable: true
+            field :is_blocked, wire: 'isBlocked', required: true
+            field :navigation, wire: 'navigation', required: true, nullable: true
+            field :redirect_count, wire: 'redirectCount', required: true
+            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
+            field :timestamp, wire: 'timestamp', required: true
+            field :user_context, wire: 'userContext', nullable: true
+            field :intercepts, wire: 'intercepts', list: true
+            field :response, wire: 'response', required: true, ref: 'Network::ResponseData'
+          end
+
+          class ResponseStarted < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'network.responseStarted'
+            field :params, wire: 'params', required: true, ref: 'Network::ResponseStartedParameters'
+          end
+
+          class ResponseStartedParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :response)
+            include Serializable
+            field :context, wire: 'context', required: true, nullable: true
+            field :is_blocked, wire: 'isBlocked', required: true
+            field :navigation, wire: 'navigation', required: true, nullable: true
+            field :redirect_count, wire: 'redirectCount', required: true
+            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
+            field :timestamp, wire: 'timestamp', required: true
+            field :user_context, wire: 'userContext', nullable: true
+            field :intercepts, wire: 'intercepts', list: true
+            field :response, wire: 'response', required: true, ref: 'Network::ResponseData'
+          end
+
+          class ContinueWithAuthParameters_Credentials < ::Data.define(:request, :credentials)
+            include Serializable
+            discriminator wire: 'action', value: 'provideCredentials'
+            field :request, wire: 'request', required: true
+            field :credentials, wire: 'credentials', required: true, ref: 'Network::AuthCredentials'
+          end
+
+          class ContinueWithAuthParameters_NoCredentials < ::Data.define(:request, :action)
+            include Serializable
+            field :request, wire: 'request', required: true
+            field :action, wire: 'action', required: true
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end
 
           def add_data_collector(data_types:, max_encoded_data_size:, collector_type: nil, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('network.addDataCollector', dataTypes: data_types, maxEncodedDataSize: max_encoded_data_size, collectorType: collector_type, contexts: contexts, userContexts: user_contexts)
+            result = @bidi.send_cmd('network.addDataCollector', dataTypes: data_types, maxEncodedDataSize: max_encoded_data_size, collectorType: collector_type, contexts: contexts, userContexts: user_contexts)
+            Protocol.const_get('Network::AddDataCollectorResult').from_wire(result)
           end
 
           def add_intercept(phases:, contexts: nil, url_patterns: nil)
-            @bidi.send_cmd('network.addIntercept', phases: phases, contexts: contexts, urlPatterns: url_patterns)
+            result = @bidi.send_cmd('network.addIntercept', phases: phases, contexts: contexts, urlPatterns: url_patterns)
+            Protocol.const_get('Network::AddInterceptResult').from_wire(result)
           end
 
           def continue_request(request:, body: nil, cookies: nil, headers: nil, method: nil, url: nil)
@@ -89,7 +552,8 @@ module Selenium
           end
 
           def get_data(data_type:, request:, collector: nil, disown: nil)
-            @bidi.send_cmd('network.getData', dataType: data_type, collector: collector, disown: disown, request: request)
+            result = @bidi.send_cmd('network.getData', dataType: data_type, collector: collector, disown: disown, request: request)
+            Protocol.const_get('Network::GetDataResult').from_wire(result)
           end
 
           def provide_response(request:, body: nil, cookies: nil, headers: nil, reason_phrase: nil, status_code: nil)

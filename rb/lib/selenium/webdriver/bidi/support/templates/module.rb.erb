@@ -25,28 +25,64 @@ module Selenium
           }.freeze
 
 <%- end -%>
+<%- mod.types.each do |type| -%>
+<%- if type.union? -%>
+          class <%= type.ruby_name %> < Union
+<%- if type.discriminator_wire -%>
+            discriminator_wire '<%= type.discriminator_wire %>'
+<%- end -%>
+<%- type.variants.each do |variant| -%>
+<%- if variant.mode == :value -%>
+            variant <%= BiDiGenerate.ruby_literal(variant.value) %>, '<%= variant.ref %>'
+<%- elsif variant.mode == :fallback -%>
+            fallback '<%= variant.ref %>'
+<%- else -%>
+            presence_variant '<%= variant.ref %>', requires: [<%= variant.requires.map { |w| "'#{w}'" }.join(', ') %>]
+<%- end -%>
+<%- end -%>
+          end
+
+<%- else -%>
+          class <%= type.ruby_name %> < <%= type.data_define %>
+            include Serializable
+<%- if type.discriminator -%>
+            discriminator wire: '<%= type.discriminator[:wire] %>', value: <%= BiDiGenerate.ruby_literal(type.discriminator[:value]) %>
+<%- end -%>
+<%- if type.extensible -%>
+            extensible!
+<%- end -%>
+<%- type.fields.each do |field| -%>
+            field :<%= field.ruby_name %>, wire: '<%= field.wire %>'<%= field.opts %>
+<%- end -%>
+          end
+
+<%- end -%>
+<%- end -%>
           def initialize(bidi)
             @bidi = bidi
           end
 
 <%- mod.commands.each do |cmd| -%>
 <%- if cmd.passthrough -%>
+<%- signature = '(**params)' -%>
+<%- call = "@bidi.send_cmd('#{cmd.wire_name}', **params)" -%>
           # params are a spec union; forward verbatim until variant dispatch lands
-          def <%= cmd.method_name %>(**params)
-            @bidi.send_cmd('<%= cmd.wire_name %>', **params)
-          end
-
 <%- elsif cmd.params.empty? -%>
-          def <%= cmd.method_name %>
-            @bidi.send_cmd('<%= cmd.wire_name %>')
-          end
-
+<%- signature = '' -%>
+<%- call = "@bidi.send_cmd('#{cmd.wire_name}')" -%>
 <%- else -%>
-          def <%= cmd.method_name %>(<%= cmd.signature %>)
-            @bidi.send_cmd('<%= cmd.wire_name %>', <%= cmd.send_args_str %>)
+<%- signature = "(#{cmd.signature})" -%>
+<%- call = "@bidi.send_cmd('#{cmd.wire_name}', #{cmd.send_args_str})" -%>
+<%- end -%>
+          def <%= cmd.method_name %><%= signature %>
+<%- if cmd.result_ref -%>
+            result = <%= call %>
+            Protocol.const_get('<%= cmd.result_ref %>').from_wire(result)
+<%- else -%>
+            <%= call %>
+<%- end -%>
           end
 
-<%- end -%>
 <%- end -%>
         end # <%= mod.ruby_class %>
       end # Protocol

@@ -9,20 +9,129 @@ module Selenium
     class BiDi
       module Protocol
         class Storage
+          class PartitionKey < ::Data.define(:user_context, :source_origin, :extensions)
+            include Serializable
+            extensible!
+            field :user_context, wire: 'userContext'
+            field :source_origin, wire: 'sourceOrigin'
+          end
+
+          class GetCookies < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'storage.getCookies'
+            field :params, wire: 'params', required: true, ref: 'Storage::GetCookiesParameters'
+          end
+
+          class CookieFilter < ::Data.define(:name, :value, :domain, :path, :size, :http_only, :secure, :same_site, :expiry, :extensions)
+            include Serializable
+            extensible!
+            field :name, wire: 'name'
+            field :value, wire: 'value', ref: 'Network::BytesValue'
+            field :domain, wire: 'domain'
+            field :path, wire: 'path'
+            field :size, wire: 'size'
+            field :http_only, wire: 'httpOnly'
+            field :secure, wire: 'secure'
+            field :same_site, wire: 'sameSite'
+            field :expiry, wire: 'expiry'
+          end
+
+          class BrowsingContextPartitionDescriptor < ::Data.define(:context)
+            include Serializable
+            discriminator wire: 'type', value: 'context'
+            field :context, wire: 'context', required: true
+          end
+
+          class StorageKeyPartitionDescriptor < ::Data.define(:user_context, :source_origin, :extensions)
+            include Serializable
+            discriminator wire: 'type', value: 'storageKey'
+            extensible!
+            field :user_context, wire: 'userContext'
+            field :source_origin, wire: 'sourceOrigin'
+          end
+
+          class PartitionDescriptor < Union
+            discriminator_wire 'type'
+            variant 'context', 'Storage::BrowsingContextPartitionDescriptor'
+            variant 'storageKey', 'Storage::StorageKeyPartitionDescriptor'
+          end
+
+          class GetCookiesParameters < ::Data.define(:filter, :partition)
+            include Serializable
+            field :filter, wire: 'filter', ref: 'Storage::CookieFilter'
+            field :partition, wire: 'partition', ref: 'Storage::PartitionDescriptor'
+          end
+
+          class GetCookiesResult < ::Data.define(:cookies, :partition_key)
+            include Serializable
+            field :cookies, wire: 'cookies', required: true, ref: 'Network::Cookie', list: true
+            field :partition_key, wire: 'partitionKey', required: true, ref: 'Storage::PartitionKey'
+          end
+
+          class SetCookie < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'storage.setCookie'
+            field :params, wire: 'params', required: true, ref: 'Storage::SetCookieParameters'
+          end
+
+          class PartialCookie < ::Data.define(:name, :value, :domain, :path, :http_only, :secure, :same_site, :expiry, :extensions)
+            include Serializable
+            extensible!
+            field :name, wire: 'name', required: true
+            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
+            field :domain, wire: 'domain', required: true
+            field :path, wire: 'path'
+            field :http_only, wire: 'httpOnly'
+            field :secure, wire: 'secure'
+            field :same_site, wire: 'sameSite'
+            field :expiry, wire: 'expiry'
+          end
+
+          class SetCookieParameters < ::Data.define(:cookie, :partition)
+            include Serializable
+            field :cookie, wire: 'cookie', required: true, ref: 'Storage::PartialCookie'
+            field :partition, wire: 'partition', ref: 'Storage::PartitionDescriptor'
+          end
+
+          class SetCookieResult < ::Data.define(:partition_key)
+            include Serializable
+            field :partition_key, wire: 'partitionKey', required: true, ref: 'Storage::PartitionKey'
+          end
+
+          class DeleteCookies < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'storage.deleteCookies'
+            field :params, wire: 'params', required: true, ref: 'Storage::DeleteCookiesParameters'
+          end
+
+          class DeleteCookiesParameters < ::Data.define(:filter, :partition)
+            include Serializable
+            field :filter, wire: 'filter', ref: 'Storage::CookieFilter'
+            field :partition, wire: 'partition', ref: 'Storage::PartitionDescriptor'
+          end
+
+          class DeleteCookiesResult < ::Data.define(:partition_key)
+            include Serializable
+            field :partition_key, wire: 'partitionKey', required: true, ref: 'Storage::PartitionKey'
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end
 
           def delete_cookies(filter: nil, partition: nil)
-            @bidi.send_cmd('storage.deleteCookies', filter: filter, partition: partition)
+            result = @bidi.send_cmd('storage.deleteCookies', filter: filter, partition: partition)
+            Protocol.const_get('Storage::DeleteCookiesResult').from_wire(result)
           end
 
           def get_cookies(filter: nil, partition: nil)
-            @bidi.send_cmd('storage.getCookies', filter: filter, partition: partition)
+            result = @bidi.send_cmd('storage.getCookies', filter: filter, partition: partition)
+            Protocol.const_get('Storage::GetCookiesResult').from_wire(result)
           end
 
           def set_cookie(cookie:, partition: nil)
-            @bidi.send_cmd('storage.setCookie', cookie: cookie, partition: partition)
+            result = @bidi.send_cmd('storage.setCookie', cookie: cookie, partition: partition)
+            Protocol.const_get('Storage::SetCookieResult').from_wire(result)
           end
 
         end # Storage

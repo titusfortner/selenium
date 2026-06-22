@@ -22,6 +22,131 @@ module Selenium
             minimized: 'minimized',
           }.freeze
 
+          class ClientWindowInfo < ::Data.define(:active, :client_window, :height, :state, :width, :x, :y)
+            include Serializable
+            field :active, wire: 'active', required: true
+            field :client_window, wire: 'clientWindow', required: true
+            field :height, wire: 'height', required: true
+            field :state, wire: 'state', required: true
+            field :width, wire: 'width', required: true
+            field :x, wire: 'x', required: true
+            field :y, wire: 'y', required: true
+          end
+
+          class UserContextInfo < ::Data.define(:user_context)
+            include Serializable
+            field :user_context, wire: 'userContext', required: true
+          end
+
+          class Close < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.close'
+            field :params, wire: 'params', required: true
+          end
+
+          class CreateUserContext < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.createUserContext'
+            field :params, wire: 'params', required: true, ref: 'Browser::CreateUserContextParameters'
+          end
+
+          class CreateUserContextParameters < ::Data.define(:accept_insecure_certs, :proxy, :unhandled_prompt_behavior)
+            include Serializable
+            field :accept_insecure_certs, wire: 'acceptInsecureCerts'
+            field :proxy, wire: 'proxy', ref: 'Session::ProxyConfiguration'
+            field :unhandled_prompt_behavior, wire: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'
+          end
+
+          class GetClientWindows < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.getClientWindows'
+            field :params, wire: 'params', required: true
+          end
+
+          class GetClientWindowsResult < ::Data.define(:client_windows)
+            include Serializable
+            field :client_windows, wire: 'clientWindows', required: true, ref: 'Browser::ClientWindowInfo', list: true
+          end
+
+          class GetUserContexts < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.getUserContexts'
+            field :params, wire: 'params', required: true
+          end
+
+          class GetUserContextsResult < ::Data.define(:user_contexts)
+            include Serializable
+            field :user_contexts, wire: 'userContexts', required: true, ref: 'Browser::UserContextInfo', list: true
+          end
+
+          class RemoveUserContext < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.removeUserContext'
+            field :params, wire: 'params', required: true, ref: 'Browser::RemoveUserContextParameters'
+          end
+
+          class RemoveUserContextParameters < ::Data.define(:user_context)
+            include Serializable
+            field :user_context, wire: 'userContext', required: true
+          end
+
+          class SetClientWindowState < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.setClientWindowState'
+            field :params, wire: 'params', required: true, ref: 'Browser::SetClientWindowStateParameters'
+          end
+
+          class SetClientWindowStateParameters < Union
+            discriminator_wire 'state'
+            fallback 'Browser::SetClientWindowStateParameters_ClientWindowNamedState'
+            variant 'normal', 'Browser::SetClientWindowStateParameters_ClientWindowRectState'
+          end
+
+          class SetDownloadBehavior < ::Data.define(:params)
+            include Serializable
+            discriminator wire: 'method', value: 'browser.setDownloadBehavior'
+            field :params, wire: 'params', required: true, ref: 'Browser::SetDownloadBehaviorParameters'
+          end
+
+          class SetDownloadBehaviorParameters < ::Data.define(:download_behavior, :user_contexts)
+            include Serializable
+            field :download_behavior, wire: 'downloadBehavior', required: true, nullable: true, ref: 'Browser::DownloadBehavior'
+            field :user_contexts, wire: 'userContexts', list: true
+          end
+
+          class DownloadBehavior < Union
+            discriminator_wire 'type'
+            variant 'allowed', 'Browser::DownloadBehavior_Allowed'
+            variant 'denied', 'Browser::DownloadBehavior_Denied'
+          end
+
+          class SetClientWindowStateParameters_ClientWindowNamedState < ::Data.define(:client_window, :state)
+            include Serializable
+            field :client_window, wire: 'clientWindow', required: true
+            field :state, wire: 'state', required: true
+          end
+
+          class SetClientWindowStateParameters_ClientWindowRectState < ::Data.define(:client_window, :width, :height, :x, :y)
+            include Serializable
+            discriminator wire: 'state', value: 'normal'
+            field :client_window, wire: 'clientWindow', required: true
+            field :width, wire: 'width'
+            field :height, wire: 'height'
+            field :x, wire: 'x'
+            field :y, wire: 'y'
+          end
+
+          class DownloadBehavior_Allowed < ::Data.define(:destination_folder)
+            include Serializable
+            discriminator wire: 'type', value: 'allowed'
+            field :destination_folder, wire: 'destinationFolder', required: true
+          end
+
+          class DownloadBehavior_Denied < ::Data.define
+            include Serializable
+            discriminator wire: 'type', value: 'denied'
+          end
+
           def initialize(bidi)
             @bidi = bidi
           end
@@ -31,15 +156,18 @@ module Selenium
           end
 
           def create_user_context(accept_insecure_certs: nil, proxy: nil, unhandled_prompt_behavior: nil)
-            @bidi.send_cmd('browser.createUserContext', acceptInsecureCerts: accept_insecure_certs, proxy: proxy, unhandledPromptBehavior: unhandled_prompt_behavior)
+            result = @bidi.send_cmd('browser.createUserContext', acceptInsecureCerts: accept_insecure_certs, proxy: proxy, unhandledPromptBehavior: unhandled_prompt_behavior)
+            Protocol.const_get('Browser::UserContextInfo').from_wire(result)
           end
 
           def get_client_windows
-            @bidi.send_cmd('browser.getClientWindows')
+            result = @bidi.send_cmd('browser.getClientWindows')
+            Protocol.const_get('Browser::GetClientWindowsResult').from_wire(result)
           end
 
           def get_user_contexts
-            @bidi.send_cmd('browser.getUserContexts')
+            result = @bidi.send_cmd('browser.getUserContexts')
+            Protocol.const_get('Browser::GetUserContextsResult').from_wire(result)
           end
 
           def remove_user_context(user_context:)
@@ -47,7 +175,8 @@ module Selenium
           end
 
           def set_client_window_state(client_window:, state:, width: nil, height: nil, x: nil, y: nil)
-            @bidi.send_cmd('browser.setClientWindowState', clientWindow: client_window, state: state, width: width, height: height, x: x, y: y)
+            result = @bidi.send_cmd('browser.setClientWindowState', clientWindow: client_window, state: state, width: width, height: height, x: x, y: y)
+            Protocol.const_get('Browser::ClientWindowInfo').from_wire(result)
           end
 
           def set_download_behavior(download_behavior:, user_contexts: nil)
