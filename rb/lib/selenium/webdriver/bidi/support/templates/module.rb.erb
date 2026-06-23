@@ -46,10 +46,21 @@ module Selenium
 <%- if type.fallback_variant -%>
             fallback '<%= type.fallback_variant.ref %>'
 <%- end -%>
+<%- type.nested_types.each do |nested| -%>
+
+            class <%= nested.ruby_name %> < Data.define(<%= nested.define_args %>); end
+<%- end -%>
           end
 
-<%- else -%>
+<%- elsif type.nested_types.empty? -%>
           class <%= type.ruby_name %> < Data.define(<%= type.define_args %>); end
+
+<%- else -%>
+          class <%= type.ruby_name %> < Data.define(<%= type.define_args %>)
+<%- type.nested_types.each do |nested| -%>
+            class <%= nested.ruby_name %> < Data.define(<%= nested.define_args %>); end
+<%- end -%>
+          end
 
 <%- end -%>
 <%- end -%>

@@ -72,11 +72,15 @@ module Selenium
             )
           end
 
-          class AccessibilityLocator < Data.define(type: {fixed: 'accessibility'}, value: {json_key: 'value', ref: 'BrowsingContext::AccessibilityLocatorValue'}); end
+          class AccessibilityLocator < Data.define(type: {fixed: 'accessibility'}, value: {json_key: 'value', ref: 'BrowsingContext::AccessibilityLocator::Value'})
+            class Value < Data.define(name: 'name', role: 'role'); end
+          end
 
           class CssLocator < Data.define(type: {fixed: 'css'}, value: 'value'); end
 
-          class ContextLocator < Data.define(type: {fixed: 'context'}, value: {json_key: 'value', ref: 'BrowsingContext::ContextLocatorValue'}); end
+          class ContextLocator < Data.define(type: {fixed: 'context'}, value: {json_key: 'value', ref: 'BrowsingContext::ContextLocator::Value'})
+            class Value < Data.define(context: 'context'); end
+          end
 
           class InnerTextLocator < Data.define(type: {fixed: 'innerText'}, value: 'value', ignore_case: 'ignoreCase', match_type: 'matchType', max_depth: 'maxDepth'); end
 
@@ -195,9 +199,13 @@ module Selenium
           class DownloadEndParams < Union
             discriminator 'status'
             variants(
-              'canceled' => 'BrowsingContext::DownloadEndParams_CanceledParams',
-              'complete' => 'BrowsingContext::DownloadEndParams_CompleteParams',
+              'canceled' => 'BrowsingContext::DownloadEndParams::CanceledParams',
+              'complete' => 'BrowsingContext::DownloadEndParams::CompleteParams',
             )
+
+            class CanceledParams < Data.define(status: {fixed: 'canceled'}, context: 'context', navigation: {json_key: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
+
+            class CompleteParams < Data.define(status: {fixed: 'complete'}, filepath: {json_key: 'filepath', nullable: true}, context: 'context', navigation: {json_key: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
           end
 
           class NavigationAborted < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigationAborted'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
@@ -213,14 +221,6 @@ module Selenium
           class UserPromptOpened < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.userPromptOpened'}, params: {json_key: 'params', ref: 'BrowsingContext::UserPromptOpenedParameters'}); end
 
           class UserPromptOpenedParameters < Data.define(context: 'context', handler: 'handler', message: 'message', type: 'type', user_context: 'userContext', default_value: 'defaultValue'); end
-
-          class DownloadEndParams_CanceledParams < Data.define(status: {fixed: 'canceled'}, context: 'context', navigation: {json_key: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
-
-          class DownloadEndParams_CompleteParams < Data.define(status: {fixed: 'complete'}, filepath: {json_key: 'filepath', nullable: true}, context: 'context', navigation: {json_key: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
-
-          class AccessibilityLocatorValue < Data.define(name: 'name', role: 'role'); end
-
-          class ContextLocatorValue < Data.define(context: 'context'); end
 
           def initialize(bidi)
             @bidi = bidi

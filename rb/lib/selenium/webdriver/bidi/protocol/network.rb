@@ -129,9 +129,13 @@ module Selenium
           class ContinueWithAuthParameters < Union
             discriminator 'action'
             variants(
-              'provideCredentials' => 'Network::ContinueWithAuthParameters_Credentials',
+              'provideCredentials' => 'Network::ContinueWithAuthParameters::Credentials',
             )
-            fallback 'Network::ContinueWithAuthParameters_NoCredentials'
+            fallback 'Network::ContinueWithAuthParameters::NoCredentials'
+
+            class Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}); end
+
+            class NoCredentials < Data.define(request: 'request', action: 'action'); end
           end
 
           class DisownData < Data.define(method_: {json_key: 'method', fixed: 'network.disownData'}, params: {json_key: 'params', ref: 'Network::DisownDataParameters'}); end
@@ -187,10 +191,6 @@ module Selenium
           class ResponseStarted < Data.define(method_: {json_key: 'method', fixed: 'network.responseStarted'}, params: {json_key: 'params', ref: 'Network::ResponseStartedParameters'}); end
 
           class ResponseStartedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
-
-          class ContinueWithAuthParameters_Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}); end
-
-          class ContinueWithAuthParameters_NoCredentials < Data.define(request: 'request', action: 'action'); end
 
           def initialize(bidi)
             @bidi = bidi

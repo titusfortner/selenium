@@ -73,9 +73,13 @@ module Selenium
           class HandleRequestDevicePromptParameters < Union
             discriminator 'accept'
             variants(
-              true => 'Bluetooth::HandleRequestDevicePromptParameters_AcceptParameters',
-              false => 'Bluetooth::HandleRequestDevicePromptParameters_CancelParameters',
+              true => 'Bluetooth::HandleRequestDevicePromptParameters::AcceptParameters',
+              false => 'Bluetooth::HandleRequestDevicePromptParameters::CancelParameters',
             )
+
+            class AcceptParameters < Data.define(accept: {fixed: true}, context: 'context', prompt: 'prompt', device: 'device'); end
+
+            class CancelParameters < Data.define(accept: {fixed: false}, context: 'context', prompt: 'prompt'); end
           end
 
           class SimulateAdapter < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateAdapter'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateAdapterParameters'}); end
@@ -139,10 +143,6 @@ module Selenium
           class DescriptorEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.descriptorEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::DescriptorEventGeneratedParameters'}); end
 
           class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', data: {json_key: 'data', list: true}); end
-
-          class HandleRequestDevicePromptParameters_AcceptParameters < Data.define(accept: {fixed: true}, context: 'context', prompt: 'prompt', device: 'device'); end
-
-          class HandleRequestDevicePromptParameters_CancelParameters < Data.define(accept: {fixed: false}, context: 'context', prompt: 'prompt'); end
 
           def initialize(bidi)
             @bidi = bidi

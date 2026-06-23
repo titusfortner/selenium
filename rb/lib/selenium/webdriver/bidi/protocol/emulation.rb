@@ -34,9 +34,13 @@ module Selenium
 
           class SetGeolocationOverrideParameters < Union
             presence(
-              'Emulation::SetGeolocationOverrideParameters_Coordinates' => ['coordinates'],
-              'Emulation::SetGeolocationOverrideParameters_Error' => ['error'],
+              'Emulation::SetGeolocationOverrideParameters::Coordinates' => ['coordinates'],
+              'Emulation::SetGeolocationOverrideParameters::Error' => ['error'],
             )
+
+            class Coordinates < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, coordinates: {json_key: 'coordinates', nullable: true, ref: 'Emulation::GeolocationCoordinates'}); end
+
+            class Error < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, error: {json_key: 'error', ref: 'Emulation::GeolocationPositionError'}); end
           end
 
           class GeolocationCoordinates < Data.define(latitude: 'latitude', longitude: 'longitude', accuracy: 'accuracy', altitude: {json_key: 'altitude', nullable: true}, altitude_accuracy: {json_key: 'altitudeAccuracy', nullable: true}, heading: {json_key: 'heading', nullable: true}, speed: {json_key: 'speed', nullable: true}); end
@@ -84,10 +88,6 @@ module Selenium
           class SetTouchOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setTouchOverride'}, params: {json_key: 'params', ref: 'Emulation::SetTouchOverrideParameters'}); end
 
           class SetTouchOverrideParameters < Data.define(max_touch_points: {json_key: 'maxTouchPoints', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
-
-          class SetGeolocationOverrideParameters_Coordinates < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, coordinates: {json_key: 'coordinates', nullable: true, ref: 'Emulation::GeolocationCoordinates'}); end
-
-          class SetGeolocationOverrideParameters_Error < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, error: {json_key: 'error', ref: 'Emulation::GeolocationPositionError'}); end
 
           def initialize(bidi)
             @bidi = bidi

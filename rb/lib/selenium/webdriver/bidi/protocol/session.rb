@@ -58,7 +58,9 @@ module Selenium
 
           class NewParameters < Data.define(capabilities: {json_key: 'capabilities', ref: 'Session::CapabilitiesRequest'}); end
 
-          class NewResult < Data.define(session_id: 'sessionId', capabilities: {json_key: 'capabilities', ref: 'Session::NewResultCapabilities'}); end
+          class NewResult < Data.define(session_id: 'sessionId', capabilities: {json_key: 'capabilities', ref: 'Session::NewResult::Capabilities'})
+            class Capabilities < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', set_window_rect: 'setWindowRect', user_agent: 'userAgent', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, web_socket_url: 'webSocketUrl', extensible: true); end
+          end
 
           class End < Data.define(method_: {json_key: 'method', fixed: 'session.end'}, params: 'params'); end
 
@@ -74,8 +76,6 @@ module Selenium
               'Session::UnsubscribeByIDRequest' => ['subscriptions'],
             )
           end
-
-          class NewResultCapabilities < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', set_window_rect: 'setWindowRect', user_agent: 'userAgent', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, web_socket_url: 'webSocketUrl', extensible: true); end
 
           def initialize(bidi)
             @bidi = bidi

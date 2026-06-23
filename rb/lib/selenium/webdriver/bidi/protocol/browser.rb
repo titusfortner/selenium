@@ -49,9 +49,13 @@ module Selenium
           class SetClientWindowStateParameters < Union
             discriminator 'state'
             variants(
-              'normal' => 'Browser::SetClientWindowStateParameters_ClientWindowRectState',
+              'normal' => 'Browser::SetClientWindowStateParameters::ClientWindowRectState',
             )
-            fallback 'Browser::SetClientWindowStateParameters_ClientWindowNamedState'
+            fallback 'Browser::SetClientWindowStateParameters::ClientWindowNamedState'
+
+            class ClientWindowNamedState < Data.define(client_window: 'clientWindow', state: 'state'); end
+
+            class ClientWindowRectState < Data.define(state: {fixed: 'normal'}, client_window: 'clientWindow', width: 'width', height: 'height', x: 'x', y: 'y'); end
           end
 
           class SetDownloadBehavior < Data.define(method_: {json_key: 'method', fixed: 'browser.setDownloadBehavior'}, params: {json_key: 'params', ref: 'Browser::SetDownloadBehaviorParameters'}); end
@@ -61,18 +65,14 @@ module Selenium
           class DownloadBehavior < Union
             discriminator 'type'
             variants(
-              'allowed' => 'Browser::DownloadBehavior_Allowed',
-              'denied' => 'Browser::DownloadBehavior_Denied',
+              'allowed' => 'Browser::DownloadBehavior::Allowed',
+              'denied' => 'Browser::DownloadBehavior::Denied',
             )
+
+            class Allowed < Data.define(type: {fixed: 'allowed'}, destination_folder: 'destinationFolder'); end
+
+            class Denied < Data.define(type: {fixed: 'denied'}); end
           end
-
-          class SetClientWindowStateParameters_ClientWindowNamedState < Data.define(client_window: 'clientWindow', state: 'state'); end
-
-          class SetClientWindowStateParameters_ClientWindowRectState < Data.define(state: {fixed: 'normal'}, client_window: 'clientWindow', width: 'width', height: 'height', x: 'x', y: 'y'); end
-
-          class DownloadBehavior_Allowed < Data.define(type: {fixed: 'allowed'}, destination_folder: 'destinationFolder'); end
-
-          class DownloadBehavior_Denied < Data.define(type: {fixed: 'denied'}); end
 
           def initialize(bidi)
             @bidi = bidi
