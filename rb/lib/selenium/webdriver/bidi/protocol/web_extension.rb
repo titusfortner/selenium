@@ -9,9 +9,9 @@ module Selenium
     class BiDi
       module Protocol
         class WebExtension
-          class Install < Data.define(method_: {wire: 'method', fixed: 'webExtension.install'}, params: {wire: 'params', ref: 'WebExtension::InstallParameters'}); end
+          class Install < Data.define(method_: {json_key: 'method', fixed: 'webExtension.install'}, params: {json_key: 'params', ref: 'WebExtension::InstallParameters'}); end
 
-          class InstallParameters < Data.define(extension_data: {wire: 'extensionData', ref: 'WebExtension::ExtensionData'}); end
+          class InstallParameters < Data.define(extension_data: {json_key: 'extensionData', ref: 'WebExtension::ExtensionData'}); end
 
           class ExtensionData < Union
             discriminator 'type'
@@ -30,7 +30,7 @@ module Selenium
 
           class InstallResult < Data.define(extension: 'extension'); end
 
-          class Uninstall < Data.define(method_: {wire: 'method', fixed: 'webExtension.uninstall'}, params: {wire: 'params', ref: 'WebExtension::UninstallParameters'}); end
+          class Uninstall < Data.define(method_: {json_key: 'method', fixed: 'webExtension.uninstall'}, params: {json_key: 'params', ref: 'WebExtension::UninstallParameters'}); end
 
           class UninstallParameters < Data.define(extension: 'extension'); end
 

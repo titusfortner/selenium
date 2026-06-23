@@ -17,9 +17,9 @@ module Selenium
 
           class PermissionDescriptor < Data.define(name: 'name'); end
 
-          class SetPermission < Data.define(method_: {wire: 'method', fixed: 'permissions.setPermission'}, params: {wire: 'params', ref: 'Permissions::SetPermissionParameters'}); end
+          class SetPermission < Data.define(method_: {json_key: 'method', fixed: 'permissions.setPermission'}, params: {json_key: 'params', ref: 'Permissions::SetPermissionParameters'}); end
 
-          class SetPermissionParameters < Data.define(descriptor: {wire: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: 'state', origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
+          class SetPermissionParameters < Data.define(descriptor: {json_key: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: 'state', origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
 
           def initialize(bidi)
             @bidi = bidi

@@ -60,7 +60,7 @@ module Selenium
 
           class AuthCredentials < Data.define(type: {fixed: 'password'}, username: 'username', password: 'password'); end
 
-          class BaseParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}); end
+          class BaseParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}); end
 
           class BytesValue < Union
             discriminator 'type'
@@ -74,23 +74,23 @@ module Selenium
 
           class Base64Value < Data.define(type: {fixed: 'base64'}, value: 'value'); end
 
-          class Cookie < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
+          class Cookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
 
-          class CookieHeader < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}); end
+          class CookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}); end
 
           class FetchTimingInfo < Data.define(time_origin: 'timeOrigin', request_time: 'requestTime', redirect_start: 'redirectStart', redirect_end: 'redirectEnd', fetch_start: 'fetchStart', dns_start: 'dnsStart', dns_end: 'dnsEnd', connect_start: 'connectStart', connect_end: 'connectEnd', tls_start: 'tlsStart', request_start: 'requestStart', response_start: 'responseStart', response_end: 'responseEnd'); end
 
-          class Header < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}); end
+          class Header < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}); end
 
-          class Initiator < Data.define(column_number: 'columnNumber', line_number: 'lineNumber', request: 'request', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
+          class Initiator < Data.define(column_number: 'columnNumber', line_number: 'lineNumber', request: 'request', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
 
-          class RequestData < Data.define(request: 'request', url: 'url', method_: 'method', headers: {wire: 'headers', ref: 'Network::Header', list: true}, cookies: {wire: 'cookies', ref: 'Network::Cookie', list: true}, headers_size: 'headersSize', body_size: {wire: 'bodySize', nullable: true}, destination: 'destination', initiator_type: {wire: 'initiatorType', nullable: true}, timings: {wire: 'timings', ref: 'Network::FetchTimingInfo'}); end
+          class RequestData < Data.define(request: 'request', url: 'url', method_: 'method', headers: {json_key: 'headers', ref: 'Network::Header', list: true}, cookies: {json_key: 'cookies', ref: 'Network::Cookie', list: true}, headers_size: 'headersSize', body_size: {json_key: 'bodySize', nullable: true}, destination: 'destination', initiator_type: {json_key: 'initiatorType', nullable: true}, timings: {json_key: 'timings', ref: 'Network::FetchTimingInfo'}); end
 
           class ResponseContent < Data.define(size: 'size'); end
 
-          class ResponseData < Data.define(url: 'url', protocol: 'protocol', status: 'status', status_text: 'statusText', from_cache: 'fromCache', headers: {wire: 'headers', ref: 'Network::Header', list: true}, mime_type: 'mimeType', bytes_received: 'bytesReceived', headers_size: {wire: 'headersSize', nullable: true}, body_size: {wire: 'bodySize', nullable: true}, content: {wire: 'content', ref: 'Network::ResponseContent'}, auth_challenges: {wire: 'authChallenges', ref: 'Network::AuthChallenge', list: true}); end
+          class ResponseData < Data.define(url: 'url', protocol: 'protocol', status: 'status', status_text: 'statusText', from_cache: 'fromCache', headers: {json_key: 'headers', ref: 'Network::Header', list: true}, mime_type: 'mimeType', bytes_received: 'bytesReceived', headers_size: {json_key: 'headersSize', nullable: true}, body_size: {json_key: 'bodySize', nullable: true}, content: {json_key: 'content', ref: 'Network::ResponseContent'}, auth_challenges: {json_key: 'authChallenges', ref: 'Network::AuthChallenge', list: true}); end
 
-          class SetCookieHeader < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}, domain: 'domain', http_only: 'httpOnly', expiry: 'expiry', max_age: 'maxAge', path: 'path', same_site: 'sameSite', secure: 'secure'); end
+          class SetCookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', http_only: 'httpOnly', expiry: 'expiry', max_age: 'maxAge', path: 'path', same_site: 'sameSite', secure: 'secure'); end
 
           class UrlPattern < Union
             discriminator 'type'
@@ -104,27 +104,27 @@ module Selenium
 
           class UrlPatternString < Data.define(type: {fixed: 'string'}, pattern: 'pattern'); end
 
-          class AddDataCollector < Data.define(method_: {wire: 'method', fixed: 'network.addDataCollector'}, params: {wire: 'params', ref: 'Network::AddDataCollectorParameters'}); end
+          class AddDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.addDataCollector'}, params: {json_key: 'params', ref: 'Network::AddDataCollectorParameters'}); end
 
-          class AddDataCollectorParameters < Data.define(data_types: {wire: 'dataTypes', list: true}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: 'collectorType', contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class AddDataCollectorParameters < Data.define(data_types: {json_key: 'dataTypes', list: true}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: 'collectorType', contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           class AddDataCollectorResult < Data.define(collector: 'collector'); end
 
-          class AddIntercept < Data.define(method_: {wire: 'method', fixed: 'network.addIntercept'}, params: {wire: 'params', ref: 'Network::AddInterceptParameters'}); end
+          class AddIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.addIntercept'}, params: {json_key: 'params', ref: 'Network::AddInterceptParameters'}); end
 
-          class AddInterceptParameters < Data.define(phases: {wire: 'phases', list: true}, contexts: {wire: 'contexts', list: true}, url_patterns: {wire: 'urlPatterns', ref: 'Network::UrlPattern', list: true}); end
+          class AddInterceptParameters < Data.define(phases: {json_key: 'phases', list: true}, contexts: {json_key: 'contexts', list: true}, url_patterns: {json_key: 'urlPatterns', ref: 'Network::UrlPattern', list: true}); end
 
           class AddInterceptResult < Data.define(intercept: 'intercept'); end
 
-          class ContinueRequest < Data.define(method_: {wire: 'method', fixed: 'network.continueRequest'}, params: {wire: 'params', ref: 'Network::ContinueRequestParameters'}); end
+          class ContinueRequest < Data.define(method_: {json_key: 'method', fixed: 'network.continueRequest'}, params: {json_key: 'params', ref: 'Network::ContinueRequestParameters'}); end
 
-          class ContinueRequestParameters < Data.define(request: 'request', body: {wire: 'body', ref: 'Network::BytesValue'}, cookies: {wire: 'cookies', ref: 'Network::CookieHeader', list: true}, headers: {wire: 'headers', ref: 'Network::Header', list: true}, method_: 'method', url: 'url'); end
+          class ContinueRequestParameters < Data.define(request: 'request', body: {json_key: 'body', ref: 'Network::BytesValue'}, cookies: {json_key: 'cookies', ref: 'Network::CookieHeader', list: true}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, method_: 'method', url: 'url'); end
 
-          class ContinueResponse < Data.define(method_: {wire: 'method', fixed: 'network.continueResponse'}, params: {wire: 'params', ref: 'Network::ContinueResponseParameters'}); end
+          class ContinueResponse < Data.define(method_: {json_key: 'method', fixed: 'network.continueResponse'}, params: {json_key: 'params', ref: 'Network::ContinueResponseParameters'}); end
 
-          class ContinueResponseParameters < Data.define(request: 'request', cookies: {wire: 'cookies', ref: 'Network::SetCookieHeader', list: true}, credentials: {wire: 'credentials', ref: 'Network::AuthCredentials'}, headers: {wire: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
+          class ContinueResponseParameters < Data.define(request: 'request', cookies: {json_key: 'cookies', ref: 'Network::SetCookieHeader', list: true}, credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
 
-          class ContinueWithAuth < Data.define(method_: {wire: 'method', fixed: 'network.continueWithAuth'}, params: {wire: 'params', ref: 'Network::ContinueWithAuthParameters'}); end
+          class ContinueWithAuth < Data.define(method_: {json_key: 'method', fixed: 'network.continueWithAuth'}, params: {json_key: 'params', ref: 'Network::ContinueWithAuthParameters'}); end
 
           class ContinueWithAuthParameters < Union
             discriminator 'action'
@@ -134,61 +134,61 @@ module Selenium
             fallback 'Network::ContinueWithAuthParameters_NoCredentials'
           end
 
-          class DisownData < Data.define(method_: {wire: 'method', fixed: 'network.disownData'}, params: {wire: 'params', ref: 'Network::DisownDataParameters'}); end
+          class DisownData < Data.define(method_: {json_key: 'method', fixed: 'network.disownData'}, params: {json_key: 'params', ref: 'Network::DisownDataParameters'}); end
 
           class DisownDataParameters < Data.define(data_type: 'dataType', collector: 'collector', request: 'request'); end
 
-          class FailRequest < Data.define(method_: {wire: 'method', fixed: 'network.failRequest'}, params: {wire: 'params', ref: 'Network::FailRequestParameters'}); end
+          class FailRequest < Data.define(method_: {json_key: 'method', fixed: 'network.failRequest'}, params: {json_key: 'params', ref: 'Network::FailRequestParameters'}); end
 
           class FailRequestParameters < Data.define(request: 'request'); end
 
-          class GetData < Data.define(method_: {wire: 'method', fixed: 'network.getData'}, params: {wire: 'params', ref: 'Network::GetDataParameters'}); end
+          class GetData < Data.define(method_: {json_key: 'method', fixed: 'network.getData'}, params: {json_key: 'params', ref: 'Network::GetDataParameters'}); end
 
           class GetDataParameters < Data.define(data_type: 'dataType', collector: 'collector', disown: 'disown', request: 'request'); end
 
-          class GetDataResult < Data.define(bytes: {wire: 'bytes', ref: 'Network::BytesValue'}); end
+          class GetDataResult < Data.define(bytes: {json_key: 'bytes', ref: 'Network::BytesValue'}); end
 
-          class ProvideResponse < Data.define(method_: {wire: 'method', fixed: 'network.provideResponse'}, params: {wire: 'params', ref: 'Network::ProvideResponseParameters'}); end
+          class ProvideResponse < Data.define(method_: {json_key: 'method', fixed: 'network.provideResponse'}, params: {json_key: 'params', ref: 'Network::ProvideResponseParameters'}); end
 
-          class ProvideResponseParameters < Data.define(request: 'request', body: {wire: 'body', ref: 'Network::BytesValue'}, cookies: {wire: 'cookies', ref: 'Network::SetCookieHeader', list: true}, headers: {wire: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
+          class ProvideResponseParameters < Data.define(request: 'request', body: {json_key: 'body', ref: 'Network::BytesValue'}, cookies: {json_key: 'cookies', ref: 'Network::SetCookieHeader', list: true}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
 
-          class RemoveDataCollector < Data.define(method_: {wire: 'method', fixed: 'network.removeDataCollector'}, params: {wire: 'params', ref: 'Network::RemoveDataCollectorParameters'}); end
+          class RemoveDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.removeDataCollector'}, params: {json_key: 'params', ref: 'Network::RemoveDataCollectorParameters'}); end
 
           class RemoveDataCollectorParameters < Data.define(collector: 'collector'); end
 
-          class RemoveIntercept < Data.define(method_: {wire: 'method', fixed: 'network.removeIntercept'}, params: {wire: 'params', ref: 'Network::RemoveInterceptParameters'}); end
+          class RemoveIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.removeIntercept'}, params: {json_key: 'params', ref: 'Network::RemoveInterceptParameters'}); end
 
           class RemoveInterceptParameters < Data.define(intercept: 'intercept'); end
 
-          class SetCacheBehavior < Data.define(method_: {wire: 'method', fixed: 'network.setCacheBehavior'}, params: {wire: 'params', ref: 'Network::SetCacheBehaviorParameters'}); end
+          class SetCacheBehavior < Data.define(method_: {json_key: 'method', fixed: 'network.setCacheBehavior'}, params: {json_key: 'params', ref: 'Network::SetCacheBehaviorParameters'}); end
 
-          class SetCacheBehaviorParameters < Data.define(cache_behavior: 'cacheBehavior', contexts: {wire: 'contexts', list: true}); end
+          class SetCacheBehaviorParameters < Data.define(cache_behavior: 'cacheBehavior', contexts: {json_key: 'contexts', list: true}); end
 
-          class SetExtraHeaders < Data.define(method_: {wire: 'method', fixed: 'network.setExtraHeaders'}, params: {wire: 'params', ref: 'Network::SetExtraHeadersParameters'}); end
+          class SetExtraHeaders < Data.define(method_: {json_key: 'method', fixed: 'network.setExtraHeaders'}, params: {json_key: 'params', ref: 'Network::SetExtraHeadersParameters'}); end
 
-          class SetExtraHeadersParameters < Data.define(headers: {wire: 'headers', ref: 'Network::Header', list: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetExtraHeadersParameters < Data.define(headers: {json_key: 'headers', ref: 'Network::Header', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class AuthRequired < Data.define(method_: {wire: 'method', fixed: 'network.authRequired'}, params: {wire: 'params', ref: 'Network::AuthRequiredParameters'}); end
+          class AuthRequired < Data.define(method_: {json_key: 'method', fixed: 'network.authRequired'}, params: {json_key: 'params', ref: 'Network::AuthRequiredParameters'}); end
 
-          class AuthRequiredParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, response: {wire: 'response', ref: 'Network::ResponseData'}); end
+          class AuthRequiredParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
-          class BeforeRequestSent < Data.define(method_: {wire: 'method', fixed: 'network.beforeRequestSent'}, params: {wire: 'params', ref: 'Network::BeforeRequestSentParameters'}); end
+          class BeforeRequestSent < Data.define(method_: {json_key: 'method', fixed: 'network.beforeRequestSent'}, params: {json_key: 'params', ref: 'Network::BeforeRequestSentParameters'}); end
 
-          class BeforeRequestSentParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, initiator: {wire: 'initiator', ref: 'Network::Initiator'}); end
+          class BeforeRequestSentParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, initiator: {json_key: 'initiator', ref: 'Network::Initiator'}); end
 
-          class FetchError < Data.define(method_: {wire: 'method', fixed: 'network.fetchError'}, params: {wire: 'params', ref: 'Network::FetchErrorParameters'}); end
+          class FetchError < Data.define(method_: {json_key: 'method', fixed: 'network.fetchError'}, params: {json_key: 'params', ref: 'Network::FetchErrorParameters'}); end
 
-          class FetchErrorParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, error_text: 'errorText'); end
+          class FetchErrorParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, error_text: 'errorText'); end
 
-          class ResponseCompleted < Data.define(method_: {wire: 'method', fixed: 'network.responseCompleted'}, params: {wire: 'params', ref: 'Network::ResponseCompletedParameters'}); end
+          class ResponseCompleted < Data.define(method_: {json_key: 'method', fixed: 'network.responseCompleted'}, params: {json_key: 'params', ref: 'Network::ResponseCompletedParameters'}); end
 
-          class ResponseCompletedParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, response: {wire: 'response', ref: 'Network::ResponseData'}); end
+          class ResponseCompletedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
-          class ResponseStarted < Data.define(method_: {wire: 'method', fixed: 'network.responseStarted'}, params: {wire: 'params', ref: 'Network::ResponseStartedParameters'}); end
+          class ResponseStarted < Data.define(method_: {json_key: 'method', fixed: 'network.responseStarted'}, params: {json_key: 'params', ref: 'Network::ResponseStartedParameters'}); end
 
-          class ResponseStartedParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, response: {wire: 'response', ref: 'Network::ResponseData'}); end
+          class ResponseStartedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
-          class ContinueWithAuthParameters_Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {wire: 'credentials', ref: 'Network::AuthCredentials'}); end
+          class ContinueWithAuthParameters_Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}); end
 
           class ContinueWithAuthParameters_NoCredentials < Data.define(request: 'request', action: 'action'); end
 

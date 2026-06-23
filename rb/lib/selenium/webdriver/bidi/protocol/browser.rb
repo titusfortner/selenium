@@ -26,25 +26,25 @@ module Selenium
 
           class UserContextInfo < Data.define(user_context: 'userContext'); end
 
-          class Close < Data.define(method_: {wire: 'method', fixed: 'browser.close'}, params: 'params'); end
+          class Close < Data.define(method_: {json_key: 'method', fixed: 'browser.close'}, params: 'params'); end
 
-          class CreateUserContext < Data.define(method_: {wire: 'method', fixed: 'browser.createUserContext'}, params: {wire: 'params', ref: 'Browser::CreateUserContextParameters'}); end
+          class CreateUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.createUserContext'}, params: {json_key: 'params', ref: 'Browser::CreateUserContextParameters'}); end
 
-          class CreateUserContextParameters < Data.define(accept_insecure_certs: 'acceptInsecureCerts', proxy: {wire: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {wire: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}); end
+          class CreateUserContextParameters < Data.define(accept_insecure_certs: 'acceptInsecureCerts', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}); end
 
-          class GetClientWindows < Data.define(method_: {wire: 'method', fixed: 'browser.getClientWindows'}, params: 'params'); end
+          class GetClientWindows < Data.define(method_: {json_key: 'method', fixed: 'browser.getClientWindows'}, params: 'params'); end
 
-          class GetClientWindowsResult < Data.define(client_windows: {wire: 'clientWindows', ref: 'Browser::ClientWindowInfo', list: true}); end
+          class GetClientWindowsResult < Data.define(client_windows: {json_key: 'clientWindows', ref: 'Browser::ClientWindowInfo', list: true}); end
 
-          class GetUserContexts < Data.define(method_: {wire: 'method', fixed: 'browser.getUserContexts'}, params: 'params'); end
+          class GetUserContexts < Data.define(method_: {json_key: 'method', fixed: 'browser.getUserContexts'}, params: 'params'); end
 
-          class GetUserContextsResult < Data.define(user_contexts: {wire: 'userContexts', ref: 'Browser::UserContextInfo', list: true}); end
+          class GetUserContextsResult < Data.define(user_contexts: {json_key: 'userContexts', ref: 'Browser::UserContextInfo', list: true}); end
 
-          class RemoveUserContext < Data.define(method_: {wire: 'method', fixed: 'browser.removeUserContext'}, params: {wire: 'params', ref: 'Browser::RemoveUserContextParameters'}); end
+          class RemoveUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.removeUserContext'}, params: {json_key: 'params', ref: 'Browser::RemoveUserContextParameters'}); end
 
           class RemoveUserContextParameters < Data.define(user_context: 'userContext'); end
 
-          class SetClientWindowState < Data.define(method_: {wire: 'method', fixed: 'browser.setClientWindowState'}, params: {wire: 'params', ref: 'Browser::SetClientWindowStateParameters'}); end
+          class SetClientWindowState < Data.define(method_: {json_key: 'method', fixed: 'browser.setClientWindowState'}, params: {json_key: 'params', ref: 'Browser::SetClientWindowStateParameters'}); end
 
           class SetClientWindowStateParameters < Union
             discriminator 'state'
@@ -54,9 +54,9 @@ module Selenium
             fallback 'Browser::SetClientWindowStateParameters_ClientWindowNamedState'
           end
 
-          class SetDownloadBehavior < Data.define(method_: {wire: 'method', fixed: 'browser.setDownloadBehavior'}, params: {wire: 'params', ref: 'Browser::SetDownloadBehaviorParameters'}); end
+          class SetDownloadBehavior < Data.define(method_: {json_key: 'method', fixed: 'browser.setDownloadBehavior'}, params: {json_key: 'params', ref: 'Browser::SetDownloadBehaviorParameters'}); end
 
-          class SetDownloadBehaviorParameters < Data.define(download_behavior: {wire: 'downloadBehavior', nullable: true, ref: 'Browser::DownloadBehavior'}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetDownloadBehaviorParameters < Data.define(download_behavior: {json_key: 'downloadBehavior', nullable: true, ref: 'Browser::DownloadBehavior'}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           class DownloadBehavior < Union
             discriminator 'type'

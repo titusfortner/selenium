@@ -11,9 +11,9 @@ module Selenium
         class Storage
           class PartitionKey < Data.define(user_context: 'userContext', source_origin: 'sourceOrigin', extensible: true); end
 
-          class GetCookies < Data.define(method_: {wire: 'method', fixed: 'storage.getCookies'}, params: {wire: 'params', ref: 'Storage::GetCookiesParameters'}); end
+          class GetCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.getCookies'}, params: {json_key: 'params', ref: 'Storage::GetCookiesParameters'}); end
 
-          class CookieFilter < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
+          class CookieFilter < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
 
           class BrowsingContextPartitionDescriptor < Data.define(type: {fixed: 'context'}, context: 'context'); end
 
@@ -27,23 +27,23 @@ module Selenium
             )
           end
 
-          class GetCookiesParameters < Data.define(filter: {wire: 'filter', ref: 'Storage::CookieFilter'}, partition: {wire: 'partition', ref: 'Storage::PartitionDescriptor'}); end
+          class GetCookiesParameters < Data.define(filter: {json_key: 'filter', ref: 'Storage::CookieFilter'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
-          class GetCookiesResult < Data.define(cookies: {wire: 'cookies', ref: 'Network::Cookie', list: true}, partition_key: {wire: 'partitionKey', ref: 'Storage::PartitionKey'}); end
+          class GetCookiesResult < Data.define(cookies: {json_key: 'cookies', ref: 'Network::Cookie', list: true}, partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
-          class SetCookie < Data.define(method_: {wire: 'method', fixed: 'storage.setCookie'}, params: {wire: 'params', ref: 'Storage::SetCookieParameters'}); end
+          class SetCookie < Data.define(method_: {json_key: 'method', fixed: 'storage.setCookie'}, params: {json_key: 'params', ref: 'Storage::SetCookieParameters'}); end
 
-          class PartialCookie < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
+          class PartialCookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
 
-          class SetCookieParameters < Data.define(cookie: {wire: 'cookie', ref: 'Storage::PartialCookie'}, partition: {wire: 'partition', ref: 'Storage::PartitionDescriptor'}); end
+          class SetCookieParameters < Data.define(cookie: {json_key: 'cookie', ref: 'Storage::PartialCookie'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
-          class SetCookieResult < Data.define(partition_key: {wire: 'partitionKey', ref: 'Storage::PartitionKey'}); end
+          class SetCookieResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
-          class DeleteCookies < Data.define(method_: {wire: 'method', fixed: 'storage.deleteCookies'}, params: {wire: 'params', ref: 'Storage::DeleteCookiesParameters'}); end
+          class DeleteCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.deleteCookies'}, params: {json_key: 'params', ref: 'Storage::DeleteCookiesParameters'}); end
 
-          class DeleteCookiesParameters < Data.define(filter: {wire: 'filter', ref: 'Storage::CookieFilter'}, partition: {wire: 'partition', ref: 'Storage::PartitionDescriptor'}); end
+          class DeleteCookiesParameters < Data.define(filter: {json_key: 'filter', ref: 'Storage::CookieFilter'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
-          class DeleteCookiesResult < Data.define(partition_key: {wire: 'partitionKey', ref: 'Storage::PartitionKey'}); end
+          class DeleteCookiesResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
           def initialize(bidi)
             @bidi = bidi

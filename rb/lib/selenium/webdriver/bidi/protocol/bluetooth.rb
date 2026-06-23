@@ -64,11 +64,11 @@ module Selenium
 
           class CharacteristicProperties < Data.define(broadcast: 'broadcast', read: 'read', write_without_response: 'writeWithoutResponse', write: 'write', notify: 'notify', indicate: 'indicate', authenticated_signed_writes: 'authenticatedSignedWrites', extended_properties: 'extendedProperties'); end
 
-          class RequestDeviceInfo < Data.define(id: 'id', name: {wire: 'name', nullable: true}); end
+          class RequestDeviceInfo < Data.define(id: 'id', name: {json_key: 'name', nullable: true}); end
 
-          class ScanRecord < Data.define(name: 'name', uuids: {wire: 'uuids', list: true}, appearance: 'appearance', manufacturer_data: {wire: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}); end
+          class ScanRecord < Data.define(name: 'name', uuids: {json_key: 'uuids', list: true}, appearance: 'appearance', manufacturer_data: {json_key: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}); end
 
-          class HandleRequestDevicePrompt < Data.define(method_: {wire: 'method', fixed: 'bluetooth.handleRequestDevicePrompt'}, params: {wire: 'params', ref: 'Bluetooth::HandleRequestDevicePromptParameters'}); end
+          class HandleRequestDevicePrompt < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.handleRequestDevicePrompt'}, params: {json_key: 'params', ref: 'Bluetooth::HandleRequestDevicePromptParameters'}); end
 
           class HandleRequestDevicePromptParameters < Union
             discriminator 'accept'
@@ -78,67 +78,67 @@ module Selenium
             )
           end
 
-          class SimulateAdapter < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateAdapter'}, params: {wire: 'params', ref: 'Bluetooth::SimulateAdapterParameters'}); end
+          class SimulateAdapter < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateAdapter'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateAdapterParameters'}); end
 
           class SimulateAdapterParameters < Data.define(context: 'context', le_supported: 'leSupported', state: 'state'); end
 
-          class DisableSimulation < Data.define(method_: {wire: 'method', fixed: 'bluetooth.disableSimulation'}, params: {wire: 'params', ref: 'Bluetooth::DisableSimulationParameters'}); end
+          class DisableSimulation < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.disableSimulation'}, params: {json_key: 'params', ref: 'Bluetooth::DisableSimulationParameters'}); end
 
           class DisableSimulationParameters < Data.define(context: 'context'); end
 
-          class SimulatePreconnectedPeripheral < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulatePreconnectedPeripheral'}, params: {wire: 'params', ref: 'Bluetooth::SimulatePreconnectedPeripheralParameters'}); end
+          class SimulatePreconnectedPeripheral < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulatePreconnectedPeripheral'}, params: {json_key: 'params', ref: 'Bluetooth::SimulatePreconnectedPeripheralParameters'}); end
 
-          class SimulatePreconnectedPeripheralParameters < Data.define(context: 'context', address: 'address', name: 'name', manufacturer_data: {wire: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}, known_service_uuids: {wire: 'knownServiceUuids', list: true}); end
+          class SimulatePreconnectedPeripheralParameters < Data.define(context: 'context', address: 'address', name: 'name', manufacturer_data: {json_key: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}, known_service_uuids: {json_key: 'knownServiceUuids', list: true}); end
 
-          class SimulateAdvertisement < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateAdvertisement'}, params: {wire: 'params', ref: 'Bluetooth::SimulateAdvertisementParameters'}); end
+          class SimulateAdvertisement < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateAdvertisement'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateAdvertisementParameters'}); end
 
-          class SimulateAdvertisementParameters < Data.define(context: 'context', scan_entry: {wire: 'scanEntry', ref: 'Bluetooth::SimulateAdvertisementScanEntryParameters'}); end
+          class SimulateAdvertisementParameters < Data.define(context: 'context', scan_entry: {json_key: 'scanEntry', ref: 'Bluetooth::SimulateAdvertisementScanEntryParameters'}); end
 
-          class SimulateAdvertisementScanEntryParameters < Data.define(device_address: 'deviceAddress', rssi: 'rssi', scan_record: {wire: 'scanRecord', ref: 'Bluetooth::ScanRecord'}); end
+          class SimulateAdvertisementScanEntryParameters < Data.define(device_address: 'deviceAddress', rssi: 'rssi', scan_record: {json_key: 'scanRecord', ref: 'Bluetooth::ScanRecord'}); end
 
-          class SimulateGattConnectionResponse < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateGattConnectionResponse'}, params: {wire: 'params', ref: 'Bluetooth::SimulateGattConnectionResponseParameters'}); end
+          class SimulateGattConnectionResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateGattConnectionResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateGattConnectionResponseParameters'}); end
 
           class SimulateGattConnectionResponseParameters < Data.define(context: 'context', address: 'address', code: 'code'); end
 
-          class SimulateGattDisconnection < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateGattDisconnection'}, params: {wire: 'params', ref: 'Bluetooth::SimulateGattDisconnectionParameters'}); end
+          class SimulateGattDisconnection < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateGattDisconnection'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateGattDisconnectionParameters'}); end
 
           class SimulateGattDisconnectionParameters < Data.define(context: 'context', address: 'address'); end
 
-          class SimulateService < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateService'}, params: {wire: 'params', ref: 'Bluetooth::SimulateServiceParameters'}); end
+          class SimulateService < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateService'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateServiceParameters'}); end
 
           class SimulateServiceParameters < Data.define(context: 'context', address: 'address', uuid: 'uuid', type: 'type'); end
 
-          class SimulateCharacteristic < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateCharacteristic'}, params: {wire: 'params', ref: 'Bluetooth::SimulateCharacteristicParameters'}); end
+          class SimulateCharacteristic < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateCharacteristic'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateCharacteristicParameters'}); end
 
-          class SimulateCharacteristicParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', characteristic_properties: {wire: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'}, type: 'type'); end
+          class SimulateCharacteristicParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', characteristic_properties: {json_key: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'}, type: 'type'); end
 
-          class SimulateCharacteristicResponse < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateCharacteristicResponse'}, params: {wire: 'params', ref: 'Bluetooth::SimulateCharacteristicResponseParameters'}); end
+          class SimulateCharacteristicResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateCharacteristicResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateCharacteristicResponseParameters'}); end
 
-          class SimulateCharacteristicResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', code: 'code', data: {wire: 'data', list: true}); end
+          class SimulateCharacteristicResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', code: 'code', data: {json_key: 'data', list: true}); end
 
-          class SimulateDescriptor < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateDescriptor'}, params: {wire: 'params', ref: 'Bluetooth::SimulateDescriptorParameters'}); end
+          class SimulateDescriptor < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateDescriptor'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateDescriptorParameters'}); end
 
           class SimulateDescriptorParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type'); end
 
-          class SimulateDescriptorResponse < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateDescriptorResponse'}, params: {wire: 'params', ref: 'Bluetooth::SimulateDescriptorResponseParameters'}); end
+          class SimulateDescriptorResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateDescriptorResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateDescriptorResponseParameters'}); end
 
-          class SimulateDescriptorResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', code: 'code', data: {wire: 'data', list: true}); end
+          class SimulateDescriptorResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', code: 'code', data: {json_key: 'data', list: true}); end
 
-          class RequestDevicePromptUpdated < Data.define(method_: {wire: 'method', fixed: 'bluetooth.requestDevicePromptUpdated'}, params: {wire: 'params', ref: 'Bluetooth::RequestDevicePromptUpdatedParameters'}); end
+          class RequestDevicePromptUpdated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.requestDevicePromptUpdated'}, params: {json_key: 'params', ref: 'Bluetooth::RequestDevicePromptUpdatedParameters'}); end
 
-          class RequestDevicePromptUpdatedParameters < Data.define(context: 'context', prompt: 'prompt', devices: {wire: 'devices', ref: 'Bluetooth::RequestDeviceInfo', list: true}); end
+          class RequestDevicePromptUpdatedParameters < Data.define(context: 'context', prompt: 'prompt', devices: {json_key: 'devices', ref: 'Bluetooth::RequestDeviceInfo', list: true}); end
 
-          class GattConnectionAttempted < Data.define(method_: {wire: 'method', fixed: 'bluetooth.gattConnectionAttempted'}, params: {wire: 'params', ref: 'Bluetooth::GattConnectionAttemptedParameters'}); end
+          class GattConnectionAttempted < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.gattConnectionAttempted'}, params: {json_key: 'params', ref: 'Bluetooth::GattConnectionAttemptedParameters'}); end
 
           class GattConnectionAttemptedParameters < Data.define(context: 'context', address: 'address'); end
 
-          class CharacteristicEventGenerated < Data.define(method_: {wire: 'method', fixed: 'bluetooth.characteristicEventGenerated'}, params: {wire: 'params', ref: 'Bluetooth::CharacteristicEventGeneratedParameters'}); end
+          class CharacteristicEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.characteristicEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::CharacteristicEventGeneratedParameters'}); end
 
-          class CharacteristicEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', data: {wire: 'data', list: true}); end
+          class CharacteristicEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', data: {json_key: 'data', list: true}); end
 
-          class DescriptorEventGenerated < Data.define(method_: {wire: 'method', fixed: 'bluetooth.descriptorEventGenerated'}, params: {wire: 'params', ref: 'Bluetooth::DescriptorEventGeneratedParameters'}); end
+          class DescriptorEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.descriptorEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::DescriptorEventGeneratedParameters'}); end
 
-          class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', data: {wire: 'data', list: true}); end
+          class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', data: {json_key: 'data', list: true}); end
 
           class HandleRequestDevicePromptParameters_AcceptParameters < Data.define(accept: {fixed: true}, context: 'context', prompt: 'prompt', device: 'device'); end
 

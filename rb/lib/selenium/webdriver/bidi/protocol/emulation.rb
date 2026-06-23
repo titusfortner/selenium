@@ -26,11 +26,11 @@ module Selenium
             landscape_secondary: 'landscape-secondary',
           }.freeze
 
-          class SetForcedColorsModeThemeOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setForcedColorsModeThemeOverride'}, params: {wire: 'params', ref: 'Emulation::SetForcedColorsModeThemeOverrideParameters'}); end
+          class SetForcedColorsModeThemeOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setForcedColorsModeThemeOverride'}, params: {json_key: 'params', ref: 'Emulation::SetForcedColorsModeThemeOverrideParameters'}); end
 
-          class SetForcedColorsModeThemeOverrideParameters < Data.define(theme: {wire: 'theme', nullable: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetForcedColorsModeThemeOverrideParameters < Data.define(theme: {json_key: 'theme', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetGeolocationOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setGeolocationOverride'}, params: {wire: 'params', ref: 'Emulation::SetGeolocationOverrideParameters'}); end
+          class SetGeolocationOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setGeolocationOverride'}, params: {json_key: 'params', ref: 'Emulation::SetGeolocationOverrideParameters'}); end
 
           class SetGeolocationOverrideParameters < Union
             presence(
@@ -39,55 +39,55 @@ module Selenium
             )
           end
 
-          class GeolocationCoordinates < Data.define(latitude: 'latitude', longitude: 'longitude', accuracy: 'accuracy', altitude: {wire: 'altitude', nullable: true}, altitude_accuracy: {wire: 'altitudeAccuracy', nullable: true}, heading: {wire: 'heading', nullable: true}, speed: {wire: 'speed', nullable: true}); end
+          class GeolocationCoordinates < Data.define(latitude: 'latitude', longitude: 'longitude', accuracy: 'accuracy', altitude: {json_key: 'altitude', nullable: true}, altitude_accuracy: {json_key: 'altitudeAccuracy', nullable: true}, heading: {json_key: 'heading', nullable: true}, speed: {json_key: 'speed', nullable: true}); end
 
           class GeolocationPositionError < Data.define(type: {fixed: 'positionUnavailable'}); end
 
-          class SetLocaleOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setLocaleOverride'}, params: {wire: 'params', ref: 'Emulation::SetLocaleOverrideParameters'}); end
+          class SetLocaleOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setLocaleOverride'}, params: {json_key: 'params', ref: 'Emulation::SetLocaleOverrideParameters'}); end
 
-          class SetLocaleOverrideParameters < Data.define(locale: {wire: 'locale', nullable: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetLocaleOverrideParameters < Data.define(locale: {json_key: 'locale', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetNetworkConditions < Data.define(method_: {wire: 'method', fixed: 'emulation.setNetworkConditions'}, params: {wire: 'params', ref: 'Emulation::SetNetworkConditionsParameters'}); end
+          class SetNetworkConditions < Data.define(method_: {json_key: 'method', fixed: 'emulation.setNetworkConditions'}, params: {json_key: 'params', ref: 'Emulation::SetNetworkConditionsParameters'}); end
 
-          class SetNetworkConditionsParameters < Data.define(network_conditions: {wire: 'networkConditions', nullable: true, ref: 'Emulation::NetworkConditionsOffline'}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetNetworkConditionsParameters < Data.define(network_conditions: {json_key: 'networkConditions', nullable: true, ref: 'Emulation::NetworkConditionsOffline'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           class NetworkConditionsOffline < Data.define(type: {fixed: 'offline'}); end
 
-          class SetScreenSettingsOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setScreenSettingsOverride'}, params: {wire: 'params', ref: 'Emulation::SetScreenSettingsOverrideParameters'}); end
+          class SetScreenSettingsOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScreenSettingsOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScreenSettingsOverrideParameters'}); end
 
           class ScreenArea < Data.define(width: 'width', height: 'height'); end
 
-          class SetScreenSettingsOverrideParameters < Data.define(screen_area: {wire: 'screenArea', nullable: true, ref: 'Emulation::ScreenArea'}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetScreenSettingsOverrideParameters < Data.define(screen_area: {json_key: 'screenArea', nullable: true, ref: 'Emulation::ScreenArea'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetScreenOrientationOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setScreenOrientationOverride'}, params: {wire: 'params', ref: 'Emulation::SetScreenOrientationOverrideParameters'}); end
+          class SetScreenOrientationOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScreenOrientationOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScreenOrientationOverrideParameters'}); end
 
           class ScreenOrientation < Data.define(natural: 'natural', type: 'type'); end
 
-          class SetScreenOrientationOverrideParameters < Data.define(screen_orientation: {wire: 'screenOrientation', nullable: true, ref: 'Emulation::ScreenOrientation'}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetScreenOrientationOverrideParameters < Data.define(screen_orientation: {json_key: 'screenOrientation', nullable: true, ref: 'Emulation::ScreenOrientation'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetUserAgentOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setUserAgentOverride'}, params: {wire: 'params', ref: 'Emulation::SetUserAgentOverrideParameters'}); end
+          class SetUserAgentOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setUserAgentOverride'}, params: {json_key: 'params', ref: 'Emulation::SetUserAgentOverrideParameters'}); end
 
-          class SetUserAgentOverrideParameters < Data.define(user_agent: {wire: 'userAgent', nullable: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetUserAgentOverrideParameters < Data.define(user_agent: {json_key: 'userAgent', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetScriptingEnabled < Data.define(method_: {wire: 'method', fixed: 'emulation.setScriptingEnabled'}, params: {wire: 'params', ref: 'Emulation::SetScriptingEnabledParameters'}); end
+          class SetScriptingEnabled < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScriptingEnabled'}, params: {json_key: 'params', ref: 'Emulation::SetScriptingEnabledParameters'}); end
 
-          class SetScriptingEnabledParameters < Data.define(enabled: {fixed: false}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetScriptingEnabledParameters < Data.define(enabled: {fixed: false}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetScrollbarTypeOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setScrollbarTypeOverride'}, params: {wire: 'params', ref: 'Emulation::SetScrollbarTypeOverrideParameters'}); end
+          class SetScrollbarTypeOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScrollbarTypeOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScrollbarTypeOverrideParameters'}); end
 
-          class SetScrollbarTypeOverrideParameters < Data.define(scrollbar_type: {wire: 'scrollbarType', nullable: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetScrollbarTypeOverrideParameters < Data.define(scrollbar_type: {json_key: 'scrollbarType', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetTimezoneOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setTimezoneOverride'}, params: {wire: 'params', ref: 'Emulation::SetTimezoneOverrideParameters'}); end
+          class SetTimezoneOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setTimezoneOverride'}, params: {json_key: 'params', ref: 'Emulation::SetTimezoneOverrideParameters'}); end
 
-          class SetTimezoneOverrideParameters < Data.define(timezone: {wire: 'timezone', nullable: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetTimezoneOverrideParameters < Data.define(timezone: {json_key: 'timezone', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetTouchOverride < Data.define(method_: {wire: 'method', fixed: 'emulation.setTouchOverride'}, params: {wire: 'params', ref: 'Emulation::SetTouchOverrideParameters'}); end
+          class SetTouchOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setTouchOverride'}, params: {json_key: 'params', ref: 'Emulation::SetTouchOverrideParameters'}); end
 
-          class SetTouchOverrideParameters < Data.define(max_touch_points: {wire: 'maxTouchPoints', nullable: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SetTouchOverrideParameters < Data.define(max_touch_points: {json_key: 'maxTouchPoints', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class SetGeolocationOverrideParameters_Coordinates < Data.define(contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}, coordinates: {wire: 'coordinates', nullable: true, ref: 'Emulation::GeolocationCoordinates'}); end
+          class SetGeolocationOverrideParameters_Coordinates < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, coordinates: {json_key: 'coordinates', nullable: true, ref: 'Emulation::GeolocationCoordinates'}); end
 
-          class SetGeolocationOverrideParameters_Error < Data.define(contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}, error: {wire: 'error', ref: 'Emulation::GeolocationPositionError'}); end
+          class SetGeolocationOverrideParameters_Error < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, error: {json_key: 'error', ref: 'Emulation::GeolocationPositionError'}); end
 
           def initialize(bidi)
             @bidi = bidi

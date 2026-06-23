@@ -29,15 +29,15 @@ module Selenium
             fallback 'Log::GenericLogEntry'
           end
 
-          class BaseLogEntry < Data.define(level: 'level', source: {wire: 'source', ref: 'Script::Source'}, text: {wire: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}); end
+          class BaseLogEntry < Data.define(level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
-          class GenericLogEntry < Data.define(level: 'level', source: {wire: 'source', ref: 'Script::Source'}, text: {wire: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
+          class GenericLogEntry < Data.define(level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
 
-          class ConsoleLogEntry < Data.define(type: {fixed: 'console'}, level: 'level', source: {wire: 'source', ref: 'Script::Source'}, text: {wire: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}, method_: 'method', args: {wire: 'args', ref: 'Script::RemoteValue', list: true}); end
+          class ConsoleLogEntry < Data.define(type: {fixed: 'console'}, level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, method_: 'method', args: {json_key: 'args', ref: 'Script::RemoteValue', list: true}); end
 
-          class JavascriptLogEntry < Data.define(type: {fixed: 'javascript'}, level: 'level', source: {wire: 'source', ref: 'Script::Source'}, text: {wire: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}); end
+          class JavascriptLogEntry < Data.define(type: {fixed: 'javascript'}, level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
-          class EntryAdded < Data.define(method_: {wire: 'method', fixed: 'log.entryAdded'}, params: {wire: 'params', ref: 'Log::Entry'}); end
+          class EntryAdded < Data.define(method_: {json_key: 'method', fixed: 'log.entryAdded'}, params: {json_key: 'params', ref: 'Log::Entry'}); end
 
           def initialize(bidi)
             @bidi = bidi

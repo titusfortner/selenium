@@ -19,11 +19,11 @@ module Selenium
             touch: 'touch',
           }.freeze
 
-          class ElementOrigin < Data.define(type: {fixed: 'element'}, element: {wire: 'element', ref: 'Script::SharedReference'}); end
+          class ElementOrigin < Data.define(type: {fixed: 'element'}, element: {json_key: 'element', ref: 'Script::SharedReference'}); end
 
-          class PerformActions < Data.define(method_: {wire: 'method', fixed: 'input.performActions'}, params: {wire: 'params', ref: 'Input::PerformActionsParameters'}); end
+          class PerformActions < Data.define(method_: {json_key: 'method', fixed: 'input.performActions'}, params: {json_key: 'params', ref: 'Input::PerformActionsParameters'}); end
 
-          class PerformActionsParameters < Data.define(context: 'context', actions: {wire: 'actions', ref: 'Input::SourceActions', list: true}); end
+          class PerformActionsParameters < Data.define(context: 'context', actions: {json_key: 'actions', ref: 'Input::SourceActions', list: true}); end
 
           class SourceActions < Union
             discriminator 'type'
@@ -35,9 +35,9 @@ module Selenium
             )
           end
 
-          class NoneSourceActions < Data.define(type: {fixed: 'none'}, id: 'id', actions: {wire: 'actions', ref: 'Input::PauseAction', list: true}); end
+          class NoneSourceActions < Data.define(type: {fixed: 'none'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::PauseAction', list: true}); end
 
-          class KeySourceActions < Data.define(type: {fixed: 'key'}, id: 'id', actions: {wire: 'actions', ref: 'Input::KeySourceAction', list: true}); end
+          class KeySourceActions < Data.define(type: {fixed: 'key'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::KeySourceAction', list: true}); end
 
           class KeySourceAction < Union
             discriminator 'type'
@@ -48,7 +48,7 @@ module Selenium
             )
           end
 
-          class PointerSourceActions < Data.define(type: {fixed: 'pointer'}, id: 'id', parameters: {wire: 'parameters', ref: 'Input::PointerParameters'}, actions: {wire: 'actions', ref: 'Input::PointerSourceAction', list: true}); end
+          class PointerSourceActions < Data.define(type: {fixed: 'pointer'}, id: 'id', parameters: {json_key: 'parameters', ref: 'Input::PointerParameters'}, actions: {json_key: 'actions', ref: 'Input::PointerSourceAction', list: true}); end
 
           class PointerParameters < Data.define(pointer_type: 'pointerType'); end
 
@@ -62,7 +62,7 @@ module Selenium
             )
           end
 
-          class WheelSourceActions < Data.define(type: {fixed: 'wheel'}, id: 'id', actions: {wire: 'actions', ref: 'Input::WheelSourceAction', list: true}); end
+          class WheelSourceActions < Data.define(type: {fixed: 'wheel'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::WheelSourceAction', list: true}); end
 
           class WheelSourceAction < Union
             discriminator 'type'
@@ -82,9 +82,9 @@ module Selenium
 
           class PointerDownAction < Data.define(type: {fixed: 'pointerDown'}, button: 'button', width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
-          class PointerMoveAction < Data.define(type: {fixed: 'pointerMove'}, x: 'x', y: 'y', duration: 'duration', origin: {wire: 'origin', ref: 'Input::Origin'}, width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
+          class PointerMoveAction < Data.define(type: {fixed: 'pointerMove'}, x: 'x', y: 'y', duration: 'duration', origin: {json_key: 'origin', ref: 'Input::Origin'}, width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
-          class WheelScrollAction < Data.define(type: {fixed: 'scroll'}, x: 'x', y: 'y', delta_x: 'deltaX', delta_y: 'deltaY', duration: 'duration', origin: {wire: 'origin', ref: 'Input::Origin'}); end
+          class WheelScrollAction < Data.define(type: {fixed: 'scroll'}, x: 'x', y: 'y', delta_x: 'deltaX', delta_y: 'deltaY', duration: 'duration', origin: {json_key: 'origin', ref: 'Input::Origin'}); end
 
           class PointerCommonProperties < Data.define(width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
@@ -95,17 +95,17 @@ module Selenium
             )
           end
 
-          class ReleaseActions < Data.define(method_: {wire: 'method', fixed: 'input.releaseActions'}, params: {wire: 'params', ref: 'Input::ReleaseActionsParameters'}); end
+          class ReleaseActions < Data.define(method_: {json_key: 'method', fixed: 'input.releaseActions'}, params: {json_key: 'params', ref: 'Input::ReleaseActionsParameters'}); end
 
           class ReleaseActionsParameters < Data.define(context: 'context'); end
 
-          class SetFiles < Data.define(method_: {wire: 'method', fixed: 'input.setFiles'}, params: {wire: 'params', ref: 'Input::SetFilesParameters'}); end
+          class SetFiles < Data.define(method_: {json_key: 'method', fixed: 'input.setFiles'}, params: {json_key: 'params', ref: 'Input::SetFilesParameters'}); end
 
-          class SetFilesParameters < Data.define(context: 'context', element: {wire: 'element', ref: 'Script::SharedReference'}, files: {wire: 'files', list: true}); end
+          class SetFilesParameters < Data.define(context: 'context', element: {json_key: 'element', ref: 'Script::SharedReference'}, files: {json_key: 'files', list: true}); end
 
-          class FileDialogOpened < Data.define(method_: {wire: 'method', fixed: 'input.fileDialogOpened'}, params: {wire: 'params', ref: 'Input::FileDialogInfo'}); end
+          class FileDialogOpened < Data.define(method_: {json_key: 'method', fixed: 'input.fileDialogOpened'}, params: {json_key: 'params', ref: 'Input::FileDialogInfo'}); end
 
-          class FileDialogInfo < Data.define(context: 'context', user_context: 'userContext', element: {wire: 'element', ref: 'Script::SharedReference'}, multiple: 'multiple'); end
+          class FileDialogInfo < Data.define(context: 'context', user_context: 'userContext', element: {json_key: 'element', ref: 'Script::SharedReference'}, multiple: 'multiple'); end
 
           def initialize(bidi)
             @bidi = bidi

@@ -15,9 +15,9 @@ module Selenium
             ignore: 'ignore',
           }.freeze
 
-          class CapabilitiesRequest < Data.define(always_match: {wire: 'alwaysMatch', ref: 'Session::CapabilityRequest'}, first_match: {wire: 'firstMatch', ref: 'Session::CapabilityRequest', list: true}); end
+          class CapabilitiesRequest < Data.define(always_match: {json_key: 'alwaysMatch', ref: 'Session::CapabilityRequest'}, first_match: {json_key: 'firstMatch', ref: 'Session::CapabilityRequest', list: true}); end
 
-          class CapabilityRequest < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', proxy: {wire: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {wire: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, extensible: true); end
+          class CapabilityRequest < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, extensible: true); end
 
           class ProxyConfiguration < Union
             discriminator 'proxyType'
@@ -30,43 +30,43 @@ module Selenium
             )
           end
 
-          class AutodetectProxyConfiguration < Data.define(proxy_type: {wire: 'proxyType', fixed: 'autodetect'}, extensible: true); end
+          class AutodetectProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'autodetect'}, extensible: true); end
 
-          class DirectProxyConfiguration < Data.define(proxy_type: {wire: 'proxyType', fixed: 'direct'}, extensible: true); end
+          class DirectProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'direct'}, extensible: true); end
 
-          class ManualProxyConfiguration < Data.define(proxy_type: {wire: 'proxyType', fixed: 'manual'}, http_proxy: 'httpProxy', ssl_proxy: 'sslProxy', socks_proxy: 'socksProxy', socks_version: 'socksVersion', no_proxy: {wire: 'noProxy', list: true}, extensible: true); end
+          class ManualProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'manual'}, http_proxy: 'httpProxy', ssl_proxy: 'sslProxy', socks_proxy: 'socksProxy', socks_version: 'socksVersion', no_proxy: {json_key: 'noProxy', list: true}, extensible: true); end
 
           class SocksProxyConfiguration < Data.define(socks_proxy: 'socksProxy', socks_version: 'socksVersion'); end
 
-          class PacProxyConfiguration < Data.define(proxy_type: {wire: 'proxyType', fixed: 'pac'}, proxy_autoconfig_url: 'proxyAutoconfigUrl', extensible: true); end
+          class PacProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'pac'}, proxy_autoconfig_url: 'proxyAutoconfigUrl', extensible: true); end
 
-          class SystemProxyConfiguration < Data.define(proxy_type: {wire: 'proxyType', fixed: 'system'}, extensible: true); end
+          class SystemProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'system'}, extensible: true); end
 
           class UserPromptHandler < Data.define(alert: 'alert', before_unload: 'beforeUnload', confirm: 'confirm', default: 'default', file: 'file', prompt: 'prompt'); end
 
-          class SubscribeParameters < Data.define(events: {wire: 'events', list: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
+          class SubscribeParameters < Data.define(events: {json_key: 'events', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          class UnsubscribeByIDRequest < Data.define(subscriptions: {wire: 'subscriptions', list: true}); end
+          class UnsubscribeByIDRequest < Data.define(subscriptions: {json_key: 'subscriptions', list: true}); end
 
-          class UnsubscribeByAttributesRequest < Data.define(events: {wire: 'events', list: true}); end
+          class UnsubscribeByAttributesRequest < Data.define(events: {json_key: 'events', list: true}); end
 
-          class Status < Data.define(method_: {wire: 'method', fixed: 'session.status'}, params: 'params'); end
+          class Status < Data.define(method_: {json_key: 'method', fixed: 'session.status'}, params: 'params'); end
 
           class StatusResult < Data.define(ready: 'ready', message: 'message'); end
 
-          class New < Data.define(method_: {wire: 'method', fixed: 'session.new'}, params: {wire: 'params', ref: 'Session::NewParameters'}); end
+          class New < Data.define(method_: {json_key: 'method', fixed: 'session.new'}, params: {json_key: 'params', ref: 'Session::NewParameters'}); end
 
-          class NewParameters < Data.define(capabilities: {wire: 'capabilities', ref: 'Session::CapabilitiesRequest'}); end
+          class NewParameters < Data.define(capabilities: {json_key: 'capabilities', ref: 'Session::CapabilitiesRequest'}); end
 
-          class NewResult < Data.define(session_id: 'sessionId', capabilities: {wire: 'capabilities', ref: 'Session::NewResultCapabilities'}); end
+          class NewResult < Data.define(session_id: 'sessionId', capabilities: {json_key: 'capabilities', ref: 'Session::NewResultCapabilities'}); end
 
-          class End < Data.define(method_: {wire: 'method', fixed: 'session.end'}, params: 'params'); end
+          class End < Data.define(method_: {json_key: 'method', fixed: 'session.end'}, params: 'params'); end
 
-          class Subscribe < Data.define(method_: {wire: 'method', fixed: 'session.subscribe'}, params: {wire: 'params', ref: 'Session::SubscribeParameters'}); end
+          class Subscribe < Data.define(method_: {json_key: 'method', fixed: 'session.subscribe'}, params: {json_key: 'params', ref: 'Session::SubscribeParameters'}); end
 
           class SubscribeResult < Data.define(subscription: 'subscription'); end
 
-          class Unsubscribe < Data.define(method_: {wire: 'method', fixed: 'session.unsubscribe'}, params: {wire: 'params', ref: 'Session::UnsubscribeParameters'}); end
+          class Unsubscribe < Data.define(method_: {json_key: 'method', fixed: 'session.unsubscribe'}, params: {json_key: 'params', ref: 'Session::UnsubscribeParameters'}); end
 
           class UnsubscribeParameters < Union
             presence(
@@ -75,7 +75,7 @@ module Selenium
             )
           end
 
-          class NewResultCapabilities < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', set_window_rect: 'setWindowRect', user_agent: 'userAgent', proxy: {wire: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {wire: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, web_socket_url: 'webSocketUrl', extensible: true); end
+          class NewResultCapabilities < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', set_window_rect: 'setWindowRect', user_agent: 'userAgent', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, web_socket_url: 'webSocketUrl', extensible: true); end
 
           def initialize(bidi)
             @bidi = bidi

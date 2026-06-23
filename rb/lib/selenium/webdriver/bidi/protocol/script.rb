@@ -49,9 +49,9 @@ module Selenium
             all: 'all',
           }.freeze
 
-          class ChannelValue < Data.define(type: {fixed: 'channel'}, value: {wire: 'value', ref: 'Script::ChannelProperties'}); end
+          class ChannelValue < Data.define(type: {fixed: 'channel'}, value: {json_key: 'value', ref: 'Script::ChannelProperties'}); end
 
-          class ChannelProperties < Data.define(channel: 'channel', serialization_options: {wire: 'serializationOptions', ref: 'Script::SerializationOptions'}, ownership: 'ownership'); end
+          class ChannelProperties < Data.define(channel: 'channel', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, ownership: 'ownership'); end
 
           class EvaluateResult < Union
             discriminator 'type'
@@ -61,11 +61,11 @@ module Selenium
             )
           end
 
-          class EvaluateResultSuccess < Data.define(type: {fixed: 'success'}, result: {wire: 'result', ref: 'Script::RemoteValue'}, realm: 'realm'); end
+          class EvaluateResultSuccess < Data.define(type: {fixed: 'success'}, result: {json_key: 'result', ref: 'Script::RemoteValue'}, realm: 'realm'); end
 
-          class EvaluateResultException < Data.define(type: {fixed: 'exception'}, exception_details: {wire: 'exceptionDetails', ref: 'Script::ExceptionDetails'}, realm: 'realm'); end
+          class EvaluateResultException < Data.define(type: {fixed: 'exception'}, exception_details: {json_key: 'exceptionDetails', ref: 'Script::ExceptionDetails'}, realm: 'realm'); end
 
-          class ExceptionDetails < Data.define(column_number: 'columnNumber', exception: {wire: 'exception', ref: 'Script::RemoteValue'}, line_number: 'lineNumber', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}, text: 'text'); end
+          class ExceptionDetails < Data.define(column_number: 'columnNumber', exception: {json_key: 'exception', ref: 'Script::RemoteValue'}, line_number: 'lineNumber', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, text: 'text'); end
 
           class LocalValue < Union
             discriminator 'type'
@@ -90,19 +90,19 @@ module Selenium
             )
           end
 
-          class ArrayLocalValue < Data.define(type: {fixed: 'array'}, value: {wire: 'value', ref: 'Script::LocalValue', list: true}); end
+          class ArrayLocalValue < Data.define(type: {fixed: 'array'}, value: {json_key: 'value', ref: 'Script::LocalValue', list: true}); end
 
           class DateLocalValue < Data.define(type: {fixed: 'date'}, value: 'value'); end
 
-          class MapLocalValue < Data.define(type: {fixed: 'map'}, value: {wire: 'value', list: true}); end
+          class MapLocalValue < Data.define(type: {fixed: 'map'}, value: {json_key: 'value', list: true}); end
 
-          class ObjectLocalValue < Data.define(type: {fixed: 'object'}, value: {wire: 'value', list: true}); end
+          class ObjectLocalValue < Data.define(type: {fixed: 'object'}, value: {json_key: 'value', list: true}); end
 
           class RegExpValue < Data.define(pattern: 'pattern', flags: 'flags'); end
 
-          class RegExpLocalValue < Data.define(type: {fixed: 'regexp'}, value: {wire: 'value', ref: 'Script::RegExpValue'}); end
+          class RegExpLocalValue < Data.define(type: {fixed: 'regexp'}, value: {json_key: 'value', ref: 'Script::RegExpValue'}); end
 
-          class SetLocalValue < Data.define(type: {fixed: 'set'}, value: {wire: 'value', ref: 'Script::LocalValue', list: true}); end
+          class SetLocalValue < Data.define(type: {fixed: 'set'}, value: {json_key: 'value', ref: 'Script::LocalValue', list: true}); end
 
           class PrimitiveProtocolValue < Union
             discriminator 'type'
@@ -118,7 +118,7 @@ module Selenium
 
           class UndefinedValue < Data.define(type: {fixed: 'undefined'}); end
 
-          class NullValue < Data.define(type: {wire: 'type', nullable: true}); end
+          class NullValue < Data.define(type: {json_key: 'type', nullable: true}); end
 
           class StringValue < Data.define(type: {fixed: 'string'}, value: 'value'); end
 
@@ -146,7 +146,7 @@ module Selenium
 
           class WindowRealmInfo < Data.define(type: {fixed: 'window'}, realm: 'realm', origin: 'origin', context: 'context', user_context: 'userContext', sandbox: 'sandbox'); end
 
-          class DedicatedWorkerRealmInfo < Data.define(type: {fixed: 'dedicated-worker'}, realm: 'realm', origin: 'origin', owners: {wire: 'owners', list: true}); end
+          class DedicatedWorkerRealmInfo < Data.define(type: {fixed: 'dedicated-worker'}, realm: 'realm', origin: 'origin', owners: {json_key: 'owners', list: true}); end
 
           class SharedWorkerRealmInfo < Data.define(type: {fixed: 'shared-worker'}, realm: 'realm', origin: 'origin'); end
 
@@ -205,19 +205,19 @@ module Selenium
 
           class SymbolRemoteValue < Data.define(type: {fixed: 'symbol'}, handle: 'handle', internal_id: 'internalId'); end
 
-          class ArrayRemoteValue < Data.define(type: {fixed: 'array'}, handle: 'handle', internal_id: 'internalId', value: {wire: 'value', ref: 'Script::RemoteValue', list: true}); end
+          class ArrayRemoteValue < Data.define(type: {fixed: 'array'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
-          class ObjectRemoteValue < Data.define(type: {fixed: 'object'}, handle: 'handle', internal_id: 'internalId', value: {wire: 'value', list: true}); end
+          class ObjectRemoteValue < Data.define(type: {fixed: 'object'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', list: true}); end
 
           class FunctionRemoteValue < Data.define(type: {fixed: 'function'}, handle: 'handle', internal_id: 'internalId'); end
 
-          class RegExpRemoteValue < Data.define(type: {fixed: 'regexp'}, value: {wire: 'value', ref: 'Script::RegExpValue'}, handle: 'handle', internal_id: 'internalId'); end
+          class RegExpRemoteValue < Data.define(type: {fixed: 'regexp'}, value: {json_key: 'value', ref: 'Script::RegExpValue'}, handle: 'handle', internal_id: 'internalId'); end
 
           class DateRemoteValue < Data.define(type: {fixed: 'date'}, value: 'value', handle: 'handle', internal_id: 'internalId'); end
 
-          class MapRemoteValue < Data.define(type: {fixed: 'map'}, handle: 'handle', internal_id: 'internalId', value: {wire: 'value', list: true}); end
+          class MapRemoteValue < Data.define(type: {fixed: 'map'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', list: true}); end
 
-          class SetRemoteValue < Data.define(type: {fixed: 'set'}, handle: 'handle', internal_id: 'internalId', value: {wire: 'value', ref: 'Script::RemoteValue', list: true}); end
+          class SetRemoteValue < Data.define(type: {fixed: 'set'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
           class WeakMapRemoteValue < Data.define(type: {fixed: 'weakmap'}, handle: 'handle', internal_id: 'internalId'); end
 
@@ -235,23 +235,23 @@ module Selenium
 
           class ArrayBufferRemoteValue < Data.define(type: {fixed: 'arraybuffer'}, handle: 'handle', internal_id: 'internalId'); end
 
-          class NodeListRemoteValue < Data.define(type: {fixed: 'nodelist'}, handle: 'handle', internal_id: 'internalId', value: {wire: 'value', ref: 'Script::RemoteValue', list: true}); end
+          class NodeListRemoteValue < Data.define(type: {fixed: 'nodelist'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
-          class HTMLCollectionRemoteValue < Data.define(type: {fixed: 'htmlcollection'}, handle: 'handle', internal_id: 'internalId', value: {wire: 'value', ref: 'Script::RemoteValue', list: true}); end
+          class HTMLCollectionRemoteValue < Data.define(type: {fixed: 'htmlcollection'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
-          class NodeRemoteValue < Data.define(type: {fixed: 'node'}, shared_id: 'sharedId', handle: 'handle', internal_id: 'internalId', value: {wire: 'value', ref: 'Script::NodeProperties'}); end
+          class NodeRemoteValue < Data.define(type: {fixed: 'node'}, shared_id: 'sharedId', handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::NodeProperties'}); end
 
-          class NodeProperties < Data.define(node_type: 'nodeType', child_node_count: 'childNodeCount', attributes: 'attributes', children: {wire: 'children', ref: 'Script::NodeRemoteValue', list: true}, local_name: 'localName', mode: 'mode', namespace_uri: 'namespaceURI', node_value: 'nodeValue', shadow_root: {wire: 'shadowRoot', nullable: true, ref: 'Script::NodeRemoteValue'}); end
+          class NodeProperties < Data.define(node_type: 'nodeType', child_node_count: 'childNodeCount', attributes: 'attributes', children: {json_key: 'children', ref: 'Script::NodeRemoteValue', list: true}, local_name: 'localName', mode: 'mode', namespace_uri: 'namespaceURI', node_value: 'nodeValue', shadow_root: {json_key: 'shadowRoot', nullable: true, ref: 'Script::NodeRemoteValue'}); end
 
-          class WindowProxyRemoteValue < Data.define(type: {fixed: 'window'}, value: {wire: 'value', ref: 'Script::WindowProxyProperties'}, handle: 'handle', internal_id: 'internalId'); end
+          class WindowProxyRemoteValue < Data.define(type: {fixed: 'window'}, value: {json_key: 'value', ref: 'Script::WindowProxyProperties'}, handle: 'handle', internal_id: 'internalId'); end
 
           class WindowProxyProperties < Data.define(context: 'context'); end
 
-          class SerializationOptions < Data.define(max_dom_depth: {wire: 'maxDomDepth', nullable: true}, max_object_depth: {wire: 'maxObjectDepth', nullable: true}, include_shadow_tree: 'includeShadowTree'); end
+          class SerializationOptions < Data.define(max_dom_depth: {json_key: 'maxDomDepth', nullable: true}, max_object_depth: {json_key: 'maxObjectDepth', nullable: true}, include_shadow_tree: 'includeShadowTree'); end
 
           class StackFrame < Data.define(column_number: 'columnNumber', function_name: 'functionName', line_number: 'lineNumber', url: 'url'); end
 
-          class StackTrace < Data.define(call_frames: {wire: 'callFrames', ref: 'Script::StackFrame', list: true}); end
+          class StackTrace < Data.define(call_frames: {json_key: 'callFrames', ref: 'Script::StackFrame', list: true}); end
 
           class Source < Data.define(realm: 'realm', context: 'context', user_context: 'userContext'); end
 
@@ -266,41 +266,41 @@ module Selenium
             )
           end
 
-          class AddPreloadScript < Data.define(method_: {wire: 'method', fixed: 'script.addPreloadScript'}, params: {wire: 'params', ref: 'Script::AddPreloadScriptParameters'}); end
+          class AddPreloadScript < Data.define(method_: {json_key: 'method', fixed: 'script.addPreloadScript'}, params: {json_key: 'params', ref: 'Script::AddPreloadScriptParameters'}); end
 
-          class AddPreloadScriptParameters < Data.define(function_declaration: 'functionDeclaration', arguments: {wire: 'arguments', ref: 'Script::ChannelValue', list: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}, sandbox: 'sandbox'); end
+          class AddPreloadScriptParameters < Data.define(function_declaration: 'functionDeclaration', arguments: {json_key: 'arguments', ref: 'Script::ChannelValue', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, sandbox: 'sandbox'); end
 
           class AddPreloadScriptResult < Data.define(script: 'script'); end
 
-          class Disown < Data.define(method_: {wire: 'method', fixed: 'script.disown'}, params: {wire: 'params', ref: 'Script::DisownParameters'}); end
+          class Disown < Data.define(method_: {json_key: 'method', fixed: 'script.disown'}, params: {json_key: 'params', ref: 'Script::DisownParameters'}); end
 
-          class DisownParameters < Data.define(handles: {wire: 'handles', list: true}, target: {wire: 'target', ref: 'Script::Target'}); end
+          class DisownParameters < Data.define(handles: {json_key: 'handles', list: true}, target: {json_key: 'target', ref: 'Script::Target'}); end
 
-          class CallFunction < Data.define(method_: {wire: 'method', fixed: 'script.callFunction'}, params: {wire: 'params', ref: 'Script::CallFunctionParameters'}); end
+          class CallFunction < Data.define(method_: {json_key: 'method', fixed: 'script.callFunction'}, params: {json_key: 'params', ref: 'Script::CallFunctionParameters'}); end
 
-          class CallFunctionParameters < Data.define(function_declaration: 'functionDeclaration', await_promise: 'awaitPromise', target: {wire: 'target', ref: 'Script::Target'}, arguments: {wire: 'arguments', ref: 'Script::LocalValue', list: true}, result_ownership: 'resultOwnership', serialization_options: {wire: 'serializationOptions', ref: 'Script::SerializationOptions'}, this: {wire: 'this', ref: 'Script::LocalValue'}, user_activation: 'userActivation'); end
+          class CallFunctionParameters < Data.define(function_declaration: 'functionDeclaration', await_promise: 'awaitPromise', target: {json_key: 'target', ref: 'Script::Target'}, arguments: {json_key: 'arguments', ref: 'Script::LocalValue', list: true}, result_ownership: 'resultOwnership', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, this: {json_key: 'this', ref: 'Script::LocalValue'}, user_activation: 'userActivation'); end
 
-          class Evaluate < Data.define(method_: {wire: 'method', fixed: 'script.evaluate'}, params: {wire: 'params', ref: 'Script::EvaluateParameters'}); end
+          class Evaluate < Data.define(method_: {json_key: 'method', fixed: 'script.evaluate'}, params: {json_key: 'params', ref: 'Script::EvaluateParameters'}); end
 
-          class EvaluateParameters < Data.define(expression: 'expression', target: {wire: 'target', ref: 'Script::Target'}, await_promise: 'awaitPromise', result_ownership: 'resultOwnership', serialization_options: {wire: 'serializationOptions', ref: 'Script::SerializationOptions'}, user_activation: 'userActivation'); end
+          class EvaluateParameters < Data.define(expression: 'expression', target: {json_key: 'target', ref: 'Script::Target'}, await_promise: 'awaitPromise', result_ownership: 'resultOwnership', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, user_activation: 'userActivation'); end
 
-          class GetRealms < Data.define(method_: {wire: 'method', fixed: 'script.getRealms'}, params: {wire: 'params', ref: 'Script::GetRealmsParameters'}); end
+          class GetRealms < Data.define(method_: {json_key: 'method', fixed: 'script.getRealms'}, params: {json_key: 'params', ref: 'Script::GetRealmsParameters'}); end
 
           class GetRealmsParameters < Data.define(context: 'context', type: 'type'); end
 
-          class GetRealmsResult < Data.define(realms: {wire: 'realms', ref: 'Script::RealmInfo', list: true}); end
+          class GetRealmsResult < Data.define(realms: {json_key: 'realms', ref: 'Script::RealmInfo', list: true}); end
 
-          class RemovePreloadScript < Data.define(method_: {wire: 'method', fixed: 'script.removePreloadScript'}, params: {wire: 'params', ref: 'Script::RemovePreloadScriptParameters'}); end
+          class RemovePreloadScript < Data.define(method_: {json_key: 'method', fixed: 'script.removePreloadScript'}, params: {json_key: 'params', ref: 'Script::RemovePreloadScriptParameters'}); end
 
           class RemovePreloadScriptParameters < Data.define(script: 'script'); end
 
-          class Message < Data.define(method_: {wire: 'method', fixed: 'script.message'}, params: {wire: 'params', ref: 'Script::MessageParameters'}); end
+          class Message < Data.define(method_: {json_key: 'method', fixed: 'script.message'}, params: {json_key: 'params', ref: 'Script::MessageParameters'}); end
 
-          class MessageParameters < Data.define(channel: 'channel', data: {wire: 'data', ref: 'Script::RemoteValue'}, source: {wire: 'source', ref: 'Script::Source'}); end
+          class MessageParameters < Data.define(channel: 'channel', data: {json_key: 'data', ref: 'Script::RemoteValue'}, source: {json_key: 'source', ref: 'Script::Source'}); end
 
-          class RealmCreated < Data.define(method_: {wire: 'method', fixed: 'script.realmCreated'}, params: {wire: 'params', ref: 'Script::RealmInfo'}); end
+          class RealmCreated < Data.define(method_: {json_key: 'method', fixed: 'script.realmCreated'}, params: {json_key: 'params', ref: 'Script::RealmInfo'}); end
 
-          class RealmDestroyed < Data.define(method_: {wire: 'method', fixed: 'script.realmDestroyed'}, params: {wire: 'params', ref: 'Script::RealmDestroyedParameters'}); end
+          class RealmDestroyed < Data.define(method_: {json_key: 'method', fixed: 'script.realmDestroyed'}, params: {json_key: 'params', ref: 'Script::RealmDestroyedParameters'}); end
 
           class RealmDestroyedParameters < Data.define(realm: 'realm'); end
 

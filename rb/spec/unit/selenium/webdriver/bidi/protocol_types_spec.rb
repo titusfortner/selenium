@@ -18,7 +18,8 @@
 # under the License.
 
 require File.expand_path('../spec_helper', __dir__)
-%w[data browsing_context script network].each do |file|
+require File.expand_path('../../../../../lib/selenium/webdriver/bidi/serialization', __dir__)
+%w[browsing_context script network].each do |file|
   require File.expand_path("../../../../../lib/selenium/webdriver/bidi/protocol/#{file}", __dir__)
 end
 

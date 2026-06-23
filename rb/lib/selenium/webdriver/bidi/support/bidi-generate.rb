@@ -139,19 +139,20 @@ module BiDiGenerate
   # -- Structured-type IR (Phase 2) --
 
   # ref is the Protocol-relative class path for a nested structured field (nil
-  # for a scalar/opaque field); list wraps it in an array.
-  FieldIR = Struct.new(:ruby_name, :wire, :required, :nullable, :ref, :list, keyword_init: true) do
-    # A `Data.define` spec entry: `name: 'wire'` shorthand, or
-    # `name: {wire:, …}` when the field carries wire facts beyond its name.
+  # for a scalar/opaque field); list wraps it in an array. json_key is the exact
+  # JSON payload key (the schema's `wire` name, baked verbatim).
+  FieldIR = Struct.new(:ruby_name, :json_key, :required, :nullable, :ref, :list, keyword_init: true) do
+    # A `Data.define` spec entry: `name: 'jsonKey'` shorthand, or
+    # `name: {json_key:, …}` when the field carries JSON facts beyond its name.
     # (required is baked in the schema but not yet enforced at runtime — Phase 4.)
     def spec_entry
       meta = []
       meta << 'nullable: true' if nullable
       meta << "ref: '#{ref}'" if ref
       meta << 'list: true' if list
-      return "#{ruby_name}: '#{wire}'" if meta.empty?
+      return "#{ruby_name}: '#{json_key}'" if meta.empty?
 
-      "#{ruby_name}: {wire: '#{wire}', #{meta.join(', ')}}"
+      "#{ruby_name}: {json_key: '#{json_key}', #{meta.join(', ')}}"
     end
   end
 
@@ -175,7 +176,7 @@ module BiDiGenerate
       if discriminator[:wire] == discriminator[:ruby_name].to_s
         "#{discriminator[:ruby_name]}: {fixed: #{literal}}"
       else
-        "#{discriminator[:ruby_name]}: {wire: '#{discriminator[:wire]}', fixed: #{literal}}"
+        "#{discriminator[:ruby_name]}: {json_key: '#{discriminator[:wire]}', fixed: #{literal}}"
       end
     end
   end
@@ -184,7 +185,7 @@ module BiDiGenerate
   # :presence (selected when its required wire keys are all present).
   VariantIR = Struct.new(:mode, :value, :ref, :requires, keyword_init: true)
 
-  # A generated discriminated union (< Protocol::Union).
+  # A generated discriminated union (< BiDi::Union, resolved by lexical scope).
   UnionClass = Struct.new(:ruby_name, :discriminator_wire, :variants, keyword_init: true) do
     def union? = true
     def value_variants = variants.select { |v| v.mode == :value }
@@ -318,7 +319,7 @@ module BiDiGenerate
     def field_ir(field)
       resolved = resolve_node(field['type'])
       ruby_name = BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name']))
-      FieldIR.new(ruby_name: ruby_name, wire: field['wire'],
+      FieldIR.new(ruby_name: ruby_name, json_key: field['wire'],
                   required: field['required'], nullable: resolved[:nullable],
                   ref: resolved[:ref], list: resolved[:list])
     end
