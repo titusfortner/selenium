@@ -17,10 +17,8 @@
 # specific language governing permissions and limitations
 # under the License.
 
-# Loads the generated BiDi protocol layer: the hand-written serialization runtime
-# first (it defines the {BiDi::Data}/{BiDi::Union} bases the generated classes
-# resolve by lexical scope), then every generated domain module. Cross-domain
-# references are lazy (resolved via +Protocol.const_get+ at call time), so the
-# domain files load in any order. Full autoload wiring is deferred (Phase 6).
+# Serialization runtime first (defines the Data/Union bases the generated classes
+# resolve lexically), then the domain modules. Cross-domain refs are lazy, so domain
+# file order is free.
 require 'selenium/webdriver/bidi/serialization'
 Dir.glob(File.join(__dir__, 'protocol', '*.rb')).sort.each { |file| require file }

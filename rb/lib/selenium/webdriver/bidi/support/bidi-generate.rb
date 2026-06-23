@@ -130,9 +130,8 @@ module BiDiGenerate
       params.map { |p| "#{p.wire_name}: #{p.ruby_name}" }.join(', ')
     end
 
-    # The generated method body: a single `@transport.execute(...)` call. params_src
-    # is the params argument ("{wire: var, …}", "params" for a passthrough union, or
-    # nil when the command takes none); Transport renders/sends and parses the result.
+    # The `@transport.execute(...)` call. params_src is the params argument
+    # ("{wire: var, …}", "params" for a passthrough, or nil for none).
     def execute_call(params_src)
       args = ["'#{wire_name}'"]
       args << params_src if params_src
@@ -166,11 +165,9 @@ module BiDiGenerate
     end
   end
 
-  # A generated immutable value type (a Data.define(...) class). discriminator is
-  # the baked variant tag {ruby_name:, wire:, value:} (a fixed member) or nil.
-  # schema_name is the dotted source name; synthetic/owner mark a type the projector
-  # lifted out of `owner` (nested inside it instead of emitted at domain level).
-  # nested holds this type's own synthetic children.
+  # A generated immutable value type (a Data.define(...) class). discriminator is the
+  # baked variant tag {ruby_name:, wire:, value:} or nil; schema_name/synthetic/owner/
+  # nested drive owner-nesting (see nest_synthetic).
   TypeClass = Struct.new(:ruby_name, :fields, :discriminator, :extensible,
                          :schema_name, :synthetic, :owner, :label, :nested, keyword_init: true) do
     def union? = false
@@ -201,8 +198,7 @@ module BiDiGenerate
   VariantIR = Struct.new(:mode, :value, :ref, :requires, keyword_init: true)
 
   # A generated discriminated union (< BiDi::Union, resolved by lexical scope).
-  # nested holds the union's synthetic variant records (see nest_synthetic),
-  # emitted inside the union's class body rather than at domain level.
+  # nested holds its synthetic variant records (see nest_synthetic).
   UnionClass = Struct.new(:ruby_name, :discriminator_wire, :variants, :schema_name, :nested, keyword_init: true) do
     def union? = true
     def value_variants = variants.select { |v| v.mode == :value }
@@ -291,10 +287,8 @@ module BiDiGenerate
       name.include?('.') ? ruby_path(name) : nil
     end
 
-    # Protocol-relative class path, nesting a synthetic type under its owner as
-    # `Owner::Label` (recursively) so every ref — field or union variant — resolves
-    # to the same nested constant the type is emitted as. Non-synthetic types keep
-    # the flat domain-level path.
+    # Class path, nesting a synthetic type under its owner as `Owner::Label` so a ref
+    # resolves to the same nested constant the type is emitted as.
     def ruby_path(name)
       type = @types[name]
       return BiDiGenerate.type_ruby_path(name) unless type && type['synthetic']
@@ -477,14 +471,10 @@ module BiDiGenerate
     end
   end
 
-  # The JS projector tags every type it lifted out of an anonymous CDDL construct
-  # with `{synthetic, owner, label}` (commit 8bc45690d5). Render that parent/child
-  # relationship in Ruby by emitting each synthetic record *inside* its owner's
-  # class body and renaming it to its bare `label`, so `Owner_Label` becomes the
-  # nested `Owner::Label` (refs already resolve there via Schema#ruby_path). This is
-  # a binding-local presentation choice — other bindings nest in their own idiom —
-  # so it lives here, not in the projector. Synthetic enums stay domain-level
-  # constants. Raises if a synthetic record's owner is not itself an emitted class.
+  # The projector tags lifted-out types with {synthetic, owner, label}. Emit each
+  # synthetic record inside its owner's class body under its bare label, so
+  # `Owner_Label` becomes the nested `Owner::Label` (refs resolve there via
+  # ruby_path). Synthetic enums stay domain-level. Raises on a missing owner.
   def self.nest_synthetic(types)
     index = types.to_h { |t| [t.schema_name, t] }
     children = types.select { |t| !t.union? && t.synthetic }
