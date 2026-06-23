@@ -60,286 +60,89 @@ module Selenium
             write: 'write',
           }.freeze
 
-          class BluetoothManufacturerData < ::Data.define(:key, :data)
-            include Serializable
-            field :key, wire: 'key', required: true
-            field :data, wire: 'data', required: true
-          end
+          class BluetoothManufacturerData < Data.define(key: 'key', data: 'data'); end
 
-          class CharacteristicProperties < ::Data.define(:broadcast, :read, :write_without_response, :write, :notify, :indicate, :authenticated_signed_writes, :extended_properties)
-            include Serializable
-            field :broadcast, wire: 'broadcast'
-            field :read, wire: 'read'
-            field :write_without_response, wire: 'writeWithoutResponse'
-            field :write, wire: 'write'
-            field :notify, wire: 'notify'
-            field :indicate, wire: 'indicate'
-            field :authenticated_signed_writes, wire: 'authenticatedSignedWrites'
-            field :extended_properties, wire: 'extendedProperties'
-          end
+          class CharacteristicProperties < Data.define(broadcast: 'broadcast', read: 'read', write_without_response: 'writeWithoutResponse', write: 'write', notify: 'notify', indicate: 'indicate', authenticated_signed_writes: 'authenticatedSignedWrites', extended_properties: 'extendedProperties'); end
 
-          class RequestDeviceInfo < ::Data.define(:id, :name)
-            include Serializable
-            field :id, wire: 'id', required: true
-            field :name, wire: 'name', required: true, nullable: true
-          end
+          class RequestDeviceInfo < Data.define(id: 'id', name: {wire: 'name', nullable: true}); end
 
-          class ScanRecord < ::Data.define(:name, :uuids, :appearance, :manufacturer_data)
-            include Serializable
-            field :name, wire: 'name'
-            field :uuids, wire: 'uuids', list: true
-            field :appearance, wire: 'appearance'
-            field :manufacturer_data, wire: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true
-          end
+          class ScanRecord < Data.define(name: 'name', uuids: {wire: 'uuids', list: true}, appearance: 'appearance', manufacturer_data: {wire: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}); end
 
-          class HandleRequestDevicePrompt < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.handleRequestDevicePrompt'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::HandleRequestDevicePromptParameters'
-          end
+          class HandleRequestDevicePrompt < Data.define(method_: {wire: 'method', fixed: 'bluetooth.handleRequestDevicePrompt'}, params: {wire: 'params', ref: 'Bluetooth::HandleRequestDevicePromptParameters'}); end
 
           class HandleRequestDevicePromptParameters < Union
-            discriminator_wire 'accept'
-            variant true, 'Bluetooth::HandleRequestDevicePromptParameters_AcceptParameters'
-            variant false, 'Bluetooth::HandleRequestDevicePromptParameters_CancelParameters'
+            discriminator 'accept'
+            variants(
+              true => 'Bluetooth::HandleRequestDevicePromptParameters_AcceptParameters',
+              false => 'Bluetooth::HandleRequestDevicePromptParameters_CancelParameters',
+            )
           end
 
-          class SimulateAdapter < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateAdapter'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateAdapterParameters'
-          end
+          class SimulateAdapter < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateAdapter'}, params: {wire: 'params', ref: 'Bluetooth::SimulateAdapterParameters'}); end
 
-          class SimulateAdapterParameters < ::Data.define(:context, :le_supported, :state)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :le_supported, wire: 'leSupported'
-            field :state, wire: 'state', required: true
-          end
+          class SimulateAdapterParameters < Data.define(context: 'context', le_supported: 'leSupported', state: 'state'); end
 
-          class DisableSimulation < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.disableSimulation'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::DisableSimulationParameters'
-          end
+          class DisableSimulation < Data.define(method_: {wire: 'method', fixed: 'bluetooth.disableSimulation'}, params: {wire: 'params', ref: 'Bluetooth::DisableSimulationParameters'}); end
 
-          class DisableSimulationParameters < ::Data.define(:context)
-            include Serializable
-            field :context, wire: 'context', required: true
-          end
+          class DisableSimulationParameters < Data.define(context: 'context'); end
 
-          class SimulatePreconnectedPeripheral < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulatePreconnectedPeripheral'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulatePreconnectedPeripheralParameters'
-          end
+          class SimulatePreconnectedPeripheral < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulatePreconnectedPeripheral'}, params: {wire: 'params', ref: 'Bluetooth::SimulatePreconnectedPeripheralParameters'}); end
 
-          class SimulatePreconnectedPeripheralParameters < ::Data.define(:context, :address, :name, :manufacturer_data, :known_service_uuids)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :name, wire: 'name', required: true
-            field :manufacturer_data, wire: 'manufacturerData', required: true, ref: 'Bluetooth::BluetoothManufacturerData', list: true
-            field :known_service_uuids, wire: 'knownServiceUuids', required: true, list: true
-          end
+          class SimulatePreconnectedPeripheralParameters < Data.define(context: 'context', address: 'address', name: 'name', manufacturer_data: {wire: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}, known_service_uuids: {wire: 'knownServiceUuids', list: true}); end
 
-          class SimulateAdvertisement < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateAdvertisement'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateAdvertisementParameters'
-          end
+          class SimulateAdvertisement < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateAdvertisement'}, params: {wire: 'params', ref: 'Bluetooth::SimulateAdvertisementParameters'}); end
 
-          class SimulateAdvertisementParameters < ::Data.define(:context, :scan_entry)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :scan_entry, wire: 'scanEntry', required: true, ref: 'Bluetooth::SimulateAdvertisementScanEntryParameters'
-          end
+          class SimulateAdvertisementParameters < Data.define(context: 'context', scan_entry: {wire: 'scanEntry', ref: 'Bluetooth::SimulateAdvertisementScanEntryParameters'}); end
 
-          class SimulateAdvertisementScanEntryParameters < ::Data.define(:device_address, :rssi, :scan_record)
-            include Serializable
-            field :device_address, wire: 'deviceAddress', required: true
-            field :rssi, wire: 'rssi', required: true
-            field :scan_record, wire: 'scanRecord', required: true, ref: 'Bluetooth::ScanRecord'
-          end
+          class SimulateAdvertisementScanEntryParameters < Data.define(device_address: 'deviceAddress', rssi: 'rssi', scan_record: {wire: 'scanRecord', ref: 'Bluetooth::ScanRecord'}); end
 
-          class SimulateGattConnectionResponse < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateGattConnectionResponse'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateGattConnectionResponseParameters'
-          end
+          class SimulateGattConnectionResponse < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateGattConnectionResponse'}, params: {wire: 'params', ref: 'Bluetooth::SimulateGattConnectionResponseParameters'}); end
 
-          class SimulateGattConnectionResponseParameters < ::Data.define(:context, :address, :code)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :code, wire: 'code', required: true
-          end
+          class SimulateGattConnectionResponseParameters < Data.define(context: 'context', address: 'address', code: 'code'); end
 
-          class SimulateGattDisconnection < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateGattDisconnection'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateGattDisconnectionParameters'
-          end
+          class SimulateGattDisconnection < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateGattDisconnection'}, params: {wire: 'params', ref: 'Bluetooth::SimulateGattDisconnectionParameters'}); end
 
-          class SimulateGattDisconnectionParameters < ::Data.define(:context, :address)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-          end
+          class SimulateGattDisconnectionParameters < Data.define(context: 'context', address: 'address'); end
 
-          class SimulateService < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateService'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateServiceParameters'
-          end
+          class SimulateService < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateService'}, params: {wire: 'params', ref: 'Bluetooth::SimulateServiceParameters'}); end
 
-          class SimulateServiceParameters < ::Data.define(:context, :address, :uuid, :type)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :uuid, wire: 'uuid', required: true
-            field :type, wire: 'type', required: true
-          end
+          class SimulateServiceParameters < Data.define(context: 'context', address: 'address', uuid: 'uuid', type: 'type'); end
 
-          class SimulateCharacteristic < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateCharacteristic'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateCharacteristicParameters'
-          end
+          class SimulateCharacteristic < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateCharacteristic'}, params: {wire: 'params', ref: 'Bluetooth::SimulateCharacteristicParameters'}); end
 
-          class SimulateCharacteristicParameters < ::Data.define(:context, :address, :service_uuid, :characteristic_uuid, :characteristic_properties, :type)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :service_uuid, wire: 'serviceUuid', required: true
-            field :characteristic_uuid, wire: 'characteristicUuid', required: true
-            field :characteristic_properties, wire: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'
-            field :type, wire: 'type', required: true
-          end
+          class SimulateCharacteristicParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', characteristic_properties: {wire: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'}, type: 'type'); end
 
-          class SimulateCharacteristicResponse < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateCharacteristicResponse'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateCharacteristicResponseParameters'
-          end
+          class SimulateCharacteristicResponse < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateCharacteristicResponse'}, params: {wire: 'params', ref: 'Bluetooth::SimulateCharacteristicResponseParameters'}); end
 
-          class SimulateCharacteristicResponseParameters < ::Data.define(:context, :address, :service_uuid, :characteristic_uuid, :type, :code, :data)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :service_uuid, wire: 'serviceUuid', required: true
-            field :characteristic_uuid, wire: 'characteristicUuid', required: true
-            field :type, wire: 'type', required: true
-            field :code, wire: 'code', required: true
-            field :data, wire: 'data', list: true
-          end
+          class SimulateCharacteristicResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', code: 'code', data: {wire: 'data', list: true}); end
 
-          class SimulateDescriptor < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateDescriptor'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateDescriptorParameters'
-          end
+          class SimulateDescriptor < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateDescriptor'}, params: {wire: 'params', ref: 'Bluetooth::SimulateDescriptorParameters'}); end
 
-          class SimulateDescriptorParameters < ::Data.define(:context, :address, :service_uuid, :characteristic_uuid, :descriptor_uuid, :type)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :service_uuid, wire: 'serviceUuid', required: true
-            field :characteristic_uuid, wire: 'characteristicUuid', required: true
-            field :descriptor_uuid, wire: 'descriptorUuid', required: true
-            field :type, wire: 'type', required: true
-          end
+          class SimulateDescriptorParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type'); end
 
-          class SimulateDescriptorResponse < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.simulateDescriptorResponse'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::SimulateDescriptorResponseParameters'
-          end
+          class SimulateDescriptorResponse < Data.define(method_: {wire: 'method', fixed: 'bluetooth.simulateDescriptorResponse'}, params: {wire: 'params', ref: 'Bluetooth::SimulateDescriptorResponseParameters'}); end
 
-          class SimulateDescriptorResponseParameters < ::Data.define(:context, :address, :service_uuid, :characteristic_uuid, :descriptor_uuid, :type, :code, :data)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :service_uuid, wire: 'serviceUuid', required: true
-            field :characteristic_uuid, wire: 'characteristicUuid', required: true
-            field :descriptor_uuid, wire: 'descriptorUuid', required: true
-            field :type, wire: 'type', required: true
-            field :code, wire: 'code', required: true
-            field :data, wire: 'data', list: true
-          end
+          class SimulateDescriptorResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', code: 'code', data: {wire: 'data', list: true}); end
 
-          class RequestDevicePromptUpdated < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.requestDevicePromptUpdated'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::RequestDevicePromptUpdatedParameters'
-          end
+          class RequestDevicePromptUpdated < Data.define(method_: {wire: 'method', fixed: 'bluetooth.requestDevicePromptUpdated'}, params: {wire: 'params', ref: 'Bluetooth::RequestDevicePromptUpdatedParameters'}); end
 
-          class RequestDevicePromptUpdatedParameters < ::Data.define(:context, :prompt, :devices)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :prompt, wire: 'prompt', required: true
-            field :devices, wire: 'devices', required: true, ref: 'Bluetooth::RequestDeviceInfo', list: true
-          end
+          class RequestDevicePromptUpdatedParameters < Data.define(context: 'context', prompt: 'prompt', devices: {wire: 'devices', ref: 'Bluetooth::RequestDeviceInfo', list: true}); end
 
-          class GattConnectionAttempted < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.gattConnectionAttempted'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::GattConnectionAttemptedParameters'
-          end
+          class GattConnectionAttempted < Data.define(method_: {wire: 'method', fixed: 'bluetooth.gattConnectionAttempted'}, params: {wire: 'params', ref: 'Bluetooth::GattConnectionAttemptedParameters'}); end
 
-          class GattConnectionAttemptedParameters < ::Data.define(:context, :address)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-          end
+          class GattConnectionAttemptedParameters < Data.define(context: 'context', address: 'address'); end
 
-          class CharacteristicEventGenerated < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.characteristicEventGenerated'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::CharacteristicEventGeneratedParameters'
-          end
+          class CharacteristicEventGenerated < Data.define(method_: {wire: 'method', fixed: 'bluetooth.characteristicEventGenerated'}, params: {wire: 'params', ref: 'Bluetooth::CharacteristicEventGeneratedParameters'}); end
 
-          class CharacteristicEventGeneratedParameters < ::Data.define(:context, :address, :service_uuid, :characteristic_uuid, :type, :data)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :service_uuid, wire: 'serviceUuid', required: true
-            field :characteristic_uuid, wire: 'characteristicUuid', required: true
-            field :type, wire: 'type', required: true
-            field :data, wire: 'data', list: true
-          end
+          class CharacteristicEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', data: {wire: 'data', list: true}); end
 
-          class DescriptorEventGenerated < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'bluetooth.descriptorEventGenerated'
-            field :params, wire: 'params', required: true, ref: 'Bluetooth::DescriptorEventGeneratedParameters'
-          end
+          class DescriptorEventGenerated < Data.define(method_: {wire: 'method', fixed: 'bluetooth.descriptorEventGenerated'}, params: {wire: 'params', ref: 'Bluetooth::DescriptorEventGeneratedParameters'}); end
 
-          class DescriptorEventGeneratedParameters < ::Data.define(:context, :address, :service_uuid, :characteristic_uuid, :descriptor_uuid, :type, :data)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :address, wire: 'address', required: true
-            field :service_uuid, wire: 'serviceUuid', required: true
-            field :characteristic_uuid, wire: 'characteristicUuid', required: true
-            field :descriptor_uuid, wire: 'descriptorUuid', required: true
-            field :type, wire: 'type', required: true
-            field :data, wire: 'data', list: true
-          end
+          class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', data: {wire: 'data', list: true}); end
 
-          class HandleRequestDevicePromptParameters_AcceptParameters < ::Data.define(:context, :prompt, :device)
-            include Serializable
-            discriminator wire: 'accept', value: true
-            field :context, wire: 'context', required: true
-            field :prompt, wire: 'prompt', required: true
-            field :device, wire: 'device', required: true
-          end
+          class HandleRequestDevicePromptParameters_AcceptParameters < Data.define(accept: {fixed: true}, context: 'context', prompt: 'prompt', device: 'device'); end
 
-          class HandleRequestDevicePromptParameters_CancelParameters < ::Data.define(:context, :prompt)
-            include Serializable
-            discriminator wire: 'accept', value: false
-            field :context, wire: 'context', required: true
-            field :prompt, wire: 'prompt', required: true
-          end
+          class HandleRequestDevicePromptParameters_CancelParameters < Data.define(accept: {fixed: false}, context: 'context', prompt: 'prompt'); end
 
           def initialize(bidi)
             @bidi = bidi

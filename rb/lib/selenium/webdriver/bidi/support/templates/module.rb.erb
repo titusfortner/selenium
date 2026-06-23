@@ -28,33 +28,28 @@ module Selenium
 <%- mod.types.each do |type| -%>
 <%- if type.union? -%>
           class <%= type.ruby_name %> < Union
-<%- if type.discriminator_wire -%>
-            discriminator_wire '<%= type.discriminator_wire %>'
+<%- if type.discriminator_wire && !type.value_variants.empty? -%>
+            discriminator '<%= type.discriminator_wire %>'
+            variants(
+<%- type.value_variants.each do |variant| -%>
+              <%= BiDiGenerate.ruby_literal(variant.value) %> => '<%= variant.ref %>',
 <%- end -%>
-<%- type.variants.each do |variant| -%>
-<%- if variant.mode == :value -%>
-            variant <%= BiDiGenerate.ruby_literal(variant.value) %>, '<%= variant.ref %>'
-<%- elsif variant.mode == :fallback -%>
-            fallback '<%= variant.ref %>'
-<%- else -%>
-            presence_variant '<%= variant.ref %>', requires: [<%= variant.requires.map { |w| "'#{w}'" }.join(', ') %>]
+            )
 <%- end -%>
+<%- unless type.presence_variants.empty? -%>
+            presence(
+<%- type.presence_variants.each do |variant| -%>
+              '<%= variant.ref %>' => [<%= variant.requires.map { |w| "'#{w}'" }.join(', ') %>],
+<%- end -%>
+            )
+<%- end -%>
+<%- if type.fallback_variant -%>
+            fallback '<%= type.fallback_variant.ref %>'
 <%- end -%>
           end
 
 <%- else -%>
-          class <%= type.ruby_name %> < <%= type.data_define %>
-            include Serializable
-<%- if type.discriminator -%>
-            discriminator wire: '<%= type.discriminator[:wire] %>', value: <%= BiDiGenerate.ruby_literal(type.discriminator[:value]) %>
-<%- end -%>
-<%- if type.extensible -%>
-            extensible!
-<%- end -%>
-<%- type.fields.each do |field| -%>
-            field :<%= field.ruby_name %>, wire: '<%= field.wire %>'<%= field.opts %>
-<%- end -%>
-          end
+          class <%= type.ruby_name %> < Data.define(<%= type.define_args %>); end
 
 <%- end -%>
 <%- end -%>
@@ -77,7 +72,7 @@ module Selenium
           def <%= cmd.method_name %><%= signature %>
 <%- if cmd.result_ref -%>
             result = <%= call %>
-            Protocol.const_get('<%= cmd.result_ref %>').from_wire(result)
+            Protocol.const_get('<%= cmd.result_ref %>').from_json(result)
 <%- else -%>
             <%= call %>
 <%- end -%>

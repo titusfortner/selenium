@@ -9,57 +9,30 @@ module Selenium
     class BiDi
       module Protocol
         class WebExtension
-          class Install < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'webExtension.install'
-            field :params, wire: 'params', required: true, ref: 'WebExtension::InstallParameters'
-          end
+          class Install < Data.define(method_: {wire: 'method', fixed: 'webExtension.install'}, params: {wire: 'params', ref: 'WebExtension::InstallParameters'}); end
 
-          class InstallParameters < ::Data.define(:extension_data)
-            include Serializable
-            field :extension_data, wire: 'extensionData', required: true, ref: 'WebExtension::ExtensionData'
-          end
+          class InstallParameters < Data.define(extension_data: {wire: 'extensionData', ref: 'WebExtension::ExtensionData'}); end
 
           class ExtensionData < Union
-            discriminator_wire 'type'
-            variant 'archivePath', 'WebExtension::ExtensionArchivePath'
-            variant 'base64', 'WebExtension::ExtensionBase64Encoded'
-            variant 'path', 'WebExtension::ExtensionPath'
+            discriminator 'type'
+            variants(
+              'archivePath' => 'WebExtension::ExtensionArchivePath',
+              'base64' => 'WebExtension::ExtensionBase64Encoded',
+              'path' => 'WebExtension::ExtensionPath',
+            )
           end
 
-          class ExtensionPath < ::Data.define(:path)
-            include Serializable
-            discriminator wire: 'type', value: 'path'
-            field :path, wire: 'path', required: true
-          end
+          class ExtensionPath < Data.define(type: {fixed: 'path'}, path: 'path'); end
 
-          class ExtensionArchivePath < ::Data.define(:path)
-            include Serializable
-            discriminator wire: 'type', value: 'archivePath'
-            field :path, wire: 'path', required: true
-          end
+          class ExtensionArchivePath < Data.define(type: {fixed: 'archivePath'}, path: 'path'); end
 
-          class ExtensionBase64Encoded < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'base64'
-            field :value, wire: 'value', required: true
-          end
+          class ExtensionBase64Encoded < Data.define(type: {fixed: 'base64'}, value: 'value'); end
 
-          class InstallResult < ::Data.define(:extension)
-            include Serializable
-            field :extension, wire: 'extension', required: true
-          end
+          class InstallResult < Data.define(extension: 'extension'); end
 
-          class Uninstall < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'webExtension.uninstall'
-            field :params, wire: 'params', required: true, ref: 'WebExtension::UninstallParameters'
-          end
+          class Uninstall < Data.define(method_: {wire: 'method', fixed: 'webExtension.uninstall'}, params: {wire: 'params', ref: 'WebExtension::UninstallParameters'}); end
 
-          class UninstallParameters < ::Data.define(:extension)
-            include Serializable
-            field :extension, wire: 'extension', required: true
-          end
+          class UninstallParameters < Data.define(extension: 'extension'); end
 
           def initialize(bidi)
             @bidi = bidi
@@ -67,7 +40,7 @@ module Selenium
 
           def install(extension_data:)
             result = @bidi.send_cmd('webExtension.install', extensionData: extension_data)
-            Protocol.const_get('WebExtension::InstallResult').from_wire(result)
+            Protocol.const_get('WebExtension::InstallResult').from_json(result)
           end
 
           def uninstall(extension:)

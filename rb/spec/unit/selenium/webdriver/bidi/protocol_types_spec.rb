@@ -18,7 +18,7 @@
 # under the License.
 
 require File.expand_path('../spec_helper', __dir__)
-%w[serialization browsing_context script network].each do |file|
+%w[data browsing_context script network].each do |file|
   require File.expand_path("../../../../../lib/selenium/webdriver/bidi/protocol/#{file}", __dir__)
 end
 
@@ -31,34 +31,34 @@ module Selenium
             it 'round-trips through the wire' do
               locator = BrowsingContext::CssLocator.new(value: '.foo')
 
-              expect(locator.to_wire).to eq('type' => 'css', 'value' => '.foo')
-              expect(BrowsingContext::CssLocator.from_wire(locator.to_wire)).to eq(locator)
+              expect(locator.as_json).to eq('type' => 'css', 'value' => '.foo')
+              expect(BrowsingContext::CssLocator.from_json(locator.as_json)).to eq(locator)
             end
 
-            it 'raises when a required field is missing' do
-              expect { BrowsingContext::CssLocator.new }.to raise_error(ArgumentError, /value/)
+            it 'forces the discriminator and omits an unset field (required-enforcement is Phase 4)' do
+              expect(BrowsingContext::CssLocator.new.as_json).to eq('type' => 'css')
             end
           end
 
           describe 'discriminated union dispatch' do
             it 'selects the variant by its discriminator value' do
-              parsed = BrowsingContext::Locator.from_wire('type' => 'css', 'value' => '.x')
+              parsed = BrowsingContext::Locator.from_json('type' => 'css', 'value' => '.x')
 
               expect(parsed).to be_a(BrowsingContext::CssLocator)
               expect(parsed.value).to eq('.x')
             end
 
             it 'selects a variant by which fields are present when there is no discriminator' do
-              parsed = Script::RemoteReference.from_wire('sharedId' => 'abc')
+              parsed = Script::RemoteReference.from_json('sharedId' => 'abc')
 
               expect(parsed).to be_a(Script::SharedReference)
               expect(parsed.shared_id).to eq('abc')
             end
 
             it 'dispatches the LocalValue date and regexp variants restored upstream' do
-              expect(Script::LocalValue.from_wire('type' => 'date', 'value' => '2026-01-01'))
+              expect(Script::LocalValue.from_json('type' => 'date', 'value' => '2026-01-01'))
                 .to be_a(Script::DateLocalValue)
-              expect(Script::LocalValue.from_wire('type' => 'regexp', 'value' => {'pattern' => 'ab+c'}))
+              expect(Script::LocalValue.from_json('type' => 'regexp', 'value' => {'pattern' => 'ab+c'}))
                 .to be_a(Script::RegExpLocalValue)
             end
           end
@@ -73,11 +73,11 @@ module Selenium
             end
 
             it 'serializes a nested value object into its wire hash' do
-              expect(cookie.to_wire).to include('value' => {'type' => 'string', 'value' => 'YQ=='})
+              expect(cookie.as_json).to include('value' => {'type' => 'string', 'value' => 'YQ=='})
             end
 
             it 'parses a nested wire hash back into the value object' do
-              parsed = Network::Cookie.from_wire(cookie.to_wire)
+              parsed = Network::Cookie.from_json(cookie.as_json)
 
               expect(parsed.value).to eq(Network::StringValue.new(value: 'YQ=='))
               expect(parsed).to eq(cookie)
@@ -89,14 +89,14 @@ module Selenium
               inner = Script::ArrayLocalValue.new(value: [Script::StringValue.new(value: 'x')])
               outer = Script::ArrayLocalValue.new(value: [Script::NumberValue.new(value: 1), inner])
 
-              expect(outer.to_wire).to eq(
+              expect(outer.as_json).to eq(
                 'type' => 'array',
                 'value' => [
                   {'type' => 'number', 'value' => 1},
                   {'type' => 'array', 'value' => [{'type' => 'string', 'value' => 'x'}]}
                 ]
               )
-              expect(Script::LocalValue.from_wire(outer.to_wire)).to eq(outer)
+              expect(Script::LocalValue.from_json(outer.as_json)).to eq(outer)
             end
           end
 
@@ -105,18 +105,18 @@ module Selenium
               omitted = BrowsingContext::SetViewportParameters.new(context: 'c')
               explicit = BrowsingContext::SetViewportParameters.new(context: 'c', device_pixel_ratio: nil)
 
-              expect(omitted.to_wire).to eq('context' => 'c')
-              expect(explicit.to_wire).to eq('context' => 'c', 'devicePixelRatio' => nil)
+              expect(omitted.as_json).to eq('context' => 'c')
+              expect(explicit.as_json).to eq('context' => 'c', 'devicePixelRatio' => nil)
             end
           end
 
           describe 'extensible records' do
             it 'captures unknown keys and merges them back on serialization' do
-              parsed = Script::SharedReference.from_wire('sharedId' => 's1', 'webdriverValue' => 42)
+              parsed = Script::SharedReference.from_json('sharedId' => 's1', 'webdriverValue' => 42)
 
               expect(parsed.shared_id).to eq('s1')
               expect(parsed.extensions).to eq('webdriverValue' => 42)
-              expect(parsed.to_wire).to eq('sharedId' => 's1', 'webdriverValue' => 42)
+              expect(parsed.as_json).to eq('sharedId' => 's1', 'webdriverValue' => 42)
             end
           end
 

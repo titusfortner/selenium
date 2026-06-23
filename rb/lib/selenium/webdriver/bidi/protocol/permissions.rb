@@ -15,25 +15,11 @@ module Selenium
             prompt: 'prompt',
           }.freeze
 
-          class PermissionDescriptor < ::Data.define(:name)
-            include Serializable
-            field :name, wire: 'name', required: true
-          end
+          class PermissionDescriptor < Data.define(name: 'name'); end
 
-          class SetPermission < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'permissions.setPermission'
-            field :params, wire: 'params', required: true, ref: 'Permissions::SetPermissionParameters'
-          end
+          class SetPermission < Data.define(method_: {wire: 'method', fixed: 'permissions.setPermission'}, params: {wire: 'params', ref: 'Permissions::SetPermissionParameters'}); end
 
-          class SetPermissionParameters < ::Data.define(:descriptor, :state, :origin, :embedded_origin, :user_context)
-            include Serializable
-            field :descriptor, wire: 'descriptor', required: true, ref: 'Permissions::PermissionDescriptor'
-            field :state, wire: 'state', required: true
-            field :origin, wire: 'origin', required: true
-            field :embedded_origin, wire: 'embeddedOrigin'
-            field :user_context, wire: 'userContext'
-          end
+          class SetPermissionParameters < Data.define(descriptor: {wire: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: 'state', origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
 
           def initialize(bidi)
             @bidi = bidi

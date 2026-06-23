@@ -56,466 +56,141 @@ module Selenium
             bypass: 'bypass',
           }.freeze
 
-          class AuthChallenge < ::Data.define(:scheme, :realm)
-            include Serializable
-            field :scheme, wire: 'scheme', required: true
-            field :realm, wire: 'realm', required: true
-          end
+          class AuthChallenge < Data.define(scheme: 'scheme', realm: 'realm'); end
 
-          class AuthCredentials < ::Data.define(:username, :password)
-            include Serializable
-            discriminator wire: 'type', value: 'password'
-            field :username, wire: 'username', required: true
-            field :password, wire: 'password', required: true
-          end
+          class AuthCredentials < Data.define(type: {fixed: 'password'}, username: 'username', password: 'password'); end
 
-          class BaseParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts)
-            include Serializable
-            field :context, wire: 'context', required: true, nullable: true
-            field :is_blocked, wire: 'isBlocked', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :redirect_count, wire: 'redirectCount', required: true
-            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
-            field :timestamp, wire: 'timestamp', required: true
-            field :user_context, wire: 'userContext', nullable: true
-            field :intercepts, wire: 'intercepts', list: true
-          end
+          class BaseParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}); end
 
           class BytesValue < Union
-            discriminator_wire 'type'
-            variant 'string', 'Network::StringValue'
-            variant 'base64', 'Network::Base64Value'
+            discriminator 'type'
+            variants(
+              'string' => 'Network::StringValue',
+              'base64' => 'Network::Base64Value',
+            )
           end
 
-          class StringValue < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'string'
-            field :value, wire: 'value', required: true
-          end
+          class StringValue < Data.define(type: {fixed: 'string'}, value: 'value'); end
 
-          class Base64Value < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'base64'
-            field :value, wire: 'value', required: true
-          end
+          class Base64Value < Data.define(type: {fixed: 'base64'}, value: 'value'); end
 
-          class Cookie < ::Data.define(:name, :value, :domain, :path, :size, :http_only, :secure, :same_site, :expiry, :extensions)
-            include Serializable
-            extensible!
-            field :name, wire: 'name', required: true
-            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
-            field :domain, wire: 'domain', required: true
-            field :path, wire: 'path', required: true
-            field :size, wire: 'size', required: true
-            field :http_only, wire: 'httpOnly', required: true
-            field :secure, wire: 'secure', required: true
-            field :same_site, wire: 'sameSite', required: true
-            field :expiry, wire: 'expiry'
-          end
+          class Cookie < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
 
-          class CookieHeader < ::Data.define(:name, :value)
-            include Serializable
-            field :name, wire: 'name', required: true
-            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
-          end
+          class CookieHeader < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}); end
 
-          class FetchTimingInfo < ::Data.define(:time_origin, :request_time, :redirect_start, :redirect_end, :fetch_start, :dns_start, :dns_end, :connect_start, :connect_end, :tls_start, :request_start, :response_start, :response_end)
-            include Serializable
-            field :time_origin, wire: 'timeOrigin', required: true
-            field :request_time, wire: 'requestTime', required: true
-            field :redirect_start, wire: 'redirectStart', required: true
-            field :redirect_end, wire: 'redirectEnd', required: true
-            field :fetch_start, wire: 'fetchStart', required: true
-            field :dns_start, wire: 'dnsStart', required: true
-            field :dns_end, wire: 'dnsEnd', required: true
-            field :connect_start, wire: 'connectStart', required: true
-            field :connect_end, wire: 'connectEnd', required: true
-            field :tls_start, wire: 'tlsStart', required: true
-            field :request_start, wire: 'requestStart', required: true
-            field :response_start, wire: 'responseStart', required: true
-            field :response_end, wire: 'responseEnd', required: true
-          end
+          class FetchTimingInfo < Data.define(time_origin: 'timeOrigin', request_time: 'requestTime', redirect_start: 'redirectStart', redirect_end: 'redirectEnd', fetch_start: 'fetchStart', dns_start: 'dnsStart', dns_end: 'dnsEnd', connect_start: 'connectStart', connect_end: 'connectEnd', tls_start: 'tlsStart', request_start: 'requestStart', response_start: 'responseStart', response_end: 'responseEnd'); end
 
-          class Header < ::Data.define(:name, :value)
-            include Serializable
-            field :name, wire: 'name', required: true
-            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
-          end
+          class Header < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}); end
 
-          class Initiator < ::Data.define(:column_number, :line_number, :request, :stack_trace, :type)
-            include Serializable
-            field :column_number, wire: 'columnNumber'
-            field :line_number, wire: 'lineNumber'
-            field :request, wire: 'request'
-            field :stack_trace, wire: 'stackTrace', ref: 'Script::StackTrace'
-            field :type, wire: 'type'
-          end
+          class Initiator < Data.define(column_number: 'columnNumber', line_number: 'lineNumber', request: 'request', stack_trace: {wire: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
 
-          class RequestData < ::Data.define(:request, :url, :method_, :headers, :cookies, :headers_size, :body_size, :destination, :initiator_type, :timings)
-            include Serializable
-            field :request, wire: 'request', required: true
-            field :url, wire: 'url', required: true
-            field :method_, wire: 'method', required: true
-            field :headers, wire: 'headers', required: true, ref: 'Network::Header', list: true
-            field :cookies, wire: 'cookies', required: true, ref: 'Network::Cookie', list: true
-            field :headers_size, wire: 'headersSize', required: true
-            field :body_size, wire: 'bodySize', required: true, nullable: true
-            field :destination, wire: 'destination', required: true
-            field :initiator_type, wire: 'initiatorType', required: true, nullable: true
-            field :timings, wire: 'timings', required: true, ref: 'Network::FetchTimingInfo'
-          end
+          class RequestData < Data.define(request: 'request', url: 'url', method_: 'method', headers: {wire: 'headers', ref: 'Network::Header', list: true}, cookies: {wire: 'cookies', ref: 'Network::Cookie', list: true}, headers_size: 'headersSize', body_size: {wire: 'bodySize', nullable: true}, destination: 'destination', initiator_type: {wire: 'initiatorType', nullable: true}, timings: {wire: 'timings', ref: 'Network::FetchTimingInfo'}); end
 
-          class ResponseContent < ::Data.define(:size)
-            include Serializable
-            field :size, wire: 'size', required: true
-          end
+          class ResponseContent < Data.define(size: 'size'); end
 
-          class ResponseData < ::Data.define(:url, :protocol, :status, :status_text, :from_cache, :headers, :mime_type, :bytes_received, :headers_size, :body_size, :content, :auth_challenges)
-            include Serializable
-            field :url, wire: 'url', required: true
-            field :protocol, wire: 'protocol', required: true
-            field :status, wire: 'status', required: true
-            field :status_text, wire: 'statusText', required: true
-            field :from_cache, wire: 'fromCache', required: true
-            field :headers, wire: 'headers', required: true, ref: 'Network::Header', list: true
-            field :mime_type, wire: 'mimeType', required: true
-            field :bytes_received, wire: 'bytesReceived', required: true
-            field :headers_size, wire: 'headersSize', required: true, nullable: true
-            field :body_size, wire: 'bodySize', required: true, nullable: true
-            field :content, wire: 'content', required: true, ref: 'Network::ResponseContent'
-            field :auth_challenges, wire: 'authChallenges', ref: 'Network::AuthChallenge', list: true
-          end
+          class ResponseData < Data.define(url: 'url', protocol: 'protocol', status: 'status', status_text: 'statusText', from_cache: 'fromCache', headers: {wire: 'headers', ref: 'Network::Header', list: true}, mime_type: 'mimeType', bytes_received: 'bytesReceived', headers_size: {wire: 'headersSize', nullable: true}, body_size: {wire: 'bodySize', nullable: true}, content: {wire: 'content', ref: 'Network::ResponseContent'}, auth_challenges: {wire: 'authChallenges', ref: 'Network::AuthChallenge', list: true}); end
 
-          class SetCookieHeader < ::Data.define(:name, :value, :domain, :http_only, :expiry, :max_age, :path, :same_site, :secure)
-            include Serializable
-            field :name, wire: 'name', required: true
-            field :value, wire: 'value', required: true, ref: 'Network::BytesValue'
-            field :domain, wire: 'domain'
-            field :http_only, wire: 'httpOnly'
-            field :expiry, wire: 'expiry'
-            field :max_age, wire: 'maxAge'
-            field :path, wire: 'path'
-            field :same_site, wire: 'sameSite'
-            field :secure, wire: 'secure'
-          end
+          class SetCookieHeader < Data.define(name: 'name', value: {wire: 'value', ref: 'Network::BytesValue'}, domain: 'domain', http_only: 'httpOnly', expiry: 'expiry', max_age: 'maxAge', path: 'path', same_site: 'sameSite', secure: 'secure'); end
 
           class UrlPattern < Union
-            discriminator_wire 'type'
-            variant 'pattern', 'Network::UrlPatternPattern'
-            variant 'string', 'Network::UrlPatternString'
+            discriminator 'type'
+            variants(
+              'pattern' => 'Network::UrlPatternPattern',
+              'string' => 'Network::UrlPatternString',
+            )
           end
 
-          class UrlPatternPattern < ::Data.define(:protocol, :hostname, :port, :pathname, :search)
-            include Serializable
-            discriminator wire: 'type', value: 'pattern'
-            field :protocol, wire: 'protocol'
-            field :hostname, wire: 'hostname'
-            field :port, wire: 'port'
-            field :pathname, wire: 'pathname'
-            field :search, wire: 'search'
-          end
+          class UrlPatternPattern < Data.define(type: {fixed: 'pattern'}, protocol: 'protocol', hostname: 'hostname', port: 'port', pathname: 'pathname', search: 'search'); end
 
-          class UrlPatternString < ::Data.define(:pattern)
-            include Serializable
-            discriminator wire: 'type', value: 'string'
-            field :pattern, wire: 'pattern', required: true
-          end
+          class UrlPatternString < Data.define(type: {fixed: 'string'}, pattern: 'pattern'); end
 
-          class AddDataCollector < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.addDataCollector'
-            field :params, wire: 'params', required: true, ref: 'Network::AddDataCollectorParameters'
-          end
+          class AddDataCollector < Data.define(method_: {wire: 'method', fixed: 'network.addDataCollector'}, params: {wire: 'params', ref: 'Network::AddDataCollectorParameters'}); end
 
-          class AddDataCollectorParameters < ::Data.define(:data_types, :max_encoded_data_size, :collector_type, :contexts, :user_contexts)
-            include Serializable
-            field :data_types, wire: 'dataTypes', required: true, list: true
-            field :max_encoded_data_size, wire: 'maxEncodedDataSize', required: true
-            field :collector_type, wire: 'collectorType'
-            field :contexts, wire: 'contexts', list: true
-            field :user_contexts, wire: 'userContexts', list: true
-          end
+          class AddDataCollectorParameters < Data.define(data_types: {wire: 'dataTypes', list: true}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: 'collectorType', contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
 
-          class AddDataCollectorResult < ::Data.define(:collector)
-            include Serializable
-            field :collector, wire: 'collector', required: true
-          end
+          class AddDataCollectorResult < Data.define(collector: 'collector'); end
 
-          class AddIntercept < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.addIntercept'
-            field :params, wire: 'params', required: true, ref: 'Network::AddInterceptParameters'
-          end
+          class AddIntercept < Data.define(method_: {wire: 'method', fixed: 'network.addIntercept'}, params: {wire: 'params', ref: 'Network::AddInterceptParameters'}); end
 
-          class AddInterceptParameters < ::Data.define(:phases, :contexts, :url_patterns)
-            include Serializable
-            field :phases, wire: 'phases', required: true, list: true
-            field :contexts, wire: 'contexts', list: true
-            field :url_patterns, wire: 'urlPatterns', ref: 'Network::UrlPattern', list: true
-          end
+          class AddInterceptParameters < Data.define(phases: {wire: 'phases', list: true}, contexts: {wire: 'contexts', list: true}, url_patterns: {wire: 'urlPatterns', ref: 'Network::UrlPattern', list: true}); end
 
-          class AddInterceptResult < ::Data.define(:intercept)
-            include Serializable
-            field :intercept, wire: 'intercept', required: true
-          end
+          class AddInterceptResult < Data.define(intercept: 'intercept'); end
 
-          class ContinueRequest < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.continueRequest'
-            field :params, wire: 'params', required: true, ref: 'Network::ContinueRequestParameters'
-          end
+          class ContinueRequest < Data.define(method_: {wire: 'method', fixed: 'network.continueRequest'}, params: {wire: 'params', ref: 'Network::ContinueRequestParameters'}); end
 
-          class ContinueRequestParameters < ::Data.define(:request, :body, :cookies, :headers, :method_, :url)
-            include Serializable
-            field :request, wire: 'request', required: true
-            field :body, wire: 'body', ref: 'Network::BytesValue'
-            field :cookies, wire: 'cookies', ref: 'Network::CookieHeader', list: true
-            field :headers, wire: 'headers', ref: 'Network::Header', list: true
-            field :method_, wire: 'method'
-            field :url, wire: 'url'
-          end
+          class ContinueRequestParameters < Data.define(request: 'request', body: {wire: 'body', ref: 'Network::BytesValue'}, cookies: {wire: 'cookies', ref: 'Network::CookieHeader', list: true}, headers: {wire: 'headers', ref: 'Network::Header', list: true}, method_: 'method', url: 'url'); end
 
-          class ContinueResponse < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.continueResponse'
-            field :params, wire: 'params', required: true, ref: 'Network::ContinueResponseParameters'
-          end
+          class ContinueResponse < Data.define(method_: {wire: 'method', fixed: 'network.continueResponse'}, params: {wire: 'params', ref: 'Network::ContinueResponseParameters'}); end
 
-          class ContinueResponseParameters < ::Data.define(:request, :cookies, :credentials, :headers, :reason_phrase, :status_code)
-            include Serializable
-            field :request, wire: 'request', required: true
-            field :cookies, wire: 'cookies', ref: 'Network::SetCookieHeader', list: true
-            field :credentials, wire: 'credentials', ref: 'Network::AuthCredentials'
-            field :headers, wire: 'headers', ref: 'Network::Header', list: true
-            field :reason_phrase, wire: 'reasonPhrase'
-            field :status_code, wire: 'statusCode'
-          end
+          class ContinueResponseParameters < Data.define(request: 'request', cookies: {wire: 'cookies', ref: 'Network::SetCookieHeader', list: true}, credentials: {wire: 'credentials', ref: 'Network::AuthCredentials'}, headers: {wire: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
 
-          class ContinueWithAuth < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.continueWithAuth'
-            field :params, wire: 'params', required: true, ref: 'Network::ContinueWithAuthParameters'
-          end
+          class ContinueWithAuth < Data.define(method_: {wire: 'method', fixed: 'network.continueWithAuth'}, params: {wire: 'params', ref: 'Network::ContinueWithAuthParameters'}); end
 
           class ContinueWithAuthParameters < Union
-            discriminator_wire 'action'
-            variant 'provideCredentials', 'Network::ContinueWithAuthParameters_Credentials'
+            discriminator 'action'
+            variants(
+              'provideCredentials' => 'Network::ContinueWithAuthParameters_Credentials',
+            )
             fallback 'Network::ContinueWithAuthParameters_NoCredentials'
           end
 
-          class DisownData < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.disownData'
-            field :params, wire: 'params', required: true, ref: 'Network::DisownDataParameters'
-          end
+          class DisownData < Data.define(method_: {wire: 'method', fixed: 'network.disownData'}, params: {wire: 'params', ref: 'Network::DisownDataParameters'}); end
 
-          class DisownDataParameters < ::Data.define(:data_type, :collector, :request)
-            include Serializable
-            field :data_type, wire: 'dataType', required: true
-            field :collector, wire: 'collector', required: true
-            field :request, wire: 'request', required: true
-          end
+          class DisownDataParameters < Data.define(data_type: 'dataType', collector: 'collector', request: 'request'); end
 
-          class FailRequest < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.failRequest'
-            field :params, wire: 'params', required: true, ref: 'Network::FailRequestParameters'
-          end
+          class FailRequest < Data.define(method_: {wire: 'method', fixed: 'network.failRequest'}, params: {wire: 'params', ref: 'Network::FailRequestParameters'}); end
 
-          class FailRequestParameters < ::Data.define(:request)
-            include Serializable
-            field :request, wire: 'request', required: true
-          end
+          class FailRequestParameters < Data.define(request: 'request'); end
 
-          class GetData < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.getData'
-            field :params, wire: 'params', required: true, ref: 'Network::GetDataParameters'
-          end
+          class GetData < Data.define(method_: {wire: 'method', fixed: 'network.getData'}, params: {wire: 'params', ref: 'Network::GetDataParameters'}); end
 
-          class GetDataParameters < ::Data.define(:data_type, :collector, :disown, :request)
-            include Serializable
-            field :data_type, wire: 'dataType', required: true
-            field :collector, wire: 'collector'
-            field :disown, wire: 'disown'
-            field :request, wire: 'request', required: true
-          end
+          class GetDataParameters < Data.define(data_type: 'dataType', collector: 'collector', disown: 'disown', request: 'request'); end
 
-          class GetDataResult < ::Data.define(:bytes)
-            include Serializable
-            field :bytes, wire: 'bytes', required: true, ref: 'Network::BytesValue'
-          end
+          class GetDataResult < Data.define(bytes: {wire: 'bytes', ref: 'Network::BytesValue'}); end
 
-          class ProvideResponse < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.provideResponse'
-            field :params, wire: 'params', required: true, ref: 'Network::ProvideResponseParameters'
-          end
+          class ProvideResponse < Data.define(method_: {wire: 'method', fixed: 'network.provideResponse'}, params: {wire: 'params', ref: 'Network::ProvideResponseParameters'}); end
 
-          class ProvideResponseParameters < ::Data.define(:request, :body, :cookies, :headers, :reason_phrase, :status_code)
-            include Serializable
-            field :request, wire: 'request', required: true
-            field :body, wire: 'body', ref: 'Network::BytesValue'
-            field :cookies, wire: 'cookies', ref: 'Network::SetCookieHeader', list: true
-            field :headers, wire: 'headers', ref: 'Network::Header', list: true
-            field :reason_phrase, wire: 'reasonPhrase'
-            field :status_code, wire: 'statusCode'
-          end
+          class ProvideResponseParameters < Data.define(request: 'request', body: {wire: 'body', ref: 'Network::BytesValue'}, cookies: {wire: 'cookies', ref: 'Network::SetCookieHeader', list: true}, headers: {wire: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
 
-          class RemoveDataCollector < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.removeDataCollector'
-            field :params, wire: 'params', required: true, ref: 'Network::RemoveDataCollectorParameters'
-          end
+          class RemoveDataCollector < Data.define(method_: {wire: 'method', fixed: 'network.removeDataCollector'}, params: {wire: 'params', ref: 'Network::RemoveDataCollectorParameters'}); end
 
-          class RemoveDataCollectorParameters < ::Data.define(:collector)
-            include Serializable
-            field :collector, wire: 'collector', required: true
-          end
+          class RemoveDataCollectorParameters < Data.define(collector: 'collector'); end
 
-          class RemoveIntercept < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.removeIntercept'
-            field :params, wire: 'params', required: true, ref: 'Network::RemoveInterceptParameters'
-          end
+          class RemoveIntercept < Data.define(method_: {wire: 'method', fixed: 'network.removeIntercept'}, params: {wire: 'params', ref: 'Network::RemoveInterceptParameters'}); end
 
-          class RemoveInterceptParameters < ::Data.define(:intercept)
-            include Serializable
-            field :intercept, wire: 'intercept', required: true
-          end
+          class RemoveInterceptParameters < Data.define(intercept: 'intercept'); end
 
-          class SetCacheBehavior < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.setCacheBehavior'
-            field :params, wire: 'params', required: true, ref: 'Network::SetCacheBehaviorParameters'
-          end
+          class SetCacheBehavior < Data.define(method_: {wire: 'method', fixed: 'network.setCacheBehavior'}, params: {wire: 'params', ref: 'Network::SetCacheBehaviorParameters'}); end
 
-          class SetCacheBehaviorParameters < ::Data.define(:cache_behavior, :contexts)
-            include Serializable
-            field :cache_behavior, wire: 'cacheBehavior', required: true
-            field :contexts, wire: 'contexts', list: true
-          end
+          class SetCacheBehaviorParameters < Data.define(cache_behavior: 'cacheBehavior', contexts: {wire: 'contexts', list: true}); end
 
-          class SetExtraHeaders < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.setExtraHeaders'
-            field :params, wire: 'params', required: true, ref: 'Network::SetExtraHeadersParameters'
-          end
+          class SetExtraHeaders < Data.define(method_: {wire: 'method', fixed: 'network.setExtraHeaders'}, params: {wire: 'params', ref: 'Network::SetExtraHeadersParameters'}); end
 
-          class SetExtraHeadersParameters < ::Data.define(:headers, :contexts, :user_contexts)
-            include Serializable
-            field :headers, wire: 'headers', required: true, ref: 'Network::Header', list: true
-            field :contexts, wire: 'contexts', list: true
-            field :user_contexts, wire: 'userContexts', list: true
-          end
+          class SetExtraHeadersParameters < Data.define(headers: {wire: 'headers', ref: 'Network::Header', list: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
 
-          class AuthRequired < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.authRequired'
-            field :params, wire: 'params', required: true, ref: 'Network::AuthRequiredParameters'
-          end
+          class AuthRequired < Data.define(method_: {wire: 'method', fixed: 'network.authRequired'}, params: {wire: 'params', ref: 'Network::AuthRequiredParameters'}); end
 
-          class AuthRequiredParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :response)
-            include Serializable
-            field :context, wire: 'context', required: true, nullable: true
-            field :is_blocked, wire: 'isBlocked', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :redirect_count, wire: 'redirectCount', required: true
-            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
-            field :timestamp, wire: 'timestamp', required: true
-            field :user_context, wire: 'userContext', nullable: true
-            field :intercepts, wire: 'intercepts', list: true
-            field :response, wire: 'response', required: true, ref: 'Network::ResponseData'
-          end
+          class AuthRequiredParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, response: {wire: 'response', ref: 'Network::ResponseData'}); end
 
-          class BeforeRequestSent < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.beforeRequestSent'
-            field :params, wire: 'params', required: true, ref: 'Network::BeforeRequestSentParameters'
-          end
+          class BeforeRequestSent < Data.define(method_: {wire: 'method', fixed: 'network.beforeRequestSent'}, params: {wire: 'params', ref: 'Network::BeforeRequestSentParameters'}); end
 
-          class BeforeRequestSentParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :initiator)
-            include Serializable
-            field :context, wire: 'context', required: true, nullable: true
-            field :is_blocked, wire: 'isBlocked', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :redirect_count, wire: 'redirectCount', required: true
-            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
-            field :timestamp, wire: 'timestamp', required: true
-            field :user_context, wire: 'userContext', nullable: true
-            field :intercepts, wire: 'intercepts', list: true
-            field :initiator, wire: 'initiator', ref: 'Network::Initiator'
-          end
+          class BeforeRequestSentParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, initiator: {wire: 'initiator', ref: 'Network::Initiator'}); end
 
-          class FetchError < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.fetchError'
-            field :params, wire: 'params', required: true, ref: 'Network::FetchErrorParameters'
-          end
+          class FetchError < Data.define(method_: {wire: 'method', fixed: 'network.fetchError'}, params: {wire: 'params', ref: 'Network::FetchErrorParameters'}); end
 
-          class FetchErrorParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :error_text)
-            include Serializable
-            field :context, wire: 'context', required: true, nullable: true
-            field :is_blocked, wire: 'isBlocked', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :redirect_count, wire: 'redirectCount', required: true
-            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
-            field :timestamp, wire: 'timestamp', required: true
-            field :user_context, wire: 'userContext', nullable: true
-            field :intercepts, wire: 'intercepts', list: true
-            field :error_text, wire: 'errorText', required: true
-          end
+          class FetchErrorParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, error_text: 'errorText'); end
 
-          class ResponseCompleted < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.responseCompleted'
-            field :params, wire: 'params', required: true, ref: 'Network::ResponseCompletedParameters'
-          end
+          class ResponseCompleted < Data.define(method_: {wire: 'method', fixed: 'network.responseCompleted'}, params: {wire: 'params', ref: 'Network::ResponseCompletedParameters'}); end
 
-          class ResponseCompletedParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :response)
-            include Serializable
-            field :context, wire: 'context', required: true, nullable: true
-            field :is_blocked, wire: 'isBlocked', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :redirect_count, wire: 'redirectCount', required: true
-            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
-            field :timestamp, wire: 'timestamp', required: true
-            field :user_context, wire: 'userContext', nullable: true
-            field :intercepts, wire: 'intercepts', list: true
-            field :response, wire: 'response', required: true, ref: 'Network::ResponseData'
-          end
+          class ResponseCompletedParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, response: {wire: 'response', ref: 'Network::ResponseData'}); end
 
-          class ResponseStarted < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'network.responseStarted'
-            field :params, wire: 'params', required: true, ref: 'Network::ResponseStartedParameters'
-          end
+          class ResponseStarted < Data.define(method_: {wire: 'method', fixed: 'network.responseStarted'}, params: {wire: 'params', ref: 'Network::ResponseStartedParameters'}); end
 
-          class ResponseStartedParameters < ::Data.define(:context, :is_blocked, :navigation, :redirect_count, :request, :timestamp, :user_context, :intercepts, :response)
-            include Serializable
-            field :context, wire: 'context', required: true, nullable: true
-            field :is_blocked, wire: 'isBlocked', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :redirect_count, wire: 'redirectCount', required: true
-            field :request, wire: 'request', required: true, ref: 'Network::RequestData'
-            field :timestamp, wire: 'timestamp', required: true
-            field :user_context, wire: 'userContext', nullable: true
-            field :intercepts, wire: 'intercepts', list: true
-            field :response, wire: 'response', required: true, ref: 'Network::ResponseData'
-          end
+          class ResponseStartedParameters < Data.define(context: {wire: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {wire: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {wire: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {wire: 'userContext', nullable: true}, intercepts: {wire: 'intercepts', list: true}, response: {wire: 'response', ref: 'Network::ResponseData'}); end
 
-          class ContinueWithAuthParameters_Credentials < ::Data.define(:request, :credentials)
-            include Serializable
-            discriminator wire: 'action', value: 'provideCredentials'
-            field :request, wire: 'request', required: true
-            field :credentials, wire: 'credentials', required: true, ref: 'Network::AuthCredentials'
-          end
+          class ContinueWithAuthParameters_Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {wire: 'credentials', ref: 'Network::AuthCredentials'}); end
 
-          class ContinueWithAuthParameters_NoCredentials < ::Data.define(:request, :action)
-            include Serializable
-            field :request, wire: 'request', required: true
-            field :action, wire: 'action', required: true
-          end
+          class ContinueWithAuthParameters_NoCredentials < Data.define(request: 'request', action: 'action'); end
 
           def initialize(bidi)
             @bidi = bidi
@@ -523,12 +198,12 @@ module Selenium
 
           def add_data_collector(data_types:, max_encoded_data_size:, collector_type: nil, contexts: nil, user_contexts: nil)
             result = @bidi.send_cmd('network.addDataCollector', dataTypes: data_types, maxEncodedDataSize: max_encoded_data_size, collectorType: collector_type, contexts: contexts, userContexts: user_contexts)
-            Protocol.const_get('Network::AddDataCollectorResult').from_wire(result)
+            Protocol.const_get('Network::AddDataCollectorResult').from_json(result)
           end
 
           def add_intercept(phases:, contexts: nil, url_patterns: nil)
             result = @bidi.send_cmd('network.addIntercept', phases: phases, contexts: contexts, urlPatterns: url_patterns)
-            Protocol.const_get('Network::AddInterceptResult').from_wire(result)
+            Protocol.const_get('Network::AddInterceptResult').from_json(result)
           end
 
           def continue_request(request:, body: nil, cookies: nil, headers: nil, method: nil, url: nil)
@@ -553,7 +228,7 @@ module Selenium
 
           def get_data(data_type:, request:, collector: nil, disown: nil)
             result = @bidi.send_cmd('network.getData', dataType: data_type, collector: collector, disown: disown, request: request)
-            Protocol.const_get('Network::GetDataResult').from_wire(result)
+            Protocol.const_get('Network::GetDataResult').from_json(result)
           end
 
           def provide_response(request:, body: nil, cookies: nil, headers: nil, reason_phrase: nil, status_code: nil)

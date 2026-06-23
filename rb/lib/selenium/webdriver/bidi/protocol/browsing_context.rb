@@ -59,488 +59,168 @@ module Selenium
             landscape: 'landscape',
           }.freeze
 
-          class Info < ::Data.define(:children, :client_window, :context, :original_opener, :url, :user_context, :parent)
-            include Serializable
-            field :children, wire: 'children', required: true, nullable: true, ref: 'BrowsingContext::Info', list: true
-            field :client_window, wire: 'clientWindow', required: true
-            field :context, wire: 'context', required: true
-            field :original_opener, wire: 'originalOpener', required: true, nullable: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext', required: true
-            field :parent, wire: 'parent', nullable: true
-          end
+          class Info < Data.define(children: {wire: 'children', nullable: true, ref: 'BrowsingContext::Info', list: true}, client_window: 'clientWindow', context: 'context', original_opener: {wire: 'originalOpener', nullable: true}, url: 'url', user_context: 'userContext', parent: {wire: 'parent', nullable: true}); end
 
           class Locator < Union
-            discriminator_wire 'type'
-            variant 'accessibility', 'BrowsingContext::AccessibilityLocator'
-            variant 'css', 'BrowsingContext::CssLocator'
-            variant 'context', 'BrowsingContext::ContextLocator'
-            variant 'innerText', 'BrowsingContext::InnerTextLocator'
-            variant 'xpath', 'BrowsingContext::XPathLocator'
+            discriminator 'type'
+            variants(
+              'accessibility' => 'BrowsingContext::AccessibilityLocator',
+              'css' => 'BrowsingContext::CssLocator',
+              'context' => 'BrowsingContext::ContextLocator',
+              'innerText' => 'BrowsingContext::InnerTextLocator',
+              'xpath' => 'BrowsingContext::XPathLocator',
+            )
           end
 
-          class AccessibilityLocator < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'accessibility'
-            field :value, wire: 'value', required: true, ref: 'BrowsingContext::AccessibilityLocatorValue'
-          end
+          class AccessibilityLocator < Data.define(type: {fixed: 'accessibility'}, value: {wire: 'value', ref: 'BrowsingContext::AccessibilityLocatorValue'}); end
 
-          class CssLocator < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'css'
-            field :value, wire: 'value', required: true
-          end
+          class CssLocator < Data.define(type: {fixed: 'css'}, value: 'value'); end
 
-          class ContextLocator < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'context'
-            field :value, wire: 'value', required: true, ref: 'BrowsingContext::ContextLocatorValue'
-          end
+          class ContextLocator < Data.define(type: {fixed: 'context'}, value: {wire: 'value', ref: 'BrowsingContext::ContextLocatorValue'}); end
 
-          class InnerTextLocator < ::Data.define(:value, :ignore_case, :match_type, :max_depth)
-            include Serializable
-            discriminator wire: 'type', value: 'innerText'
-            field :value, wire: 'value', required: true
-            field :ignore_case, wire: 'ignoreCase'
-            field :match_type, wire: 'matchType'
-            field :max_depth, wire: 'maxDepth'
-          end
+          class InnerTextLocator < Data.define(type: {fixed: 'innerText'}, value: 'value', ignore_case: 'ignoreCase', match_type: 'matchType', max_depth: 'maxDepth'); end
 
-          class XPathLocator < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'xpath'
-            field :value, wire: 'value', required: true
-          end
+          class XPathLocator < Data.define(type: {fixed: 'xpath'}, value: 'value'); end
 
-          class BaseNavigationInfo < ::Data.define(:context, :navigation, :timestamp, :url, :user_context)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :timestamp, wire: 'timestamp', required: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class BaseNavigationInfo < Data.define(context: 'context', navigation: {wire: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
 
-          class NavigationInfo < ::Data.define(:context, :navigation, :timestamp, :url, :user_context)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :timestamp, wire: 'timestamp', required: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class NavigationInfo < Data.define(context: 'context', navigation: {wire: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
 
-          class Activate < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.activate'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::ActivateParameters'
-          end
+          class Activate < Data.define(method_: {wire: 'method', fixed: 'browsingContext.activate'}, params: {wire: 'params', ref: 'BrowsingContext::ActivateParameters'}); end
 
-          class ActivateParameters < ::Data.define(:context)
-            include Serializable
-            field :context, wire: 'context', required: true
-          end
+          class ActivateParameters < Data.define(context: 'context'); end
 
-          class CaptureScreenshot < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.captureScreenshot'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::CaptureScreenshotParameters'
-          end
+          class CaptureScreenshot < Data.define(method_: {wire: 'method', fixed: 'browsingContext.captureScreenshot'}, params: {wire: 'params', ref: 'BrowsingContext::CaptureScreenshotParameters'}); end
 
-          class CaptureScreenshotParameters < ::Data.define(:context, :origin, :format, :clip)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :origin, wire: 'origin'
-            field :format, wire: 'format', ref: 'BrowsingContext::ImageFormat'
-            field :clip, wire: 'clip', ref: 'BrowsingContext::ClipRectangle'
-          end
+          class CaptureScreenshotParameters < Data.define(context: 'context', origin: 'origin', format: {wire: 'format', ref: 'BrowsingContext::ImageFormat'}, clip: {wire: 'clip', ref: 'BrowsingContext::ClipRectangle'}); end
 
-          class ImageFormat < ::Data.define(:type, :quality)
-            include Serializable
-            field :type, wire: 'type', required: true
-            field :quality, wire: 'quality'
-          end
+          class ImageFormat < Data.define(type: 'type', quality: 'quality'); end
 
           class ClipRectangle < Union
-            discriminator_wire 'type'
-            variant 'box', 'BrowsingContext::BoxClipRectangle'
-            variant 'element', 'BrowsingContext::ElementClipRectangle'
+            discriminator 'type'
+            variants(
+              'box' => 'BrowsingContext::BoxClipRectangle',
+              'element' => 'BrowsingContext::ElementClipRectangle',
+            )
           end
 
-          class ElementClipRectangle < ::Data.define(:element)
-            include Serializable
-            discriminator wire: 'type', value: 'element'
-            field :element, wire: 'element', required: true, ref: 'Script::SharedReference'
-          end
+          class ElementClipRectangle < Data.define(type: {fixed: 'element'}, element: {wire: 'element', ref: 'Script::SharedReference'}); end
 
-          class BoxClipRectangle < ::Data.define(:x, :y, :width, :height)
-            include Serializable
-            discriminator wire: 'type', value: 'box'
-            field :x, wire: 'x', required: true
-            field :y, wire: 'y', required: true
-            field :width, wire: 'width', required: true
-            field :height, wire: 'height', required: true
-          end
+          class BoxClipRectangle < Data.define(type: {fixed: 'box'}, x: 'x', y: 'y', width: 'width', height: 'height'); end
 
-          class CaptureScreenshotResult < ::Data.define(:data)
-            include Serializable
-            field :data, wire: 'data', required: true
-          end
+          class CaptureScreenshotResult < Data.define(data: 'data'); end
 
-          class Close < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.close'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::CloseParameters'
-          end
+          class Close < Data.define(method_: {wire: 'method', fixed: 'browsingContext.close'}, params: {wire: 'params', ref: 'BrowsingContext::CloseParameters'}); end
 
-          class CloseParameters < ::Data.define(:context, :prompt_unload)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :prompt_unload, wire: 'promptUnload'
-          end
+          class CloseParameters < Data.define(context: 'context', prompt_unload: 'promptUnload'); end
 
-          class Create < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.create'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::CreateParameters'
-          end
+          class Create < Data.define(method_: {wire: 'method', fixed: 'browsingContext.create'}, params: {wire: 'params', ref: 'BrowsingContext::CreateParameters'}); end
 
-          class CreateParameters < ::Data.define(:type, :reference_context, :background, :user_context)
-            include Serializable
-            field :type, wire: 'type', required: true
-            field :reference_context, wire: 'referenceContext'
-            field :background, wire: 'background'
-            field :user_context, wire: 'userContext'
-          end
+          class CreateParameters < Data.define(type: 'type', reference_context: 'referenceContext', background: 'background', user_context: 'userContext'); end
 
-          class CreateResult < ::Data.define(:context, :user_context)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class CreateResult < Data.define(context: 'context', user_context: 'userContext'); end
 
-          class GetTree < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.getTree'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::GetTreeParameters'
-          end
+          class GetTree < Data.define(method_: {wire: 'method', fixed: 'browsingContext.getTree'}, params: {wire: 'params', ref: 'BrowsingContext::GetTreeParameters'}); end
 
-          class GetTreeParameters < ::Data.define(:max_depth, :root)
-            include Serializable
-            field :max_depth, wire: 'maxDepth'
-            field :root, wire: 'root'
-          end
+          class GetTreeParameters < Data.define(max_depth: 'maxDepth', root: 'root'); end
 
-          class GetTreeResult < ::Data.define(:contexts)
-            include Serializable
-            field :contexts, wire: 'contexts', required: true, ref: 'BrowsingContext::Info', list: true
-          end
+          class GetTreeResult < Data.define(contexts: {wire: 'contexts', ref: 'BrowsingContext::Info', list: true}); end
 
-          class HandleUserPrompt < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.handleUserPrompt'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::HandleUserPromptParameters'
-          end
+          class HandleUserPrompt < Data.define(method_: {wire: 'method', fixed: 'browsingContext.handleUserPrompt'}, params: {wire: 'params', ref: 'BrowsingContext::HandleUserPromptParameters'}); end
 
-          class HandleUserPromptParameters < ::Data.define(:context, :accept, :user_text)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :accept, wire: 'accept'
-            field :user_text, wire: 'userText'
-          end
+          class HandleUserPromptParameters < Data.define(context: 'context', accept: 'accept', user_text: 'userText'); end
 
-          class LocateNodes < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.locateNodes'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::LocateNodesParameters'
-          end
+          class LocateNodes < Data.define(method_: {wire: 'method', fixed: 'browsingContext.locateNodes'}, params: {wire: 'params', ref: 'BrowsingContext::LocateNodesParameters'}); end
 
-          class LocateNodesParameters < ::Data.define(:context, :locator, :max_node_count, :serialization_options, :start_nodes)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :locator, wire: 'locator', required: true, ref: 'BrowsingContext::Locator'
-            field :max_node_count, wire: 'maxNodeCount'
-            field :serialization_options, wire: 'serializationOptions', ref: 'Script::SerializationOptions'
-            field :start_nodes, wire: 'startNodes', ref: 'Script::SharedReference', list: true
-          end
+          class LocateNodesParameters < Data.define(context: 'context', locator: {wire: 'locator', ref: 'BrowsingContext::Locator'}, max_node_count: 'maxNodeCount', serialization_options: {wire: 'serializationOptions', ref: 'Script::SerializationOptions'}, start_nodes: {wire: 'startNodes', ref: 'Script::SharedReference', list: true}); end
 
-          class LocateNodesResult < ::Data.define(:nodes)
-            include Serializable
-            field :nodes, wire: 'nodes', required: true, ref: 'Script::NodeRemoteValue', list: true
-          end
+          class LocateNodesResult < Data.define(nodes: {wire: 'nodes', ref: 'Script::NodeRemoteValue', list: true}); end
 
-          class Navigate < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.navigate'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigateParameters'
-          end
+          class Navigate < Data.define(method_: {wire: 'method', fixed: 'browsingContext.navigate'}, params: {wire: 'params', ref: 'BrowsingContext::NavigateParameters'}); end
 
-          class NavigateParameters < ::Data.define(:context, :url, :wait)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :url, wire: 'url', required: true
-            field :wait, wire: 'wait'
-          end
+          class NavigateParameters < Data.define(context: 'context', url: 'url', wait: 'wait'); end
 
-          class NavigateResult < ::Data.define(:navigation, :url)
-            include Serializable
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :url, wire: 'url', required: true
-          end
+          class NavigateResult < Data.define(navigation: {wire: 'navigation', nullable: true}, url: 'url'); end
 
-          class Print < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.print'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::PrintParameters'
-          end
+          class Print < Data.define(method_: {wire: 'method', fixed: 'browsingContext.print'}, params: {wire: 'params', ref: 'BrowsingContext::PrintParameters'}); end
 
-          class PrintParameters < ::Data.define(:context, :background, :margin, :orientation, :page, :page_ranges, :scale, :shrink_to_fit)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :background, wire: 'background'
-            field :margin, wire: 'margin', ref: 'BrowsingContext::PrintMarginParameters'
-            field :orientation, wire: 'orientation'
-            field :page, wire: 'page', ref: 'BrowsingContext::PrintPageParameters'
-            field :page_ranges, wire: 'pageRanges', list: true
-            field :scale, wire: 'scale'
-            field :shrink_to_fit, wire: 'shrinkToFit'
-          end
+          class PrintParameters < Data.define(context: 'context', background: 'background', margin: {wire: 'margin', ref: 'BrowsingContext::PrintMarginParameters'}, orientation: 'orientation', page: {wire: 'page', ref: 'BrowsingContext::PrintPageParameters'}, page_ranges: {wire: 'pageRanges', list: true}, scale: 'scale', shrink_to_fit: 'shrinkToFit'); end
 
-          class PrintMarginParameters < ::Data.define(:bottom, :left, :right, :top)
-            include Serializable
-            field :bottom, wire: 'bottom'
-            field :left, wire: 'left'
-            field :right, wire: 'right'
-            field :top, wire: 'top'
-          end
+          class PrintMarginParameters < Data.define(bottom: 'bottom', left: 'left', right: 'right', top: 'top'); end
 
-          class PrintPageParameters < ::Data.define(:height, :width)
-            include Serializable
-            field :height, wire: 'height'
-            field :width, wire: 'width'
-          end
+          class PrintPageParameters < Data.define(height: 'height', width: 'width'); end
 
-          class PrintResult < ::Data.define(:data)
-            include Serializable
-            field :data, wire: 'data', required: true
-          end
+          class PrintResult < Data.define(data: 'data'); end
 
-          class Reload < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.reload'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::ReloadParameters'
-          end
+          class Reload < Data.define(method_: {wire: 'method', fixed: 'browsingContext.reload'}, params: {wire: 'params', ref: 'BrowsingContext::ReloadParameters'}); end
 
-          class ReloadParameters < ::Data.define(:context, :ignore_cache, :wait)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :ignore_cache, wire: 'ignoreCache'
-            field :wait, wire: 'wait'
-          end
+          class ReloadParameters < Data.define(context: 'context', ignore_cache: 'ignoreCache', wait: 'wait'); end
 
-          class SetBypassCSP < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.setBypassCSP'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::SetBypassCSPParameters'
-          end
+          class SetBypassCSP < Data.define(method_: {wire: 'method', fixed: 'browsingContext.setBypassCSP'}, params: {wire: 'params', ref: 'BrowsingContext::SetBypassCSPParameters'}); end
 
-          class SetBypassCSPParameters < ::Data.define(:contexts, :user_contexts)
-            include Serializable
-            discriminator wire: 'bypass', value: true
-            field :contexts, wire: 'contexts', list: true
-            field :user_contexts, wire: 'userContexts', list: true
-          end
+          class SetBypassCSPParameters < Data.define(bypass: {fixed: true}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
 
-          class SetViewport < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.setViewport'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::SetViewportParameters'
-          end
+          class SetViewport < Data.define(method_: {wire: 'method', fixed: 'browsingContext.setViewport'}, params: {wire: 'params', ref: 'BrowsingContext::SetViewportParameters'}); end
 
-          class SetViewportParameters < ::Data.define(:context, :viewport, :device_pixel_ratio, :user_contexts)
-            include Serializable
-            field :context, wire: 'context'
-            field :viewport, wire: 'viewport', nullable: true, ref: 'BrowsingContext::Viewport'
-            field :device_pixel_ratio, wire: 'devicePixelRatio', nullable: true
-            field :user_contexts, wire: 'userContexts', list: true
-          end
+          class SetViewportParameters < Data.define(context: 'context', viewport: {wire: 'viewport', nullable: true, ref: 'BrowsingContext::Viewport'}, device_pixel_ratio: {wire: 'devicePixelRatio', nullable: true}, user_contexts: {wire: 'userContexts', list: true}); end
 
-          class Viewport < ::Data.define(:width, :height)
-            include Serializable
-            field :width, wire: 'width', required: true
-            field :height, wire: 'height', required: true
-          end
+          class Viewport < Data.define(width: 'width', height: 'height'); end
 
-          class TraverseHistory < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.traverseHistory'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::TraverseHistoryParameters'
-          end
+          class TraverseHistory < Data.define(method_: {wire: 'method', fixed: 'browsingContext.traverseHistory'}, params: {wire: 'params', ref: 'BrowsingContext::TraverseHistoryParameters'}); end
 
-          class TraverseHistoryParameters < ::Data.define(:context, :delta)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :delta, wire: 'delta', required: true
-          end
+          class TraverseHistoryParameters < Data.define(context: 'context', delta: 'delta'); end
 
-          class ContextCreated < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.contextCreated'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::Info'
-          end
+          class ContextCreated < Data.define(method_: {wire: 'method', fixed: 'browsingContext.contextCreated'}, params: {wire: 'params', ref: 'BrowsingContext::Info'}); end
 
-          class ContextDestroyed < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.contextDestroyed'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::Info'
-          end
+          class ContextDestroyed < Data.define(method_: {wire: 'method', fixed: 'browsingContext.contextDestroyed'}, params: {wire: 'params', ref: 'BrowsingContext::Info'}); end
 
-          class NavigationStarted < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.navigationStarted'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class NavigationStarted < Data.define(method_: {wire: 'method', fixed: 'browsingContext.navigationStarted'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class FragmentNavigated < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.fragmentNavigated'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class FragmentNavigated < Data.define(method_: {wire: 'method', fixed: 'browsingContext.fragmentNavigated'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class HistoryUpdated < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.historyUpdated'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::HistoryUpdatedParameters'
-          end
+          class HistoryUpdated < Data.define(method_: {wire: 'method', fixed: 'browsingContext.historyUpdated'}, params: {wire: 'params', ref: 'BrowsingContext::HistoryUpdatedParameters'}); end
 
-          class HistoryUpdatedParameters < ::Data.define(:context, :timestamp, :url, :user_context)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :timestamp, wire: 'timestamp', required: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class HistoryUpdatedParameters < Data.define(context: 'context', timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
 
-          class DomContentLoaded < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.domContentLoaded'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class DomContentLoaded < Data.define(method_: {wire: 'method', fixed: 'browsingContext.domContentLoaded'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class Load < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.load'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class Load < Data.define(method_: {wire: 'method', fixed: 'browsingContext.load'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class DownloadWillBegin < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.downloadWillBegin'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::DownloadWillBeginParams'
-          end
+          class DownloadWillBegin < Data.define(method_: {wire: 'method', fixed: 'browsingContext.downloadWillBegin'}, params: {wire: 'params', ref: 'BrowsingContext::DownloadWillBeginParams'}); end
 
-          class DownloadWillBeginParams < ::Data.define(:suggested_filename, :context, :navigation, :timestamp, :url, :user_context)
-            include Serializable
-            field :suggested_filename, wire: 'suggestedFilename', required: true
-            field :context, wire: 'context', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :timestamp, wire: 'timestamp', required: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class DownloadWillBeginParams < Data.define(suggested_filename: 'suggestedFilename', context: 'context', navigation: {wire: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
 
-          class DownloadEnd < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.downloadEnd'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::DownloadEndParams'
-          end
+          class DownloadEnd < Data.define(method_: {wire: 'method', fixed: 'browsingContext.downloadEnd'}, params: {wire: 'params', ref: 'BrowsingContext::DownloadEndParams'}); end
 
           class DownloadEndParams < Union
-            discriminator_wire 'status'
-            variant 'canceled', 'BrowsingContext::DownloadEndParams_CanceledParams'
-            variant 'complete', 'BrowsingContext::DownloadEndParams_CompleteParams'
+            discriminator 'status'
+            variants(
+              'canceled' => 'BrowsingContext::DownloadEndParams_CanceledParams',
+              'complete' => 'BrowsingContext::DownloadEndParams_CompleteParams',
+            )
           end
 
-          class NavigationAborted < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.navigationAborted'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class NavigationAborted < Data.define(method_: {wire: 'method', fixed: 'browsingContext.navigationAborted'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class NavigationCommitted < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.navigationCommitted'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class NavigationCommitted < Data.define(method_: {wire: 'method', fixed: 'browsingContext.navigationCommitted'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class NavigationFailed < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.navigationFailed'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::NavigationInfo'
-          end
+          class NavigationFailed < Data.define(method_: {wire: 'method', fixed: 'browsingContext.navigationFailed'}, params: {wire: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
 
-          class UserPromptClosed < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.userPromptClosed'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::UserPromptClosedParameters'
-          end
+          class UserPromptClosed < Data.define(method_: {wire: 'method', fixed: 'browsingContext.userPromptClosed'}, params: {wire: 'params', ref: 'BrowsingContext::UserPromptClosedParameters'}); end
 
-          class UserPromptClosedParameters < ::Data.define(:context, :accepted, :type, :user_context, :user_text)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :accepted, wire: 'accepted', required: true
-            field :type, wire: 'type', required: true
-            field :user_context, wire: 'userContext'
-            field :user_text, wire: 'userText'
-          end
+          class UserPromptClosedParameters < Data.define(context: 'context', accepted: 'accepted', type: 'type', user_context: 'userContext', user_text: 'userText'); end
 
-          class UserPromptOpened < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'browsingContext.userPromptOpened'
-            field :params, wire: 'params', required: true, ref: 'BrowsingContext::UserPromptOpenedParameters'
-          end
+          class UserPromptOpened < Data.define(method_: {wire: 'method', fixed: 'browsingContext.userPromptOpened'}, params: {wire: 'params', ref: 'BrowsingContext::UserPromptOpenedParameters'}); end
 
-          class UserPromptOpenedParameters < ::Data.define(:context, :handler, :message, :type, :user_context, :default_value)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :handler, wire: 'handler', required: true
-            field :message, wire: 'message', required: true
-            field :type, wire: 'type', required: true
-            field :user_context, wire: 'userContext'
-            field :default_value, wire: 'defaultValue'
-          end
+          class UserPromptOpenedParameters < Data.define(context: 'context', handler: 'handler', message: 'message', type: 'type', user_context: 'userContext', default_value: 'defaultValue'); end
 
-          class DownloadEndParams_CanceledParams < ::Data.define(:context, :navigation, :timestamp, :url, :user_context)
-            include Serializable
-            discriminator wire: 'status', value: 'canceled'
-            field :context, wire: 'context', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :timestamp, wire: 'timestamp', required: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class DownloadEndParams_CanceledParams < Data.define(status: {fixed: 'canceled'}, context: 'context', navigation: {wire: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
 
-          class DownloadEndParams_CompleteParams < ::Data.define(:filepath, :context, :navigation, :timestamp, :url, :user_context)
-            include Serializable
-            discriminator wire: 'status', value: 'complete'
-            field :filepath, wire: 'filepath', required: true, nullable: true
-            field :context, wire: 'context', required: true
-            field :navigation, wire: 'navigation', required: true, nullable: true
-            field :timestamp, wire: 'timestamp', required: true
-            field :url, wire: 'url', required: true
-            field :user_context, wire: 'userContext'
-          end
+          class DownloadEndParams_CompleteParams < Data.define(status: {fixed: 'complete'}, filepath: {wire: 'filepath', nullable: true}, context: 'context', navigation: {wire: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
 
-          class AccessibilityLocatorValue < ::Data.define(:name, :role)
-            include Serializable
-            field :name, wire: 'name'
-            field :role, wire: 'role'
-          end
+          class AccessibilityLocatorValue < Data.define(name: 'name', role: 'role'); end
 
-          class ContextLocatorValue < ::Data.define(:context)
-            include Serializable
-            field :context, wire: 'context', required: true
-          end
+          class ContextLocatorValue < Data.define(context: 'context'); end
 
           def initialize(bidi)
             @bidi = bidi
@@ -552,7 +232,7 @@ module Selenium
 
           def capture_screenshot(context:, origin: nil, format: nil, clip: nil)
             result = @bidi.send_cmd('browsingContext.captureScreenshot', context: context, origin: origin, format: format, clip: clip)
-            Protocol.const_get('BrowsingContext::CaptureScreenshotResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::CaptureScreenshotResult').from_json(result)
           end
 
           def close(context:, prompt_unload: nil)
@@ -561,12 +241,12 @@ module Selenium
 
           def create(type:, reference_context: nil, background: nil, user_context: nil)
             result = @bidi.send_cmd('browsingContext.create', type: type, referenceContext: reference_context, background: background, userContext: user_context)
-            Protocol.const_get('BrowsingContext::CreateResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::CreateResult').from_json(result)
           end
 
           def get_tree(max_depth: nil, root: nil)
             result = @bidi.send_cmd('browsingContext.getTree', maxDepth: max_depth, root: root)
-            Protocol.const_get('BrowsingContext::GetTreeResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::GetTreeResult').from_json(result)
           end
 
           def handle_user_prompt(context:, accept: nil, user_text: nil)
@@ -575,22 +255,22 @@ module Selenium
 
           def locate_nodes(context:, locator:, max_node_count: nil, serialization_options: nil, start_nodes: nil)
             result = @bidi.send_cmd('browsingContext.locateNodes', context: context, locator: locator, maxNodeCount: max_node_count, serializationOptions: serialization_options, startNodes: start_nodes)
-            Protocol.const_get('BrowsingContext::LocateNodesResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::LocateNodesResult').from_json(result)
           end
 
           def navigate(context:, url:, wait: nil)
             result = @bidi.send_cmd('browsingContext.navigate', context: context, url: url, wait: wait)
-            Protocol.const_get('BrowsingContext::NavigateResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::NavigateResult').from_json(result)
           end
 
           def print(context:, background: nil, margin: nil, orientation: nil, page: nil, page_ranges: nil, scale: nil, shrink_to_fit: nil)
             result = @bidi.send_cmd('browsingContext.print', context: context, background: background, margin: margin, orientation: orientation, page: page, pageRanges: page_ranges, scale: scale, shrinkToFit: shrink_to_fit)
-            Protocol.const_get('BrowsingContext::PrintResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::PrintResult').from_json(result)
           end
 
           def reload(context:, ignore_cache: nil, wait: nil)
             result = @bidi.send_cmd('browsingContext.reload', context: context, ignoreCache: ignore_cache, wait: wait)
-            Protocol.const_get('BrowsingContext::NavigateResult').from_wire(result)
+            Protocol.const_get('BrowsingContext::NavigateResult').from_json(result)
           end
 
           def set_bypass_csp(bypass:, contexts: nil, user_contexts: nil)

@@ -9,38 +9,13 @@ module Selenium
     class BiDi
       module Protocol
         class UserAgentClientHints
-          class SetClientHintsOverrideCommand < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'userAgentClientHints.setClientHintsOverride'
-            field :params, wire: 'params', required: true, ref: 'UserAgentClientHints::SetClientHintsOverrideCommandParams'
-          end
+          class SetClientHintsOverrideCommand < Data.define(method_: {wire: 'method', fixed: 'userAgentClientHints.setClientHintsOverride'}, params: {wire: 'params', ref: 'UserAgentClientHints::SetClientHintsOverrideCommandParams'}); end
 
-          class ClientHintsMetadata < ::Data.define(:brands, :full_version_list, :platform, :platform_version, :architecture, :model, :mobile, :bitness, :wow64, :form_factors)
-            include Serializable
-            field :brands, wire: 'brands', ref: 'UserAgentClientHints::BrandVersion', list: true
-            field :full_version_list, wire: 'fullVersionList', ref: 'UserAgentClientHints::BrandVersion', list: true
-            field :platform, wire: 'platform'
-            field :platform_version, wire: 'platformVersion'
-            field :architecture, wire: 'architecture'
-            field :model, wire: 'model'
-            field :mobile, wire: 'mobile'
-            field :bitness, wire: 'bitness'
-            field :wow64, wire: 'wow64'
-            field :form_factors, wire: 'formFactors', list: true
-          end
+          class ClientHintsMetadata < Data.define(brands: {wire: 'brands', ref: 'UserAgentClientHints::BrandVersion', list: true}, full_version_list: {wire: 'fullVersionList', ref: 'UserAgentClientHints::BrandVersion', list: true}, platform: 'platform', platform_version: 'platformVersion', architecture: 'architecture', model: 'model', mobile: 'mobile', bitness: 'bitness', wow64: 'wow64', form_factors: {wire: 'formFactors', list: true}); end
 
-          class BrandVersion < ::Data.define(:brand, :version)
-            include Serializable
-            field :brand, wire: 'brand', required: true
-            field :version, wire: 'version', required: true
-          end
+          class BrandVersion < Data.define(brand: 'brand', version: 'version'); end
 
-          class SetClientHintsOverrideCommandParams < ::Data.define(:client_hints, :contexts, :user_contexts)
-            include Serializable
-            field :client_hints, wire: 'clientHints', required: true, nullable: true, ref: 'UserAgentClientHints::ClientHintsMetadata'
-            field :contexts, wire: 'contexts', list: true
-            field :user_contexts, wire: 'userContexts', list: true
-          end
+          class SetClientHintsOverrideCommandParams < Data.define(client_hints: {wire: 'clientHints', nullable: true, ref: 'UserAgentClientHints::ClientHintsMetadata'}, contexts: {wire: 'contexts', list: true}, user_contexts: {wire: 'userContexts', list: true}); end
 
           def initialize(bidi)
             @bidi = bidi

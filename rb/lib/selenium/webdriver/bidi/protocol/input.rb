@@ -19,204 +19,93 @@ module Selenium
             touch: 'touch',
           }.freeze
 
-          class ElementOrigin < ::Data.define(:element)
-            include Serializable
-            discriminator wire: 'type', value: 'element'
-            field :element, wire: 'element', required: true, ref: 'Script::SharedReference'
-          end
+          class ElementOrigin < Data.define(type: {fixed: 'element'}, element: {wire: 'element', ref: 'Script::SharedReference'}); end
 
-          class PerformActions < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'input.performActions'
-            field :params, wire: 'params', required: true, ref: 'Input::PerformActionsParameters'
-          end
+          class PerformActions < Data.define(method_: {wire: 'method', fixed: 'input.performActions'}, params: {wire: 'params', ref: 'Input::PerformActionsParameters'}); end
 
-          class PerformActionsParameters < ::Data.define(:context, :actions)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :actions, wire: 'actions', required: true, ref: 'Input::SourceActions', list: true
-          end
+          class PerformActionsParameters < Data.define(context: 'context', actions: {wire: 'actions', ref: 'Input::SourceActions', list: true}); end
 
           class SourceActions < Union
-            discriminator_wire 'type'
-            variant 'none', 'Input::NoneSourceActions'
-            variant 'key', 'Input::KeySourceActions'
-            variant 'pointer', 'Input::PointerSourceActions'
-            variant 'wheel', 'Input::WheelSourceActions'
+            discriminator 'type'
+            variants(
+              'none' => 'Input::NoneSourceActions',
+              'key' => 'Input::KeySourceActions',
+              'pointer' => 'Input::PointerSourceActions',
+              'wheel' => 'Input::WheelSourceActions',
+            )
           end
 
-          class NoneSourceActions < ::Data.define(:id, :actions)
-            include Serializable
-            discriminator wire: 'type', value: 'none'
-            field :id, wire: 'id', required: true
-            field :actions, wire: 'actions', required: true, ref: 'Input::PauseAction', list: true
-          end
+          class NoneSourceActions < Data.define(type: {fixed: 'none'}, id: 'id', actions: {wire: 'actions', ref: 'Input::PauseAction', list: true}); end
 
-          class KeySourceActions < ::Data.define(:id, :actions)
-            include Serializable
-            discriminator wire: 'type', value: 'key'
-            field :id, wire: 'id', required: true
-            field :actions, wire: 'actions', required: true, ref: 'Input::KeySourceAction', list: true
-          end
+          class KeySourceActions < Data.define(type: {fixed: 'key'}, id: 'id', actions: {wire: 'actions', ref: 'Input::KeySourceAction', list: true}); end
 
           class KeySourceAction < Union
-            discriminator_wire 'type'
-            variant 'pause', 'Input::PauseAction'
-            variant 'keyDown', 'Input::KeyDownAction'
-            variant 'keyUp', 'Input::KeyUpAction'
+            discriminator 'type'
+            variants(
+              'pause' => 'Input::PauseAction',
+              'keyDown' => 'Input::KeyDownAction',
+              'keyUp' => 'Input::KeyUpAction',
+            )
           end
 
-          class PointerSourceActions < ::Data.define(:id, :parameters, :actions)
-            include Serializable
-            discriminator wire: 'type', value: 'pointer'
-            field :id, wire: 'id', required: true
-            field :parameters, wire: 'parameters', ref: 'Input::PointerParameters'
-            field :actions, wire: 'actions', required: true, ref: 'Input::PointerSourceAction', list: true
-          end
+          class PointerSourceActions < Data.define(type: {fixed: 'pointer'}, id: 'id', parameters: {wire: 'parameters', ref: 'Input::PointerParameters'}, actions: {wire: 'actions', ref: 'Input::PointerSourceAction', list: true}); end
 
-          class PointerParameters < ::Data.define(:pointer_type)
-            include Serializable
-            field :pointer_type, wire: 'pointerType'
-          end
+          class PointerParameters < Data.define(pointer_type: 'pointerType'); end
 
           class PointerSourceAction < Union
-            discriminator_wire 'type'
-            variant 'pause', 'Input::PauseAction'
-            variant 'pointerDown', 'Input::PointerDownAction'
-            variant 'pointerUp', 'Input::PointerUpAction'
-            variant 'pointerMove', 'Input::PointerMoveAction'
+            discriminator 'type'
+            variants(
+              'pause' => 'Input::PauseAction',
+              'pointerDown' => 'Input::PointerDownAction',
+              'pointerUp' => 'Input::PointerUpAction',
+              'pointerMove' => 'Input::PointerMoveAction',
+            )
           end
 
-          class WheelSourceActions < ::Data.define(:id, :actions)
-            include Serializable
-            discriminator wire: 'type', value: 'wheel'
-            field :id, wire: 'id', required: true
-            field :actions, wire: 'actions', required: true, ref: 'Input::WheelSourceAction', list: true
-          end
+          class WheelSourceActions < Data.define(type: {fixed: 'wheel'}, id: 'id', actions: {wire: 'actions', ref: 'Input::WheelSourceAction', list: true}); end
 
           class WheelSourceAction < Union
-            discriminator_wire 'type'
-            variant 'pause', 'Input::PauseAction'
-            variant 'scroll', 'Input::WheelScrollAction'
+            discriminator 'type'
+            variants(
+              'pause' => 'Input::PauseAction',
+              'scroll' => 'Input::WheelScrollAction',
+            )
           end
 
-          class PauseAction < ::Data.define(:duration)
-            include Serializable
-            discriminator wire: 'type', value: 'pause'
-            field :duration, wire: 'duration'
-          end
+          class PauseAction < Data.define(type: {fixed: 'pause'}, duration: 'duration'); end
 
-          class KeyDownAction < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'keyDown'
-            field :value, wire: 'value', required: true
-          end
+          class KeyDownAction < Data.define(type: {fixed: 'keyDown'}, value: 'value'); end
 
-          class KeyUpAction < ::Data.define(:value)
-            include Serializable
-            discriminator wire: 'type', value: 'keyUp'
-            field :value, wire: 'value', required: true
-          end
+          class KeyUpAction < Data.define(type: {fixed: 'keyUp'}, value: 'value'); end
 
-          class PointerUpAction < ::Data.define(:button)
-            include Serializable
-            discriminator wire: 'type', value: 'pointerUp'
-            field :button, wire: 'button', required: true
-          end
+          class PointerUpAction < Data.define(type: {fixed: 'pointerUp'}, button: 'button'); end
 
-          class PointerDownAction < ::Data.define(:button, :width, :height, :pressure, :tangential_pressure, :twist, :altitude_angle, :azimuth_angle)
-            include Serializable
-            discriminator wire: 'type', value: 'pointerDown'
-            field :button, wire: 'button', required: true
-            field :width, wire: 'width'
-            field :height, wire: 'height'
-            field :pressure, wire: 'pressure'
-            field :tangential_pressure, wire: 'tangentialPressure'
-            field :twist, wire: 'twist'
-            field :altitude_angle, wire: 'altitudeAngle'
-            field :azimuth_angle, wire: 'azimuthAngle'
-          end
+          class PointerDownAction < Data.define(type: {fixed: 'pointerDown'}, button: 'button', width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
-          class PointerMoveAction < ::Data.define(:x, :y, :duration, :origin, :width, :height, :pressure, :tangential_pressure, :twist, :altitude_angle, :azimuth_angle)
-            include Serializable
-            discriminator wire: 'type', value: 'pointerMove'
-            field :x, wire: 'x', required: true
-            field :y, wire: 'y', required: true
-            field :duration, wire: 'duration'
-            field :origin, wire: 'origin', ref: 'Input::Origin'
-            field :width, wire: 'width'
-            field :height, wire: 'height'
-            field :pressure, wire: 'pressure'
-            field :tangential_pressure, wire: 'tangentialPressure'
-            field :twist, wire: 'twist'
-            field :altitude_angle, wire: 'altitudeAngle'
-            field :azimuth_angle, wire: 'azimuthAngle'
-          end
+          class PointerMoveAction < Data.define(type: {fixed: 'pointerMove'}, x: 'x', y: 'y', duration: 'duration', origin: {wire: 'origin', ref: 'Input::Origin'}, width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
-          class WheelScrollAction < ::Data.define(:x, :y, :delta_x, :delta_y, :duration, :origin)
-            include Serializable
-            discriminator wire: 'type', value: 'scroll'
-            field :x, wire: 'x', required: true
-            field :y, wire: 'y', required: true
-            field :delta_x, wire: 'deltaX', required: true
-            field :delta_y, wire: 'deltaY', required: true
-            field :duration, wire: 'duration'
-            field :origin, wire: 'origin', ref: 'Input::Origin'
-          end
+          class WheelScrollAction < Data.define(type: {fixed: 'scroll'}, x: 'x', y: 'y', delta_x: 'deltaX', delta_y: 'deltaY', duration: 'duration', origin: {wire: 'origin', ref: 'Input::Origin'}); end
 
-          class PointerCommonProperties < ::Data.define(:width, :height, :pressure, :tangential_pressure, :twist, :altitude_angle, :azimuth_angle)
-            include Serializable
-            field :width, wire: 'width'
-            field :height, wire: 'height'
-            field :pressure, wire: 'pressure'
-            field :tangential_pressure, wire: 'tangentialPressure'
-            field :twist, wire: 'twist'
-            field :altitude_angle, wire: 'altitudeAngle'
-            field :azimuth_angle, wire: 'azimuthAngle'
-          end
+          class PointerCommonProperties < Data.define(width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
           class Origin < Union
-            discriminator_wire 'type'
-            variant 'element', 'Input::ElementOrigin'
+            discriminator 'type'
+            variants(
+              'element' => 'Input::ElementOrigin',
+            )
           end
 
-          class ReleaseActions < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'input.releaseActions'
-            field :params, wire: 'params', required: true, ref: 'Input::ReleaseActionsParameters'
-          end
+          class ReleaseActions < Data.define(method_: {wire: 'method', fixed: 'input.releaseActions'}, params: {wire: 'params', ref: 'Input::ReleaseActionsParameters'}); end
 
-          class ReleaseActionsParameters < ::Data.define(:context)
-            include Serializable
-            field :context, wire: 'context', required: true
-          end
+          class ReleaseActionsParameters < Data.define(context: 'context'); end
 
-          class SetFiles < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'input.setFiles'
-            field :params, wire: 'params', required: true, ref: 'Input::SetFilesParameters'
-          end
+          class SetFiles < Data.define(method_: {wire: 'method', fixed: 'input.setFiles'}, params: {wire: 'params', ref: 'Input::SetFilesParameters'}); end
 
-          class SetFilesParameters < ::Data.define(:context, :element, :files)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :element, wire: 'element', required: true, ref: 'Script::SharedReference'
-            field :files, wire: 'files', required: true, list: true
-          end
+          class SetFilesParameters < Data.define(context: 'context', element: {wire: 'element', ref: 'Script::SharedReference'}, files: {wire: 'files', list: true}); end
 
-          class FileDialogOpened < ::Data.define(:params)
-            include Serializable
-            discriminator wire: 'method', value: 'input.fileDialogOpened'
-            field :params, wire: 'params', required: true, ref: 'Input::FileDialogInfo'
-          end
+          class FileDialogOpened < Data.define(method_: {wire: 'method', fixed: 'input.fileDialogOpened'}, params: {wire: 'params', ref: 'Input::FileDialogInfo'}); end
 
-          class FileDialogInfo < ::Data.define(:context, :user_context, :element, :multiple)
-            include Serializable
-            field :context, wire: 'context', required: true
-            field :user_context, wire: 'userContext'
-            field :element, wire: 'element', ref: 'Script::SharedReference'
-            field :multiple, wire: 'multiple', required: true
-          end
+          class FileDialogInfo < Data.define(context: 'context', user_context: 'userContext', element: {wire: 'element', ref: 'Script::SharedReference'}, multiple: 'multiple'); end
 
           def initialize(bidi)
             @bidi = bidi

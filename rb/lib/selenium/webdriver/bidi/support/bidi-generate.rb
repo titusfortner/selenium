@@ -76,7 +76,8 @@ module BiDiGenerate
   # or reflection), e.g. a "method" field overriding Object#method.
   RESERVED_FIELD_NAMES = (RUBY_RESERVED + %w[method hash class send dup clone freeze inspect
                                              to_h to_s members with deconstruct deconstruct_keys
-                                             object_id tap itself then display]).freeze
+                                             object_id tap itself then display
+                                             extensible extensions]).freeze
 
   # Append underscore to a field name that would shadow a core method; the wire
   # name is unaffected, only the Ruby reader is renamed.
@@ -140,27 +141,42 @@ module BiDiGenerate
   # ref is the Protocol-relative class path for a nested structured field (nil
   # for a scalar/opaque field); list wraps it in an array.
   FieldIR = Struct.new(:ruby_name, :wire, :required, :nullable, :ref, :list, keyword_init: true) do
-    def opts
-      parts = []
-      parts << 'required: true' if required
-      parts << 'nullable: true' if nullable
-      parts << "ref: '#{ref}'" if ref
-      parts << 'list: true' if list
-      parts.empty? ? '' : ", #{parts.join(', ')}"
+    # A `Data.define` spec entry: `name: 'wire'` shorthand, or
+    # `name: {wire:, …}` when the field carries wire facts beyond its name.
+    # (required is baked in the schema but not yet enforced at runtime — Phase 4.)
+    def spec_entry
+      meta = []
+      meta << 'nullable: true' if nullable
+      meta << "ref: '#{ref}'" if ref
+      meta << 'list: true' if list
+      return "#{ruby_name}: '#{wire}'" if meta.empty?
+
+      "#{ruby_name}: {wire: '#{wire}', #{meta.join(', ')}}"
     end
   end
 
-  # A generated immutable value type (a ::Data subclass including Serializable).
-  # discriminator is the baked variant tag {wire:, value:} or nil.
+  # A generated immutable value type (a Data.define(...) class). discriminator is
+  # the baked variant tag {ruby_name:, wire:, value:} (a fixed member) or nil.
   TypeClass = Struct.new(:ruby_name, :fields, :discriminator, :extensible, keyword_init: true) do
     def union? = false
 
-    # The ::Data.define(...) superclass expression. Extensible types carry an
-    # extra :extensions member for their opaque pass-through keys.
-    def data_define
-      members = fields.map { |f| ":#{f.ruby_name}" }
-      members << ':extensions' if extensible
-      members.empty? ? '::Data.define' : "::Data.define(#{members.join(', ')})"
+    # Keyword arguments for `Data.define(...)`: the fixed discriminator member
+    # first, then the fields, then the extensible flag.
+    def define_args
+      entries = []
+      entries << discriminator_entry if discriminator
+      entries.concat(fields.map(&:spec_entry))
+      entries << 'extensible: true' if extensible
+      entries.join(', ')
+    end
+
+    def discriminator_entry
+      literal = BiDiGenerate.ruby_literal(discriminator[:value])
+      if discriminator[:wire] == discriminator[:ruby_name].to_s
+        "#{discriminator[:ruby_name]}: {fixed: #{literal}}"
+      else
+        "#{discriminator[:ruby_name]}: {wire: '#{discriminator[:wire]}', fixed: #{literal}}"
+      end
     end
   end
 
@@ -171,6 +187,9 @@ module BiDiGenerate
   # A generated discriminated union (< Protocol::Union).
   UnionClass = Struct.new(:ruby_name, :discriminator_wire, :variants, keyword_init: true) do
     def union? = true
+    def value_variants = variants.select { |v| v.mode == :value }
+    def presence_variants = variants.select { |v| v.mode == :presence }
+    def fallback_variant = variants.find { |v| v.mode == :fallback }
   end
 
   Module = Struct.new(:name, :ruby_class, :filename, :commands, :events, :enums, :types, keyword_init: true)
@@ -289,7 +308,8 @@ module BiDiGenerate
 
     def record_class(name, type)
       const = type['fields'].find { |f| f['type'].key?('const') }
-      discriminator = const && {wire: const['wire'], value: const['type']['const']}
+      discriminator = const && {ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(const['name'])),
+                                wire: const['wire'], value: const['type']['const']}
       fields = type['fields'].reject { |f| f['type'].key?('const') }.map { |f| field_ir(f) }
       TypeClass.new(ruby_name: BiDiGenerate.type_class_name(name), fields: fields,
                     discriminator: discriminator, extensible: type['extensible'] ? true : false)
