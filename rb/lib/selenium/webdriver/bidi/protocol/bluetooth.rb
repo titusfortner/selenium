@@ -144,56 +144,56 @@ module Selenium
 
           class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', data: {json_key: 'data', list: true}); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def handle_request_device_prompt(context:, prompt:, accept:, device: nil)
-            @bidi.send_cmd('bluetooth.handleRequestDevicePrompt', context: context, prompt: prompt, accept: accept, device: device)
+            @transport.execute('bluetooth.handleRequestDevicePrompt', {context: context, prompt: prompt, accept: accept, device: device})
           end
 
           def simulate_adapter(context:, state:, le_supported: nil)
-            @bidi.send_cmd('bluetooth.simulateAdapter', context: context, leSupported: le_supported, state: state)
+            @transport.execute('bluetooth.simulateAdapter', {context: context, leSupported: le_supported, state: state})
           end
 
           def disable_simulation(context:)
-            @bidi.send_cmd('bluetooth.disableSimulation', context: context)
+            @transport.execute('bluetooth.disableSimulation', {context: context})
           end
 
           def simulate_preconnected_peripheral(context:, address:, name:, manufacturer_data:, known_service_uuids:)
-            @bidi.send_cmd('bluetooth.simulatePreconnectedPeripheral', context: context, address: address, name: name, manufacturerData: manufacturer_data, knownServiceUuids: known_service_uuids)
+            @transport.execute('bluetooth.simulatePreconnectedPeripheral', {context: context, address: address, name: name, manufacturerData: manufacturer_data, knownServiceUuids: known_service_uuids})
           end
 
           def simulate_advertisement(context:, scan_entry:)
-            @bidi.send_cmd('bluetooth.simulateAdvertisement', context: context, scanEntry: scan_entry)
+            @transport.execute('bluetooth.simulateAdvertisement', {context: context, scanEntry: scan_entry})
           end
 
           def simulate_gatt_connection_response(context:, address:, code:)
-            @bidi.send_cmd('bluetooth.simulateGattConnectionResponse', context: context, address: address, code: code)
+            @transport.execute('bluetooth.simulateGattConnectionResponse', {context: context, address: address, code: code})
           end
 
           def simulate_gatt_disconnection(context:, address:)
-            @bidi.send_cmd('bluetooth.simulateGattDisconnection', context: context, address: address)
+            @transport.execute('bluetooth.simulateGattDisconnection', {context: context, address: address})
           end
 
           def simulate_service(context:, address:, uuid:, type:)
-            @bidi.send_cmd('bluetooth.simulateService', context: context, address: address, uuid: uuid, type: type)
+            @transport.execute('bluetooth.simulateService', {context: context, address: address, uuid: uuid, type: type})
           end
 
           def simulate_characteristic(context:, address:, service_uuid:, characteristic_uuid:, type:, characteristic_properties: nil)
-            @bidi.send_cmd('bluetooth.simulateCharacteristic', context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, characteristicProperties: characteristic_properties, type: type)
+            @transport.execute('bluetooth.simulateCharacteristic', {context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, characteristicProperties: characteristic_properties, type: type})
           end
 
           def simulate_characteristic_response(context:, address:, service_uuid:, characteristic_uuid:, type:, code:, data: nil)
-            @bidi.send_cmd('bluetooth.simulateCharacteristicResponse', context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, type: type, code: code, data: data)
+            @transport.execute('bluetooth.simulateCharacteristicResponse', {context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, type: type, code: code, data: data})
           end
 
           def simulate_descriptor(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:)
-            @bidi.send_cmd('bluetooth.simulateDescriptor', context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, descriptorUuid: descriptor_uuid, type: type)
+            @transport.execute('bluetooth.simulateDescriptor', {context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, descriptorUuid: descriptor_uuid, type: type})
           end
 
           def simulate_descriptor_response(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:, code:, data: nil)
-            @bidi.send_cmd('bluetooth.simulateDescriptorResponse', context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, descriptorUuid: descriptor_uuid, type: type, code: code, data: data)
+            @transport.execute('bluetooth.simulateDescriptorResponse', {context: context, address: address, serviceUuid: service_uuid, characteristicUuid: characteristic_uuid, descriptorUuid: descriptor_uuid, type: type, code: code, data: data})
           end
 
         end # Bluetooth

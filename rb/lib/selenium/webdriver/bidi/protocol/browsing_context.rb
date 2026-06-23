@@ -222,67 +222,60 @@ module Selenium
 
           class UserPromptOpenedParameters < Data.define(context: 'context', handler: 'handler', message: 'message', type: 'type', user_context: 'userContext', default_value: 'defaultValue'); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def activate(context:)
-            @bidi.send_cmd('browsingContext.activate', context: context)
+            @transport.execute('browsingContext.activate', {context: context})
           end
 
           def capture_screenshot(context:, origin: nil, format: nil, clip: nil)
-            result = @bidi.send_cmd('browsingContext.captureScreenshot', context: context, origin: origin, format: format, clip: clip)
-            Protocol.const_get('BrowsingContext::CaptureScreenshotResult').from_json(result)
+            @transport.execute('browsingContext.captureScreenshot', {context: context, origin: origin, format: format, clip: clip}, returns: Protocol.const_get('BrowsingContext::CaptureScreenshotResult'))
           end
 
           def close(context:, prompt_unload: nil)
-            @bidi.send_cmd('browsingContext.close', context: context, promptUnload: prompt_unload)
+            @transport.execute('browsingContext.close', {context: context, promptUnload: prompt_unload})
           end
 
           def create(type:, reference_context: nil, background: nil, user_context: nil)
-            result = @bidi.send_cmd('browsingContext.create', type: type, referenceContext: reference_context, background: background, userContext: user_context)
-            Protocol.const_get('BrowsingContext::CreateResult').from_json(result)
+            @transport.execute('browsingContext.create', {type: type, referenceContext: reference_context, background: background, userContext: user_context}, returns: Protocol.const_get('BrowsingContext::CreateResult'))
           end
 
           def get_tree(max_depth: nil, root: nil)
-            result = @bidi.send_cmd('browsingContext.getTree', maxDepth: max_depth, root: root)
-            Protocol.const_get('BrowsingContext::GetTreeResult').from_json(result)
+            @transport.execute('browsingContext.getTree', {maxDepth: max_depth, root: root}, returns: Protocol.const_get('BrowsingContext::GetTreeResult'))
           end
 
           def handle_user_prompt(context:, accept: nil, user_text: nil)
-            @bidi.send_cmd('browsingContext.handleUserPrompt', context: context, accept: accept, userText: user_text)
+            @transport.execute('browsingContext.handleUserPrompt', {context: context, accept: accept, userText: user_text})
           end
 
           def locate_nodes(context:, locator:, max_node_count: nil, serialization_options: nil, start_nodes: nil)
-            result = @bidi.send_cmd('browsingContext.locateNodes', context: context, locator: locator, maxNodeCount: max_node_count, serializationOptions: serialization_options, startNodes: start_nodes)
-            Protocol.const_get('BrowsingContext::LocateNodesResult').from_json(result)
+            @transport.execute('browsingContext.locateNodes', {context: context, locator: locator, maxNodeCount: max_node_count, serializationOptions: serialization_options, startNodes: start_nodes}, returns: Protocol.const_get('BrowsingContext::LocateNodesResult'))
           end
 
           def navigate(context:, url:, wait: nil)
-            result = @bidi.send_cmd('browsingContext.navigate', context: context, url: url, wait: wait)
-            Protocol.const_get('BrowsingContext::NavigateResult').from_json(result)
+            @transport.execute('browsingContext.navigate', {context: context, url: url, wait: wait}, returns: Protocol.const_get('BrowsingContext::NavigateResult'))
           end
 
           def print(context:, background: nil, margin: nil, orientation: nil, page: nil, page_ranges: nil, scale: nil, shrink_to_fit: nil)
-            result = @bidi.send_cmd('browsingContext.print', context: context, background: background, margin: margin, orientation: orientation, page: page, pageRanges: page_ranges, scale: scale, shrinkToFit: shrink_to_fit)
-            Protocol.const_get('BrowsingContext::PrintResult').from_json(result)
+            @transport.execute('browsingContext.print', {context: context, background: background, margin: margin, orientation: orientation, page: page, pageRanges: page_ranges, scale: scale, shrinkToFit: shrink_to_fit}, returns: Protocol.const_get('BrowsingContext::PrintResult'))
           end
 
           def reload(context:, ignore_cache: nil, wait: nil)
-            result = @bidi.send_cmd('browsingContext.reload', context: context, ignoreCache: ignore_cache, wait: wait)
-            Protocol.const_get('BrowsingContext::NavigateResult').from_json(result)
+            @transport.execute('browsingContext.reload', {context: context, ignoreCache: ignore_cache, wait: wait}, returns: Protocol.const_get('BrowsingContext::NavigateResult'))
           end
 
           def set_bypass_csp(bypass:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('browsingContext.setBypassCSP', bypass: bypass, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('browsingContext.setBypassCSP', {bypass: bypass, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_viewport(context: nil, viewport: nil, device_pixel_ratio: nil, user_contexts: nil)
-            @bidi.send_cmd('browsingContext.setViewport', context: context, viewport: viewport, devicePixelRatio: device_pixel_ratio, userContexts: user_contexts)
+            @transport.execute('browsingContext.setViewport', {context: context, viewport: viewport, devicePixelRatio: device_pixel_ratio, userContexts: user_contexts})
           end
 
           def traverse_history(context:, delta:)
-            @bidi.send_cmd('browsingContext.traverseHistory', context: context, delta: delta)
+            @transport.execute('browsingContext.traverseHistory', {context: context, delta: delta})
           end
 
         end # BrowsingContext

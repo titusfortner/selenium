@@ -17,12 +17,12 @@ module Selenium
 
           class BrandVersion < Data.define(brand: 'brand', version: 'version'); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def set_client_hints_override
-            @bidi.send_cmd('userAgentClientHints.setClientHintsOverride')
+            @transport.execute('userAgentClientHints.setClientHintsOverride')
           end
 
         end # UserAgentClientHints

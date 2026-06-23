@@ -21,12 +21,12 @@ module Selenium
 
           class SetPermissionParameters < Data.define(descriptor: {json_key: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: 'state', origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def set_permission(descriptor:, state:, origin:, embedded_origin: nil, user_context: nil)
-            @bidi.send_cmd('permissions.setPermission', descriptor: descriptor, state: state, origin: origin, embeddedOrigin: embedded_origin, userContext: user_context)
+            @transport.execute('permissions.setPermission', {descriptor: descriptor, state: state, origin: origin, embeddedOrigin: embedded_origin, userContext: user_context})
           end
 
         end # Permissions

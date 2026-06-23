@@ -18,10 +18,7 @@
 # under the License.
 
 require File.expand_path('../spec_helper', __dir__)
-require File.expand_path('../../../../../lib/selenium/webdriver/bidi/serialization', __dir__)
-%w[browsing_context script network].each do |file|
-  require File.expand_path("../../../../../lib/selenium/webdriver/bidi/protocol/#{file}", __dir__)
-end
+require File.expand_path('../../../../../lib/selenium/webdriver/bidi/protocol', __dir__)
 
 module Selenium
   module WebDriver
@@ -121,13 +118,15 @@ module Selenium
             end
           end
 
-          describe 'a command parsing its result' do
-            it 'returns the typed result object' do
-              bidi = instance_double(BiDi)
-              allow(bidi).to receive(:send_cmd).and_return('navigation' => 'n1', 'url' => 'https://x')
+          describe 'a command driven through the transport' do
+            it 'marshals params (dropping nils) and parses the typed result' do
+              connection = instance_double(WebDriver::WebSocketConnection)
+              allow(connection).to receive(:send_cmd).and_return('result' => {'navigation' => 'n1', 'url' => 'https://x'})
 
-              result = BrowsingContext.new(bidi).navigate(context: 'c', url: 'https://x')
+              result = BrowsingContext.new(Transport.new(connection)).navigate(context: 'c', url: 'https://x')
 
+              expect(connection).to have_received(:send_cmd)
+                .with(method: 'browsingContext.navigate', params: {context: 'c', url: 'https://x'})
               expect(result).to be_a(BrowsingContext::NavigateResult)
               expect(result.url).to eq('https://x')
               expect(result.navigation).to eq('n1')

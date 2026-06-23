@@ -39,8 +39,8 @@ module Selenium
 
           class EntryAdded < Data.define(method_: {json_key: 'method', fixed: 'log.entryAdded'}, params: {json_key: 'params', ref: 'Log::Entry'}); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
         end # Log

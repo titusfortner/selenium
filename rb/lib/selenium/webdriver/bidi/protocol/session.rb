@@ -77,31 +77,28 @@ module Selenium
             )
           end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def end_
-            @bidi.send_cmd('session.end')
+            @transport.execute('session.end')
           end
 
           def new(capabilities:)
-            result = @bidi.send_cmd('session.new', capabilities: capabilities)
-            Protocol.const_get('Session::NewResult').from_json(result)
+            @transport.execute('session.new', {capabilities: capabilities}, returns: Protocol.const_get('Session::NewResult'))
           end
 
           def status
-            result = @bidi.send_cmd('session.status')
-            Protocol.const_get('Session::StatusResult').from_json(result)
+            @transport.execute('session.status', returns: Protocol.const_get('Session::StatusResult'))
           end
 
           def subscribe(events:, contexts: nil, user_contexts: nil)
-            result = @bidi.send_cmd('session.subscribe', events: events, contexts: contexts, userContexts: user_contexts)
-            Protocol.const_get('Session::SubscribeResult').from_json(result)
+            @transport.execute('session.subscribe', {events: events, contexts: contexts, userContexts: user_contexts}, returns: Protocol.const_get('Session::SubscribeResult'))
           end
 
           def unsubscribe(events: nil, subscriptions: nil)
-            @bidi.send_cmd('session.unsubscribe', events: events, subscriptions: subscriptions)
+            @transport.execute('session.unsubscribe', {events: events, subscriptions: subscriptions})
           end
 
         end # Session

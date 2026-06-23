@@ -89,52 +89,52 @@ module Selenium
 
           class SetTouchOverrideParameters < Data.define(max_touch_points: {json_key: 'maxTouchPoints', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def set_forced_colors_mode_theme_override(theme:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setForcedColorsModeThemeOverride', theme: theme, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setForcedColorsModeThemeOverride', {theme: theme, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_geolocation_override(contexts: nil, user_contexts: nil, coordinates: nil, error: nil)
-            @bidi.send_cmd('emulation.setGeolocationOverride', contexts: contexts, userContexts: user_contexts, coordinates: coordinates, error: error)
+            @transport.execute('emulation.setGeolocationOverride', {contexts: contexts, userContexts: user_contexts, coordinates: coordinates, error: error})
           end
 
           def set_locale_override(locale:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setLocaleOverride', locale: locale, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setLocaleOverride', {locale: locale, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_network_conditions(network_conditions:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setNetworkConditions', networkConditions: network_conditions, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setNetworkConditions', {networkConditions: network_conditions, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_screen_orientation_override(screen_orientation:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setScreenOrientationOverride', screenOrientation: screen_orientation, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setScreenOrientationOverride', {screenOrientation: screen_orientation, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_screen_settings_override(screen_area:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setScreenSettingsOverride', screenArea: screen_area, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setScreenSettingsOverride', {screenArea: screen_area, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_scripting_enabled(enabled:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setScriptingEnabled', enabled: enabled, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setScriptingEnabled', {enabled: enabled, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_scrollbar_type_override(scrollbar_type:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setScrollbarTypeOverride', scrollbarType: scrollbar_type, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setScrollbarTypeOverride', {scrollbarType: scrollbar_type, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_timezone_override(timezone:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setTimezoneOverride', timezone: timezone, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setTimezoneOverride', {timezone: timezone, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_touch_override(max_touch_points:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setTouchOverride', maxTouchPoints: max_touch_points, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setTouchOverride', {maxTouchPoints: max_touch_points, contexts: contexts, userContexts: user_contexts})
           end
 
           def set_user_agent_override(user_agent:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('emulation.setUserAgentOverride', userAgent: user_agent, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('emulation.setUserAgentOverride', {userAgent: user_agent, contexts: contexts, userContexts: user_contexts})
           end
 
         end # Emulation

@@ -192,63 +192,60 @@ module Selenium
 
           class ResponseStartedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def add_data_collector(data_types:, max_encoded_data_size:, collector_type: nil, contexts: nil, user_contexts: nil)
-            result = @bidi.send_cmd('network.addDataCollector', dataTypes: data_types, maxEncodedDataSize: max_encoded_data_size, collectorType: collector_type, contexts: contexts, userContexts: user_contexts)
-            Protocol.const_get('Network::AddDataCollectorResult').from_json(result)
+            @transport.execute('network.addDataCollector', {dataTypes: data_types, maxEncodedDataSize: max_encoded_data_size, collectorType: collector_type, contexts: contexts, userContexts: user_contexts}, returns: Protocol.const_get('Network::AddDataCollectorResult'))
           end
 
           def add_intercept(phases:, contexts: nil, url_patterns: nil)
-            result = @bidi.send_cmd('network.addIntercept', phases: phases, contexts: contexts, urlPatterns: url_patterns)
-            Protocol.const_get('Network::AddInterceptResult').from_json(result)
+            @transport.execute('network.addIntercept', {phases: phases, contexts: contexts, urlPatterns: url_patterns}, returns: Protocol.const_get('Network::AddInterceptResult'))
           end
 
           def continue_request(request:, body: nil, cookies: nil, headers: nil, method: nil, url: nil)
-            @bidi.send_cmd('network.continueRequest', request: request, body: body, cookies: cookies, headers: headers, method: method, url: url)
+            @transport.execute('network.continueRequest', {request: request, body: body, cookies: cookies, headers: headers, method: method, url: url})
           end
 
           def continue_response(request:, cookies: nil, credentials: nil, headers: nil, reason_phrase: nil, status_code: nil)
-            @bidi.send_cmd('network.continueResponse', request: request, cookies: cookies, credentials: credentials, headers: headers, reasonPhrase: reason_phrase, statusCode: status_code)
+            @transport.execute('network.continueResponse', {request: request, cookies: cookies, credentials: credentials, headers: headers, reasonPhrase: reason_phrase, statusCode: status_code})
           end
 
           def continue_with_auth(request:, action:, credentials: nil)
-            @bidi.send_cmd('network.continueWithAuth', request: request, action: action, credentials: credentials)
+            @transport.execute('network.continueWithAuth', {request: request, action: action, credentials: credentials})
           end
 
           def disown_data(data_type:, collector:, request:)
-            @bidi.send_cmd('network.disownData', dataType: data_type, collector: collector, request: request)
+            @transport.execute('network.disownData', {dataType: data_type, collector: collector, request: request})
           end
 
           def fail_request(request:)
-            @bidi.send_cmd('network.failRequest', request: request)
+            @transport.execute('network.failRequest', {request: request})
           end
 
           def get_data(data_type:, request:, collector: nil, disown: nil)
-            result = @bidi.send_cmd('network.getData', dataType: data_type, collector: collector, disown: disown, request: request)
-            Protocol.const_get('Network::GetDataResult').from_json(result)
+            @transport.execute('network.getData', {dataType: data_type, collector: collector, disown: disown, request: request}, returns: Protocol.const_get('Network::GetDataResult'))
           end
 
           def provide_response(request:, body: nil, cookies: nil, headers: nil, reason_phrase: nil, status_code: nil)
-            @bidi.send_cmd('network.provideResponse', request: request, body: body, cookies: cookies, headers: headers, reasonPhrase: reason_phrase, statusCode: status_code)
+            @transport.execute('network.provideResponse', {request: request, body: body, cookies: cookies, headers: headers, reasonPhrase: reason_phrase, statusCode: status_code})
           end
 
           def remove_data_collector(collector:)
-            @bidi.send_cmd('network.removeDataCollector', collector: collector)
+            @transport.execute('network.removeDataCollector', {collector: collector})
           end
 
           def remove_intercept(intercept:)
-            @bidi.send_cmd('network.removeIntercept', intercept: intercept)
+            @transport.execute('network.removeIntercept', {intercept: intercept})
           end
 
           def set_cache_behavior(cache_behavior:, contexts: nil)
-            @bidi.send_cmd('network.setCacheBehavior', cacheBehavior: cache_behavior, contexts: contexts)
+            @transport.execute('network.setCacheBehavior', {cacheBehavior: cache_behavior, contexts: contexts})
           end
 
           def set_extra_headers(headers:, contexts: nil, user_contexts: nil)
-            @bidi.send_cmd('network.setExtraHeaders', headers: headers, contexts: contexts, userContexts: user_contexts)
+            @transport.execute('network.setExtraHeaders', {headers: headers, contexts: contexts, userContexts: user_contexts})
           end
 
         end # Network

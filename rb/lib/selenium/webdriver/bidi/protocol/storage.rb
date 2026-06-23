@@ -45,23 +45,20 @@ module Selenium
 
           class DeleteCookiesResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def delete_cookies(filter: nil, partition: nil)
-            result = @bidi.send_cmd('storage.deleteCookies', filter: filter, partition: partition)
-            Protocol.const_get('Storage::DeleteCookiesResult').from_json(result)
+            @transport.execute('storage.deleteCookies', {filter: filter, partition: partition}, returns: Protocol.const_get('Storage::DeleteCookiesResult'))
           end
 
           def get_cookies(filter: nil, partition: nil)
-            result = @bidi.send_cmd('storage.getCookies', filter: filter, partition: partition)
-            Protocol.const_get('Storage::GetCookiesResult').from_json(result)
+            @transport.execute('storage.getCookies', {filter: filter, partition: partition}, returns: Protocol.const_get('Storage::GetCookiesResult'))
           end
 
           def set_cookie(cookie:, partition: nil)
-            result = @bidi.send_cmd('storage.setCookie', cookie: cookie, partition: partition)
-            Protocol.const_get('Storage::SetCookieResult').from_json(result)
+            @transport.execute('storage.setCookie', {cookie: cookie, partition: partition}, returns: Protocol.const_get('Storage::SetCookieResult'))
           end
 
         end # Storage

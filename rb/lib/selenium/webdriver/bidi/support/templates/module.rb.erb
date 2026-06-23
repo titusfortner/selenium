@@ -64,29 +64,24 @@ module Selenium
 
 <%- end -%>
 <%- end -%>
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
 <%- mod.commands.each do |cmd| -%>
 <%- if cmd.passthrough -%>
 <%- signature = '(**params)' -%>
-<%- call = "@bidi.send_cmd('#{cmd.wire_name}', **params)" -%>
+<%- params_src = 'params' -%>
           # params are a spec union; forward verbatim until variant dispatch lands
 <%- elsif cmd.params.empty? -%>
 <%- signature = '' -%>
-<%- call = "@bidi.send_cmd('#{cmd.wire_name}')" -%>
+<%- params_src = nil -%>
 <%- else -%>
 <%- signature = "(#{cmd.signature})" -%>
-<%- call = "@bidi.send_cmd('#{cmd.wire_name}', #{cmd.send_args_str})" -%>
+<%- params_src = "{#{cmd.send_args_str}}" -%>
 <%- end -%>
           def <%= cmd.method_name %><%= signature %>
-<%- if cmd.result_ref -%>
-            result = <%= call %>
-            Protocol.const_get('<%= cmd.result_ref %>').from_json(result)
-<%- else -%>
-            <%= call %>
-<%- end -%>
+            <%= cmd.execute_call(params_src) %>
           end
 
 <%- end -%>

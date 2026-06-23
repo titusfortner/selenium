@@ -38,6 +38,15 @@ module Selenium
       def UNSET.inspect = 'UNSET'
       UNSET.freeze
 
+      # NullObject a caller passes for a command parameter that should serialize as
+      # an explicit JSON +null+ (e.g. resetting an override), as opposed to +nil+,
+      # which {Transport} treats as "omitted" and drops from the payload.
+      #
+      # @api private
+      NULL = ::Object.new
+      def NULL.inspect = 'NULL'
+      NULL.freeze
+
       # Factory and runtime base for the generated BiDi value types.
       #
       # +Data.define(spec)+ bakes each field's JSON facts — JSON key, nullability,

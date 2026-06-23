@@ -24,8 +24,8 @@ module Selenium
 
           class PrefetchStatusUpdatedParameters < Data.define(context: 'context', url: 'url', status: 'status'); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
         end # Speculation

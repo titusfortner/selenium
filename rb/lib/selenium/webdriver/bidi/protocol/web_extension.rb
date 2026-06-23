@@ -34,17 +34,16 @@ module Selenium
 
           class UninstallParameters < Data.define(extension: 'extension'); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def install(extension_data:)
-            result = @bidi.send_cmd('webExtension.install', extensionData: extension_data)
-            Protocol.const_get('WebExtension::InstallResult').from_json(result)
+            @transport.execute('webExtension.install', {extensionData: extension_data}, returns: Protocol.const_get('WebExtension::InstallResult'))
           end
 
           def uninstall(extension:)
-            @bidi.send_cmd('webExtension.uninstall', extension: extension)
+            @transport.execute('webExtension.uninstall', {extension: extension})
           end
 
         end # WebExtension

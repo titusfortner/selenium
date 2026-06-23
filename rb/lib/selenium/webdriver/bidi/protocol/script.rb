@@ -304,36 +304,32 @@ module Selenium
 
           class RealmDestroyedParameters < Data.define(realm: 'realm'); end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def add_preload_script(function_declaration:, arguments: nil, contexts: nil, user_contexts: nil, sandbox: nil)
-            result = @bidi.send_cmd('script.addPreloadScript', functionDeclaration: function_declaration, arguments: arguments, contexts: contexts, userContexts: user_contexts, sandbox: sandbox)
-            Protocol.const_get('Script::AddPreloadScriptResult').from_json(result)
+            @transport.execute('script.addPreloadScript', {functionDeclaration: function_declaration, arguments: arguments, contexts: contexts, userContexts: user_contexts, sandbox: sandbox}, returns: Protocol.const_get('Script::AddPreloadScriptResult'))
           end
 
           def call_function(function_declaration:, await_promise:, target:, arguments: nil, result_ownership: nil, serialization_options: nil, this: nil, user_activation: nil)
-            result = @bidi.send_cmd('script.callFunction', functionDeclaration: function_declaration, awaitPromise: await_promise, target: target, arguments: arguments, resultOwnership: result_ownership, serializationOptions: serialization_options, this: this, userActivation: user_activation)
-            Protocol.const_get('Script::EvaluateResult').from_json(result)
+            @transport.execute('script.callFunction', {functionDeclaration: function_declaration, awaitPromise: await_promise, target: target, arguments: arguments, resultOwnership: result_ownership, serializationOptions: serialization_options, this: this, userActivation: user_activation}, returns: Protocol.const_get('Script::EvaluateResult'))
           end
 
           def disown(handles:, target:)
-            @bidi.send_cmd('script.disown', handles: handles, target: target)
+            @transport.execute('script.disown', {handles: handles, target: target})
           end
 
           def evaluate(expression:, target:, await_promise:, result_ownership: nil, serialization_options: nil, user_activation: nil)
-            result = @bidi.send_cmd('script.evaluate', expression: expression, target: target, awaitPromise: await_promise, resultOwnership: result_ownership, serializationOptions: serialization_options, userActivation: user_activation)
-            Protocol.const_get('Script::EvaluateResult').from_json(result)
+            @transport.execute('script.evaluate', {expression: expression, target: target, awaitPromise: await_promise, resultOwnership: result_ownership, serializationOptions: serialization_options, userActivation: user_activation}, returns: Protocol.const_get('Script::EvaluateResult'))
           end
 
           def get_realms(context: nil, type: nil)
-            result = @bidi.send_cmd('script.getRealms', context: context, type: type)
-            Protocol.const_get('Script::GetRealmsResult').from_json(result)
+            @transport.execute('script.getRealms', {context: context, type: type}, returns: Protocol.const_get('Script::GetRealmsResult'))
           end
 
           def remove_preload_script(script:)
-            @bidi.send_cmd('script.removePreloadScript', script: script)
+            @transport.execute('script.removePreloadScript', {script: script})
           end
 
         end # Script

@@ -129,6 +129,16 @@ module BiDiGenerate
     def send_args_str
       params.map { |p| "#{p.wire_name}: #{p.ruby_name}" }.join(', ')
     end
+
+    # The generated method body: a single `@transport.execute(...)` call. params_src
+    # is the params argument ("{wire: var, …}", "params" for a passthrough union, or
+    # nil when the command takes none); Transport renders/sends and parses the result.
+    def execute_call(params_src)
+      args = ["'#{wire_name}'"]
+      args << params_src if params_src
+      args << "returns: Protocol.const_get('#{result_ref}')" if result_ref
+      "@transport.execute(#{args.join(', ')})"
+    end
   end
 
   Event = Struct.new(:wire_name, :event_name, keyword_init: true)

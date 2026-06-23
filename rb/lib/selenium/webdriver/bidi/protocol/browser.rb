@@ -74,40 +74,36 @@ module Selenium
             class Denied < Data.define(type: {fixed: 'denied'}); end
           end
 
-          def initialize(bidi)
-            @bidi = bidi
+          def initialize(transport)
+            @transport = transport
           end
 
           def close
-            @bidi.send_cmd('browser.close')
+            @transport.execute('browser.close')
           end
 
           def create_user_context(accept_insecure_certs: nil, proxy: nil, unhandled_prompt_behavior: nil)
-            result = @bidi.send_cmd('browser.createUserContext', acceptInsecureCerts: accept_insecure_certs, proxy: proxy, unhandledPromptBehavior: unhandled_prompt_behavior)
-            Protocol.const_get('Browser::UserContextInfo').from_json(result)
+            @transport.execute('browser.createUserContext', {acceptInsecureCerts: accept_insecure_certs, proxy: proxy, unhandledPromptBehavior: unhandled_prompt_behavior}, returns: Protocol.const_get('Browser::UserContextInfo'))
           end
 
           def get_client_windows
-            result = @bidi.send_cmd('browser.getClientWindows')
-            Protocol.const_get('Browser::GetClientWindowsResult').from_json(result)
+            @transport.execute('browser.getClientWindows', returns: Protocol.const_get('Browser::GetClientWindowsResult'))
           end
 
           def get_user_contexts
-            result = @bidi.send_cmd('browser.getUserContexts')
-            Protocol.const_get('Browser::GetUserContextsResult').from_json(result)
+            @transport.execute('browser.getUserContexts', returns: Protocol.const_get('Browser::GetUserContextsResult'))
           end
 
           def remove_user_context(user_context:)
-            @bidi.send_cmd('browser.removeUserContext', userContext: user_context)
+            @transport.execute('browser.removeUserContext', {userContext: user_context})
           end
 
           def set_client_window_state(client_window:, state:, width: nil, height: nil, x: nil, y: nil)
-            result = @bidi.send_cmd('browser.setClientWindowState', clientWindow: client_window, state: state, width: width, height: height, x: x, y: y)
-            Protocol.const_get('Browser::ClientWindowInfo').from_json(result)
+            @transport.execute('browser.setClientWindowState', {clientWindow: client_window, state: state, width: width, height: height, x: x, y: y}, returns: Protocol.const_get('Browser::ClientWindowInfo'))
           end
 
           def set_download_behavior(download_behavior:, user_contexts: nil)
-            @bidi.send_cmd('browser.setDownloadBehavior', downloadBehavior: download_behavior, userContexts: user_contexts)
+            @transport.execute('browser.setDownloadBehavior', {downloadBehavior: download_behavior, userContexts: user_contexts})
           end
 
         end # Browser

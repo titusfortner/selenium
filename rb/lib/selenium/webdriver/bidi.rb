@@ -25,6 +25,7 @@ module Selenium
       autoload :Browser, 'selenium/webdriver/bidi/browser'
       autoload :BrowsingContext, 'selenium/webdriver/bidi/browsing_context'
       autoload :Struct, 'selenium/webdriver/bidi/struct'
+      autoload :Transport, 'selenium/webdriver/bidi/transport'
       autoload :Network, 'selenium/webdriver/bidi/network'
       autoload :InterceptedRequest, 'selenium/webdriver/bidi/network/intercepted_request'
       autoload :InterceptedResponse, 'selenium/webdriver/bidi/network/intercepted_response'
