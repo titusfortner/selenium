@@ -77,8 +77,8 @@ module Selenium
             )
           end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
           def end_
@@ -86,18 +86,18 @@ module Selenium
           end
 
           def new(capabilities:)
-            @transport.execute('session.new', {capabilities: capabilities}, returns: Protocol.const_get('Session::NewResult'))
+            @transport.execute('session.new', NewParameters.new(capabilities: capabilities), Protocol.const_get('Session::NewResult'))
           end
 
           def status
-            @transport.execute('session.status', returns: Protocol.const_get('Session::StatusResult'))
+            @transport.execute('session.status', nil, Protocol.const_get('Session::StatusResult'))
           end
 
-          def subscribe(events:, contexts: nil, user_contexts: nil)
-            @transport.execute('session.subscribe', {events: events, contexts: contexts, userContexts: user_contexts}, returns: Protocol.const_get('Session::SubscribeResult'))
+          def subscribe(events:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('session.subscribe', SubscribeParameters.new(events: events, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Session::SubscribeResult'))
           end
 
-          def unsubscribe(events: nil, subscriptions: nil)
+          def unsubscribe(events: UNSET, subscriptions: UNSET)
             @transport.execute('session.unsubscribe', {events: events, subscriptions: subscriptions})
           end
 

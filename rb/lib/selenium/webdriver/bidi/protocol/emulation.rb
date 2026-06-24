@@ -89,52 +89,52 @@ module Selenium
 
           class SetTouchOverrideParameters < Data.define(max_touch_points: {json_key: 'maxTouchPoints', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
-          def set_forced_colors_mode_theme_override(theme:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setForcedColorsModeThemeOverride', {theme: theme, contexts: contexts, userContexts: user_contexts})
+          def set_forced_colors_mode_theme_override(theme:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setForcedColorsModeThemeOverride', SetForcedColorsModeThemeOverrideParameters.new(theme: theme, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_geolocation_override(contexts: nil, user_contexts: nil, coordinates: nil, error: nil)
+          def set_geolocation_override(contexts: UNSET, user_contexts: UNSET, coordinates: UNSET, error: UNSET)
             @transport.execute('emulation.setGeolocationOverride', {contexts: contexts, userContexts: user_contexts, coordinates: coordinates, error: error})
           end
 
-          def set_locale_override(locale:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setLocaleOverride', {locale: locale, contexts: contexts, userContexts: user_contexts})
+          def set_locale_override(locale:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setLocaleOverride', SetLocaleOverrideParameters.new(locale: locale, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_network_conditions(network_conditions:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setNetworkConditions', {networkConditions: network_conditions, contexts: contexts, userContexts: user_contexts})
+          def set_network_conditions(network_conditions:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setNetworkConditions', SetNetworkConditionsParameters.new(network_conditions: network_conditions, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_screen_orientation_override(screen_orientation:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setScreenOrientationOverride', {screenOrientation: screen_orientation, contexts: contexts, userContexts: user_contexts})
+          def set_screen_orientation_override(screen_orientation:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setScreenOrientationOverride', SetScreenOrientationOverrideParameters.new(screen_orientation: screen_orientation, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_screen_settings_override(screen_area:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setScreenSettingsOverride', {screenArea: screen_area, contexts: contexts, userContexts: user_contexts})
+          def set_screen_settings_override(screen_area:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setScreenSettingsOverride', SetScreenSettingsOverrideParameters.new(screen_area: screen_area, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_scripting_enabled(enabled:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setScriptingEnabled', {enabled: enabled, contexts: contexts, userContexts: user_contexts})
+          def set_scripting_enabled(enabled:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setScriptingEnabled', SetScriptingEnabledParameters.new(enabled: enabled, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_scrollbar_type_override(scrollbar_type:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setScrollbarTypeOverride', {scrollbarType: scrollbar_type, contexts: contexts, userContexts: user_contexts})
+          def set_scrollbar_type_override(scrollbar_type:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setScrollbarTypeOverride', SetScrollbarTypeOverrideParameters.new(scrollbar_type: scrollbar_type, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_timezone_override(timezone:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setTimezoneOverride', {timezone: timezone, contexts: contexts, userContexts: user_contexts})
+          def set_timezone_override(timezone:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setTimezoneOverride', SetTimezoneOverrideParameters.new(timezone: timezone, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_touch_override(max_touch_points:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setTouchOverride', {maxTouchPoints: max_touch_points, contexts: contexts, userContexts: user_contexts})
+          def set_touch_override(max_touch_points:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setTouchOverride', SetTouchOverrideParameters.new(max_touch_points: max_touch_points, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_user_agent_override(user_agent:, contexts: nil, user_contexts: nil)
-            @transport.execute('emulation.setUserAgentOverride', {userAgent: user_agent, contexts: contexts, userContexts: user_contexts})
+          def set_user_agent_override(user_agent:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('emulation.setUserAgentOverride', SetUserAgentOverrideParameters.new(user_agent: user_agent, contexts: contexts, user_contexts: user_contexts))
           end
 
         end # Emulation

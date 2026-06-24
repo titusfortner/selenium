@@ -34,16 +34,16 @@ module Selenium
 
           class UninstallParameters < Data.define(extension: 'extension'); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
           def install(extension_data:)
-            @transport.execute('webExtension.install', {extensionData: extension_data}, returns: Protocol.const_get('WebExtension::InstallResult'))
+            @transport.execute('webExtension.install', InstallParameters.new(extension_data: extension_data), Protocol.const_get('WebExtension::InstallResult'))
           end
 
           def uninstall(extension:)
-            @transport.execute('webExtension.uninstall', {extension: extension})
+            @transport.execute('webExtension.uninstall', UninstallParameters.new(extension: extension))
           end
 
         end # WebExtension

@@ -126,7 +126,7 @@ module Selenium
               result = BrowsingContext.new(Transport.new(connection)).navigate(context: 'c', url: 'https://x')
 
               expect(connection).to have_received(:send_cmd)
-                .with(method: 'browsingContext.navigate', params: {context: 'c', url: 'https://x'})
+                .with(method: 'browsingContext.navigate', params: {'context' => 'c', 'url' => 'https://x'})
               expect(result).to be_a(BrowsingContext::NavigateResult)
               expect(result.url).to eq('https://x')
               expect(result.navigation).to eq('n1')

@@ -39,8 +39,8 @@ module Selenium
 
           class EntryAdded < Data.define(method_: {json_key: 'method', fixed: 'log.entryAdded'}, params: {json_key: 'params', ref: 'Log::Entry'}); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
         end # Log

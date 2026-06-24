@@ -20,38 +20,50 @@
 module Selenium
   module WebDriver
     class BiDi
-      # Low-level command seam for the generated Protocol layer: renders command
-      # params (including generated value objects) to the wire, sends, and parses the
-      # reply into the command's declared type. Stateless — session state lives above.
+      # Low-level command seam for the generated Protocol layer: serializes a command's
+      # params object to the wire, sends over the raw websocket, and parses the reply
+      # into the command's declared type. Stateless — session state lives above.
       #
       # @api private
       class Transport
+        # Resolves the Transport reachable from a Driver, a bridge, a {BiDi}, or a
+        # Transport, so a generated domain can be constructed with any of them.
+        def self.for(context)
+          return context if context.is_a?(self)
+          return context.transport if context.respond_to?(:transport)
+          return context.bidi.transport if context.respond_to?(:bidi)
+
+          context.send(:bridge).bidi.transport
+        end
+
         def initialize(connection)
           @connection = connection
         end
 
-        def execute(method, params = {}, returns: nil)
-          message = @connection.send_cmd(method: method, params: render(params))
-          raise Error::WebDriverError, error_message(message) if message['error']
+        def execute(method, params = nil, result_type = nil)
+          reply = @connection.send_cmd(method: method, params: serialize(params))
+          raise Error::WebDriverError, error_message(reply) if reply['error']
 
-          result = message['result']
-          returns ? returns.from_json(result) : result
+          result = reply['result']
+          result_type ? result_type.from_json(result) : result
         end
 
         private
 
-        # nil/UNSET omit the param; NULL sends an explicit wire null; anything else
-        # (scalars, generated objects, arrays) renders through Serializable.
-        def render(params)
-          params.each_with_object({}) do |(key, value), wire|
-            next if value.nil? || UNSET.equal?(value)
-
-            wire[key] = NULL.equal?(value) ? nil : Data::Serializable.as_json(value)
+        # A params object renders itself; a passthrough Hash drops omitted entries and
+        # serializes any nested value objects; no params is an empty payload.
+        def serialize(params)
+          case params
+          when nil then {}
+          when ::Hash
+            params.reject { |_, value| value.nil? || UNSET.equal?(value) }
+                  .transform_values { |value| Data::Serializable.as_json(value) }
+          else params.as_json
           end
         end
 
-        def error_message(message)
-          "#{message['error']}: #{message['message']}\n#{message['stacktrace']}"
+        def error_message(reply)
+          "#{reply['error']}: #{reply['message']}\n#{reply['stacktrace']}"
         end
       end # Transport
     end # BiDi

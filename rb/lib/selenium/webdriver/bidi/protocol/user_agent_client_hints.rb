@@ -17,8 +17,8 @@ module Selenium
 
           class BrandVersion < Data.define(brand: 'brand', version: 'version'); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
           def set_client_hints_override

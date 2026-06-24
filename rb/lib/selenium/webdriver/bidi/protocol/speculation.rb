@@ -24,8 +24,8 @@ module Selenium
 
           class PrefetchStatusUpdatedParameters < Data.define(context: 'context', url: 'url', status: 'status'); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
         end # Speculation

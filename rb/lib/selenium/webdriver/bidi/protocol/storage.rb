@@ -45,20 +45,20 @@ module Selenium
 
           class DeleteCookiesResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
-          def delete_cookies(filter: nil, partition: nil)
-            @transport.execute('storage.deleteCookies', {filter: filter, partition: partition}, returns: Protocol.const_get('Storage::DeleteCookiesResult'))
+          def delete_cookies(filter: UNSET, partition: UNSET)
+            @transport.execute('storage.deleteCookies', DeleteCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::DeleteCookiesResult'))
           end
 
-          def get_cookies(filter: nil, partition: nil)
-            @transport.execute('storage.getCookies', {filter: filter, partition: partition}, returns: Protocol.const_get('Storage::GetCookiesResult'))
+          def get_cookies(filter: UNSET, partition: UNSET)
+            @transport.execute('storage.getCookies', GetCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::GetCookiesResult'))
           end
 
-          def set_cookie(cookie:, partition: nil)
-            @transport.execute('storage.setCookie', {cookie: cookie, partition: partition}, returns: Protocol.const_get('Storage::SetCookieResult'))
+          def set_cookie(cookie:, partition: UNSET)
+            @transport.execute('storage.setCookie', SetCookieParameters.new(cookie: cookie, partition: partition), Protocol.const_get('Storage::SetCookieResult'))
           end
 
         end # Storage

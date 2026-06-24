@@ -56,6 +56,10 @@ module Selenium
         @session ||= Session.new(self)
       end
 
+      def transport
+        @transport ||= Transport.new(@ws)
+      end
+
       def send_cmd(method, **params)
         data = {method: method, params: params.compact}
         message = @ws.send_cmd(**data)

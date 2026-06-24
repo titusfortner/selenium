@@ -31,57 +31,58 @@ module Selenium
           allow(connection).to receive(:send_cmd).and_return('result' => result)
         end
 
-        it 'sends the method/params envelope and returns the raw result by default' do
+        it 'serializes a params object and returns the raw result by default' do
           stub_result('handle' => 'h1')
+          params = Protocol::Browser::CreateUserContextParameters.new(accept_insecure_certs: true)
 
-          expect(transport.execute('script.evaluate', {expression: '1'})).to eq('handle' => 'h1')
+          expect(transport.execute('browser.createUserContext', params)).to eq('handle' => 'h1')
           expect(connection).to have_received(:send_cmd)
-            .with(method: 'script.evaluate', params: {expression: '1'})
+            .with(method: 'browser.createUserContext', params: {'acceptInsecureCerts' => true})
         end
 
-        it 'drops omitted (nil / UNSET) params from the payload' do
-          stub_result
-
-          transport.execute('browser.setDownloadBehavior', {downloadBehavior: 'b', userContexts: nil, x: UNSET})
-
-          expect(connection).to have_received(:send_cmd)
-            .with(method: 'browser.setDownloadBehavior', params: {downloadBehavior: 'b'})
-        end
-
-        it 'serializes NULL to an explicit wire null' do
-          stub_result
-
-          transport.execute('browser.setDownloadBehavior', {downloadBehavior: NULL})
-
-          expect(connection).to have_received(:send_cmd)
-            .with(method: 'browser.setDownloadBehavior', params: {downloadBehavior: nil})
-        end
-
-        it 'renders a generated value object to its wire shape' do
-          stub_result
-
-          transport.execute('storage.setCookie', {value: Protocol::Network::StringValue.new(value: 'YQ==')})
-
-          expect(connection).to have_received(:send_cmd)
-            .with(method: 'storage.setCookie', params: {value: {'type' => 'string', 'value' => 'YQ=='}})
-        end
-
-        it 'parses the result into the declared value type' do
+        it 'parses the result into the declared type' do
           stub_result('navigation' => 'n1', 'url' => 'https://x')
+          params = Protocol::BrowsingContext::NavigateParameters.new(context: 'c', url: 'https://x')
 
-          result = transport.execute('browsingContext.navigate', {context: 'c'},
-                                     returns: Protocol::BrowsingContext::NavigateResult)
+          result = transport.execute('browsingContext.navigate', params, Protocol::BrowsingContext::NavigateResult)
 
           expect(result).to be_a(Protocol::BrowsingContext::NavigateResult)
           expect(result.url).to eq('https://x')
+        end
+
+        it 'sends an empty payload when there are no params' do
+          stub_result
+          transport.execute('browser.close')
+          expect(connection).to have_received(:send_cmd).with(method: 'browser.close', params: {})
+        end
+
+        it 'drops omitted entries from a passthrough hash' do
+          stub_result
+          transport.execute('session.unsubscribe', {events: ['log.entryAdded'], subscriptions: nil})
+          expect(connection).to have_received(:send_cmd)
+            .with(method: 'session.unsubscribe', params: {events: ['log.entryAdded']})
         end
 
         it 'raises on an error reply' do
           allow(connection).to receive(:send_cmd)
             .and_return('error' => 'no such frame', 'message' => 'gone', 'stacktrace' => '')
 
-          expect { transport.execute('browsingContext.navigate', {context: 'c'}) }
+          expect { transport.execute('browsingContext.navigate') }
             .to raise_error(Error::WebDriverError, /no such frame/)
+        end
+
+        describe '.for' do
+          it 'resolves a Transport, a BiDi, a bridge, and a driver to the transport' do
+            bidi = instance_double(BiDi, transport: transport)
+            bridge = instance_double(Remote::BiDiBridge, bidi: bidi)
+            driver = instance_double(Driver)
+            allow(driver).to receive(:bridge).and_return(bridge) # private on the real Driver
+
+            expect(described_class.for(transport)).to be(transport)
+            expect(described_class.for(bidi)).to be(transport)
+            expect(described_class.for(bridge)).to be(transport)
+            expect(described_class.for(driver)).to be(transport)
+          end
         end
       end
     end # BiDi

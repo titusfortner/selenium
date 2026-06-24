@@ -64,24 +64,20 @@ module Selenium
 
 <%- end -%>
 <%- end -%>
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
 <%- mod.commands.each do |cmd| -%>
 <%- if cmd.passthrough -%>
-<%- signature = '(**params)' -%>
-<%- params_src = 'params' -%>
           # params are a spec union; forward verbatim until variant dispatch lands
+          def <%= cmd.method_name %>(**params)
 <%- elsif cmd.params.empty? -%>
-<%- signature = '' -%>
-<%- params_src = nil -%>
+          def <%= cmd.method_name %>
 <%- else -%>
-<%- signature = "(#{cmd.signature})" -%>
-<%- params_src = "{#{cmd.send_args_str}}" -%>
+          def <%= cmd.method_name %>(<%= cmd.signature %>)
 <%- end -%>
-          def <%= cmd.method_name %><%= signature %>
-            <%= cmd.execute_call(params_src) %>
+            <%= cmd.execute_call %>
           end
 
 <%- end -%>

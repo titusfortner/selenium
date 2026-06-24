@@ -32,13 +32,6 @@ module Selenium
       def UNSET.inspect = 'UNSET'
       UNSET.freeze
 
-      # Explicit JSON null for a command param (Transport drops nil as "omitted").
-      #
-      # @api private
-      NULL = ::Object.new
-      def NULL.inspect = 'NULL'
-      NULL.freeze
-
       # Factory and runtime base for the generated value types. +Data.define(spec)+
       # bakes each field's wire facts at generation time and returns an immutable
       # +::Data+ subclass with serialization mixed in.

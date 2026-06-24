@@ -74,36 +74,36 @@ module Selenium
             class Denied < Data.define(type: {fixed: 'denied'}); end
           end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
           def close
             @transport.execute('browser.close')
           end
 
-          def create_user_context(accept_insecure_certs: nil, proxy: nil, unhandled_prompt_behavior: nil)
-            @transport.execute('browser.createUserContext', {acceptInsecureCerts: accept_insecure_certs, proxy: proxy, unhandledPromptBehavior: unhandled_prompt_behavior}, returns: Protocol.const_get('Browser::UserContextInfo'))
+          def create_user_context(accept_insecure_certs: UNSET, proxy: UNSET, unhandled_prompt_behavior: UNSET)
+            @transport.execute('browser.createUserContext', CreateUserContextParameters.new(accept_insecure_certs: accept_insecure_certs, proxy: proxy, unhandled_prompt_behavior: unhandled_prompt_behavior), Protocol.const_get('Browser::UserContextInfo'))
           end
 
           def get_client_windows
-            @transport.execute('browser.getClientWindows', returns: Protocol.const_get('Browser::GetClientWindowsResult'))
+            @transport.execute('browser.getClientWindows', nil, Protocol.const_get('Browser::GetClientWindowsResult'))
           end
 
           def get_user_contexts
-            @transport.execute('browser.getUserContexts', returns: Protocol.const_get('Browser::GetUserContextsResult'))
+            @transport.execute('browser.getUserContexts', nil, Protocol.const_get('Browser::GetUserContextsResult'))
           end
 
           def remove_user_context(user_context:)
-            @transport.execute('browser.removeUserContext', {userContext: user_context})
+            @transport.execute('browser.removeUserContext', RemoveUserContextParameters.new(user_context: user_context))
           end
 
-          def set_client_window_state(client_window:, state:, width: nil, height: nil, x: nil, y: nil)
-            @transport.execute('browser.setClientWindowState', {clientWindow: client_window, state: state, width: width, height: height, x: x, y: y}, returns: Protocol.const_get('Browser::ClientWindowInfo'))
+          def set_client_window_state(client_window:, state:, width: UNSET, height: UNSET, x: UNSET, y: UNSET)
+            @transport.execute('browser.setClientWindowState', {clientWindow: client_window, state: state, width: width, height: height, x: x, y: y}, Protocol.const_get('Browser::ClientWindowInfo'))
           end
 
-          def set_download_behavior(download_behavior:, user_contexts: nil)
-            @transport.execute('browser.setDownloadBehavior', {downloadBehavior: download_behavior, userContexts: user_contexts})
+          def set_download_behavior(download_behavior:, user_contexts: UNSET)
+            @transport.execute('browser.setDownloadBehavior', SetDownloadBehaviorParameters.new(download_behavior: download_behavior, user_contexts: user_contexts))
           end
 
         end # Browser

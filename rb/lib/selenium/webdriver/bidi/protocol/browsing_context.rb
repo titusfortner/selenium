@@ -222,60 +222,60 @@ module Selenium
 
           class UserPromptOpenedParameters < Data.define(context: 'context', handler: 'handler', message: 'message', type: 'type', user_context: 'userContext', default_value: 'defaultValue'); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
           def activate(context:)
-            @transport.execute('browsingContext.activate', {context: context})
+            @transport.execute('browsingContext.activate', ActivateParameters.new(context: context))
           end
 
-          def capture_screenshot(context:, origin: nil, format: nil, clip: nil)
-            @transport.execute('browsingContext.captureScreenshot', {context: context, origin: origin, format: format, clip: clip}, returns: Protocol.const_get('BrowsingContext::CaptureScreenshotResult'))
+          def capture_screenshot(context:, origin: UNSET, format: UNSET, clip: UNSET)
+            @transport.execute('browsingContext.captureScreenshot', CaptureScreenshotParameters.new(context: context, origin: origin, format: format, clip: clip), Protocol.const_get('BrowsingContext::CaptureScreenshotResult'))
           end
 
-          def close(context:, prompt_unload: nil)
-            @transport.execute('browsingContext.close', {context: context, promptUnload: prompt_unload})
+          def close(context:, prompt_unload: UNSET)
+            @transport.execute('browsingContext.close', CloseParameters.new(context: context, prompt_unload: prompt_unload))
           end
 
-          def create(type:, reference_context: nil, background: nil, user_context: nil)
-            @transport.execute('browsingContext.create', {type: type, referenceContext: reference_context, background: background, userContext: user_context}, returns: Protocol.const_get('BrowsingContext::CreateResult'))
+          def create(type:, reference_context: UNSET, background: UNSET, user_context: UNSET)
+            @transport.execute('browsingContext.create', CreateParameters.new(type: type, reference_context: reference_context, background: background, user_context: user_context), Protocol.const_get('BrowsingContext::CreateResult'))
           end
 
-          def get_tree(max_depth: nil, root: nil)
-            @transport.execute('browsingContext.getTree', {maxDepth: max_depth, root: root}, returns: Protocol.const_get('BrowsingContext::GetTreeResult'))
+          def get_tree(max_depth: UNSET, root: UNSET)
+            @transport.execute('browsingContext.getTree', GetTreeParameters.new(max_depth: max_depth, root: root), Protocol.const_get('BrowsingContext::GetTreeResult'))
           end
 
-          def handle_user_prompt(context:, accept: nil, user_text: nil)
-            @transport.execute('browsingContext.handleUserPrompt', {context: context, accept: accept, userText: user_text})
+          def handle_user_prompt(context:, accept: UNSET, user_text: UNSET)
+            @transport.execute('browsingContext.handleUserPrompt', HandleUserPromptParameters.new(context: context, accept: accept, user_text: user_text))
           end
 
-          def locate_nodes(context:, locator:, max_node_count: nil, serialization_options: nil, start_nodes: nil)
-            @transport.execute('browsingContext.locateNodes', {context: context, locator: locator, maxNodeCount: max_node_count, serializationOptions: serialization_options, startNodes: start_nodes}, returns: Protocol.const_get('BrowsingContext::LocateNodesResult'))
+          def locate_nodes(context:, locator:, max_node_count: UNSET, serialization_options: UNSET, start_nodes: UNSET)
+            @transport.execute('browsingContext.locateNodes', LocateNodesParameters.new(context: context, locator: locator, max_node_count: max_node_count, serialization_options: serialization_options, start_nodes: start_nodes), Protocol.const_get('BrowsingContext::LocateNodesResult'))
           end
 
-          def navigate(context:, url:, wait: nil)
-            @transport.execute('browsingContext.navigate', {context: context, url: url, wait: wait}, returns: Protocol.const_get('BrowsingContext::NavigateResult'))
+          def navigate(context:, url:, wait: UNSET)
+            @transport.execute('browsingContext.navigate', NavigateParameters.new(context: context, url: url, wait: wait), Protocol.const_get('BrowsingContext::NavigateResult'))
           end
 
-          def print(context:, background: nil, margin: nil, orientation: nil, page: nil, page_ranges: nil, scale: nil, shrink_to_fit: nil)
-            @transport.execute('browsingContext.print', {context: context, background: background, margin: margin, orientation: orientation, page: page, pageRanges: page_ranges, scale: scale, shrinkToFit: shrink_to_fit}, returns: Protocol.const_get('BrowsingContext::PrintResult'))
+          def print(context:, background: UNSET, margin: UNSET, orientation: UNSET, page: UNSET, page_ranges: UNSET, scale: UNSET, shrink_to_fit: UNSET)
+            @transport.execute('browsingContext.print', PrintParameters.new(context: context, background: background, margin: margin, orientation: orientation, page: page, page_ranges: page_ranges, scale: scale, shrink_to_fit: shrink_to_fit), Protocol.const_get('BrowsingContext::PrintResult'))
           end
 
-          def reload(context:, ignore_cache: nil, wait: nil)
-            @transport.execute('browsingContext.reload', {context: context, ignoreCache: ignore_cache, wait: wait}, returns: Protocol.const_get('BrowsingContext::NavigateResult'))
+          def reload(context:, ignore_cache: UNSET, wait: UNSET)
+            @transport.execute('browsingContext.reload', ReloadParameters.new(context: context, ignore_cache: ignore_cache, wait: wait), Protocol.const_get('BrowsingContext::NavigateResult'))
           end
 
-          def set_bypass_csp(bypass:, contexts: nil, user_contexts: nil)
-            @transport.execute('browsingContext.setBypassCSP', {bypass: bypass, contexts: contexts, userContexts: user_contexts})
+          def set_bypass_csp(bypass:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('browsingContext.setBypassCSP', SetBypassCSPParameters.new(bypass: bypass, contexts: contexts, user_contexts: user_contexts))
           end
 
-          def set_viewport(context: nil, viewport: nil, device_pixel_ratio: nil, user_contexts: nil)
-            @transport.execute('browsingContext.setViewport', {context: context, viewport: viewport, devicePixelRatio: device_pixel_ratio, userContexts: user_contexts})
+          def set_viewport(context: UNSET, viewport: UNSET, device_pixel_ratio: UNSET, user_contexts: UNSET)
+            @transport.execute('browsingContext.setViewport', SetViewportParameters.new(context: context, viewport: viewport, device_pixel_ratio: device_pixel_ratio, user_contexts: user_contexts))
           end
 
           def traverse_history(context:, delta:)
-            @transport.execute('browsingContext.traverseHistory', {context: context, delta: delta})
+            @transport.execute('browsingContext.traverseHistory', TraverseHistoryParameters.new(context: context, delta: delta))
           end
 
         end # BrowsingContext

@@ -107,17 +107,20 @@ module BiDiGenerate
   # ruby_name is the snake_case keyword argument; wire_name is the exact key the
   # protocol expects (baked verbatim from the schema, no runtime conversion).
   Param = Struct.new(:ruby_name, :wire_name, :required, keyword_init: true) do
+    # Optionals default to UNSET (omitted), so an explicit nil can still reach a
+    # nullable field as wire null.
     def sig_part
-      required ? "#{ruby_name}:" : "#{ruby_name}: nil"
+      required ? "#{ruby_name}:" : "#{ruby_name}: UNSET"
     end
   end
 
-  # passthrough commands have params the schema models as a union/alias (not a
-  # flat record), which Phase 1 keyword args cannot express. They forward raw
-  # keyword args until structured union dispatch lands (Phase 2).
-  # result_ref is the Protocol-relative class path the response parses into
-  # (e.g. "BrowsingContext::NavigateResult"), or nil to return the raw hash.
-  Command = Struct.new(:wire_name, :method_name, :params, :passthrough, :result_ref, keyword_init: true) do
+  # passthrough commands have params the schema models as a union/alias (not a flat
+  # record), which keyword args can't express; they forward raw kwargs until union
+  # variant dispatch lands. params_class is the bare Parameters class the named args
+  # construct (nil for passthrough/none). result_ref is the Protocol-relative result
+  # class path, or nil to return the raw hash.
+  Command = Struct.new(:wire_name, :method_name, :params, :passthrough, :result_ref, :params_class,
+                       keyword_init: true) do
     def required_params = params.select(&:required)
     def optional_params = params.reject(&:required)
 
@@ -125,18 +128,28 @@ module BiDiGenerate
       (required_params.map(&:sig_part) + optional_params.map(&:sig_part)).join(', ')
     end
 
-    # context: context, promptUnload: prompt_unload
-    def send_args_str
-      params.map { |p| "#{p.wire_name}: #{p.ruby_name}" }.join(', ')
+    # `@transport.execute(method[, params][, result_type])` — params is the
+    # constructed Parameters object or a passthrough `**params` hash; result_type is
+    # the trailing positional when the result is structured.
+    def execute_call
+      arg = passthrough ? 'params' : params_arg
+      parts = ["'#{wire_name}'"]
+      if result_ref
+        parts << (arg || 'nil')
+        parts << "Protocol.const_get('#{result_ref}')"
+      elsif arg
+        parts << arg
+      end
+      "@transport.execute(#{parts.join(', ')})"
     end
 
-    # The `@transport.execute(...)` call. params_src is the params argument
-    # ("{wire: var, …}", "params" for a passthrough, or nil for none).
-    def execute_call(params_src)
-      args = ["'#{wire_name}'"]
-      args << params_src if params_src
-      args << "returns: Protocol.const_get('#{result_ref}')" if result_ref
-      "@transport.execute(#{args.join(', ')})"
+    def params_arg
+      return nil if params.empty?
+      # A union params type has no field constructor; pass a flat wire-keyed hash
+      # until variant dispatch lands. Record params build their Parameters object.
+      return "{#{params.map { |p| "#{p.wire_name}: #{p.ruby_name}" }.join(', ')}}" unless params_class
+
+      "#{params_class}.new(#{params.map { |p| "#{p.ruby_name}: #{p.ruby_name}" }.join(', ')})"
     end
   end
 
@@ -225,6 +238,10 @@ module BiDiGenerate
 
     def commands_for(domain)
       @commands.select { |c| c['domain'] == domain }
+    end
+
+    def type_kind(ref)
+      @types[ref]&.fetch('kind', nil)
     end
 
     def events_for(domain)
@@ -410,7 +427,7 @@ module BiDiGenerate
     def record_params(fields)
       fields.map do |field|
         Param.new(
-          ruby_name: BiDiGenerate.camel_to_snake(field['name']),
+          ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
           wire_name: field['wire'],
           required: field['required']
         )
@@ -432,7 +449,7 @@ module BiDiGenerate
         field = variant_fields.flatten.find { |f| f['wire'] == wire }
         required = variant_fields.all? { |fields| fields.any? { |f| f['wire'] == wire && f['required'] } }
         Param.new(
-          ruby_name: BiDiGenerate.camel_to_snake(field['name']),
+          ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
           wire_name: wire,
           required: required
         )
@@ -446,12 +463,16 @@ module BiDiGenerate
 
       commands = schema.commands_for(domain).map do |cmd|
         params = schema.params_for(cmd['params'])
+        params_ref = cmd['params'] && cmd['params']['ref']
+        params_class = params && !params.empty? && schema.type_kind(params_ref) == 'record' ?
+                       type_class_name(params_ref) : nil
         Command.new(
           wire_name: cmd['method'],
           method_name: safe_method_name(camel_to_snake(cmd['name'])),
           params: params || [],
           passthrough: params.nil?,
-          result_ref: cmd['result'] && schema.structured_ref(cmd['result']['ref'])
+          result_ref: cmd['result'] && schema.structured_ref(cmd['result']['ref']),
+          params_class: params_class
         )
       end
 

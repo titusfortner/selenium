@@ -304,32 +304,32 @@ module Selenium
 
           class RealmDestroyedParameters < Data.define(realm: 'realm'); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
-          def add_preload_script(function_declaration:, arguments: nil, contexts: nil, user_contexts: nil, sandbox: nil)
-            @transport.execute('script.addPreloadScript', {functionDeclaration: function_declaration, arguments: arguments, contexts: contexts, userContexts: user_contexts, sandbox: sandbox}, returns: Protocol.const_get('Script::AddPreloadScriptResult'))
+          def add_preload_script(function_declaration:, arguments: UNSET, contexts: UNSET, user_contexts: UNSET, sandbox: UNSET)
+            @transport.execute('script.addPreloadScript', AddPreloadScriptParameters.new(function_declaration: function_declaration, arguments: arguments, contexts: contexts, user_contexts: user_contexts, sandbox: sandbox), Protocol.const_get('Script::AddPreloadScriptResult'))
           end
 
-          def call_function(function_declaration:, await_promise:, target:, arguments: nil, result_ownership: nil, serialization_options: nil, this: nil, user_activation: nil)
-            @transport.execute('script.callFunction', {functionDeclaration: function_declaration, awaitPromise: await_promise, target: target, arguments: arguments, resultOwnership: result_ownership, serializationOptions: serialization_options, this: this, userActivation: user_activation}, returns: Protocol.const_get('Script::EvaluateResult'))
+          def call_function(function_declaration:, await_promise:, target:, arguments: UNSET, result_ownership: UNSET, serialization_options: UNSET, this: UNSET, user_activation: UNSET)
+            @transport.execute('script.callFunction', CallFunctionParameters.new(function_declaration: function_declaration, await_promise: await_promise, target: target, arguments: arguments, result_ownership: result_ownership, serialization_options: serialization_options, this: this, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
           end
 
           def disown(handles:, target:)
-            @transport.execute('script.disown', {handles: handles, target: target})
+            @transport.execute('script.disown', DisownParameters.new(handles: handles, target: target))
           end
 
-          def evaluate(expression:, target:, await_promise:, result_ownership: nil, serialization_options: nil, user_activation: nil)
-            @transport.execute('script.evaluate', {expression: expression, target: target, awaitPromise: await_promise, resultOwnership: result_ownership, serializationOptions: serialization_options, userActivation: user_activation}, returns: Protocol.const_get('Script::EvaluateResult'))
+          def evaluate(expression:, target:, await_promise:, result_ownership: UNSET, serialization_options: UNSET, user_activation: UNSET)
+            @transport.execute('script.evaluate', EvaluateParameters.new(expression: expression, target: target, await_promise: await_promise, result_ownership: result_ownership, serialization_options: serialization_options, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
           end
 
-          def get_realms(context: nil, type: nil)
-            @transport.execute('script.getRealms', {context: context, type: type}, returns: Protocol.const_get('Script::GetRealmsResult'))
+          def get_realms(context: UNSET, type: UNSET)
+            @transport.execute('script.getRealms', GetRealmsParameters.new(context: context, type: type), Protocol.const_get('Script::GetRealmsResult'))
           end
 
           def remove_preload_script(script:)
-            @transport.execute('script.removePreloadScript', {script: script})
+            @transport.execute('script.removePreloadScript', RemovePreloadScriptParameters.new(script: script))
           end
 
         end # Script

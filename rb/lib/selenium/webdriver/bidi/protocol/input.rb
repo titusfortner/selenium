@@ -107,20 +107,20 @@ module Selenium
 
           class FileDialogInfo < Data.define(context: 'context', user_context: 'userContext', element: {json_key: 'element', ref: 'Script::SharedReference'}, multiple: 'multiple'); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
           def perform_actions(context:, actions:)
-            @transport.execute('input.performActions', {context: context, actions: actions})
+            @transport.execute('input.performActions', PerformActionsParameters.new(context: context, actions: actions))
           end
 
           def release_actions(context:)
-            @transport.execute('input.releaseActions', {context: context})
+            @transport.execute('input.releaseActions', ReleaseActionsParameters.new(context: context))
           end
 
           def set_files(context:, element:, files:)
-            @transport.execute('input.setFiles', {context: context, element: element, files: files})
+            @transport.execute('input.setFiles', SetFilesParameters.new(context: context, element: element, files: files))
           end
 
         end # Input

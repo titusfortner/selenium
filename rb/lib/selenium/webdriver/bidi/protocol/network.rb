@@ -192,60 +192,60 @@ module Selenium
 
           class ResponseStartedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
-          def initialize(transport)
-            @transport = transport
+          def initialize(context)
+            @transport = Transport.for(context)
           end
 
-          def add_data_collector(data_types:, max_encoded_data_size:, collector_type: nil, contexts: nil, user_contexts: nil)
-            @transport.execute('network.addDataCollector', {dataTypes: data_types, maxEncodedDataSize: max_encoded_data_size, collectorType: collector_type, contexts: contexts, userContexts: user_contexts}, returns: Protocol.const_get('Network::AddDataCollectorResult'))
+          def add_data_collector(data_types:, max_encoded_data_size:, collector_type: UNSET, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('network.addDataCollector', AddDataCollectorParameters.new(data_types: data_types, max_encoded_data_size: max_encoded_data_size, collector_type: collector_type, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Network::AddDataCollectorResult'))
           end
 
-          def add_intercept(phases:, contexts: nil, url_patterns: nil)
-            @transport.execute('network.addIntercept', {phases: phases, contexts: contexts, urlPatterns: url_patterns}, returns: Protocol.const_get('Network::AddInterceptResult'))
+          def add_intercept(phases:, contexts: UNSET, url_patterns: UNSET)
+            @transport.execute('network.addIntercept', AddInterceptParameters.new(phases: phases, contexts: contexts, url_patterns: url_patterns), Protocol.const_get('Network::AddInterceptResult'))
           end
 
-          def continue_request(request:, body: nil, cookies: nil, headers: nil, method: nil, url: nil)
-            @transport.execute('network.continueRequest', {request: request, body: body, cookies: cookies, headers: headers, method: method, url: url})
+          def continue_request(request:, body: UNSET, cookies: UNSET, headers: UNSET, method_: UNSET, url: UNSET)
+            @transport.execute('network.continueRequest', ContinueRequestParameters.new(request: request, body: body, cookies: cookies, headers: headers, method_: method_, url: url))
           end
 
-          def continue_response(request:, cookies: nil, credentials: nil, headers: nil, reason_phrase: nil, status_code: nil)
-            @transport.execute('network.continueResponse', {request: request, cookies: cookies, credentials: credentials, headers: headers, reasonPhrase: reason_phrase, statusCode: status_code})
+          def continue_response(request:, cookies: UNSET, credentials: UNSET, headers: UNSET, reason_phrase: UNSET, status_code: UNSET)
+            @transport.execute('network.continueResponse', ContinueResponseParameters.new(request: request, cookies: cookies, credentials: credentials, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
           end
 
-          def continue_with_auth(request:, action:, credentials: nil)
+          def continue_with_auth(request:, action:, credentials: UNSET)
             @transport.execute('network.continueWithAuth', {request: request, action: action, credentials: credentials})
           end
 
           def disown_data(data_type:, collector:, request:)
-            @transport.execute('network.disownData', {dataType: data_type, collector: collector, request: request})
+            @transport.execute('network.disownData', DisownDataParameters.new(data_type: data_type, collector: collector, request: request))
           end
 
           def fail_request(request:)
-            @transport.execute('network.failRequest', {request: request})
+            @transport.execute('network.failRequest', FailRequestParameters.new(request: request))
           end
 
-          def get_data(data_type:, request:, collector: nil, disown: nil)
-            @transport.execute('network.getData', {dataType: data_type, collector: collector, disown: disown, request: request}, returns: Protocol.const_get('Network::GetDataResult'))
+          def get_data(data_type:, request:, collector: UNSET, disown: UNSET)
+            @transport.execute('network.getData', GetDataParameters.new(data_type: data_type, collector: collector, disown: disown, request: request), Protocol.const_get('Network::GetDataResult'))
           end
 
-          def provide_response(request:, body: nil, cookies: nil, headers: nil, reason_phrase: nil, status_code: nil)
-            @transport.execute('network.provideResponse', {request: request, body: body, cookies: cookies, headers: headers, reasonPhrase: reason_phrase, statusCode: status_code})
+          def provide_response(request:, body: UNSET, cookies: UNSET, headers: UNSET, reason_phrase: UNSET, status_code: UNSET)
+            @transport.execute('network.provideResponse', ProvideResponseParameters.new(request: request, body: body, cookies: cookies, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
           end
 
           def remove_data_collector(collector:)
-            @transport.execute('network.removeDataCollector', {collector: collector})
+            @transport.execute('network.removeDataCollector', RemoveDataCollectorParameters.new(collector: collector))
           end
 
           def remove_intercept(intercept:)
-            @transport.execute('network.removeIntercept', {intercept: intercept})
+            @transport.execute('network.removeIntercept', RemoveInterceptParameters.new(intercept: intercept))
           end
 
-          def set_cache_behavior(cache_behavior:, contexts: nil)
-            @transport.execute('network.setCacheBehavior', {cacheBehavior: cache_behavior, contexts: contexts})
+          def set_cache_behavior(cache_behavior:, contexts: UNSET)
+            @transport.execute('network.setCacheBehavior', SetCacheBehaviorParameters.new(cache_behavior: cache_behavior, contexts: contexts))
           end
 
-          def set_extra_headers(headers:, contexts: nil, user_contexts: nil)
-            @transport.execute('network.setExtraHeaders', {headers: headers, contexts: contexts, userContexts: user_contexts})
+          def set_extra_headers(headers:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute('network.setExtraHeaders', SetExtraHeadersParameters.new(headers: headers, contexts: contexts, user_contexts: user_contexts))
           end
 
         end # Network
