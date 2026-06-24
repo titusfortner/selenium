@@ -39,7 +39,7 @@ module Selenium
           super
           socket = WebSocketConnection.new(url: @capabilities[:web_socket_url], client_config: http.client_config)
           @transport = BiDi::Transport.new(socket)
-          @bidi = BiDi.new(socket: socket)
+          @bidi = BiDi.new(socket: socket, transport: @transport)
         end
 
         # A command a given BiDi implementation does not support raises
