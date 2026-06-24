@@ -35,7 +35,12 @@ module Selenium
 
       MAX_LOG_MESSAGE_SIZE = 9999
 
-      def initialize(url:)
+      # Carries the same ClientConfig as the HTTP client so BiDi connection
+      # settings stay consistent. Not yet consumed by the socket connect itself
+      # (proxy/TLS honoring is deferred); exposed for the higher-level layer.
+      attr_reader :client_config
+
+      def initialize(url:, client_config: nil)
         @callback_threads = ThreadGroup.new
 
         @callbacks_mtx = Mutex.new
@@ -45,6 +50,7 @@ module Selenium
         @closing = false
         @session_id = nil
         @url = url
+        @client_config = client_config || ClientConfig.new
 
         process_handshake
         @socket_thread = attach_socket_listener
