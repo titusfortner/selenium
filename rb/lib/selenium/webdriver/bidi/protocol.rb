@@ -21,4 +21,4 @@
 # resolve lexically), then the domain modules. Cross-domain refs are lazy, so domain
 # file order is free.
 require 'selenium/webdriver/bidi/serialization'
-Dir.glob(File.join(__dir__, 'protocol', '*.rb')).sort.each { |file| require file }
+Dir.glob(File.join(__dir__, 'protocol', '*.rb')).each { |file| require file }

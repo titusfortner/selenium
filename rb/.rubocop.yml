@@ -8,6 +8,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - !ruby/regexp /lib\/selenium\/devtools\/v\d+/
+    - 'lib/selenium/webdriver/bidi/protocol/**/*'
 
 Gemspec/DevelopmentDependencies:
   EnforcedStyle: gemspec
@@ -44,12 +45,14 @@ Metrics/ClassLength:
   Exclude:
     - 'lib/selenium/webdriver/remote/bridge.rb'
     - 'lib/selenium/webdriver/remote/capabilities.rb'
+    - 'lib/selenium/webdriver/bidi/support/bidi-generate.rb'
     - 'spec/integration/selenium/webdriver/spec_support/test_environment.rb'
 
 Metrics/CyclomaticComplexity:
   Max: 9
   Exclude:
     - 'lib/selenium/webdriver/support/color.rb'
+    - 'lib/selenium/webdriver/bidi/support/bidi-generate.rb'
     - '../rake_tasks/**/*'
 
 Metrics/MethodLength:
@@ -64,6 +67,7 @@ Metrics/ModuleLength:
   Max: 110
   Exclude:
     - 'lib/selenium/webdriver/common/platform.rb'
+    - 'lib/selenium/webdriver/bidi/support/bidi-generate.rb'
     - 'spec/**/*'
 
 Metrics/PerceivedComplexity:
@@ -80,6 +84,7 @@ Naming/BlockForwarding:
 Naming/FileName:
   Exclude:
     - 'lib/selenium-webdriver.rb'
+    - 'lib/selenium/webdriver/bidi/support/bidi-generate.rb'
     - '../Rakefile'
 
 Naming/MethodParameterName:
