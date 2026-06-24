@@ -32,8 +32,10 @@ module Selenium
         def self.for(context)
           return context if context.is_a?(self)
           return context.transport if context.respond_to?(:transport)
+          return context.send(:bridge).transport if context.respond_to?(:bridge, true)
 
-          context.send(:bridge).transport
+          raise Error::WebDriverError,
+                "Cannot resolve a BiDi::Transport from #{context.inspect}; expected a Transport, a bridge, or a driver"
         end
 
         def initialize(connection)

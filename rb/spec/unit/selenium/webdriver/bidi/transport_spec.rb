@@ -63,6 +63,16 @@ module Selenium
             .with(method: 'session.unsubscribe', params: {events: ['log.entryAdded']})
         end
 
+        it 'emits explicit wire null for a nullable field set to nil, omitting UNSET ones' do
+          stub_result
+          params = Protocol::BrowsingContext::SetViewportParameters.new(context: 'c', viewport: nil)
+
+          transport.execute('browsingContext.setViewport', params)
+
+          expect(connection).to have_received(:send_cmd)
+            .with(method: 'browsingContext.setViewport', params: {'context' => 'c', 'viewport' => nil})
+        end
+
         it 'raises on an error reply' do
           allow(connection).to receive(:send_cmd)
             .and_return('error' => 'no such frame', 'message' => 'gone', 'stacktrace' => '')
@@ -88,6 +98,11 @@ module Selenium
             expect(described_class.for(transport)).to be(transport)
             expect(described_class.for(bridge)).to be(transport)
             expect(described_class.for(driver)).to be(transport)
+          end
+
+          it 'raises a clear error when no transport can be resolved' do
+            expect { described_class.for(Object.new) }
+              .to raise_error(Error::WebDriverError, /Cannot resolve a BiDi::Transport/)
           end
         end
       end
