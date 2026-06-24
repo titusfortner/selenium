@@ -28,7 +28,7 @@ module Selenium
 
           class SetForcedColorsModeThemeOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setForcedColorsModeThemeOverride'}, params: {json_key: 'params', ref: 'Emulation::SetForcedColorsModeThemeOverrideParameters'}); end
 
-          class SetForcedColorsModeThemeOverrideParameters < Data.define(theme: {json_key: 'theme', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
+          class SetForcedColorsModeThemeOverrideParameters < Data.define(theme: {json_key: 'theme', nullable: true, enum: 'Emulation::FORCED_COLORS_MODE_THEME'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           class SetGeolocationOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setGeolocationOverride'}, params: {json_key: 'params', ref: 'Emulation::SetGeolocationOverrideParameters'}); end
 
@@ -65,7 +65,7 @@ module Selenium
 
           class SetScreenOrientationOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScreenOrientationOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScreenOrientationOverrideParameters'}); end
 
-          class ScreenOrientation < Data.define(natural: 'natural', type: 'type'); end
+          class ScreenOrientation < Data.define(natural: {json_key: 'natural', enum: 'Emulation::SCREEN_ORIENTATION_NATURAL'}, type: {json_key: 'type', enum: 'Emulation::SCREEN_ORIENTATION_TYPE'}); end
 
           class SetScreenOrientationOverrideParameters < Data.define(screen_orientation: {json_key: 'screenOrientation', nullable: true, ref: 'Emulation::ScreenOrientation'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 

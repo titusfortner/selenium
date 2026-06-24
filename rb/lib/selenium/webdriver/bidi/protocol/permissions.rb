@@ -19,7 +19,7 @@ module Selenium
 
           class SetPermission < Data.define(method_: {json_key: 'method', fixed: 'permissions.setPermission'}, params: {json_key: 'params', ref: 'Permissions::SetPermissionParameters'}); end
 
-          class SetPermissionParameters < Data.define(descriptor: {json_key: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: 'state', origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
+          class SetPermissionParameters < Data.define(descriptor: {json_key: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: {json_key: 'state', enum: 'Permissions::PERMISSION_STATE'}, origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
 
           def initialize(context)
             @transport = Transport.for(context)

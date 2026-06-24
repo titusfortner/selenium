@@ -74,7 +74,7 @@ module Selenium
 
           class Base64Value < Data.define(type: {fixed: 'base64'}, value: 'value'); end
 
-          class Cookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
+          class Cookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           class CookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}); end
 
@@ -82,7 +82,7 @@ module Selenium
 
           class Header < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}); end
 
-          class Initiator < Data.define(column_number: 'columnNumber', line_number: 'lineNumber', request: 'request', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
+          class Initiator < Data.define(column_number: 'columnNumber', line_number: 'lineNumber', request: 'request', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: {json_key: 'type', enum: 'Network::INITIATOR_TYPE'}); end
 
           class RequestData < Data.define(request: 'request', url: 'url', method_: 'method', headers: {json_key: 'headers', ref: 'Network::Header', list: true}, cookies: {json_key: 'cookies', ref: 'Network::Cookie', list: true}, headers_size: 'headersSize', body_size: {json_key: 'bodySize', nullable: true}, destination: 'destination', initiator_type: {json_key: 'initiatorType', nullable: true}, timings: {json_key: 'timings', ref: 'Network::FetchTimingInfo'}); end
 
@@ -90,7 +90,7 @@ module Selenium
 
           class ResponseData < Data.define(url: 'url', protocol: 'protocol', status: 'status', status_text: 'statusText', from_cache: 'fromCache', headers: {json_key: 'headers', ref: 'Network::Header', list: true}, mime_type: 'mimeType', bytes_received: 'bytesReceived', headers_size: {json_key: 'headersSize', nullable: true}, body_size: {json_key: 'bodySize', nullable: true}, content: {json_key: 'content', ref: 'Network::ResponseContent'}, auth_challenges: {json_key: 'authChallenges', ref: 'Network::AuthChallenge', list: true}); end
 
-          class SetCookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', http_only: 'httpOnly', expiry: 'expiry', max_age: 'maxAge', path: 'path', same_site: 'sameSite', secure: 'secure'); end
+          class SetCookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', http_only: 'httpOnly', expiry: 'expiry', max_age: 'maxAge', path: 'path', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, secure: 'secure'); end
 
           class UrlPattern < Union
             discriminator 'type'
@@ -106,13 +106,13 @@ module Selenium
 
           class AddDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.addDataCollector'}, params: {json_key: 'params', ref: 'Network::AddDataCollectorParameters'}); end
 
-          class AddDataCollectorParameters < Data.define(data_types: {json_key: 'dataTypes', list: true}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: 'collectorType', contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
+          class AddDataCollectorParameters < Data.define(data_types: {json_key: 'dataTypes', list: true, enum: 'Network::DATA_TYPE'}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: {json_key: 'collectorType', enum: 'Network::COLLECTOR_TYPE'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           class AddDataCollectorResult < Data.define(collector: 'collector'); end
 
           class AddIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.addIntercept'}, params: {json_key: 'params', ref: 'Network::AddInterceptParameters'}); end
 
-          class AddInterceptParameters < Data.define(phases: {json_key: 'phases', list: true}, contexts: {json_key: 'contexts', list: true}, url_patterns: {json_key: 'urlPatterns', ref: 'Network::UrlPattern', list: true}); end
+          class AddInterceptParameters < Data.define(phases: {json_key: 'phases', list: true, enum: 'Network::INTERCEPT_PHASE'}, contexts: {json_key: 'contexts', list: true}, url_patterns: {json_key: 'urlPatterns', ref: 'Network::UrlPattern', list: true}); end
 
           class AddInterceptResult < Data.define(intercept: 'intercept'); end
 
@@ -135,12 +135,12 @@ module Selenium
 
             class Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}); end
 
-            class NoCredentials < Data.define(request: 'request', action: 'action'); end
+            class NoCredentials < Data.define(request: 'request', action: {json_key: 'action', enum: 'Network::CONTINUE_WITH_AUTH_NO_CREDENTIALS_ACTION'}); end
           end
 
           class DisownData < Data.define(method_: {json_key: 'method', fixed: 'network.disownData'}, params: {json_key: 'params', ref: 'Network::DisownDataParameters'}); end
 
-          class DisownDataParameters < Data.define(data_type: 'dataType', collector: 'collector', request: 'request'); end
+          class DisownDataParameters < Data.define(data_type: {json_key: 'dataType', enum: 'Network::DATA_TYPE'}, collector: 'collector', request: 'request'); end
 
           class FailRequest < Data.define(method_: {json_key: 'method', fixed: 'network.failRequest'}, params: {json_key: 'params', ref: 'Network::FailRequestParameters'}); end
 
@@ -148,7 +148,7 @@ module Selenium
 
           class GetData < Data.define(method_: {json_key: 'method', fixed: 'network.getData'}, params: {json_key: 'params', ref: 'Network::GetDataParameters'}); end
 
-          class GetDataParameters < Data.define(data_type: 'dataType', collector: 'collector', disown: 'disown', request: 'request'); end
+          class GetDataParameters < Data.define(data_type: {json_key: 'dataType', enum: 'Network::DATA_TYPE'}, collector: 'collector', disown: 'disown', request: 'request'); end
 
           class GetDataResult < Data.define(bytes: {json_key: 'bytes', ref: 'Network::BytesValue'}); end
 
@@ -166,7 +166,7 @@ module Selenium
 
           class SetCacheBehavior < Data.define(method_: {json_key: 'method', fixed: 'network.setCacheBehavior'}, params: {json_key: 'params', ref: 'Network::SetCacheBehaviorParameters'}); end
 
-          class SetCacheBehaviorParameters < Data.define(cache_behavior: 'cacheBehavior', contexts: {json_key: 'contexts', list: true}); end
+          class SetCacheBehaviorParameters < Data.define(cache_behavior: {json_key: 'cacheBehavior', enum: 'Network::SET_CACHE_BEHAVIOR_PARAMETERS_CACHE_BEHAVIOR'}, contexts: {json_key: 'contexts', list: true}); end
 
           class SetExtraHeaders < Data.define(method_: {json_key: 'method', fixed: 'network.setExtraHeaders'}, params: {json_key: 'params', ref: 'Network::SetExtraHeadersParameters'}); end
 

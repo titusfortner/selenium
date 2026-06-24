@@ -22,7 +22,7 @@ module Selenium
             minimized: 'minimized',
           }.freeze
 
-          class ClientWindowInfo < Data.define(active: 'active', client_window: 'clientWindow', height: 'height', state: 'state', width: 'width', x: 'x', y: 'y'); end
+          class ClientWindowInfo < Data.define(active: 'active', client_window: 'clientWindow', height: 'height', state: {json_key: 'state', enum: 'Browser::CLIENT_WINDOW_INFO_STATE'}, width: 'width', x: 'x', y: 'y'); end
 
           class UserContextInfo < Data.define(user_context: 'userContext'); end
 
@@ -53,7 +53,7 @@ module Selenium
             )
             fallback 'Browser::SetClientWindowStateParameters::ClientWindowNamedState'
 
-            class ClientWindowNamedState < Data.define(client_window: 'clientWindow', state: 'state'); end
+            class ClientWindowNamedState < Data.define(client_window: 'clientWindow', state: {json_key: 'state', enum: 'Browser::CLIENT_WINDOW_NAMED_STATE_STATE'}); end
 
             class ClientWindowRectState < Data.define(state: {fixed: 'normal'}, client_window: 'clientWindow', width: 'width', height: 'height', x: 'x', y: 'y'); end
           end

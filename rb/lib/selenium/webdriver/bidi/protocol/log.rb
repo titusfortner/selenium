@@ -29,13 +29,13 @@ module Selenium
             fallback 'Log::GenericLogEntry'
           end
 
-          class BaseLogEntry < Data.define(level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
+          class BaseLogEntry < Data.define(level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
-          class GenericLogEntry < Data.define(level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
+          class GenericLogEntry < Data.define(level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
 
-          class ConsoleLogEntry < Data.define(type: {fixed: 'console'}, level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, method_: 'method', args: {json_key: 'args', ref: 'Script::RemoteValue', list: true}); end
+          class ConsoleLogEntry < Data.define(type: {fixed: 'console'}, level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, method_: 'method', args: {json_key: 'args', ref: 'Script::RemoteValue', list: true}); end
 
-          class JavascriptLogEntry < Data.define(type: {fixed: 'javascript'}, level: 'level', source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
+          class JavascriptLogEntry < Data.define(type: {fixed: 'javascript'}, level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
           class EntryAdded < Data.define(method_: {json_key: 'method', fixed: 'log.entryAdded'}, params: {json_key: 'params', ref: 'Log::Entry'}); end
 

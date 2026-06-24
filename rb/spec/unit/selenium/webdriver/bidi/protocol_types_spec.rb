@@ -186,6 +186,20 @@ module Selenium
             end
           end
 
+          describe 'value-object enum validation' do
+            it 'rejects an out-of-set enum value at construction, so an invalid object cannot exist' do
+              expect { Network::Cookie.new(name: 'c', same_site: 'sideways') }
+                .to raise_error(ArgumentError, /Cookie#same_site must be one of/)
+            end
+
+            it 'does not validate inbound from_json (trusts the browser, stays forward-compatible)' do
+              entry = Log::ConsoleLogEntry.from_json('type' => 'console', 'level' => 'futureLevel')
+
+              expect(entry).to be_a(Log::ConsoleLogEntry)
+              expect(entry.level).to eq('futureLevel')
+            end
+          end
+
           describe 'a command driven through the transport' do
             it 'marshals params (dropping nils) and parses the typed result' do
               connection = instance_double(WebDriver::WebSocketConnection)

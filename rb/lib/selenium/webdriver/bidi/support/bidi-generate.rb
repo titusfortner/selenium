@@ -182,15 +182,16 @@ module BiDiGenerate
   # ref is the Protocol-relative class path for a nested structured field (nil
   # for a scalar/opaque field); list wraps it in an array. json_key is the exact
   # JSON payload key (the schema's `wire` name, baked verbatim).
-  FieldIR = Struct.new(:ruby_name, :json_key, :required, :nullable, :ref, :list, keyword_init: true) do
+  FieldIR = Struct.new(:ruby_name, :json_key, :required, :nullable, :ref, :list, :enum, keyword_init: true) do
     # A `Data.define` spec entry: `name: 'jsonKey'` shorthand, or
     # `name: {json_key:, …}` when the field carries JSON facts beyond its name.
-    # (required is baked in the schema but not yet enforced at runtime — Phase 4.)
+    # enum carries the allowed-values constant path, validated at construction.
     def spec_entry
       meta = []
       meta << 'nullable: true' if nullable
       meta << "ref: '#{ref}'" if ref
       meta << 'list: true' if list
+      meta << "enum: '#{enum}'" if enum
       return "#{ruby_name}: '#{json_key}'" if meta.empty?
 
       "#{ruby_name}: {json_key: '#{json_key}', #{meta.join(', ')}}"
@@ -382,7 +383,7 @@ module BiDiGenerate
       ruby_name = BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name']))
       FieldIR.new(ruby_name: ruby_name, json_key: field['wire'],
                   required: field['required'], nullable: resolved[:nullable],
-                  ref: resolved[:ref], list: resolved[:list])
+                  ref: resolved[:ref], list: resolved[:list], enum: enum_const(field['type']))
     end
 
     def resolve_node(node)

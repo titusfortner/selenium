@@ -51,7 +51,7 @@ module Selenium
 
           class ChannelValue < Data.define(type: {fixed: 'channel'}, value: {json_key: 'value', ref: 'Script::ChannelProperties'}); end
 
-          class ChannelProperties < Data.define(channel: 'channel', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, ownership: 'ownership'); end
+          class ChannelProperties < Data.define(channel: 'channel', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, ownership: {json_key: 'ownership', enum: 'Script::RESULT_OWNERSHIP'}); end
 
           class EvaluateResult < Union
             discriminator 'type'
@@ -238,13 +238,13 @@ module Selenium
 
           class NodeRemoteValue < Data.define(type: {fixed: 'node'}, shared_id: 'sharedId', handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::NodeProperties'}); end
 
-          class NodeProperties < Data.define(node_type: 'nodeType', child_node_count: 'childNodeCount', attributes: 'attributes', children: {json_key: 'children', ref: 'Script::NodeRemoteValue', list: true}, local_name: 'localName', mode: 'mode', namespace_uri: 'namespaceURI', node_value: 'nodeValue', shadow_root: {json_key: 'shadowRoot', nullable: true, ref: 'Script::NodeRemoteValue'}); end
+          class NodeProperties < Data.define(node_type: 'nodeType', child_node_count: 'childNodeCount', attributes: 'attributes', children: {json_key: 'children', ref: 'Script::NodeRemoteValue', list: true}, local_name: 'localName', mode: {json_key: 'mode', enum: 'Script::NODE_PROPERTIES_MODE'}, namespace_uri: 'namespaceURI', node_value: 'nodeValue', shadow_root: {json_key: 'shadowRoot', nullable: true, ref: 'Script::NodeRemoteValue'}); end
 
           class WindowProxyRemoteValue < Data.define(type: {fixed: 'window'}, value: {json_key: 'value', ref: 'Script::WindowProxyProperties'}, handle: 'handle', internal_id: 'internalId'); end
 
           class WindowProxyProperties < Data.define(context: 'context'); end
 
-          class SerializationOptions < Data.define(max_dom_depth: {json_key: 'maxDomDepth', nullable: true}, max_object_depth: {json_key: 'maxObjectDepth', nullable: true}, include_shadow_tree: 'includeShadowTree'); end
+          class SerializationOptions < Data.define(max_dom_depth: {json_key: 'maxDomDepth', nullable: true}, max_object_depth: {json_key: 'maxObjectDepth', nullable: true}, include_shadow_tree: {json_key: 'includeShadowTree', enum: 'Script::SERIALIZATION_OPTIONS_INCLUDE_SHADOW_TREE'}); end
 
           class StackFrame < Data.define(column_number: 'columnNumber', function_name: 'functionName', line_number: 'lineNumber', url: 'url'); end
 
@@ -275,15 +275,15 @@ module Selenium
 
           class CallFunction < Data.define(method_: {json_key: 'method', fixed: 'script.callFunction'}, params: {json_key: 'params', ref: 'Script::CallFunctionParameters'}); end
 
-          class CallFunctionParameters < Data.define(function_declaration: 'functionDeclaration', await_promise: 'awaitPromise', target: {json_key: 'target', ref: 'Script::Target'}, arguments: {json_key: 'arguments', ref: 'Script::LocalValue', list: true}, result_ownership: 'resultOwnership', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, this: {json_key: 'this', ref: 'Script::LocalValue'}, user_activation: 'userActivation'); end
+          class CallFunctionParameters < Data.define(function_declaration: 'functionDeclaration', await_promise: 'awaitPromise', target: {json_key: 'target', ref: 'Script::Target'}, arguments: {json_key: 'arguments', ref: 'Script::LocalValue', list: true}, result_ownership: {json_key: 'resultOwnership', enum: 'Script::RESULT_OWNERSHIP'}, serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, this: {json_key: 'this', ref: 'Script::LocalValue'}, user_activation: 'userActivation'); end
 
           class Evaluate < Data.define(method_: {json_key: 'method', fixed: 'script.evaluate'}, params: {json_key: 'params', ref: 'Script::EvaluateParameters'}); end
 
-          class EvaluateParameters < Data.define(expression: 'expression', target: {json_key: 'target', ref: 'Script::Target'}, await_promise: 'awaitPromise', result_ownership: 'resultOwnership', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, user_activation: 'userActivation'); end
+          class EvaluateParameters < Data.define(expression: 'expression', target: {json_key: 'target', ref: 'Script::Target'}, await_promise: 'awaitPromise', result_ownership: {json_key: 'resultOwnership', enum: 'Script::RESULT_OWNERSHIP'}, serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, user_activation: 'userActivation'); end
 
           class GetRealms < Data.define(method_: {json_key: 'method', fixed: 'script.getRealms'}, params: {json_key: 'params', ref: 'Script::GetRealmsParameters'}); end
 
-          class GetRealmsParameters < Data.define(context: 'context', type: 'type'); end
+          class GetRealmsParameters < Data.define(context: 'context', type: {json_key: 'type', enum: 'Script::REALM_TYPE'}); end
 
           class GetRealmsResult < Data.define(realms: {json_key: 'realms', ref: 'Script::RealmInfo', list: true}); end
 

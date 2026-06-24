@@ -40,8 +40,9 @@ module Selenium
       #
       # @api private
       class Data < ::Data
-        # Named Field, not Member, to avoid overlap with +::Data#members+.
-        Field = ::Data.define(:name, :json_key, :nullable, :ref, :list, :fixed)
+        # Named Field, not Member, to avoid overlap with +::Data#members+. enum is the
+        # allowed-values constant path for an enum field (nil otherwise).
+        Field = ::Data.define(:name, :json_key, :nullable, :ref, :list, :fixed, :enum)
 
         # spec maps each ruby field name to its JSON key (string) or a facts hash
         # ({json_key:, nullable:, ref:, list:, fixed:}); +extensible: true+ adds
@@ -59,7 +60,14 @@ module Selenium
           klass.define_singleton_method(:fields) { fields }
           klass.define_singleton_method(:extensible?) { extensible }
           klass.include(Serializable)
+          # Capture ::Data's generated constructor before prepending, so inbound
+          # +from_json+ can build directly while outbound +new+ adds validation —
+          # without the two paths' construction logic forking. Bound to +self+ so a
+          # subclass builds itself, not the base.
+          data_new = klass.singleton_class.instance_method(:new)
           klass.singleton_class.prepend(Deserializer)
+          klass.define_singleton_method(:construct) { |**attributes| data_new.bind_call(self, **attributes) }
+          klass.singleton_class.send(:private, :construct)
           klass
         end
 
@@ -67,7 +75,7 @@ module Selenium
           meta = {json_key: meta} if meta.is_a?(::String)
           Field.new(name: name.to_sym, json_key: meta.fetch(:json_key, name.to_s),
                     nullable: meta[:nullable] || false, ref: meta[:ref],
-                    list: meta[:list] || false, fixed: meta.fetch(:fixed, UNSET))
+                    list: meta[:list] || false, fixed: meta.fetch(:fixed, UNSET), enum: meta[:enum])
         end
         private_class_method :field
 
@@ -81,29 +89,49 @@ module Selenium
               [f.name, fixed?(f) ? f.fixed : kwargs.fetch(f.name, UNSET)]
             end
             attributes[:extensions] = kwargs.fetch(:extensions, {}) if extensible?
-            super(**attributes)
+            validate_enums(attributes)
+            construct(**attributes)
           end
 
           # Absent fields stay UNSET; ref fields recurse; unknown keys land in
           # +extensions+. A non-Hash payload is an opaque value the schema does not
-          # name, returned unchanged.
+          # name, returned unchanged. Builds straight through +construct+ (no enum
+          # validation): inbound payloads are trusted, so a browser shipping a value
+          # ahead of our schema never breaks parsing.
           def from_json(json_payload)
             return json_payload unless json_payload.is_a?(::Hash)
 
-            attributes = {}
-            fields.each do |f|
-              next if fixed?(f)
-
-              attributes[f.name] = read(f, json_payload[f.json_key]) if json_payload.key?(f.json_key)
+            attributes = fields.to_h do |f|
+              [f.name, wire_value(f, json_payload)]
             end
             attributes[:extensions] = extra(json_payload) if extensible?
-            new(**attributes)
+            construct(**attributes)
           end
 
           private
 
+          # Reject an out-of-set enum value at construction, so an invalid value object
+          # can never exist — the field's allowed-values constant is resolved lazily so
+          # a cross-domain enum need not be loaded first.
+          def validate_enums(attributes)
+            fields.each do |f|
+              next unless f.enum
+
+              Enum.check!("#{name}##{f.name}", attributes[f.name], Protocol.const_get(f.enum))
+            end
+          end
+
           def fixed?(field)
             !UNSET.equal?(field.fixed)
+          end
+
+          # The constructor value for a field from a wire payload: its baked constant,
+          # the parsed value when the key is present, or UNSET when absent.
+          def wire_value(field, json_payload)
+            return field.fixed if fixed?(field)
+            return UNSET unless json_payload.key?(field.json_key)
+
+            read(field, json_payload[field.json_key])
           end
 
           def read(field, raw)

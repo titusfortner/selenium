@@ -84,7 +84,7 @@ module Selenium
 
           class SimulateAdapter < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateAdapter'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateAdapterParameters'}); end
 
-          class SimulateAdapterParameters < Data.define(context: 'context', le_supported: 'leSupported', state: 'state'); end
+          class SimulateAdapterParameters < Data.define(context: 'context', le_supported: 'leSupported', state: {json_key: 'state', enum: 'Bluetooth::SIMULATE_ADAPTER_PARAMETERS_STATE'}); end
 
           class DisableSimulation < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.disableSimulation'}, params: {json_key: 'params', ref: 'Bluetooth::DisableSimulationParameters'}); end
 
@@ -110,23 +110,23 @@ module Selenium
 
           class SimulateService < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateService'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateServiceParameters'}); end
 
-          class SimulateServiceParameters < Data.define(context: 'context', address: 'address', uuid: 'uuid', type: 'type'); end
+          class SimulateServiceParameters < Data.define(context: 'context', address: 'address', uuid: 'uuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_SERVICE_PARAMETERS_TYPE'}); end
 
           class SimulateCharacteristic < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateCharacteristic'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateCharacteristicParameters'}); end
 
-          class SimulateCharacteristicParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', characteristic_properties: {json_key: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'}, type: 'type'); end
+          class SimulateCharacteristicParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', characteristic_properties: {json_key: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'}, type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_CHARACTERISTIC_PARAMETERS_TYPE'}); end
 
           class SimulateCharacteristicResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateCharacteristicResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateCharacteristicResponseParameters'}); end
 
-          class SimulateCharacteristicResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', code: 'code', data: {json_key: 'data', list: true}); end
+          class SimulateCharacteristicResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_CHARACTERISTIC_RESPONSE_PARAMETERS_TYPE'}, code: 'code', data: {json_key: 'data', list: true}); end
 
           class SimulateDescriptor < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateDescriptor'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateDescriptorParameters'}); end
 
-          class SimulateDescriptorParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type'); end
+          class SimulateDescriptorParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_DESCRIPTOR_PARAMETERS_TYPE'}); end
 
           class SimulateDescriptorResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateDescriptorResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateDescriptorResponseParameters'}); end
 
-          class SimulateDescriptorResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', code: 'code', data: {json_key: 'data', list: true}); end
+          class SimulateDescriptorResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_DESCRIPTOR_RESPONSE_PARAMETERS_TYPE'}, code: 'code', data: {json_key: 'data', list: true}); end
 
           class RequestDevicePromptUpdated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.requestDevicePromptUpdated'}, params: {json_key: 'params', ref: 'Bluetooth::RequestDevicePromptUpdatedParameters'}); end
 
@@ -138,11 +138,11 @@ module Selenium
 
           class CharacteristicEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.characteristicEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::CharacteristicEventGeneratedParameters'}); end
 
-          class CharacteristicEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: 'type', data: {json_key: 'data', list: true}); end
+          class CharacteristicEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: {json_key: 'type', enum: 'Bluetooth::CHARACTERISTIC_EVENT_GENERATED_PARAMETERS_TYPE'}, data: {json_key: 'data', list: true}); end
 
           class DescriptorEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.descriptorEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::DescriptorEventGeneratedParameters'}); end
 
-          class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: 'type', data: {json_key: 'data', list: true}); end
+          class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: {json_key: 'type', enum: 'Bluetooth::DESCRIPTOR_EVENT_GENERATED_PARAMETERS_TYPE'}, data: {json_key: 'data', list: true}); end
 
           def initialize(context)
             @transport = Transport.for(context)

@@ -22,7 +22,7 @@ module Selenium
 
           class PrefetchStatusUpdated < Data.define(method_: {json_key: 'method', fixed: 'speculation.prefetchStatusUpdated'}, params: {json_key: 'params', ref: 'Speculation::PrefetchStatusUpdatedParameters'}); end
 
-          class PrefetchStatusUpdatedParameters < Data.define(context: 'context', url: 'url', status: 'status'); end
+          class PrefetchStatusUpdatedParameters < Data.define(context: 'context', url: 'url', status: {json_key: 'status', enum: 'Speculation::PRELOADING_STATUS'}); end
 
           def initialize(context)
             @transport = Transport.for(context)

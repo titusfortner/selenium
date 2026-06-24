@@ -82,7 +82,7 @@ module Selenium
             class Value < Data.define(context: 'context'); end
           end
 
-          class InnerTextLocator < Data.define(type: {fixed: 'innerText'}, value: 'value', ignore_case: 'ignoreCase', match_type: 'matchType', max_depth: 'maxDepth'); end
+          class InnerTextLocator < Data.define(type: {fixed: 'innerText'}, value: 'value', ignore_case: 'ignoreCase', match_type: {json_key: 'matchType', enum: 'BrowsingContext::INNER_TEXT_LOCATOR_MATCH_TYPE'}, max_depth: 'maxDepth'); end
 
           class XPathLocator < Data.define(type: {fixed: 'xpath'}, value: 'value'); end
 
@@ -96,7 +96,7 @@ module Selenium
 
           class CaptureScreenshot < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.captureScreenshot'}, params: {json_key: 'params', ref: 'BrowsingContext::CaptureScreenshotParameters'}); end
 
-          class CaptureScreenshotParameters < Data.define(context: 'context', origin: 'origin', format: {json_key: 'format', ref: 'BrowsingContext::ImageFormat'}, clip: {json_key: 'clip', ref: 'BrowsingContext::ClipRectangle'}); end
+          class CaptureScreenshotParameters < Data.define(context: 'context', origin: {json_key: 'origin', enum: 'BrowsingContext::CAPTURE_SCREENSHOT_PARAMETERS_ORIGIN'}, format: {json_key: 'format', ref: 'BrowsingContext::ImageFormat'}, clip: {json_key: 'clip', ref: 'BrowsingContext::ClipRectangle'}); end
 
           class ImageFormat < Data.define(type: 'type', quality: 'quality'); end
 
@@ -120,7 +120,7 @@ module Selenium
 
           class Create < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.create'}, params: {json_key: 'params', ref: 'BrowsingContext::CreateParameters'}); end
 
-          class CreateParameters < Data.define(type: 'type', reference_context: 'referenceContext', background: 'background', user_context: 'userContext'); end
+          class CreateParameters < Data.define(type: {json_key: 'type', enum: 'BrowsingContext::CREATE_TYPE'}, reference_context: 'referenceContext', background: 'background', user_context: 'userContext'); end
 
           class CreateResult < Data.define(context: 'context', user_context: 'userContext'); end
 
@@ -142,13 +142,13 @@ module Selenium
 
           class Navigate < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigate'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigateParameters'}); end
 
-          class NavigateParameters < Data.define(context: 'context', url: 'url', wait: 'wait'); end
+          class NavigateParameters < Data.define(context: 'context', url: 'url', wait: {json_key: 'wait', enum: 'BrowsingContext::READINESS_STATE'}); end
 
           class NavigateResult < Data.define(navigation: {json_key: 'navigation', nullable: true}, url: 'url'); end
 
           class Print < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.print'}, params: {json_key: 'params', ref: 'BrowsingContext::PrintParameters'}); end
 
-          class PrintParameters < Data.define(context: 'context', background: 'background', margin: {json_key: 'margin', ref: 'BrowsingContext::PrintMarginParameters'}, orientation: 'orientation', page: {json_key: 'page', ref: 'BrowsingContext::PrintPageParameters'}, page_ranges: {json_key: 'pageRanges', list: true}, scale: 'scale', shrink_to_fit: 'shrinkToFit'); end
+          class PrintParameters < Data.define(context: 'context', background: 'background', margin: {json_key: 'margin', ref: 'BrowsingContext::PrintMarginParameters'}, orientation: {json_key: 'orientation', enum: 'BrowsingContext::PRINT_PARAMETERS_ORIENTATION'}, page: {json_key: 'page', ref: 'BrowsingContext::PrintPageParameters'}, page_ranges: {json_key: 'pageRanges', list: true}, scale: 'scale', shrink_to_fit: 'shrinkToFit'); end
 
           class PrintMarginParameters < Data.define(bottom: 'bottom', left: 'left', right: 'right', top: 'top'); end
 
@@ -158,7 +158,7 @@ module Selenium
 
           class Reload < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.reload'}, params: {json_key: 'params', ref: 'BrowsingContext::ReloadParameters'}); end
 
-          class ReloadParameters < Data.define(context: 'context', ignore_cache: 'ignoreCache', wait: 'wait'); end
+          class ReloadParameters < Data.define(context: 'context', ignore_cache: 'ignoreCache', wait: {json_key: 'wait', enum: 'BrowsingContext::READINESS_STATE'}); end
 
           class SetBypassCSP < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.setBypassCSP'}, params: {json_key: 'params', ref: 'BrowsingContext::SetBypassCSPParameters'}); end
 
@@ -216,11 +216,11 @@ module Selenium
 
           class UserPromptClosed < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.userPromptClosed'}, params: {json_key: 'params', ref: 'BrowsingContext::UserPromptClosedParameters'}); end
 
-          class UserPromptClosedParameters < Data.define(context: 'context', accepted: 'accepted', type: 'type', user_context: 'userContext', user_text: 'userText'); end
+          class UserPromptClosedParameters < Data.define(context: 'context', accepted: 'accepted', type: {json_key: 'type', enum: 'BrowsingContext::USER_PROMPT_TYPE'}, user_context: 'userContext', user_text: 'userText'); end
 
           class UserPromptOpened < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.userPromptOpened'}, params: {json_key: 'params', ref: 'BrowsingContext::UserPromptOpenedParameters'}); end
 
-          class UserPromptOpenedParameters < Data.define(context: 'context', handler: 'handler', message: 'message', type: 'type', user_context: 'userContext', default_value: 'defaultValue'); end
+          class UserPromptOpenedParameters < Data.define(context: 'context', handler: {json_key: 'handler', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, message: 'message', type: {json_key: 'type', enum: 'BrowsingContext::USER_PROMPT_TYPE'}, user_context: 'userContext', default_value: 'defaultValue'); end
 
           def initialize(context)
             @transport = Transport.for(context)

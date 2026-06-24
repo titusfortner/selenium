@@ -13,7 +13,7 @@ module Selenium
 
           class GetCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.getCookies'}, params: {json_key: 'params', ref: 'Storage::GetCookiesParameters'}); end
 
-          class CookieFilter < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
+          class CookieFilter < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           class BrowsingContextPartitionDescriptor < Data.define(type: {fixed: 'context'}, context: 'context'); end
 
@@ -33,7 +33,7 @@ module Selenium
 
           class SetCookie < Data.define(method_: {json_key: 'method', fixed: 'storage.setCookie'}, params: {json_key: 'params', ref: 'Storage::SetCookieParameters'}); end
 
-          class PartialCookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: 'sameSite', expiry: 'expiry', extensible: true); end
+          class PartialCookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           class SetCookieParameters < Data.define(cookie: {json_key: 'cookie', ref: 'Storage::PartialCookie'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 

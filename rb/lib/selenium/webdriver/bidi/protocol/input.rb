@@ -50,7 +50,7 @@ module Selenium
 
           class PointerSourceActions < Data.define(type: {fixed: 'pointer'}, id: 'id', parameters: {json_key: 'parameters', ref: 'Input::PointerParameters'}, actions: {json_key: 'actions', ref: 'Input::PointerSourceAction', list: true}); end
 
-          class PointerParameters < Data.define(pointer_type: 'pointerType'); end
+          class PointerParameters < Data.define(pointer_type: {json_key: 'pointerType', enum: 'Input::POINTER_TYPE'}); end
 
           class PointerSourceAction < Union
             discriminator 'type'

@@ -42,7 +42,7 @@ module Selenium
 
           class SystemProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'system'}, extensible: true); end
 
-          class UserPromptHandler < Data.define(alert: 'alert', before_unload: 'beforeUnload', confirm: 'confirm', default: 'default', file: 'file', prompt: 'prompt'); end
+          class UserPromptHandler < Data.define(alert: {json_key: 'alert', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, before_unload: {json_key: 'beforeUnload', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, confirm: {json_key: 'confirm', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, default: {json_key: 'default', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, file: {json_key: 'file', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, prompt: {json_key: 'prompt', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}); end
 
           class SubscribeParameters < Data.define(events: {json_key: 'events', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
