@@ -174,8 +174,13 @@ module Selenium
           private
 
           def select(json_payload)
-            tag = @discriminator && json_payload[@discriminator]
-            return @variants[tag] if tag && @variants&.key?(tag)
+            # Look up the discriminator value (which may legitimately be null, e.g.
+            # script.NullValue's `type`) when the key is present, before falling back
+            # to presence rules and the no-tag default.
+            if @discriminator && json_payload.key?(@discriminator)
+              tag = json_payload[@discriminator]
+              return @variants[tag] if @variants&.key?(tag)
+            end
 
             @presence&.each { |path, keys| return path if keys.all? { |k| json_payload.key?(k) } }
             @fallback || raise(::ArgumentError, "no #{name} variant matches #{json_payload.inspect}")

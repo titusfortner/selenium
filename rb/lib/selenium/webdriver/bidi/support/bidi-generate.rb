@@ -64,6 +64,8 @@ module BiDiGenerate
 
   # Source literal for a discriminator/const value (string, boolean, or number).
   def self.ruby_literal(value)
+    return 'nil' if value.nil?
+
     value.is_a?(String) ? "'#{value}'" : value.to_s
   end
 
@@ -375,6 +377,41 @@ module BiDiGenerate
     end
 
     def union_class(name)
+      type = @types[name]
+      # A first-class union carries the schema's authoritative dispatch `selector`
+      # (derived spec-faithfully, including null discriminators and the spec's choice
+      # order); consume it rather than re-deriving and silently depending on emit
+      # order. An alias-to-union (only input.Origin) has no selector — its const-string
+      # arms aren't first-class types — so it keeps the structural re-derivation.
+      type['kind'] == 'union' ? union_from_selector(name, type['selector']) : union_from_alias(name)
+    end
+
+    # Map a union `selector` to dispatch variants the template renders:
+    #   { by, variants, default? } -> a discriminator table (value => ref), `default`
+    #     as the fallback (it may itself be a union, which finishes the dispatch).
+    #   { ordered: [{ ref, requires }] } -> presence rules in the spec's choice order.
+    #   { correlated: true } -> resolved by request id, not the payload, so no payload
+    #     dispatch. Unreachable here: every correlated union is a top-level result
+    #     grouping, never domain-scoped, so it is never emitted as a class.
+    def union_from_selector(name, selector)
+      discriminator_wire = selector['by']
+      variants =
+        if selector['by']
+          selector['variants'].map do |variant|
+            VariantIR.new(mode: :value, value: variant['value'], ref: ruby_path(variant['ref']), requires: nil)
+          end.tap do |list|
+            list << VariantIR.new(mode: :fallback, value: nil, ref: ruby_path(selector['default']), requires: nil) if selector['default']
+          end
+        else
+          (selector['ordered'] || []).map do |arm|
+            VariantIR.new(mode: :presence, value: nil, ref: ruby_path(arm['ref']), requires: arm['requires'])
+          end
+        end
+      UnionClass.new(ruby_name: BiDiGenerate.type_class_name(name),
+                     discriminator_wire: discriminator_wire, variants: variants, schema_name: name)
+    end
+
+    def union_from_alias(name)
       leaves = expand_variants(name)
       wires = leaves.filter_map { |l| l[:const]&.fetch(:wire) }.uniq
       no_tag = leaves.reject { |l| l[:const] }

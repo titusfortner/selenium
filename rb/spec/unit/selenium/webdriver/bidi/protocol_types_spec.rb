@@ -59,6 +59,11 @@ module Selenium
               expect(Script::LocalValue.from_json('type' => 'regexp', 'value' => {'pattern' => 'ab+c'}))
                 .to be_a(Script::RegExpLocalValue)
             end
+
+            it 'dispatches NullValue by its "null" string tag and bakes the tag on serialization' do
+              expect(Script::NullValue.new.as_json).to eq('type' => 'null')
+              expect(Script::LocalValue.from_json('type' => 'null')).to eq(Script::NullValue.new)
+            end
           end
 
           describe 'nested structured fields' do

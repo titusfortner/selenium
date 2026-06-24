@@ -71,6 +71,7 @@ module Selenium
             discriminator 'type'
             variants(
               'undefined' => 'Script::UndefinedValue',
+              'null' => 'Script::NullValue',
               'string' => 'Script::StringValue',
               'number' => 'Script::NumberValue',
               'boolean' => 'Script::BooleanValue',
@@ -83,11 +84,7 @@ module Selenium
               'regexp' => 'Script::RegExpLocalValue',
               'set' => 'Script::SetLocalValue',
             )
-            presence(
-              'Script::SharedReference' => ['sharedId'],
-              'Script::RemoteObjectReference' => ['handle'],
-              'Script::NullValue' => ['type'],
-            )
+            fallback 'Script::RemoteReference'
           end
 
           class ArrayLocalValue < Data.define(type: {fixed: 'array'}, value: {json_key: 'value', ref: 'Script::LocalValue', list: true}); end
@@ -108,17 +105,17 @@ module Selenium
             discriminator 'type'
             variants(
               'undefined' => 'Script::UndefinedValue',
+              'null' => 'Script::NullValue',
               'string' => 'Script::StringValue',
               'number' => 'Script::NumberValue',
               'boolean' => 'Script::BooleanValue',
               'bigint' => 'Script::BigIntValue',
             )
-            fallback 'Script::NullValue'
           end
 
           class UndefinedValue < Data.define(type: {fixed: 'undefined'}); end
 
-          class NullValue < Data.define(type: {json_key: 'type', nullable: true}); end
+          class NullValue < Data.define(type: {fixed: 'null'}); end
 
           class StringValue < Data.define(type: {fixed: 'string'}, value: 'value'); end
 
@@ -175,6 +172,7 @@ module Selenium
             discriminator 'type'
             variants(
               'undefined' => 'Script::UndefinedValue',
+              'null' => 'Script::NullValue',
               'string' => 'Script::StringValue',
               'number' => 'Script::NumberValue',
               'boolean' => 'Script::BooleanValue',
@@ -200,7 +198,6 @@ module Selenium
               'node' => 'Script::NodeRemoteValue',
               'window' => 'Script::WindowProxyRemoteValue',
             )
-            fallback 'Script::NullValue'
           end
 
           class SymbolRemoteValue < Data.define(type: {fixed: 'symbol'}, handle: 'handle', internal_id: 'internalId'); end
