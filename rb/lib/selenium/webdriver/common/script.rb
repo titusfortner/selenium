@@ -21,7 +21,7 @@ module Selenium
   module WebDriver
     class Script
       def initialize(bridge)
-        @log_handler = BiDi::LogHandler.new(bridge.bidi)
+        @log_handler = BiDi::LogHandler.new(bridge)
       end
 
       # @return [int] id of the handler

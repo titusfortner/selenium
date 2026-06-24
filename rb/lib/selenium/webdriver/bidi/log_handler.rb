@@ -29,8 +29,11 @@ module Selenium
         ConsoleLogEntry = BiDi::Struct.new(:level, :text, :timestamp, :stack_trace, :type, :source, :method, :args)
         JavaScriptLogEntry = BiDi::Struct.new(:level, :text, :timestamp, :stack_trace, :type, :source)
 
-        def initialize(bidi)
-          @bidi = bidi
+        def initialize(bridge)
+          # Raises the friendly "BiDi must be enabled" error on a non-BiDi bridge
+          # before resolving the command Transport.
+          @bidi = bridge.bidi
+          @session = BiDi::Protocol::Session.new(bridge)
           @log_entry_subscribed = false
         end
 
@@ -56,12 +59,12 @@ module Selenium
         private
 
         def subscribe_log_entry
-          @bidi.session.subscribe('log.entryAdded')
+          @session.subscribe(events: ['log.entryAdded'])
           @log_entry_subscribed = true
         end
 
         def unsubscribe_log_entry
-          @bidi.session.unsubscribe('log.entryAdded')
+          @session.unsubscribe(events: ['log.entryAdded'])
           @log_entry_subscribed = false
         end
       end # LogHandler
