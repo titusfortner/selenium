@@ -72,14 +72,12 @@ module Selenium
         end
 
         describe '.for' do
-          it 'resolves a Transport, a BiDi, a bridge, and a driver to the transport' do
-            bidi = instance_double(BiDi, transport: transport)
-            bridge = instance_double(Remote::BiDiBridge, bidi: bidi)
+          it 'resolves a Transport, a bridge, and a driver to the transport' do
+            bridge = instance_double(Remote::BiDiBridge, transport: transport)
             driver = instance_double(Driver)
             allow(driver).to receive(:bridge).and_return(bridge) # private on the real Driver
 
             expect(described_class.for(transport)).to be(transport)
-            expect(described_class.for(bidi)).to be(transport)
             expect(described_class.for(bridge)).to be(transport)
             expect(described_class.for(driver)).to be(transport)
           end

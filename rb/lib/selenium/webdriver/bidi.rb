@@ -32,8 +32,8 @@ module Selenium
       autoload :InterceptedAuth, 'selenium/webdriver/bidi/network/intercepted_auth'
       autoload :InterceptedItem, 'selenium/webdriver/bidi/network/intercepted_item'
 
-      def initialize(url:)
-        @ws = WebSocketConnection.new(url: url)
+      def initialize(url: nil, socket: nil)
+        @ws = socket || WebSocketConnection.new(url: url)
       end
 
       def close
@@ -54,10 +54,6 @@ module Selenium
 
       def session
         @session ||= Session.new(self)
-      end
-
-      def transport
-        @transport ||= Transport.new(@ws)
       end
 
       def send_cmd(method, **params)

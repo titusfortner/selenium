@@ -21,12 +21,17 @@ module Selenium
   module WebDriver
     module Remote
       class BiDiBridge < Bridge
-        attr_reader :bidi
+        attr_reader :bidi, :transport
 
+        # The websocket can only be opened once the session reports its
+        # web_socket_url, so the bridge owns it from here (not injected like the HTTP
+        # client). Transport is the command seam; BiDi is retained for events/session
+        # over the same socket and is on its way out.
         def create_session(capabilities)
           super
-          socket_url = @capabilities[:web_socket_url]
-          @bidi = Selenium::WebDriver::BiDi.new(url: socket_url)
+          socket = WebSocketConnection.new(url: @capabilities[:web_socket_url])
+          @transport = BiDi::Transport.new(socket)
+          @bidi = BiDi.new(socket: socket)
         end
 
         def get(url)

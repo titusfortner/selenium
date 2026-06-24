@@ -26,14 +26,14 @@ module Selenium
       #
       # @api private
       class Transport
-        # Resolves the Transport reachable from a Driver, a bridge, a {BiDi}, or a
-        # Transport, so a generated domain can be constructed with any of them.
+        # Resolves the Transport reachable from a Driver, a bridge, or a Transport, so
+        # a generated domain can be constructed with any of them. The bridge owns the
+        # Transport (built over its websocket in BiDiBridge#create_session).
         def self.for(context)
           return context if context.is_a?(self)
           return context.transport if context.respond_to?(:transport)
-          return context.bidi.transport if context.respond_to?(:bidi)
 
-          context.send(:bridge).bidi.transport
+          context.send(:bridge).transport
         end
 
         def initialize(connection)
