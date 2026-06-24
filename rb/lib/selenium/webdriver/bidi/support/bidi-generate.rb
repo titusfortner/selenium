@@ -411,7 +411,17 @@ module BiDiGenerate
     #     dispatch. Unreachable here: every correlated union is a top-level result
     #     grouping, never domain-scoped, so it is never emitted as a class.
     def union_from_selector(name, selector)
+      # A correlated union is resolved by request id, never the payload, so it carries
+      # no dispatch — it must never be emitted (every one is a top-level result
+      # grouping). Fail loudly if a future schema makes one domain-scoped rather than
+      # emit a Union whose every parse would raise.
+      if selector['correlated']
+        raise "correlated union #{name} must not be emitted (resolved by request id, not payload)"
+      end
+
       variants = selector['by'] ? discriminated_variants(selector) : ordered_variants(selector)
+      raise "union #{name} selector yielded no dispatch variants" if variants.empty?
+
       UnionClass.new(ruby_name: BiDiGenerate.type_class_name(name),
                      discriminator_wire: selector['by'], variants: variants, schema_name: name)
     end
@@ -431,54 +441,22 @@ module BiDiGenerate
       end
     end
 
+    # The sole alias-union is input.Origin ("viewport" | "pointer" | ElementOrigin): a
+    # scalar-or-object union the object-payload selector model doesn't cover, so the
+    # projector leaves it an alias with no selector. Its object arm(s) carry a const
+    # discriminator; the bare-string arms need no dispatch (Union.from_json returns a
+    # non-Hash payload unchanged). So dispatch the ref arms by their const tag.
     def union_from_alias(name)
-      leaves = expand_variants(name)
-      wires = leaves.filter_map { |l| l[:const]&.fetch(:wire) }.uniq
-      no_tag = leaves.reject { |l| l[:const] }
-      variants = leaves.map { |leaf| variant_ir(leaf, only_fallback: no_tag.size == 1) }
+      consts = @types[name]['type']['union'].filter_map { |arm| arm['ref'] }.to_h do |ref|
+        const = @types[ref]['fields'].find { |f| f['type'].key?('const') }
+        const || raise("alias-union #{name} arm #{ref} has no const discriminator to dispatch on")
+        [ref, const]
+      end
+      variants = consts.map do |ref, const|
+        VariantIR.new(mode: :value, value: const['type']['const'], ref: ruby_path(ref), requires: nil)
+      end
       UnionClass.new(ruby_name: BiDiGenerate.type_class_name(name),
-                     discriminator_wire: wires.size == 1 ? wires.first : nil, variants: variants,
-                     schema_name: name)
-    end
-
-    def variant_ir(leaf, only_fallback:)
-      path = ruby_path(leaf[:name])
-      if leaf[:const]
-        VariantIR.new(mode: :value, value: leaf[:const][:value], ref: path, requires: nil)
-      elsif only_fallback
-        VariantIR.new(mode: :fallback, value: nil, ref: path, requires: nil)
-      else
-        VariantIR.new(mode: :presence, value: nil, ref: path, requires: leaf[:requires])
-      end
-    end
-
-    # Recursively flattens a union (and any union-typed variants) into leaf record
-    # variants, each tagged with its const discriminator (if any) and the wire
-    # keys that identify it by presence.
-    def expand_variants(name)
-      variant_names(name).flat_map do |vn|
-        union?(vn) ? expand_variants(vn) : [leaf_info(vn)]
-      end
-    end
-
-    def variant_names(name)
-      type = @types[name]
-      return type['variants'] if type['kind'] == 'union'
-
-      type['type']['union'].filter_map { |arm| arm['ref'] }
-    end
-
-    def union?(name)
-      type = @types[name]
-      type && (type['kind'] == 'union' || (type['kind'] == 'alias' && type['type'].key?('union')))
-    end
-
-    def leaf_info(name)
-      type = @types[name]
-      fields = type['kind'] == 'record' ? type['fields'] : []
-      const = fields.find { |f| f['type'].key?('const') }
-      requires = fields.select { |f| f['required'] && !f['type'].key?('const') }.map { |f| f['wire'] }
-      {name: name, const: const && {wire: const['wire'], value: const['type']['const']}, requires: requires}
+                     discriminator_wire: consts.values.first['wire'], variants: variants, schema_name: name)
     end
 
     def record_params(fields)
