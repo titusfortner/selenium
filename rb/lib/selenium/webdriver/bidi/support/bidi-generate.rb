@@ -116,13 +116,13 @@ module BiDiGenerate
     end
   end
 
-  # passthrough commands have params the schema models as a union/alias (not a flat
-  # record), which keyword args can't express; they forward raw kwargs until union
-  # variant dispatch lands. params_class is the bare Parameters class the named args
-  # construct (nil for passthrough/none). result_ref is the Protocol-relative result
-  # class path, or nil to return the raw hash.
+  # passthrough commands have params the schema models as an alias (not a flat record
+  # or union of records), which keyword args can't express; they forward raw kwargs.
+  # params_class is the Parameters class the named args construct (nil for
+  # passthrough/none); union_params picks its variant via `.build` rather than `.new`.
+  # result_ref is the Protocol-relative result class path, or nil to return the raw hash.
   Command = Struct.new(:wire_name, :method_name, :params, :passthrough, :result_ref, :params_class,
-                       keyword_init: true) do
+                       :union_params, keyword_init: true) do
     def required_params = params.select(&:required)
     def optional_params = params.reject(&:required)
 
@@ -147,18 +147,21 @@ module BiDiGenerate
 
     def params_arg
       return nil if params.empty?
-      # A union params type has no field constructor; pass a flat wire-keyed hash
-      # until variant dispatch lands. Record params build their Parameters object.
+      # Without an emitted Parameters class (a non-record/union flattened param),
+      # forward a flat wire-keyed hash. A record builds its Parameters object; a
+      # union dispatches to the matching variant via `.build` (its typed as_json
+      # emits explicit null where a flat hash through Transport could not).
       return "{#{params.map { |p| "#{p.wire_name}: #{p.ruby_name}" }.join(', ')}}" unless params_class
 
-      "#{params_class}.new(#{params.map { |p| "#{p.ruby_name}: #{p.ruby_name}" }.join(', ')})"
+      ctor = union_params ? 'build' : 'new'
+      "#{params_class}.#{ctor}(#{params.map { |p| "#{p.ruby_name}: #{p.ruby_name}" }.join(', ')})"
     end
   end
 
   Event = Struct.new(:wire_name, :event_name, keyword_init: true)
 
-  # constant_name is the SCREAMING_SNAKE hash name; entries are [symbol_key, wire_value] pairs.
-  Enum = Struct.new(:constant_name, :entries, keyword_init: true)
+  # constant_name is the SCREAMING_SNAKE hash name; pairs are [symbol_key, wire_value] tuples.
+  Enum = Struct.new(:constant_name, :pairs, keyword_init: true)
 
   # -- Structured-type IR (Phase 2) --
 
@@ -272,8 +275,8 @@ module BiDiGenerate
         next unless type['kind'] == 'enum'
         next unless name.start_with?("#{domain}.")
 
-        entries = type['values'].map { |v| [BiDiGenerate.enum_key(v), v.to_s] }
-        Enum.new(constant_name: BiDiGenerate.screaming_snake(name.sub("#{domain}.", '')), entries: entries)
+        pairs = type['values'].map { |v| [BiDiGenerate.enum_key(v), v.to_s] }
+        Enum.new(constant_name: BiDiGenerate.screaming_snake(name.sub("#{domain}.", '')), pairs: pairs)
       end
     end
 
@@ -394,21 +397,24 @@ module BiDiGenerate
     #     dispatch. Unreachable here: every correlated union is a top-level result
     #     grouping, never domain-scoped, so it is never emitted as a class.
     def union_from_selector(name, selector)
-      discriminator_wire = selector['by']
-      variants =
-        if selector['by']
-          selector['variants'].map do |variant|
-            VariantIR.new(mode: :value, value: variant['value'], ref: ruby_path(variant['ref']), requires: nil)
-          end.tap do |list|
-            list << VariantIR.new(mode: :fallback, value: nil, ref: ruby_path(selector['default']), requires: nil) if selector['default']
-          end
-        else
-          (selector['ordered'] || []).map do |arm|
-            VariantIR.new(mode: :presence, value: nil, ref: ruby_path(arm['ref']), requires: arm['requires'])
-          end
-        end
+      variants = selector['by'] ? discriminated_variants(selector) : ordered_variants(selector)
       UnionClass.new(ruby_name: BiDiGenerate.type_class_name(name),
-                     discriminator_wire: discriminator_wire, variants: variants, schema_name: name)
+                     discriminator_wire: selector['by'], variants: variants, schema_name: name)
+    end
+
+    def discriminated_variants(selector)
+      variants = selector['variants'].map do |variant|
+        VariantIR.new(mode: :value, value: variant['value'], ref: ruby_path(variant['ref']), requires: nil)
+      end
+      return variants unless selector['default']
+
+      variants << VariantIR.new(mode: :fallback, value: nil, ref: ruby_path(selector['default']), requires: nil)
+    end
+
+    def ordered_variants(selector)
+      (selector['ordered'] || []).map do |arm|
+        VariantIR.new(mode: :presence, value: nil, ref: ruby_path(arm['ref']), requires: arm['requires'])
+      end
     end
 
     def union_from_alias(name)
@@ -471,83 +477,82 @@ module BiDiGenerate
       end
     end
 
-    # Merge a union's record variants into one flat param list. A field is only
-    # required when every variant declares it required; variant-specific fields
-    # become optional. Which-variant validation is deferred (Phase 2 union
-    # dispatch) — the server still rejects invalid combinations meanwhile.
-    # Union command-params whose flattened superset includes a nullable field. The
-    # flat wire-keyed hash these emit serializes through Transport's Hash branch, which
-    # drops nil unconditionally and so cannot emit wire `null` — unlike a typed
-    # Parameters object, whose `as_json` distinguishes omitted (UNSET) from explicit
-    # null. These are acknowledged and deferred to typed outbound union construction
-    # (see plan Phase 4). A NEW nullable union param not on this list fails generation,
-    # so the null-vs-absent gap can never grow silently.
-    NULLABLE_UNION_PARAM_ALLOWLIST = %w[
-      emulation.SetGeolocationOverrideParameters
-    ].freeze
-
+    # Merge a union's record variants into one flat param list for the command
+    # signature. A field is only required when every variant declares it required;
+    # variant-specific fields become optional. The command body dispatches these
+    # kwargs to the matching variant via `Union.build`, whose typed `as_json` handles
+    # null-vs-absent — so no nullable allowlist is needed.
     def union_params(type, ref = nil)
-      variants = type['variants'].map { |ref| @types[ref] }
+      variants = type['variants'].map { |variant_ref| @types[variant_ref] }
       return nil unless variants.all? { |v| v && v['kind'] == 'record' }
 
-      variant_fields = variants.map { |v| v['fields'] }
-      ordered_wires = variant_fields.flatten.map { |f| f['wire'] }.uniq
+      guard_union_dispatch_keys_simple!(type['selector'], ref)
+      merged_params(variants.map { |v| v['fields'] })
+    end
 
-      ordered_wires.map do |wire|
-        field = variant_fields.flatten.find { |f| f['wire'] == wire }
-        guard_union_param_not_nullable!(field, ref)
+    # Merge variant field lists into one flat param superset. A field is required only
+    # when every variant declares it required; variant-specific fields become optional.
+    def merged_params(variant_fields)
+      all_fields = variant_fields.flatten
+      all_fields.map { |f| f['wire'] }.uniq.map do |wire|
+        field = all_fields.find { |f| f['wire'] == wire }
         required = variant_fields.all? { |fields| fields.any? { |f| f['wire'] == wire && f['required'] } }
-        Param.new(
-          ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
-          wire_name: wire,
-          required: required
-        )
+        Param.new(ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
+                  wire_name: wire, required: required)
       end
     end
 
-    def guard_union_param_not_nullable!(field, ref)
-      return unless resolve_node(field['type'])[:nullable]
-      return if NULLABLE_UNION_PARAM_ALLOWLIST.include?(ref)
+    # `Union.build` matches the command's kwargs to the selector's dispatch keys by
+    # symbol, which holds only while each dispatch wire key equals its ruby kwarg.
+    # Every current key is a single lowercase word; fail generation if a new one is
+    # camelCase so the outbound dispatch gets an explicit wire<->ruby mapping then.
+    def guard_union_dispatch_keys_simple!(selector, ref)
+      keys = selector['by'] ? [selector['by']] : (selector['ordered'] || []).flat_map { |arm| arm['requires'] }
+      camel = keys.reject { |k| BiDiGenerate.camel_to_snake(k) == k }
+      return if camel.empty?
 
-      raise "nullable union command param '#{field['wire']}' in #{ref}: the flat-hash " \
-            'outbound path cannot emit wire null. Route outbound unions through a typed ' \
-            'variant, or add to NULLABLE_UNION_PARAM_ALLOWLIST (see plan Phase 4).'
+      raise "union command param #{ref} dispatches on non-snake wire key(s) #{camel.inspect}; " \
+            'Union.build matches kwargs to dispatch keys by symbol, so give the outbound ' \
+            'dispatch an explicit wire<->ruby mapping before shipping this.'
     end
   end
 
+  # Param kinds the named args can construct a Parameters object for (record fields,
+  # or a union dispatched to one of its variants); anything else forwards a raw hash.
+  PARAMS_CLASS_KINDS = %w[record union].freeze
+
   def self.build_ir(schema)
     schema.domains.map do |domain|
-      snake = camel_to_snake(domain)
-
-      commands = schema.commands_for(domain).map do |cmd|
-        params = schema.params_for(cmd['params'])
-        params_ref = cmd['params'] && cmd['params']['ref']
-        params_class = params && !params.empty? && schema.type_kind(params_ref) == 'record' ?
-                       type_class_name(params_ref) : nil
-        Command.new(
-          wire_name: cmd['method'],
-          method_name: safe_method_name(camel_to_snake(cmd['name'])),
-          params: params || [],
-          passthrough: params.nil?,
-          result_ref: cmd['result'] && schema.structured_ref(cmd['result']['ref']),
-          params_class: params_class
-        )
-      end
-
-      events = schema.events_for(domain).map do |ev|
-        Event.new(wire_name: ev['method'], event_name: camel_to_snake(ev['name']))
-      end
-
       Module.new(
         name: domain,
-        ruby_class: snake_to_class_name(snake),
-        filename: snake,
-        commands: commands,
-        events: events,
+        ruby_class: snake_to_class_name(camel_to_snake(domain)),
+        filename: camel_to_snake(domain),
+        commands: schema.commands_for(domain).map { |cmd| build_command(schema, cmd) },
+        events: schema.events_for(domain).map { |ev| build_event(ev) },
         enums: schema.enums_for(domain),
         types: nest_synthetic(schema.types_for(domain))
       )
     end
+  end
+
+  def self.build_command(schema, cmd)
+    params = schema.params_for(cmd['params'])
+    params_ref = cmd['params'] && cmd['params']['ref']
+    params_kind = schema.type_kind(params_ref)
+    params_class = type_class_name(params_ref) if params && !params.empty? && PARAMS_CLASS_KINDS.include?(params_kind)
+    Command.new(
+      wire_name: cmd['method'],
+      method_name: safe_method_name(camel_to_snake(cmd['name'])),
+      params: params || [],
+      passthrough: params.nil?,
+      result_ref: cmd['result'] && schema.structured_ref(cmd['result']['ref']),
+      params_class: params_class,
+      union_params: params_kind == 'union'
+    )
+  end
+
+  def self.build_event(event)
+    Event.new(wire_name: event['method'], event_name: camel_to_snake(event['name']))
   end
 
   # The projector tags lifted-out types with {synthetic, owner, label}. Emit each
@@ -657,7 +662,8 @@ module BiDiGenerate
       keys = node.keys - ['nullable']
       case keys
       when ['ref'] then resolve!(node['ref'], owner)
-      when ['primitive'] then raise_unless(PRIMITIVES.include?(node['primitive']), "primitive #{node['primitive']} in #{owner}")
+      when ['primitive'] then raise_unless(PRIMITIVES.include?(node['primitive']),
+                                           "primitive #{node['primitive']} in #{owner}")
       when ['const'] then nil
       when ['enum'] then raise_unless(node['enum'].is_a?(Array), "inline enum in #{owner}")
       when ['list'] then validate_node(node['list'], owner)

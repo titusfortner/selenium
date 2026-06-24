@@ -149,7 +149,7 @@ module Selenium
           end
 
           def handle_request_device_prompt(context:, prompt:, accept:, device: UNSET)
-            @transport.execute('bluetooth.handleRequestDevicePrompt', {context: context, prompt: prompt, accept: accept, device: device})
+            @transport.execute('bluetooth.handleRequestDevicePrompt', HandleRequestDevicePromptParameters.build(context: context, prompt: prompt, accept: accept, device: device))
           end
 
           def simulate_adapter(context:, state:, le_supported: UNSET)

@@ -115,7 +115,7 @@ module Selenium
 
           def extra(json_payload)
             known = (@json_keys ||= fields.map(&:json_key))
-            json_payload.reject { |key, _| known.include?(key) }
+            json_payload.except(*known)
           end
         end
 
@@ -171,19 +171,44 @@ module Selenium
             Protocol.const_get(select(json_payload)).from_json(json_payload)
           end
 
+          # Outbound counterpart to from_json: the command surface passes the union's
+          # merged keyword args; pick the variant they describe (same selector metadata)
+          # and build it, so the variant's typed as_json drives null-vs-absent per field
+          # — which a flat hash through Transport (blanket nil-drop) cannot express.
+          # Dispatch keys are wire names equal to their ruby kwarg (asserted at
+          # generation), so they match the kwargs by symbol.
+          def build(**kwargs)
+            Protocol.const_get(outbound_variant(kwargs)).new(**kwargs)
+          end
+
           private
 
+          # A wire payload reads its discriminator by key (a value that may legitimately
+          # be null, e.g. script.NullValue's "null" tag) and its presence keys by being
+          # present.
           def select(json_payload)
-            # Look up the discriminator value (which may legitimately be null, e.g.
-            # script.NullValue's `type`) when the key is present, before falling back
-            # to presence rules and the no-tag default.
-            if @discriminator && json_payload.key?(@discriminator)
-              tag = json_payload[@discriminator]
-              return @variants[tag] if @variants&.key?(tag)
-            end
+            variant_for(payload_tag(json_payload), payload: json_payload) { |k| json_payload.key?(k) }
+          end
 
-            @presence&.each { |path, keys| return path if keys.all? { |k| json_payload.key?(k) } }
-            @fallback || raise(::ArgumentError, "no #{name} variant matches #{json_payload.inspect}")
+          # The from-kwargs mirror of select: the discriminator and presence keys are
+          # snake kwargs; a key counts as supplied when present and not UNSET (an
+          # explicit nil still counts, so a nullable field can dispatch).
+          def outbound_variant(kwargs)
+            tag = @discriminator ? kwargs.fetch(@discriminator.to_sym, UNSET) : UNSET
+            variant_for(tag, payload: kwargs) { |k| kwargs.key?(k.to_sym) && !UNSET.equal?(kwargs[k.to_sym]) }
+          end
+
+          # Shared dispatch: a matched discriminator tag wins, else the first presence
+          # rule whose keys are all supplied (via the block), else the no-tag default.
+          def variant_for(tag, payload:, &supplied)
+            return @variants[tag] if !UNSET.equal?(tag) && @variants&.key?(tag)
+
+            @presence&.each { |path, keys| return path if keys.all?(&supplied) }
+            @fallback || raise(::ArgumentError, "no #{name} variant matches #{payload.inspect}")
+          end
+
+          def payload_tag(json_payload)
+            @discriminator && json_payload.key?(@discriminator) ? json_payload[@discriminator] : UNSET
           end
         end
       end

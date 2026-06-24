@@ -98,7 +98,7 @@ module Selenium
           end
 
           def set_geolocation_override(contexts: UNSET, user_contexts: UNSET, coordinates: UNSET, error: UNSET)
-            @transport.execute('emulation.setGeolocationOverride', {contexts: contexts, userContexts: user_contexts, coordinates: coordinates, error: error})
+            @transport.execute('emulation.setGeolocationOverride', SetGeolocationOverrideParameters.build(contexts: contexts, user_contexts: user_contexts, coordinates: coordinates, error: error))
           end
 
           def set_locale_override(locale:, contexts: UNSET, user_contexts: UNSET)

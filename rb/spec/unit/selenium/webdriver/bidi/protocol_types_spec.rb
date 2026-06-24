@@ -123,6 +123,37 @@ module Selenium
             end
           end
 
+          describe 'outbound union command params' do
+            it 'sends explicit null for a nullable union field a flat hash would have dropped' do
+              params = Emulation::SetGeolocationOverrideParameters.build(coordinates: nil)
+
+              expect(params).to be_a(Emulation::SetGeolocationOverrideParameters::Coordinates)
+              expect(params.as_json).to eq('coordinates' => nil)
+            end
+
+            it 'dispatches a structural union by which field is supplied' do
+              params = Emulation::SetGeolocationOverrideParameters.build(error: Emulation::GeolocationPositionError.new)
+
+              expect(params).to be_a(Emulation::SetGeolocationOverrideParameters::Error)
+              expect(params.as_json).to eq('error' => {'type' => 'positionUnavailable'})
+            end
+
+            it 'dispatches a discriminated union by its value, falling back to the default variant' do
+              provide = Network::ContinueWithAuthParameters.build(
+                request: 'r', action: 'provideCredentials',
+                credentials: Network::AuthCredentials.new(username: 'u', password: 'p')
+              )
+              default = Network::ContinueWithAuthParameters.build(request: 'r', action: 'default')
+
+              expect(provide).to be_a(Network::ContinueWithAuthParameters::Credentials)
+              expect(provide.as_json).to include('action' => 'provideCredentials',
+                                                 'credentials' => {'type' => 'password', 'username' => 'u',
+                                                                   'password' => 'p'})
+              expect(default).to be_a(Network::ContinueWithAuthParameters::NoCredentials)
+              expect(default.as_json).to eq('request' => 'r', 'action' => 'default')
+            end
+          end
+
           describe 'a command driven through the transport' do
             it 'marshals params (dropping nils) and parses the typed result' do
               connection = instance_double(WebDriver::WebSocketConnection)

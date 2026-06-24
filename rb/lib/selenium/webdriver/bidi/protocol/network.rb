@@ -213,7 +213,7 @@ module Selenium
           end
 
           def continue_with_auth(request:, action:, credentials: UNSET)
-            @transport.execute('network.continueWithAuth', {request: request, action: action, credentials: credentials})
+            @transport.execute('network.continueWithAuth', ContinueWithAuthParameters.build(request: request, action: action, credentials: credentials))
           end
 
           def disown_data(data_type:, collector:, request:)

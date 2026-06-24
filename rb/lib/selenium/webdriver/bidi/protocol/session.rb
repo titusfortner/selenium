@@ -98,7 +98,7 @@ module Selenium
           end
 
           def unsubscribe(events: UNSET, subscriptions: UNSET)
-            @transport.execute('session.unsubscribe', {events: events, subscriptions: subscriptions})
+            @transport.execute('session.unsubscribe', UnsubscribeParameters.build(events: events, subscriptions: subscriptions))
           end
 
         end # Session

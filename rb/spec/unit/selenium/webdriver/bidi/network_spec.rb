@@ -109,8 +109,8 @@ module Selenium
             network.continue_with_auth(request_id, 'user', 'pass')
 
             expect_command('network.continueWithAuth',
-                           {request: request_id, action: 'provideCredentials',
-                            credentials: {type: 'password', username: 'user', password: 'pass'}})
+                           {'request' => request_id, 'action' => 'provideCredentials',
+                            'credentials' => {type: 'password', username: 'user', password: 'pass'}})
           end
         end
       end

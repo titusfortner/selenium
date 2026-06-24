@@ -19,7 +19,7 @@ module Selenium
 <%- end -%>
 <%- mod.enums.each do |enum| -%>
           <%= enum.constant_name %> = {
-<%- enum.entries.each do |key, wire_val| -%>
+<%- enum.pairs.each do |key, wire_val| -%>
             <%= key %>: '<%= wire_val %>',
 <%- end -%>
           }.freeze
