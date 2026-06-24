@@ -63,7 +63,7 @@ module Selenium
           @network.continue_with_auth(
             request: request_id,
             action: 'provideCredentials',
-            credentials: {type: 'password', username: username, password: password}
+            credentials: Protocol::Network::AuthCredentials.new(username: username, password: password)
           )
         end
 
