@@ -260,7 +260,7 @@ module BiDiGenerate
 
       case type['kind']
       when 'record' then record_params(type['fields'])
-      when 'union' then union_params(type)
+      when 'union' then union_params(type, params_ref['ref'])
       end
     end
 
@@ -438,7 +438,18 @@ module BiDiGenerate
     # required when every variant declares it required; variant-specific fields
     # become optional. Which-variant validation is deferred (Phase 2 union
     # dispatch) — the server still rejects invalid combinations meanwhile.
-    def union_params(type)
+    # Union command-params whose flattened superset includes a nullable field. The
+    # flat wire-keyed hash these emit serializes through Transport's Hash branch, which
+    # drops nil unconditionally and so cannot emit wire `null` — unlike a typed
+    # Parameters object, whose `as_json` distinguishes omitted (UNSET) from explicit
+    # null. These are acknowledged and deferred to typed outbound union construction
+    # (see plan Phase 4). A NEW nullable union param not on this list fails generation,
+    # so the null-vs-absent gap can never grow silently.
+    NULLABLE_UNION_PARAM_ALLOWLIST = %w[
+      emulation.SetGeolocationOverrideParameters
+    ].freeze
+
+    def union_params(type, ref = nil)
       variants = type['variants'].map { |ref| @types[ref] }
       return nil unless variants.all? { |v| v && v['kind'] == 'record' }
 
@@ -447,6 +458,7 @@ module BiDiGenerate
 
       ordered_wires.map do |wire|
         field = variant_fields.flatten.find { |f| f['wire'] == wire }
+        guard_union_param_not_nullable!(field, ref)
         required = variant_fields.all? { |fields| fields.any? { |f| f['wire'] == wire && f['required'] } }
         Param.new(
           ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
@@ -454,6 +466,15 @@ module BiDiGenerate
           required: required
         )
       end
+    end
+
+    def guard_union_param_not_nullable!(field, ref)
+      return unless resolve_node(field['type'])[:nullable]
+      return if NULLABLE_UNION_PARAM_ALLOWLIST.include?(ref)
+
+      raise "nullable union command param '#{field['wire']}' in #{ref}: the flat-hash " \
+            'outbound path cannot emit wire null. Route outbound unions through a typed ' \
+            'variant, or add to NULLABLE_UNION_PARAM_ALLOWLIST (see plan Phase 4).'
     end
   end
 
