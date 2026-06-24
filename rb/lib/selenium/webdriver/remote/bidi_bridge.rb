@@ -21,6 +21,14 @@ module Selenium
   module WebDriver
     module Remote
       class BiDiBridge < Bridge
+        # Maps the session's page load strategy to the BiDi navigation readiness
+        # state used as the default `wait` for navigation commands.
+        READINESS_STATE = {
+          'none' => 'none',
+          'eager' => 'interactive',
+          'normal' => 'complete'
+        }.freeze
+
         attr_reader :bidi, :transport
 
         # The websocket can only be opened once the session reports its
@@ -29,25 +37,25 @@ module Selenium
         # over the same socket and is on its way out.
         def create_session(capabilities)
           super
-          socket = WebSocketConnection.new(url: @capabilities[:web_socket_url])
+          socket = WebSocketConnection.new(url: @capabilities[:web_socket_url], client_config: http.client_config)
           @transport = BiDi::Transport.new(socket)
           @bidi = BiDi.new(socket: socket)
         end
 
         def get(url)
-          browsing_context.navigate(url)
+          browsing_context.navigate(context: window_handle, url: url, wait: readiness)
         end
 
         def go_back
-          browsing_context.traverse_history(-1)
+          browsing_context.traverse_history(context: window_handle, delta: -1)
         end
 
         def go_forward
-          browsing_context.traverse_history(1)
+          browsing_context.traverse_history(context: window_handle, delta: 1)
         end
 
         def refresh
-          browsing_context.reload
+          browsing_context.reload(context: window_handle, wait: readiness)
         end
 
         def quit
@@ -65,7 +73,11 @@ module Selenium
         private
 
         def browsing_context
-          @browsing_context ||= WebDriver::BiDi::BrowsingContext.new(self)
+          @browsing_context ||= BiDi::Protocol::BrowsingContext.new(self)
+        end
+
+        def readiness
+          READINESS_STATE[capabilities[:page_load_strategy]]
         end
       end # BiDiBridge
     end # Remote

@@ -26,6 +26,8 @@ module Selenium
       autoload :BrowsingContext, 'selenium/webdriver/bidi/browsing_context'
       autoload :Struct, 'selenium/webdriver/bidi/struct'
       autoload :Transport, 'selenium/webdriver/bidi/transport'
+      # Loads the serialization runtime then every generated domain module.
+      autoload :Protocol, 'selenium/webdriver/bidi/protocol'
       autoload :Network, 'selenium/webdriver/bidi/network'
       autoload :InterceptedRequest, 'selenium/webdriver/bidi/network/intercepted_request'
       autoload :InterceptedResponse, 'selenium/webdriver/bidi/network/intercepted_response'
