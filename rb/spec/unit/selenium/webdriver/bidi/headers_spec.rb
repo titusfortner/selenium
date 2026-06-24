@@ -34,13 +34,13 @@ module Selenium
           expect(formatted_headers).to be_an(Array)
           expect(formatted_headers.size).to eq(2)
 
-          accept_item = formatted_headers.find { |h| h[:name] == 'Accept' }
+          accept_item = formatted_headers.find { |h| h['name'] == 'Accept' }
           expect(accept_item).not_to be_nil
-          expect(accept_item[:value]).to eq({type: 'string', value: 'application/json'})
+          expect(accept_item['value']).to eq({'type' => 'string', 'value' => 'application/json'})
 
-          ua_item = formatted_headers.find { |h| h[:name] == 'User-Agent' }
+          ua_item = formatted_headers.find { |h| h['name'] == 'User-Agent' }
           expect(ua_item).not_to be_nil
-          expect(ua_item[:value]).to eq({type: 'string', value: 'MyAgent/1.0'})
+          expect(ua_item['value']).to eq({'type' => 'string', 'value' => 'MyAgent/1.0'})
         end
       end
     end

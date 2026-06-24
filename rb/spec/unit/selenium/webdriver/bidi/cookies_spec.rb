@@ -34,13 +34,13 @@ module Selenium
           expect(formatted_cookies).to be_an(Array)
           expect(formatted_cookies.size).to eq(2)
 
-          session_cookie = formatted_cookies.find { |c| c[:name] == 'session_id' }
+          session_cookie = formatted_cookies.find { |c| c['name'] == 'session_id' }
           expect(session_cookie).not_to be_nil
-          expect(session_cookie[:value]).to eq({type: 'string', value: 'xyz123'})
+          expect(session_cookie['value']).to eq({'type' => 'string', 'value' => 'xyz123'})
 
-          pref_cookie = formatted_cookies.find { |c| c[:name] == 'user_pref' }
+          pref_cookie = formatted_cookies.find { |c| c['name'] == 'user_pref' }
           expect(pref_cookie).not_to be_nil
-          expect(pref_cookie[:value]).to eq({type: 'string', value: 'dark_mode'})
+          expect(pref_cookie['value']).to eq({'type' => 'string', 'value' => 'dark_mode'})
         end
       end
     end
