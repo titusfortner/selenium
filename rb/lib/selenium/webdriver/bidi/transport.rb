@@ -42,7 +42,10 @@ module Selenium
 
         def execute(method, params = nil, result_type = nil)
           reply = @connection.send_cmd(method: method, params: serialize(params))
-          raise Error::WebDriverError, error_message(reply) if reply['error']
+          # BiDi reuses the W3C error codes, so map them to the same typed
+          # exceptions as the HTTP path (e.g. 'unknown command' lets callers fall
+          # back to classic behavior); unrecognized codes degrade to WebDriverError.
+          raise Error.for_error(reply['error']), error_message(reply) if reply['error']
 
           result = reply['result']
           result_type ? result_type.from_json(result) : result

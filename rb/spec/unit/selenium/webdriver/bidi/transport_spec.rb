@@ -68,7 +68,15 @@ module Selenium
             .and_return('error' => 'no such frame', 'message' => 'gone', 'stacktrace' => '')
 
           expect { transport.execute('browsingContext.navigate') }
-            .to raise_error(Error::WebDriverError, /no such frame/)
+            .to raise_error(Error::NoSuchFrameError, /no such frame/)
+        end
+
+        it 'maps a BiDi error code to its typed exception' do
+          allow(connection).to receive(:send_cmd)
+            .and_return('error' => 'unknown command', 'message' => 'nope', 'stacktrace' => '')
+
+          expect { transport.execute('browsingContext.navigate') }
+            .to raise_error(Error::UnknownCommandError, /unknown command/)
         end
 
         describe '.for' do

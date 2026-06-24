@@ -82,6 +82,28 @@ module Selenium
 
           expect_command('browsingContext.reload', {'context' => 'win1', 'wait' => 'complete'})
         end
+
+        context 'when the BiDi implementation does not support the command' do
+          before do
+            allow(connection).to receive(:send_cmd)
+              .and_return('error' => 'unknown command', 'message' => 'nope', 'stacktrace' => '')
+            allow(bridge).to receive(:execute)
+          end
+
+          it 'falls back to the classic HTTP navigation' do
+            bridge.get('https://example.com')
+
+            expect(bridge).to have_received(:execute).with(:get, {}, {url: 'https://example.com'})
+          end
+
+          it 'does not fall back on other BiDi errors' do
+            allow(connection).to receive(:send_cmd)
+              .and_return('error' => 'no such frame', 'message' => 'gone', 'stacktrace' => '')
+
+            expect { bridge.get('https://example.com') }.to raise_error(Error::NoSuchFrameError)
+            expect(bridge).not_to have_received(:execute)
+          end
+        end
       end
     end # Remote
   end # WebDriver

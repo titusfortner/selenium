@@ -42,20 +42,31 @@ module Selenium
           @bidi = BiDi.new(socket: socket)
         end
 
+        # A command a given BiDi implementation does not support raises
+        # 'unknown command'; nothing executed, so it is safe to fall back to the
+        # classic HTTP behavior inherited from Bridge.
         def get(url)
           browsing_context.navigate(context: window_handle, url: url, wait: readiness)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def go_back
           browsing_context.traverse_history(context: window_handle, delta: -1)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def go_forward
           browsing_context.traverse_history(context: window_handle, delta: 1)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def refresh
           browsing_context.reload(context: window_handle, wait: readiness)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def quit
