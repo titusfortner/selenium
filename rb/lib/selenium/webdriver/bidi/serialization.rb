@@ -212,6 +212,29 @@ module Selenium
           end
         end
       end
+
+      # Validates an outbound enum argument against its allowed wire values. Generated
+      # command methods call this before building params, so a bad value fails locally
+      # with a clear error instead of a round-trip to the server. Only the outbound
+      # (command) path is checked — inbound payloads are trusted, so a browser shipping
+      # a value ahead of our schema never breaks parsing. An omitted (UNSET) or nil arg
+      # is skipped (nil means "omit"); a list-valued enum checks every element.
+      #
+      # @api private
+      module Enum
+        # +allowed+ is an enum hash (its values are the wire strings) or a plain list
+        # of wire values — the latter for a union discriminator whose allowed set spans
+        # several variants and so matches no single generated enum constant.
+        def self.check!(name, value, allowed)
+          return if UNSET.equal?(value) || value.nil?
+
+          values = allowed.is_a?(::Hash) ? allowed.values : allowed
+          invalid = Array(value).reject { |element| values.include?(element) }
+          return if invalid.empty?
+
+          raise ::ArgumentError, "#{name} must be one of #{values.inspect}, got #{invalid.inspect}"
+        end
+      end
     end # BiDi
   end # WebDriver
 end # Selenium

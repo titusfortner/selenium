@@ -94,6 +94,7 @@ module Selenium
           end
 
           def set_forced_colors_mode_theme_override(theme:, contexts: UNSET, user_contexts: UNSET)
+            Enum.check!('theme', theme, Emulation::FORCED_COLORS_MODE_THEME)
             @transport.execute('emulation.setForcedColorsModeThemeOverride', SetForcedColorsModeThemeOverrideParameters.new(theme: theme, contexts: contexts, user_contexts: user_contexts))
           end
 

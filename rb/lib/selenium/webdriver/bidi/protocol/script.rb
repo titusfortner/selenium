@@ -310,6 +310,7 @@ module Selenium
           end
 
           def call_function(function_declaration:, await_promise:, target:, arguments: UNSET, result_ownership: UNSET, serialization_options: UNSET, this: UNSET, user_activation: UNSET)
+            Enum.check!('resultOwnership', result_ownership, Script::RESULT_OWNERSHIP)
             @transport.execute('script.callFunction', CallFunctionParameters.new(function_declaration: function_declaration, await_promise: await_promise, target: target, arguments: arguments, result_ownership: result_ownership, serialization_options: serialization_options, this: this, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
           end
 
@@ -318,10 +319,12 @@ module Selenium
           end
 
           def evaluate(expression:, target:, await_promise:, result_ownership: UNSET, serialization_options: UNSET, user_activation: UNSET)
+            Enum.check!('resultOwnership', result_ownership, Script::RESULT_OWNERSHIP)
             @transport.execute('script.evaluate', EvaluateParameters.new(expression: expression, target: target, await_promise: await_promise, result_ownership: result_ownership, serialization_options: serialization_options, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
           end
 
           def get_realms(context: UNSET, type: UNSET)
+            Enum.check!('type', type, Script::REALM_TYPE)
             @transport.execute('script.getRealms', GetRealmsParameters.new(context: context, type: type), Protocol.const_get('Script::GetRealmsResult'))
           end
 

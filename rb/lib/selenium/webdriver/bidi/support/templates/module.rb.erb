@@ -77,6 +77,9 @@ module Selenium
 <%- else -%>
           def <%= cmd.method_name %>(<%= cmd.signature %>)
 <%- end -%>
+<%- cmd.enum_checks.each do |check| -%>
+            <%= check %>
+<%- end -%>
             <%= cmd.execute_call %>
           end
 

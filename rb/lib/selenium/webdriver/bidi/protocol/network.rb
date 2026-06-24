@@ -197,10 +197,13 @@ module Selenium
           end
 
           def add_data_collector(data_types:, max_encoded_data_size:, collector_type: UNSET, contexts: UNSET, user_contexts: UNSET)
+            Enum.check!('dataTypes', data_types, Network::DATA_TYPE)
+            Enum.check!('collectorType', collector_type, Network::COLLECTOR_TYPE)
             @transport.execute('network.addDataCollector', AddDataCollectorParameters.new(data_types: data_types, max_encoded_data_size: max_encoded_data_size, collector_type: collector_type, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Network::AddDataCollectorResult'))
           end
 
           def add_intercept(phases:, contexts: UNSET, url_patterns: UNSET)
+            Enum.check!('phases', phases, Network::INTERCEPT_PHASE)
             @transport.execute('network.addIntercept', AddInterceptParameters.new(phases: phases, contexts: contexts, url_patterns: url_patterns), Protocol.const_get('Network::AddInterceptResult'))
           end
 
@@ -213,10 +216,12 @@ module Selenium
           end
 
           def continue_with_auth(request:, action:, credentials: UNSET)
+            Enum.check!('action', action, %w[provideCredentials default cancel])
             @transport.execute('network.continueWithAuth', ContinueWithAuthParameters.build(request: request, action: action, credentials: credentials))
           end
 
           def disown_data(data_type:, collector:, request:)
+            Enum.check!('dataType', data_type, Network::DATA_TYPE)
             @transport.execute('network.disownData', DisownDataParameters.new(data_type: data_type, collector: collector, request: request))
           end
 
@@ -225,6 +230,7 @@ module Selenium
           end
 
           def get_data(data_type:, request:, collector: UNSET, disown: UNSET)
+            Enum.check!('dataType', data_type, Network::DATA_TYPE)
             @transport.execute('network.getData', GetDataParameters.new(data_type: data_type, collector: collector, disown: disown, request: request), Protocol.const_get('Network::GetDataResult'))
           end
 
@@ -241,6 +247,7 @@ module Selenium
           end
 
           def set_cache_behavior(cache_behavior:, contexts: UNSET)
+            Enum.check!('cacheBehavior', cache_behavior, Network::SET_CACHE_BEHAVIOR_PARAMETERS_CACHE_BEHAVIOR)
             @transport.execute('network.setCacheBehavior', SetCacheBehaviorParameters.new(cache_behavior: cache_behavior, contexts: contexts))
           end
 

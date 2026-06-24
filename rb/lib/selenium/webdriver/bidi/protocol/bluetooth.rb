@@ -153,6 +153,7 @@ module Selenium
           end
 
           def simulate_adapter(context:, state:, le_supported: UNSET)
+            Enum.check!('state', state, Bluetooth::SIMULATE_ADAPTER_PARAMETERS_STATE)
             @transport.execute('bluetooth.simulateAdapter', SimulateAdapterParameters.new(context: context, le_supported: le_supported, state: state))
           end
 
@@ -177,22 +178,27 @@ module Selenium
           end
 
           def simulate_service(context:, address:, uuid:, type:)
+            Enum.check!('type', type, Bluetooth::SIMULATE_SERVICE_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateService', SimulateServiceParameters.new(context: context, address: address, uuid: uuid, type: type))
           end
 
           def simulate_characteristic(context:, address:, service_uuid:, characteristic_uuid:, type:, characteristic_properties: UNSET)
+            Enum.check!('type', type, Bluetooth::SIMULATE_CHARACTERISTIC_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateCharacteristic', SimulateCharacteristicParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, characteristic_properties: characteristic_properties, type: type))
           end
 
           def simulate_characteristic_response(context:, address:, service_uuid:, characteristic_uuid:, type:, code:, data: UNSET)
+            Enum.check!('type', type, Bluetooth::SIMULATE_CHARACTERISTIC_RESPONSE_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateCharacteristicResponse', SimulateCharacteristicResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, type: type, code: code, data: data))
           end
 
           def simulate_descriptor(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:)
+            Enum.check!('type', type, Bluetooth::SIMULATE_DESCRIPTOR_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateDescriptor', SimulateDescriptorParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type))
           end
 
           def simulate_descriptor_response(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:, code:, data: UNSET)
+            Enum.check!('type', type, Bluetooth::SIMULATE_DESCRIPTOR_RESPONSE_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateDescriptorResponse', SimulateDescriptorResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type, code: code, data: data))
           end
 

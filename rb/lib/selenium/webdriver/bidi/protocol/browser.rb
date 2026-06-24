@@ -99,6 +99,7 @@ module Selenium
           end
 
           def set_client_window_state(client_window:, state:, width: UNSET, height: UNSET, x: UNSET, y: UNSET)
+            Enum.check!('state', state, %w[normal fullscreen maximized minimized])
             @transport.execute('browser.setClientWindowState', SetClientWindowStateParameters.build(client_window: client_window, state: state, width: width, height: height, x: x, y: y), Protocol.const_get('Browser::ClientWindowInfo'))
           end
 

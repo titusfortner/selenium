@@ -231,6 +231,7 @@ module Selenium
           end
 
           def capture_screenshot(context:, origin: UNSET, format: UNSET, clip: UNSET)
+            Enum.check!('origin', origin, BrowsingContext::CAPTURE_SCREENSHOT_PARAMETERS_ORIGIN)
             @transport.execute('browsingContext.captureScreenshot', CaptureScreenshotParameters.new(context: context, origin: origin, format: format, clip: clip), Protocol.const_get('BrowsingContext::CaptureScreenshotResult'))
           end
 
@@ -239,6 +240,7 @@ module Selenium
           end
 
           def create(type:, reference_context: UNSET, background: UNSET, user_context: UNSET)
+            Enum.check!('type', type, BrowsingContext::CREATE_TYPE)
             @transport.execute('browsingContext.create', CreateParameters.new(type: type, reference_context: reference_context, background: background, user_context: user_context), Protocol.const_get('BrowsingContext::CreateResult'))
           end
 
@@ -255,14 +257,17 @@ module Selenium
           end
 
           def navigate(context:, url:, wait: UNSET)
+            Enum.check!('wait', wait, BrowsingContext::READINESS_STATE)
             @transport.execute('browsingContext.navigate', NavigateParameters.new(context: context, url: url, wait: wait), Protocol.const_get('BrowsingContext::NavigateResult'))
           end
 
           def print(context:, background: UNSET, margin: UNSET, orientation: UNSET, page: UNSET, page_ranges: UNSET, scale: UNSET, shrink_to_fit: UNSET)
+            Enum.check!('orientation', orientation, BrowsingContext::PRINT_PARAMETERS_ORIENTATION)
             @transport.execute('browsingContext.print', PrintParameters.new(context: context, background: background, margin: margin, orientation: orientation, page: page, page_ranges: page_ranges, scale: scale, shrink_to_fit: shrink_to_fit), Protocol.const_get('BrowsingContext::PrintResult'))
           end
 
           def reload(context:, ignore_cache: UNSET, wait: UNSET)
+            Enum.check!('wait', wait, BrowsingContext::READINESS_STATE)
             @transport.execute('browsingContext.reload', ReloadParameters.new(context: context, ignore_cache: ignore_cache, wait: wait), Protocol.const_get('BrowsingContext::NavigateResult'))
           end
 

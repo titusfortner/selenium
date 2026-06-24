@@ -154,6 +154,38 @@ module Selenium
             end
           end
 
+          describe 'enum argument validation' do
+            it 'raises on a value outside the allowed enum set, before any wire call' do
+              browsing_context = BrowsingContext.new(Transport.new(instance_double(WebDriver::WebSocketConnection)))
+
+              expect { browsing_context.navigate(context: 'c', url: 'x', wait: 'tomorrow') }
+                .to raise_error(ArgumentError, /wait must be one of/)
+            end
+
+            it 'validates each element of a list-valued enum' do
+              network = Network.new(Transport.new(instance_double(WebDriver::WebSocketConnection)))
+
+              expect { network.add_data_collector(data_types: %w[bogus], max_encoded_data_size: 1) }
+                .to raise_error(ArgumentError, /dataTypes must be one of/)
+            end
+
+            it 'validates a union discriminator against the combined allowed set' do
+              network = Network.new(Transport.new(instance_double(WebDriver::WebSocketConnection)))
+
+              expect { network.continue_with_auth(request: 'r', action: 'bogus') }
+                .to raise_error(ArgumentError, /action must be one of.*provideCredentials.*default.*cancel/)
+            end
+
+            it 'passes an allowed value through to the transport' do
+              connection = instance_double(WebDriver::WebSocketConnection)
+              allow(connection).to receive(:send_cmd).and_return('result' => {'navigation' => 'n', 'url' => 'u'})
+
+              BrowsingContext.new(Transport.new(connection)).navigate(context: 'c', url: 'u', wait: 'complete')
+
+              expect(connection).to have_received(:send_cmd)
+            end
+          end
+
           describe 'a command driven through the transport' do
             it 'marshals params (dropping nils) and parses the typed result' do
               connection = instance_double(WebDriver::WebSocketConnection)

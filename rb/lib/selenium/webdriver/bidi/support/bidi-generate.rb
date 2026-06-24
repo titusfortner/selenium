@@ -93,6 +93,14 @@ module BiDiGenerate
     camel_to_snake(camel).upcase
   end
 
+  # Domain-qualified path to an enum's frozen hash constant
+  # ("browsingContext.ReadinessState" → "BrowsingContext::READINESS_STATE"), so a
+  # generated command method can reference it for an outbound membership check.
+  def self.enum_const_path(type_name)
+    domain, local = type_name.split('.', 2)
+    "#{snake_to_class_name(camel_to_snake(domain))}::#{screaming_snake(local)}"
+  end
+
   # snake_case hash key for an enum value. Preserves camelCase word boundaries
   # (beforeRequestSent → before_request_sent), maps a leading minus to "neg_"
   # (-0 → neg_0, -Infinity → neg_infinity), and collapses other punctuation
@@ -107,12 +115,17 @@ module BiDiGenerate
   # -- IR --
 
   # ruby_name is the snake_case keyword argument; wire_name is the exact key the
-  # protocol expects (baked verbatim from the schema, no runtime conversion).
-  Param = Struct.new(:ruby_name, :wire_name, :required, keyword_init: true) do
+  # protocol expects (baked verbatim from the schema, no runtime conversion). enum is
+  # the allowed-values constant path for an enum-typed param (nil otherwise).
+  Param = Struct.new(:ruby_name, :wire_name, :required, :enum, keyword_init: true) do
     # Optionals default to UNSET (omitted), so an explicit nil can still reach a
     # nullable field as wire null.
     def sig_part
       required ? "#{ruby_name}:" : "#{ruby_name}: UNSET"
+    end
+
+    def enum_check
+      "Enum.check!('#{wire_name}', #{ruby_name}, #{enum})" if enum
     end
   end
 
@@ -125,6 +138,7 @@ module BiDiGenerate
                        :union_params, keyword_init: true) do
     def required_params = params.select(&:required)
     def optional_params = params.reject(&:required)
+    def enum_checks = params.filter_map(&:enum_check)
 
     def signature
       (required_params.map(&:sig_part) + optional_params.map(&:sig_part)).join(', ')
@@ -472,9 +486,20 @@ module BiDiGenerate
         Param.new(
           ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
           wire_name: field['wire'],
-          required: field['required']
+          required: field['required'],
+          enum: enum_const(field['type'])
         )
       end
+    end
+
+    # The allowed-values constant path when a field (or a list's element) is an enum
+    # type, else nil. Union command-params skip this (their merged superset can blur a
+    # discriminator's const vs enum); only flat record params get the outbound check.
+    def enum_const(field_type)
+      ref = field_type['ref'] || field_type.dig('list', 'ref')
+      return unless ref && @types[ref] && @types[ref]['kind'] == 'enum'
+
+      BiDiGenerate.enum_const_path(ref)
     end
 
     # Merge a union's record variants into one flat param list for the command
@@ -486,8 +511,33 @@ module BiDiGenerate
       variants = type['variants'].map { |variant_ref| @types[variant_ref] }
       return nil unless variants.all? { |v| v && v['kind'] == 'record' }
 
-      guard_union_dispatch_keys_simple!(type['selector'], ref)
-      merged_params(variants.map { |v| v['fields'] })
+      selector = type['selector']
+      guard_union_dispatch_keys_simple!(selector, ref)
+      params = merged_params(variants.map { |v| v['fields'] })
+      annotate_discriminator_enum!(params, selector)
+      params
+    end
+
+    # A discriminated union's `by` field is validated against the whole allowed set:
+    # the const values that tag each variant plus the default variant's own enum
+    # values (e.g. continueWithAuth.action = {provideCredentials} + {default, cancel}).
+    # That spans variants, so no single enum constant fits — emit an inline list.
+    # Boolean discriminators (handleRequestDevicePrompt.accept) need no membership check.
+    def annotate_discriminator_enum!(params, selector)
+      by = selector['by']
+      tagged = by ? selector['variants'].map { |v| v['value'] } : []
+      return unless !tagged.empty? && tagged.all?(String)
+
+      allowed = (tagged + default_variant_enum_values(selector, by)).uniq
+      param = params.find { |p| p.wire_name == by }
+      param.enum = "%w[#{allowed.join(' ')}]" if param
+    end
+
+    def default_variant_enum_values(selector, by)
+      default = selector['default']
+      field = default && @types[default]['fields'].find { |f| f['wire'] == by }
+      ref = field && field['type']['ref']
+      ref && @types[ref] && @types[ref]['kind'] == 'enum' ? @types[ref]['values'] : []
     end
 
     # Merge variant field lists into one flat param superset. A field is required only

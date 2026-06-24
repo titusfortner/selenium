@@ -26,6 +26,7 @@ module Selenium
           end
 
           def set_permission(descriptor:, state:, origin:, embedded_origin: UNSET, user_context: UNSET)
+            Enum.check!('state', state, Permissions::PERMISSION_STATE)
             @transport.execute('permissions.setPermission', SetPermissionParameters.new(descriptor: descriptor, state: state, origin: origin, embedded_origin: embedded_origin, user_context: user_context))
           end
 
