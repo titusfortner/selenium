@@ -27,18 +27,6 @@ module Selenium
             def self.new: (user_context: String) -> instance
           end
 
-          class Close < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: untyped
-            def self.new: (?method_: untyped, params: untyped) -> instance
-          end
-
-          class CreateUserContext < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Browser::CreateUserContextParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Browser::CreateUserContextParameters) -> instance
-          end
-
           class CreateUserContextParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader accept_insecure_certs: untyped
             attr_reader proxy: untyped
@@ -46,21 +34,9 @@ module Selenium
             def self.new: (?accept_insecure_certs: bool?, ?proxy: ::Selenium::WebDriver::BiDi::Protocol::Session::ProxyConfiguration?, ?unhandled_prompt_behavior: ::Selenium::WebDriver::BiDi::Protocol::Session::UserPromptHandler?) -> instance
           end
 
-          class GetClientWindows < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: untyped
-            def self.new: (?method_: untyped, params: untyped) -> instance
-          end
-
           class GetClientWindowsResult < ::Selenium::WebDriver::BiDi::Data
             attr_reader client_windows: Array[::Selenium::WebDriver::BiDi::Protocol::Browser::ClientWindowInfo]
             def self.new: (client_windows: Array[::Selenium::WebDriver::BiDi::Protocol::Browser::ClientWindowInfo]) -> instance
-          end
-
-          class GetUserContexts < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: untyped
-            def self.new: (?method_: untyped, params: untyped) -> instance
           end
 
           class GetUserContextsResult < ::Selenium::WebDriver::BiDi::Data
@@ -68,21 +44,9 @@ module Selenium
             def self.new: (user_contexts: Array[::Selenium::WebDriver::BiDi::Protocol::Browser::UserContextInfo]) -> instance
           end
 
-          class RemoveUserContext < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Browser::RemoveUserContextParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Browser::RemoveUserContextParameters) -> instance
-          end
-
           class RemoveUserContextParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader user_context: String
             def self.new: (user_context: String) -> instance
-          end
-
-          class SetClientWindowState < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Browser::SetClientWindowStateParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Browser::SetClientWindowStateParameters) -> instance
           end
 
           class SetClientWindowStateParameters < ::Selenium::WebDriver::BiDi::Union
@@ -100,12 +64,6 @@ module Selenium
               attr_reader y: untyped
               def self.new: (?state: untyped, client_window: String, ?width: Integer?, ?height: Integer?, ?x: Integer?, ?y: Integer?) -> instance
             end
-          end
-
-          class SetDownloadBehavior < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Browser::SetDownloadBehaviorParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Browser::SetDownloadBehaviorParameters) -> instance
           end
 
           class SetDownloadBehaviorParameters < ::Selenium::WebDriver::BiDi::Data

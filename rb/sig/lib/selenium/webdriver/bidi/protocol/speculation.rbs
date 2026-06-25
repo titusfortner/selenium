@@ -11,12 +11,6 @@ module Selenium
 
           PRELOADING_STATUS: Hash[Symbol, String]
 
-          class PrefetchStatusUpdated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Speculation::PrefetchStatusUpdatedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Speculation::PrefetchStatusUpdatedParameters) -> instance
-          end
-
           class PrefetchStatusUpdatedParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader url: String

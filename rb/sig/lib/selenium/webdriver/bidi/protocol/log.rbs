@@ -55,12 +55,6 @@ module Selenium
             def self.new: (?type: untyped, level: String, source: ::Selenium::WebDriver::BiDi::Protocol::Script::Source, text: String?, timestamp: Integer, ?stack_trace: ::Selenium::WebDriver::BiDi::Protocol::Script::StackTrace?) -> instance
           end
 
-          class EntryAdded < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Log::Entry
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Log::Entry) -> instance
-          end
-
           def initialize: (untyped context) -> void
 
         end

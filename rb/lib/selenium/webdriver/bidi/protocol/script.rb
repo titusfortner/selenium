@@ -412,10 +412,6 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class AddPreloadScript < Data.define(method_: {json_key: 'method', fixed: 'script.addPreloadScript'}, params: {json_key: 'params', ref: 'Script::AddPreloadScriptParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AddPreloadScriptParameters < Data.define(function_declaration: 'functionDeclaration', arguments: {json_key: 'arguments', ref: 'Script::ChannelValue', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, sandbox: 'sandbox'); end
 
           # @api private
@@ -424,15 +420,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Disown < Data.define(method_: {json_key: 'method', fixed: 'script.disown'}, params: {json_key: 'params', ref: 'Script::DisownParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DisownParameters < Data.define(handles: {json_key: 'handles', list: true}, target: {json_key: 'target', ref: 'Script::Target'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class CallFunction < Data.define(method_: {json_key: 'method', fixed: 'script.callFunction'}, params: {json_key: 'params', ref: 'Script::CallFunctionParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -440,15 +428,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Evaluate < Data.define(method_: {json_key: 'method', fixed: 'script.evaluate'}, params: {json_key: 'params', ref: 'Script::EvaluateParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class EvaluateParameters < Data.define(expression: 'expression', target: {json_key: 'target', ref: 'Script::Target'}, await_promise: 'awaitPromise', result_ownership: {json_key: 'resultOwnership', enum: 'Script::RESULT_OWNERSHIP'}, serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, user_activation: 'userActivation'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class GetRealms < Data.define(method_: {json_key: 'method', fixed: 'script.getRealms'}, params: {json_key: 'params', ref: 'Script::GetRealmsParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -460,27 +440,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class RemovePreloadScript < Data.define(method_: {json_key: 'method', fixed: 'script.removePreloadScript'}, params: {json_key: 'params', ref: 'Script::RemovePreloadScriptParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemovePreloadScriptParameters < Data.define(script: 'script'); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Message < Data.define(method_: {json_key: 'method', fixed: 'script.message'}, params: {json_key: 'params', ref: 'Script::MessageParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class MessageParameters < Data.define(channel: 'channel', data: {json_key: 'data', ref: 'Script::RemoteValue'}, source: {json_key: 'source', ref: 'Script::Source'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class RealmCreated < Data.define(method_: {json_key: 'method', fixed: 'script.realmCreated'}, params: {json_key: 'params', ref: 'Script::RealmInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class RealmDestroyed < Data.define(method_: {json_key: 'method', fixed: 'script.realmDestroyed'}, params: {json_key: 'params', ref: 'Script::RealmDestroyedParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

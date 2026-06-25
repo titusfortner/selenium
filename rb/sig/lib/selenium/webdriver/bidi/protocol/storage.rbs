@@ -14,12 +14,6 @@ module Selenium
             def self.new: (?user_context: String?, ?source_origin: String?, ?extensions: untyped) -> instance
           end
 
-          class GetCookies < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Storage::GetCookiesParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Storage::GetCookiesParameters) -> instance
-          end
-
           class CookieFilter < ::Selenium::WebDriver::BiDi::Data
             attr_reader name: untyped
             attr_reader value: untyped
@@ -63,12 +57,6 @@ module Selenium
             def self.new: (cookies: Array[::Selenium::WebDriver::BiDi::Protocol::Network::Cookie], partition_key: ::Selenium::WebDriver::BiDi::Protocol::Storage::PartitionKey) -> instance
           end
 
-          class SetCookie < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Storage::SetCookieParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Storage::SetCookieParameters) -> instance
-          end
-
           class PartialCookie < ::Selenium::WebDriver::BiDi::Data
             attr_reader name: String
             attr_reader value: ::Selenium::WebDriver::BiDi::Protocol::Network::BytesValue
@@ -91,12 +79,6 @@ module Selenium
           class SetCookieResult < ::Selenium::WebDriver::BiDi::Data
             attr_reader partition_key: ::Selenium::WebDriver::BiDi::Protocol::Storage::PartitionKey
             def self.new: (partition_key: ::Selenium::WebDriver::BiDi::Protocol::Storage::PartitionKey) -> instance
-          end
-
-          class DeleteCookies < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Storage::DeleteCookiesParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Storage::DeleteCookiesParameters) -> instance
           end
 
           class DeleteCookiesParameters < ::Selenium::WebDriver::BiDi::Data

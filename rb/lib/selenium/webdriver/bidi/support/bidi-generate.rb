@@ -369,17 +369,41 @@ module BiDiGenerate
     # Structured value classes (records + discriminated unions) declared under
     # "<domain>." Empty records are projector artifacts with nothing to carry, so
     # they stay opaque hashes; only non-empty records and unions become classes.
+    # Command/event message envelopes (the `{method, params}` wire wrapper) are
+    # skipped — Transport forms that envelope, so nothing references them.
     def types_for(domain)
       prefix = "#{domain}."
       @types.filter_map do |name, type|
         next unless name.start_with?(prefix)
 
         case type['kind']
-        when 'record' then record_class(name, type) unless type['fields'].empty?
+        when 'record' then record_class(name, type) unless type['fields'].empty? || suppressed_record?(type)
         when 'union' then union_class(name)
         when 'alias' then union_class(name) if type['type'].key?('union')
         end
       end
+    end
+
+    # Records the generator deliberately does not emit: a message envelope, or a
+    # synthetic params record lifted out of one. Both are reachable only through the
+    # envelope, which Transport replaces — so nothing else references them.
+    def suppressed_record?(type)
+      message_envelope?(type) || envelope_synthetic?(type)
+    end
+
+    # A protocol message envelope is a record with a baked `method` discriminator
+    # (`{method: <const>, params: …}`) — the wire shape of a command/event message.
+    # No value type carries a const `method` field, so this is unambiguous.
+    def message_envelope?(type)
+      type['fields'].any? { |f| f['wire'] == 'method' && f['type'].key?('const') }
+    end
+
+    # A synthetic record lifted out as an envelope's params (its owner is an envelope).
+    def envelope_synthetic?(type)
+      return false unless type['synthetic']
+
+      owner = @types[type['owner']]
+      owner && owner['kind'] == 'record' && message_envelope?(owner)
     end
 
     # The Protocol-relative class path a command result parses into, or nil when

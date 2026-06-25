@@ -161,19 +161,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class AddDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.addDataCollector'}, params: {json_key: 'params', ref: 'Network::AddDataCollectorParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AddDataCollectorParameters < Data.define(data_types: {json_key: 'dataTypes', list: true, enum: 'Network::DATA_TYPE'}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: {json_key: 'collectorType', enum: 'Network::COLLECTOR_TYPE'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AddDataCollectorResult < Data.define(collector: 'collector'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class AddIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.addIntercept'}, params: {json_key: 'params', ref: 'Network::AddInterceptParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -185,23 +177,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ContinueRequest < Data.define(method_: {json_key: 'method', fixed: 'network.continueRequest'}, params: {json_key: 'params', ref: 'Network::ContinueRequestParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ContinueRequestParameters < Data.define(request: 'request', body: {json_key: 'body', ref: 'Network::BytesValue'}, cookies: {json_key: 'cookies', ref: 'Network::CookieHeader', list: true}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, method_: 'method', url: 'url'); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ContinueResponse < Data.define(method_: {json_key: 'method', fixed: 'network.continueResponse'}, params: {json_key: 'params', ref: 'Network::ContinueResponseParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ContinueResponseParameters < Data.define(request: 'request', cookies: {json_key: 'cookies', ref: 'Network::SetCookieHeader', list: true}, credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ContinueWithAuth < Data.define(method_: {json_key: 'method', fixed: 'network.continueWithAuth'}, params: {json_key: 'params', ref: 'Network::ContinueWithAuthParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -223,23 +203,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class DisownData < Data.define(method_: {json_key: 'method', fixed: 'network.disownData'}, params: {json_key: 'params', ref: 'Network::DisownDataParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DisownDataParameters < Data.define(data_type: {json_key: 'dataType', enum: 'Network::DATA_TYPE'}, collector: 'collector', request: 'request'); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class FailRequest < Data.define(method_: {json_key: 'method', fixed: 'network.failRequest'}, params: {json_key: 'params', ref: 'Network::FailRequestParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class FailRequestParameters < Data.define(request: 'request'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class GetData < Data.define(method_: {json_key: 'method', fixed: 'network.getData'}, params: {json_key: 'params', ref: 'Network::GetDataParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -251,15 +219,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ProvideResponse < Data.define(method_: {json_key: 'method', fixed: 'network.provideResponse'}, params: {json_key: 'params', ref: 'Network::ProvideResponseParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ProvideResponseParameters < Data.define(request: 'request', body: {json_key: 'body', ref: 'Network::BytesValue'}, cookies: {json_key: 'cookies', ref: 'Network::SetCookieHeader', list: true}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class RemoveDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.removeDataCollector'}, params: {json_key: 'params', ref: 'Network::RemoveDataCollectorParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -267,15 +227,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class RemoveIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.removeIntercept'}, params: {json_key: 'params', ref: 'Network::RemoveInterceptParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoveInterceptParameters < Data.define(intercept: 'intercept'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetCacheBehavior < Data.define(method_: {json_key: 'method', fixed: 'network.setCacheBehavior'}, params: {json_key: 'params', ref: 'Network::SetCacheBehaviorParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -283,15 +235,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetExtraHeaders < Data.define(method_: {json_key: 'method', fixed: 'network.setExtraHeaders'}, params: {json_key: 'params', ref: 'Network::SetExtraHeadersParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetExtraHeadersParameters < Data.define(headers: {json_key: 'headers', ref: 'Network::Header', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class AuthRequired < Data.define(method_: {json_key: 'method', fixed: 'network.authRequired'}, params: {json_key: 'params', ref: 'Network::AuthRequiredParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -299,15 +243,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class BeforeRequestSent < Data.define(method_: {json_key: 'method', fixed: 'network.beforeRequestSent'}, params: {json_key: 'params', ref: 'Network::BeforeRequestSentParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BeforeRequestSentParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, initiator: {json_key: 'initiator', ref: 'Network::Initiator'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class FetchError < Data.define(method_: {json_key: 'method', fixed: 'network.fetchError'}, params: {json_key: 'params', ref: 'Network::FetchErrorParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -315,15 +251,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ResponseCompleted < Data.define(method_: {json_key: 'method', fixed: 'network.responseCompleted'}, params: {json_key: 'params', ref: 'Network::ResponseCompletedParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ResponseCompletedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ResponseStarted < Data.define(method_: {json_key: 'method', fixed: 'network.responseStarted'}, params: {json_key: 'params', ref: 'Network::ResponseStartedParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

@@ -41,10 +41,6 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class PrefetchStatusUpdated < Data.define(method_: {json_key: 'method', fixed: 'speculation.prefetchStatusUpdated'}, params: {json_key: 'params', ref: 'Speculation::PrefetchStatusUpdatedParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PrefetchStatusUpdatedParameters < Data.define(context: 'context', url: 'url', status: {json_key: 'status', enum: 'Speculation::PRELOADING_STATUS'}); end
 
           def initialize(context)

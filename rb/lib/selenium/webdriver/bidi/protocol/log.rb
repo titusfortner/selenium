@@ -66,10 +66,6 @@ module Selenium
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class JavascriptLogEntry < Data.define(type: {fixed: 'javascript'}, level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class EntryAdded < Data.define(method_: {json_key: 'method', fixed: 'log.entryAdded'}, params: {json_key: 'params', ref: 'Log::Entry'}); end
-
           def initialize(context)
             @transport = Transport.for(context)
           end

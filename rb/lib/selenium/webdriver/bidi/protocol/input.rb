@@ -44,10 +44,6 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class PerformActions < Data.define(method_: {json_key: 'method', fixed: 'input.performActions'}, params: {json_key: 'params', ref: 'Input::PerformActionsParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PerformActionsParameters < Data.define(context: 'context', actions: {json_key: 'actions', ref: 'Input::SourceActions', list: true}); end
 
           # @api private
@@ -158,23 +154,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ReleaseActions < Data.define(method_: {json_key: 'method', fixed: 'input.releaseActions'}, params: {json_key: 'params', ref: 'Input::ReleaseActionsParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ReleaseActionsParameters < Data.define(context: 'context'); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetFiles < Data.define(method_: {json_key: 'method', fixed: 'input.setFiles'}, params: {json_key: 'params', ref: 'Input::SetFilesParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetFilesParameters < Data.define(context: 'context', element: {json_key: 'element', ref: 'Script::SharedReference'}, files: {json_key: 'files', list: true}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class FileDialogOpened < Data.define(method_: {json_key: 'method', fixed: 'input.fileDialogOpened'}, params: {json_key: 'params', ref: 'Input::FileDialogInfo'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

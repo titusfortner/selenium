@@ -97,15 +97,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Status < Data.define(method_: {json_key: 'method', fixed: 'session.status'}, params: 'params'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class StatusResult < Data.define(ready: 'ready', message: 'message'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class New < Data.define(method_: {json_key: 'method', fixed: 'session.new'}, params: {json_key: 'params', ref: 'Session::NewParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -121,19 +113,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class End < Data.define(method_: {json_key: 'method', fixed: 'session.end'}, params: 'params'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Subscribe < Data.define(method_: {json_key: 'method', fixed: 'session.subscribe'}, params: {json_key: 'params', ref: 'Session::SubscribeParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SubscribeResult < Data.define(subscription: 'subscription'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Unsubscribe < Data.define(method_: {json_key: 'method', fixed: 'session.unsubscribe'}, params: {json_key: 'params', ref: 'Session::UnsubscribeParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

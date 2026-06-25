@@ -30,14 +30,6 @@ module Selenium
         class UserAgentClientHints
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetClientHintsOverrideCommand < Data.define(method_: {json_key: 'method', fixed: 'userAgentClientHints.setClientHintsOverride'}, params: {json_key: 'params', ref: 'UserAgentClientHints::SetClientHintsOverrideCommand::Params'})
-            # @api private
-            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-            class Params < Data.define(client_hints: {json_key: 'clientHints', nullable: true, ref: 'UserAgentClientHints::ClientHintsMetadata'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
-          end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ClientHintsMetadata < Data.define(brands: {json_key: 'brands', ref: 'UserAgentClientHints::BrandVersion', list: true}, full_version_list: {json_key: 'fullVersionList', ref: 'UserAgentClientHints::BrandVersion', list: true}, platform: 'platform', platform_version: 'platformVersion', architecture: 'architecture', model: 'model', mobile: 'mobile', bitness: 'bitness', wow64: 'wow64', form_factors: {json_key: 'formFactors', list: true}); end
 
           # @api private

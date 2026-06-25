@@ -13,23 +13,11 @@ module Selenium
 
           SCREEN_ORIENTATION_TYPE: Hash[Symbol, String]
 
-          class SetForcedColorsModeThemeOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetForcedColorsModeThemeOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetForcedColorsModeThemeOverrideParameters) -> instance
-          end
-
           class SetForcedColorsModeThemeOverrideParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader theme: String?
             attr_reader contexts: untyped
             attr_reader user_contexts: untyped
             def self.new: (theme: String?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
-          end
-
-          class SetGeolocationOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetGeolocationOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetGeolocationOverrideParameters) -> instance
           end
 
           class SetGeolocationOverrideParameters < ::Selenium::WebDriver::BiDi::Union
@@ -63,23 +51,11 @@ module Selenium
             def self.new: (?type: untyped) -> instance
           end
 
-          class SetLocaleOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetLocaleOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetLocaleOverrideParameters) -> instance
-          end
-
           class SetLocaleOverrideParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader locale: String?
             attr_reader contexts: untyped
             attr_reader user_contexts: untyped
             def self.new: (locale: String?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
-          end
-
-          class SetNetworkConditions < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetNetworkConditionsParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetNetworkConditionsParameters) -> instance
           end
 
           class SetNetworkConditionsParameters < ::Selenium::WebDriver::BiDi::Data
@@ -92,12 +68,6 @@ module Selenium
           class NetworkConditionsOffline < ::Selenium::WebDriver::BiDi::Data
             attr_reader type: untyped
             def self.new: (?type: untyped) -> instance
-          end
-
-          class SetScreenSettingsOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScreenSettingsOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScreenSettingsOverrideParameters) -> instance
           end
 
           class ScreenArea < ::Selenium::WebDriver::BiDi::Data
@@ -113,12 +83,6 @@ module Selenium
             def self.new: (screen_area: ::Selenium::WebDriver::BiDi::Protocol::Emulation::ScreenArea?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
           end
 
-          class SetScreenOrientationOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScreenOrientationOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScreenOrientationOverrideParameters) -> instance
-          end
-
           class ScreenOrientation < ::Selenium::WebDriver::BiDi::Data
             attr_reader natural: String
             attr_reader type: String
@@ -132,23 +96,11 @@ module Selenium
             def self.new: (screen_orientation: ::Selenium::WebDriver::BiDi::Protocol::Emulation::ScreenOrientation?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
           end
 
-          class SetUserAgentOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetUserAgentOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetUserAgentOverrideParameters) -> instance
-          end
-
           class SetUserAgentOverrideParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader user_agent: String?
             attr_reader contexts: untyped
             attr_reader user_contexts: untyped
             def self.new: (user_agent: String?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
-          end
-
-          class SetScriptingEnabled < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScriptingEnabledParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScriptingEnabledParameters) -> instance
           end
 
           class SetScriptingEnabledParameters < ::Selenium::WebDriver::BiDi::Data
@@ -158,12 +110,6 @@ module Selenium
             def self.new: (?enabled: untyped, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
           end
 
-          class SetScrollbarTypeOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScrollbarTypeOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetScrollbarTypeOverrideParameters) -> instance
-          end
-
           class SetScrollbarTypeOverrideParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader scrollbar_type: untyped
             attr_reader contexts: untyped
@@ -171,23 +117,11 @@ module Selenium
             def self.new: (scrollbar_type: untyped, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
           end
 
-          class SetTimezoneOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetTimezoneOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetTimezoneOverrideParameters) -> instance
-          end
-
           class SetTimezoneOverrideParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader timezone: String?
             attr_reader contexts: untyped
             attr_reader user_contexts: untyped
             def self.new: (timezone: String?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
-          end
-
-          class SetTouchOverride < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetTouchOverrideParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Emulation::SetTouchOverrideParameters) -> instance
           end
 
           class SetTouchOverrideParameters < ::Selenium::WebDriver::BiDi::Data

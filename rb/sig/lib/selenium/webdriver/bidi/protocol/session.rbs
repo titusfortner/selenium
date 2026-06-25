@@ -98,22 +98,10 @@ module Selenium
             def self.new: (events: Array[String]) -> instance
           end
 
-          class Status < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: untyped
-            def self.new: (?method_: untyped, params: untyped) -> instance
-          end
-
           class StatusResult < ::Selenium::WebDriver::BiDi::Data
             attr_reader ready: bool
             attr_reader message: String
             def self.new: (ready: bool, message: String) -> instance
-          end
-
-          class New < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Session::NewParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Session::NewParameters) -> instance
           end
 
           class NewParameters < ::Selenium::WebDriver::BiDi::Data
@@ -141,27 +129,9 @@ module Selenium
             end
           end
 
-          class End < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: untyped
-            def self.new: (?method_: untyped, params: untyped) -> instance
-          end
-
-          class Subscribe < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Session::SubscribeParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Session::SubscribeParameters) -> instance
-          end
-
           class SubscribeResult < ::Selenium::WebDriver::BiDi::Data
             attr_reader subscription: String
             def self.new: (subscription: String) -> instance
-          end
-
-          class Unsubscribe < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Session::UnsubscribeParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Session::UnsubscribeParameters) -> instance
           end
 
           class UnsubscribeParameters < ::Selenium::WebDriver::BiDi::Union

@@ -17,12 +17,6 @@ module Selenium
             def self.new: (?type: untyped, element: ::Selenium::WebDriver::BiDi::Protocol::Script::SharedReference) -> instance
           end
 
-          class PerformActions < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Input::PerformActionsParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Input::PerformActionsParameters) -> instance
-          end
-
           class PerformActionsParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader actions: Array[::Selenium::WebDriver::BiDi::Protocol::Input::SourceActions]
@@ -153,21 +147,9 @@ module Selenium
           class Origin < ::Selenium::WebDriver::BiDi::Union
           end
 
-          class ReleaseActions < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Input::ReleaseActionsParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Input::ReleaseActionsParameters) -> instance
-          end
-
           class ReleaseActionsParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             def self.new: (context: String) -> instance
-          end
-
-          class SetFiles < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Input::SetFilesParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Input::SetFilesParameters) -> instance
           end
 
           class SetFilesParameters < ::Selenium::WebDriver::BiDi::Data
@@ -175,12 +157,6 @@ module Selenium
             attr_reader element: ::Selenium::WebDriver::BiDi::Protocol::Script::SharedReference
             attr_reader files: Array[String]
             def self.new: (context: String, element: ::Selenium::WebDriver::BiDi::Protocol::Script::SharedReference, files: Array[String]) -> instance
-          end
-
-          class FileDialogOpened < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Input::FileDialogInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Input::FileDialogInfo) -> instance
           end
 
           class FileDialogInfo < ::Selenium::WebDriver::BiDi::Data

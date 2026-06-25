@@ -30,10 +30,6 @@ module Selenium
         class WebExtension
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Install < Data.define(method_: {json_key: 'method', fixed: 'webExtension.install'}, params: {json_key: 'params', ref: 'WebExtension::InstallParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class InstallParameters < Data.define(extension_data: {json_key: 'extensionData', ref: 'WebExtension::ExtensionData'}); end
 
           # @api private
@@ -62,10 +58,6 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class InstallResult < Data.define(extension: 'extension'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Uninstall < Data.define(method_: {json_key: 'method', fixed: 'webExtension.uninstall'}, params: {json_key: 'params', ref: 'WebExtension::UninstallParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

@@ -51,19 +51,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Close < Data.define(method_: {json_key: 'method', fixed: 'browser.close'}, params: 'params'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class CreateUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.createUserContext'}, params: {json_key: 'params', ref: 'Browser::CreateUserContextParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CreateUserContextParameters < Data.define(accept_insecure_certs: 'acceptInsecureCerts', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class GetClientWindows < Data.define(method_: {json_key: 'method', fixed: 'browser.getClientWindows'}, params: 'params'); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -71,23 +59,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class GetUserContexts < Data.define(method_: {json_key: 'method', fixed: 'browser.getUserContexts'}, params: 'params'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetUserContextsResult < Data.define(user_contexts: {json_key: 'userContexts', ref: 'Browser::UserContextInfo', list: true}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class RemoveUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.removeUserContext'}, params: {json_key: 'params', ref: 'Browser::RemoveUserContextParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoveUserContextParameters < Data.define(user_context: 'userContext'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetClientWindowState < Data.define(method_: {json_key: 'method', fixed: 'browser.setClientWindowState'}, params: {json_key: 'params', ref: 'Browser::SetClientWindowStateParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -106,10 +82,6 @@ module Selenium
             # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class ClientWindowRectState < Data.define(state: {fixed: 'normal'}, client_window: 'clientWindow', width: 'width', height: 'height', x: 'x', y: 'y'); end
           end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetDownloadBehavior < Data.define(method_: {json_key: 'method', fixed: 'browser.setDownloadBehavior'}, params: {json_key: 'params', ref: 'Browser::SetDownloadBehaviorParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

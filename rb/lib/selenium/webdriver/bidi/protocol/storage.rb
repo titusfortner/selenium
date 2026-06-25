@@ -34,10 +34,6 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class GetCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.getCookies'}, params: {json_key: 'params', ref: 'Storage::GetCookiesParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CookieFilter < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           # @api private
@@ -68,10 +64,6 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetCookie < Data.define(method_: {json_key: 'method', fixed: 'storage.setCookie'}, params: {json_key: 'params', ref: 'Storage::SetCookieParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PartialCookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           # @api private
@@ -81,10 +73,6 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetCookieResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class DeleteCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.deleteCookies'}, params: {json_key: 'params', ref: 'Storage::DeleteCookiesParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

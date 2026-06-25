@@ -133,15 +133,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Activate < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.activate'}, params: {json_key: 'params', ref: 'BrowsingContext::ActivateParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ActivateParameters < Data.define(context: 'context'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class CaptureScreenshot < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.captureScreenshot'}, params: {json_key: 'params', ref: 'BrowsingContext::CaptureScreenshotParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -175,15 +167,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Close < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.close'}, params: {json_key: 'params', ref: 'BrowsingContext::CloseParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CloseParameters < Data.define(context: 'context', prompt_unload: 'promptUnload'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Create < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.create'}, params: {json_key: 'params', ref: 'BrowsingContext::CreateParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -195,10 +179,6 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class GetTree < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.getTree'}, params: {json_key: 'params', ref: 'BrowsingContext::GetTreeParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetTreeParameters < Data.define(max_depth: 'maxDepth', root: 'root'); end
 
           # @api private
@@ -207,15 +187,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class HandleUserPrompt < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.handleUserPrompt'}, params: {json_key: 'params', ref: 'BrowsingContext::HandleUserPromptParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class HandleUserPromptParameters < Data.define(context: 'context', accept: 'accept', user_text: 'userText'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class LocateNodes < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.locateNodes'}, params: {json_key: 'params', ref: 'BrowsingContext::LocateNodesParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -227,19 +199,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Navigate < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigate'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigateParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NavigateParameters < Data.define(context: 'context', url: 'url', wait: {json_key: 'wait', enum: 'BrowsingContext::READINESS_STATE'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NavigateResult < Data.define(navigation: {json_key: 'navigation', nullable: true}, url: 'url'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Print < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.print'}, params: {json_key: 'params', ref: 'BrowsingContext::PrintParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -259,23 +223,11 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Reload < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.reload'}, params: {json_key: 'params', ref: 'BrowsingContext::ReloadParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ReloadParameters < Data.define(context: 'context', ignore_cache: 'ignoreCache', wait: {json_key: 'wait', enum: 'BrowsingContext::READINESS_STATE'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetBypassCSP < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.setBypassCSP'}, params: {json_key: 'params', ref: 'BrowsingContext::SetBypassCSPParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetBypassCSPParameters < Data.define(bypass: {fixed: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class SetViewport < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.setViewport'}, params: {json_key: 'params', ref: 'BrowsingContext::SetViewportParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -287,31 +239,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class TraverseHistory < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.traverseHistory'}, params: {json_key: 'params', ref: 'BrowsingContext::TraverseHistoryParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class TraverseHistoryParameters < Data.define(context: 'context', delta: 'delta'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ContextCreated < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.contextCreated'}, params: {json_key: 'params', ref: 'BrowsingContext::Info'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class ContextDestroyed < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.contextDestroyed'}, params: {json_key: 'params', ref: 'BrowsingContext::Info'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class NavigationStarted < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigationStarted'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class FragmentNavigated < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.fragmentNavigated'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class HistoryUpdated < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.historyUpdated'}, params: {json_key: 'params', ref: 'BrowsingContext::HistoryUpdatedParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -319,23 +247,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class DomContentLoaded < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.domContentLoaded'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class Load < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.load'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class DownloadWillBegin < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.downloadWillBegin'}, params: {json_key: 'params', ref: 'BrowsingContext::DownloadWillBeginParams'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DownloadWillBeginParams < Data.define(suggested_filename: 'suggestedFilename', context: 'context', navigation: {json_key: 'navigation', nullable: true}, timestamp: 'timestamp', url: 'url', user_context: 'userContext'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class DownloadEnd < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.downloadEnd'}, params: {json_key: 'params', ref: 'BrowsingContext::DownloadEndParams'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
@@ -357,27 +269,7 @@ module Selenium
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class NavigationAborted < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigationAborted'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class NavigationCommitted < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigationCommitted'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class NavigationFailed < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.navigationFailed'}, params: {json_key: 'params', ref: 'BrowsingContext::NavigationInfo'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class UserPromptClosed < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.userPromptClosed'}, params: {json_key: 'params', ref: 'BrowsingContext::UserPromptClosedParameters'}); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UserPromptClosedParameters < Data.define(context: 'context', accepted: 'accepted', type: {json_key: 'type', enum: 'BrowsingContext::USER_PROMPT_TYPE'}, user_context: 'userContext', user_text: 'userText'); end
-
-          # @api private
-          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          class UserPromptOpened < Data.define(method_: {json_key: 'method', fixed: 'browsingContext.userPromptOpened'}, params: {json_key: 'params', ref: 'BrowsingContext::UserPromptOpenedParameters'}); end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/

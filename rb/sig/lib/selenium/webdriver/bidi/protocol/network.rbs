@@ -182,12 +182,6 @@ module Selenium
             def self.new: (?type: untyped, pattern: String) -> instance
           end
 
-          class AddDataCollector < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::AddDataCollectorParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::AddDataCollectorParameters) -> instance
-          end
-
           class AddDataCollectorParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader data_types: Array[String]
             attr_reader max_encoded_data_size: Integer
@@ -202,12 +196,6 @@ module Selenium
             def self.new: (collector: String) -> instance
           end
 
-          class AddIntercept < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::AddInterceptParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::AddInterceptParameters) -> instance
-          end
-
           class AddInterceptParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader phases: Array[String]
             attr_reader contexts: untyped
@@ -220,12 +208,6 @@ module Selenium
             def self.new: (intercept: String) -> instance
           end
 
-          class ContinueRequest < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::ContinueRequestParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::ContinueRequestParameters) -> instance
-          end
-
           class ContinueRequestParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader request: String
             attr_reader body: untyped
@@ -236,12 +218,6 @@ module Selenium
             def self.new: (request: String, ?body: ::Selenium::WebDriver::BiDi::Protocol::Network::BytesValue?, ?cookies: Array[::Selenium::WebDriver::BiDi::Protocol::Network::CookieHeader]?, ?headers: Array[::Selenium::WebDriver::BiDi::Protocol::Network::Header]?, ?method_: String?, ?url: String?) -> instance
           end
 
-          class ContinueResponse < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::ContinueResponseParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::ContinueResponseParameters) -> instance
-          end
-
           class ContinueResponseParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader request: String
             attr_reader cookies: untyped
@@ -250,12 +226,6 @@ module Selenium
             attr_reader reason_phrase: untyped
             attr_reader status_code: untyped
             def self.new: (request: String, ?cookies: Array[::Selenium::WebDriver::BiDi::Protocol::Network::SetCookieHeader]?, ?credentials: ::Selenium::WebDriver::BiDi::Protocol::Network::AuthCredentials?, ?headers: Array[::Selenium::WebDriver::BiDi::Protocol::Network::Header]?, ?reason_phrase: String?, ?status_code: Integer?) -> instance
-          end
-
-          class ContinueWithAuth < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::ContinueWithAuthParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::ContinueWithAuthParameters) -> instance
           end
 
           class ContinueWithAuthParameters < ::Selenium::WebDriver::BiDi::Union
@@ -272,12 +242,6 @@ module Selenium
             end
           end
 
-          class DisownData < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::DisownDataParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::DisownDataParameters) -> instance
-          end
-
           class DisownDataParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader data_type: String
             attr_reader collector: String
@@ -285,21 +249,9 @@ module Selenium
             def self.new: (data_type: String, collector: String, request: String) -> instance
           end
 
-          class FailRequest < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::FailRequestParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::FailRequestParameters) -> instance
-          end
-
           class FailRequestParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader request: String
             def self.new: (request: String) -> instance
-          end
-
-          class GetData < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::GetDataParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::GetDataParameters) -> instance
           end
 
           class GetDataParameters < ::Selenium::WebDriver::BiDi::Data
@@ -315,12 +267,6 @@ module Selenium
             def self.new: (bytes: ::Selenium::WebDriver::BiDi::Protocol::Network::BytesValue) -> instance
           end
 
-          class ProvideResponse < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::ProvideResponseParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::ProvideResponseParameters) -> instance
-          end
-
           class ProvideResponseParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader request: String
             attr_reader body: untyped
@@ -331,32 +277,14 @@ module Selenium
             def self.new: (request: String, ?body: ::Selenium::WebDriver::BiDi::Protocol::Network::BytesValue?, ?cookies: Array[::Selenium::WebDriver::BiDi::Protocol::Network::SetCookieHeader]?, ?headers: Array[::Selenium::WebDriver::BiDi::Protocol::Network::Header]?, ?reason_phrase: String?, ?status_code: Integer?) -> instance
           end
 
-          class RemoveDataCollector < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::RemoveDataCollectorParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::RemoveDataCollectorParameters) -> instance
-          end
-
           class RemoveDataCollectorParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader collector: String
             def self.new: (collector: String) -> instance
           end
 
-          class RemoveIntercept < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::RemoveInterceptParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::RemoveInterceptParameters) -> instance
-          end
-
           class RemoveInterceptParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader intercept: String
             def self.new: (intercept: String) -> instance
-          end
-
-          class SetCacheBehavior < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::SetCacheBehaviorParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::SetCacheBehaviorParameters) -> instance
           end
 
           class SetCacheBehaviorParameters < ::Selenium::WebDriver::BiDi::Data
@@ -365,23 +293,11 @@ module Selenium
             def self.new: (cache_behavior: String, ?contexts: Array[String]?) -> instance
           end
 
-          class SetExtraHeaders < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::SetExtraHeadersParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::SetExtraHeadersParameters) -> instance
-          end
-
           class SetExtraHeadersParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader headers: Array[::Selenium::WebDriver::BiDi::Protocol::Network::Header]
             attr_reader contexts: untyped
             attr_reader user_contexts: untyped
             def self.new: (headers: Array[::Selenium::WebDriver::BiDi::Protocol::Network::Header], ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
-          end
-
-          class AuthRequired < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::AuthRequiredParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::AuthRequiredParameters) -> instance
           end
 
           class AuthRequiredParameters < ::Selenium::WebDriver::BiDi::Data
@@ -397,12 +313,6 @@ module Selenium
             def self.new: (context: String?, is_blocked: bool, navigation: String?, redirect_count: Integer, request: ::Selenium::WebDriver::BiDi::Protocol::Network::RequestData, timestamp: Integer, ?user_context: String?, ?intercepts: Array[String]?, response: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseData) -> instance
           end
 
-          class BeforeRequestSent < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::BeforeRequestSentParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::BeforeRequestSentParameters) -> instance
-          end
-
           class BeforeRequestSentParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String?
             attr_reader is_blocked: bool
@@ -414,12 +324,6 @@ module Selenium
             attr_reader intercepts: untyped
             attr_reader initiator: untyped
             def self.new: (context: String?, is_blocked: bool, navigation: String?, redirect_count: Integer, request: ::Selenium::WebDriver::BiDi::Protocol::Network::RequestData, timestamp: Integer, ?user_context: String?, ?intercepts: Array[String]?, ?initiator: ::Selenium::WebDriver::BiDi::Protocol::Network::Initiator?) -> instance
-          end
-
-          class FetchError < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::FetchErrorParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::FetchErrorParameters) -> instance
           end
 
           class FetchErrorParameters < ::Selenium::WebDriver::BiDi::Data
@@ -435,12 +339,6 @@ module Selenium
             def self.new: (context: String?, is_blocked: bool, navigation: String?, redirect_count: Integer, request: ::Selenium::WebDriver::BiDi::Protocol::Network::RequestData, timestamp: Integer, ?user_context: String?, ?intercepts: Array[String]?, error_text: String) -> instance
           end
 
-          class ResponseCompleted < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseCompletedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseCompletedParameters) -> instance
-          end
-
           class ResponseCompletedParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String?
             attr_reader is_blocked: bool
@@ -452,12 +350,6 @@ module Selenium
             attr_reader intercepts: untyped
             attr_reader response: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseData
             def self.new: (context: String?, is_blocked: bool, navigation: String?, redirect_count: Integer, request: ::Selenium::WebDriver::BiDi::Protocol::Network::RequestData, timestamp: Integer, ?user_context: String?, ?intercepts: Array[String]?, response: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseData) -> instance
-          end
-
-          class ResponseStarted < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseStartedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Network::ResponseStartedParameters) -> instance
           end
 
           class ResponseStartedParameters < ::Selenium::WebDriver::BiDi::Data

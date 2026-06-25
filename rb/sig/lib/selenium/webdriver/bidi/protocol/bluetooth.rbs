@@ -57,12 +57,6 @@ module Selenium
             def self.new: (?name: String?, ?uuids: Array[String]?, ?appearance: Numeric?, ?manufacturer_data: Array[::Selenium::WebDriver::BiDi::Protocol::Bluetooth::BluetoothManufacturerData]?) -> instance
           end
 
-          class HandleRequestDevicePrompt < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::HandleRequestDevicePromptParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::HandleRequestDevicePromptParameters) -> instance
-          end
-
           class HandleRequestDevicePromptParameters < ::Selenium::WebDriver::BiDi::Union
             class AcceptParameters < ::Selenium::WebDriver::BiDi::Data
               attr_reader accept: untyped
@@ -79,12 +73,6 @@ module Selenium
             end
           end
 
-          class SimulateAdapter < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdapterParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdapterParameters) -> instance
-          end
-
           class SimulateAdapterParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader le_supported: untyped
@@ -92,21 +80,9 @@ module Selenium
             def self.new: (context: String, ?le_supported: bool?, state: String) -> instance
           end
 
-          class DisableSimulation < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::DisableSimulationParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::DisableSimulationParameters) -> instance
-          end
-
           class DisableSimulationParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             def self.new: (context: String) -> instance
-          end
-
-          class SimulatePreconnectedPeripheral < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulatePreconnectedPeripheralParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulatePreconnectedPeripheralParameters) -> instance
           end
 
           class SimulatePreconnectedPeripheralParameters < ::Selenium::WebDriver::BiDi::Data
@@ -116,12 +92,6 @@ module Selenium
             attr_reader manufacturer_data: Array[::Selenium::WebDriver::BiDi::Protocol::Bluetooth::BluetoothManufacturerData]
             attr_reader known_service_uuids: Array[String]
             def self.new: (context: String, address: String, name: String, manufacturer_data: Array[::Selenium::WebDriver::BiDi::Protocol::Bluetooth::BluetoothManufacturerData], known_service_uuids: Array[String]) -> instance
-          end
-
-          class SimulateAdvertisement < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdvertisementParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateAdvertisementParameters) -> instance
           end
 
           class SimulateAdvertisementParameters < ::Selenium::WebDriver::BiDi::Data
@@ -137,12 +107,6 @@ module Selenium
             def self.new: (device_address: String, rssi: Numeric, scan_record: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::ScanRecord) -> instance
           end
 
-          class SimulateGattConnectionResponse < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateGattConnectionResponseParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateGattConnectionResponseParameters) -> instance
-          end
-
           class SimulateGattConnectionResponseParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader address: String
@@ -150,22 +114,10 @@ module Selenium
             def self.new: (context: String, address: String, code: Integer) -> instance
           end
 
-          class SimulateGattDisconnection < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateGattDisconnectionParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateGattDisconnectionParameters) -> instance
-          end
-
           class SimulateGattDisconnectionParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader address: String
             def self.new: (context: String, address: String) -> instance
-          end
-
-          class SimulateService < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateServiceParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateServiceParameters) -> instance
           end
 
           class SimulateServiceParameters < ::Selenium::WebDriver::BiDi::Data
@@ -176,12 +128,6 @@ module Selenium
             def self.new: (context: String, address: String, uuid: String, type: String) -> instance
           end
 
-          class SimulateCharacteristic < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateCharacteristicParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateCharacteristicParameters) -> instance
-          end
-
           class SimulateCharacteristicParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader address: String
@@ -190,12 +136,6 @@ module Selenium
             attr_reader characteristic_properties: untyped
             attr_reader type: String
             def self.new: (context: String, address: String, service_uuid: String, characteristic_uuid: String, ?characteristic_properties: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::CharacteristicProperties?, type: String) -> instance
-          end
-
-          class SimulateCharacteristicResponse < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateCharacteristicResponseParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateCharacteristicResponseParameters) -> instance
           end
 
           class SimulateCharacteristicResponseParameters < ::Selenium::WebDriver::BiDi::Data
@@ -209,12 +149,6 @@ module Selenium
             def self.new: (context: String, address: String, service_uuid: String, characteristic_uuid: String, type: String, code: Integer, ?data: Array[Integer]?) -> instance
           end
 
-          class SimulateDescriptor < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateDescriptorParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateDescriptorParameters) -> instance
-          end
-
           class SimulateDescriptorParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader address: String
@@ -223,12 +157,6 @@ module Selenium
             attr_reader descriptor_uuid: String
             attr_reader type: String
             def self.new: (context: String, address: String, service_uuid: String, characteristic_uuid: String, descriptor_uuid: String, type: String) -> instance
-          end
-
-          class SimulateDescriptorResponse < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateDescriptorResponseParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::SimulateDescriptorResponseParameters) -> instance
           end
 
           class SimulateDescriptorResponseParameters < ::Selenium::WebDriver::BiDi::Data
@@ -243,12 +171,6 @@ module Selenium
             def self.new: (context: String, address: String, service_uuid: String, characteristic_uuid: String, descriptor_uuid: String, type: String, code: Integer, ?data: Array[Integer]?) -> instance
           end
 
-          class RequestDevicePromptUpdated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::RequestDevicePromptUpdatedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::RequestDevicePromptUpdatedParameters) -> instance
-          end
-
           class RequestDevicePromptUpdatedParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader prompt: String
@@ -256,22 +178,10 @@ module Selenium
             def self.new: (context: String, prompt: String, devices: Array[::Selenium::WebDriver::BiDi::Protocol::Bluetooth::RequestDeviceInfo]) -> instance
           end
 
-          class GattConnectionAttempted < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::GattConnectionAttemptedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::GattConnectionAttemptedParameters) -> instance
-          end
-
           class GattConnectionAttemptedParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader address: String
             def self.new: (context: String, address: String) -> instance
-          end
-
-          class CharacteristicEventGenerated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::CharacteristicEventGeneratedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::CharacteristicEventGeneratedParameters) -> instance
           end
 
           class CharacteristicEventGeneratedParameters < ::Selenium::WebDriver::BiDi::Data
@@ -282,12 +192,6 @@ module Selenium
             attr_reader type: String
             attr_reader data: untyped
             def self.new: (context: String, address: String, service_uuid: String, characteristic_uuid: String, type: String, ?data: Array[Integer]?) -> instance
-          end
-
-          class DescriptorEventGenerated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::DescriptorEventGeneratedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Bluetooth::DescriptorEventGeneratedParameters) -> instance
           end
 
           class DescriptorEventGeneratedParameters < ::Selenium::WebDriver::BiDi::Data

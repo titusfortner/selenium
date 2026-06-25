@@ -97,21 +97,9 @@ module Selenium
             def self.new: (context: String, navigation: String?, timestamp: Integer, url: String, ?user_context: String?) -> instance
           end
 
-          class Activate < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ActivateParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ActivateParameters) -> instance
-          end
-
           class ActivateParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             def self.new: (context: String) -> instance
-          end
-
-          class CaptureScreenshot < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CaptureScreenshotParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CaptureScreenshotParameters) -> instance
           end
 
           class CaptureScreenshotParameters < ::Selenium::WebDriver::BiDi::Data
@@ -151,22 +139,10 @@ module Selenium
             def self.new: (data: String) -> instance
           end
 
-          class Close < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CloseParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CloseParameters) -> instance
-          end
-
           class CloseParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader prompt_unload: untyped
             def self.new: (context: String, ?prompt_unload: bool?) -> instance
-          end
-
-          class Create < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CreateParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::CreateParameters) -> instance
           end
 
           class CreateParameters < ::Selenium::WebDriver::BiDi::Data
@@ -183,12 +159,6 @@ module Selenium
             def self.new: (context: String, ?user_context: String?) -> instance
           end
 
-          class GetTree < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::GetTreeParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::GetTreeParameters) -> instance
-          end
-
           class GetTreeParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader max_depth: untyped
             attr_reader root: untyped
@@ -200,23 +170,11 @@ module Selenium
             def self.new: (contexts: Array[::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info]) -> instance
           end
 
-          class HandleUserPrompt < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HandleUserPromptParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HandleUserPromptParameters) -> instance
-          end
-
           class HandleUserPromptParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader accept: untyped
             attr_reader user_text: untyped
             def self.new: (context: String, ?accept: bool?, ?user_text: String?) -> instance
-          end
-
-          class LocateNodes < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::LocateNodesParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::LocateNodesParameters) -> instance
           end
 
           class LocateNodesParameters < ::Selenium::WebDriver::BiDi::Data
@@ -233,12 +191,6 @@ module Selenium
             def self.new: (nodes: Array[::Selenium::WebDriver::BiDi::Protocol::Script::NodeRemoteValue]) -> instance
           end
 
-          class Navigate < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigateParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigateParameters) -> instance
-          end
-
           class NavigateParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader url: String
@@ -250,12 +202,6 @@ module Selenium
             attr_reader navigation: String?
             attr_reader url: String
             def self.new: (navigation: String?, url: String) -> instance
-          end
-
-          class Print < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PrintParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::PrintParameters) -> instance
           end
 
           class PrintParameters < ::Selenium::WebDriver::BiDi::Data
@@ -289,12 +235,6 @@ module Selenium
             def self.new: (data: String) -> instance
           end
 
-          class Reload < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ReloadParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::ReloadParameters) -> instance
-          end
-
           class ReloadParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader ignore_cache: untyped
@@ -302,23 +242,11 @@ module Selenium
             def self.new: (context: String, ?ignore_cache: bool?, ?wait: String?) -> instance
           end
 
-          class SetBypassCSP < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::SetBypassCSPParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::SetBypassCSPParameters) -> instance
-          end
-
           class SetBypassCSPParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader bypass: untyped
             attr_reader contexts: untyped
             attr_reader user_contexts: untyped
             def self.new: (?bypass: untyped, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
-          end
-
-          class SetViewport < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::SetViewportParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::SetViewportParameters) -> instance
           end
 
           class SetViewportParameters < ::Selenium::WebDriver::BiDi::Data
@@ -335,46 +263,10 @@ module Selenium
             def self.new: (width: Integer, height: Integer) -> instance
           end
 
-          class TraverseHistory < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::TraverseHistoryParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::TraverseHistoryParameters) -> instance
-          end
-
           class TraverseHistoryParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader delta: Integer
             def self.new: (context: String, delta: Integer) -> instance
-          end
-
-          class ContextCreated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info) -> instance
-          end
-
-          class ContextDestroyed < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::Info) -> instance
-          end
-
-          class NavigationStarted < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class FragmentNavigated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class HistoryUpdated < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HistoryUpdatedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::HistoryUpdatedParameters) -> instance
           end
 
           class HistoryUpdatedParameters < ::Selenium::WebDriver::BiDi::Data
@@ -385,24 +277,6 @@ module Selenium
             def self.new: (context: String, timestamp: Integer, url: String, ?user_context: String?) -> instance
           end
 
-          class DomContentLoaded < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class Load < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class DownloadWillBegin < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadWillBeginParams
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadWillBeginParams) -> instance
-          end
-
           class DownloadWillBeginParams < ::Selenium::WebDriver::BiDi::Data
             attr_reader suggested_filename: String
             attr_reader context: String
@@ -411,12 +285,6 @@ module Selenium
             attr_reader url: String
             attr_reader user_context: untyped
             def self.new: (suggested_filename: String, context: String, navigation: String?, timestamp: Integer, url: String, ?user_context: String?) -> instance
-          end
-
-          class DownloadEnd < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::DownloadEndParams) -> instance
           end
 
           class DownloadEndParams < ::Selenium::WebDriver::BiDi::Union
@@ -441,30 +309,6 @@ module Selenium
             end
           end
 
-          class NavigationAborted < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class NavigationCommitted < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class NavigationFailed < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::NavigationInfo) -> instance
-          end
-
-          class UserPromptClosed < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::UserPromptClosedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::UserPromptClosedParameters) -> instance
-          end
-
           class UserPromptClosedParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader context: String
             attr_reader accepted: bool
@@ -472,12 +316,6 @@ module Selenium
             attr_reader user_context: untyped
             attr_reader user_text: untyped
             def self.new: (context: String, accepted: bool, type: String, ?user_context: String?, ?user_text: String?) -> instance
-          end
-
-          class UserPromptOpened < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::UserPromptOpenedParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::BrowsingContext::UserPromptOpenedParameters) -> instance
           end
 
           class UserPromptOpenedParameters < ::Selenium::WebDriver::BiDi::Data

@@ -14,12 +14,6 @@ module Selenium
             def self.new: (name: String) -> instance
           end
 
-          class SetPermission < ::Selenium::WebDriver::BiDi::Data
-            attr_reader method_: untyped
-            attr_reader params: ::Selenium::WebDriver::BiDi::Protocol::Permissions::SetPermissionParameters
-            def self.new: (?method_: untyped, params: ::Selenium::WebDriver::BiDi::Protocol::Permissions::SetPermissionParameters) -> instance
-          end
-
           class SetPermissionParameters < ::Selenium::WebDriver::BiDi::Data
             attr_reader descriptor: ::Selenium::WebDriver::BiDi::Protocol::Permissions::PermissionDescriptor
             attr_reader state: String
