@@ -30,13 +30,13 @@ module Selenium
       def_delegators :network, :continue_with_auth, :continue_with_request, :continue_with_response
 
       def initialize(bridge)
-        @network = BiDi::Network.new(bridge.bidi)
+        @network = BiDi::Network.new(bridge)
         @callbacks = {}
       end
 
       def remove_handler(id)
         intercept = callbacks[id]
-        network.remove_intercept(intercept['intercept'])
+        network.remove_intercept(intercept)
         callbacks.delete(id)
       end
 

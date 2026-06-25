@@ -25,29 +25,24 @@ module Selenium
       # @api private
       #
       class Session
-        Status = Struct.new(:ready, :message)
-
-        def initialize(bidi)
-          @bidi = bidi
+        def initialize(transport)
+          @session = Protocol::Session.new(transport)
         end
 
+        # @return [Protocol::Session::StatusResult] responds to #ready and #message
         def status
-          status = @bidi.send_cmd('session.status')
-          Status.new(**status)
+          @session.status
         end
 
         def subscribe(events, browsing_contexts = nil)
-          opts = {events: Array(events)}
-          opts[:browsing_contexts] = Array(browsing_contexts) if browsing_contexts
-
-          @bidi.send_cmd('session.subscribe', **opts)
+          @session.subscribe(events: Array(events),
+                             contexts: browsing_contexts ? Array(browsing_contexts) : UNSET)
         end
 
-        def unsubscribe(events, browsing_contexts = nil)
-          opts = {events: Array(events)}
-          opts[:browsing_contexts] = Array(browsing_contexts) if browsing_contexts
-
-          @bidi.send_cmd('session.unsubscribe', **opts)
+        # The BiDi unsubscribe-by-attributes request takes only events; the historical
+        # browsing_contexts argument was never part of the wire shape.
+        def unsubscribe(events, _browsing_contexts = nil)
+          @session.unsubscribe(events: Array(events))
         end
       end # Session
     end # BiDi

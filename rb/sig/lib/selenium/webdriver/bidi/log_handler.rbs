@@ -4,13 +4,15 @@ module Selenium
       class LogHandler
         @bidi: BiDi
 
+        @session: BiDi::Protocol::Session
+
         @log_entry_subscribed: bool
 
         ConsoleLogEntry: Struct
 
         JavaScriptLogEntry: Struct
 
-        def initialize: (BiDi bidi) -> void
+        def initialize: (untyped bridge) -> void
 
         def add_message_handler: (String type) ?{ (untyped) -> untyped } -> Integer
 

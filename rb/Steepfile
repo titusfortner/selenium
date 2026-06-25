@@ -6,8 +6,11 @@ target :lib do
 
   # Total amount of errors ignore 64 in 29 files
   ignore(
-    # Ignore all files in the bidi directory until we decide the implementation
-    'lib/selenium/webdriver/bidi/**/*.rb',
+    # Ignore the hand-written bidi classes until we decide the implementation; the
+    # generated protocol/ layer is type-checked against its emitted RBS.
+    'lib/selenium/webdriver/bidi/*.rb',
+    'lib/selenium/webdriver/bidi/network/**/*.rb',
+    'lib/selenium/webdriver/bidi/support/**/*.rb',
     # Ignore all spec files
     'spec/**/*.rb',
     # Ignore line 166 due to UDP RBS issue

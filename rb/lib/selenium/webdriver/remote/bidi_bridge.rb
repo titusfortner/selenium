@@ -21,28 +21,52 @@ module Selenium
   module WebDriver
     module Remote
       class BiDiBridge < Bridge
-        attr_reader :bidi
+        # Maps the session's page load strategy to the BiDi navigation readiness
+        # state used as the default `wait` for navigation commands.
+        READINESS_STATE = {
+          'none' => 'none',
+          'eager' => 'interactive',
+          'normal' => 'complete'
+        }.freeze
 
+        attr_reader :bidi, :transport
+
+        # The websocket can only be opened once the session reports its
+        # web_socket_url, so the bridge owns it from here (not injected like the HTTP
+        # client). Transport is the command seam; BiDi is retained for events/session
+        # over the same socket and is on its way out.
         def create_session(capabilities)
           super
-          socket_url = @capabilities[:web_socket_url]
-          @bidi = Selenium::WebDriver::BiDi.new(url: socket_url)
+          socket = WebSocketConnection.new(url: @capabilities[:web_socket_url], client_config: http.client_config)
+          @transport = BiDi::Transport.new(socket)
+          @bidi = BiDi.new(socket: socket, transport: @transport)
         end
 
+        # A command a given BiDi implementation does not support raises
+        # 'unknown command'; nothing executed, so it is safe to fall back to the
+        # classic HTTP behavior inherited from Bridge.
         def get(url)
-          browsing_context.navigate(url)
+          browsing_context.navigate(context: window_handle, url: url, wait: readiness)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def go_back
-          browsing_context.traverse_history(-1)
+          browsing_context.traverse_history(context: window_handle, delta: -1)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def go_forward
-          browsing_context.traverse_history(1)
+          browsing_context.traverse_history(context: window_handle, delta: 1)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def refresh
-          browsing_context.reload
+          browsing_context.reload(context: window_handle, wait: readiness)
+        rescue Error::UnknownCommandError
+          super
         end
 
         def quit
@@ -60,7 +84,11 @@ module Selenium
         private
 
         def browsing_context
-          @browsing_context ||= WebDriver::BiDi::BrowsingContext.new(self)
+          @browsing_context ||= BiDi::Protocol::BrowsingContext.new(self)
+        end
+
+        def readiness
+          READINESS_STATE[capabilities[:page_load_strategy]]
         end
       end # BiDiBridge
     end # Remote

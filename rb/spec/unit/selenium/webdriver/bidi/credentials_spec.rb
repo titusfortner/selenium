@@ -68,9 +68,9 @@ module Selenium
             formatted_creds = creds.as_json
 
             expect(formatted_creds).to eq(
-              type: 'password',
-              username: 'alice',
-              password: 'secret'
+              'type' => 'password',
+              'username' => 'alice',
+              'password' => 'secret'
             )
           end
         end

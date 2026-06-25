@@ -25,14 +25,18 @@ module Selenium
       autoload :Browser, 'selenium/webdriver/bidi/browser'
       autoload :BrowsingContext, 'selenium/webdriver/bidi/browsing_context'
       autoload :Struct, 'selenium/webdriver/bidi/struct'
+      autoload :Transport, 'selenium/webdriver/bidi/transport'
+      # Loads the serialization runtime then every generated domain module.
+      autoload :Protocol, 'selenium/webdriver/bidi/protocol'
       autoload :Network, 'selenium/webdriver/bidi/network'
       autoload :InterceptedRequest, 'selenium/webdriver/bidi/network/intercepted_request'
       autoload :InterceptedResponse, 'selenium/webdriver/bidi/network/intercepted_response'
       autoload :InterceptedAuth, 'selenium/webdriver/bidi/network/intercepted_auth'
       autoload :InterceptedItem, 'selenium/webdriver/bidi/network/intercepted_item'
 
-      def initialize(url:)
-        @ws = WebSocketConnection.new(url: url)
+      def initialize(url: nil, socket: nil, transport: nil)
+        @ws = socket || WebSocketConnection.new(url: url)
+        @transport = transport
       end
 
       def close
@@ -52,7 +56,7 @@ module Selenium
       end
 
       def session
-        @session ||= Session.new(self)
+        @session ||= Session.new(@transport)
       end
 
       def send_cmd(method, **params)

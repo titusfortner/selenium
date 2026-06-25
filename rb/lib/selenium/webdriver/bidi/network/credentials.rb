@@ -35,11 +35,7 @@ module Selenium
         def as_json
           return nil unless username && password
 
-          {
-            type: 'password',
-            username: username,
-            password: password
-          }
+          Protocol::Network::AuthCredentials.new(username: username, password: password).as_json
         end
       end
     end # BiDi

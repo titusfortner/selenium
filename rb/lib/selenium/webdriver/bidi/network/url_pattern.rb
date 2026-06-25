@@ -44,23 +44,19 @@ module Selenium
           url_patterns.flatten.map do |url_pattern|
             uri = URI.parse(url_pattern)
 
-            {
-              type: 'pattern',
+            Protocol::Network::UrlPatternPattern.new(
               protocol: uri.scheme || '',
               hostname: uri.host || '',
               port: uri.port.to_s,
               pathname: uri.path || '',
               search: uri.query || ''
-            }
+            ).as_json
           end
         end
 
         def to_url_string_pattern(*url_patterns)
           url_patterns.flatten.map do |url_pattern|
-            {
-              type: 'string',
-              pattern: url_pattern
-            }
+            Protocol::Network::UrlPatternString.new(pattern: url_pattern).as_json
           end
         end
       end

@@ -27,13 +27,10 @@ module Selenium
       class Headers < Hash
         def as_json
           map do |name, val|
-            {
+            Protocol::Network::Header.new(
               name: name.to_s,
-              value: {
-                type: 'string',
-                value: val.to_s
-              }
-            }
+              value: Protocol::Network::StringValue.new(value: val.to_s)
+            ).as_json
           end
         end
       end

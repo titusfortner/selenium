@@ -42,105 +42,84 @@ module Selenium
           auth_required: 'authRequired'
         }.freeze
 
-        def initialize(bidi)
-          @bidi = bidi
+        def initialize(bridge)
+          # Resolving bridge.bidi first raises the friendly "BiDi must be enabled"
+          # error on a non-BiDi bridge; it is also the event seam used by #on.
+          @bidi = bridge.bidi
+          @network = BiDi::Protocol::Network.new(bridge)
+          @session = BiDi::Protocol::Session.new(bridge)
         end
 
         def add_intercept(phases: [], contexts: nil, url_patterns: nil, pattern_type: :string)
           url_patterns = url_patterns && pattern_type ? UrlPattern.format_pattern(url_patterns, pattern_type) : nil
-          @bidi.send_cmd('network.addIntercept',
-                         phases: phases,
-                         contexts: contexts,
-                         urlPatterns: url_patterns)
+          @network.add_intercept(phases: phases, contexts: contexts, url_patterns: url_patterns).intercept
         end
 
         def remove_intercept(intercept)
-          @bidi.send_cmd('network.removeIntercept', intercept: intercept)
+          @network.remove_intercept(intercept: intercept)
         end
 
         def continue_with_auth(request_id, username, password)
-          @bidi.send_cmd(
-            'network.continueWithAuth',
+          @network.continue_with_auth(
             request: request_id,
             action: 'provideCredentials',
-            credentials: {
-              type: 'password',
-              username: username,
-              password: password
-            }
+            credentials: Protocol::Network::AuthCredentials.new(username: username, password: password)
           )
         end
 
         def continue_without_auth(request_id)
-          @bidi.send_cmd(
-            'network.continueWithAuth',
-            request: request_id,
-            action: 'default'
-          )
+          @network.continue_with_auth(request: request_id, action: 'default')
         end
 
         def cancel_auth(request_id)
-          @bidi.send_cmd(
-            'network.continueWithAuth',
-            request: request_id,
-            action: 'cancel'
-          )
+          @network.continue_with_auth(request: request_id, action: 'cancel')
         end
 
         def continue_request(**args)
-          args = {
+          @network.continue_request(
             request: args[:id],
             body: args[:body],
             cookies: args[:cookies],
             headers: args[:headers],
-            method: args[:method],
+            method_: args[:method],
             url: args[:url]
-          }.compact
-
-          @bidi.send_cmd('network.continueRequest', **args)
-        end
-
-        def fail_request(request_id)
-          @bidi.send_cmd(
-            'network.failRequest',
-            request: request_id
           )
         end
 
+        def fail_request(request_id)
+          @network.fail_request(request: request_id)
+        end
+
         def continue_response(**args)
-          args = {
+          @network.continue_response(
             request: args[:id],
             cookies: args[:cookies],
             credentials: args[:credentials],
             headers: args[:headers],
-            reasonPhrase: args[:reason],
-            statusCode: args[:status]
-          }.compact
-
-          @bidi.send_cmd('network.continueResponse', **args)
+            reason_phrase: args[:reason],
+            status_code: args[:status]
+          )
         end
 
         def provide_response(**args)
-          args = {
+          @network.provide_response(
             request: args[:id],
             body: args[:body],
             cookies: args[:cookies],
             headers: args[:headers],
-            reasonPhrase: args[:reason],
-            statusCode: args[:status]
-          }.compact
-
-          @bidi.send_cmd('network.provideResponse', **args)
+            reason_phrase: args[:reason],
+            status_code: args[:status]
+          )
         end
 
         def set_cache_behavior(behavior, *contexts)
-          @bidi.send_cmd('network.setCacheBehavior', cacheBehavior: behavior, contexts: contexts)
+          @network.set_cache_behavior(cache_behavior: behavior, contexts: contexts)
         end
 
         def on(event, &block)
           event = EVENTS[event] if event.is_a?(Symbol)
           @bidi.add_callback(event, &block)
-          @bidi.session.subscribe(event)
+          @session.subscribe(events: [event])
         end
       end # Network
     end # BiDi
