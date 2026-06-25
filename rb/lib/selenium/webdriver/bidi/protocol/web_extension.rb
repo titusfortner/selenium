@@ -25,11 +25,15 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class WebExtension
+          # @api private
           class Install < Data.define(method_: {json_key: 'method', fixed: 'webExtension.install'}, params: {json_key: 'params', ref: 'WebExtension::InstallParameters'}); end
 
+          # @api private
           class InstallParameters < Data.define(extension_data: {json_key: 'extensionData', ref: 'WebExtension::ExtensionData'}); end
 
+          # @api private
           class ExtensionData < Union
             discriminator 'type'
             variants(
@@ -39,26 +43,34 @@ module Selenium
             )
           end
 
+          # @api private
           class ExtensionPath < Data.define(type: {fixed: 'path'}, path: 'path'); end
 
+          # @api private
           class ExtensionArchivePath < Data.define(type: {fixed: 'archivePath'}, path: 'path'); end
 
+          # @api private
           class ExtensionBase64Encoded < Data.define(type: {fixed: 'base64'}, value: 'value'); end
 
+          # @api private
           class InstallResult < Data.define(extension: 'extension'); end
 
+          # @api private
           class Uninstall < Data.define(method_: {json_key: 'method', fixed: 'webExtension.uninstall'}, params: {json_key: 'params', ref: 'WebExtension::UninstallParameters'}); end
 
+          # @api private
           class UninstallParameters < Data.define(extension: 'extension'); end
 
           def initialize(context)
             @transport = Transport.for(context)
           end
 
+          # @api private
           def install(extension_data:)
             @transport.execute('webExtension.install', InstallParameters.new(extension_data: extension_data), Protocol.const_get('WebExtension::InstallResult'))
           end
 
+          # @api private
           def uninstall(extension:)
             @transport.execute('webExtension.uninstall', UninstallParameters.new(extension: extension))
           end

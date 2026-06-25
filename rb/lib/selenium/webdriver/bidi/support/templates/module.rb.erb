@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class <%= mod.ruby_class %>
 <%- unless mod.events.empty? -%>
           EVENTS = {
@@ -44,6 +45,7 @@ module Selenium
 <%- end -%>
 <%- mod.types.each do |type| -%>
 <%- if type.union? -%>
+          # @api private
           class <%= type.ruby_name %> < Union
 <%- if type.discriminator_wire && !type.value_variants.empty? -%>
             discriminator '<%= type.discriminator_wire %>'
@@ -65,16 +67,20 @@ module Selenium
 <%- end -%>
 <%- type.nested_types.each do |nested| -%>
 
+            # @api private
             class <%= nested.ruby_name %> < Data.define(<%= nested.define_args %>); end
 <%- end -%>
           end
 
 <%- elsif type.nested_types.empty? -%>
+          # @api private
           class <%= type.ruby_name %> < Data.define(<%= type.define_args %>); end
 
 <%- else -%>
+          # @api private
           class <%= type.ruby_name %> < Data.define(<%= type.define_args %>)
 <%- type.nested_types.each do |nested| -%>
+            # @api private
             class <%= nested.ruby_name %> < Data.define(<%= nested.define_args %>); end
 <%- end -%>
           end
@@ -88,10 +94,14 @@ module Selenium
 <%- mod.commands.each do |cmd| -%>
 <%- if cmd.passthrough -%>
           # params are a spec union; forward verbatim until variant dispatch lands
+          #
+          # @api private
           def <%= cmd.method_name %>(**params)
 <%- elsif cmd.params.empty? -%>
+          # @api private
           def <%= cmd.method_name %>
 <%- else -%>
+          # @api private
           def <%= cmd.method_name %>(<%= cmd.signature %>)
 <%- end -%>
 <%- cmd.enum_checks.each do |check| -%>

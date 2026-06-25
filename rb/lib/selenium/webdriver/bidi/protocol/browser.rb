@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Browser
           CLIENT_WINDOW_INFO_STATE = {
             fullscreen: 'fullscreen',
@@ -39,30 +40,43 @@ module Selenium
             minimized: 'minimized',
           }.freeze
 
+          # @api private
           class ClientWindowInfo < Data.define(active: 'active', client_window: 'clientWindow', height: 'height', state: {json_key: 'state', enum: 'Browser::CLIENT_WINDOW_INFO_STATE'}, width: 'width', x: 'x', y: 'y'); end
 
+          # @api private
           class UserContextInfo < Data.define(user_context: 'userContext'); end
 
+          # @api private
           class Close < Data.define(method_: {json_key: 'method', fixed: 'browser.close'}, params: 'params'); end
 
+          # @api private
           class CreateUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.createUserContext'}, params: {json_key: 'params', ref: 'Browser::CreateUserContextParameters'}); end
 
+          # @api private
           class CreateUserContextParameters < Data.define(accept_insecure_certs: 'acceptInsecureCerts', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}); end
 
+          # @api private
           class GetClientWindows < Data.define(method_: {json_key: 'method', fixed: 'browser.getClientWindows'}, params: 'params'); end
 
+          # @api private
           class GetClientWindowsResult < Data.define(client_windows: {json_key: 'clientWindows', ref: 'Browser::ClientWindowInfo', list: true}); end
 
+          # @api private
           class GetUserContexts < Data.define(method_: {json_key: 'method', fixed: 'browser.getUserContexts'}, params: 'params'); end
 
+          # @api private
           class GetUserContextsResult < Data.define(user_contexts: {json_key: 'userContexts', ref: 'Browser::UserContextInfo', list: true}); end
 
+          # @api private
           class RemoveUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.removeUserContext'}, params: {json_key: 'params', ref: 'Browser::RemoveUserContextParameters'}); end
 
+          # @api private
           class RemoveUserContextParameters < Data.define(user_context: 'userContext'); end
 
+          # @api private
           class SetClientWindowState < Data.define(method_: {json_key: 'method', fixed: 'browser.setClientWindowState'}, params: {json_key: 'params', ref: 'Browser::SetClientWindowStateParameters'}); end
 
+          # @api private
           class SetClientWindowStateParameters < Union
             discriminator 'state'
             variants(
@@ -70,15 +84,20 @@ module Selenium
             )
             fallback 'Browser::SetClientWindowStateParameters::ClientWindowNamedState'
 
+            # @api private
             class ClientWindowNamedState < Data.define(client_window: 'clientWindow', state: {json_key: 'state', enum: 'Browser::CLIENT_WINDOW_NAMED_STATE_STATE'}); end
 
+            # @api private
             class ClientWindowRectState < Data.define(state: {fixed: 'normal'}, client_window: 'clientWindow', width: 'width', height: 'height', x: 'x', y: 'y'); end
           end
 
+          # @api private
           class SetDownloadBehavior < Data.define(method_: {json_key: 'method', fixed: 'browser.setDownloadBehavior'}, params: {json_key: 'params', ref: 'Browser::SetDownloadBehaviorParameters'}); end
 
+          # @api private
           class SetDownloadBehaviorParameters < Data.define(download_behavior: {json_key: 'downloadBehavior', nullable: true, ref: 'Browser::DownloadBehavior'}, user_contexts: {json_key: 'userContexts', list: true}); end
 
+          # @api private
           class DownloadBehavior < Union
             discriminator 'type'
             variants(
@@ -86,8 +105,10 @@ module Selenium
               'denied' => 'Browser::DownloadBehavior::Denied',
             )
 
+            # @api private
             class Allowed < Data.define(type: {fixed: 'allowed'}, destination_folder: 'destinationFolder'); end
 
+            # @api private
             class Denied < Data.define(type: {fixed: 'denied'}); end
           end
 
@@ -95,31 +116,38 @@ module Selenium
             @transport = Transport.for(context)
           end
 
+          # @api private
           def close
             @transport.execute('browser.close')
           end
 
+          # @api private
           def create_user_context(accept_insecure_certs: UNSET, proxy: UNSET, unhandled_prompt_behavior: UNSET)
             @transport.execute('browser.createUserContext', CreateUserContextParameters.new(accept_insecure_certs: accept_insecure_certs, proxy: proxy, unhandled_prompt_behavior: unhandled_prompt_behavior), Protocol.const_get('Browser::UserContextInfo'))
           end
 
+          # @api private
           def get_client_windows
             @transport.execute('browser.getClientWindows', nil, Protocol.const_get('Browser::GetClientWindowsResult'))
           end
 
+          # @api private
           def get_user_contexts
             @transport.execute('browser.getUserContexts', nil, Protocol.const_get('Browser::GetUserContextsResult'))
           end
 
+          # @api private
           def remove_user_context(user_context:)
             @transport.execute('browser.removeUserContext', RemoveUserContextParameters.new(user_context: user_context))
           end
 
+          # @api private
           def set_client_window_state(client_window:, state:, width: UNSET, height: UNSET, x: UNSET, y: UNSET)
             Enum.check!('state', state, %w[normal fullscreen maximized minimized])
             @transport.execute('browser.setClientWindowState', SetClientWindowStateParameters.build(client_window: client_window, state: state, width: width, height: height, x: x, y: y), Protocol.const_get('Browser::ClientWindowInfo'))
           end
 
+          # @api private
           def set_download_behavior(download_behavior:, user_contexts: UNSET)
             @transport.execute('browser.setDownloadBehavior', SetDownloadBehaviorParameters.new(download_behavior: download_behavior, user_contexts: user_contexts))
           end

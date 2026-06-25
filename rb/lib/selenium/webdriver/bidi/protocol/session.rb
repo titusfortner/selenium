@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Session
           USER_PROMPT_HANDLER_TYPE = {
             accept: 'accept',
@@ -32,10 +33,13 @@ module Selenium
             ignore: 'ignore',
           }.freeze
 
+          # @api private
           class CapabilitiesRequest < Data.define(always_match: {json_key: 'alwaysMatch', ref: 'Session::CapabilityRequest'}, first_match: {json_key: 'firstMatch', ref: 'Session::CapabilityRequest', list: true}); end
 
+          # @api private
           class CapabilityRequest < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, extensible: true); end
 
+          # @api private
           class ProxyConfiguration < Union
             discriminator 'proxyType'
             variants(
@@ -47,46 +51,67 @@ module Selenium
             )
           end
 
+          # @api private
           class AutodetectProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'autodetect'}, extensible: true); end
 
+          # @api private
           class DirectProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'direct'}, extensible: true); end
 
+          # @api private
           class ManualProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'manual'}, http_proxy: 'httpProxy', ssl_proxy: 'sslProxy', socks_proxy: 'socksProxy', socks_version: 'socksVersion', no_proxy: {json_key: 'noProxy', list: true}, extensible: true); end
 
+          # @api private
           class SocksProxyConfiguration < Data.define(socks_proxy: 'socksProxy', socks_version: 'socksVersion'); end
 
+          # @api private
           class PacProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'pac'}, proxy_autoconfig_url: 'proxyAutoconfigUrl', extensible: true); end
 
+          # @api private
           class SystemProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'system'}, extensible: true); end
 
+          # @api private
           class UserPromptHandler < Data.define(alert: {json_key: 'alert', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, before_unload: {json_key: 'beforeUnload', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, confirm: {json_key: 'confirm', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, default: {json_key: 'default', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, file: {json_key: 'file', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, prompt: {json_key: 'prompt', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}); end
 
+          # @api private
           class SubscribeParameters < Data.define(events: {json_key: 'events', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
+          # @api private
           class UnsubscribeByIDRequest < Data.define(subscriptions: {json_key: 'subscriptions', list: true}); end
 
+          # @api private
           class UnsubscribeByAttributesRequest < Data.define(events: {json_key: 'events', list: true}); end
 
+          # @api private
           class Status < Data.define(method_: {json_key: 'method', fixed: 'session.status'}, params: 'params'); end
 
+          # @api private
           class StatusResult < Data.define(ready: 'ready', message: 'message'); end
 
+          # @api private
           class New < Data.define(method_: {json_key: 'method', fixed: 'session.new'}, params: {json_key: 'params', ref: 'Session::NewParameters'}); end
 
+          # @api private
           class NewParameters < Data.define(capabilities: {json_key: 'capabilities', ref: 'Session::CapabilitiesRequest'}); end
 
+          # @api private
           class NewResult < Data.define(session_id: 'sessionId', capabilities: {json_key: 'capabilities', ref: 'Session::NewResult::Capabilities'})
+            # @api private
             class Capabilities < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', set_window_rect: 'setWindowRect', user_agent: 'userAgent', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, web_socket_url: 'webSocketUrl', extensible: true); end
           end
 
+          # @api private
           class End < Data.define(method_: {json_key: 'method', fixed: 'session.end'}, params: 'params'); end
 
+          # @api private
           class Subscribe < Data.define(method_: {json_key: 'method', fixed: 'session.subscribe'}, params: {json_key: 'params', ref: 'Session::SubscribeParameters'}); end
 
+          # @api private
           class SubscribeResult < Data.define(subscription: 'subscription'); end
 
+          # @api private
           class Unsubscribe < Data.define(method_: {json_key: 'method', fixed: 'session.unsubscribe'}, params: {json_key: 'params', ref: 'Session::UnsubscribeParameters'}); end
 
+          # @api private
           class UnsubscribeParameters < Union
             presence(
               'Session::UnsubscribeByAttributesRequest' => ['events'],
@@ -98,22 +123,27 @@ module Selenium
             @transport = Transport.for(context)
           end
 
+          # @api private
           def end_
             @transport.execute('session.end')
           end
 
+          # @api private
           def new(capabilities:)
             @transport.execute('session.new', NewParameters.new(capabilities: capabilities), Protocol.const_get('Session::NewResult'))
           end
 
+          # @api private
           def status
             @transport.execute('session.status', nil, Protocol.const_get('Session::StatusResult'))
           end
 
+          # @api private
           def subscribe(events:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('session.subscribe', SubscribeParameters.new(events: events, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Session::SubscribeResult'))
           end
 
+          # @api private
           def unsubscribe(events: UNSET, subscriptions: UNSET)
             @transport.execute('session.unsubscribe', UnsubscribeParameters.build(events: events, subscriptions: subscriptions))
           end

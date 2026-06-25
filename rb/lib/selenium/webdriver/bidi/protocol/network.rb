@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Network
           EVENTS = {
             auth_required: 'network.authRequired',
@@ -73,12 +74,16 @@ module Selenium
             bypass: 'bypass',
           }.freeze
 
+          # @api private
           class AuthChallenge < Data.define(scheme: 'scheme', realm: 'realm'); end
 
+          # @api private
           class AuthCredentials < Data.define(type: {fixed: 'password'}, username: 'username', password: 'password'); end
 
+          # @api private
           class BaseParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}); end
 
+          # @api private
           class BytesValue < Union
             discriminator 'type'
             variants(
@@ -87,28 +92,40 @@ module Selenium
             )
           end
 
+          # @api private
           class StringValue < Data.define(type: {fixed: 'string'}, value: 'value'); end
 
+          # @api private
           class Base64Value < Data.define(type: {fixed: 'base64'}, value: 'value'); end
 
+          # @api private
           class Cookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
+          # @api private
           class CookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}); end
 
+          # @api private
           class FetchTimingInfo < Data.define(time_origin: 'timeOrigin', request_time: 'requestTime', redirect_start: 'redirectStart', redirect_end: 'redirectEnd', fetch_start: 'fetchStart', dns_start: 'dnsStart', dns_end: 'dnsEnd', connect_start: 'connectStart', connect_end: 'connectEnd', tls_start: 'tlsStart', request_start: 'requestStart', response_start: 'responseStart', response_end: 'responseEnd'); end
 
+          # @api private
           class Header < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}); end
 
+          # @api private
           class Initiator < Data.define(column_number: 'columnNumber', line_number: 'lineNumber', request: 'request', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: {json_key: 'type', enum: 'Network::INITIATOR_TYPE'}); end
 
+          # @api private
           class RequestData < Data.define(request: 'request', url: 'url', method_: 'method', headers: {json_key: 'headers', ref: 'Network::Header', list: true}, cookies: {json_key: 'cookies', ref: 'Network::Cookie', list: true}, headers_size: 'headersSize', body_size: {json_key: 'bodySize', nullable: true}, destination: 'destination', initiator_type: {json_key: 'initiatorType', nullable: true}, timings: {json_key: 'timings', ref: 'Network::FetchTimingInfo'}); end
 
+          # @api private
           class ResponseContent < Data.define(size: 'size'); end
 
+          # @api private
           class ResponseData < Data.define(url: 'url', protocol: 'protocol', status: 'status', status_text: 'statusText', from_cache: 'fromCache', headers: {json_key: 'headers', ref: 'Network::Header', list: true}, mime_type: 'mimeType', bytes_received: 'bytesReceived', headers_size: {json_key: 'headersSize', nullable: true}, body_size: {json_key: 'bodySize', nullable: true}, content: {json_key: 'content', ref: 'Network::ResponseContent'}, auth_challenges: {json_key: 'authChallenges', ref: 'Network::AuthChallenge', list: true}); end
 
+          # @api private
           class SetCookieHeader < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', http_only: 'httpOnly', expiry: 'expiry', max_age: 'maxAge', path: 'path', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, secure: 'secure'); end
 
+          # @api private
           class UrlPattern < Union
             discriminator 'type'
             variants(
@@ -117,32 +134,46 @@ module Selenium
             )
           end
 
+          # @api private
           class UrlPatternPattern < Data.define(type: {fixed: 'pattern'}, protocol: 'protocol', hostname: 'hostname', port: 'port', pathname: 'pathname', search: 'search'); end
 
+          # @api private
           class UrlPatternString < Data.define(type: {fixed: 'string'}, pattern: 'pattern'); end
 
+          # @api private
           class AddDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.addDataCollector'}, params: {json_key: 'params', ref: 'Network::AddDataCollectorParameters'}); end
 
+          # @api private
           class AddDataCollectorParameters < Data.define(data_types: {json_key: 'dataTypes', list: true, enum: 'Network::DATA_TYPE'}, max_encoded_data_size: 'maxEncodedDataSize', collector_type: {json_key: 'collectorType', enum: 'Network::COLLECTOR_TYPE'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
+          # @api private
           class AddDataCollectorResult < Data.define(collector: 'collector'); end
 
+          # @api private
           class AddIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.addIntercept'}, params: {json_key: 'params', ref: 'Network::AddInterceptParameters'}); end
 
+          # @api private
           class AddInterceptParameters < Data.define(phases: {json_key: 'phases', list: true, enum: 'Network::INTERCEPT_PHASE'}, contexts: {json_key: 'contexts', list: true}, url_patterns: {json_key: 'urlPatterns', ref: 'Network::UrlPattern', list: true}); end
 
+          # @api private
           class AddInterceptResult < Data.define(intercept: 'intercept'); end
 
+          # @api private
           class ContinueRequest < Data.define(method_: {json_key: 'method', fixed: 'network.continueRequest'}, params: {json_key: 'params', ref: 'Network::ContinueRequestParameters'}); end
 
+          # @api private
           class ContinueRequestParameters < Data.define(request: 'request', body: {json_key: 'body', ref: 'Network::BytesValue'}, cookies: {json_key: 'cookies', ref: 'Network::CookieHeader', list: true}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, method_: 'method', url: 'url'); end
 
+          # @api private
           class ContinueResponse < Data.define(method_: {json_key: 'method', fixed: 'network.continueResponse'}, params: {json_key: 'params', ref: 'Network::ContinueResponseParameters'}); end
 
+          # @api private
           class ContinueResponseParameters < Data.define(request: 'request', cookies: {json_key: 'cookies', ref: 'Network::SetCookieHeader', list: true}, credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
 
+          # @api private
           class ContinueWithAuth < Data.define(method_: {json_key: 'method', fixed: 'network.continueWithAuth'}, params: {json_key: 'params', ref: 'Network::ContinueWithAuthParameters'}); end
 
+          # @api private
           class ContinueWithAuthParameters < Union
             discriminator 'action'
             variants(
@@ -150,124 +181,166 @@ module Selenium
             )
             fallback 'Network::ContinueWithAuthParameters::NoCredentials'
 
+            # @api private
             class Credentials < Data.define(action: {fixed: 'provideCredentials'}, request: 'request', credentials: {json_key: 'credentials', ref: 'Network::AuthCredentials'}); end
 
+            # @api private
             class NoCredentials < Data.define(request: 'request', action: {json_key: 'action', enum: 'Network::CONTINUE_WITH_AUTH_NO_CREDENTIALS_ACTION'}); end
           end
 
+          # @api private
           class DisownData < Data.define(method_: {json_key: 'method', fixed: 'network.disownData'}, params: {json_key: 'params', ref: 'Network::DisownDataParameters'}); end
 
+          # @api private
           class DisownDataParameters < Data.define(data_type: {json_key: 'dataType', enum: 'Network::DATA_TYPE'}, collector: 'collector', request: 'request'); end
 
+          # @api private
           class FailRequest < Data.define(method_: {json_key: 'method', fixed: 'network.failRequest'}, params: {json_key: 'params', ref: 'Network::FailRequestParameters'}); end
 
+          # @api private
           class FailRequestParameters < Data.define(request: 'request'); end
 
+          # @api private
           class GetData < Data.define(method_: {json_key: 'method', fixed: 'network.getData'}, params: {json_key: 'params', ref: 'Network::GetDataParameters'}); end
 
+          # @api private
           class GetDataParameters < Data.define(data_type: {json_key: 'dataType', enum: 'Network::DATA_TYPE'}, collector: 'collector', disown: 'disown', request: 'request'); end
 
+          # @api private
           class GetDataResult < Data.define(bytes: {json_key: 'bytes', ref: 'Network::BytesValue'}); end
 
+          # @api private
           class ProvideResponse < Data.define(method_: {json_key: 'method', fixed: 'network.provideResponse'}, params: {json_key: 'params', ref: 'Network::ProvideResponseParameters'}); end
 
+          # @api private
           class ProvideResponseParameters < Data.define(request: 'request', body: {json_key: 'body', ref: 'Network::BytesValue'}, cookies: {json_key: 'cookies', ref: 'Network::SetCookieHeader', list: true}, headers: {json_key: 'headers', ref: 'Network::Header', list: true}, reason_phrase: 'reasonPhrase', status_code: 'statusCode'); end
 
+          # @api private
           class RemoveDataCollector < Data.define(method_: {json_key: 'method', fixed: 'network.removeDataCollector'}, params: {json_key: 'params', ref: 'Network::RemoveDataCollectorParameters'}); end
 
+          # @api private
           class RemoveDataCollectorParameters < Data.define(collector: 'collector'); end
 
+          # @api private
           class RemoveIntercept < Data.define(method_: {json_key: 'method', fixed: 'network.removeIntercept'}, params: {json_key: 'params', ref: 'Network::RemoveInterceptParameters'}); end
 
+          # @api private
           class RemoveInterceptParameters < Data.define(intercept: 'intercept'); end
 
+          # @api private
           class SetCacheBehavior < Data.define(method_: {json_key: 'method', fixed: 'network.setCacheBehavior'}, params: {json_key: 'params', ref: 'Network::SetCacheBehaviorParameters'}); end
 
+          # @api private
           class SetCacheBehaviorParameters < Data.define(cache_behavior: {json_key: 'cacheBehavior', enum: 'Network::SET_CACHE_BEHAVIOR_PARAMETERS_CACHE_BEHAVIOR'}, contexts: {json_key: 'contexts', list: true}); end
 
+          # @api private
           class SetExtraHeaders < Data.define(method_: {json_key: 'method', fixed: 'network.setExtraHeaders'}, params: {json_key: 'params', ref: 'Network::SetExtraHeadersParameters'}); end
 
+          # @api private
           class SetExtraHeadersParameters < Data.define(headers: {json_key: 'headers', ref: 'Network::Header', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
+          # @api private
           class AuthRequired < Data.define(method_: {json_key: 'method', fixed: 'network.authRequired'}, params: {json_key: 'params', ref: 'Network::AuthRequiredParameters'}); end
 
+          # @api private
           class AuthRequiredParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
+          # @api private
           class BeforeRequestSent < Data.define(method_: {json_key: 'method', fixed: 'network.beforeRequestSent'}, params: {json_key: 'params', ref: 'Network::BeforeRequestSentParameters'}); end
 
+          # @api private
           class BeforeRequestSentParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, initiator: {json_key: 'initiator', ref: 'Network::Initiator'}); end
 
+          # @api private
           class FetchError < Data.define(method_: {json_key: 'method', fixed: 'network.fetchError'}, params: {json_key: 'params', ref: 'Network::FetchErrorParameters'}); end
 
+          # @api private
           class FetchErrorParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, error_text: 'errorText'); end
 
+          # @api private
           class ResponseCompleted < Data.define(method_: {json_key: 'method', fixed: 'network.responseCompleted'}, params: {json_key: 'params', ref: 'Network::ResponseCompletedParameters'}); end
 
+          # @api private
           class ResponseCompletedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
+          # @api private
           class ResponseStarted < Data.define(method_: {json_key: 'method', fixed: 'network.responseStarted'}, params: {json_key: 'params', ref: 'Network::ResponseStartedParameters'}); end
 
+          # @api private
           class ResponseStartedParameters < Data.define(context: {json_key: 'context', nullable: true}, is_blocked: 'isBlocked', navigation: {json_key: 'navigation', nullable: true}, redirect_count: 'redirectCount', request: {json_key: 'request', ref: 'Network::RequestData'}, timestamp: 'timestamp', user_context: {json_key: 'userContext', nullable: true}, intercepts: {json_key: 'intercepts', list: true}, response: {json_key: 'response', ref: 'Network::ResponseData'}); end
 
           def initialize(context)
             @transport = Transport.for(context)
           end
 
+          # @api private
           def add_data_collector(data_types:, max_encoded_data_size:, collector_type: UNSET, contexts: UNSET, user_contexts: UNSET)
             Enum.check!('dataTypes', data_types, Network::DATA_TYPE)
             Enum.check!('collectorType', collector_type, Network::COLLECTOR_TYPE)
             @transport.execute('network.addDataCollector', AddDataCollectorParameters.new(data_types: data_types, max_encoded_data_size: max_encoded_data_size, collector_type: collector_type, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Network::AddDataCollectorResult'))
           end
 
+          # @api private
           def add_intercept(phases:, contexts: UNSET, url_patterns: UNSET)
             Enum.check!('phases', phases, Network::INTERCEPT_PHASE)
             @transport.execute('network.addIntercept', AddInterceptParameters.new(phases: phases, contexts: contexts, url_patterns: url_patterns), Protocol.const_get('Network::AddInterceptResult'))
           end
 
+          # @api private
           def continue_request(request:, body: UNSET, cookies: UNSET, headers: UNSET, method_: UNSET, url: UNSET)
             @transport.execute('network.continueRequest', ContinueRequestParameters.new(request: request, body: body, cookies: cookies, headers: headers, method_: method_, url: url))
           end
 
+          # @api private
           def continue_response(request:, cookies: UNSET, credentials: UNSET, headers: UNSET, reason_phrase: UNSET, status_code: UNSET)
             @transport.execute('network.continueResponse', ContinueResponseParameters.new(request: request, cookies: cookies, credentials: credentials, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
           end
 
+          # @api private
           def continue_with_auth(request:, action:, credentials: UNSET)
             Enum.check!('action', action, %w[provideCredentials default cancel])
             @transport.execute('network.continueWithAuth', ContinueWithAuthParameters.build(request: request, action: action, credentials: credentials))
           end
 
+          # @api private
           def disown_data(data_type:, collector:, request:)
             Enum.check!('dataType', data_type, Network::DATA_TYPE)
             @transport.execute('network.disownData', DisownDataParameters.new(data_type: data_type, collector: collector, request: request))
           end
 
+          # @api private
           def fail_request(request:)
             @transport.execute('network.failRequest', FailRequestParameters.new(request: request))
           end
 
+          # @api private
           def get_data(data_type:, request:, collector: UNSET, disown: UNSET)
             Enum.check!('dataType', data_type, Network::DATA_TYPE)
             @transport.execute('network.getData', GetDataParameters.new(data_type: data_type, collector: collector, disown: disown, request: request), Protocol.const_get('Network::GetDataResult'))
           end
 
+          # @api private
           def provide_response(request:, body: UNSET, cookies: UNSET, headers: UNSET, reason_phrase: UNSET, status_code: UNSET)
             @transport.execute('network.provideResponse', ProvideResponseParameters.new(request: request, body: body, cookies: cookies, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
           end
 
+          # @api private
           def remove_data_collector(collector:)
             @transport.execute('network.removeDataCollector', RemoveDataCollectorParameters.new(collector: collector))
           end
 
+          # @api private
           def remove_intercept(intercept:)
             @transport.execute('network.removeIntercept', RemoveInterceptParameters.new(intercept: intercept))
           end
 
+          # @api private
           def set_cache_behavior(cache_behavior:, contexts: UNSET)
             Enum.check!('cacheBehavior', cache_behavior, Network::SET_CACHE_BEHAVIOR_PARAMETERS_CACHE_BEHAVIOR)
             @transport.execute('network.setCacheBehavior', SetCacheBehaviorParameters.new(cache_behavior: cache_behavior, contexts: contexts))
           end
 
+          # @api private
           def set_extra_headers(headers:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('network.setExtraHeaders', SetExtraHeadersParameters.new(headers: headers, contexts: contexts, user_contexts: user_contexts))
           end

@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Speculation
           EVENTS = {
             prefetch_status_updated: 'speculation.prefetchStatusUpdated',
@@ -37,8 +38,10 @@ module Selenium
             failure: 'failure',
           }.freeze
 
+          # @api private
           class PrefetchStatusUpdated < Data.define(method_: {json_key: 'method', fixed: 'speculation.prefetchStatusUpdated'}, params: {json_key: 'params', ref: 'Speculation::PrefetchStatusUpdatedParameters'}); end
 
+          # @api private
           class PrefetchStatusUpdatedParameters < Data.define(context: 'context', url: 'url', status: {json_key: 'status', enum: 'Speculation::PRELOADING_STATUS'}); end
 
           def initialize(context)

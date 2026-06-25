@@ -25,17 +25,24 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Storage
+          # @api private
           class PartitionKey < Data.define(user_context: 'userContext', source_origin: 'sourceOrigin', extensible: true); end
 
+          # @api private
           class GetCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.getCookies'}, params: {json_key: 'params', ref: 'Storage::GetCookiesParameters'}); end
 
+          # @api private
           class CookieFilter < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
+          # @api private
           class BrowsingContextPartitionDescriptor < Data.define(type: {fixed: 'context'}, context: 'context'); end
 
+          # @api private
           class StorageKeyPartitionDescriptor < Data.define(type: {fixed: 'storageKey'}, user_context: 'userContext', source_origin: 'sourceOrigin', extensible: true); end
 
+          # @api private
           class PartitionDescriptor < Union
             discriminator 'type'
             variants(
@@ -44,36 +51,48 @@ module Selenium
             )
           end
 
+          # @api private
           class GetCookiesParameters < Data.define(filter: {json_key: 'filter', ref: 'Storage::CookieFilter'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
+          # @api private
           class GetCookiesResult < Data.define(cookies: {json_key: 'cookies', ref: 'Network::Cookie', list: true}, partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
+          # @api private
           class SetCookie < Data.define(method_: {json_key: 'method', fixed: 'storage.setCookie'}, params: {json_key: 'params', ref: 'Storage::SetCookieParameters'}); end
 
+          # @api private
           class PartialCookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
+          # @api private
           class SetCookieParameters < Data.define(cookie: {json_key: 'cookie', ref: 'Storage::PartialCookie'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
+          # @api private
           class SetCookieResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
+          # @api private
           class DeleteCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.deleteCookies'}, params: {json_key: 'params', ref: 'Storage::DeleteCookiesParameters'}); end
 
+          # @api private
           class DeleteCookiesParameters < Data.define(filter: {json_key: 'filter', ref: 'Storage::CookieFilter'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
+          # @api private
           class DeleteCookiesResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
           def initialize(context)
             @transport = Transport.for(context)
           end
 
+          # @api private
           def delete_cookies(filter: UNSET, partition: UNSET)
             @transport.execute('storage.deleteCookies', DeleteCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::DeleteCookiesResult'))
           end
 
+          # @api private
           def get_cookies(filter: UNSET, partition: UNSET)
             @transport.execute('storage.getCookies', GetCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::GetCookiesResult'))
           end
 
+          # @api private
           def set_cookie(cookie:, partition: UNSET)
             @transport.execute('storage.setCookie', SetCookieParameters.new(cookie: cookie, partition: partition), Protocol.const_get('Storage::SetCookieResult'))
           end

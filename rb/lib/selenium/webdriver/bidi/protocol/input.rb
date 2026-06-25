@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Input
           EVENTS = {
             file_dialog_opened: 'input.fileDialogOpened',
@@ -36,12 +37,16 @@ module Selenium
             touch: 'touch',
           }.freeze
 
+          # @api private
           class ElementOrigin < Data.define(type: {fixed: 'element'}, element: {json_key: 'element', ref: 'Script::SharedReference'}); end
 
+          # @api private
           class PerformActions < Data.define(method_: {json_key: 'method', fixed: 'input.performActions'}, params: {json_key: 'params', ref: 'Input::PerformActionsParameters'}); end
 
+          # @api private
           class PerformActionsParameters < Data.define(context: 'context', actions: {json_key: 'actions', ref: 'Input::SourceActions', list: true}); end
 
+          # @api private
           class SourceActions < Union
             discriminator 'type'
             variants(
@@ -52,10 +57,13 @@ module Selenium
             )
           end
 
+          # @api private
           class NoneSourceActions < Data.define(type: {fixed: 'none'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::PauseAction', list: true}); end
 
+          # @api private
           class KeySourceActions < Data.define(type: {fixed: 'key'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::KeySourceAction', list: true}); end
 
+          # @api private
           class KeySourceAction < Union
             discriminator 'type'
             variants(
@@ -65,10 +73,13 @@ module Selenium
             )
           end
 
+          # @api private
           class PointerSourceActions < Data.define(type: {fixed: 'pointer'}, id: 'id', parameters: {json_key: 'parameters', ref: 'Input::PointerParameters'}, actions: {json_key: 'actions', ref: 'Input::PointerSourceAction', list: true}); end
 
+          # @api private
           class PointerParameters < Data.define(pointer_type: {json_key: 'pointerType', enum: 'Input::POINTER_TYPE'}); end
 
+          # @api private
           class PointerSourceAction < Union
             discriminator 'type'
             variants(
@@ -79,8 +90,10 @@ module Selenium
             )
           end
 
+          # @api private
           class WheelSourceActions < Data.define(type: {fixed: 'wheel'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::WheelSourceAction', list: true}); end
 
+          # @api private
           class WheelSourceAction < Union
             discriminator 'type'
             variants(
@@ -89,22 +102,31 @@ module Selenium
             )
           end
 
+          # @api private
           class PauseAction < Data.define(type: {fixed: 'pause'}, duration: 'duration'); end
 
+          # @api private
           class KeyDownAction < Data.define(type: {fixed: 'keyDown'}, value: 'value'); end
 
+          # @api private
           class KeyUpAction < Data.define(type: {fixed: 'keyUp'}, value: 'value'); end
 
+          # @api private
           class PointerUpAction < Data.define(type: {fixed: 'pointerUp'}, button: 'button'); end
 
+          # @api private
           class PointerDownAction < Data.define(type: {fixed: 'pointerDown'}, button: 'button', width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
+          # @api private
           class PointerMoveAction < Data.define(type: {fixed: 'pointerMove'}, x: 'x', y: 'y', duration: 'duration', origin: {json_key: 'origin', ref: 'Input::Origin'}, width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
+          # @api private
           class WheelScrollAction < Data.define(type: {fixed: 'scroll'}, x: 'x', y: 'y', delta_x: 'deltaX', delta_y: 'deltaY', duration: 'duration', origin: {json_key: 'origin', ref: 'Input::Origin'}); end
 
+          # @api private
           class PointerCommonProperties < Data.define(width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
+          # @api private
           class Origin < Union
             discriminator 'type'
             variants(
@@ -112,30 +134,39 @@ module Selenium
             )
           end
 
+          # @api private
           class ReleaseActions < Data.define(method_: {json_key: 'method', fixed: 'input.releaseActions'}, params: {json_key: 'params', ref: 'Input::ReleaseActionsParameters'}); end
 
+          # @api private
           class ReleaseActionsParameters < Data.define(context: 'context'); end
 
+          # @api private
           class SetFiles < Data.define(method_: {json_key: 'method', fixed: 'input.setFiles'}, params: {json_key: 'params', ref: 'Input::SetFilesParameters'}); end
 
+          # @api private
           class SetFilesParameters < Data.define(context: 'context', element: {json_key: 'element', ref: 'Script::SharedReference'}, files: {json_key: 'files', list: true}); end
 
+          # @api private
           class FileDialogOpened < Data.define(method_: {json_key: 'method', fixed: 'input.fileDialogOpened'}, params: {json_key: 'params', ref: 'Input::FileDialogInfo'}); end
 
+          # @api private
           class FileDialogInfo < Data.define(context: 'context', user_context: 'userContext', element: {json_key: 'element', ref: 'Script::SharedReference'}, multiple: 'multiple'); end
 
           def initialize(context)
             @transport = Transport.for(context)
           end
 
+          # @api private
           def perform_actions(context:, actions:)
             @transport.execute('input.performActions', PerformActionsParameters.new(context: context, actions: actions))
           end
 
+          # @api private
           def release_actions(context:)
             @transport.execute('input.releaseActions', ReleaseActionsParameters.new(context: context))
           end
 
+          # @api private
           def set_files(context:, element:, files:)
             @transport.execute('input.setFiles', SetFilesParameters.new(context: context, element: element, files: files))
           end

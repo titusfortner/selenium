@@ -25,6 +25,7 @@ module Selenium
   module WebDriver
     class BiDi
       module Protocol
+        # @api private
         class Log
           EVENTS = {
             entry_added: 'log.entryAdded',
@@ -37,6 +38,7 @@ module Selenium
             error: 'error',
           }.freeze
 
+          # @api private
           class Entry < Union
             discriminator 'type'
             variants(
@@ -46,14 +48,19 @@ module Selenium
             fallback 'Log::GenericLogEntry'
           end
 
+          # @api private
           class BaseLogEntry < Data.define(level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
+          # @api private
           class GenericLogEntry < Data.define(level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, type: 'type'); end
 
+          # @api private
           class ConsoleLogEntry < Data.define(type: {fixed: 'console'}, level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, method_: 'method', args: {json_key: 'args', ref: 'Script::RemoteValue', list: true}); end
 
+          # @api private
           class JavascriptLogEntry < Data.define(type: {fixed: 'javascript'}, level: {json_key: 'level', enum: 'Log::LEVEL'}, source: {json_key: 'source', ref: 'Script::Source'}, text: {json_key: 'text', nullable: true}, timestamp: 'timestamp', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}); end
 
+          # @api private
           class EntryAdded < Data.define(method_: {json_key: 'method', fixed: 'log.entryAdded'}, params: {json_key: 'params', ref: 'Log::Entry'}); end
 
           def initialize(context)
