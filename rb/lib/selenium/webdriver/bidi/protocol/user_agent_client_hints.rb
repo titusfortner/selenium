@@ -36,14 +36,18 @@ module Selenium
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BrandVersion < Data.define(brand: 'brand', version: 'version'); end
 
+          # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
+          class SetClientHintsOverrideCommandParams < Data.define(client_hints: {json_key: 'clientHints', nullable: true, ref: 'UserAgentClientHints::ClientHintsMetadata'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
+
           def initialize(context)
             @transport = Transport.for(context)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
-          def set_client_hints_override
-            @transport.execute(cmd: 'userAgentClientHints.setClientHintsOverride')
+          def set_client_hints_override(client_hints:, contexts: UNSET, user_contexts: UNSET)
+            @transport.execute(cmd: 'userAgentClientHints.setClientHintsOverride', params: SetClientHintsOverrideCommandParams.new(client_hints: client_hints, contexts: contexts, user_contexts: user_contexts))
           end
 
         end # UserAgentClientHints

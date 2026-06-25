@@ -27,9 +27,16 @@ module Selenium
             def self.new: (brand: String, version: String) -> instance
           end
 
+          class SetClientHintsOverrideCommandParams < ::Selenium::WebDriver::BiDi::Data
+            attr_reader client_hints: ::Selenium::WebDriver::BiDi::Protocol::UserAgentClientHints::ClientHintsMetadata?
+            attr_reader contexts: untyped
+            attr_reader user_contexts: untyped
+            def self.new: (client_hints: ::Selenium::WebDriver::BiDi::Protocol::UserAgentClientHints::ClientHintsMetadata?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> instance
+          end
+
           def initialize: (untyped context) -> void
 
-          def set_client_hints_override: () -> untyped
+          def set_client_hints_override: (client_hints: ::Selenium::WebDriver::BiDi::Protocol::UserAgentClientHints::ClientHintsMetadata?, ?contexts: Array[String]?, ?user_contexts: Array[String]?) -> untyped
         end
       end
     end

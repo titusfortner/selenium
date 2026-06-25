@@ -320,6 +320,62 @@ module BiDiGenerate
       @types = schema['types']
       @commands = schema['commands']
       @events = schema['events']
+      recover_unlinked_command_params!
+    end
+
+    # Work around an upstream projector gap: a command written in CDDL map form with an
+    # *inline* params object (rather than the usual group form referencing a named
+    # params type) is left with `params: null` even though the projector hoisted the
+    # inline object into a synthetic type under the command's message envelope. Re-link
+    # the command to that type and promote it to a normal domain-level record so the
+    # rest of the generator treats it like any other command. Today this is exactly
+    # `userAgentClientHints.setClientHintsOverride`. Remove once the projector links
+    # these directly (tracked in the plan). The empty-params placeholder is skipped, so
+    # genuinely parameterless commands are untouched.
+    def recover_unlinked_command_params!
+      @commands.each do |cmd|
+        next if cmd['params']
+
+        ref = envelope_params_ref(cmd['method'])
+        next unless ref
+
+        cmd['params'] = {'ref' => ref}
+        promote_to_domain_type!(ref)
+      end
+    end
+
+    # The params type ref carried by a command's message envelope, but only when it is a
+    # non-empty record (a real params object, not the shared empty-params placeholder).
+    def envelope_params_ref(method)
+      ref = envelope_params_field_ref(message_envelope_for(method))
+      ref if nonempty_record?(ref)
+    end
+
+    def message_envelope_for(method)
+      @types.values.find { |t| t['kind'] == 'record' && envelope_method(t) == method }
+    end
+
+    def envelope_method(type)
+      field = type['fields'].find { |f| f['wire'] == 'method' && f['type'].key?('const') }
+      field && field['type']['const']
+    end
+
+    def envelope_params_field_ref(envelope)
+      field = envelope&.fetch('fields')&.find { |f| f['wire'] == 'params' && f['type']['ref'] }
+      field && field['type']['ref']
+    end
+
+    def nonempty_record?(ref)
+      ref && (type = @types[ref]) && type['kind'] == 'record' && !type['fields'].empty?
+    end
+
+    # Strip the synthetic/owner/label tags so a lifted-out type emits as a top-level
+    # domain record instead of nesting under its (suppressed) envelope.
+    def promote_to_domain_type!(name)
+      type = @types[name]
+      type&.delete('synthetic')
+      type&.delete('owner')
+      type&.delete('label')
     end
 
     # Domains that carry a command or event each become one generated module.
