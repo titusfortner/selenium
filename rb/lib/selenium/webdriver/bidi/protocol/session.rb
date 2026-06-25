@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Session
           USER_PROMPT_HANDLER_TYPE = {
             accept: 'accept',
@@ -34,12 +35,15 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CapabilitiesRequest < Data.define(always_match: {json_key: 'alwaysMatch', ref: 'Session::CapabilityRequest'}, first_match: {json_key: 'firstMatch', ref: 'Session::CapabilityRequest', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CapabilityRequest < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ProxyConfiguration < Union
             discriminator 'proxyType'
             variants(
@@ -52,66 +56,87 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AutodetectProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'autodetect'}, extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DirectProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'direct'}, extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ManualProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'manual'}, http_proxy: 'httpProxy', ssl_proxy: 'sslProxy', socks_proxy: 'socksProxy', socks_version: 'socksVersion', no_proxy: {json_key: 'noProxy', list: true}, extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SocksProxyConfiguration < Data.define(socks_proxy: 'socksProxy', socks_version: 'socksVersion'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PacProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'pac'}, proxy_autoconfig_url: 'proxyAutoconfigUrl', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SystemProxyConfiguration < Data.define(proxy_type: {json_key: 'proxyType', fixed: 'system'}, extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UserPromptHandler < Data.define(alert: {json_key: 'alert', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, before_unload: {json_key: 'beforeUnload', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, confirm: {json_key: 'confirm', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, default: {json_key: 'default', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, file: {json_key: 'file', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}, prompt: {json_key: 'prompt', enum: 'Session::USER_PROMPT_HANDLER_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SubscribeParameters < Data.define(events: {json_key: 'events', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UnsubscribeByIDRequest < Data.define(subscriptions: {json_key: 'subscriptions', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UnsubscribeByAttributesRequest < Data.define(events: {json_key: 'events', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Status < Data.define(method_: {json_key: 'method', fixed: 'session.status'}, params: 'params'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class StatusResult < Data.define(ready: 'ready', message: 'message'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class New < Data.define(method_: {json_key: 'method', fixed: 'session.new'}, params: {json_key: 'params', ref: 'Session::NewParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NewParameters < Data.define(capabilities: {json_key: 'capabilities', ref: 'Session::CapabilitiesRequest'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NewResult < Data.define(session_id: 'sessionId', capabilities: {json_key: 'capabilities', ref: 'Session::NewResult::Capabilities'})
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class Capabilities < Data.define(accept_insecure_certs: 'acceptInsecureCerts', browser_name: 'browserName', browser_version: 'browserVersion', platform_name: 'platformName', set_window_rect: 'setWindowRect', user_agent: 'userAgent', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}, web_socket_url: 'webSocketUrl', extensible: true); end
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class End < Data.define(method_: {json_key: 'method', fixed: 'session.end'}, params: 'params'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Subscribe < Data.define(method_: {json_key: 'method', fixed: 'session.subscribe'}, params: {json_key: 'params', ref: 'Session::SubscribeParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SubscribeResult < Data.define(subscription: 'subscription'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Unsubscribe < Data.define(method_: {json_key: 'method', fixed: 'session.unsubscribe'}, params: {json_key: 'params', ref: 'Session::UnsubscribeParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UnsubscribeParameters < Union
             presence(
               'Session::UnsubscribeByAttributesRequest' => ['events'],
@@ -124,26 +149,31 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def end_
             @transport.execute('session.end')
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def new(capabilities:)
             @transport.execute('session.new', NewParameters.new(capabilities: capabilities), Protocol.const_get('Session::NewResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def status
             @transport.execute('session.status', nil, Protocol.const_get('Session::StatusResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def subscribe(events:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('session.subscribe', SubscribeParameters.new(events: events, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Session::SubscribeResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def unsubscribe(events: UNSET, subscriptions: UNSET)
             @transport.execute('session.unsubscribe', UnsubscribeParameters.build(events: events, subscriptions: subscriptions))
           end

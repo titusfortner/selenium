@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Bluetooth
           EVENTS = {
             request_device_prompt_updated: 'bluetooth.requestDevicePromptUpdated',
@@ -79,21 +80,27 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BluetoothManufacturerData < Data.define(key: 'key', data: 'data'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CharacteristicProperties < Data.define(broadcast: 'broadcast', read: 'read', write_without_response: 'writeWithoutResponse', write: 'write', notify: 'notify', indicate: 'indicate', authenticated_signed_writes: 'authenticatedSignedWrites', extended_properties: 'extendedProperties'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RequestDeviceInfo < Data.define(id: 'id', name: {json_key: 'name', nullable: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ScanRecord < Data.define(name: 'name', uuids: {json_key: 'uuids', list: true}, appearance: 'appearance', manufacturer_data: {json_key: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class HandleRequestDevicePrompt < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.handleRequestDevicePrompt'}, params: {json_key: 'params', ref: 'Bluetooth::HandleRequestDevicePromptParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class HandleRequestDevicePromptParameters < Union
             discriminator 'accept'
             variants(
@@ -102,103 +109,136 @@ module Selenium
             )
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class AcceptParameters < Data.define(accept: {fixed: true}, context: 'context', prompt: 'prompt', device: 'device'); end
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class CancelParameters < Data.define(accept: {fixed: false}, context: 'context', prompt: 'prompt'); end
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateAdapter < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateAdapter'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateAdapterParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateAdapterParameters < Data.define(context: 'context', le_supported: 'leSupported', state: {json_key: 'state', enum: 'Bluetooth::SIMULATE_ADAPTER_PARAMETERS_STATE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DisableSimulation < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.disableSimulation'}, params: {json_key: 'params', ref: 'Bluetooth::DisableSimulationParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DisableSimulationParameters < Data.define(context: 'context'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulatePreconnectedPeripheral < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulatePreconnectedPeripheral'}, params: {json_key: 'params', ref: 'Bluetooth::SimulatePreconnectedPeripheralParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulatePreconnectedPeripheralParameters < Data.define(context: 'context', address: 'address', name: 'name', manufacturer_data: {json_key: 'manufacturerData', ref: 'Bluetooth::BluetoothManufacturerData', list: true}, known_service_uuids: {json_key: 'knownServiceUuids', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateAdvertisement < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateAdvertisement'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateAdvertisementParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateAdvertisementParameters < Data.define(context: 'context', scan_entry: {json_key: 'scanEntry', ref: 'Bluetooth::SimulateAdvertisementScanEntryParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateAdvertisementScanEntryParameters < Data.define(device_address: 'deviceAddress', rssi: 'rssi', scan_record: {json_key: 'scanRecord', ref: 'Bluetooth::ScanRecord'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateGattConnectionResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateGattConnectionResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateGattConnectionResponseParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateGattConnectionResponseParameters < Data.define(context: 'context', address: 'address', code: 'code'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateGattDisconnection < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateGattDisconnection'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateGattDisconnectionParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateGattDisconnectionParameters < Data.define(context: 'context', address: 'address'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateService < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateService'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateServiceParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateServiceParameters < Data.define(context: 'context', address: 'address', uuid: 'uuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_SERVICE_PARAMETERS_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateCharacteristic < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateCharacteristic'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateCharacteristicParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateCharacteristicParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', characteristic_properties: {json_key: 'characteristicProperties', ref: 'Bluetooth::CharacteristicProperties'}, type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_CHARACTERISTIC_PARAMETERS_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateCharacteristicResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateCharacteristicResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateCharacteristicResponseParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateCharacteristicResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_CHARACTERISTIC_RESPONSE_PARAMETERS_TYPE'}, code: 'code', data: {json_key: 'data', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateDescriptor < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateDescriptor'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateDescriptorParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateDescriptorParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_DESCRIPTOR_PARAMETERS_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateDescriptorResponse < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.simulateDescriptorResponse'}, params: {json_key: 'params', ref: 'Bluetooth::SimulateDescriptorResponseParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SimulateDescriptorResponseParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: {json_key: 'type', enum: 'Bluetooth::SIMULATE_DESCRIPTOR_RESPONSE_PARAMETERS_TYPE'}, code: 'code', data: {json_key: 'data', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RequestDevicePromptUpdated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.requestDevicePromptUpdated'}, params: {json_key: 'params', ref: 'Bluetooth::RequestDevicePromptUpdatedParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RequestDevicePromptUpdatedParameters < Data.define(context: 'context', prompt: 'prompt', devices: {json_key: 'devices', ref: 'Bluetooth::RequestDeviceInfo', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GattConnectionAttempted < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.gattConnectionAttempted'}, params: {json_key: 'params', ref: 'Bluetooth::GattConnectionAttemptedParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GattConnectionAttemptedParameters < Data.define(context: 'context', address: 'address'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CharacteristicEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.characteristicEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::CharacteristicEventGeneratedParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CharacteristicEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', type: {json_key: 'type', enum: 'Bluetooth::CHARACTERISTIC_EVENT_GENERATED_PARAMETERS_TYPE'}, data: {json_key: 'data', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DescriptorEventGenerated < Data.define(method_: {json_key: 'method', fixed: 'bluetooth.descriptorEventGenerated'}, params: {json_key: 'params', ref: 'Bluetooth::DescriptorEventGeneratedParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DescriptorEventGeneratedParameters < Data.define(context: 'context', address: 'address', service_uuid: 'serviceUuid', characteristic_uuid: 'characteristicUuid', descriptor_uuid: 'descriptorUuid', type: {json_key: 'type', enum: 'Bluetooth::DESCRIPTOR_EVENT_GENERATED_PARAMETERS_TYPE'}, data: {json_key: 'data', list: true}); end
 
           def initialize(context)
@@ -206,66 +246,78 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def handle_request_device_prompt(context:, prompt:, accept:, device: UNSET)
             @transport.execute('bluetooth.handleRequestDevicePrompt', HandleRequestDevicePromptParameters.build(context: context, prompt: prompt, accept: accept, device: device))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_adapter(context:, state:, le_supported: UNSET)
             Enum.check!('state', state, Bluetooth::SIMULATE_ADAPTER_PARAMETERS_STATE)
             @transport.execute('bluetooth.simulateAdapter', SimulateAdapterParameters.new(context: context, le_supported: le_supported, state: state))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def disable_simulation(context:)
             @transport.execute('bluetooth.disableSimulation', DisableSimulationParameters.new(context: context))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_preconnected_peripheral(context:, address:, name:, manufacturer_data:, known_service_uuids:)
             @transport.execute('bluetooth.simulatePreconnectedPeripheral', SimulatePreconnectedPeripheralParameters.new(context: context, address: address, name: name, manufacturer_data: manufacturer_data, known_service_uuids: known_service_uuids))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_advertisement(context:, scan_entry:)
             @transport.execute('bluetooth.simulateAdvertisement', SimulateAdvertisementParameters.new(context: context, scan_entry: scan_entry))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_gatt_connection_response(context:, address:, code:)
             @transport.execute('bluetooth.simulateGattConnectionResponse', SimulateGattConnectionResponseParameters.new(context: context, address: address, code: code))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_gatt_disconnection(context:, address:)
             @transport.execute('bluetooth.simulateGattDisconnection', SimulateGattDisconnectionParameters.new(context: context, address: address))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_service(context:, address:, uuid:, type:)
             Enum.check!('type', type, Bluetooth::SIMULATE_SERVICE_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateService', SimulateServiceParameters.new(context: context, address: address, uuid: uuid, type: type))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_characteristic(context:, address:, service_uuid:, characteristic_uuid:, type:, characteristic_properties: UNSET)
             Enum.check!('type', type, Bluetooth::SIMULATE_CHARACTERISTIC_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateCharacteristic', SimulateCharacteristicParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, characteristic_properties: characteristic_properties, type: type))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_characteristic_response(context:, address:, service_uuid:, characteristic_uuid:, type:, code:, data: UNSET)
             Enum.check!('type', type, Bluetooth::SIMULATE_CHARACTERISTIC_RESPONSE_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateCharacteristicResponse', SimulateCharacteristicResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, type: type, code: code, data: data))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_descriptor(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:)
             Enum.check!('type', type, Bluetooth::SIMULATE_DESCRIPTOR_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateDescriptor', SimulateDescriptorParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_descriptor_response(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:, code:, data: UNSET)
             Enum.check!('type', type, Bluetooth::SIMULATE_DESCRIPTOR_RESPONSE_PARAMETERS_TYPE)
             @transport.execute('bluetooth.simulateDescriptorResponse', SimulateDescriptorResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type, code: code, data: data))

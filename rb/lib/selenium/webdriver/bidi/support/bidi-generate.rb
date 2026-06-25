@@ -34,6 +34,10 @@ require 'fileutils'
 # directory as ARGV. Can also be run directly:
 #   ruby bidi-generate.rb schema.json output/dir
 module BiDiGenerate
+  # Companion to the generated `@api private` tags: the page explaining why the BiDi
+  # implementation layer is internal and what higher-level API to use instead (see #17628).
+  BIDI_DOC_URL = 'https://www.selenium.dev/documentation/warnings/bidi-implementation/'
+
   # Ruby keywords that cannot be used as method names unquoted.
   RUBY_RESERVED = %w[begin end rescue ensure raise return yield if unless while until for do
                      case when then class module def].freeze

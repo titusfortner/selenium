@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Input
           EVENTS = {
             file_dialog_opened: 'input.fileDialogOpened',
@@ -38,15 +39,19 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ElementOrigin < Data.define(type: {fixed: 'element'}, element: {json_key: 'element', ref: 'Script::SharedReference'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PerformActions < Data.define(method_: {json_key: 'method', fixed: 'input.performActions'}, params: {json_key: 'params', ref: 'Input::PerformActionsParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PerformActionsParameters < Data.define(context: 'context', actions: {json_key: 'actions', ref: 'Input::SourceActions', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SourceActions < Union
             discriminator 'type'
             variants(
@@ -58,12 +63,15 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NoneSourceActions < Data.define(type: {fixed: 'none'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::PauseAction', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class KeySourceActions < Data.define(type: {fixed: 'key'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::KeySourceAction', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class KeySourceAction < Union
             discriminator 'type'
             variants(
@@ -74,12 +82,15 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerSourceActions < Data.define(type: {fixed: 'pointer'}, id: 'id', parameters: {json_key: 'parameters', ref: 'Input::PointerParameters'}, actions: {json_key: 'actions', ref: 'Input::PointerSourceAction', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerParameters < Data.define(pointer_type: {json_key: 'pointerType', enum: 'Input::POINTER_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerSourceAction < Union
             discriminator 'type'
             variants(
@@ -91,9 +102,11 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WheelSourceActions < Data.define(type: {fixed: 'wheel'}, id: 'id', actions: {json_key: 'actions', ref: 'Input::WheelSourceAction', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WheelSourceAction < Union
             discriminator 'type'
             variants(
@@ -103,30 +116,39 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PauseAction < Data.define(type: {fixed: 'pause'}, duration: 'duration'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class KeyDownAction < Data.define(type: {fixed: 'keyDown'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class KeyUpAction < Data.define(type: {fixed: 'keyUp'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerUpAction < Data.define(type: {fixed: 'pointerUp'}, button: 'button'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerDownAction < Data.define(type: {fixed: 'pointerDown'}, button: 'button', width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerMoveAction < Data.define(type: {fixed: 'pointerMove'}, x: 'x', y: 'y', duration: 'duration', origin: {json_key: 'origin', ref: 'Input::Origin'}, width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WheelScrollAction < Data.define(type: {fixed: 'scroll'}, x: 'x', y: 'y', delta_x: 'deltaX', delta_y: 'deltaY', duration: 'duration', origin: {json_key: 'origin', ref: 'Input::Origin'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PointerCommonProperties < Data.define(width: 'width', height: 'height', pressure: 'pressure', tangential_pressure: 'tangentialPressure', twist: 'twist', altitude_angle: 'altitudeAngle', azimuth_angle: 'azimuthAngle'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Origin < Union
             discriminator 'type'
             variants(
@@ -135,21 +157,27 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ReleaseActions < Data.define(method_: {json_key: 'method', fixed: 'input.releaseActions'}, params: {json_key: 'params', ref: 'Input::ReleaseActionsParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ReleaseActionsParameters < Data.define(context: 'context'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetFiles < Data.define(method_: {json_key: 'method', fixed: 'input.setFiles'}, params: {json_key: 'params', ref: 'Input::SetFilesParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetFilesParameters < Data.define(context: 'context', element: {json_key: 'element', ref: 'Script::SharedReference'}, files: {json_key: 'files', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class FileDialogOpened < Data.define(method_: {json_key: 'method', fixed: 'input.fileDialogOpened'}, params: {json_key: 'params', ref: 'Input::FileDialogInfo'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class FileDialogInfo < Data.define(context: 'context', user_context: 'userContext', element: {json_key: 'element', ref: 'Script::SharedReference'}, multiple: 'multiple'); end
 
           def initialize(context)
@@ -157,16 +185,19 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def perform_actions(context:, actions:)
             @transport.execute('input.performActions', PerformActionsParameters.new(context: context, actions: actions))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def release_actions(context:)
             @transport.execute('input.releaseActions', ReleaseActionsParameters.new(context: context))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_files(context:, element:, files:)
             @transport.execute('input.setFiles', SetFilesParameters.new(context: context, element: element, files: files))
           end

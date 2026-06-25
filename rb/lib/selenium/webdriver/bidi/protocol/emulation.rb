@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Emulation
           FORCED_COLORS_MODE_THEME = {
             light: 'light',
@@ -45,15 +46,19 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetForcedColorsModeThemeOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setForcedColorsModeThemeOverride'}, params: {json_key: 'params', ref: 'Emulation::SetForcedColorsModeThemeOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetForcedColorsModeThemeOverrideParameters < Data.define(theme: {json_key: 'theme', nullable: true, enum: 'Emulation::FORCED_COLORS_MODE_THEME'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetGeolocationOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setGeolocationOverride'}, params: {json_key: 'params', ref: 'Emulation::SetGeolocationOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetGeolocationOverrideParameters < Union
             presence(
               'Emulation::SetGeolocationOverrideParameters::Coordinates' => ['coordinates'],
@@ -61,79 +66,104 @@ module Selenium
             )
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class Coordinates < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, coordinates: {json_key: 'coordinates', nullable: true, ref: 'Emulation::GeolocationCoordinates'}); end
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class Error < Data.define(contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, error: {json_key: 'error', ref: 'Emulation::GeolocationPositionError'}); end
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GeolocationCoordinates < Data.define(latitude: 'latitude', longitude: 'longitude', accuracy: 'accuracy', altitude: {json_key: 'altitude', nullable: true}, altitude_accuracy: {json_key: 'altitudeAccuracy', nullable: true}, heading: {json_key: 'heading', nullable: true}, speed: {json_key: 'speed', nullable: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GeolocationPositionError < Data.define(type: {fixed: 'positionUnavailable'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetLocaleOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setLocaleOverride'}, params: {json_key: 'params', ref: 'Emulation::SetLocaleOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetLocaleOverrideParameters < Data.define(locale: {json_key: 'locale', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetNetworkConditions < Data.define(method_: {json_key: 'method', fixed: 'emulation.setNetworkConditions'}, params: {json_key: 'params', ref: 'Emulation::SetNetworkConditionsParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetNetworkConditionsParameters < Data.define(network_conditions: {json_key: 'networkConditions', nullable: true, ref: 'Emulation::NetworkConditionsOffline'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NetworkConditionsOffline < Data.define(type: {fixed: 'offline'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScreenSettingsOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScreenSettingsOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScreenSettingsOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ScreenArea < Data.define(width: 'width', height: 'height'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScreenSettingsOverrideParameters < Data.define(screen_area: {json_key: 'screenArea', nullable: true, ref: 'Emulation::ScreenArea'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScreenOrientationOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScreenOrientationOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScreenOrientationOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ScreenOrientation < Data.define(natural: {json_key: 'natural', enum: 'Emulation::SCREEN_ORIENTATION_NATURAL'}, type: {json_key: 'type', enum: 'Emulation::SCREEN_ORIENTATION_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScreenOrientationOverrideParameters < Data.define(screen_orientation: {json_key: 'screenOrientation', nullable: true, ref: 'Emulation::ScreenOrientation'}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetUserAgentOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setUserAgentOverride'}, params: {json_key: 'params', ref: 'Emulation::SetUserAgentOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetUserAgentOverrideParameters < Data.define(user_agent: {json_key: 'userAgent', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScriptingEnabled < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScriptingEnabled'}, params: {json_key: 'params', ref: 'Emulation::SetScriptingEnabledParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScriptingEnabledParameters < Data.define(enabled: {fixed: false}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScrollbarTypeOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setScrollbarTypeOverride'}, params: {json_key: 'params', ref: 'Emulation::SetScrollbarTypeOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetScrollbarTypeOverrideParameters < Data.define(scrollbar_type: {json_key: 'scrollbarType', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetTimezoneOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setTimezoneOverride'}, params: {json_key: 'params', ref: 'Emulation::SetTimezoneOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetTimezoneOverrideParameters < Data.define(timezone: {json_key: 'timezone', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetTouchOverride < Data.define(method_: {json_key: 'method', fixed: 'emulation.setTouchOverride'}, params: {json_key: 'params', ref: 'Emulation::SetTouchOverrideParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetTouchOverrideParameters < Data.define(max_touch_points: {json_key: 'maxTouchPoints', nullable: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           def initialize(context)
@@ -141,57 +171,68 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_forced_colors_mode_theme_override(theme:, contexts: UNSET, user_contexts: UNSET)
             Enum.check!('theme', theme, Emulation::FORCED_COLORS_MODE_THEME)
             @transport.execute('emulation.setForcedColorsModeThemeOverride', SetForcedColorsModeThemeOverrideParameters.new(theme: theme, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_geolocation_override(contexts: UNSET, user_contexts: UNSET, coordinates: UNSET, error: UNSET)
             @transport.execute('emulation.setGeolocationOverride', SetGeolocationOverrideParameters.build(contexts: contexts, user_contexts: user_contexts, coordinates: coordinates, error: error))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_locale_override(locale:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setLocaleOverride', SetLocaleOverrideParameters.new(locale: locale, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_network_conditions(network_conditions:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setNetworkConditions', SetNetworkConditionsParameters.new(network_conditions: network_conditions, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_screen_orientation_override(screen_orientation:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setScreenOrientationOverride', SetScreenOrientationOverrideParameters.new(screen_orientation: screen_orientation, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_screen_settings_override(screen_area:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setScreenSettingsOverride', SetScreenSettingsOverrideParameters.new(screen_area: screen_area, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_scripting_enabled(enabled:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setScriptingEnabled', SetScriptingEnabledParameters.new(enabled: enabled, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_scrollbar_type_override(scrollbar_type:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setScrollbarTypeOverride', SetScrollbarTypeOverrideParameters.new(scrollbar_type: scrollbar_type, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_timezone_override(timezone:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setTimezoneOverride', SetTimezoneOverrideParameters.new(timezone: timezone, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_touch_override(max_touch_points:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setTouchOverride', SetTouchOverrideParameters.new(max_touch_points: max_touch_points, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_user_agent_override(user_agent:, contexts: UNSET, user_contexts: UNSET)
             @transport.execute('emulation.setUserAgentOverride', SetUserAgentOverrideParameters.new(user_agent: user_agent, contexts: contexts, user_contexts: user_contexts))
           end

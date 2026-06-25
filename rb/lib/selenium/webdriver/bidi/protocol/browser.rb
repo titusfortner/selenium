@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Browser
           CLIENT_WINDOW_INFO_STATE = {
             fullscreen: 'fullscreen',
@@ -41,42 +42,55 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ClientWindowInfo < Data.define(active: 'active', client_window: 'clientWindow', height: 'height', state: {json_key: 'state', enum: 'Browser::CLIENT_WINDOW_INFO_STATE'}, width: 'width', x: 'x', y: 'y'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UserContextInfo < Data.define(user_context: 'userContext'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Close < Data.define(method_: {json_key: 'method', fixed: 'browser.close'}, params: 'params'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CreateUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.createUserContext'}, params: {json_key: 'params', ref: 'Browser::CreateUserContextParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CreateUserContextParameters < Data.define(accept_insecure_certs: 'acceptInsecureCerts', proxy: {json_key: 'proxy', ref: 'Session::ProxyConfiguration'}, unhandled_prompt_behavior: {json_key: 'unhandledPromptBehavior', ref: 'Session::UserPromptHandler'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetClientWindows < Data.define(method_: {json_key: 'method', fixed: 'browser.getClientWindows'}, params: 'params'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetClientWindowsResult < Data.define(client_windows: {json_key: 'clientWindows', ref: 'Browser::ClientWindowInfo', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetUserContexts < Data.define(method_: {json_key: 'method', fixed: 'browser.getUserContexts'}, params: 'params'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetUserContextsResult < Data.define(user_contexts: {json_key: 'userContexts', ref: 'Browser::UserContextInfo', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoveUserContext < Data.define(method_: {json_key: 'method', fixed: 'browser.removeUserContext'}, params: {json_key: 'params', ref: 'Browser::RemoveUserContextParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoveUserContextParameters < Data.define(user_context: 'userContext'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetClientWindowState < Data.define(method_: {json_key: 'method', fixed: 'browser.setClientWindowState'}, params: {json_key: 'params', ref: 'Browser::SetClientWindowStateParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetClientWindowStateParameters < Union
             discriminator 'state'
             variants(
@@ -85,19 +99,24 @@ module Selenium
             fallback 'Browser::SetClientWindowStateParameters::ClientWindowNamedState'
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class ClientWindowNamedState < Data.define(client_window: 'clientWindow', state: {json_key: 'state', enum: 'Browser::CLIENT_WINDOW_NAMED_STATE_STATE'}); end
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class ClientWindowRectState < Data.define(state: {fixed: 'normal'}, client_window: 'clientWindow', width: 'width', height: 'height', x: 'x', y: 'y'); end
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetDownloadBehavior < Data.define(method_: {json_key: 'method', fixed: 'browser.setDownloadBehavior'}, params: {json_key: 'params', ref: 'Browser::SetDownloadBehaviorParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetDownloadBehaviorParameters < Data.define(download_behavior: {json_key: 'downloadBehavior', nullable: true, ref: 'Browser::DownloadBehavior'}, user_contexts: {json_key: 'userContexts', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DownloadBehavior < Union
             discriminator 'type'
             variants(
@@ -106,9 +125,11 @@ module Selenium
             )
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class Allowed < Data.define(type: {fixed: 'allowed'}, destination_folder: 'destinationFolder'); end
 
             # @api private
+            # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
             class Denied < Data.define(type: {fixed: 'denied'}); end
           end
 
@@ -117,37 +138,44 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def close
             @transport.execute('browser.close')
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def create_user_context(accept_insecure_certs: UNSET, proxy: UNSET, unhandled_prompt_behavior: UNSET)
             @transport.execute('browser.createUserContext', CreateUserContextParameters.new(accept_insecure_certs: accept_insecure_certs, proxy: proxy, unhandled_prompt_behavior: unhandled_prompt_behavior), Protocol.const_get('Browser::UserContextInfo'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_client_windows
             @transport.execute('browser.getClientWindows', nil, Protocol.const_get('Browser::GetClientWindowsResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_user_contexts
             @transport.execute('browser.getUserContexts', nil, Protocol.const_get('Browser::GetUserContextsResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def remove_user_context(user_context:)
             @transport.execute('browser.removeUserContext', RemoveUserContextParameters.new(user_context: user_context))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_client_window_state(client_window:, state:, width: UNSET, height: UNSET, x: UNSET, y: UNSET)
             Enum.check!('state', state, %w[normal fullscreen maximized minimized])
             @transport.execute('browser.setClientWindowState', SetClientWindowStateParameters.build(client_window: client_window, state: state, width: width, height: height, x: x, y: y), Protocol.const_get('Browser::ClientWindowInfo'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_download_behavior(download_behavior:, user_contexts: UNSET)
             @transport.execute('browser.setDownloadBehavior', SetDownloadBehaviorParameters.new(download_behavior: download_behavior, user_contexts: user_contexts))
           end

@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Script
           EVENTS = {
             message: 'script.message',
@@ -68,12 +69,15 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ChannelValue < Data.define(type: {fixed: 'channel'}, value: {json_key: 'value', ref: 'Script::ChannelProperties'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ChannelProperties < Data.define(channel: 'channel', serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, ownership: {json_key: 'ownership', enum: 'Script::RESULT_OWNERSHIP'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class EvaluateResult < Union
             discriminator 'type'
             variants(
@@ -83,15 +87,19 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class EvaluateResultSuccess < Data.define(type: {fixed: 'success'}, result: {json_key: 'result', ref: 'Script::RemoteValue'}, realm: 'realm'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class EvaluateResultException < Data.define(type: {fixed: 'exception'}, exception_details: {json_key: 'exceptionDetails', ref: 'Script::ExceptionDetails'}, realm: 'realm'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ExceptionDetails < Data.define(column_number: 'columnNumber', exception: {json_key: 'exception', ref: 'Script::RemoteValue'}, line_number: 'lineNumber', stack_trace: {json_key: 'stackTrace', ref: 'Script::StackTrace'}, text: 'text'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class LocalValue < Union
             discriminator 'type'
             variants(
@@ -113,27 +121,35 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ArrayLocalValue < Data.define(type: {fixed: 'array'}, value: {json_key: 'value', ref: 'Script::LocalValue', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DateLocalValue < Data.define(type: {fixed: 'date'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class MapLocalValue < Data.define(type: {fixed: 'map'}, value: {json_key: 'value', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ObjectLocalValue < Data.define(type: {fixed: 'object'}, value: {json_key: 'value', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RegExpValue < Data.define(pattern: 'pattern', flags: 'flags'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RegExpLocalValue < Data.define(type: {fixed: 'regexp'}, value: {json_key: 'value', ref: 'Script::RegExpValue'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetLocalValue < Data.define(type: {fixed: 'set'}, value: {json_key: 'value', ref: 'Script::LocalValue', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PrimitiveProtocolValue < Union
             discriminator 'type'
             variants(
@@ -147,24 +163,31 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class UndefinedValue < Data.define(type: {fixed: 'undefined'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NullValue < Data.define(type: {fixed: 'null'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class StringValue < Data.define(type: {fixed: 'string'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NumberValue < Data.define(type: {fixed: 'number'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BooleanValue < Data.define(type: {fixed: 'boolean'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BigIntValue < Data.define(type: {fixed: 'bigint'}, value: 'value'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RealmInfo < Union
             discriminator 'type'
             variants(
@@ -180,33 +203,43 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BaseRealmInfo < Data.define(realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WindowRealmInfo < Data.define(type: {fixed: 'window'}, realm: 'realm', origin: 'origin', context: 'context', user_context: 'userContext', sandbox: 'sandbox'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DedicatedWorkerRealmInfo < Data.define(type: {fixed: 'dedicated-worker'}, realm: 'realm', origin: 'origin', owners: {json_key: 'owners', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SharedWorkerRealmInfo < Data.define(type: {fixed: 'shared-worker'}, realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ServiceWorkerRealmInfo < Data.define(type: {fixed: 'service-worker'}, realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WorkerRealmInfo < Data.define(type: {fixed: 'worker'}, realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PaintWorkletRealmInfo < Data.define(type: {fixed: 'paint-worklet'}, realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AudioWorkletRealmInfo < Data.define(type: {fixed: 'audio-worklet'}, realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WorkletRealmInfo < Data.define(type: {fixed: 'worklet'}, realm: 'realm', origin: 'origin'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoteReference < Union
             presence(
               'Script::SharedReference' => ['sharedId'],
@@ -215,12 +248,15 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SharedReference < Data.define(shared_id: 'sharedId', handle: 'handle', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoteObjectReference < Data.define(handle: 'handle', shared_id: 'sharedId', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemoteValue < Union
             discriminator 'type'
             variants(
@@ -254,90 +290,119 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SymbolRemoteValue < Data.define(type: {fixed: 'symbol'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ArrayRemoteValue < Data.define(type: {fixed: 'array'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ObjectRemoteValue < Data.define(type: {fixed: 'object'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class FunctionRemoteValue < Data.define(type: {fixed: 'function'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RegExpRemoteValue < Data.define(type: {fixed: 'regexp'}, value: {json_key: 'value', ref: 'Script::RegExpValue'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DateRemoteValue < Data.define(type: {fixed: 'date'}, value: 'value', handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class MapRemoteValue < Data.define(type: {fixed: 'map'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetRemoteValue < Data.define(type: {fixed: 'set'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WeakMapRemoteValue < Data.define(type: {fixed: 'weakmap'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WeakSetRemoteValue < Data.define(type: {fixed: 'weakset'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GeneratorRemoteValue < Data.define(type: {fixed: 'generator'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ErrorRemoteValue < Data.define(type: {fixed: 'error'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ProxyRemoteValue < Data.define(type: {fixed: 'proxy'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PromiseRemoteValue < Data.define(type: {fixed: 'promise'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class TypedArrayRemoteValue < Data.define(type: {fixed: 'typedarray'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ArrayBufferRemoteValue < Data.define(type: {fixed: 'arraybuffer'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NodeListRemoteValue < Data.define(type: {fixed: 'nodelist'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class HTMLCollectionRemoteValue < Data.define(type: {fixed: 'htmlcollection'}, handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::RemoteValue', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NodeRemoteValue < Data.define(type: {fixed: 'node'}, shared_id: 'sharedId', handle: 'handle', internal_id: 'internalId', value: {json_key: 'value', ref: 'Script::NodeProperties'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class NodeProperties < Data.define(node_type: 'nodeType', child_node_count: 'childNodeCount', attributes: 'attributes', children: {json_key: 'children', ref: 'Script::NodeRemoteValue', list: true}, local_name: 'localName', mode: {json_key: 'mode', enum: 'Script::NODE_PROPERTIES_MODE'}, namespace_uri: 'namespaceURI', node_value: 'nodeValue', shadow_root: {json_key: 'shadowRoot', nullable: true, ref: 'Script::NodeRemoteValue'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WindowProxyRemoteValue < Data.define(type: {fixed: 'window'}, value: {json_key: 'value', ref: 'Script::WindowProxyProperties'}, handle: 'handle', internal_id: 'internalId'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class WindowProxyProperties < Data.define(context: 'context'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SerializationOptions < Data.define(max_dom_depth: {json_key: 'maxDomDepth', nullable: true}, max_object_depth: {json_key: 'maxObjectDepth', nullable: true}, include_shadow_tree: {json_key: 'includeShadowTree', enum: 'Script::SERIALIZATION_OPTIONS_INCLUDE_SHADOW_TREE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class StackFrame < Data.define(column_number: 'columnNumber', function_name: 'functionName', line_number: 'lineNumber', url: 'url'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class StackTrace < Data.define(call_frames: {json_key: 'callFrames', ref: 'Script::StackFrame', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Source < Data.define(realm: 'realm', context: 'context', user_context: 'userContext'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RealmTarget < Data.define(realm: 'realm'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class ContextTarget < Data.define(context: 'context', sandbox: 'sandbox'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Target < Union
             presence(
               'Script::ContextTarget' => ['context'],
@@ -346,60 +411,79 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AddPreloadScript < Data.define(method_: {json_key: 'method', fixed: 'script.addPreloadScript'}, params: {json_key: 'params', ref: 'Script::AddPreloadScriptParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AddPreloadScriptParameters < Data.define(function_declaration: 'functionDeclaration', arguments: {json_key: 'arguments', ref: 'Script::ChannelValue', list: true}, contexts: {json_key: 'contexts', list: true}, user_contexts: {json_key: 'userContexts', list: true}, sandbox: 'sandbox'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class AddPreloadScriptResult < Data.define(script: 'script'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Disown < Data.define(method_: {json_key: 'method', fixed: 'script.disown'}, params: {json_key: 'params', ref: 'Script::DisownParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DisownParameters < Data.define(handles: {json_key: 'handles', list: true}, target: {json_key: 'target', ref: 'Script::Target'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CallFunction < Data.define(method_: {json_key: 'method', fixed: 'script.callFunction'}, params: {json_key: 'params', ref: 'Script::CallFunctionParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CallFunctionParameters < Data.define(function_declaration: 'functionDeclaration', await_promise: 'awaitPromise', target: {json_key: 'target', ref: 'Script::Target'}, arguments: {json_key: 'arguments', ref: 'Script::LocalValue', list: true}, result_ownership: {json_key: 'resultOwnership', enum: 'Script::RESULT_OWNERSHIP'}, serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, this: {json_key: 'this', ref: 'Script::LocalValue'}, user_activation: 'userActivation'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Evaluate < Data.define(method_: {json_key: 'method', fixed: 'script.evaluate'}, params: {json_key: 'params', ref: 'Script::EvaluateParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class EvaluateParameters < Data.define(expression: 'expression', target: {json_key: 'target', ref: 'Script::Target'}, await_promise: 'awaitPromise', result_ownership: {json_key: 'resultOwnership', enum: 'Script::RESULT_OWNERSHIP'}, serialization_options: {json_key: 'serializationOptions', ref: 'Script::SerializationOptions'}, user_activation: 'userActivation'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetRealms < Data.define(method_: {json_key: 'method', fixed: 'script.getRealms'}, params: {json_key: 'params', ref: 'Script::GetRealmsParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetRealmsParameters < Data.define(context: 'context', type: {json_key: 'type', enum: 'Script::REALM_TYPE'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetRealmsResult < Data.define(realms: {json_key: 'realms', ref: 'Script::RealmInfo', list: true}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemovePreloadScript < Data.define(method_: {json_key: 'method', fixed: 'script.removePreloadScript'}, params: {json_key: 'params', ref: 'Script::RemovePreloadScriptParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RemovePreloadScriptParameters < Data.define(script: 'script'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class Message < Data.define(method_: {json_key: 'method', fixed: 'script.message'}, params: {json_key: 'params', ref: 'Script::MessageParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class MessageParameters < Data.define(channel: 'channel', data: {json_key: 'data', ref: 'Script::RemoteValue'}, source: {json_key: 'source', ref: 'Script::Source'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RealmCreated < Data.define(method_: {json_key: 'method', fixed: 'script.realmCreated'}, params: {json_key: 'params', ref: 'Script::RealmInfo'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RealmDestroyed < Data.define(method_: {json_key: 'method', fixed: 'script.realmDestroyed'}, params: {json_key: 'params', ref: 'Script::RealmDestroyedParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class RealmDestroyedParameters < Data.define(realm: 'realm'); end
 
           def initialize(context)
@@ -407,34 +491,40 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def add_preload_script(function_declaration:, arguments: UNSET, contexts: UNSET, user_contexts: UNSET, sandbox: UNSET)
             @transport.execute('script.addPreloadScript', AddPreloadScriptParameters.new(function_declaration: function_declaration, arguments: arguments, contexts: contexts, user_contexts: user_contexts, sandbox: sandbox), Protocol.const_get('Script::AddPreloadScriptResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def call_function(function_declaration:, await_promise:, target:, arguments: UNSET, result_ownership: UNSET, serialization_options: UNSET, this: UNSET, user_activation: UNSET)
             Enum.check!('resultOwnership', result_ownership, Script::RESULT_OWNERSHIP)
             @transport.execute('script.callFunction', CallFunctionParameters.new(function_declaration: function_declaration, await_promise: await_promise, target: target, arguments: arguments, result_ownership: result_ownership, serialization_options: serialization_options, this: this, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def disown(handles:, target:)
             @transport.execute('script.disown', DisownParameters.new(handles: handles, target: target))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def evaluate(expression:, target:, await_promise:, result_ownership: UNSET, serialization_options: UNSET, user_activation: UNSET)
             Enum.check!('resultOwnership', result_ownership, Script::RESULT_OWNERSHIP)
             @transport.execute('script.evaluate', EvaluateParameters.new(expression: expression, target: target, await_promise: await_promise, result_ownership: result_ownership, serialization_options: serialization_options, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_realms(context: UNSET, type: UNSET)
             Enum.check!('type', type, Script::REALM_TYPE)
             @transport.execute('script.getRealms', GetRealmsParameters.new(context: context, type: type), Protocol.const_get('Script::GetRealmsResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def remove_preload_script(script:)
             @transport.execute('script.removePreloadScript', RemovePreloadScriptParameters.new(script: script))
           end

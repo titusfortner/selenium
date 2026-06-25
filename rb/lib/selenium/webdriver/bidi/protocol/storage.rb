@@ -26,23 +26,30 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Storage
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PartitionKey < Data.define(user_context: 'userContext', source_origin: 'sourceOrigin', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.getCookies'}, params: {json_key: 'params', ref: 'Storage::GetCookiesParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class CookieFilter < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', size: 'size', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class BrowsingContextPartitionDescriptor < Data.define(type: {fixed: 'context'}, context: 'context'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class StorageKeyPartitionDescriptor < Data.define(type: {fixed: 'storageKey'}, user_context: 'userContext', source_origin: 'sourceOrigin', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PartitionDescriptor < Union
             discriminator 'type'
             variants(
@@ -52,30 +59,39 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetCookiesParameters < Data.define(filter: {json_key: 'filter', ref: 'Storage::CookieFilter'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class GetCookiesResult < Data.define(cookies: {json_key: 'cookies', ref: 'Network::Cookie', list: true}, partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetCookie < Data.define(method_: {json_key: 'method', fixed: 'storage.setCookie'}, params: {json_key: 'params', ref: 'Storage::SetCookieParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PartialCookie < Data.define(name: 'name', value: {json_key: 'value', ref: 'Network::BytesValue'}, domain: 'domain', path: 'path', http_only: 'httpOnly', secure: 'secure', same_site: {json_key: 'sameSite', enum: 'Network::SAME_SITE'}, expiry: 'expiry', extensible: true); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetCookieParameters < Data.define(cookie: {json_key: 'cookie', ref: 'Storage::PartialCookie'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetCookieResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DeleteCookies < Data.define(method_: {json_key: 'method', fixed: 'storage.deleteCookies'}, params: {json_key: 'params', ref: 'Storage::DeleteCookiesParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DeleteCookiesParameters < Data.define(filter: {json_key: 'filter', ref: 'Storage::CookieFilter'}, partition: {json_key: 'partition', ref: 'Storage::PartitionDescriptor'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class DeleteCookiesResult < Data.define(partition_key: {json_key: 'partitionKey', ref: 'Storage::PartitionKey'}); end
 
           def initialize(context)
@@ -83,16 +99,19 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def delete_cookies(filter: UNSET, partition: UNSET)
             @transport.execute('storage.deleteCookies', DeleteCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::DeleteCookiesResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_cookies(filter: UNSET, partition: UNSET)
             @transport.execute('storage.getCookies', GetCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::GetCookiesResult'))
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_cookie(cookie:, partition: UNSET)
             @transport.execute('storage.setCookie', SetCookieParameters.new(cookie: cookie, partition: partition), Protocol.const_get('Storage::SetCookieResult'))
           end

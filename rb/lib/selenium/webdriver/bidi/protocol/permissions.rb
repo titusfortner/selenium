@@ -26,6 +26,7 @@ module Selenium
     class BiDi
       module Protocol
         # @api private
+        # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
         class Permissions
           PERMISSION_STATE = {
             granted: 'granted',
@@ -34,12 +35,15 @@ module Selenium
           }.freeze
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class PermissionDescriptor < Data.define(name: 'name'); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetPermission < Data.define(method_: {json_key: 'method', fixed: 'permissions.setPermission'}, params: {json_key: 'params', ref: 'Permissions::SetPermissionParameters'}); end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           class SetPermissionParameters < Data.define(descriptor: {json_key: 'descriptor', ref: 'Permissions::PermissionDescriptor'}, state: {json_key: 'state', enum: 'Permissions::PERMISSION_STATE'}, origin: 'origin', embedded_origin: 'embeddedOrigin', user_context: 'userContext'); end
 
           def initialize(context)
@@ -47,6 +51,7 @@ module Selenium
           end
 
           # @api private
+          # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_permission(descriptor:, state:, origin:, embedded_origin: UNSET, user_context: UNSET)
             Enum.check!('state', state, Permissions::PERMISSION_STATE)
             @transport.execute('permissions.setPermission', SetPermissionParameters.new(descriptor: descriptor, state: state, origin: origin, embedded_origin: embedded_origin, user_context: user_context))
