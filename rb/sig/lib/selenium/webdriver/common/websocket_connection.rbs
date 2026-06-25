@@ -35,7 +35,7 @@ module Selenium
 
       MAX_LOG_MESSAGE_SIZE: Integer
 
-      def initialize: (url: String) -> void
+      def initialize: (url: String?, ?client_config: untyped) -> void
 
       def add_callback: (untyped event) { () -> void } -> Integer
 

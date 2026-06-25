@@ -1,0 +1,60 @@
+module Selenium
+  module WebDriver
+    class BiDi
+      # Typed `untyped` (not the runtime Object) so a generated optional param keeps its
+      # value type while still defaulting to UNSET in the type-checked method body.
+      UNSET: untyped
+
+      # Factory and runtime base for the generated value types. Each generated class
+      # is `class X < Data.define(...)`; the RBS models them as `class X < BiDi::Data`
+      # with their own readers and `self.new`.
+      class Data < ::Data
+        def self.define: (**untyped spec) -> singleton(Data)
+
+        def self.field: (Symbol name, untyped meta) -> untyped
+
+        def self.fields: () -> Array[untyped]
+
+        def self.extensible?: () -> bool
+
+        # Builds an instance from a wire payload (no enum validation — inbound is trusted).
+        def self.from_json: (untyped json_payload) -> instance
+
+        def as_json: (*untyped) -> Hash[String, untyped]
+
+        module Deserializer
+          def new: (**untyped kwargs) -> untyped
+
+          def from_json: (untyped json_payload) -> untyped
+        end
+
+        module Serializable
+          def self.as_json: (untyped value) -> untyped
+
+          def as_json: (*untyped) -> Hash[String, untyped]
+        end
+      end
+
+      # Parses a wire hash into the right variant and builds the variant a command's
+      # merged keyword args describe.
+      class Union
+        def self.discriminator: (String json_key) -> String
+
+        def self.variants: (Hash[untyped, String] table) -> Hash[untyped, String]
+
+        def self.presence: (Hash[String, Array[String]] rules) -> Hash[String, Array[String]]
+
+        def self.fallback: (String path) -> String
+
+        def self.from_json: (untyped json_payload) -> untyped
+
+        def self.build: (**untyped kwargs) -> untyped
+      end
+
+      # Validates an outbound enum argument against its allowed wire values.
+      module Enum
+        def self.check!: (String name, untyped value, untyped allowed) -> void
+      end
+    end
+  end
+end

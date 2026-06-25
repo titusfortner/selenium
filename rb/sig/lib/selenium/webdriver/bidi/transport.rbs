@@ -1,0 +1,22 @@
+module Selenium
+  module WebDriver
+    class BiDi
+      # Low-level command seam for the generated Protocol layer.
+      class Transport
+        @connection: untyped
+
+        def self.for: (untyped context) -> Transport
+
+        def initialize: (untyped connection) -> void
+
+        def execute: (String method, ?untyped params, ?untyped result_type) -> untyped
+
+        private
+
+        def serialize: (untyped params) -> untyped
+
+        def error_message: (Hash[String, untyped] reply) -> String
+      end
+    end
+  end
+end

@@ -3,9 +3,11 @@ module Selenium
     class BiDi
       @ws: WebSocketConnection
 
+      @transport: Transport?
+
       @session: Session
 
-      def initialize: (url: String) -> void
+      def initialize: (?url: String?, ?socket: untyped, ?transport: Transport?) -> void
 
       def add_callback: (String | Symbol event) { () -> void } -> Integer
 

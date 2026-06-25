@@ -93,6 +93,15 @@ module BiDiGenerate
     camel_to_snake(camel).upcase
   end
 
+  # Makes an RBS type admit nil, idempotently (an already-nilable or opaque type is
+  # left as-is). Used both for nullable fields and for optional params, where passing
+  # nil is the runtime equivalent of omitting the argument.
+  def self.rbs_nilable(type)
+    return type if type == 'untyped' || type == 'nil' || type.end_with?('?')
+
+    "#{type}?"
+  end
+
   # Domain-qualified path to an enum's frozen hash constant
   # ("browsingContext.ReadinessState" → "BrowsingContext::READINESS_STATE"), so a
   # generated command method can reference it for an outbound membership check.
@@ -117,7 +126,7 @@ module BiDiGenerate
   # ruby_name is the snake_case keyword argument; wire_name is the exact key the
   # protocol expects (baked verbatim from the schema, no runtime conversion). enum is
   # the allowed-values constant path for an enum-typed param (nil otherwise).
-  Param = Struct.new(:ruby_name, :wire_name, :required, :enum, keyword_init: true) do
+  Param = Struct.new(:ruby_name, :wire_name, :required, :enum, :rbs, keyword_init: true) do
     # Optionals default to UNSET (omitted), so an explicit nil can still reach a
     # nullable field as wire null.
     def sig_part
@@ -126,6 +135,14 @@ module BiDiGenerate
 
     def enum_check
       "Enum.check!('#{wire_name}', #{ruby_name}, #{enum})" if enum
+    end
+
+    # An RBS keyword parameter carrying the param's value type. A required param is its
+    # bare type; an optional one is prefixed `?` and admits nil, since passing nil is the
+    # runtime equivalent of omitting it (a non-nullable field's nil is dropped on the wire).
+    def rbs_part
+      type = rbs || 'untyped'
+      required ? "#{ruby_name}: #{type}" : "?#{ruby_name}: #{BiDiGenerate.rbs_nilable(type)}"
     end
   end
 
@@ -142,6 +159,22 @@ module BiDiGenerate
 
     def signature
       (required_params.map(&:sig_part) + optional_params.map(&:sig_part)).join(', ')
+    end
+
+    # The RBS method signature `(params) -> return`. A passthrough forwards `**untyped`;
+    # the return is the typed result class when the command parses one, else `untyped`.
+    def rbs_signature
+      return '(**untyped) -> untyped' if passthrough
+
+      "(#{rbs_params}) -> #{rbs_return}"
+    end
+
+    def rbs_params
+      (required_params.map(&:rbs_part) + optional_params.map(&:rbs_part)).join(', ')
+    end
+
+    def rbs_return
+      result_ref ? "::Selenium::WebDriver::BiDi::Protocol::#{result_ref}" : 'untyped'
     end
 
     # `@transport.execute(method[, params][, result_type])` — params is the
@@ -182,7 +215,7 @@ module BiDiGenerate
   # ref is the Protocol-relative class path for a nested structured field (nil
   # for a scalar/opaque field); list wraps it in an array. json_key is the exact
   # JSON payload key (the schema's `wire` name, baked verbatim).
-  FieldIR = Struct.new(:ruby_name, :json_key, :required, :nullable, :ref, :list, :enum, keyword_init: true) do
+  FieldIR = Struct.new(:ruby_name, :json_key, :required, :nullable, :ref, :list, :enum, :rbs, keyword_init: true) do
     # A `Data.define` spec entry: `name: 'jsonKey'` shorthand, or
     # `name: {json_key:, …}` when the field carries JSON facts beyond its name.
     # enum carries the allowed-values constant path, validated at construction.
@@ -195,6 +228,19 @@ module BiDiGenerate
       return "#{ruby_name}: '#{json_key}'" if meta.empty?
 
       "#{ruby_name}: {json_key: '#{json_key}', #{meta.join(', ')}}"
+    end
+
+    # The `self.new` keyword for this field — a user-supplied input carrying the field's
+    # value type. An optional field is prefixed `?` and admits nil (nil omits it, same as
+    # the command-param path); a required field is its bare type.
+    def rbs_arg
+      required ? "#{ruby_name}: #{rbs}" : "?#{ruby_name}: #{BiDiGenerate.rbs_nilable(rbs)}"
+    end
+
+    # The `attr_reader` type. A present value is `rbs`; an omitted optional reads back
+    # the UNSET sentinel, which a value type can't capture, so optionals stay `untyped`.
+    def rbs_reader
+      "#{ruby_name}: #{required ? rbs : 'untyped'}"
     end
   end
 
@@ -223,6 +269,29 @@ module BiDiGenerate
       else
         "#{discriminator[:ruby_name]}: {json_key: '#{discriminator[:wire]}', fixed: #{literal}}"
       end
+    end
+
+    # Every Data member gets a typed `attr_reader`: the baked discriminator (untyped),
+    # each field (typed when required; UNSET-bearing optionals stay untyped), then the
+    # extensible passthrough.
+    def rbs_readers
+      readers = []
+      readers << "#{discriminator[:ruby_name]}: untyped" if discriminator
+      readers.concat(fields.map(&:rbs_reader))
+      readers << 'extensions: Hash[String, untyped]' if extensible
+      readers
+    end
+
+    # The keyword arguments `self.new` accepts: each constructable field with its value
+    # type, plus the optional extensions bag. The fixed discriminator is baked, so its
+    # value is ignored — but the lenient `**kwargs` constructor still accepts it (and a
+    # command method passes it through), so it is advertised as an optional keyword.
+    def rbs_new_args
+      parts = []
+      parts << "?#{discriminator[:ruby_name]}: untyped" if discriminator
+      parts.concat(fields.map(&:rbs_arg))
+      parts << '?extensions: untyped' if extensible
+      parts.join(', ')
     end
   end
 
@@ -383,7 +452,8 @@ module BiDiGenerate
       ruby_name = BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name']))
       FieldIR.new(ruby_name: ruby_name, json_key: field['wire'],
                   required: field['required'], nullable: resolved[:nullable],
-                  ref: resolved[:ref], list: resolved[:list], enum: enum_const(field['type']))
+                  ref: resolved[:ref], list: resolved[:list], enum: enum_const(field['type']),
+                  rbs: rbs_type(field['type']))
     end
 
     def resolve_node(node)
@@ -466,9 +536,70 @@ module BiDiGenerate
           ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
           wire_name: field['wire'],
           required: field['required'],
-          enum: enum_const(field['type'])
+          enum: enum_const(field['type']),
+          rbs: rbs_type(field['type'])
         )
       end
+    end
+
+    # Projects a schema type node to an RBS type. Structured refs resolve to their
+    # absolute Protocol class path, enums and scalar aliases to their underlying scalar,
+    # lists to `Array[...]`, and a nullable node gains a trailing `?`. Anything the
+    # generator does not model as a value type stays `untyped`.
+    PRIMITIVE_RBS = {
+      'string' => 'String', 'number' => 'Numeric', 'integer' => 'Integer',
+      'boolean' => 'bool', 'null' => 'nil', 'unknown' => 'untyped'
+    }.freeze
+
+    def rbs_type(node)
+      base = rbs_base(node)
+      node['nullable'] ? BiDiGenerate.rbs_nilable(base) : base
+    end
+
+    def rbs_base(node)
+      return "Array[#{rbs_type(node['list'])}]" if node.key?('list')
+      return rbs_ref_type(node['ref']) if node.key?('ref')
+      return PRIMITIVE_RBS.fetch(node['primitive'], 'untyped') if node.key?('primitive')
+      return rbs_const(node['const']) if node.key?('const')
+
+      'untyped'
+    end
+
+    def rbs_const(value)
+      case value
+      when true, false then 'bool'
+      when ::String then 'String'
+      when ::Numeric then 'Numeric'
+      else 'untyped'
+      end
+    end
+
+    # Resolves a ref to its RBS type, following aliases as resolve_ref does: a value
+    # type yields its class path, an enum/scalar its scalar, a list its element array.
+    def rbs_ref_type(ref, seen = {})
+      return 'untyped' if ref.nil? || seen[ref]
+
+      seen[ref] = true
+      type = @types[ref]
+      return 'untyped' unless type
+
+      case type['kind']
+      when 'record' then type['fields'].empty? ? 'untyped' : rbs_abs(ruby_path(ref))
+      when 'union' then rbs_abs(ruby_path(ref))
+      when 'enum' then 'String'
+      when 'alias' then rbs_alias_type(ref, type['type'], seen)
+      end
+    end
+
+    def rbs_alias_type(ref, inner, seen)
+      return rbs_abs(ruby_path(ref)) if inner.key?('union')
+      return rbs_ref_type(inner['ref'], seen) if inner.key?('ref')
+
+      rbs_base(inner)
+    end
+
+    def rbs_abs(path)
+      "::Selenium::WebDriver::BiDi::Protocol::#{path}"
     end
 
     # The allowed-values constant path when a field (or a list's element) is an enum
@@ -527,7 +658,7 @@ module BiDiGenerate
         field = all_fields.find { |f| f['wire'] == wire }
         required = variant_fields.all? { |fields| fields.any? { |f| f['wire'] == wire && f['required'] } }
         Param.new(ruby_name: BiDiGenerate.safe_field_name(BiDiGenerate.camel_to_snake(field['name'])),
-                  wire_name: wire, required: required)
+                  wire_name: wire, required: required, rbs: rbs_type(field['type']))
       end
     end
 
@@ -732,15 +863,28 @@ module BiDiGenerate
     schema = Schema.new(raw)
     modules = build_ir(schema)
 
+    emit(modules, output_dir, 'module.rb.erb', 'rb')
+    emit(modules, sig_dir(output_dir), 'module.rbs.erb', 'rbs')
+  end
+
+  # Renders every module through one template and writes the result into target,
+  # one file per module. Used for both the Ruby source and its RBS signatures.
+  def self.emit(modules, output_dir, template, extension)
     target = File.join(workspace_root, output_dir)
     FileUtils.mkdir_p(target)
 
-    tmpl = File.join(File.dirname(__FILE__), 'templates', 'module.rb.erb')
+    tmpl = File.join(File.dirname(__FILE__), 'templates', template)
     modules.each do |mod|
-      path = File.join(target, "#{mod.filename}.rb")
+      path = File.join(target, "#{mod.filename}.#{extension}")
       File.write(path, render(mod, tmpl))
       warn "bidi-generate: wrote #{path}"
     end
+  end
+
+  # The RBS signatures mirror the source tree under sig/ (the repo's convention),
+  # e.g. rb/lib/.../protocol -> rb/sig/lib/.../protocol.
+  def self.sig_dir(output_dir)
+    output_dir.sub(%r{(\A|/)lib/}, '\1sig/lib/')
   end
 
   private_class_method def self.load_json(path)
