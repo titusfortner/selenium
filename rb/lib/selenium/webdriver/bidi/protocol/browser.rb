@@ -140,44 +140,44 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def close
-            @transport.execute('browser.close')
+            @transport.execute(cmd: 'browser.close')
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def create_user_context(accept_insecure_certs: UNSET, proxy: UNSET, unhandled_prompt_behavior: UNSET)
-            @transport.execute('browser.createUserContext', CreateUserContextParameters.new(accept_insecure_certs: accept_insecure_certs, proxy: proxy, unhandled_prompt_behavior: unhandled_prompt_behavior), Protocol.const_get('Browser::UserContextInfo'))
+            @transport.execute(cmd: 'browser.createUserContext', params: CreateUserContextParameters.new(accept_insecure_certs: accept_insecure_certs, proxy: proxy, unhandled_prompt_behavior: unhandled_prompt_behavior), result: Browser::UserContextInfo)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_client_windows
-            @transport.execute('browser.getClientWindows', nil, Protocol.const_get('Browser::GetClientWindowsResult'))
+            @transport.execute(cmd: 'browser.getClientWindows', result: Browser::GetClientWindowsResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_user_contexts
-            @transport.execute('browser.getUserContexts', nil, Protocol.const_get('Browser::GetUserContextsResult'))
+            @transport.execute(cmd: 'browser.getUserContexts', result: Browser::GetUserContextsResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def remove_user_context(user_context:)
-            @transport.execute('browser.removeUserContext', RemoveUserContextParameters.new(user_context: user_context))
+            @transport.execute(cmd: 'browser.removeUserContext', params: RemoveUserContextParameters.new(user_context: user_context))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_client_window_state(client_window:, state:, width: UNSET, height: UNSET, x: UNSET, y: UNSET)
             Enum.check!('state', state, %w[normal fullscreen maximized minimized])
-            @transport.execute('browser.setClientWindowState', SetClientWindowStateParameters.build(client_window: client_window, state: state, width: width, height: height, x: x, y: y), Protocol.const_get('Browser::ClientWindowInfo'))
+            @transport.execute(cmd: 'browser.setClientWindowState', params: SetClientWindowStateParameters.build(client_window: client_window, state: state, width: width, height: height, x: x, y: y), result: Browser::ClientWindowInfo)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_download_behavior(download_behavior:, user_contexts: UNSET)
-            @transport.execute('browser.setDownloadBehavior', SetDownloadBehaviorParameters.new(download_behavior: download_behavior, user_contexts: user_contexts))
+            @transport.execute(cmd: 'browser.setDownloadBehavior', params: SetDownloadBehaviorParameters.new(download_behavior: download_behavior, user_contexts: user_contexts))
           end
 
         end # Browser

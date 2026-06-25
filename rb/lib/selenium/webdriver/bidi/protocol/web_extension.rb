@@ -78,13 +78,13 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def install(extension_data:)
-            @transport.execute('webExtension.install', InstallParameters.new(extension_data: extension_data), Protocol.const_get('WebExtension::InstallResult'))
+            @transport.execute(cmd: 'webExtension.install', params: InstallParameters.new(extension_data: extension_data), result: WebExtension::InstallResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def uninstall(extension:)
-            @transport.execute('webExtension.uninstall', UninstallParameters.new(extension: extension))
+            @transport.execute(cmd: 'webExtension.uninstall', params: UninstallParameters.new(extension: extension))
           end
 
         end # WebExtension

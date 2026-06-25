@@ -51,7 +51,7 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_client_hints_override
-            @transport.execute('userAgentClientHints.setClientHintsOverride')
+            @transport.execute(cmd: 'userAgentClientHints.setClientHintsOverride')
           end
 
         end # UserAgentClientHints

@@ -390,84 +390,84 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def activate(context:)
-            @transport.execute('browsingContext.activate', ActivateParameters.new(context: context))
+            @transport.execute(cmd: 'browsingContext.activate', params: ActivateParameters.new(context: context))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def capture_screenshot(context:, origin: UNSET, format: UNSET, clip: UNSET)
             Enum.check!('origin', origin, BrowsingContext::CAPTURE_SCREENSHOT_PARAMETERS_ORIGIN)
-            @transport.execute('browsingContext.captureScreenshot', CaptureScreenshotParameters.new(context: context, origin: origin, format: format, clip: clip), Protocol.const_get('BrowsingContext::CaptureScreenshotResult'))
+            @transport.execute(cmd: 'browsingContext.captureScreenshot', params: CaptureScreenshotParameters.new(context: context, origin: origin, format: format, clip: clip), result: BrowsingContext::CaptureScreenshotResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def close(context:, prompt_unload: UNSET)
-            @transport.execute('browsingContext.close', CloseParameters.new(context: context, prompt_unload: prompt_unload))
+            @transport.execute(cmd: 'browsingContext.close', params: CloseParameters.new(context: context, prompt_unload: prompt_unload))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def create(type:, reference_context: UNSET, background: UNSET, user_context: UNSET)
             Enum.check!('type', type, BrowsingContext::CREATE_TYPE)
-            @transport.execute('browsingContext.create', CreateParameters.new(type: type, reference_context: reference_context, background: background, user_context: user_context), Protocol.const_get('BrowsingContext::CreateResult'))
+            @transport.execute(cmd: 'browsingContext.create', params: CreateParameters.new(type: type, reference_context: reference_context, background: background, user_context: user_context), result: BrowsingContext::CreateResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_tree(max_depth: UNSET, root: UNSET)
-            @transport.execute('browsingContext.getTree', GetTreeParameters.new(max_depth: max_depth, root: root), Protocol.const_get('BrowsingContext::GetTreeResult'))
+            @transport.execute(cmd: 'browsingContext.getTree', params: GetTreeParameters.new(max_depth: max_depth, root: root), result: BrowsingContext::GetTreeResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def handle_user_prompt(context:, accept: UNSET, user_text: UNSET)
-            @transport.execute('browsingContext.handleUserPrompt', HandleUserPromptParameters.new(context: context, accept: accept, user_text: user_text))
+            @transport.execute(cmd: 'browsingContext.handleUserPrompt', params: HandleUserPromptParameters.new(context: context, accept: accept, user_text: user_text))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def locate_nodes(context:, locator:, max_node_count: UNSET, serialization_options: UNSET, start_nodes: UNSET)
-            @transport.execute('browsingContext.locateNodes', LocateNodesParameters.new(context: context, locator: locator, max_node_count: max_node_count, serialization_options: serialization_options, start_nodes: start_nodes), Protocol.const_get('BrowsingContext::LocateNodesResult'))
+            @transport.execute(cmd: 'browsingContext.locateNodes', params: LocateNodesParameters.new(context: context, locator: locator, max_node_count: max_node_count, serialization_options: serialization_options, start_nodes: start_nodes), result: BrowsingContext::LocateNodesResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def navigate(context:, url:, wait: UNSET)
             Enum.check!('wait', wait, BrowsingContext::READINESS_STATE)
-            @transport.execute('browsingContext.navigate', NavigateParameters.new(context: context, url: url, wait: wait), Protocol.const_get('BrowsingContext::NavigateResult'))
+            @transport.execute(cmd: 'browsingContext.navigate', params: NavigateParameters.new(context: context, url: url, wait: wait), result: BrowsingContext::NavigateResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def print(context:, background: UNSET, margin: UNSET, orientation: UNSET, page: UNSET, page_ranges: UNSET, scale: UNSET, shrink_to_fit: UNSET)
             Enum.check!('orientation', orientation, BrowsingContext::PRINT_PARAMETERS_ORIENTATION)
-            @transport.execute('browsingContext.print', PrintParameters.new(context: context, background: background, margin: margin, orientation: orientation, page: page, page_ranges: page_ranges, scale: scale, shrink_to_fit: shrink_to_fit), Protocol.const_get('BrowsingContext::PrintResult'))
+            @transport.execute(cmd: 'browsingContext.print', params: PrintParameters.new(context: context, background: background, margin: margin, orientation: orientation, page: page, page_ranges: page_ranges, scale: scale, shrink_to_fit: shrink_to_fit), result: BrowsingContext::PrintResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def reload(context:, ignore_cache: UNSET, wait: UNSET)
             Enum.check!('wait', wait, BrowsingContext::READINESS_STATE)
-            @transport.execute('browsingContext.reload', ReloadParameters.new(context: context, ignore_cache: ignore_cache, wait: wait), Protocol.const_get('BrowsingContext::NavigateResult'))
+            @transport.execute(cmd: 'browsingContext.reload', params: ReloadParameters.new(context: context, ignore_cache: ignore_cache, wait: wait), result: BrowsingContext::NavigateResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_bypass_csp(bypass:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('browsingContext.setBypassCSP', SetBypassCSPParameters.new(bypass: bypass, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'browsingContext.setBypassCSP', params: SetBypassCSPParameters.new(bypass: bypass, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_viewport(context: UNSET, viewport: UNSET, device_pixel_ratio: UNSET, user_contexts: UNSET)
-            @transport.execute('browsingContext.setViewport', SetViewportParameters.new(context: context, viewport: viewport, device_pixel_ratio: device_pixel_ratio, user_contexts: user_contexts))
+            @transport.execute(cmd: 'browsingContext.setViewport', params: SetViewportParameters.new(context: context, viewport: viewport, device_pixel_ratio: device_pixel_ratio, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def traverse_history(context:, delta:)
-            @transport.execute('browsingContext.traverseHistory', TraverseHistoryParameters.new(context: context, delta: delta))
+            @transport.execute(cmd: 'browsingContext.traverseHistory', params: TraverseHistoryParameters.new(context: context, delta: delta))
           end
 
         end # BrowsingContext

@@ -181,18 +181,16 @@ module BiDiGenerate
       result_ref ? "::Selenium::WebDriver::BiDi::Protocol::#{result_ref}" : 'untyped'
     end
 
-    # `@transport.execute(method[, params][, result_type])` — params is the
-    # constructed Parameters object or a passthrough `**params` hash; result_type is
-    # the trailing positional when the result is structured.
+    # `@transport.execute(cmd:[, params:][, result:])` — params is the constructed
+    # Parameters object or a passthrough `**params` hash; result is the value type the
+    # reply parses into, referenced directly (a method body resolves it lazily, and the
+    # name is unambiguous within Protocol — so no Protocol.const_get is needed here,
+    # unlike the load-time refs baked into the value-type specs).
     def execute_call
       arg = passthrough ? 'params' : params_arg
-      parts = ["'#{wire_name}'"]
-      if result_ref
-        parts << (arg || 'nil')
-        parts << "Protocol.const_get('#{result_ref}')"
-      elsif arg
-        parts << arg
-      end
+      parts = ["cmd: '#{wire_name}'"]
+      parts << "params: #{arg}" if arg
+      parts << "result: #{result_ref}" if result_ref
       "@transport.execute(#{parts.join(', ')})"
     end
 

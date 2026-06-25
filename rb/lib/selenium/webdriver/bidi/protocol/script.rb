@@ -493,40 +493,40 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def add_preload_script(function_declaration:, arguments: UNSET, contexts: UNSET, user_contexts: UNSET, sandbox: UNSET)
-            @transport.execute('script.addPreloadScript', AddPreloadScriptParameters.new(function_declaration: function_declaration, arguments: arguments, contexts: contexts, user_contexts: user_contexts, sandbox: sandbox), Protocol.const_get('Script::AddPreloadScriptResult'))
+            @transport.execute(cmd: 'script.addPreloadScript', params: AddPreloadScriptParameters.new(function_declaration: function_declaration, arguments: arguments, contexts: contexts, user_contexts: user_contexts, sandbox: sandbox), result: Script::AddPreloadScriptResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def call_function(function_declaration:, await_promise:, target:, arguments: UNSET, result_ownership: UNSET, serialization_options: UNSET, this: UNSET, user_activation: UNSET)
             Enum.check!('resultOwnership', result_ownership, Script::RESULT_OWNERSHIP)
-            @transport.execute('script.callFunction', CallFunctionParameters.new(function_declaration: function_declaration, await_promise: await_promise, target: target, arguments: arguments, result_ownership: result_ownership, serialization_options: serialization_options, this: this, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
+            @transport.execute(cmd: 'script.callFunction', params: CallFunctionParameters.new(function_declaration: function_declaration, await_promise: await_promise, target: target, arguments: arguments, result_ownership: result_ownership, serialization_options: serialization_options, this: this, user_activation: user_activation), result: Script::EvaluateResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def disown(handles:, target:)
-            @transport.execute('script.disown', DisownParameters.new(handles: handles, target: target))
+            @transport.execute(cmd: 'script.disown', params: DisownParameters.new(handles: handles, target: target))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def evaluate(expression:, target:, await_promise:, result_ownership: UNSET, serialization_options: UNSET, user_activation: UNSET)
             Enum.check!('resultOwnership', result_ownership, Script::RESULT_OWNERSHIP)
-            @transport.execute('script.evaluate', EvaluateParameters.new(expression: expression, target: target, await_promise: await_promise, result_ownership: result_ownership, serialization_options: serialization_options, user_activation: user_activation), Protocol.const_get('Script::EvaluateResult'))
+            @transport.execute(cmd: 'script.evaluate', params: EvaluateParameters.new(expression: expression, target: target, await_promise: await_promise, result_ownership: result_ownership, serialization_options: serialization_options, user_activation: user_activation), result: Script::EvaluateResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_realms(context: UNSET, type: UNSET)
             Enum.check!('type', type, Script::REALM_TYPE)
-            @transport.execute('script.getRealms', GetRealmsParameters.new(context: context, type: type), Protocol.const_get('Script::GetRealmsResult'))
+            @transport.execute(cmd: 'script.getRealms', params: GetRealmsParameters.new(context: context, type: type), result: Script::GetRealmsResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def remove_preload_script(script:)
-            @transport.execute('script.removePreloadScript', RemovePreloadScriptParameters.new(script: script))
+            @transport.execute(cmd: 'script.removePreloadScript', params: RemovePreloadScriptParameters.new(script: script))
           end
 
         end # Script

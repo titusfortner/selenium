@@ -338,84 +338,84 @@ module Selenium
           def add_data_collector(data_types:, max_encoded_data_size:, collector_type: UNSET, contexts: UNSET, user_contexts: UNSET)
             Enum.check!('dataTypes', data_types, Network::DATA_TYPE)
             Enum.check!('collectorType', collector_type, Network::COLLECTOR_TYPE)
-            @transport.execute('network.addDataCollector', AddDataCollectorParameters.new(data_types: data_types, max_encoded_data_size: max_encoded_data_size, collector_type: collector_type, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Network::AddDataCollectorResult'))
+            @transport.execute(cmd: 'network.addDataCollector', params: AddDataCollectorParameters.new(data_types: data_types, max_encoded_data_size: max_encoded_data_size, collector_type: collector_type, contexts: contexts, user_contexts: user_contexts), result: Network::AddDataCollectorResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def add_intercept(phases:, contexts: UNSET, url_patterns: UNSET)
             Enum.check!('phases', phases, Network::INTERCEPT_PHASE)
-            @transport.execute('network.addIntercept', AddInterceptParameters.new(phases: phases, contexts: contexts, url_patterns: url_patterns), Protocol.const_get('Network::AddInterceptResult'))
+            @transport.execute(cmd: 'network.addIntercept', params: AddInterceptParameters.new(phases: phases, contexts: contexts, url_patterns: url_patterns), result: Network::AddInterceptResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def continue_request(request:, body: UNSET, cookies: UNSET, headers: UNSET, method_: UNSET, url: UNSET)
-            @transport.execute('network.continueRequest', ContinueRequestParameters.new(request: request, body: body, cookies: cookies, headers: headers, method_: method_, url: url))
+            @transport.execute(cmd: 'network.continueRequest', params: ContinueRequestParameters.new(request: request, body: body, cookies: cookies, headers: headers, method_: method_, url: url))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def continue_response(request:, cookies: UNSET, credentials: UNSET, headers: UNSET, reason_phrase: UNSET, status_code: UNSET)
-            @transport.execute('network.continueResponse', ContinueResponseParameters.new(request: request, cookies: cookies, credentials: credentials, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
+            @transport.execute(cmd: 'network.continueResponse', params: ContinueResponseParameters.new(request: request, cookies: cookies, credentials: credentials, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def continue_with_auth(request:, action:, credentials: UNSET)
             Enum.check!('action', action, %w[provideCredentials default cancel])
-            @transport.execute('network.continueWithAuth', ContinueWithAuthParameters.build(request: request, action: action, credentials: credentials))
+            @transport.execute(cmd: 'network.continueWithAuth', params: ContinueWithAuthParameters.build(request: request, action: action, credentials: credentials))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def disown_data(data_type:, collector:, request:)
             Enum.check!('dataType', data_type, Network::DATA_TYPE)
-            @transport.execute('network.disownData', DisownDataParameters.new(data_type: data_type, collector: collector, request: request))
+            @transport.execute(cmd: 'network.disownData', params: DisownDataParameters.new(data_type: data_type, collector: collector, request: request))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def fail_request(request:)
-            @transport.execute('network.failRequest', FailRequestParameters.new(request: request))
+            @transport.execute(cmd: 'network.failRequest', params: FailRequestParameters.new(request: request))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_data(data_type:, request:, collector: UNSET, disown: UNSET)
             Enum.check!('dataType', data_type, Network::DATA_TYPE)
-            @transport.execute('network.getData', GetDataParameters.new(data_type: data_type, collector: collector, disown: disown, request: request), Protocol.const_get('Network::GetDataResult'))
+            @transport.execute(cmd: 'network.getData', params: GetDataParameters.new(data_type: data_type, collector: collector, disown: disown, request: request), result: Network::GetDataResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def provide_response(request:, body: UNSET, cookies: UNSET, headers: UNSET, reason_phrase: UNSET, status_code: UNSET)
-            @transport.execute('network.provideResponse', ProvideResponseParameters.new(request: request, body: body, cookies: cookies, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
+            @transport.execute(cmd: 'network.provideResponse', params: ProvideResponseParameters.new(request: request, body: body, cookies: cookies, headers: headers, reason_phrase: reason_phrase, status_code: status_code))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def remove_data_collector(collector:)
-            @transport.execute('network.removeDataCollector', RemoveDataCollectorParameters.new(collector: collector))
+            @transport.execute(cmd: 'network.removeDataCollector', params: RemoveDataCollectorParameters.new(collector: collector))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def remove_intercept(intercept:)
-            @transport.execute('network.removeIntercept', RemoveInterceptParameters.new(intercept: intercept))
+            @transport.execute(cmd: 'network.removeIntercept', params: RemoveInterceptParameters.new(intercept: intercept))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_cache_behavior(cache_behavior:, contexts: UNSET)
             Enum.check!('cacheBehavior', cache_behavior, Network::SET_CACHE_BEHAVIOR_PARAMETERS_CACHE_BEHAVIOR)
-            @transport.execute('network.setCacheBehavior', SetCacheBehaviorParameters.new(cache_behavior: cache_behavior, contexts: contexts))
+            @transport.execute(cmd: 'network.setCacheBehavior', params: SetCacheBehaviorParameters.new(cache_behavior: cache_behavior, contexts: contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_extra_headers(headers:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('network.setExtraHeaders', SetExtraHeadersParameters.new(headers: headers, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'network.setExtraHeaders', params: SetExtraHeadersParameters.new(headers: headers, contexts: contexts, user_contexts: user_contexts))
           end
 
         end # Network

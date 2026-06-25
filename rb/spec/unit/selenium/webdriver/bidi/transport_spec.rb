@@ -35,7 +35,7 @@ module Selenium
           stub_result('handle' => 'h1')
           params = Protocol::Browser::CreateUserContextParameters.new(accept_insecure_certs: true)
 
-          expect(transport.execute('browser.createUserContext', params)).to eq('handle' => 'h1')
+          expect(transport.execute(cmd: 'browser.createUserContext', params: params)).to eq('handle' => 'h1')
           expect(connection).to have_received(:send_cmd)
             .with(method: 'browser.createUserContext', params: {'acceptInsecureCerts' => true})
         end
@@ -44,7 +44,8 @@ module Selenium
           stub_result('navigation' => 'n1', 'url' => 'https://x')
           params = Protocol::BrowsingContext::NavigateParameters.new(context: 'c', url: 'https://x')
 
-          result = transport.execute('browsingContext.navigate', params, Protocol::BrowsingContext::NavigateResult)
+          result = transport.execute(cmd: 'browsingContext.navigate', params: params,
+                                     result: Protocol::BrowsingContext::NavigateResult)
 
           expect(result).to be_a(Protocol::BrowsingContext::NavigateResult)
           expect(result.url).to eq('https://x')
@@ -52,13 +53,13 @@ module Selenium
 
         it 'sends an empty payload when there are no params' do
           stub_result
-          transport.execute('browser.close')
+          transport.execute(cmd: 'browser.close')
           expect(connection).to have_received(:send_cmd).with(method: 'browser.close', params: {})
         end
 
         it 'drops omitted entries from a passthrough hash' do
           stub_result
-          transport.execute('session.unsubscribe', {events: ['log.entryAdded'], subscriptions: nil})
+          transport.execute(cmd: 'session.unsubscribe', params: {events: ['log.entryAdded'], subscriptions: nil})
           expect(connection).to have_received(:send_cmd)
             .with(method: 'session.unsubscribe', params: {events: ['log.entryAdded']})
         end
@@ -67,7 +68,7 @@ module Selenium
           stub_result
           params = Protocol::BrowsingContext::SetViewportParameters.new(context: 'c', viewport: nil)
 
-          transport.execute('browsingContext.setViewport', params)
+          transport.execute(cmd: 'browsingContext.setViewport', params: params)
 
           expect(connection).to have_received(:send_cmd)
             .with(method: 'browsingContext.setViewport', params: {'context' => 'c', 'viewport' => nil})
@@ -77,7 +78,7 @@ module Selenium
           allow(connection).to receive(:send_cmd)
             .and_return('error' => 'no such frame', 'message' => 'gone', 'stacktrace' => '')
 
-          expect { transport.execute('browsingContext.navigate') }
+          expect { transport.execute(cmd: 'browsingContext.navigate') }
             .to raise_error(Error::NoSuchFrameError, /no such frame/)
         end
 
@@ -85,7 +86,7 @@ module Selenium
           allow(connection).to receive(:send_cmd)
             .and_return('error' => 'unknown command', 'message' => 'nope', 'stacktrace' => '')
 
-          expect { transport.execute('browsingContext.navigate') }
+          expect { transport.execute(cmd: 'browsingContext.navigate') }
             .to raise_error(Error::UnknownCommandError, /unknown command/)
         end
 

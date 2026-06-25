@@ -101,19 +101,19 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def delete_cookies(filter: UNSET, partition: UNSET)
-            @transport.execute('storage.deleteCookies', DeleteCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::DeleteCookiesResult'))
+            @transport.execute(cmd: 'storage.deleteCookies', params: DeleteCookiesParameters.new(filter: filter, partition: partition), result: Storage::DeleteCookiesResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def get_cookies(filter: UNSET, partition: UNSET)
-            @transport.execute('storage.getCookies', GetCookiesParameters.new(filter: filter, partition: partition), Protocol.const_get('Storage::GetCookiesResult'))
+            @transport.execute(cmd: 'storage.getCookies', params: GetCookiesParameters.new(filter: filter, partition: partition), result: Storage::GetCookiesResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_cookie(cookie:, partition: UNSET)
-            @transport.execute('storage.setCookie', SetCookieParameters.new(cookie: cookie, partition: partition), Protocol.const_get('Storage::SetCookieResult'))
+            @transport.execute(cmd: 'storage.setCookie', params: SetCookieParameters.new(cookie: cookie, partition: partition), result: Storage::SetCookieResult)
           end
 
         end # Storage

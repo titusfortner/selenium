@@ -248,79 +248,79 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def handle_request_device_prompt(context:, prompt:, accept:, device: UNSET)
-            @transport.execute('bluetooth.handleRequestDevicePrompt', HandleRequestDevicePromptParameters.build(context: context, prompt: prompt, accept: accept, device: device))
+            @transport.execute(cmd: 'bluetooth.handleRequestDevicePrompt', params: HandleRequestDevicePromptParameters.build(context: context, prompt: prompt, accept: accept, device: device))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_adapter(context:, state:, le_supported: UNSET)
             Enum.check!('state', state, Bluetooth::SIMULATE_ADAPTER_PARAMETERS_STATE)
-            @transport.execute('bluetooth.simulateAdapter', SimulateAdapterParameters.new(context: context, le_supported: le_supported, state: state))
+            @transport.execute(cmd: 'bluetooth.simulateAdapter', params: SimulateAdapterParameters.new(context: context, le_supported: le_supported, state: state))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def disable_simulation(context:)
-            @transport.execute('bluetooth.disableSimulation', DisableSimulationParameters.new(context: context))
+            @transport.execute(cmd: 'bluetooth.disableSimulation', params: DisableSimulationParameters.new(context: context))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_preconnected_peripheral(context:, address:, name:, manufacturer_data:, known_service_uuids:)
-            @transport.execute('bluetooth.simulatePreconnectedPeripheral', SimulatePreconnectedPeripheralParameters.new(context: context, address: address, name: name, manufacturer_data: manufacturer_data, known_service_uuids: known_service_uuids))
+            @transport.execute(cmd: 'bluetooth.simulatePreconnectedPeripheral', params: SimulatePreconnectedPeripheralParameters.new(context: context, address: address, name: name, manufacturer_data: manufacturer_data, known_service_uuids: known_service_uuids))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_advertisement(context:, scan_entry:)
-            @transport.execute('bluetooth.simulateAdvertisement', SimulateAdvertisementParameters.new(context: context, scan_entry: scan_entry))
+            @transport.execute(cmd: 'bluetooth.simulateAdvertisement', params: SimulateAdvertisementParameters.new(context: context, scan_entry: scan_entry))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_gatt_connection_response(context:, address:, code:)
-            @transport.execute('bluetooth.simulateGattConnectionResponse', SimulateGattConnectionResponseParameters.new(context: context, address: address, code: code))
+            @transport.execute(cmd: 'bluetooth.simulateGattConnectionResponse', params: SimulateGattConnectionResponseParameters.new(context: context, address: address, code: code))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_gatt_disconnection(context:, address:)
-            @transport.execute('bluetooth.simulateGattDisconnection', SimulateGattDisconnectionParameters.new(context: context, address: address))
+            @transport.execute(cmd: 'bluetooth.simulateGattDisconnection', params: SimulateGattDisconnectionParameters.new(context: context, address: address))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_service(context:, address:, uuid:, type:)
             Enum.check!('type', type, Bluetooth::SIMULATE_SERVICE_PARAMETERS_TYPE)
-            @transport.execute('bluetooth.simulateService', SimulateServiceParameters.new(context: context, address: address, uuid: uuid, type: type))
+            @transport.execute(cmd: 'bluetooth.simulateService', params: SimulateServiceParameters.new(context: context, address: address, uuid: uuid, type: type))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_characteristic(context:, address:, service_uuid:, characteristic_uuid:, type:, characteristic_properties: UNSET)
             Enum.check!('type', type, Bluetooth::SIMULATE_CHARACTERISTIC_PARAMETERS_TYPE)
-            @transport.execute('bluetooth.simulateCharacteristic', SimulateCharacteristicParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, characteristic_properties: characteristic_properties, type: type))
+            @transport.execute(cmd: 'bluetooth.simulateCharacteristic', params: SimulateCharacteristicParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, characteristic_properties: characteristic_properties, type: type))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_characteristic_response(context:, address:, service_uuid:, characteristic_uuid:, type:, code:, data: UNSET)
             Enum.check!('type', type, Bluetooth::SIMULATE_CHARACTERISTIC_RESPONSE_PARAMETERS_TYPE)
-            @transport.execute('bluetooth.simulateCharacteristicResponse', SimulateCharacteristicResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, type: type, code: code, data: data))
+            @transport.execute(cmd: 'bluetooth.simulateCharacteristicResponse', params: SimulateCharacteristicResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, type: type, code: code, data: data))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_descriptor(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:)
             Enum.check!('type', type, Bluetooth::SIMULATE_DESCRIPTOR_PARAMETERS_TYPE)
-            @transport.execute('bluetooth.simulateDescriptor', SimulateDescriptorParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type))
+            @transport.execute(cmd: 'bluetooth.simulateDescriptor', params: SimulateDescriptorParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def simulate_descriptor_response(context:, address:, service_uuid:, characteristic_uuid:, descriptor_uuid:, type:, code:, data: UNSET)
             Enum.check!('type', type, Bluetooth::SIMULATE_DESCRIPTOR_RESPONSE_PARAMETERS_TYPE)
-            @transport.execute('bluetooth.simulateDescriptorResponse', SimulateDescriptorResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type, code: code, data: data))
+            @transport.execute(cmd: 'bluetooth.simulateDescriptorResponse', params: SimulateDescriptorResponseParameters.new(context: context, address: address, service_uuid: service_uuid, characteristic_uuid: characteristic_uuid, descriptor_uuid: descriptor_uuid, type: type, code: code, data: data))
           end
 
         end # Bluetooth

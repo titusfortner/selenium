@@ -187,19 +187,19 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def perform_actions(context:, actions:)
-            @transport.execute('input.performActions', PerformActionsParameters.new(context: context, actions: actions))
+            @transport.execute(cmd: 'input.performActions', params: PerformActionsParameters.new(context: context, actions: actions))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def release_actions(context:)
-            @transport.execute('input.releaseActions', ReleaseActionsParameters.new(context: context))
+            @transport.execute(cmd: 'input.releaseActions', params: ReleaseActionsParameters.new(context: context))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_files(context:, element:, files:)
-            @transport.execute('input.setFiles', SetFilesParameters.new(context: context, element: element, files: files))
+            @transport.execute(cmd: 'input.setFiles', params: SetFilesParameters.new(context: context, element: element, files: files))
           end
 
         end # Input

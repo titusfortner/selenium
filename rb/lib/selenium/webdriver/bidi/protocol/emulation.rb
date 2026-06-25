@@ -174,67 +174,67 @@ module Selenium
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_forced_colors_mode_theme_override(theme:, contexts: UNSET, user_contexts: UNSET)
             Enum.check!('theme', theme, Emulation::FORCED_COLORS_MODE_THEME)
-            @transport.execute('emulation.setForcedColorsModeThemeOverride', SetForcedColorsModeThemeOverrideParameters.new(theme: theme, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setForcedColorsModeThemeOverride', params: SetForcedColorsModeThemeOverrideParameters.new(theme: theme, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_geolocation_override(contexts: UNSET, user_contexts: UNSET, coordinates: UNSET, error: UNSET)
-            @transport.execute('emulation.setGeolocationOverride', SetGeolocationOverrideParameters.build(contexts: contexts, user_contexts: user_contexts, coordinates: coordinates, error: error))
+            @transport.execute(cmd: 'emulation.setGeolocationOverride', params: SetGeolocationOverrideParameters.build(contexts: contexts, user_contexts: user_contexts, coordinates: coordinates, error: error))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_locale_override(locale:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setLocaleOverride', SetLocaleOverrideParameters.new(locale: locale, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setLocaleOverride', params: SetLocaleOverrideParameters.new(locale: locale, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_network_conditions(network_conditions:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setNetworkConditions', SetNetworkConditionsParameters.new(network_conditions: network_conditions, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setNetworkConditions', params: SetNetworkConditionsParameters.new(network_conditions: network_conditions, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_screen_orientation_override(screen_orientation:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setScreenOrientationOverride', SetScreenOrientationOverrideParameters.new(screen_orientation: screen_orientation, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setScreenOrientationOverride', params: SetScreenOrientationOverrideParameters.new(screen_orientation: screen_orientation, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_screen_settings_override(screen_area:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setScreenSettingsOverride', SetScreenSettingsOverrideParameters.new(screen_area: screen_area, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setScreenSettingsOverride', params: SetScreenSettingsOverrideParameters.new(screen_area: screen_area, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_scripting_enabled(enabled:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setScriptingEnabled', SetScriptingEnabledParameters.new(enabled: enabled, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setScriptingEnabled', params: SetScriptingEnabledParameters.new(enabled: enabled, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_scrollbar_type_override(scrollbar_type:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setScrollbarTypeOverride', SetScrollbarTypeOverrideParameters.new(scrollbar_type: scrollbar_type, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setScrollbarTypeOverride', params: SetScrollbarTypeOverrideParameters.new(scrollbar_type: scrollbar_type, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_timezone_override(timezone:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setTimezoneOverride', SetTimezoneOverrideParameters.new(timezone: timezone, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setTimezoneOverride', params: SetTimezoneOverrideParameters.new(timezone: timezone, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_touch_override(max_touch_points:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setTouchOverride', SetTouchOverrideParameters.new(max_touch_points: max_touch_points, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setTouchOverride', params: SetTouchOverrideParameters.new(max_touch_points: max_touch_points, contexts: contexts, user_contexts: user_contexts))
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def set_user_agent_override(user_agent:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('emulation.setUserAgentOverride', SetUserAgentOverrideParameters.new(user_agent: user_agent, contexts: contexts, user_contexts: user_contexts))
+            @transport.execute(cmd: 'emulation.setUserAgentOverride', params: SetUserAgentOverrideParameters.new(user_agent: user_agent, contexts: contexts, user_contexts: user_contexts))
           end
 
         end # Emulation

@@ -151,31 +151,31 @@ module Selenium
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def end_
-            @transport.execute('session.end')
+            @transport.execute(cmd: 'session.end')
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def new(capabilities:)
-            @transport.execute('session.new', NewParameters.new(capabilities: capabilities), Protocol.const_get('Session::NewResult'))
+            @transport.execute(cmd: 'session.new', params: NewParameters.new(capabilities: capabilities), result: Session::NewResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def status
-            @transport.execute('session.status', nil, Protocol.const_get('Session::StatusResult'))
+            @transport.execute(cmd: 'session.status', result: Session::StatusResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def subscribe(events:, contexts: UNSET, user_contexts: UNSET)
-            @transport.execute('session.subscribe', SubscribeParameters.new(events: events, contexts: contexts, user_contexts: user_contexts), Protocol.const_get('Session::SubscribeResult'))
+            @transport.execute(cmd: 'session.subscribe', params: SubscribeParameters.new(events: events, contexts: contexts, user_contexts: user_contexts), result: Session::SubscribeResult)
           end
 
           # @api private
           # @see https://www.selenium.dev/documentation/warnings/bidi-implementation/
           def unsubscribe(events: UNSET, subscriptions: UNSET)
-            @transport.execute('session.unsubscribe', UnsubscribeParameters.build(events: events, subscriptions: subscriptions))
+            @transport.execute(cmd: 'session.unsubscribe', params: UnsubscribeParameters.build(events: events, subscriptions: subscriptions))
           end
 
         end # Session
