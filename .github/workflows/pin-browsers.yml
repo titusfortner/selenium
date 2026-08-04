@@ -18,7 +18,6 @@ jobs:
 
   create-pr:
     name: Create Pull Request
-    if: github.event.repository.fork == false
     runs-on: ubuntu-latest
     needs: update
     permissions:
@@ -29,6 +28,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: trunk
           persist-credentials: false
       - name: Download patch
         id: download
@@ -45,7 +45,7 @@ jobs:
         if: steps.download.outcome == 'success'
         uses: peter-evans/create-pull-request@v8
         with:
-          token: ${{ secrets.SELENIUM_CI_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Update pinned browser versions"
           author: Selenium CI Bot <selenium-ci@users.noreply.github.com>
           base: trunk
