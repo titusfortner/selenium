@@ -77,7 +77,7 @@ module Selenium
           elsif Platform.mac?
             "#{directory}/macos/selenium-manager"
           elsif Platform.linux?
-            "#{directory}/linux/selenium-manager"
+            Platform.arm? ? "#{directory}/linux-arm64/selenium-manager" : "#{directory}/linux/selenium-manager"
           elsif Platform.unix?
             WebDriver.logger.warn('Selenium Manager binary may not be compatible with Unix',
                                   id: %i[selenium_manager unix_binary])

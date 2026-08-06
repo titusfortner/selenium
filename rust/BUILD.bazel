@@ -56,10 +56,28 @@ alias(
     ],
 )
 
+# When built on a Linux arm64 host the source build produces a native arm64
+# binary. There is no prebuilt arm64 download yet, so off-host builds fall back
+# to the x64 artifact.
+alias(
+    name = "selenium-manager-linux-arm64",
+    actual = select({
+        "//common:linux": ":selenium-manager",
+        "//conditions:default": "@download_sm_linux//file",
+    }),
+    tags = [
+        "manual",
+    ],
+    visibility = [
+        "//common/manager:__pkg__",
+    ],
+)
+
 filegroup(
     name = "selenium-manager-dev",
     srcs = [
         ":selenium-manager-linux",
+        ":selenium-manager-linux-arm64",
         ":selenium-manager-macos",
         ":selenium-manager-windows",
     ],

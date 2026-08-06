@@ -88,6 +88,10 @@ module Selenium
         os == :unix
       end
 
+      def arm?
+        RbConfig::CONFIG['host_cpu'].to_s.match?(/arm|aarch64/)
+      end
+
       def wsl?
         return false unless linux?
 

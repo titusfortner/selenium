@@ -18,6 +18,14 @@ alias(
 )
 
 alias(
+    name = "selenium-manager-linux-arm64",
+    actual = select({
+        "//common:use_pinned_browser": "@download_sm_linux//file",
+        "//conditions:default": "//rust:selenium-manager-linux-arm64",
+    }),
+)
+
+alias(
     name = "selenium-manager-macos",
     actual = select({
         "//common:use_pinned_browser": "@download_sm_macos//file",

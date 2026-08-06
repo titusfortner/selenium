@@ -18,6 +18,12 @@ copy_file(
 )
 
 copy_file(
+    name = "manager-linux-arm64",
+    src = "//common/manager:selenium-manager-linux-arm64",
+    out = "bin/linux-arm64/selenium-manager",
+)
+
+copy_file(
     name = "manager-macos",
     src = "//common/manager:selenium-manager-macos",
     out = "bin/macos/selenium-manager",
@@ -76,6 +82,7 @@ rb_gem_build(
         "README.md",
         ":license",
         ":manager-linux",
+        ":manager-linux-arm64",
         ":manager-macos",
         ":manager-notice",
         ":manager-sbom",
