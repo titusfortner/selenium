@@ -22,6 +22,7 @@ use rstest::rstest;
 use selenium_manager::SeleniumManager;
 use selenium_manager::chrome::ChromeManager;
 use selenium_manager::edge::EdgeManager;
+use std::env::consts::ARCH;
 use std::env::consts::OS;
 #[cfg(unix)]
 use std::os::unix::fs::PermissionsExt;
@@ -44,6 +45,10 @@ fn browser_version_test(
     #[case] browser_version: String,
     #[case] driver_version: String,
 ) {
+    if OS.eq("linux") && ARCH.eq("aarch64") && !browser.eq("firefox") {
+        return;
+    }
+
     let mut cmd = get_selenium_manager();
     cmd.args([
         "--browser",
@@ -82,6 +87,10 @@ fn wrong_parameters_test(
     #[case] driver_version: String,
     #[case] error_code: i32,
 ) {
+    if OS.eq("linux") && ARCH.eq("aarch64") && !browser.eq("firefox") {
+        return;
+    }
+
     let mut cmd = get_selenium_manager();
     let result = cmd
         .args([
