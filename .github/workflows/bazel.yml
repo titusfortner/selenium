@@ -209,7 +209,7 @@ jobs:
         shell: bash
         run: . ./scripts/github-actions/disk-status.sh
       - name: Setup Fluxbox and Xvfb
-        if: inputs.needs-display && inputs.os == 'ubuntu'
+        if: inputs.needs-display && startsWith(inputs.os, 'ubuntu')
         run: |
           sudo apt-get update && sudo apt-get -y install fluxbox x11-utils
           Xvfb :99 &

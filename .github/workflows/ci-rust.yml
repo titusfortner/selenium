@@ -31,6 +31,8 @@ jobs:
     with:
       name: Tests (${{ matrix.os }})
       os: ${{ matrix.os }}
+      needs-display: true
+      rerun-with-debug: true
       run: |
         bazel test --test_env=RUST_BACKTRACE=full --test_env=RUST_TEST_NOCAPTURE=1 --flaky_test_attempts=3 //rust/...
         bazel test --pin_browsers=false --test_env=SE_FORCE_BROWSER_DOWNLOAD=true --test_env=SE_SKIP_DRIVER_IN_PATH=true //rb/spec/integration/selenium/webdriver:driver_finder-firefox //rb/spec/integration/selenium/webdriver:driver-firefox //rb/spec/integration/selenium/webdriver:element-firefox
