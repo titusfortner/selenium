@@ -196,10 +196,7 @@ module Selenium
             end
           end
 
-          describe '#locate_nodes',
-                   pending_if: {browser_family: :safari,
-                                exception: {class: Error::UnknownCommandError},
-                                reason: 'Safari does not implement browsingContext.locateNodes'} do
+          describe '#locate_nodes' do
             it 'finds nodes by CSS selector' do
               browsing_context.navigate(context: driver.window_handle, url: url_for('xhtmlTest.html'), wait: :complete)
 
@@ -212,10 +209,25 @@ module Selenium
               expect(result.nodes).to contain_exactly(be_a(Script::NodeRemoteValue))
               expect(result.nodes.first.value.local_name).to eq('div')
               expect(result.nodes.first.value.attributes).to include('class' => 'content')
+            end
+
+            it 'returns a shared reference for a located node',
+               pending_if: {browser_family: :safari,
+                            reason: 'Safari does not return sharedId for a located node'} do
+              browsing_context.navigate(context: driver.window_handle, url: url_for('xhtmlTest.html'), wait: :complete)
+
+              result = browsing_context.locate_nodes(
+                context: driver.window_handle,
+                locator: BrowsingContext::CssLocator.new(value: 'div.content'),
+                max_node_count: 1
+              )
+
               expect(result.nodes.first.shared_id).to be_a(String)
             end
 
-            it 'accepts serialization options and start nodes' do
+            it 'accepts serialization options and start nodes',
+               pending_if: {browser_family: :safari,
+                            reason: 'Safari does not return sharedId for a located node'} do
               browsing_context.navigate(context: driver.window_handle, url: url_for('formPage.html'), wait: :complete)
               forms = browsing_context.locate_nodes(
                 context: driver.window_handle,
