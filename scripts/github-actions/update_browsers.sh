@@ -61,8 +61,22 @@ for pattern in "${families[@]}"; do
   fi
 done
 
+# Safari Technology Preview is installed from Homebrew at test time rather than pinned here, so
+# recording what the cask currently offers is the only way to notice that a new preview shipped.
+stp_file=scripts/github-actions/safari_technology_preview.txt
+stp_old="$RUNNER_TEMP/safari-technology-preview-old.txt"
+git show "HEAD:$stp_file" > "$stp_old" 2>/dev/null || : > "$stp_old"
+
+# The macos runner satisfies the cask's `macos >= 26` floor, so the default version is the build CI
+# installs; the cask's older per-codename variations only apply below that floor.
+curl -fsS https://formulae.brew.sh/api/cask/safari-technology-preview.json | jq -r '.version' > "$stp_file"
+
+stp=false
+cmp -s "$stp_old" "$stp_file" || stp=true
+
 output=""
 [ "$major" = true ] && output="major"
 [ "$regen_cdp" = true ] && output="${output:+$output }cdp"
+[ "$stp" = true ] && output="${output:+$output }stp"
 echo "Update tags: ${output:-none}"
 echo "output=$output" >> "$GITHUB_OUTPUT"

@@ -141,7 +141,7 @@ jobs:
     uses: ./.github/workflows/ci-ruby.yml
     if: needs.read-targets.outputs.rb != ''
     with:
-      smoke: ${{ !(github.head_ref == 'pinned-browser-updates' && contains(github.event.pull_request.title, '(major)')) }}
+      smoke: ${{ !(github.head_ref == 'pinned-browser-updates' && (contains(github.event.pull_request.title, '(major)') || contains(github.event.pull_request.title, '(STP)'))) }}
 
   rust:
     name: Rust
