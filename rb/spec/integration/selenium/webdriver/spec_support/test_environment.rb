@@ -81,6 +81,23 @@ module Selenium
           ENV.fetch('WD_BROWSER_VERSION', 'stable')
         end
 
+        # Homebrew installs whatever preview is current, and the marketing version holds still across
+        # them, so pair it with the WebKit build that actually moves between releases.
+        def safari_preview_version
+          plist = Safari.technology_preview.sub(%r{/Contents/MacOS/safaridriver\z}, '/Contents/Info.plist')
+          return 'not installed' unless File.exist?(plist)
+
+          short = plist_value(plist, 'CFBundleShortVersionString')
+          build = plist_value(plist, 'CFBundleVersion')
+          return 'unknown' if short.empty? && build.empty?
+
+          build.empty? ? short : "#{short} (#{build})"
+        end
+
+        def plist_value(plist, key)
+          `defaults read "#{plist}" #{key} 2>/dev/null`.strip
+        end
+
         def driver_instance(...)
           @driver_instance || create_driver!(...)
         end
@@ -268,7 +285,7 @@ module Selenium
           {
             browser: browser,
             driver: driver,
-            version: browser_version,
+            version: browser == :safari_preview ? safari_preview_version : browser_version,
             platform: Platform.os,
             ci: Platform.ci,
             rbe: rbe?
