@@ -30,7 +30,14 @@ module Selenium
 
       def to(url)
         @bridge.get url
-        WebDriver.logger.warn("[nav] requested=#{url} landed=#{@bridge.url}", id: :nav)
+        landed = @bridge.url
+        WebDriver.logger.warn("[nav] requested=#{url} landed=#{landed}", id: :nav)
+        return if landed == url
+
+        5.times do |i|
+          sleep 1
+          WebDriver.logger.warn("[nav-wait] +#{i + 1}s landed=#{@bridge.url}", id: :nav)
+        end
       end
 
       #

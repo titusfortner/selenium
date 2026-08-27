@@ -1,21 +1,23 @@
-# TEMPORARY diagnostic workflow. Windows Ruby specs fail in a scattered way; ubuntu does not.
-# Measured so far: ubuntu 0 failures in 630 examples, windows 16, over identical specs and repeats.
-# Ruled out with evidence: the port reservation, and delivery — the app server served every page the
-# failing specs needed, and no navigation, renderer timeout, or session teardown ever raised.
+# TEMPORARY diagnostic workflow. Windows Ruby specs fail where ubuntu does not. Measured so far:
+# every navigation logs where it was asked to go and where it landed, and over 625 navigations per
+# platform, windows missed 5 and ubuntu 0. All 5 were fedcm.html, and the app server never received
+# a GET for them (50 navigations, 45 requests served) — so the browser issued no request at all.
 #
-# The last round reported `url="data:,"` at failure, which was taken for an instrument artifact. It
-# was not: chromedriver's start page is where the browser genuinely still was. So the shape is that
-# a navigation reports success while the page never commits, and every later step then fails on an
-# empty document (NoSuchElementError, "triggerFedCm is not defined").
+# Two things that run does NOT settle, and this one is built to separate:
 #
-# This round proves that directly. Every navigation logs where it was asked to go and where it
-# actually landed:
+# 1. Race or true no-op? If `get` simply returns before the browser starts, a wait should let the
+#    URL catch up. Every mismatch now polls for 5 seconds:
+#      [nav]      requested=.../fedcm.html landed=data:,
+#      [nav-wait] +1s landed=.../fedcm.html      <- returned early; it is a race
+#      [nav-wait] +5s landed=data:,              <- never navigated; not a timing problem
 #
-#   [nav] requested=http://localhost:57835/webComponents.html landed=http://localhost:57835/webComponents.html
-#   [nav] requested=http://localhost:57835/webComponents.html landed=data:,
+# 2. Fresh session or fedcm.html? fedcm_spec is the only spec with an unconditional per-example
+#    `reset_driver!`, so "first navigation on a new session" and "fedcm.html" were the same variable
+#    and the earlier claim about fresh sessions was not supported. shadow_root_spec now resets per
+#    example too, so webComponents.html gets fresh sessions on the same terms. If it starts missing
+#    navigations, the cause is the fresh session; if only fedcm.html does, it is FedCM-specific.
 #
-# A `landed=data:,` line next to a 200 in the access log is the whole bug in two lines. ubuntu stays
-# as the control. Delete this workflow and the logging it adds once the question is answered.
+# ubuntu stays as the control. Delete this workflow and the logging it adds once this is answered.
 name: Windows Spec Probe
 
 on:
