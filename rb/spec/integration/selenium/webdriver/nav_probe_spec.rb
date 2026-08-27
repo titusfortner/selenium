@@ -35,10 +35,9 @@ require_relative 'spec_helper'
 module Selenium
   module WebDriver
     describe 'navigation probe', skip_unless: {browser: :chrome} do
-      def landed_on(page, prime: nil, pause: nil)
-        reset_driver!
+      def landed_on(page, pause: nil, args: [])
+        reset_driver!(args: args)
         sleep pause if pause
-        driver.get url_for(prime) if prime
         driver.get url_for(page)
         driver.current_url
       end
@@ -50,14 +49,15 @@ module Selenium
       end
 
       25.times do |i|
-        it "navigates a second after a reset (#{i})" do
-          expect(landed_on('formPage.html', pause: 1)).to include('formPage.html')
+        it "navigates immediately with renderer task deferral disabled (#{i})" do
+          expect(landed_on('formPage.html', args: ['--disable-features=DeferRendererTasksAfterInput']))
+            .to include('formPage.html')
         end
       end
 
       25.times do |i|
-        it "navigates after priming with blank.html (#{i})" do
-          expect(landed_on('formPage.html', prime: 'blank.html')).to include('formPage.html')
+        it "navigates a second after a reset (#{i})" do
+          expect(landed_on('formPage.html', pause: 1)).to include('formPage.html')
         end
       end
     end

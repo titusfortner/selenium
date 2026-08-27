@@ -318,13 +318,7 @@ module Selenium
 
         def new_driver_instance(**)
           method = :"#{driver}_driver"
-          instance = private_methods.include?(method) ? send(method, **) : WebDriver::Driver.for(driver, **)
-          # A new Windows session answers commands before it can navigate: the first navigation is
-          # silently abandoned roughly 6% of the time, landing on chromedriver's start page while the
-          # command still reports success.
-          sleep 1 if Platform.windows?
-
-          instance
+          private_methods.include?(method) ? send(method, **) : WebDriver::Driver.for(driver, **)
         end
 
         def build_options(**)

@@ -1,20 +1,20 @@
-# TEMPORARY diagnostic workflow. On Windows the first navigation on a freshly created session
-# aborts around 5% of the time, on any URL. Classic chromedriver receives errorText net::ERR_ABORTED
-# from CDP Page.navigate, logs "Done waiting for pending navigations. Status: ok", and answers
-# RESPONSE Navigate successfully, leaving the browser on data:,. BiDi routes through the same CDP
-# call but its mapper raises the error instead of dropping it. ubuntu never reproduces either.
+# TEMPORARY diagnostic workflow. On Windows the first navigation on a freshly created session is
+# aborted around 6% of the time: chromedriver's data:, start page finishes loading, the barrier
+# declares no pending navigations a millisecond later, the navigate that follows gets
+# errorText net::ERR_ABORTED from CDP, and chromedriver answers RESPONSE Navigate successfully
+# anyway. A one second wait after session creation removes it.
 #
-# So the fault is a fresh session, not a page. These arms vary only what happens between creating
-# the session and asking it to navigate, over 25 attempts each:
+# https://issues.chromium.org/issues/402796660 reports the same swallowed error with a different
+# trigger: a click whose form submission is still deferred when the barrier runs. Its workaround,
+# --disable-features=DeferRendererTasksAfterInput, took that reporter's rate from 49/60 to 0/60.
+# The feature defers renderer tasks after *input*, and this probe dispatches none, so it should do
+# nothing here — this run checks that rather than assuming it.
 #
-#   navigate immediately          - the baseline that fails
-#   navigate a second later       - the pause the suite already gives Safari, which is slow to
-#                                   release a previous session
-#   navigate after blank.html     - a throwaway first navigation
+#   baseline fails, flag arm fails    -> different trigger, as the input-gating implies
+#   both arms clean                   -> same bug after all, and the distinction was imaginary
 #
-# If the pause holds where the baseline fails, the session simply is not ready to navigate when
-# chromedriver says it is. Both a classic and a BiDi target run: BiDi raises rather than silently
-# succeeding, so its failures are unambiguous and make the better detector.
+# The settle wait added in an earlier commit is removed here so the baseline can still reproduce;
+# dropping this diagnostic commit restores it.
 #
 # Delete this workflow, nav_probe_spec.rb, and the logging they depend on once this is answered.
 name: Windows Spec Probe
