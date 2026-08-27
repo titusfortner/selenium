@@ -1,23 +1,21 @@
-# TEMPORARY diagnostic workflow. Windows Ruby specs fail where ubuntu does not. Measured so far:
-# every navigation logs where it was asked to go and where it landed, and over 625 navigations per
-# platform, windows missed 5 and ubuntu 0. All 5 were fedcm.html, and the app server never received
-# a GET for them (50 navigations, 45 requests served) — so the browser issued no request at all.
+# TEMPORARY diagnostic workflow. On Windows a navigation occasionally reports success while the
+# browser stays on chromedriver's start page. Measured: 625 navigations per platform, windows missed
+# 5 and ubuntu 0, all 5 on fedcm.html, and the app server never received a GET for them. Waiting
+# after the navigation does not let it catch up, so it is not a slow load.
 #
-# Two things that run does NOT settle, and this one is built to separate:
+# fedcm_spec is the only spec here with an unconditional per-example `reset_driver!`, so every
+# fedcm.html navigation is the first on a brand-new session. Whether that or FedCM itself is what
+# matters is still open.
 #
-# 1. Race or true no-op? If `get` simply returns before the browser starts, a wait should let the
-#    URL catch up. Every mismatch now polls for 5 seconds:
-#      [nav]      requested=.../fedcm.html landed=data:,
-#      [nav-wait] +1s landed=.../fedcm.html      <- returned early; it is a race
-#      [nav-wait] +5s landed=data:,              <- never navigated; not a timing problem
+# This round runs SE_DEBUG=true so the driver says what it did: every command and response is logged
+# and chromedriver's own verbose output goes to stderr. Next to the existing line —
 #
-# 2. Fresh session or fedcm.html? fedcm_spec is the only spec with an unconditional per-example
-#    `reset_driver!`, so "first navigation on a new session" and "fedcm.html" were the same variable
-#    and the earlier claim about fresh sessions was not supported. shadow_root_spec now resets per
-#    example too, so webComponents.html gets fresh sessions on the same terms. If it starts missing
-#    navigations, the cause is the fresh session; if only fedcm.html does, it is FedCM-specific.
+#   [nav] requested=.../fedcm.html landed=data:,
 #
-# ubuntu stays as the control. Delete this workflow and the logging it adds once this is answered.
+# the surrounding command traffic should show whether chromedriver acknowledged a navigate it never
+# performed. Scoped to windows and fedcm only, for a result in minutes rather than half an hour.
+#
+# Delete this workflow and the logging it adds once the question is answered.
 name: Windows Spec Probe
 
 on:
@@ -33,15 +31,11 @@ permissions:
 
 jobs:
   probe:
-    name: ${{ matrix.os }}
+    name: windows
     uses: ./.github/workflows/bazel.yml
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows, ubuntu]
     with:
-      name: spec-probe-${{ matrix.os }}
-      os: ${{ matrix.os }}
+      name: spec-probe-windows
+      os: windows
       needs-display: true
       run: >
         bazel test
@@ -49,11 +43,9 @@ jobs:
         --local_test_jobs 1
         --cache_test_results=no
         --runs_per_test=5
+        --test_env=SE_DEBUG=true
         --test_output=all
         --pin_browsers=false
         --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
         //rb/spec/integration/selenium/webdriver:fedcm-chrome
-        //rb/spec/integration/selenium/webdriver:driver-chrome
-        //rb/spec/integration/selenium/webdriver:select-chrome
-        //rb/spec/integration/selenium/webdriver:shadow_root-chrome

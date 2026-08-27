@@ -24,7 +24,6 @@ module Selenium
     describe ShadowRoot, skip_unless: [{bidi: false, reason: 'Not yet implemented with BiDi'},
                                        {browser: %i[chrome firefox edge safari]}] do
       before { driver.navigate.to url_for('webComponents.html') }
-      after { reset_driver! } # DIAGNOSTIC: fresh session per example, to separate it from fedcm.html
 
       let(:custom_element) { driver.find_element(css: 'custom-checkbox-element') }
 
