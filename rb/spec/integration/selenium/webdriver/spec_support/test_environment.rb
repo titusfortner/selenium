@@ -45,17 +45,49 @@ module Selenium
           @remote_server = nil
         end
 
-        # DIAGNOSTIC (temporary): paired with the app server's access log. Reporting what the browser
-        # is actually showing when an example fails separates "the page never arrived" from "the page
-        # arrived and the spec still failed".
+        # DIAGNOSTIC (temporary): paired with the app server's access log. The access log shows what
+        # the server sent; this shows what the browser actually has, so a failure can be attributed to
+        # delivery, to page readiness, or to neither.
+        PAGE_SNAPSHOT = <<~JS
+          return {
+            url: location.href,
+            readyState: document.readyState,
+            bodyBytes: (document.body && document.body.innerHTML.length) || 0,
+            customElement: typeof customElements === 'undefined' ? 'n/a' :
+              (customElements.get('custom-checkbox-element') ? 'defined' : 'undefined'),
+            matches: document.querySelectorAll('custom-checkbox-element').length
+          };
+        JS
+
+        # Cleared per example, so a snapshot taken while tearing the driver down belongs to the
+        # example that was running. A group's `after { reset_driver! }` destroys the evidence before
+        # any config-level hook (prepend_after included) gets to look, so capture it on the way out.
+        def begin_example_diagnostics
+          @last_page_state = nil
+        end
+
         def report_page_state
+          state = @last_page_state || page_snapshot
+          return unless state
+
+          WebDriver.logger.warn("[page-state] #{state.map { |k, v| "#{k}=#{v.inspect}" }.join(' ')}", id: :diagnose)
+          report_browser_logs
+        end
+
+        def page_snapshot
           return unless @driver_instance
 
-          WebDriver.logger.warn("[page-state] url=#{@driver_instance.current_url.inspect} " \
-                                "title=#{@driver_instance.title.inspect} " \
-                                "source_bytes=#{@driver_instance.page_source.to_s.size}", id: :diagnose)
+          @driver_instance.execute_script(PAGE_SNAPSHOT)
         rescue StandardError => e
-          WebDriver.logger.warn("[page-state] unavailable: #{e.class}: #{e.message}", id: :diagnose)
+          {'unavailable' => "#{e.class}: #{e.message}"}
+        end
+
+        def report_browser_logs
+          @driver_instance.logs.get(:browser).last(5).each do |entry|
+            WebDriver.logger.warn("[browser-log] #{entry.level} #{entry.message}", id: :diagnose)
+          end
+        rescue StandardError
+          nil
         end
 
         def print_env
@@ -124,6 +156,7 @@ module Selenium
         end
 
         def quit_driver
+          @last_page_state ||= page_snapshot if ENV['SE_DIAGNOSE']
           @driver_instance&.quit
         rescue StandardError
           # good riddance
