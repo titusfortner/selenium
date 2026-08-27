@@ -1,22 +1,21 @@
-# TEMPORARY diagnostic workflow. On Windows a navigation occasionally reports success while the
-# browser stays on chromedriver's start page. chromedriver's own verbose log shows why: Page.navigate
-# comes back with errorText net::ERR_ABORTED and chromedriver answers RESPONSE Navigate successfully
-# anyway, dropping the error. Reproduced at 3-5 per 50 navigations, always fedcm.html, never ubuntu.
+# TEMPORARY diagnostic workflow. On Windows the first navigation on a freshly created session
+# aborts around 5% of the time, on any URL. Classic chromedriver receives errorText net::ERR_ABORTED
+# from CDP Page.navigate, logs "Done waiting for pending navigations. Status: ok", and answers
+# RESPONSE Navigate successfully, leaving the browser on data:,. BiDi routes through the same CDP
+# call but its mapper raises the error instead of dropping it. ubuntu never reproduces either.
 #
-# Two things remain unseparated, because fedcm_spec was the only spec resetting per example, making
-# "first navigation on a fresh session" and "fedcm.html" the same variable. nav_probe_spec varies one
-# at a time over 25 attempts each: fedcm.html first, fedcm.html primed with blank.html, and
-# formPage.html first. Reading it:
+# So the fault is a fresh session, not a page. These arms vary only what happens between creating
+# the session and asking it to navigate, over 25 attempts each:
 #
-#   fedcm fails, formPage does not      -> specific to fedcm.html, not to fresh sessions
-#   both fail                           -> it is the first navigation on a new session
-#   priming fixes fedcm                 -> the first load away from data:, is what is fragile
+#   navigate immediately          - the baseline that fails
+#   navigate a second later       - the pause the suite already gives Safari, which is slow to
+#                                   release a previous session
+#   navigate after blank.html     - a throwaway first navigation
 #
-# Both a classic and a BiDi target run, since BiDi reports navigation failure through a different
-# path and should say something the classic one swallows. Stable chrome has no BiDi targets normally,
-# so tests.bzl turns them on for the duration.
+# If the pause holds where the baseline fails, the session simply is not ready to navigate when
+# chromedriver says it is. Both a classic and a BiDi target run: BiDi raises rather than silently
+# succeeding, so its failures are unambiguous and make the better detector.
 #
-# SE_DEBUG=true keeps chromedriver's verbose log and the full command traffic in the output.
 # Delete this workflow, nav_probe_spec.rb, and the logging they depend on once this is answered.
 name: Windows Spec Probe
 

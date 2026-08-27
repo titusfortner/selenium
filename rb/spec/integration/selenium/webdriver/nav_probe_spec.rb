@@ -1,12 +1,32 @@
 # frozen_string_literal: true
 
+# Licensed to the Software Freedom Conservancy (SFC) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The SFC licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+#
+#   http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
 # DIAGNOSTIC (temporary): the smallest reproduction of the Windows navigation failure.
 #
-# chromedriver's own log shows Page.navigate coming back with errorText net::ERR_ABORTED while
-# chromedriver still answers RESPONSE Navigate successfully, leaving the browser on data:,. Every
-# observed case was the first navigation on a session created moments earlier, and every one was
-# fedcm.html — but fedcm_spec is the only spec that resets per example, so those two have never been
-# separated. These contexts vary one thing at a time.
+# The first navigation on a freshly created session aborts around 5% of the time on Windows, on any
+# URL - the earlier "only fedcm.html" reading was an artifact of fedcm_spec being the only spec that
+# reset per example. Classic chromedriver drops the error and answers successfully, leaving the
+# browser on data:,; BiDi raises net::ERR_ABORTED for the same underlying event.
+#
+# The session is what is fresh, so these arms vary only what happens between creating it and asking
+# it to navigate: nothing, a one second pause (what the suite already does for Safari, which is slow
+# to release a previous session), or a throwaway navigation first.
 #
 # Delete with the rest of the diagnostic.
 
@@ -15,28 +35,29 @@ require_relative 'spec_helper'
 module Selenium
   module WebDriver
     describe 'navigation probe', skip_unless: {browser: :chrome} do
-      def landed_on(page, prime: nil)
+      def landed_on(page, prime: nil, pause: nil)
         reset_driver!
+        sleep pause if pause
         driver.get url_for(prime) if prime
         driver.get url_for(page)
         driver.current_url
       end
 
       25.times do |i|
-        it "fedcm.html as the first navigation (#{i})" do
-          expect(landed_on('fedcm/fedcm.html')).to include('fedcm.html')
-        end
-      end
-
-      25.times do |i|
-        it "fedcm.html after priming with blank.html (#{i})" do
-          expect(landed_on('fedcm/fedcm.html', prime: 'blank.html')).to include('fedcm.html')
-        end
-      end
-
-      25.times do |i|
-        it "formPage.html as the first navigation (#{i})" do
+        it "navigates immediately after a reset (#{i})" do
           expect(landed_on('formPage.html')).to include('formPage.html')
+        end
+      end
+
+      25.times do |i|
+        it "navigates a second after a reset (#{i})" do
+          expect(landed_on('formPage.html', pause: 1)).to include('formPage.html')
+        end
+      end
+
+      25.times do |i|
+        it "navigates after priming with blank.html (#{i})" do
+          expect(landed_on('formPage.html', prime: 'blank.html')).to include('formPage.html')
         end
       end
     end
