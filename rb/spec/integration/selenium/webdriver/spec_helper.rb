@@ -117,10 +117,10 @@ RSpec.configure do |c|
   # DIAGNOSTIC (temporary): dump what the browser was showing whenever an example fails. This must be
   # prepend_after: a group's own `after { reset_driver! }` otherwise runs first and we would report a
   # freshly created session sitting on its start page instead of the state at failure.
-  c.prepend_before { GlobalTestEnv.begin_example_diagnostics if ENV['SE_DIAGNOSE'] }
+  c.prepend_before { GlobalTestEnv.begin_example_diagnostics }
 
   c.after do |example|
-    GlobalTestEnv.report_page_state if ENV['SE_DIAGNOSE'] && example.exception
+    GlobalTestEnv.report_page_state if example.exception
   end
 
   # separate c.before hook needed to support traditional skip and pending resolutions

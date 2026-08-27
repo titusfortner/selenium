@@ -1,22 +1,21 @@
-# TEMPORARY diagnostic workflow. Windows Ruby specs fail in a scattered, nondeterministic way.
-# Ruled out so far, with evidence: the port reservation (a probe found no half-bound app server under
-# either IPv4-only or dual-stack reservation) and delivery (the app server served every page the
-# failing specs needed, 194 responses, 200s including the full FedCM flow). The previous run also
-# measured the platform split directly: ubuntu 0 failures in 18 executions, windows 3.
+# TEMPORARY diagnostic workflow. Windows Ruby specs fail in a scattered way; ubuntu does not.
+# Measured so far: ubuntu 0 failures in 630 examples, windows 16, over identical specs and repeats.
+# Ruled out with evidence: the port reservation, and delivery — the app server served every page the
+# failing specs needed, and no navigation, renderer timeout, or session teardown ever raised.
 #
-# This round asks what the browser actually had when a spec failed. Under SE_DIAGNOSE each failure
-# prints a snapshot next to the server's access log:
+# The last round reported `url="data:,"` at failure, which was taken for an instrument artifact. It
+# was not: chromedriver's start page is where the browser genuinely still was. So the shape is that
+# a navigation reports success while the page never commits, and every later step then fails on an
+# empty document (NoSuchElementError, "triggerFedCm is not defined").
 #
-#   [page-state] bodyBytes=512 customElement="defined" matches=1 readyState="complete" url=".../webComponents.html"
+# This round proves that directly. Every navigation logs where it was asked to go and where it
+# actually landed:
 #
-# Compare against that healthy baseline: customElement="undefined" means the page's script had not
-# upgraded the element, matches=0 means it was not in the DOM, a non-complete readyState means the
-# page was still loading, and a wrong url means the navigation did not stick.
+#   [nav] requested=http://localhost:57835/webComponents.html landed=http://localhost:57835/webComponents.html
+#   [nav] requested=http://localhost:57835/webComponents.html landed=data:,
 #
-# runs_per_test is 5 because the observed failure rate is roughly 3 in 18, so single samples are
-# close to useless. ubuntu stays as the control.
-#
-# Delete this workflow, and the SE_DIAGNOSE blocks it depends on, once the question is answered.
+# A `landed=data:,` line next to a 200 in the access log is the whole bug in two lines. ubuntu stays
+# as the control. Delete this workflow and the logging it adds once the question is answered.
 name: Windows Spec Probe
 
 on:
@@ -52,7 +51,6 @@ jobs:
         --pin_browsers=false
         --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
-        --test_env=SE_DIAGNOSE=1
         //rb/spec/integration/selenium/webdriver:fedcm-chrome
         //rb/spec/integration/selenium/webdriver:driver-chrome
         //rb/spec/integration/selenium/webdriver:select-chrome

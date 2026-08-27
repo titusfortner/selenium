@@ -30,6 +30,7 @@ module Selenium
 
       def to(url)
         @bridge.get url
+        WebDriver.logger.warn("[nav] requested=#{url} landed=#{@bridge.url}", id: :nav)
       end
 
       #

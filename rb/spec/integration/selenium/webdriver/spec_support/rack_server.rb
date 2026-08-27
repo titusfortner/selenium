@@ -49,12 +49,9 @@ module Selenium
           handler.run @app, Host: @host, Port: @port, AccessLog: access_log, Logger: WEBrick::Log.new(nil, 0)
         end
 
-        # DIAGNOSTIC (temporary): access logging is off by default, so a page the browser never
-        # rendered is indistinguishable from one the server never served. Under SE_DIAGNOSE, record
-        # every request that arrives so a failure can be pinned to one side or the other.
+        # DIAGNOSTIC (temporary): record every request that reaches the server, so a page the browser
+        # never rendered can be told apart from one the server never sent.
         def access_log
-          return [] unless ENV['SE_DIAGNOSE']
-
           [[$stderr, "[app-server] #{WEBrick::AccessLog::COMMON_LOG_FORMAT}"]]
         end
 

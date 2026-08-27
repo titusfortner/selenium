@@ -71,7 +71,6 @@ module Selenium
           return unless state
 
           WebDriver.logger.warn("[page-state] #{state.map { |k, v| "#{k}=#{v.inspect}" }.join(' ')}", id: :diagnose)
-          report_browser_logs
         end
 
         def page_snapshot
@@ -156,7 +155,7 @@ module Selenium
         end
 
         def quit_driver
-          @last_page_state ||= page_snapshot if ENV['SE_DIAGNOSE']
+          @last_page_state ||= page_snapshot
           @driver_instance&.quit
         rescue StandardError
           # good riddance
