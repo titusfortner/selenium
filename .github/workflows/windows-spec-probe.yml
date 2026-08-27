@@ -1,21 +1,23 @@
 # TEMPORARY diagnostic workflow. On Windows a navigation occasionally reports success while the
-# browser stays on chromedriver's start page. Measured: 625 navigations per platform, windows missed
-# 5 and ubuntu 0, all 5 on fedcm.html, and the app server never received a GET for them. Waiting
-# after the navigation does not let it catch up, so it is not a slow load.
+# browser stays on chromedriver's start page. chromedriver's own verbose log shows why: Page.navigate
+# comes back with errorText net::ERR_ABORTED and chromedriver answers RESPONSE Navigate successfully
+# anyway, dropping the error. Reproduced at 3-5 per 50 navigations, always fedcm.html, never ubuntu.
 #
-# fedcm_spec is the only spec here with an unconditional per-example `reset_driver!`, so every
-# fedcm.html navigation is the first on a brand-new session. Whether that or FedCM itself is what
-# matters is still open.
+# Two things remain unseparated, because fedcm_spec was the only spec resetting per example, making
+# "first navigation on a fresh session" and "fedcm.html" the same variable. nav_probe_spec varies one
+# at a time over 25 attempts each: fedcm.html first, fedcm.html primed with blank.html, and
+# formPage.html first. Reading it:
 #
-# This round runs SE_DEBUG=true so the driver says what it did: every command and response is logged
-# and chromedriver's own verbose output goes to stderr. Next to the existing line —
+#   fedcm fails, formPage does not      -> specific to fedcm.html, not to fresh sessions
+#   both fail                           -> it is the first navigation on a new session
+#   priming fixes fedcm                 -> the first load away from data:, is what is fragile
 #
-#   [nav] requested=.../fedcm.html landed=data:,
+# Both a classic and a BiDi target run, since BiDi reports navigation failure through a different
+# path and should say something the classic one swallows. Stable chrome has no BiDi targets normally,
+# so tests.bzl turns them on for the duration.
 #
-# the surrounding command traffic should show whether chromedriver acknowledged a navigate it never
-# performed. Scoped to windows and fedcm only, for a result in minutes rather than half an hour.
-#
-# Delete this workflow and the logging it adds once the question is answered.
+# SE_DEBUG=true keeps chromedriver's verbose log and the full command traffic in the output.
+# Delete this workflow, nav_probe_spec.rb, and the logging they depend on once this is answered.
 name: Windows Spec Probe
 
 on:
@@ -42,10 +44,10 @@ jobs:
         --keep_going
         --local_test_jobs 1
         --cache_test_results=no
-        --runs_per_test=5
         --test_env=SE_DEBUG=true
         --test_output=all
         --pin_browsers=false
         --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
-        //rb/spec/integration/selenium/webdriver:fedcm-chrome
+        //rb/spec/integration/selenium/webdriver:nav_probe-chrome
+        //rb/spec/integration/selenium/webdriver:nav_probe-chrome-bidi

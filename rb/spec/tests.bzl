@@ -12,6 +12,7 @@ load(
 BROWSERS = {
     "chrome": {
         "data": chrome_data,
+        "bidi": True,  # DIAGNOSTIC (temporary)
         "deps": ["//rb/lib/selenium/webdriver:chrome"],
         "tags": [],
         "target_compatible_with": [],
