@@ -1,0 +1,61 @@
+# TEMPORARY diagnostic workflow. Windows Ruby specs fail in a scattered, nondeterministic way, most
+# visibly on pages that appear never to have loaded ("triggerFedCm is not defined"). A previous probe
+# ruled out the spec app server: it came up reachable on every address `localhost` resolves to, on
+# both IPv4-only and dual-stack port reservation, and the failures happened anyway.
+#
+# This run answers the next question — when a page does not render, did the request ever reach the
+# app server? Under SE_DIAGNOSE each leg prints both sides:
+#
+#   [app-server] ::1 - - [...] "GET /fedcm/fedcm.html HTTP/1.1" 200 431   <- server served it
+#   [page-state] url="about:blank" title="" source_bytes=0               <- browser had nothing
+#
+# A served request plus an empty page means the problem is browser-side. A failure with no matching
+# access-log line means the request never arrived. ubuntu is the control: same specs, same repeats,
+# so "Windows-specific" stops being an inference from the nightly and becomes a measurement.
+#
+# Caveat: [page-state] only prints for raised exceptions, not aggregated expectation failures. The
+# failures being chased are raised (JavascriptError, NoSuchElementError), so that is the useful half.
+#
+# Delete this workflow, and the SE_DIAGNOSE blocks it depends on, once the question is answered.
+name: Windows Spec Probe
+
+on:
+  workflow_dispatch:
+  # Scoped to the investigation branch: workflow_dispatch only dispatches from a repo's default
+  # branch, and this never lands on trunk. Removed together with the rest of the diagnostic.
+  push:
+    branches:
+      - c/release-blockers-review-1db122
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    name: ${{ matrix.os }}
+    uses: ./.github/workflows/bazel.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows, ubuntu]
+    with:
+      name: spec-probe-${{ matrix.os }}
+      os: ${{ matrix.os }}
+      needs-display: true
+      run: >
+        bazel test
+        --keep_going
+        --local_test_jobs 1
+        --cache_test_results=no
+        --runs_per_test=3
+        --test_output=all
+        --pin_browsers=false
+        --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
+        --test_env=SE_SKIP_DRIVER_IN_PATH=true
+        --test_env=SE_DIAGNOSE=1
+        //rb/spec/integration/selenium/webdriver:fedcm-chrome
+        //rb/spec/integration/selenium/webdriver:driver-chrome
+        //rb/spec/integration/selenium/webdriver:select-chrome
+        //rb/spec/integration/selenium/webdriver:timeout-chrome
+        //rb/spec/integration/selenium/webdriver:shadow_root-chrome
+        //rb/spec/integration/selenium/webdriver:navigation-chrome

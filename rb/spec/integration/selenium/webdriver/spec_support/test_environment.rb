@@ -45,6 +45,19 @@ module Selenium
           @remote_server = nil
         end
 
+        # DIAGNOSTIC (temporary): paired with the app server's access log. Reporting what the browser
+        # is actually showing when an example fails separates "the page never arrived" from "the page
+        # arrived and the spec still failed".
+        def report_page_state
+          return unless @driver_instance
+
+          WebDriver.logger.warn("[page-state] url=#{@driver_instance.current_url.inspect} " \
+                                "title=#{@driver_instance.title.inspect} " \
+                                "source_bytes=#{@driver_instance.page_source.to_s.size}", id: :diagnose)
+        rescue StandardError => e
+          WebDriver.logger.warn("[page-state] unavailable: #{e.class}: #{e.message}", id: :diagnose)
+        end
+
         def print_env
           puts "\nRunning Ruby specs:\n\n"
 

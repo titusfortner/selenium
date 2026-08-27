@@ -114,6 +114,11 @@ RSpec.configure do |c|
     resolve_pending_exception(procsy, guard) if guard
   end
 
+  # DIAGNOSTIC (temporary): dump what the browser was showing whenever an example fails.
+  c.after do |example|
+    GlobalTestEnv.report_page_state if ENV['SE_DIAGNOSE'] && example.exception
+  end
+
   # separate c.before hook needed to support traditional skip and pending resolutions
   c.before do
     results = @guards.disposition
