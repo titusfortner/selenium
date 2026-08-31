@@ -14,7 +14,7 @@ filegroup(
         bidi = True,
         classic = False,
         data = ["//common/extensions"],
-        tags = ["exclusive-if-local"],
+        tags = ["exclusive-if-local"] + (["skip-rbe"] if file == "browsing_context_spec.rb" else []),
         deps = [
             "//rb/lib/selenium/webdriver:bidi",
         ],
