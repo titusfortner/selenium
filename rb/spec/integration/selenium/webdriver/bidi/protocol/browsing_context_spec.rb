@@ -353,10 +353,10 @@ module Selenium
                                 {browser_family: :safari,
                                  exception: {class: Error::UnknownCommandError},
                                  reason: 'Safari does not implement browsingContext.startScreencast'},
-                                {browser: :firefox, platform: :linux,
+                                {browser: :firefox, version: 'beta', platform: :linux,
                                  exception: {class: Error::UnknownError, message: /startScreencast/},
-                                 reason: 'Firefox startScreencast fails with NS_ERROR_FAILURE on Linux'},
-                                {browser: :firefox,
+                                 reason: 'Firefox beta startScreencast fails with NS_ERROR_FAILURE on Linux'},
+                                {browser: :firefox, version: 'stable',
                                  exception: {class: Error::UnknownCommandError},
                                  reason: 'Stable Firefox does not implement browsingContext.startScreencast'}] do
             it 'starts and stops a screencast' do
