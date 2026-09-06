@@ -140,6 +140,18 @@ platform(
     parents = ["@platforms//host"],
 )
 
+# Deliberately terse: the platform name becomes a bazel-out directory segment,
+# and the assembled Rust sysroot paths underneath it run within a few bytes of
+# Windows MAX_PATH. The equivalent @rules_rs label is 16 characters longer and
+# pushes link.exe inputs past the limit.
+platform(
+    name = "winmsvc",
+    constraint_values = [
+        "@llvm//constraints/windows/abi:msvc",
+    ],
+    parents = ["@platforms//host"],
+)
+
 platform(
     name = "local_windows_gnullvm",
     constraint_values = [

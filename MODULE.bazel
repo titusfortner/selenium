@@ -452,6 +452,13 @@ llvm_toolchains.exec(
     arch = "aarch64",
     os = "windows",
 )
+
+# Bazel's own MSVC autoconfiguration supplies the Windows exec C/C++ toolchain;
+# @llvm ships no msvc variant. Registered only for Windows in .bazelrc so it
+# cannot shadow @llvm elsewhere.
+cc_configure = use_extension("@rules_cc//cc:extensions.bzl", "cc_configure_extension")
+use_repo(cc_configure, "local_config_cc", "local_config_cc_toolchains")
+
 use_repo(llvm_toolchains, "llvm_toolchains")
 
 register_toolchains("@llvm_toolchains//:all")
