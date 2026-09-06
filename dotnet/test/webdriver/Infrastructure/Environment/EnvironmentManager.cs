@@ -94,17 +94,25 @@ public class EnvironmentManager
             string managerFilePath = "";
             runfiles ??= Runfiles.Create();
 
+            string arch = RuntimeInformation.ProcessArchitecture switch
+            {
+                Architecture.X64 => "x86_64",
+                Architecture.Arm64 => "aarch64",
+                _ => throw new PlatformNotSupportedException(
+                    $"Selenium Manager doesn't support {RuntimeInformation.ProcessArchitecture}"),
+            };
+
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                managerFilePath = runfiles.Rlocation("_main/dotnet/src/webdriver/manager/windows/selenium-manager.exe");
+                managerFilePath = runfiles.Rlocation($"_main/dotnet/src/webdriver/manager/windows-{arch}/selenium-manager.exe");
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
             {
-                managerFilePath = runfiles.Rlocation("_main/dotnet/src/webdriver/manager/linux/selenium-manager");
+                managerFilePath = runfiles.Rlocation($"_main/dotnet/src/webdriver/manager/linux-{arch}/selenium-manager");
             }
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
             {
-                managerFilePath = runfiles.Rlocation("_main/dotnet/src/webdriver/manager/macos/selenium-manager");
+                managerFilePath = runfiles.Rlocation($"_main/dotnet/src/webdriver/manager/macos-{arch}/selenium-manager");
             }
 
             System.Environment.SetEnvironmentVariable("SE_MANAGER_PATH", managerFilePath);
