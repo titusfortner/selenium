@@ -191,6 +191,16 @@ jobs:
       - name: Set Node version
         if: inputs.node-version != ''
         run: echo '${{ inputs.node-version }}' > .nvmrc
+      - name: Enable long paths
+        if: inputs.os == 'windows'
+        shell: pwsh
+        run: |
+          $key = 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem'
+          $before = (Get-ItemProperty -Path $key -Name LongPathsEnabled -ErrorAction SilentlyContinue).LongPathsEnabled
+          Write-Host "LongPathsEnabled before: $before"
+          Set-ItemProperty -Path $key -Name LongPathsEnabled -Value 1 -Type DWord
+          Write-Host "LongPathsEnabled after: $((Get-ItemProperty -Path $key -Name LongPathsEnabled).LongPathsEnabled)"
+          git config --system core.longpaths true
       - name: Setup Bazel with caching
         continue-on-error: true
         timeout-minutes: 10
