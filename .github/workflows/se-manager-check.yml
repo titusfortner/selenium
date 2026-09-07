@@ -1,0 +1,54 @@
+name: Selenium Manager Check
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - c/bazel-selenium-manager-binary-1672fa
+
+jobs:
+  arm64:
+    name: "ARM64 (Firefox + Chrome beta)"
+    uses: ./.github/workflows/bazel.yml
+    with:
+      name: "se-manager arm64"
+      os: ubuntu-24.04-arm
+      needs-display: true
+      rerun-with-debug: true
+      run: |
+        bazel test --pin_browsers=false --keep_going \
+          //rb/spec/integration/selenium/webdriver:driver_finder-firefox \
+          //rb/spec/integration/selenium/webdriver:driver_finder-chrome-beta
+
+  se-manager-tests:
+    name: "Tests (${{ matrix.os }})"
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu, macos, windows]
+    uses: ./.github/workflows/bazel.yml
+    with:
+      name: "se-manager ${{ matrix.os }}"
+      os: ${{ matrix.os }}
+      needs-display: true
+      rerun-with-debug: true
+      run: bazel test --test_tag_filters=se-manager --keep_going //py/... //rb/...
+
+  packages:
+    name: "Packages (${{ matrix.os }})"
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu, macos, windows]
+    uses: ./.github/workflows/bazel.yml
+    with:
+      name: "packages ${{ matrix.os }}"
+      os: ${{ matrix.os }}
+      run: |
+        bazel build \
+          //java/src/org/openqa/selenium/manager:manager \
+          //py:selenium-wheel \
+          //rb:selenium-webdriver \
+          //javascript/selenium-webdriver:selenium-webdriver \
+          //dotnet/src/webdriver:webdriver-pack
+        python3 .github/workflows/verify_manager_packages.py
