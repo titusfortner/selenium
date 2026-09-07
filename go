@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-# we want jruby-complete to take care of all things ruby
-unset GEM_HOME
-unset GEM_PATH
-
-JAVA_OPTS="-client -Xmx4096m -XX:ReservedCodeCacheSize=512m -XX:MetaspaceSize=1024m --add-modules java.se --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang.reflect=ALL-UNNAMED --add-opens java.base/javax.crypto=ALL-UNNAMED"
+# rake runs on the Bazel-managed Ruby and bundle, so no local Ruby or Java is needed
+bazel build --noshow_progress --show_result=0 --ui_event_filters=-info //:rake || exit $?
 
 # This code supports both:
 # ./go "namespace:task[--arg1,--arg2]" --rake-flag
@@ -40,4 +37,7 @@ if [ ${#task_args[@]} -gt 0 ]; then
 fi
 
 
-java $JAVA_OPTS -jar third_party/jruby/jruby-complete.jar -X-C -S rake $task "${rake_flags[@]}"
+# Windows reaches this script through bash too (CI and the go.bat shim), where the launcher is a .cmd
+launcher=bazel-bin/rake.sh
+[ -f bazel-bin/rake.cmd ] && launcher=bazel-bin/rake.cmd
+exec "$launcher" $task "${rake_flags[@]}"

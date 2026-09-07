@@ -378,7 +378,21 @@ ruby.bundle_fetch(
         "org.snakeyaml:snakeyaml-engine:2.10": "c99d9fd66c7c251d881a9cd95089b7c8044c29a1b02983d7036981bd4354ec37",
     },
 )
-use_repo(ruby, "bundle", "ruby", "ruby_toolchains")
+ruby.bundle_fetch(
+    name = "rake_bundle",
+    gem_checksums = {
+        "addressable-2.9.0": "7fdf6ac3660f7f4e867a0838be3f6cf722ace541dd97767fa42bc6cfa980c7af",
+        "base64-0.3.0": "27337aeabad6ffae05c265c450490628ef3ebd4b67be58257393227588f5a97b",
+        "git-1.19.1": "b0a422d9f6517353c48a330d6114de4db9e0c82dbe7202964a1d9f1fbc827d70",
+        "public_suffix-7.0.5": "1a8bb08f1bbea19228d3bed6e5ed908d1cb4f7c2726d18bd9cadf60bc676f623",
+        "rake-13.4.2": "cb825b2bd5f1f8e91ca37bddb4b9aaf345551b4731da62949be002fa89283701",
+        "rchardet-1.10.2": "e041cb195f464dc10e49ab130f78c8b5956cd9a4f4f6df84e0c183b87c135f33",
+        "rexml-3.4.4": "19e0a2c3425dfbf2d4fc1189747bdb2f849b6c5e74180401b15734bc97b5d142",
+    },
+    gemfile = "//:Gemfile",
+    gemfile_lock = "//:Gemfile.lock",
+)
+use_repo(ruby, "bundle", "rake_bundle", "ruby", "ruby_toolchains")
 
 register_toolchains("@ruby_toolchains//:all")
 

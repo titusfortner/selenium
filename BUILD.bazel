@@ -3,6 +3,7 @@ load("@buildifier_prebuilt//:rules.bzl", "buildifier")
 load("@npm//:defs.bzl", "npm_link_all_packages")
 load("@package_metadata//licenses/rules:license.bzl", "license")
 load("@package_metadata//rules:package_metadata.bzl", "package_metadata")
+load("@rules_ruby//ruby:defs.bzl", "rb_binary")
 load("//common:browsers.bzl", "chrome_data", "firefox_data")
 load("//java:browsers.bzl", "chrome_jvm_flags", "firefox_jvm_flags")
 load("//java:defs.bzl", "artifact", "java_binary")
@@ -64,6 +65,13 @@ filegroup(
         "rake_tasks/*.rb",
     ]),
     visibility = ["//rb:__subpackages__"],
+)
+
+rb_binary(
+    name = "rake",
+    srcs = ["rake_tasks/go.rb"],
+    main = "rake_tasks/go.rb",
+    deps = ["@rake_bundle"],
 )
 
 filegroup(

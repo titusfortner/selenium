@@ -19,7 +19,7 @@ The repository README is aimed at contributors; end-user docs live elsewhere.
 
 ## Toolchain
 - The project uses Bazelisk with a hermetic Bazel toolset. Do not run tests or execute Selenium code assuming a language-specific local development environment is configured.
-- Rakefile tasks are executed with a bundled jruby wrapped with `go`/`go.bat` and frequently used by CI jobs
+- Rakefile tasks run on the Bazel-managed Ruby via `go` (builds and execs `//:rake`; `go.bat` is a shim into it for PowerShell/cmd) and are frequently used by CI jobs
 - Prefer targeted Bazel commands; use `bazel query ...` to locate labels before build/test
 
 ## Execution model
