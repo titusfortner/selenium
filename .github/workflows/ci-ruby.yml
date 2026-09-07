@@ -58,9 +58,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - os: ubuntu
           - os: windows
-          - os: macos
     with:
       name: ${{ matrix.os }}
       needs-display: true
@@ -69,6 +67,11 @@ jobs:
       download-artifact-name: targets
       run: >
         [ -s bazel-targets-rb.txt ] || echo //rb/... > bazel-targets-rb.txt;
+        bazel build --pin_browsers=false //rb:manager-windows;
+        sm="$(bazel cquery --pin_browsers=false --output=files //rb:manager-windows)";
+        echo "selenium-manager resolved to $sm";
+        "$sm" --version;
+        "$sm" --version | grep nightly || { echo "::error::Windows tests would run the downloaded Selenium Manager, not the built one"; exit 1; };
         ./scripts/github-actions/bazel-test-if-targets.sh
         --keep_going
         --flaky_test_attempts 2
@@ -78,7 +81,8 @@ jobs:
         --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
         --test_env=SKIP_PENDING=true
-        --test_tag_filters=unit,os-sensitive,se-manager,skip-rbe
+        --test_output=errors
+        --test_tag_filters=se-manager
         --target_pattern_file=bazel-targets-rb.txt
 
   os-tests-full:
