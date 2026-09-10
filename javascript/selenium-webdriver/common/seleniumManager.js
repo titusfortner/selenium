@@ -35,14 +35,15 @@ let debugMessagePrinted = false
  * @returns {string}
  */
 function getBinary() {
-  const directory = {
+  const os = {
     darwin: 'macos',
     win32: 'windows',
     cygwin: 'windows',
-    linux: arch === 'arm64' ? 'linux-arm64' : 'linux-x86_64',
+    linux: 'linux',
   }[platform]
 
-  const file = directory === 'windows' ? 'selenium-manager.exe' : 'selenium-manager'
+  const directory = `${os}-${arch === 'arm64' ? 'arm64' : 'x86_64'}`
+  const file = os === 'windows' ? 'selenium-manager.exe' : 'selenium-manager'
 
   let seleniumManagerBasePath = path.join(__dirname, '..', '/bin')
 

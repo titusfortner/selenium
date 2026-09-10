@@ -35,19 +35,39 @@ module Selenium
         end
 
         it 'detects Windows' do
-          allow(Platform).to receive(:assert_executable).with(a_string_ending_with('/windows/selenium-manager.exe'))
-                                                        .and_return(true)
+          allow(Platform).to receive(:assert_executable)
+            .with(a_string_ending_with('/windows-x86_64/selenium-manager.exe')).and_return(true)
           allow(Platform).to receive(:windows?).and_return(true)
+          allow(RbConfig::CONFIG).to receive(:[]).with('host_cpu').and_return('x86_64')
 
-          expect(described_class.send(:binary)).to match(%r{/windows/selenium-manager\.exe$})
+          expect(described_class.send(:binary)).to match(%r{/windows-x86_64/selenium-manager\.exe$})
+        end
+
+        it 'detects Windows arm64' do
+          allow(Platform).to receive(:assert_executable)
+            .with(a_string_ending_with('/windows-arm64/selenium-manager.exe')).and_return(true)
+          allow(Platform).to receive(:windows?).and_return(true)
+          allow(RbConfig::CONFIG).to receive(:[]).with('host_cpu').and_return('aarch64')
+
+          expect(described_class.send(:binary)).to match(%r{/windows-arm64/selenium-manager\.exe$})
         end
 
         it 'detects Mac' do
-          allow(Platform).to receive(:assert_executable).with(a_string_ending_with('/macos/selenium-manager'))
-                                                        .and_return(true)
+          allow(Platform).to receive(:assert_executable)
+            .with(a_string_ending_with('/macos-x86_64/selenium-manager')).and_return(true)
           allow(Platform).to receive_messages(windows?: false, mac?: true)
+          allow(RbConfig::CONFIG).to receive(:[]).with('host_cpu').and_return('x86_64')
 
-          expect(described_class.send(:binary)).to match(%r{/macos/selenium-manager$})
+          expect(described_class.send(:binary)).to match(%r{/macos-x86_64/selenium-manager$})
+        end
+
+        it 'detects Mac arm64' do
+          allow(Platform).to receive(:assert_executable)
+            .with(a_string_ending_with('/macos-arm64/selenium-manager')).and_return(true)
+          allow(Platform).to receive_messages(windows?: false, mac?: true)
+          allow(RbConfig::CONFIG).to receive(:[]).with('host_cpu').and_return('arm64')
+
+          expect(described_class.send(:binary)).to match(%r{/macos-arm64/selenium-manager$})
         end
 
         it 'detects Linux' do

@@ -7,6 +7,7 @@ load("@npm//javascript/selenium-webdriver:jsdoc/package_json.bzl", jsdoc_bin = "
 load("@npm//javascript/selenium-webdriver:prettier/package_json.bzl", prettier_bin = "bin")
 load("@rules_pkg//pkg:pkg.bzl", "pkg_tar")
 load("//common:defs.bzl", "copy_file")
+load("//common/manager:defs.bzl", "SELENIUM_MANAGER_PLATFORMS", "selenium_manager_binary", "selenium_manager_filename")
 load("//javascript:defs.bzl", "mocha_test")
 load("//javascript/private:browsers.bzl", "BROWSERS")
 load("//javascript/private:jsdoc.bzl", "jsdoc")
@@ -165,19 +166,15 @@ npm_package(
     srcs = [
         ":create-bidi-src",
         ":license",
-        ":manager-linux-arm64",
-        ":manager-linux-x86_64",
-        ":manager-macos",
         ":manager-notice",
         ":manager-sbom",
-        ":manager-windows",
         ":prod-src-files",
         "//javascript/selenium-webdriver/lib/atoms:bidi-mutation-listener",
         "//javascript/selenium-webdriver/lib/atoms:find-elements",
         "//javascript/selenium-webdriver/lib/atoms:get_attribute",
         "//javascript/selenium-webdriver/lib/atoms:is_displayed",
         "//javascript/selenium-webdriver/lib/atoms:mutation-listener",
-    ],
+    ] + [":manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS],
     package = "selenium-webdriver",
     publishable = True,
     tags = [
@@ -324,29 +321,17 @@ genrule(
     cmd = "cp $(locations //:license) $(@D)",
 )
 
-copy_file(
-    name = "manager-linux-x86_64",
-    src = "//common/manager:selenium-manager-linux-x86_64",
-    out = "bin/linux-x86_64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-linux-arm64",
-    src = "//common/manager:selenium-manager-linux-arm64",
-    out = "bin/linux-arm64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-macos",
-    src = "//common/manager:selenium-manager-macos",
-    out = "bin/macos/selenium-manager",
-)
-
-copy_file(
-    name = "manager-windows",
-    src = "//common/manager:selenium-manager-windows",
-    out = "bin/windows/selenium-manager.exe",
-)
+[
+    copy_file(
+        name = "manager-%s" % platform,
+        src = selenium_manager_binary(platform),
+        out = "bin/%s/%s" % (
+            platform,
+            selenium_manager_filename(platform),
+        ),
+    )
+    for platform in SELENIUM_MANAGER_PLATFORMS
+]
 
 copy_file(
     name = "manager-sbom",

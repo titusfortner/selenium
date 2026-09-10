@@ -8,6 +8,7 @@ load("@rules_python//python:packaging.bzl", "py_package", "py_wheel")
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
 load("@rules_python//python/entry_points:py_console_script_binary.bzl", "py_console_script_binary")
 load("//common:defs.bzl", "copy_file")
+load("//common/manager:defs.bzl", "SELENIUM_MANAGER_PLATFORMS", "selenium_manager_binary", "selenium_manager_filename")
 load("//py:defs.bzl", "generate_devtools", "generate_devtools_latest", "py_test_suite")
 load("//py/private:browsers.bzl", "BROWSERS")
 load("//py/private:generate_bidi.bzl", "generate_bidi")
@@ -103,29 +104,17 @@ genrule(
     toolchains = ["@bazel_tools//tools/jdk:current_java_runtime"],
 )
 
-copy_file(
-    name = "manager-linux-x86_64",
-    src = "//common/manager:selenium-manager-linux-x86_64",
-    out = "selenium/webdriver/common/linux-x86_64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-linux-arm64",
-    src = "//common/manager:selenium-manager-linux-arm64",
-    out = "selenium/webdriver/common/linux-arm64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-macos",
-    src = "//common/manager:selenium-manager-macos",
-    out = "selenium/webdriver/common/macos/selenium-manager",
-)
-
-copy_file(
-    name = "manager-windows",
-    src = "//common/manager:selenium-manager-windows",
-    out = "selenium/webdriver/common/windows/selenium-manager.exe",
-)
+[
+    copy_file(
+        name = "manager-%s" % platform,
+        src = selenium_manager_binary(platform),
+        out = "selenium/webdriver/common/%s/%s" % (
+            platform,
+            selenium_manager_filename(platform),
+        ),
+    )
+    for platform in SELENIUM_MANAGER_PLATFORMS
+]
 
 copy_file(
     name = "manager-sbom",
@@ -327,13 +316,10 @@ py_library(
         ],
     ),
     data = [
-        ":manager-linux-arm64",
-        ":manager-linux-x86_64",
-        ":manager-macos",
-        ":manager-notice",
-        ":manager-sbom",
-        ":manager-windows",
-    ] + [":create-cdp-srcs-" + n for n in BROWSER_VERSIONS],
+               ":manager-notice",
+               ":manager-sbom",
+           ] + [":manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS] +
+           [":create-cdp-srcs-" + n for n in BROWSER_VERSIONS],
     imports = ["."],
     visibility = ["//visibility:public"],
     deps = [
@@ -613,13 +599,9 @@ pkg_files(
         "//rust:selenium_manager_srcs",
     ],
     excludes = [
-        ":manager-linux-x86_64",
-        ":manager-linux-arm64",
-        ":manager-macos",
         ":manager-notice",
         ":manager-sbom",
-        ":manager-windows",
-    ],
+    ] + [":manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS],
     strip_prefix = strip_prefix.from_pkg(),
 )
 

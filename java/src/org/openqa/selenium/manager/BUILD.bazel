@@ -1,4 +1,5 @@
 load("//common:defs.bzl", "copy_file")
+load("//common/manager:defs.bzl", "SELENIUM_MANAGER_PLATFORMS", "selenium_manager_binary", "selenium_manager_filename")
 load("//java:defs.bzl", "java_export")
 load("//java:version.bzl", "SE_VERSION")
 
@@ -11,13 +12,9 @@ java_export(
     ],
     pom_template = "//java/src/org/openqa/selenium:template-pom",
     resources = [
-        ":manager-linux-arm64",
-        ":manager-linux-x86_64",
-        ":manager-macos",
         ":manager-notice",
         ":manager-sbom",
-        ":manager-windows",
-    ],
+    ] + [":manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS],
     tags = [
         "release-artifact",
     ],
@@ -32,29 +29,17 @@ java_export(
     ],
 )
 
-copy_file(
-    name = "manager-linux-x86_64",
-    src = "//common/manager:selenium-manager-linux-x86_64",
-    out = "linux-x86_64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-linux-arm64",
-    src = "//common/manager:selenium-manager-linux-arm64",
-    out = "linux-arm64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-macos",
-    src = "//common/manager:selenium-manager-macos",
-    out = "macos/selenium-manager",
-)
-
-copy_file(
-    name = "manager-windows",
-    src = "//common/manager:selenium-manager-windows",
-    out = "windows/selenium-manager.exe",
-)
+[
+    copy_file(
+        name = "manager-%s" % platform,
+        src = selenium_manager_binary(platform),
+        out = "%s/%s" % (
+            platform,
+            selenium_manager_filename(platform),
+        ),
+    )
+    for platform in SELENIUM_MANAGER_PLATFORMS
+]
 
 copy_file(
     name = "manager-sbom",

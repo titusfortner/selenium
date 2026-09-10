@@ -6,33 +6,27 @@ load(
     "rb_gem_push",
 )
 load("//common:defs.bzl", "copy_file")
+load("//common/manager:defs.bzl", "SELENIUM_MANAGER_PLATFORMS", "selenium_manager_binary", "selenium_manager_filename")
 
 package(default_visibility = ["//:__subpackages__"])
 
 GITHUB_PACKAGES_HOST = "https://rubygems.pkg.github.com/SeleniumHQ"
 
-copy_file(
-    name = "manager-linux-x86_64",
-    src = "//common/manager:selenium-manager-linux-x86_64",
-    out = "bin/linux-x86_64/selenium-manager",
-)
+[
+    copy_file(
+        name = "manager-%s" % platform,
+        src = selenium_manager_binary(platform),
+        out = "bin/%s/%s" % (
+            platform,
+            selenium_manager_filename(platform),
+        ),
+    )
+    for platform in SELENIUM_MANAGER_PLATFORMS
+]
 
-copy_file(
-    name = "manager-linux-arm64",
-    src = "//common/manager:selenium-manager-linux-arm64",
-    out = "bin/linux-arm64/selenium-manager",
-)
-
-copy_file(
-    name = "manager-macos",
-    src = "//common/manager:selenium-manager-macos",
-    out = "bin/macos/selenium-manager",
-)
-
-copy_file(
-    name = "manager-windows",
-    src = "//common/manager:selenium-manager-windows",
-    out = "bin/windows/selenium-manager.exe",
+filegroup(
+    name = "manager-bundle",
+    srcs = ["manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS],
 )
 
 copy_file(
@@ -81,12 +75,9 @@ rb_gem_build(
         "CHANGES",
         "README.md",
         ":license",
-        ":manager-linux-arm64",
-        ":manager-linux-x86_64",
-        ":manager-macos",
         ":manager-notice",
         ":manager-sbom",
-        ":manager-windows",
+    ] + [":manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS] + [
         ":notice",
     ],
     gemspec = "selenium-webdriver.gemspec",

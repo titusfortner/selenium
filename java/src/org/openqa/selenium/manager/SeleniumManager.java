@@ -203,27 +203,28 @@ public class SeleniumManager {
     if (binary == null) {
       try {
         Platform current = Platform.getCurrent();
-        String folder = "";
+        String os;
         String extension = "";
         if (current.is(WINDOWS)) {
           extension = EXE;
-          folder = "windows";
+          os = "windows";
         } else if (current.is(MAC)) {
-          folder = "macos";
+          os = "macos";
         } else if (current.is(LINUX)) {
-          folder =
-              System.getProperty("os.arch", "").toLowerCase().contains("aarch64")
-                  ? "linux-arm64"
-                  : "linux-x86_64";
+          os = "linux";
         } else if (current.is(UNIX)) {
           LOG.warning(
               String.format(
                   "Selenium Manager binary may not be compatible with %s; verify settings",
                   current));
-          folder = "linux-x86_64";
+          os = "linux";
         } else {
           throw new WebDriverException("Unsupported platform: " + current);
         }
+
+        String osArch = System.getProperty("os.arch", "").toLowerCase();
+        String arch = (osArch.contains("aarch64") || osArch.contains("arm64")) ? "arm64" : "x86_64";
+        String folder = os + "-" + arch;
 
         binary = getBinaryInCache(SELENIUM_MANAGER + extension);
         if (!Files.exists(binary)) {

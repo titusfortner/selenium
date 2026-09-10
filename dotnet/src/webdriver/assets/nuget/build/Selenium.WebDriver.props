@@ -4,8 +4,8 @@
   <!-- Only run if the consumer did NOT set a RID (so NuGet won't select runtimes assets),
        and only for .NET Framework projects where this problem is common. -->
   <ItemGroup Condition="'$(RuntimeIdentifier)' == '' and '$(TargetFrameworkIdentifier)' == '.NETFramework'">
-    <Content Include="$(MSBuildThisFileDirectory)..\runtimes\win\native\selenium-manager.exe">
-      <Link>runtimes\win\native\%(Filename)%(Extension)</Link>
+    <Content Include="$(MSBuildThisFileDirectory)..\runtimes\win-x64\native\selenium-manager.exe">
+      <Link>runtimes\win-x64\native\%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>False</Visible>
       <Pack>false</Pack>
@@ -25,8 +25,8 @@
       <Pack>false</Pack>
     </Content>
 
-    <Content Include="$(MSBuildThisFileDirectory)..\runtimes\osx\native\selenium-manager">
-      <Link>runtimes\osx\native\%(Filename)%(Extension)</Link>
+    <Content Include="$(MSBuildThisFileDirectory)..\runtimes\osx-x64\native\selenium-manager">
+      <Link>runtimes\osx-x64\native\%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>False</Visible>
       <Pack>false</Pack>

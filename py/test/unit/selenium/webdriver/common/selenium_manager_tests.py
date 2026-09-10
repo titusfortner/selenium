@@ -55,7 +55,7 @@ def test_uses_windows(monkeypatch):
     monkeypatch.setattr("platform.machine", lambda: "AMD64")
     binary = SeleniumManager()._get_binary()
     project_root = Path(selenium.__file__).parent.parent
-    assert binary == project_root.joinpath("selenium/webdriver/common/windows/selenium-manager.exe")
+    assert binary == project_root.joinpath("selenium/webdriver/common/windows-x86_64/selenium-manager.exe")
 
 
 def test_uses_windows_arm64(monkeypatch):
@@ -63,7 +63,7 @@ def test_uses_windows_arm64(monkeypatch):
     monkeypatch.setattr("platform.machine", lambda: "ARM64")
     binary = SeleniumManager()._get_binary()
     project_root = Path(selenium.__file__).parent.parent
-    assert binary == project_root.joinpath("selenium/webdriver/common/windows/selenium-manager.exe")
+    assert binary == project_root.joinpath("selenium/webdriver/common/windows-arm64/selenium-manager.exe")
 
 
 def test_uses_linux(monkeypatch):
@@ -84,9 +84,18 @@ def test_uses_linux_aarch64(monkeypatch):
 
 def test_uses_mac(monkeypatch):
     monkeypatch.setattr(sys, "platform", "darwin")
+    monkeypatch.setattr("platform.machine", lambda: "x86_64")
     binary = SeleniumManager()._get_binary()
     project_root = Path(selenium.__file__).parent.parent
-    assert binary == project_root.joinpath("selenium/webdriver/common/macos/selenium-manager")
+    assert binary == project_root.joinpath("selenium/webdriver/common/macos-x86_64/selenium-manager")
+
+
+def test_uses_mac_arm64(monkeypatch):
+    monkeypatch.setattr(sys, "platform", "darwin")
+    monkeypatch.setattr("platform.machine", lambda: "arm64")
+    binary = SeleniumManager()._get_binary()
+    project_root = Path(selenium.__file__).parent.parent
+    assert binary == project_root.joinpath("selenium/webdriver/common/macos-arm64/selenium-manager")
 
 
 def test_uses_freebsd(monkeypatch, caplog):

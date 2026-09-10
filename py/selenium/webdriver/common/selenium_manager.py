@@ -88,23 +88,17 @@ class SeleniumManager:
             path = compiled_path
         else:
             allowed = {
-                ("darwin", "any"): "macos/selenium-manager",
-                ("win32", "x86_64"): "windows/selenium-manager.exe",
-                ("win32", "arm64"): "windows/selenium-manager.exe",
-                ("cygwin", "x86_64"): "windows/selenium-manager.exe",
-                ("cygwin", "arm64"): "windows/selenium-manager.exe",
-                ("linux", "x86_64"): "linux-x86_64/selenium-manager",
-                ("linux", "aarch64"): "linux-arm64/selenium-manager",
-                ("freebsd", "x86_64"): "linux-x86_64/selenium-manager",
-                ("freebsd", "aarch64"): "linux-arm64/selenium-manager",
-                ("openbsd", "x86_64"): "linux-x86_64/selenium-manager",
-                ("openbsd", "aarch64"): "linux-arm64/selenium-manager",
+                "darwin": "macos",
+                "win32": "windows",
+                "cygwin": "windows",
+                "linux": "linux",
+                "freebsd": "linux",
+                "openbsd": "linux",
             }
 
-            # some operating systems report x86-64 architecture as amd64/AMD64
             platform_name = sys.platform
-            arch = "any" if platform_name == "darwin" else platform.machine().lower()
-            arch = "x86_64" if arch == "amd64" else arch
+            machine = platform.machine().lower()
+            arch = "arm64" if machine in ("aarch64", "arm64") else "x86_64"
 
             # in Python < 3.14, sys.platform appends version number to BSD platform names
             if platform_name.startswith("freebsd"):
@@ -117,11 +111,12 @@ class SeleniumManager:
                 logger.warning("Selenium Manager binary may not be compatible with OpenBSD; verify settings")
                 platform_name = "openbsd"
 
-            location = allowed.get((platform_name, arch))
-            if location is None:
+            os_name = allowed.get(platform_name)
+            if os_name is None:
                 raise WebDriverException(f"Unsupported platform/architecture combination: {sys.platform}/{arch}")
 
-            path = Path(__file__).parent.joinpath(location)
+            extension = ".exe" if os_name == "windows" else ""
+            path = Path(__file__).parent.joinpath(f"{os_name}-{arch}/selenium-manager{extension}")
 
         if path is None or not path.is_file():
             raise WebDriverException(f"Unable to obtain working Selenium Manager binary; {path}")

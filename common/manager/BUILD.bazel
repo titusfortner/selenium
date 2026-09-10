@@ -9,37 +9,27 @@ package(
     ],
 )
 
-alias(
-    name = "selenium-manager-linux-x86_64",
-    actual = select({
-        "//common:use_pinned_browser": "@download_sm_linux_x86_64//file",
-        "//conditions:default": "//rust:selenium-manager-linux-x86_64",
-    }),
-)
+# The published macOS artifact is universal and the published Windows artifact
+# is 32-bit, so one prebuilt covers both architectures of those platforms.
+SELENIUM_MANAGER_PLATFORMS = {
+    "linux-arm64": "@download_sm_linux_arm64//file",
+    "linux-x86_64": "@download_sm_linux_x86_64//file",
+    "macos-arm64": "@download_sm_macos//file",
+    "macos-x86_64": "@download_sm_macos//file",
+    "windows-arm64": "@download_sm_windows//file",
+    "windows-x86_64": "@download_sm_windows//file",
+}
 
-alias(
-    name = "selenium-manager-linux-arm64",
-    actual = select({
-        "//common:use_pinned_browser": "@download_sm_linux_arm64//file",
-        "//conditions:default": "//rust:selenium-manager-linux-arm64",
-    }),
-)
-
-alias(
-    name = "selenium-manager-macos",
-    actual = select({
-        "//common:use_pinned_browser": "@download_sm_macos//file",
-        "//conditions:default": "//rust:selenium-manager-macos",
-    }),
-)
-
-alias(
-    name = "selenium-manager-windows",
-    actual = select({
-        "//common:use_pinned_browser": "@download_sm_windows//file",
-        "//conditions:default": "//rust:selenium-manager-windows",
-    }),
-)
+[
+    alias(
+        name = "selenium-manager-%s" % platform,
+        actual = select({
+            "//common:use_pinned_browser": published,
+            "//conditions:default": "//rust:selenium-manager-%s" % platform,
+        }),
+    )
+    for (platform, published) in SELENIUM_MANAGER_PLATFORMS.items()
+]
 
 alias(
     name = "selenium-manager-sbom",

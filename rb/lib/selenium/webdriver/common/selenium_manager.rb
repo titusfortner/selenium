@@ -72,23 +72,26 @@ module Selenium
 
         def platform_location
           directory = File.expand_path(bin_path, __FILE__)
-          if Platform.windows?
-            "#{directory}/windows/selenium-manager.exe"
-          elsif Platform.mac?
-            "#{directory}/macos/selenium-manager"
-          elsif Platform.linux?
-            "#{directory}/#{linux_directory}/selenium-manager"
-          elsif Platform.unix?
-            WebDriver.logger.warn('Selenium Manager binary may not be compatible with Unix',
-                                  id: %i[selenium_manager unix_binary])
-            "#{directory}/#{linux_directory}/selenium-manager"
-          else
-            raise Error::WebDriverError, "unsupported platform: #{Platform.os}"
-          end
+          os = if Platform.windows?
+                 'windows'
+               elsif Platform.mac?
+                 'macos'
+               elsif Platform.linux?
+                 'linux'
+               elsif Platform.unix?
+                 WebDriver.logger.warn('Selenium Manager binary may not be compatible with Unix',
+                                       id: %i[selenium_manager unix_binary])
+                 'linux'
+               else
+                 raise Error::WebDriverError, "unsupported platform: #{Platform.os}"
+               end
+
+          extension = Platform.windows? ? '.exe' : ''
+          "#{directory}/#{os}-#{host_arch}/selenium-manager#{extension}"
         end
 
-        def linux_directory
-          RbConfig::CONFIG['host_cpu'].to_s.downcase == 'aarch64' ? 'linux-arm64' : 'linux-x86_64'
+        def host_arch
+          RbConfig::CONFIG['host_cpu'].to_s.downcase.match?(/aarch64|arm64/) ? 'arm64' : 'x86_64'
         end
 
         def execute_command(*command)

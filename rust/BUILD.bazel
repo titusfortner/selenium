@@ -1,3 +1,5 @@
+load("@aspect_bazel_lib//lib:output_files.bzl", "output_files")
+load("@aspect_bazel_lib//lib:transitions.bzl", "platform_transition_binary")
 load("@crates//:defs.bzl", "aliases", "all_crate_deps")
 load("//rust:defs.bzl", "rust_binary", "rust_library", "rust_test", "rustfmt_config")
 
@@ -12,19 +14,66 @@ rustfmt_config(
 # We tag the compiled versions as `manual` so that when we do a
 # `bazel build //...` we don't do any additional work
 
+# Linux targets use musl because Rust's prebuilt glibc stdlib hard-references
+# `-lgcc_s`, which the @llvm toolchain doesn't ship. Windows targets use the
+# gnullvm ABI because @llvm can emit a PE binary without a Windows SDK.
 SELENIUM_MANAGER_PLATFORMS = [
-    "linux-arm64",
-    "linux-x86_64",
-    "macos",
-    "windows",
+    ("linux-arm64", "aarch64-unknown-linux-musl"),
+    ("linux-x86_64", "x86_64-unknown-linux-musl"),
+    ("macos-arm64", "aarch64-apple-darwin"),
+    ("macos-x86_64", "x86_64-apple-darwin"),
+    ("windows-arm64", "aarch64-pc-windows-gnullvm"),
+    ("windows-x86_64", "x86_64-pc-windows-gnullvm"),
 ]
 
+SELENIUM_MANAGER_PUBLISHED = {
+    "linux-arm64": "@download_sm_linux_arm64//file",
+    "linux-x86_64": "@download_sm_linux_x86_64//file",
+    "macos-arm64": "@download_sm_macos//file",
+    "macos-x86_64": "@download_sm_macos//file",
+    "windows-arm64": "@download_sm_windows//file",
+    "windows-x86_64": "@download_sm_windows//file",
+}
+
+[
+    platform_transition_binary(
+        name = "_xc-%s" % platform,
+        basename = "selenium-manager.exe" if platform.startswith("windows") else "selenium-manager",
+        binary = ":selenium-manager",
+        tags = ["manual"],
+        target_platform = "@rules_rs//rs/platforms:%s" % triple,
+    )
+    for (platform, triple) in SELENIUM_MANAGER_PLATFORMS
+]
+
+# platform_transition_binary forwards the underlying rust_binary alongside the
+# wrapper symlink at colliding paths. Filter down to just the wrapper.
+[
+    output_files(
+        name = "_xc_file-%s" % platform,
+        paths = ["rust/_xc-%s/selenium-manager%s" % (
+            platform,
+            ".exe" if platform.startswith("windows") else "",
+        )],
+        tags = ["manual"],
+        target = ":_xc-%s" % platform,
+    )
+    for (platform, _triple) in SELENIUM_MANAGER_PLATFORMS
+]
+
+# Cross-compiling from a Windows host needs upstream fixes that aren't released
+# yet, so Windows builds its own binary and takes prebuilts for the rest.
 [
     alias(
         name = "selenium-manager-%s" % platform,
         actual = select({
-            "//common:%s" % platform.replace("-", "_"): ":selenium-manager",
-            "//conditions:default": "@download_sm_%s//file" % platform.replace("-", "_"),
+            "//common:windows_arm64": (
+                ":selenium-manager" if platform == "windows-arm64" else SELENIUM_MANAGER_PUBLISHED[platform]
+            ),
+            "//common:windows_x86_64": (
+                ":selenium-manager" if platform == "windows-x86_64" else SELENIUM_MANAGER_PUBLISHED[platform]
+            ),
+            "//conditions:default": ":_xc_file-%s" % platform,
         }),
         tags = [
             "manual",
@@ -33,12 +82,12 @@ SELENIUM_MANAGER_PLATFORMS = [
             "//common/manager:__pkg__",
         ],
     )
-    for platform in SELENIUM_MANAGER_PLATFORMS
+    for (platform, _triple) in SELENIUM_MANAGER_PLATFORMS
 ]
 
 filegroup(
     name = "selenium-manager-dev",
-    srcs = [":selenium-manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS],
+    srcs = [":selenium-manager-%s" % platform for (platform, _triple) in SELENIUM_MANAGER_PLATFORMS],
     tags = [
         "manual",
     ],

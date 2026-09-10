@@ -126,26 +126,22 @@ public static partial class SeleniumManager
         {
             probingPaths.Add(Path.Combine(baseDirectory, seleniumManagerFileName));
 
-            switch (platform)
+            var ridOs = platform switch
             {
-                case SupportedPlatform.Windows:
-                    probingPaths.Add(Path.Combine(baseDirectory, "runtimes", "win", "native", seleniumManagerFileName));
-                    break;
-                case SupportedPlatform.Linux:
-                    // linux-musl-* resolves through these, so no generic "linux" folder is needed.
+                SupportedPlatform.Windows => "win",
+                SupportedPlatform.Linux => "linux",
+                SupportedPlatform.MacOS => "osx",
+                _ => throw new PlatformNotSupportedException(
+                    $"Selenium Manager doesn't support your runtime platform: {Environment.OSVersion.Platform}"),
+            };
+
 #if !NET462
-                    var linuxRid = RuntimeInformation.ProcessArchitecture == Architecture.Arm64
-                        ? "linux-arm64"
-                        : "linux-x64";
+            var ridArch = RuntimeInformation.ProcessArchitecture == Architecture.Arm64 ? "arm64" : "x64";
 #else
-                    const string linuxRid = "linux-x64";
+            const string ridArch = "x64";
 #endif
-                    probingPaths.Add(Path.Combine(baseDirectory, "runtimes", linuxRid, "native", seleniumManagerFileName));
-                    break;
-                case SupportedPlatform.MacOS:
-                    probingPaths.Add(Path.Combine(baseDirectory, "runtimes", "osx", "native", seleniumManagerFileName));
-                    break;
-            }
+
+            probingPaths.Add(Path.Combine(baseDirectory, "runtimes", $"{ridOs}-{ridArch}", "native", seleniumManagerFileName));
         }
 
 #if !NET462

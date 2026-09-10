@@ -1,4 +1,5 @@
 load("//common:defs.bzl", "copy_file")
+load("//common/manager:defs.bzl", "SELENIUM_MANAGER_PLATFORMS", "selenium_manager_binary", "selenium_manager_filename")
 load("//dotnet:defs.bzl", "csharp_sourcelink_library", "devtools_version_targets", "generated_assembly_info", "generated_resource_utilities", "nuget_pack", "nuget_package")
 load(
     "//dotnet:version.bzl",
@@ -149,31 +150,22 @@ copy_file(
     out = "transitiveSelenium.WebDriver.props",
 )
 
-copy_file(
-    name = "manager-linux-x86_64",
-    src = "//common/manager:selenium-manager-linux-x86_64",
-    out = "manager/linux-x86_64/selenium-manager",
-    visibility = ["//dotnet/test/webdriver:__pkg__"],
-)
+[
+    copy_file(
+        name = "manager-%s" % platform,
+        src = selenium_manager_binary(platform),
+        out = "manager/%s/%s" % (
+            platform,
+            selenium_manager_filename(platform),
+        ),
+        visibility = ["//dotnet/test/webdriver:__pkg__"],
+    )
+    for platform in SELENIUM_MANAGER_PLATFORMS
+]
 
-copy_file(
-    name = "manager-linux-arm64",
-    src = "//common/manager:selenium-manager-linux-arm64",
-    out = "manager/linux-arm64/selenium-manager",
-    visibility = ["//dotnet/test/webdriver:__pkg__"],
-)
-
-copy_file(
-    name = "manager-macos",
-    src = "//common/manager:selenium-manager-macos",
-    out = "manager/macos/selenium-manager",
-    visibility = ["//dotnet/test/webdriver:__pkg__"],
-)
-
-copy_file(
-    name = "manager-windows",
-    src = "//common/manager:selenium-manager-windows",
-    out = "manager/windows/selenium-manager.exe",
+filegroup(
+    name = "manager-bundle",
+    srcs = ["manager-%s" % platform for platform in SELENIUM_MANAGER_PLATFORMS],
     visibility = ["//dotnet/test/webdriver:__pkg__"],
 )
 
@@ -181,15 +173,20 @@ nuget_pack(
     name = "webdriver-pack",
     files = {
         "//common/images:selenium_logo_small.png": "icon.png",
-        "//common/manager:selenium-manager-linux-x86_64": "manager/linux-x86_64/selenium-manager",
-        "//common/manager:selenium-manager-linux-arm64": "manager/linux-arm64/selenium-manager",
-        "//common/manager:selenium-manager-macos": "manager/macos/selenium-manager",
         "//common/manager:selenium-manager-notice": "selenium-manager-THIRD-PARTY-NOTICES.txt",
         "//common/manager:selenium-manager-sbom": "selenium-manager.cdx.json",
-        "//common/manager:selenium-manager-windows": "manager/windows/selenium-manager.exe",
         ":assets-nuget-readme": "README.md",
         ":assets-nuget-build-props": "build/Selenium.WebDriver.props",
         ":assets-nuget-buildtransitive-props": "buildTransitive/Selenium.WebDriver.props",
+    } | {
+        # Keyed by the per-platform copies rather than the aliases: with pinned
+        # browsers several platforms share one published binary, and the pack
+        # layout is keyed by file, so the shared ones would overwrite each other.
+        ":manager-%s" % platform: "manager/%s/%s" % (
+            platform,
+            selenium_manager_filename(platform),
+        )
+        for platform in SELENIUM_MANAGER_PLATFORMS
     },
     id = "Selenium.WebDriver",
     libs = {
