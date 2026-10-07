@@ -15,6 +15,11 @@ on:
         required: false
         type: boolean
         default: false
+      chrome_version:
+        description: Chrome for Testing version to request from Selenium Manager
+        required: false
+        type: string
+        default: '154.0.8037.92'
 
 permissions:
   contents: read
@@ -73,6 +78,7 @@ jobs:
         --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
         --test_env=SE_DEBUG=true
+        --test_env=SE_CHROME_VERSION=${{ inputs.chrome_version }}
         --test_output=errors
         --experimental_ui_max_stdouterr_bytes=-1
         //javascript/selenium-webdriver:test-actions-test.js-chrome

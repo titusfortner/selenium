@@ -362,7 +362,7 @@ class Environment {
     builder.build = function () {
       builder.forBrowser(
         browser.name,
-        browser.version || (browser.name === Browser.CHROME ? '154.0.8037.92' : undefined),
+        browser.version || (browser.name === Browser.CHROME ? process.env.SE_CHROME_VERSION : undefined),
         browser.platform,
       )
 
