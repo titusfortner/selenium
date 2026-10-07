@@ -375,6 +375,11 @@ class Environment {
         builder.setCapability('webSocketUrl', true)
         builder.setCapability('unhandledPromptBehavior', 'ignore')
       }
+      if (browser.name === Browser.CHROME) {
+        const options = builder.getChromeOptions() || new chrome.Options()
+        options.addArguments('--disable-features=IgnoreDuplicateNavs,Prewarm,DeferRendererTasksAfterInput')
+        builder.setChromeOptions(options)
+      }
 
       if (typeof urlOrServer === 'string') {
         builder.usingServer(urlOrServer)
