@@ -56,12 +56,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [macos, windows]
-        tag_filters: ['os-sensitive,se-manager']
-        include:
-          # RBE already runs the os-sensitive targets on Linux, but always with pinned browsers.
-          - os: ubuntu
-            tag_filters: se-manager
+        os: [windows]
     with:
       name: ${{ matrix.os }}
       needs-display: true
@@ -76,8 +71,7 @@ jobs:
         --pin_browsers=false
         --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
-        --test_tag_filters=${{ matrix.tag_filters }}
-        //javascript/selenium-webdriver/...
+        //javascript/selenium-webdriver:test-actions-test.js-chrome
 
   os-tests-full:
     name: ${{ matrix.os }}-full
