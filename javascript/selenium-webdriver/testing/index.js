@@ -372,7 +372,9 @@ class Environment {
 
       // Enable BiDi for supporting browsers.
       if (browser.name === Browser.FIREFOX || browser.name === Browser.CHROME || browser.name === Browser.EDGE) {
-        builder.setCapability('webSocketUrl', true)
+        if (browser.name !== Browser.CHROME) {
+          builder.setCapability('webSocketUrl', true)
+        }
         builder.setCapability('unhandledPromptBehavior', 'ignore')
       }
 
