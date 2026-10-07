@@ -111,6 +111,7 @@ const fs = require('node:fs')
 const path = require('node:path')
 const Symbols = require('./lib/symbols')
 const command = require('./lib/command')
+const logging = require('./lib/logging')
 const http = require('./http')
 const io = require('./io')
 const remote = require('./remote')
@@ -418,6 +419,17 @@ class ServiceBuilder extends remote.DriverService.Builder {
    * @return {!DriverService} A new driver service instance.
    */
   build() {
+    if (process.env.SE_DEBUG) {
+      if (this.options_.args.some((arg) => /^--log/.test(arg))) {
+        logging
+          .getLogger(`${logging.Type.DRIVER}.ServiceBuilder`)
+          .warning(
+            'Environment Variable `SE_DEBUG` is set; preserving user-specified geckodriver --log setting instead of adding -v.',
+          )
+      } else if (!this.options_.args.some((arg) => /^-v+$/.test(arg))) {
+        this.addArguments('-v')
+      }
+    }
     let port = this.options_.port || findFreePort()
     let argsPromise = Promise.resolve(port).then((port) => {
       // Start with the default --port argument.

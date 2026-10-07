@@ -77,6 +77,7 @@ const io = require('./io')
 const { Capabilities, Capability } = require('./lib/capabilities')
 const command = require('./lib/command')
 const error = require('./lib/error')
+const logging = require('./lib/logging')
 const Symbols = require('./lib/symbols')
 const webdriver = require('./lib/webdriver')
 const remote = require('./remote')
@@ -168,6 +169,22 @@ class ServiceBuilder extends remote.DriverService.Builder {
   constructor(exe) {
     super(exe)
     this.setLoopback(true) // Required
+  }
+
+  /** @override */
+  build() {
+    if (process.env.SE_DEBUG) {
+      const args = this.options_.args.filter((arg) => !/^--(log-level|log-path|silent)/.test(arg))
+      if (args.length !== this.options_.args.length) {
+        logging
+          .getLogger(`${logging.Type.DRIVER}.ServiceBuilder`)
+          .warning(
+            'Environment Variable `SE_DEBUG` is set; forcing --verbose and overriding user-specified driver logging arguments.',
+          )
+      }
+      this.options_.args = args.includes('--verbose') ? args : args.concat('--verbose')
+    }
+    return super.build()
   }
 
   /**

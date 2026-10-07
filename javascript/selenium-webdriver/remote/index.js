@@ -149,6 +149,12 @@ class DriverService {
      * @private {(string|!Array<string|number|!stream.Stream|null|undefined>)}
      */
     this.stdio_ = options.stdio || 'ignore'
+    if (process.env.SE_DEBUG) {
+      if (this.stdio_ !== 'ignore' && this.stdio_ !== 'inherit') {
+        this.log_.warning('Environment Variable `SE_DEBUG` is set; overriding user-specified driver stdio to inherit.')
+      }
+      this.stdio_ = 'inherit'
+    }
 
     /**
      * A promise for the managed subprocess, or null if the server has not been
