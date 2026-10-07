@@ -360,7 +360,11 @@ class Environment {
 
     const realBuild = builder.build
     builder.build = function () {
-      builder.forBrowser(browser.name, browser.version, browser.platform)
+      builder.forBrowser(
+        browser.name,
+        browser.version || (browser.name === Browser.CHROME ? '154.0.8037.92' : undefined),
+        browser.platform,
+      )
 
       if (browser.capabilities) {
         builder.getCapabilities().merge(browser.capabilities)
