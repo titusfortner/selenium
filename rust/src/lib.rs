@@ -234,6 +234,8 @@ pub trait SeleniumManager {
         Ok(())
     }
 
+    fn configure_browser_in_cache(&self, _browser_path_in_cache: &Path) {}
+
     fn download_browser(
         &mut self,
         original_browser_version: &str,
@@ -331,6 +333,7 @@ pub trait SeleniumManager {
                 location_note
             ));
             self.set_browser_path(path_to_string(&browser_binary_path));
+            self.configure_browser_in_cache(&self.get_browser_path_in_cache()?);
             let cache_path = self.get_cache_path()?;
             let mut metadata = get_metadata(self.get_logger(), &cache_path);
             update_cached_asset(
@@ -392,6 +395,7 @@ pub trait SeleniumManager {
             None,
             browser_label_for_download,
         )?;
+        self.configure_browser_in_cache(&browser_path_in_cache);
         lock.release();
 
         if browser_binary_path.exists() {

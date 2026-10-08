@@ -19,7 +19,9 @@ use crate::config::ARCH::{ARM64, X32};
 use crate::config::ManagerConfig;
 use crate::config::OS::{LINUX, MACOS, WINDOWS};
 use crate::downloads::{parse_json_from_url, read_version_from_link};
-use crate::files::{BrowserPath, compose_driver_path_in_cache, first_existing_path};
+use crate::files::{
+    BrowserPath, compose_driver_path_in_cache, first_existing_path, path_to_string,
+};
 use crate::logger::Logger;
 use crate::metadata::{
     create_driver_metadata, get_driver_version_from_metadata, get_metadata,
@@ -35,8 +37,10 @@ use anyhow::anyhow;
 use reqwest::Client;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
+use std::fs::File;
 use std::option::Option;
 use std::path::{Path, PathBuf};
+use std::process::Command as ProcessCommand;
 use std::sync::mpsc;
 use std::sync::mpsc::{Receiver, Sender};
 
@@ -64,6 +68,8 @@ const LATEST_VERSIONS_ENDPOINT: &str = "last-known-good-versions-with-downloads.
 const CFT_MACOS_APP_NAME: &str =
     "Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing";
 const MIN_CHROME_VERSION_CFT: i32 = 113;
+const CFT_WINDOWS_SETUP_NAME: &str = "setup.exe";
+const CFT_SANDBOX_CONFIGURED_MARKER: &str = ".sandbox-configured";
 const MIN_CHROMEDRIVER_VERSION_CFT: i32 = 115;
 const MIN_CHROME_VERSION_LINUX_ARM64: i32 = 153;
 const CHROMIUM_SNAP_LINK: &str = "/snap/bin/chromium";
@@ -265,7 +271,53 @@ impl ChromeManager {
     }
 }
 
+/// The `setup.exe` shipped in a Chrome for Testing archive, unless the unpacked
+/// directory has already been configured by it.
+fn cft_sandbox_setup(browser_path_in_cache: &Path) -> Option<PathBuf> {
+    if browser_path_in_cache
+        .join(CFT_SANDBOX_CONFIGURED_MARKER)
+        .exists()
+    {
+        return None;
+    }
+    let setup = browser_path_in_cache.join(CFT_WINDOWS_SETUP_NAME);
+    setup.exists().then_some(setup)
+}
+
 impl SeleniumManager for ChromeManager {
+    // Chrome's sandboxed services need an AppContainer ACL on the install directory, which the
+    // installer normally adds. Unpacked archives ship setup.exe to do the same; without it the
+    // network service crashes at launch on Windows (Chrome 151+) and in-flight navigations are lost.
+    fn configure_browser_in_cache(&self, browser_path_in_cache: &Path) {
+        if !WINDOWS.is(self.get_os()) {
+            return;
+        }
+        let Some(setup) = cft_sandbox_setup(browser_path_in_cache) else {
+            return;
+        };
+        let directory = path_to_string(browser_path_in_cache);
+        let argument = format!("--configure-browser-in-directory={directory}");
+        self.get_logger()
+            .debug(format!("Running command: {} {}", setup.display(), argument));
+        match ProcessCommand::new(&setup).arg(&argument).status() {
+            Ok(status) if status.success() => {
+                if let Err(err) =
+                    File::create(browser_path_in_cache.join(CFT_SANDBOX_CONFIGURED_MARKER))
+                {
+                    self.get_logger().warn(format!(
+                        "Unable to record that the Chrome sandbox was configured in {directory}: {err}"
+                    ));
+                }
+            }
+            Ok(status) => self.get_logger().warn(format!(
+                "Unable to configure the Chrome sandbox in {directory}: setup.exe exited with {status}"
+            )),
+            Err(err) => self.get_logger().warn(format!(
+                "Unable to configure the Chrome sandbox in {directory}: {err}"
+            )),
+        }
+    }
+
     fn get_browser_name(&self) -> &str {
         self.browser_name
     }
@@ -721,4 +773,31 @@ pub struct Downloads {
 pub struct PlatformUrl {
     pub platform: String,
     pub url: String,
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn cft_sandbox_setup_requires_setup_exe() {
+        let temp_dir = tempfile::tempdir().unwrap();
+        assert_eq!(cft_sandbox_setup(temp_dir.path()), None);
+    }
+
+    #[test]
+    fn cft_sandbox_setup_returns_setup_exe() {
+        let temp_dir = tempfile::tempdir().unwrap();
+        let setup = temp_dir.path().join(CFT_WINDOWS_SETUP_NAME);
+        File::create(&setup).unwrap();
+        assert_eq!(cft_sandbox_setup(temp_dir.path()), Some(setup));
+    }
+
+    #[test]
+    fn cft_sandbox_setup_skips_configured_directory() {
+        let temp_dir = tempfile::tempdir().unwrap();
+        File::create(temp_dir.path().join(CFT_WINDOWS_SETUP_NAME)).unwrap();
+        File::create(temp_dir.path().join(CFT_SANDBOX_CONFIGURED_MARKER)).unwrap();
+        assert_eq!(cft_sandbox_setup(temp_dir.path()), None);
+    }
 }
