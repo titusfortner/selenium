@@ -1,0 +1,58 @@
+name: Repro - first navigation abort
+
+on:
+  workflow_dispatch:
+    inputs:
+      chrome_version:
+        description: Chrome for Testing version (browser and driver)
+        type: string
+        default: '155.0.8059.39'
+      iterations:
+        description: Sessions to open
+        type: string
+        default: '30'
+      bidi:
+        description: Request webSocketUrl
+        type: boolean
+        default: false
+      headless:
+        description: Run Chrome headless
+        type: boolean
+        default: false
+      os:
+        description: Runner image
+        type: string
+        default: windows-latest
+
+permissions:
+  contents: read
+
+jobs:
+  repro:
+    name: ${{ inputs.os }} chrome ${{ inputs.chrome_version }} ${{ inputs.bidi && 'bidi' || 'classic' }}
+    runs-on: ${{ inputs.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Chrome for Testing and ChromeDriver
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/browsers"
+          npx --yes @puppeteer/browsers install "chrome@${{ inputs.chrome_version }}" --path "$RUNNER_TEMP/browsers" | tee chrome.txt
+          npx --yes @puppeteer/browsers install "chromedriver@${{ inputs.chrome_version }}" --path "$RUNNER_TEMP/browsers" | tee chromedriver.txt
+          echo "CHROME=$(tail -1 chrome.txt | sed 's/^[^ ]* //')" >> "$GITHUB_ENV"
+          echo "CHROMEDRIVER=$(tail -1 chromedriver.txt | sed 's/^[^ ]* //')" >> "$GITHUB_ENV"
+      - name: Reproduce
+        shell: bash
+        run: >
+          node .github/repro/first-navigation-abort.js
+          --chromedriver "$CHROMEDRIVER" --chrome "$CHROME"
+          --iterations ${{ inputs.iterations }}
+          ${{ inputs.bidi && '--bidi' || '' }}
+          ${{ inputs.headless && '--headless' || '' }}
+          --log chromedriver.log
+      - name: Upload ChromeDriver log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: chromedriver-log-${{ inputs.chrome_version }}-${{ inputs.bidi && 'bidi' || 'classic' }}-${{ github.run_id }}
+          path: chromedriver.log
