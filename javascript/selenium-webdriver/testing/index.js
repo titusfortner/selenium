@@ -383,7 +383,16 @@ class Environment {
       } else if (urlOrServer) {
         builder.usingServer(urlOrServer.address())
       }
-      return realBuild.call(builder)
+      const built = realBuild.call(builder)
+      if (process.platform === 'win32' && (browser.name === Browser.CHROME || browser.name === Browser.EDGE)) {
+        // A new Windows session sometimes silently abandons its first navigation.
+        // TODO: remove when https://issues.chromium.org/issues/402796660 lands.
+        return built.then(async (driver) => {
+          await driver.get('about:blank')
+          return driver
+        })
+      }
+      return built
     }
 
     return builder
