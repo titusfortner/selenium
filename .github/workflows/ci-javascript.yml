@@ -66,13 +66,20 @@ jobs:
           echo "CHROME=$(tail -1 chrome.txt | sed 's/^[^ ]* //')" >> "$GITHUB_ENV"
           echo "CHROMEDRIVER=$(tail -1 chromedriver.txt | sed 's/^[^ ]* //')" >> "$GITHUB_ENV"
       - name: Install Chrome for Testing and ChromeDriver with Selenium Manager
-        if: inputs.installer == 'selenium-manager'
+        if: startsWith(inputs.installer, 'selenium-manager')
         shell: bash
         run: |
           curl -sSL -o selenium-manager.exe https://github.com/SeleniumHQ/selenium_manager_artifacts/releases/download/selenium-manager-df9ee8c/selenium-manager-windows.exe
           ./selenium-manager.exe --browser chrome --browser-version "${{ inputs.chrome_version }}" --cache-path "$RUNNER_TEMP/selenium-cache" --force-browser-download --output JSON > sm.json
           cat sm.json
           node -e "const r=JSON.parse(require('fs').readFileSync('sm.json','utf8')).result; console.log('CHROME='+r.browser_path); console.log('CHROMEDRIVER='+r.driver_path)" >> "$GITHUB_ENV"
+      - name: Configure the sandbox with Chrome's setup.exe
+        if: inputs.installer == 'selenium-manager-setup'
+        shell: bash
+        run: |
+          dir="$(dirname "$CHROME")"
+          ls "$dir" | head -40
+          "$dir/setup.exe" --configure-browser-in-directory="$dir" || echo "setup.exe exit code $?"
       - name: Show executable permissions
         shell: bash
         run: |
