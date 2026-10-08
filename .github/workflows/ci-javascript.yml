@@ -1,104 +1,75 @@
-name: CI - JavaScript
+name: Repro - first navigation abort
 
 on:
   workflow_call:
     inputs:
-      smoke:
-        description: Smoke tests always run; callers pass false to add the full matrix
-        required: false
-        type: boolean
-        default: true
-  workflow_dispatch:
-    inputs:
-      smoke:
-        description: Smoke tests only (default also runs the full matrix)
-        required: false
+      chrome_version:
+        type: string
+        default: '155.0.8059.39'
+      iterations:
+        type: string
+        default: '30'
+      bidi:
         type: boolean
         default: false
+      headless:
+        type: boolean
+        default: false
+      os:
+        type: string
+        default: windows-latest
+  workflow_dispatch:
+    inputs:
+      chrome_version:
+        description: Chrome for Testing version (browser and driver)
+        type: string
+        default: '155.0.8059.39'
+      iterations:
+        description: Sessions to open
+        type: string
+        default: '30'
+      bidi:
+        description: Request webSocketUrl
+        type: boolean
+        default: false
+      headless:
+        description: Run Chrome headless
+        type: boolean
+        default: false
+      os:
+        description: Runner image
+        type: string
+        default: windows-latest
 
 permissions:
   contents: read
 
-# RBE runs every test on Linux with pinned browsers; these jobs cover macOS, Windows and Selenium Manager.
 jobs:
-  build:
-    name: Build
-    uses: ./.github/workflows/bazel.yml
-    with:
-      name: Build
-      run: bazel build //javascript/selenium-webdriver
-
-  # Prettier is checked by ci-lint.yml.
-  lint:
-    name: Lint
-    uses: ./.github/workflows/bazel.yml
-    with:
-      name: Lint
-      run: bazel test //javascript/selenium-webdriver:eslint-test
-
-  unit-tests:
-    name: Unit Tests
-    uses: ./.github/workflows/bazel.yml
-    strategy:
-      fail-fast: false
-      matrix:
-        node-version: ['22.22.0', '24.14.1']
-        os: [ubuntu]
-    with:
-      name: Unit Tests (${{ matrix.node-version }}, ${{ matrix.os }})
-      os: ${{ matrix.os }}
-      node-version: ${{ matrix.node-version }}
-      run: bazel test --local_test_jobs 1 //javascript/selenium-webdriver:small-tests
-
-  smoke:
-    name: ${{ matrix.os }}-smoke
-    uses: ./.github/workflows/bazel.yml
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows]
-    with:
-      name: ${{ matrix.os }}
-      needs-display: true
-      os: ${{ matrix.os }}
-      rerun-with-debug: true
-      run: >
-        bazel test
-        --keep_going
-        --flaky_test_attempts 1
-        --runs_per_test 3
-        --local_test_jobs 1
-        --build_tests_only
-        --pin_browsers=false
-        --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
-        --test_env=SE_SKIP_DRIVER_IN_PATH=true
-        --test_env=SE_DEBUG=true
-        --test_output=errors
-        --experimental_ui_max_stdouterr_bytes=-1
-        //javascript/selenium-webdriver:test-actions-test.js-chrome
-
-  os-tests-full:
-    name: ${{ matrix.os }}-full
-    if: github.event_name == 'schedule' || !inputs.smoke
-    uses: ./.github/workflows/bazel.yml
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [windows]
-        tag_filters: ['chrome,-remote', 'firefox,-remote', 'edge', 'chrome-remote', 'firefox-remote']
-    with:
-      name: (${{ matrix.tag_filters }})
-      needs-display: true
-      os: ${{ matrix.os }}
-      rerun-with-debug: true
-      run: >
-        bazel test
-        --keep_going
-        --flaky_test_attempts 3
-        --local_test_jobs 1
-        --build_tests_only
-        --pin_browsers=false
-        --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
-        --test_env=SE_SKIP_DRIVER_IN_PATH=true
-        --test_tag_filters=${{ matrix.tag_filters }},-os-sensitive,-se-manager
-        //javascript/selenium-webdriver/...
+  repro:
+    name: ${{ inputs.os }} chrome ${{ inputs.chrome_version }} ${{ inputs.bidi && 'bidi' || 'classic' }}
+    runs-on: ${{ inputs.os }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Install Chrome for Testing and ChromeDriver
+        shell: bash
+        run: |
+          mkdir -p "$RUNNER_TEMP/browsers"
+          npx --yes @puppeteer/browsers install "chrome@${{ inputs.chrome_version }}" --path "$RUNNER_TEMP/browsers" | tee chrome.txt
+          npx --yes @puppeteer/browsers install "chromedriver@${{ inputs.chrome_version }}" --path "$RUNNER_TEMP/browsers" | tee chromedriver.txt
+          echo "CHROME=$(tail -1 chrome.txt | sed 's/^[^ ]* //')" >> "$GITHUB_ENV"
+          echo "CHROMEDRIVER=$(tail -1 chromedriver.txt | sed 's/^[^ ]* //')" >> "$GITHUB_ENV"
+      - name: Reproduce
+        shell: bash
+        run: >
+          node .github/repro/first-navigation-abort.js
+          --chromedriver "$CHROMEDRIVER" --chrome "$CHROME"
+          --iterations ${{ inputs.iterations }}
+          ${{ inputs.bidi && '--bidi' || '' }}
+          ${{ inputs.headless && '--headless' || '' }}
+          --log chromedriver.log
+      - name: Upload ChromeDriver log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: chromedriver-log-${{ inputs.chrome_version }}-${{ inputs.bidi && 'bidi' || 'classic' }}-${{ github.run_id }}
+          path: chromedriver.log
