@@ -182,7 +182,7 @@ class ServiceBuilder extends remote.DriverService.Builder {
             'Environment Variable `SE_DEBUG` is set; forcing --verbose and overriding user-specified driver logging arguments.',
           )
       }
-      this.options_.args = args.includes('--verbose') ? args : args.concat('--verbose')
+      this.options_.args = (args.includes('--verbose') ? args : args.concat('--verbose')).concat('--enable-chrome-logs')
     }
     return super.build()
   }
