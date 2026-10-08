@@ -5,7 +5,7 @@
 //
 // Talks raw HTTP to ChromeDriver; no Selenium, no npm dependencies.
 //
-//   node first-navigation-abort.js --chromedriver <path> --chrome <path> [--iterations 30] [--bidi] [--headless] [--log chromedriver.log]
+//   node first-navigation-abort.js --chromedriver <path> --chrome <path> [--iterations 30] [--bidi] [--headless] [--chrome-logs] [--log chromedriver.log]
 const { spawn } = require('node:child_process')
 const http = require('node:http')
 const net = require('node:net')
@@ -23,6 +23,7 @@ const iterations = Number(arg('iterations', 30))
 const bidi = arg('bidi', false) === true
 const headless = arg('headless', false) === true
 const logPath = arg('log', 'chromedriver.log')
+const chromeLogs = arg('chrome-logs', false) === true
 if (!chromedriver || !chrome) {
   console.error('usage: node first-navigation-abort.js --chromedriver <path> --chrome <path> [--iterations N] [--bidi] [--headless] [--log file]')
   process.exit(2)
@@ -73,7 +74,9 @@ async function main() {
   const pageUrl = `http://127.0.0.1:${page.address().port}/page.html`
 
   const port = await freePort()
-  const driver = spawn(chromedriver, [`--port=${port}`, '--verbose', `--log-path=${logPath}`], { stdio: 'ignore' })
+  const driverArgs = [`--port=${port}`, '--verbose', `--log-path=${logPath}`]
+  if (chromeLogs) driverArgs.push('--enable-chrome-logs')
+  const driver = spawn(chromedriver, driverArgs, { stdio: 'ignore' })
   const base = `http://127.0.0.1:${port}`
   for (let i = 0; i < 100; i++) {
     try {
@@ -126,6 +129,11 @@ async function main() {
   console.log(`\nChrome ${version}  ${bidi ? 'BiDi' : 'classic'}  ${headless ? 'headless' : 'headed'}  ${process.platform}`)
   console.log(`${lost}/${iterations} sessions: Navigate returned 200 but the page was never loaded`)
   console.log(`${aborted} Page.navigate responses with net::ERR_ABORTED in ${logPath}`)
+  if (chromeLogs) {
+    const sandbox = (log.match(/Sandbox cannot access executable/g) || []).length
+    const crashes = (log.match(/Network service crashed/g) || []).length
+    console.log(`${sandbox} "Sandbox cannot access executable" and ${crashes} "Network service crashed" messages from Chrome`)
+  }
 }
 main().catch((e) => {
   console.error(e)
