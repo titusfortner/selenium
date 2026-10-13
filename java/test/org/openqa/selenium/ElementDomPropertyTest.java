@@ -18,11 +18,13 @@
 package org.openqa.selenium;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.testing.JupiterTestBase;
+import org.openqa.selenium.testing.NotYetImplemented;
 
 class ElementDomPropertyTest extends JupiterTestBase {
 
@@ -79,6 +81,7 @@ class ElementDomPropertyTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   public void testShouldGetClassPropertiesOfAnElement() {
     driver.get(pages.xhtmlTestPage);
     WebElement heading = driver.findElement(By.cssSelector(".nameA"));

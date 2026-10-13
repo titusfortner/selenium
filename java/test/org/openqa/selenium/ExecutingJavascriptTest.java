@@ -446,7 +446,6 @@ class ExecutingJavascriptTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldThrowAnExceptionWhenArgumentsWithStaleElementPassed() {
     driver.get(pages.simpleTestPage);
 

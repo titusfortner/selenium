@@ -123,7 +123,6 @@ public class PageLoadTimeOutTest extends JupiterTestBase {
   @Test
   @NotYetImplemented(CHROME)
   @NotYetImplemented(EDGE)
-  @NotYetImplemented(value = SAFARI)
   public void testShouldNotStopLoadingPageAfterTimeout() {
     try {
       testPageLoadTimeoutIsEnforced(1);

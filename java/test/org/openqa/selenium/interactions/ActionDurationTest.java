@@ -21,6 +21,7 @@ import static java.time.Duration.ofMillis;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.openqa.selenium.WaitingConditions.elementToBeInViewport;
 import static org.openqa.selenium.testing.drivers.Browser.FIREFOX;
+import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.time.Duration;
 import org.junit.jupiter.api.Test;
@@ -32,6 +33,7 @@ import org.openqa.selenium.testing.NotYetImplemented;
 class ActionDurationTest extends JupiterTestBase {
   @Test
   @NotYetImplemented(FIREFOX)
+  @NotYetImplemented(SAFARI)
   void shouldScrollToElementWithCustomDuration() {
     driver.get(
         appServer.whereIs("scrolling_tests/frame_with_nested_scrolling_frame_out_of_view.html"));

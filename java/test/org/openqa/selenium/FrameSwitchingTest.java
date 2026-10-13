@@ -285,7 +285,6 @@ class FrameSwitchingTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldFocusOnTheReplacementWhenAFrameFollowsALinkToA_TopTargetedPage() {
     driver.get(pages.framesetPage);
 

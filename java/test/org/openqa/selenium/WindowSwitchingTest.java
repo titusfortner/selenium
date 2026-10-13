@@ -99,7 +99,6 @@ class WindowSwitchingTest extends JupiterTestBase {
 
   @NoDriverAfterTest(failedOnly = true)
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldThrowNoSuchWindowExceptionOnAnAttemptToGetItsHandle() {
     driver.get(pages.xhtmlTestPage);
     Set<String> currentWindowHandles = driver.getWindowHandles();
@@ -180,6 +179,7 @@ class WindowSwitchingTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testClickingOnAButtonThatClosesAnOpenWindowDoesNotCauseTheBrowserToHang() {
     boolean isIE = isInternetExplorer(driver);
 

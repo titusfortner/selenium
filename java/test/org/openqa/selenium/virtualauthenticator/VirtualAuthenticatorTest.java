@@ -24,6 +24,7 @@ import static org.assertj.core.api.Fail.fail;
 import static org.assertj.core.api.InstanceOfAssertFactories.LIST;
 import static org.assertj.core.api.InstanceOfAssertFactories.MAP;
 import static org.openqa.selenium.testing.drivers.Browser.FIREFOX;
+import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.net.MalformedURLException;
 import java.security.spec.PKCS8EncodedKeySpec;
@@ -38,6 +39,7 @@ import org.openqa.selenium.InvalidArgumentException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.testing.Ignore;
 import org.openqa.selenium.testing.JupiterTestBase;
+import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.virtualauthenticator.VirtualAuthenticatorOptions.Protocol;
 
 @Ignore(value = FIREFOX, reason = "https://github.com/mozilla/geckodriver/issues/2239")
@@ -159,6 +161,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testCreateAuthenticator() {
     // Register a credential on the Virtual Authenticator.
     createRKDisabledU2FAuthenticator();
@@ -176,6 +179,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testRemoveAuthenticator() {
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
     VirtualAuthenticator authenticator =
@@ -185,6 +189,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testAddNonResidentCredential() {
     // Add a non-resident credential using the testing API.
     createRKDisabledCTAP2Authenticator();
@@ -201,6 +206,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testAddNonResidentCredentialWhenAuthenticatorUsesU2FProtocol() {
     // Add a non-resident credential using the testing API.
 
@@ -227,6 +233,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testAddResidentCredential() {
     // Add a resident credential using the testing API.
     createRKEnabledCTAP2Authenticator();
@@ -251,6 +258,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testAddResidentCredentialNotSupportedWhenAuthenticatorUsesU2FProtocol() {
     // Add a resident credential using the testing API.
     createRKEnabledU2FAuthenticator();
@@ -276,6 +284,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testGetCredentials() {
     // Create an authenticator and add two credentials.
     createRKEnabledCTAP2Authenticator();
@@ -329,6 +338,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testRemoveCredentialByRawId() {
     createRKDisabledU2FAuthenticator();
 
@@ -353,6 +363,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testRemoveCredentialByBase64UrlId() {
     createRKDisabledU2FAuthenticator();
 
@@ -377,6 +388,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testRemoveAllCredentials() {
     createRKDisabledU2FAuthenticator();
 
@@ -416,6 +428,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testSetUserVerified() {
     createRKEnabledCTAP2Authenticator();
 

@@ -39,6 +39,7 @@ import org.openqa.selenium.remote.http.Route;
 import org.openqa.selenium.testing.Ignore;
 import org.openqa.selenium.testing.JupiterTestBase;
 import org.openqa.selenium.testing.NeedsFreshDriver;
+import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.testing.drivers.Browser;
 
 class WebNetworkTest extends JupiterTestBase {
@@ -49,6 +50,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddAuthenticationHandler() {
     ((RemoteWebDriver) driver)
         .network()
@@ -64,6 +66,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddAuthenticationHandlerWithFilter() {
     Predicate<URI> filter = uri -> uri.getPath().contains("basicAuth");
 
@@ -81,6 +84,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddMultipleAuthenticationHandlersWithFilter() {
     ((RemoteWebDriver) driver)
         .network()
@@ -102,6 +106,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddMultipleAuthenticationHandlersWithTheSameFilter() {
     ((RemoteWebDriver) driver)
         .network()
@@ -123,6 +128,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canRemoveAuthenticationHandler() {
     long id =
         ((RemoteWebDriver) driver)
@@ -141,6 +147,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canRemoveAuthenticationHandlerThatDoesNotExist() {
     ((RemoteWebDriver) driver).network().removeAuthenticationHandler(5);
     page = appServer.whereIs("basicAuth");
@@ -154,6 +161,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canClearAuthenticationHandlers() {
     ((RemoteWebDriver) driver)
         .network()
@@ -180,6 +188,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddRequestHandler() {
     Predicate<URI> filter = uri -> uri.getPath().contains("logEntry");
 
@@ -196,6 +205,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddRequestHandlerToModifyMethod() {
     Predicate<URI> filter = uri -> uri.getPath().contains("logEntry");
 
@@ -215,6 +225,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddRequestHandlerToModifyHeaders() throws InterruptedException {
     Route route =
         Route.matching(req -> req.getUri().contains("network"))
@@ -272,6 +283,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddRequestHandlerToModifyBody() throws InterruptedException {
     Route route =
         Route.matching(req -> req.getUri().contains("network"))
@@ -306,6 +318,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddMultipleRequestHandlers() {
     page = appServer.whereIs("/bidi/logEntryAdded.html");
 
@@ -328,6 +341,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canAddMultipleRequestHandlersWithTheSameFilter() {
     ((RemoteWebDriver) driver)
         .network()
@@ -348,6 +362,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canRemoveRequestHandler() throws InterruptedException {
     Route route =
         Route.matching(req -> req.getUri().contains("network"))
@@ -408,6 +423,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canRemoveRequestHandlerThatDoesNotExist() {
     ((RemoteWebDriver) driver).network().removeRequestHandler(5);
     page = appServer.whereIs("/bidi/logEntryAdded.html");
@@ -420,6 +436,7 @@ class WebNetworkTest extends JupiterTestBase {
   @NeedsFreshDriver
   @Ignore(Browser.CHROME)
   @Ignore(Browser.EDGE)
+  @NotYetImplemented(Browser.SAFARI)
   void canClearRequestHandlers() {
     page = appServer.whereIs("/bidi/logEntryAdded.html");
 

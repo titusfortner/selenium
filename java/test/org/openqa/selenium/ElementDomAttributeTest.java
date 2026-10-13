@@ -66,6 +66,7 @@ class ElementDomAttributeTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testShouldReturnEmptyAttributeValuesWhenPresentAndTheValueIsActuallyEmpty() {
     driver.get(pages.simpleTestPage);
     WebElement body = driver.findElement(By.xpath("//body"));
@@ -149,6 +150,7 @@ class ElementDomAttributeTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testShouldReturnTheValueOfSelectedForOptionsOnlyIfTheyAreSelected() {
     driver.get(pages.formPage);
     WebElement selectBox = driver.findElement(By.xpath("//select[@name='selectomatic']"));
@@ -293,6 +295,7 @@ class ElementDomAttributeTest extends JupiterTestBase {
   @NotYetImplemented(value = CHROME, reason = "It returns a property")
   @NotYetImplemented(EDGE)
   @NotYetImplemented(FIREFOX)
+  @NotYetImplemented(SAFARI)
   public void testShouldReturnEmptyStringForPresentBooleanAttributes() {
     driver.get(pages.booleanAttributes);
     WebElement element1 = driver.findElement(By.id("emailRequired"));
@@ -315,6 +318,7 @@ class ElementDomAttributeTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testMultipleAttributeShouldBeTrueWhenSet() {
     driver.get(pages.selectPage);
     WebElement element = driver.findElement(By.id("selectWithMultipleEqualsMultiple"));
@@ -336,6 +340,7 @@ class ElementDomAttributeTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testMultipleAttributeShouldBeTrueWhenSelectHasMultipleWithValueAsSomethingElse() {
     driver.get(pages.selectPage);
     WebElement element = driver.findElement(By.id("selectWithRandomMultipleValue"));
@@ -343,6 +348,7 @@ class ElementDomAttributeTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void shouldTreatContenteditableAsEnumeratedButNotBoolean() {
     checkEnumeratedAttribute("contenteditable", "true", "false", "yes", "no", "", "blabla");
   }

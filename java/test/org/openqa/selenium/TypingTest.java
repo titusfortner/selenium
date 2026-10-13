@@ -486,6 +486,7 @@ class TypingTest extends JupiterTestBase {
 
   @Test
   @Ignore(value = IE, reason = "F4 triggers address bar")
+  @NotYetImplemented(SAFARI)
   public void testFunctionKeys() {
     driver.get(pages.javascriptPage);
 
@@ -512,6 +513,7 @@ class TypingTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void testChordControlHomeShiftEndDelete() {
 
     driver.get(pages.javascriptPage);
@@ -532,6 +534,7 @@ class TypingTest extends JupiterTestBase {
       value = FIREFOX,
       reason = "Firefox can't type at beginning of field",
       issue = "https://github.com/mozilla/geckodriver/issues/2015")
+  @NotYetImplemented(SAFARI)
   public void testChordReverseShiftHomeSelectionDeletes() {
     driver.get(pages.javascriptPage);
 
@@ -560,6 +563,7 @@ class TypingTest extends JupiterTestBase {
       value = FIREFOX,
       reason = "Firefox can't type at beginning of field",
       issue = "https://github.com/mozilla/geckodriver/issues/2015")
+  @NotYetImplemented(SAFARI)
   public void testChordControlCutAndPaste() {
     driver.get(pages.javascriptPage);
 

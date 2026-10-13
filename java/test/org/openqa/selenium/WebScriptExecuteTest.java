@@ -18,6 +18,7 @@
 package org.openqa.selenium;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.math.BigInteger;
 import java.time.Instant;
@@ -33,10 +34,12 @@ import org.openqa.selenium.bidi.script.RemoteValue;
 import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.testing.JupiterTestBase;
+import org.openqa.selenium.testing.NotYetImplemented;
 
 class WebScriptExecuteTest extends JupiterTestBase {
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithUndefinedArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -54,6 +57,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithNullArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -71,6 +75,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithMinusZeroArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -88,6 +93,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithInfinityArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -106,6 +112,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithMinusInfinityArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -124,6 +131,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithNumberArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -141,6 +149,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithIntegerArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -158,6 +167,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithBooleanArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -175,6 +185,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithBigIntArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -192,6 +203,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithArrayArgument() {
     List<Object> list = new ArrayList<>();
     list.add(1);
@@ -215,6 +227,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithSetArgument() {
     Set<Integer> set = new HashSet<>();
     set.add(1);
@@ -238,6 +251,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithDateArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -255,6 +269,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithMapArgument() {
     Map<Object, Object> mapValue = new HashMap<>();
     mapValue.put("foobar", 1);
@@ -279,6 +294,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithObjectArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)
@@ -299,6 +315,7 @@ class WebScriptExecuteTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canExecuteScriptWithRegExpArgument() {
     RemoteValue value =
         ((RemoteWebDriver) driver)

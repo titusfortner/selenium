@@ -23,12 +23,10 @@ import static org.junit.jupiter.api.Assumptions.assumeFalse;
 import static org.openqa.selenium.Platform.ANDROID;
 import static org.openqa.selenium.support.ui.ExpectedConditions.not;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
-import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.testing.JupiterTestBase;
-import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.testing.TestUtilities;
 
 class VisibilityTest extends JupiterTestBase {
@@ -64,7 +62,6 @@ class VisibilityTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldModifyTheVisibilityOfAnElementDynamically() {
     driver.get(pages.javascriptPage);
 
@@ -107,7 +104,6 @@ class VisibilityTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testZeroSizedDivIsShownIfDescendantHasSize() {
     driver.get(pages.javascriptPage);
 

@@ -28,7 +28,6 @@ import static org.openqa.selenium.testing.drivers.Browser.CHROME;
 import static org.openqa.selenium.testing.drivers.Browser.EDGE;
 import static org.openqa.selenium.testing.drivers.Browser.FIREFOX;
 import static org.openqa.selenium.testing.drivers.Browser.IE;
-import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.time.Duration;
 import org.junit.jupiter.api.Test;
@@ -89,7 +88,6 @@ class PageLoadingTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(value = SAFARI)
   public void testShouldThrowIfUrlIsMalformedInPortPart() {
     assertThatExceptionOfType(WebDriverException.class)
         .isThrownBy(() -> driver.get("http://localhost:3001bla"));
@@ -113,7 +111,6 @@ class PageLoadingTest extends JupiterTestBase {
 
   @SwitchToTopAfterTest
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldBeAbleToLoadAPageWithFramesetsAndWaitUntilAllFramesAreLoaded() {
     driver.get(pages.framesetPage);
 
@@ -128,7 +125,6 @@ class PageLoadingTest extends JupiterTestBase {
 
   @Test
   @Ignore(IE)
-  @NotYetImplemented(value = SAFARI, reason = "does not support insecure SSL")
   public void testShouldBeAbleToAccessPagesWithAnInsecureSslCertificate() {
     createNewDriver(new ImmutableCapabilities(CapabilityType.ACCEPT_INSECURE_CERTS, Boolean.TRUE));
     driver.get(appServer.whereIsSecure("simpleTest.html"));

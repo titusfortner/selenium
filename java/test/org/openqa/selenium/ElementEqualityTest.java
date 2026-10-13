@@ -18,13 +18,11 @@
 package org.openqa.selenium;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.testing.JupiterTestBase;
-import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.testing.SwitchToTopAfterTest;
 
 class ElementEqualityTest extends JupiterTestBase {
@@ -68,7 +66,6 @@ class ElementEqualityTest extends JupiterTestBase {
 
   @SwitchToTopAfterTest
   @Test
-  @NotYetImplemented(SAFARI)
   public void testAnElementFoundInViaJsShouldHaveSameId() {
     driver.get(pages.missedJsReferencePage);
 

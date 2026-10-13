@@ -118,7 +118,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldFireClickEventWhenClicking() {
     driver.get(pages.javascriptPage);
 
@@ -128,7 +127,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldFireMouseDownEventWhenClicking() {
     driver.get(pages.javascriptPage);
 
@@ -138,7 +136,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldFireMouseUpEventWhenClicking() {
     driver.get(pages.javascriptPage);
 
@@ -148,7 +145,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldFireMouseOverEventWhenClicking() {
     driver.get(pages.javascriptPage);
 
@@ -164,7 +160,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
    */
   @Test
   @Ignore(FIREFOX)
-  @NotYetImplemented(SAFARI)
   public void testShouldFireMouseMoveEventWhenClicking() {
     driver.get(pages.simpleTestPage);
     // Move the mouse cursor to somewhere pretty far down the page
@@ -305,7 +300,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldFireTwoClickEventsWhenClickingOnALabel() {
     driver.get(pages.javascriptPage);
 
@@ -385,7 +379,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testSendingKeysToAFocusedElementShouldNotBlurThatElement() {
     assumeFalse(browserNeedsFocusOnThisOs(driver));
 
@@ -402,7 +395,6 @@ class CorrectEventFiringTest extends JupiterTestBase {
 
   @Test
   @NotYetImplemented(IE)
-  @NotYetImplemented(SAFARI)
   public void testClickingAnUnfocusableChildShouldNotBlurTheParent() {
     driver.get(pages.javascriptPage);
     // Click on parent, giving it the focus.

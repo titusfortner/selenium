@@ -26,6 +26,7 @@ import static org.openqa.selenium.remote.CapabilityType.PROXY;
 import static org.openqa.selenium.support.ui.ExpectedConditions.presenceOfElementLocated;
 import static org.openqa.selenium.support.ui.ExpectedConditions.titleIs;
 import static org.openqa.selenium.testing.Safely.safelyCall;
+import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.io.IOException;
 import java.io.UncheckedIOException;
@@ -49,6 +50,7 @@ import org.openqa.selenium.remote.http.HttpResponse;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.testing.JupiterTestBase;
 import org.openqa.selenium.testing.NoDriverBeforeTest;
+import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.testing.drivers.WebDriverBuilder;
 
 /**
@@ -149,6 +151,7 @@ class ReferrerTest extends JupiterTestBase {
    */
   @Test
   @NoDriverBeforeTest
+  @NotYetImplemented(SAFARI)
   void basicHistoryNavigationWithADirectProxy() {
     proxyServer.setPacFileContents("function FindProxyForURL(url, host) { return 'DIRECT'; }");
     localDriver = createProxyDriver(proxyServer.whereIs("/pac.js"));

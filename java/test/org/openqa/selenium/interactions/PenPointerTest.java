@@ -92,7 +92,6 @@ class PenPointerTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   @NotYetImplemented(FIREFOX)
   public void testDraggingElementWithPenMovesItToAnotherList() {
     performDragAndDropWithPen();
@@ -103,7 +102,6 @@ class PenPointerTest extends JupiterTestBase {
   // This test is very similar to testDraggingElementWithPen. The only
   // difference is that this test also verifies the correct events were fired.
   @Test
-  @NotYetImplemented(SAFARI)
   @NotYetImplemented(FIREFOX)
   public void testDraggingElementWithPenFiresEvents() {
     performDragAndDropWithPen();
@@ -113,7 +111,6 @@ class PenPointerTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   @NotYetImplemented(FIREFOX)
   public void testDragAndDrop() {
     driver.get(pages.droppableItems);
@@ -282,7 +279,6 @@ class PenPointerTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   @NotYetImplemented(FIREFOX)
   public void testMoveRelativeToBody() {
     resetMousePointer();
@@ -300,7 +296,6 @@ class PenPointerTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   @NotYetImplemented(FIREFOX)
   public void testMovePenByOffsetOverAndOutOfAnElement() {
     driver.get(pages.mouseOverPage);
@@ -336,7 +331,6 @@ class PenPointerTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   @NotYetImplemented(FIREFOX)
   public void testCanMoveOverAndOutOfAnElement() {
     driver.get(pages.mouseOverPage);
@@ -364,6 +358,7 @@ class PenPointerTest extends JupiterTestBase {
 
   @Test
   @NotYetImplemented(FIREFOX)
+  @NotYetImplemented(SAFARI)
   public void setPointerEventProperties() {
     driver.get(pages.pointerActionsPage);
     long start = System.currentTimeMillis();

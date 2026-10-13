@@ -45,7 +45,6 @@ class JavascriptEnabledDriverTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testDocumentShouldReflectLatestDom() {
     driver.get(pages.javascriptPage);
     String currentText = driver.findElement(By.xpath("//div[@id='dynamo']")).getText();
@@ -91,7 +90,6 @@ class JavascriptEnabledDriverTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldBeAbleToSubmitFormsByCausingTheOnClickEventToFire() {
     driver.get(pages.javascriptPage);
     WebElement element = driver.findElement(By.id("jsSubmitButton"));
@@ -107,7 +105,6 @@ class JavascriptEnabledDriverTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldBeAbleToClickOnSubmitButtons() {
     driver.get(pages.javascriptPage);
     WebElement element = driver.findElement(By.id("submittingButton"));
@@ -132,7 +129,6 @@ class JavascriptEnabledDriverTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldBeAbleToSwitchToFocusedElement() {
     driver.get(pages.javascriptPage);
 

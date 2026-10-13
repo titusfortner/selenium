@@ -137,7 +137,6 @@ class ClickTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testShouldClickOnFirstBoundingClientRectWithNonZeroSize() {
     driver.findElement(By.id("twoClientRects")).click();
     wait.until(titleIs("XHTML Test Page"));
@@ -161,7 +160,6 @@ class ClickTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testClickingLabelShouldSetCheckbox() {
     driver.get(pages.formPage);
 
@@ -171,7 +169,6 @@ class ClickTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testCanClickOnALinkWithEnclosedImage() {
     driver.findElement(By.id("link-with-enclosed-image")).click();
 
@@ -186,7 +183,6 @@ class ClickTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testCanClickOnALinkThatContainsTextWrappedInASpan() {
     driver.findElement(By.id("link-with-enclosed-span")).click();
 
@@ -198,7 +194,6 @@ class ClickTest extends JupiterTestBase {
       value = FIREFOX,
       reason = "block can't be scrolled into view",
       issue = "https://github.com/mozilla/geckodriver/issues/653")
-  @NotYetImplemented(SAFARI)
   public void testCanClickOnALinkThatContainsEmbeddedBlockElements() {
     driver.findElement(By.id("embeddedBlock")).click();
     wait.until(titleIs("XHTML Test Page"));
@@ -221,7 +216,6 @@ class ClickTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   public void testClicksASurroundingStrongTag() {
     driver.get(appServer.whereIs("ClickTest_testClicksASurroundingStrongTag.html"));
     driver.findElement(By.tagName("a")).click();
@@ -254,7 +248,6 @@ class ClickTest extends JupiterTestBase {
       value = FIREFOX,
       reason = "Large element can't be scrolled into view",
       issue = "https://bugzilla.mozilla.org/show_bug.cgi?id=1422272")
-  @NotYetImplemented(SAFARI)
   public void testShouldBeAbleToClickOnAnElementGreaterThanTwoViewports() {
     String url = appServer.whereIs("click_too_big.html");
     driver.get(url);
