@@ -43,12 +43,10 @@ import org.openqa.selenium.WindowType;
 import org.openqa.selenium.bidi.BiDiException;
 import org.openqa.selenium.bidi.module.BrowsingContextInspector;
 import org.openqa.selenium.bidi.module.Script;
-import org.openqa.selenium.testing.CloseExtraWindowsAfterTest;
 import org.openqa.selenium.testing.JupiterTestBase;
 import org.openqa.selenium.testing.NeedsFreshDriver;
 import org.openqa.selenium.testing.NotYetImplemented;
 
-@CloseExtraWindowsAfterTest
 class BrowsingContextInspectorTest extends JupiterTestBase {
 
   @Test
