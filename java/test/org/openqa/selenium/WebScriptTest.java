@@ -23,7 +23,6 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
-import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.time.Duration;
 import java.time.format.DateTimeFormatter;
@@ -45,7 +44,6 @@ import org.openqa.selenium.remote.Script;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.testing.JupiterTestBase;
 import org.openqa.selenium.testing.NeedsFreshDriver;
-import org.openqa.selenium.testing.NotYetImplemented;
 
 class WebScriptTest extends JupiterTestBase {
 
@@ -53,7 +51,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canAddConsoleMessageHandler()
       throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<ConsoleLogEntry> future = new CompletableFuture<>();
@@ -78,7 +75,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canRemoveConsoleMessageHandler()
       throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<ConsoleLogEntry> future1 = new CompletableFuture<>();
@@ -110,7 +106,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canAddJsErrorHandler() throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<JavascriptLogEntry> future = new CompletableFuture<>();
 
@@ -131,7 +126,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canRemoveJsErrorHandler() throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<JavascriptLogEntry> future1 = new CompletableFuture<>();
     CompletableFuture<JavascriptLogEntry> future2 = new CompletableFuture<>();
@@ -164,7 +158,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canAddMultipleHandlers() throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<JavascriptLogEntry> future1 = new CompletableFuture<>();
     CompletableFuture<JavascriptLogEntry> future2 = new CompletableFuture<>();
@@ -193,7 +186,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canAddDomMutationHandler() {
     List<String> mutations = new CopyOnWriteArrayList<>();
 
@@ -208,7 +200,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canRemoveDomMutationHandler() {
     List<String> mutations = new CopyOnWriteArrayList<>();
     Script script = ((RemoteWebDriver) driver).script();
@@ -251,7 +242,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canPinScript() throws ExecutionException, InterruptedException, TimeoutException {
     CompletableFuture<ConsoleLogEntry> future = new CompletableFuture<>();
 
@@ -271,7 +261,6 @@ class WebScriptTest extends JupiterTestBase {
 
   @Test
   @NeedsFreshDriver
-  @NotYetImplemented(SAFARI)
   void canUnpinScript() throws InterruptedException {
     List<String> logs = new CopyOnWriteArrayList<>();
     CountDownLatch latch = new CountDownLatch(1);
