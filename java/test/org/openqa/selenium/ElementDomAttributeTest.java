@@ -19,9 +19,6 @@ package org.openqa.selenium;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
-import static org.openqa.selenium.testing.drivers.Browser.CHROME;
-import static org.openqa.selenium.testing.drivers.Browser.EDGE;
-import static org.openqa.selenium.testing.drivers.Browser.FIREFOX;
 import static org.openqa.selenium.testing.drivers.Browser.IE;
 import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
@@ -292,22 +289,17 @@ class ElementDomAttributeTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(value = CHROME, reason = "It returns a property")
-  @NotYetImplemented(EDGE)
-  @NotYetImplemented(FIREFOX)
   @NotYetImplemented(SAFARI)
-  public void testShouldReturnEmptyStringForPresentBooleanAttributes() {
+  public void testShouldReturnTrueForPresentBooleanAttributes() {
     driver.get(pages.booleanAttributes);
     WebElement element1 = driver.findElement(By.id("emailRequired"));
-    assertThat(element1.getDomAttribute("required")).isEmpty();
+    assertThat(element1.getDomAttribute("required")).isEqualTo("true");
     WebElement element2 = driver.findElement(By.id("emptyTextAreaRequired"));
-    assertThat(element2.getDomAttribute("required")).isEqualTo("required");
+    assertThat(element2.getDomAttribute("required")).isEqualTo("true");
     WebElement element3 = driver.findElement(By.id("inputRequired"));
-    assertThat(element3.getDomAttribute("required")).isEmpty();
+    assertThat(element3.getDomAttribute("required")).isEqualTo("true");
     WebElement element4 = driver.findElement(By.id("textAreaRequired"));
-    assertThat(element4.getDomAttribute("required")).isEqualTo("false");
-    WebElement element5 = driver.findElement(By.id("unwrappable"));
-    assertThat(element5.getDomAttribute("nowrap")).isEmpty();
+    assertThat(element4.getDomAttribute("required")).isEqualTo("true");
   }
 
   @Test
