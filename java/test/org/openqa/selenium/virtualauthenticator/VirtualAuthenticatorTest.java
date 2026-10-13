@@ -161,7 +161,6 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   void testCreateAuthenticator() {
     // Register a credential on the Virtual Authenticator.
     createRKDisabledU2FAuthenticator();
@@ -179,7 +178,6 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   void testRemoveAuthenticator() {
     VirtualAuthenticatorOptions options = new VirtualAuthenticatorOptions();
     VirtualAuthenticator authenticator =
@@ -338,7 +336,6 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   void testRemoveCredentialByRawId() {
     createRKDisabledU2FAuthenticator();
 
@@ -363,7 +360,6 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   void testRemoveCredentialByBase64UrlId() {
     createRKDisabledU2FAuthenticator();
 
@@ -388,7 +384,7 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
+  @Ignore(value = SAFARI, reason = "Removing all credentials crashes safaridriver")
   void testRemoveAllCredentials() {
     createRKDisabledU2FAuthenticator();
 
@@ -428,7 +424,6 @@ class VirtualAuthenticatorTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   void testSetUserVerified() {
     createRKEnabledCTAP2Authenticator();
 
