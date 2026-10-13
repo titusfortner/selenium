@@ -161,6 +161,7 @@ jobs:
     if: "!cancelled() && needs.read-targets.outputs.java != ''"
     with:
       compile-manager: ${{ needs.read-targets.outputs.compile-manager == 'true' }}
+      smoke: ${{ !(github.head_ref == 'pinned-browser-updates' && contains(github.event.pull_request.title, '(major)')) }}
 
   grid:
     name: Grid

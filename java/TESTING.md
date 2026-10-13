@@ -66,7 +66,9 @@ to ensure the latest stable version, pass
 
 Our CI runs the x64 Linux targets on Remote Build Execution (RBE), which only has network access for
 the Rust and Selenium Manager tests. We use GitHub Actions runners only for what the RBE results
-cannot tell us, such as OS-specific behavior and Selenium Manager on other platforms.
+cannot tell us, such as OS-specific behavior and Selenium Manager on other platforms. A nightly run
+adds the rest of the browser tests for Chrome Beta, Firefox Beta, Edge and Grid on Windows, and for
+Safari on macOS.
 
 ## Skipping Tests
 

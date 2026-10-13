@@ -3,6 +3,11 @@ name: CI - Java
 on:
   workflow_call:
     inputs:
+      smoke:
+        description: Smoke tests always run; callers pass false to add the full matrix
+        required: false
+        type: boolean
+        default: true
       compile-manager:
         description: Build Selenium Manager from source instead of downloading the pinned binary
         required: false
@@ -10,6 +15,11 @@ on:
         default: false
   workflow_dispatch:
     inputs:
+      smoke:
+        description: Smoke tests only (default also runs the full matrix)
+        required: false
+        type: boolean
+        default: false
       compile-manager:
         description: Build Selenium Manager from source instead of downloading the pinned binary
         required: false
@@ -19,6 +29,10 @@ on:
 permissions:
   contents: read
 
+# Two tiers, mutually exclusive by content. The smoke tier, `browser-tests`, runs on every event,
+# including schedule, so the schedule-only flaky parser sees it. The full jobs run on schedule
+# or dispatch and exclude the smoke tags, so they are the nightly complement of
+# smoke rather than the whole tree.
 jobs:
   browser-tests:
     name: Browser Tests
@@ -50,3 +64,37 @@ jobs:
         --test_env=SE_SKIP_DRIVER_IN_PATH=true
         --test_tag_filters=unit,os-sensitive
         --target_pattern_file=bazel-targets-java.txt
+
+  os-tests-full:
+    name: ${{ matrix.os }}-full
+    if: github.event_name == 'schedule' || !inputs.smoke
+    uses: ./.github/workflows/bazel.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows]
+        tag_filters:
+          - chrome-beta,-remote-browser
+          - firefox-beta,-remote-browser
+          - edge,-remote-browser
+          - remote-browser,-chrome-beta,-firefox-beta
+        include:
+          - os: macos
+            tag_filters: safari
+    with:
+      name: (${{ matrix.tag_filters }})
+      needs-display: true
+      os: ${{ matrix.os }}
+      rerun-with-debug: true
+      run: >
+        bazel test
+        --build_tests_only
+        --keep_going
+        --flaky_test_attempts 2
+        --local_test_jobs 1
+        --pin_browsers=false
+        --test_env=SE_FORCE_BROWSER_DOWNLOAD=true
+        --test_env=SE_SKIP_DRIVER_IN_PATH=true
+        --test_size_filters large
+        --test_tag_filters=${{ matrix.tag_filters }},-os-sensitive,-se-manager
+        //java/...
