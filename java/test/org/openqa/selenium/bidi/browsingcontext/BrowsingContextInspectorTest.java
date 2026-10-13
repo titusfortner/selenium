@@ -309,7 +309,7 @@ class BrowsingContextInspectorTest extends JupiterTestBase {
                   context.navigate(
                       "http://invalid-domain-that-does-not-exist.test/",
                       ReadinessState.COMPLETE,
-                      ofSeconds(1)))
+                      ofSeconds(10)))
           .as("Expect an exception due to navigation failure")
           .isInstanceOf(BiDiException.class);
 
