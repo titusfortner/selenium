@@ -22,6 +22,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.openqa.selenium.WaitingConditions.newWindowIsOpened;
 import static org.openqa.selenium.WaitingConditions.windowHandleCountToBe;
 import static org.openqa.selenium.WaitingConditions.windowHandleCountToBeGreaterThan;
+import static org.openqa.selenium.WaitingConditions.windowToBeSwitchedToWithName;
 import static org.openqa.selenium.support.ui.ExpectedConditions.alertIsPresent;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 import static org.openqa.selenium.testing.TestUtilities.isInternetExplorer;
@@ -80,7 +81,7 @@ class WindowSwitchingTest extends JupiterTestBase {
 
     assertThat(driver.getTitle()).isEqualTo("XHTML Test Page");
 
-    driver.switchTo().window("result");
+    wait.until(windowToBeSwitchedToWithName("result"));
     assertThat(driver.getTitle()).isEqualTo("We Arrive Here");
 
     driver.get(pages.iframePage);
@@ -107,7 +108,7 @@ class WindowSwitchingTest extends JupiterTestBase {
 
     wait.until(newWindowIsOpened(currentWindowHandles));
 
-    driver.switchTo().window("result");
+    wait.until(windowToBeSwitchedToWithName("result"));
     driver.close();
 
     assertThatExceptionOfType(NoSuchWindowException.class).isThrownBy(driver::getWindowHandle);
@@ -123,7 +124,7 @@ class WindowSwitchingTest extends JupiterTestBase {
 
     wait.until(newWindowIsOpened(currentWindowHandles));
 
-    driver.switchTo().window("result");
+    wait.until(windowToBeSwitchedToWithName("result"));
     driver.close();
 
     assertThatExceptionOfType(NoSuchWindowException.class).isThrownBy(driver::getTitle);
@@ -142,7 +143,7 @@ class WindowSwitchingTest extends JupiterTestBase {
 
     wait.until(newWindowIsOpened(currentWindowHandles));
 
-    driver.switchTo().window("result");
+    wait.until(windowToBeSwitchedToWithName("result"));
     WebElement body = driver.findElement(By.tagName("body"));
     driver.close();
 
@@ -190,7 +191,7 @@ class WindowSwitchingTest extends JupiterTestBase {
 
     wait.until(newWindowIsOpened(currentWindowHandles));
 
-    driver.switchTo().window("result");
+    wait.until(windowToBeSwitchedToWithName("result"));
 
     wait.until(visibilityOfElementLocated(By.id("close"))).click();
 
@@ -213,7 +214,7 @@ class WindowSwitchingTest extends JupiterTestBase {
 
     wait.until(newWindowIsOpened(currentWindowHandles));
 
-    driver.switchTo().window("result");
+    wait.until(windowToBeSwitchedToWithName("result"));
     int allWindowHandles = driver.getWindowHandles().size();
     assertThat(allWindowHandles).isEqualTo(currentWindowHandles.size() + 1);
 
