@@ -68,9 +68,13 @@ public class AddHasPermissions
       @Override
       public Map<String, Boolean> getPermissions() {
         Map<?, ?> resultMap = executeMethod.execute(GET_PERMISSIONS);
+        Object permissions = resultMap.get("permissions");
+        if (!(permissions instanceof Map)) {
+          return new HashMap<>();
+        }
 
         Map<String, Boolean> permissionMap = new HashMap<>();
-        for (Map.Entry<?, ?> entry : resultMap.entrySet()) {
+        for (Map.Entry<?, ?> entry : ((Map<?, ?>) permissions).entrySet()) {
           if (entry.getKey() instanceof String && entry.getValue() instanceof Boolean) {
             permissionMap.put((String) entry.getKey(), (Boolean) entry.getValue());
           }

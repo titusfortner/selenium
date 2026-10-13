@@ -37,7 +37,6 @@ import org.openqa.selenium.remote.http.ClientConfig;
 import org.openqa.selenium.testing.Ignore;
 import org.openqa.selenium.testing.JupiterTestBase;
 import org.openqa.selenium.testing.NoDriverBeforeTest;
-import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.testing.drivers.WebDriverBuilder;
 
 class SafariDriverTest extends JupiterTestBase {
@@ -121,7 +120,6 @@ class SafariDriverTest extends JupiterTestBase {
   }
 
   @Test
-  @NotYetImplemented(SAFARI)
   void canChangePermissions() {
     HasPermissions permissions = (HasPermissions) driver;
 
