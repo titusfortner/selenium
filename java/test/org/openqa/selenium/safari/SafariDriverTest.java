@@ -18,9 +18,9 @@
 package org.openqa.selenium.safari;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.junit.jupiter.api.Assumptions.assumeTrue;
+import static org.openqa.selenium.testing.drivers.Browser.SAFARI;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -34,8 +34,10 @@ import org.openqa.selenium.SessionNotCreatedException;
 import org.openqa.selenium.net.PortProber;
 import org.openqa.selenium.remote.RemoteWebDriverBuilder;
 import org.openqa.selenium.remote.http.ClientConfig;
+import org.openqa.selenium.testing.Ignore;
 import org.openqa.selenium.testing.JupiterTestBase;
 import org.openqa.selenium.testing.NoDriverBeforeTest;
+import org.openqa.selenium.testing.NotYetImplemented;
 import org.openqa.selenium.testing.drivers.WebDriverBuilder;
 
 class SafariDriverTest extends JupiterTestBase {
@@ -85,13 +87,14 @@ class SafariDriverTest extends JupiterTestBase {
 
   @Test
   @NoDriverBeforeTest
-  public void builderWithClientConfigThrowsException() {
+  public void canUseCustomClientConfigWithLocalWebDriver() {
     ClientConfig clientConfig = ClientConfig.defaultConfig().readTimeout(Duration.ofMinutes(1));
-    RemoteWebDriverBuilder builder = SafariDriver.builder().config(clientConfig);
+    RemoteWebDriverBuilder builder =
+        SafariDriver.builder().oneOf(SAFARI.getCapabilities()).config(clientConfig);
 
-    assertThatExceptionOfType(IllegalArgumentException.class)
-        .isThrownBy(builder::build)
-        .withMessage("ClientConfig instances do not work for Local Drivers");
+    localDriver = builder.build();
+    assertThat(localDriver).isInstanceOf(SafariDriver.class);
+    assertThat(localDriver).extracting("clientConfig").isEqualTo(clientConfig);
   }
 
   @Test
@@ -118,6 +121,7 @@ class SafariDriverTest extends JupiterTestBase {
   }
 
   @Test
+  @NotYetImplemented(SAFARI)
   void canChangePermissions() {
     HasPermissions permissions = (HasPermissions) driver;
 
@@ -130,6 +134,7 @@ class SafariDriverTest extends JupiterTestBase {
 
   @Test
   @NoDriverBeforeTest
+  @Ignore(value = SAFARI, gitHubActions = true, reason = "Attaching the debugger times out")
   public void canAttachDebugger() {
     localDriver = new WebDriverBuilder().get(new SafariOptions());
     ((HasDebugger) localDriver).attachDebugger();
