@@ -33,7 +33,7 @@ Bazel generates a target per spec file for each supported browser and variant.
 
 ```shell
 bazel test //rb/spec/...                                  # All tests
-bazel test //rb/spec/unit:unit                            # All unit specs (single target)
+bazel test //rb/spec/unit:unit                            # All unit specs (one target per spec file)
 bazel test //rb/spec/integration/... --test_tag_filters=chrome         # Every Chrome variant
 bazel test //rb/spec/integration/... --test_tag_filters=firefox-local  # Local Firefox only
 bazel test //rb/spec/integration/... --test_tag_filters=firefox-remote # Remote (Grid) Firefox only
