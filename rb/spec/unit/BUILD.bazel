@@ -58,3 +58,30 @@ test_suite(
     name = "unit",
     tests = [spec[:-8] for spec in _SPECS],
 )
+
+rb_test(
+    name = "unit-single",
+    size = "small",
+    srcs = _SPECS,
+    args = ["rb/spec/unit/"],
+    main = "@bundle//bin:rspec",
+    tags = ["unit-single"],
+    deps = [
+        ":spec_helper",
+        "//rb/lib:selenium-webdriver",
+        "//rb/lib/selenium:devtools",
+        "//rb/lib/selenium:server",
+        "//rb/lib/selenium:webdriver",
+        "//rb/lib/selenium/devtools:cdp-generate",
+        "//rb/lib/selenium/webdriver:atoms",
+        "//rb/lib/selenium/webdriver:bidi",
+        "//rb/lib/selenium/webdriver:chrome",
+        "//rb/lib/selenium/webdriver:common",
+        "//rb/lib/selenium/webdriver:devtools",
+        "//rb/lib/selenium/webdriver:edge",
+        "//rb/lib/selenium/webdriver:firefox",
+        "//rb/lib/selenium/webdriver:ie",
+        "//rb/lib/selenium/webdriver:remote",
+        "//rb/lib/selenium/webdriver:safari",
+    ],
+)
