@@ -41,3 +41,71 @@ rb_test(
         "//rb/lib/selenium/webdriver:safari",
     ],
 )
+
+# WIP: alternative layouts timed against the single target in CI; drop before merging
+_UNIT_DEPS = [
+    ":spec_helper",
+    "//rb/lib:selenium-webdriver",
+    "//rb/lib/selenium:devtools",
+    "//rb/lib/selenium:server",
+    "//rb/lib/selenium:webdriver",
+    "//rb/lib/selenium/devtools:cdp-generate",
+    "//rb/lib/selenium/webdriver:atoms",
+    "//rb/lib/selenium/webdriver:bidi",
+    "//rb/lib/selenium/webdriver:chrome",
+    "//rb/lib/selenium/webdriver:common",
+    "//rb/lib/selenium/webdriver:devtools",
+    "//rb/lib/selenium/webdriver:edge",
+    "//rb/lib/selenium/webdriver:firefox",
+    "//rb/lib/selenium/webdriver:ie",
+    "//rb/lib/selenium/webdriver:remote",
+    "//rb/lib/selenium/webdriver:safari",
+]
+
+_UNIT_DIR_GROUPS = {
+    "bidi": glob(["selenium/webdriver/bidi/**/*_spec.rb"]),
+    "browsers": glob([
+        "selenium/webdriver/chrome/**/*_spec.rb",
+        "selenium/webdriver/edge/**/*_spec.rb",
+        "selenium/webdriver/firefox/**/*_spec.rb",
+        "selenium/webdriver/ie/**/*_spec.rb",
+        "selenium/webdriver/safari/**/*_spec.rb",
+    ]),
+    "common": glob(["selenium/webdriver/common/**/*_spec.rb"]),
+    "other": glob([
+        "selenium/*_spec.rb",
+        "selenium/devtools/**/*_spec.rb",
+        "selenium/webdriver/support/**/*_spec.rb",
+    ]),
+    "remote": glob(["selenium/webdriver/remote/**/*_spec.rb"]),
+    "webdriver": glob([
+        "selenium/webdriver/*_spec.rb",
+        "selenium/webdriver/devtools/**/*_spec.rb",
+    ]),
+}
+
+[
+    rb_test(
+        name = "dir-" + group,
+        size = "small",
+        srcs = specs,
+        args = ["rb/spec/unit/" + spec for spec in specs],
+        main = "@bundle//bin:rspec",
+        tags = ["unit-dir"],
+        deps = _UNIT_DEPS,
+    )
+    for group, specs in _UNIT_DIR_GROUPS.items()
+]
+
+[
+    rb_test(
+        name = "perfile/" + spec[:-8],
+        size = "small",
+        srcs = [spec],
+        args = ["rb/spec/unit/" + spec],
+        main = "@bundle//bin:rspec",
+        tags = ["unit-perfile"],
+        deps = _UNIT_DEPS,
+    )
+    for spec in glob(["**/*_spec.rb"])
+]
