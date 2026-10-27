@@ -1,0 +1,21 @@
+name: Debug - Ruby Server on Windows
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  server:
+    name: windows-server
+    uses: ./.github/workflows/bazel.yml
+    with:
+      name: windows
+      os: windows
+      run: >
+        bazel test
+        --test_output=all
+        --cache_test_results=no
+        --pin_browsers=false
+        //rb/spec/integration:server

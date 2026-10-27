@@ -70,8 +70,12 @@ module Selenium
 
     it 'starts and stops server' do
       @location = described_class.download
-      @server = described_class.new(@location, background: true, java: environment.bazel_java)
+      @server = described_class.new(@location, background: true, timeout: 120, log: true, java: environment.bazel_java)
+      WebDriver.logger.warn("java: #{environment.bazel_java.inspect} jar: #{File.expand_path(@location)}")
+      started = Process.clock_gettime(Process::CLOCK_MONOTONIC)
       @server.start
+      elapsed = (Process.clock_gettime(Process::CLOCK_MONOTONIC) - started).round(1)
+      WebDriver.logger.warn("server ready on port #{@server.port} after #{elapsed}s")
       status = server_status("http://#{@server.host}:#{@server.port}")
       expect(status.code).to eq 200
 
