@@ -24,6 +24,8 @@ jobs:
         uses: actions/checkout@v6
       - name: Validate workflows
         uses: raven-actions/actionlint@v2
+      - name: Shellcheck scripts
+        run: git ls-files -z '*.sh' | xargs -0 shellcheck
 
   check-protected:
     name: Check Protected Files
