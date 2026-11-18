@@ -9,6 +9,9 @@ chromedriver_data = select({
     "@selenium//common:use_pinned_linux_chrome": [
         "@linux_chromedriver//:chromedriver",
     ],
+    "@selenium//common:use_pinned_linux_arm64_chrome": [
+        "@linux_arm64_chromedriver//:chromedriver",
+    ],
     "@selenium//common:use_pinned_macos_chrome": [
         "@mac_chromedriver//:chromedriver",
     ],
@@ -20,6 +23,10 @@ chrome_data = select({
     "@selenium//common:use_pinned_linux_chrome": [
         "@linux_chrome//:files",
         "@linux_chrome//:chrome-linux64/chrome",
+    ],
+    "@selenium//common:use_pinned_linux_arm64_chrome": [
+        "@linux_arm64_chrome//:files",
+        "@linux_arm64_chrome//:chrome-linux-arm64/chrome",
     ],
     "@selenium//common:use_pinned_macos_chrome": [
         "@mac_chrome//:Chrome.app",
@@ -53,6 +60,9 @@ geckodriver_data = select({
     "@selenium//common:use_pinned_linux_firefox": [
         "@linux_geckodriver//:geckodriver",
     ],
+    "@selenium//common:use_pinned_linux_arm64_firefox": [
+        "@linux_arm64_geckodriver//:geckodriver",
+    ],
     "@selenium//common:use_pinned_macos_firefox": [
         "@mac_geckodriver//:geckodriver",
     ],
@@ -64,6 +74,10 @@ firefox_data = select({
     "@selenium//common:use_pinned_linux_firefox": [
         "@linux_firefox//:files",
         "@linux_firefox//:firefox/firefox",
+    ],
+    "@selenium//common:use_pinned_linux_arm64_firefox": [
+        "@linux_arm64_firefox//:files",
+        "@linux_arm64_firefox//:firefox/firefox",
     ],
     "@selenium//common:use_pinned_macos_firefox": [
         "@mac_firefox//:Firefox.app",

@@ -9,6 +9,9 @@ chromedriver_jvm_flags = select({
     "@selenium//common:use_pinned_linux_chrome": [
         "-Dwebdriver.chrome.driver=$(location @linux_chromedriver//:chromedriver)",
     ],
+    "@selenium//common:use_pinned_linux_arm64_chrome": [
+        "-Dwebdriver.chrome.driver=$(location @linux_arm64_chromedriver//:chromedriver)",
+    ],
     "@selenium//common:use_pinned_macos_chrome": [
         "-Dwebdriver.chrome.driver=$(location @mac_chromedriver//:chromedriver)",
     ],
@@ -28,6 +31,9 @@ chromedriver_beta_jvm_flags = select({
 chrome_pinned_jvm_flags = select({
     "@selenium//common:use_pinned_linux_chrome": [
         "-Dwebdriver.chrome.binary=$(location @linux_chrome//:chrome-linux64/chrome)",
+    ],
+    "@selenium//common:use_pinned_linux_arm64_chrome": [
+        "-Dwebdriver.chrome.binary=$(location @linux_arm64_chrome//:chrome-linux-arm64/chrome)",
     ],
     "@selenium//common:use_pinned_macos_chrome": [
         "-Dwebdriver.chrome.binary=$(location @mac_chrome//:Chrome.app)/Contents/MacOS/Chrome",
@@ -78,6 +84,9 @@ geckodriver_jvm_flags = select({
     "@selenium//common:use_pinned_linux_firefox": [
         "-Dwebdriver.gecko.driver=$(location @linux_geckodriver//:geckodriver)",
     ],
+    "@selenium//common:use_pinned_linux_arm64_firefox": [
+        "-Dwebdriver.gecko.driver=$(location @linux_arm64_geckodriver//:geckodriver)",
+    ],
     "@selenium//common:use_pinned_macos_firefox": [
         "-Dwebdriver.gecko.driver=$(location @mac_geckodriver//:geckodriver)",
     ],
@@ -87,6 +96,9 @@ geckodriver_jvm_flags = select({
 firefox_pinned_jvm_flags = select({
     "@selenium//common:use_pinned_linux_firefox": [
         "-Dwebdriver.firefox.bin=$(location @linux_firefox//:firefox/firefox)",
+    ],
+    "@selenium//common:use_pinned_linux_arm64_firefox": [
+        "-Dwebdriver.firefox.bin=$(location @linux_arm64_firefox//:firefox/firefox)",
     ],
     "@selenium//common:use_pinned_macos_firefox": [
         "-Dwebdriver.firefox.bin=$(location @mac_firefox//:Firefox.app)/Contents/MacOS/firefox",

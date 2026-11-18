@@ -10,6 +10,10 @@ BROWSERS = {
                 "@linux_chrome//:chrome-js",
                 "@linux_chromedriver//:chromedriver-js",
             ],
+            "@selenium//common:use_pinned_linux_arm64_chrome": [
+                "@linux_arm64_chrome//:chrome-js",
+                "@linux_arm64_chromedriver//:chromedriver-js",
+            ],
             #            "@selenium//common:use_pinned_macos_chrome": [
             #                "@mac_chrome//:chrome-js",
             #                "@mac_chromedriver//:chromedriver-js",
@@ -20,6 +24,10 @@ BROWSERS = {
             "@selenium//common:use_pinned_linux_chrome": {
                 "SE_CHROMEDRIVER": "linux_chromedriver/chromedriver",
                 "SE_CHROME": "linux_chrome/chrome-linux64/chrome",
+            },
+            "@selenium//common:use_pinned_linux_arm64_chrome": {
+                "SE_CHROMEDRIVER": "linux_arm64_chromedriver/chromedriver",
+                "SE_CHROME": "linux_arm64_chrome/chrome-linux-arm64/chrome",
             },
             #            "@selenium//common:use_pinned_macos_chrome": {
             #                "SE_CHROMEDRIVER": "mac_chromedriver/chromedriver",
@@ -50,6 +58,10 @@ BROWSERS = {
                 "@linux_geckodriver//:geckodriver-js",
                 "@linux_firefox//:firefox-js",
             ],
+            "@selenium//common:use_pinned_linux_arm64_firefox": [
+                "@linux_arm64_geckodriver//:geckodriver-js",
+                "@linux_arm64_firefox//:firefox-js",
+            ],
             #            "@selenium//common:use_pinned_macos_firefox": [
             #                "@mac_geckodriver//:geckodriver-js",
             #                "@mac_firefox//:firefox-js",
@@ -60,6 +72,10 @@ BROWSERS = {
             "@selenium//common:use_pinned_linux_firefox": {
                 "SE_GECKODRIVER": "linux_geckodriver/geckodriver",
                 "SE_FIREFOX": "linux_firefox/firefox/firefox",
+            },
+            "@selenium//common:use_pinned_linux_arm64_firefox": {
+                "SE_GECKODRIVER": "linux_arm64_geckodriver/geckodriver",
+                "SE_FIREFOX": "linux_arm64_firefox/firefox/firefox",
             },
             #            "@selenium//common:use_pinned_macos_firefox": {
             #                "SE_GECKODRIVER": "mac_geckodriver/geckodriver",

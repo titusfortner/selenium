@@ -29,6 +29,10 @@ BROWSERS = {
                 "CHROME_BINARY": "$(rlocationpath @linux_chrome//:chrome-linux64/chrome)",
                 "CHROMEDRIVER_BINARY": "$(rlocationpath @linux_chromedriver//:chromedriver)",
             },
+            "@selenium//common:use_pinned_linux_arm64_chrome": {
+                "CHROME_BINARY": "$(rlocationpath @linux_arm64_chrome//:chrome-linux-arm64/chrome)",
+                "CHROMEDRIVER_BINARY": "$(rlocationpath @linux_arm64_chromedriver//:chromedriver)",
+            },
             "@selenium//common:use_pinned_macos_chrome": {
                 "CHROME_BINARY": "$(rlocationpath @mac_chrome//:Chrome.app)/Contents/MacOS/Chrome",
                 "CHROMEDRIVER_BINARY": "$(rlocationpath @mac_chromedriver//:chromedriver)",
@@ -104,6 +108,10 @@ BROWSERS = {
             "@selenium//common:use_pinned_linux_firefox": {
                 "FIREFOX_BINARY": "$(rlocationpath @linux_firefox//:firefox/firefox)",
                 "GECKODRIVER_BINARY": "$(rlocationpath @linux_geckodriver//:geckodriver)",
+            },
+            "@selenium//common:use_pinned_linux_arm64_firefox": {
+                "FIREFOX_BINARY": "$(rlocationpath @linux_arm64_firefox//:firefox/firefox)",
+                "GECKODRIVER_BINARY": "$(rlocationpath @linux_arm64_geckodriver//:geckodriver)",
             },
             "@selenium//common:use_pinned_macos_firefox": {
                 "FIREFOX_BINARY": "$(rlocationpath @mac_firefox//:Firefox.app)/Contents/MacOS/firefox",

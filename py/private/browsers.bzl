@@ -21,6 +21,12 @@ chrome_args = select({
         "--browser-args=--disable-dev-shm-usage",
         "--browser-args=--no-sandbox",
     ],
+    "@selenium//common:use_pinned_linux_arm64_chrome": [
+        "--driver-binary=$(location @linux_arm64_chromedriver//:chromedriver)",
+        "--browser-binary=$(location @linux_arm64_chrome//:chrome-linux-arm64/chrome)",
+        "--browser-args=--disable-dev-shm-usage",
+        "--browser-args=--no-sandbox",
+    ],
     "@selenium//common:use_pinned_macos_chrome": [
         "--driver-binary=$(location @mac_chromedriver//:chromedriver)",
         "--browser-binary=$(location @mac_chrome//:Chrome.app)/Contents/MacOS/Chrome",
@@ -60,6 +66,10 @@ firefox_args = select({
     "@selenium//common:use_pinned_linux_firefox": [
         "--driver-binary=$(location @linux_geckodriver//:geckodriver)",
         "--browser-binary=$(location @linux_firefox//:firefox/firefox)",
+    ],
+    "@selenium//common:use_pinned_linux_arm64_firefox": [
+        "--driver-binary=$(location @linux_arm64_geckodriver//:geckodriver)",
+        "--browser-binary=$(location @linux_arm64_firefox//:firefox/firefox)",
     ],
     "@selenium//common:use_pinned_macos_firefox": [
         "--driver-binary=$(location @mac_geckodriver//:geckodriver)",

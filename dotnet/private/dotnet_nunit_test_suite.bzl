@@ -27,6 +27,12 @@ _BROWSERS = {
                 "--test-parameter",
                 "BrowserLocation=$(location @linux_chrome//:chrome-linux64/chrome)",
             ],
+            "@selenium//common:use_pinned_linux_arm64_chrome": [
+                "--test-parameter",
+                "DriverServiceLocation=$(location @linux_arm64_chromedriver//:chromedriver)",
+                "--test-parameter",
+                "BrowserLocation=$(location @linux_arm64_chrome//:chrome-linux-arm64/chrome)",
+            ],
             "@selenium//common:use_pinned_macos_chrome": [
                 "--test-parameter",
                 "DriverServiceLocation=$(location @mac_chromedriver//:chromedriver)",
@@ -70,6 +76,12 @@ _BROWSERS = {
                 "DriverServiceLocation=$(location @linux_geckodriver//:geckodriver)",
                 "--test-parameter",
                 "BrowserLocation=$(location @linux_firefox//:firefox/firefox)",
+            ],
+            "@selenium//common:use_pinned_linux_arm64_firefox": [
+                "--test-parameter",
+                "DriverServiceLocation=$(location @linux_arm64_geckodriver//:geckodriver)",
+                "--test-parameter",
+                "BrowserLocation=$(location @linux_arm64_firefox//:firefox/firefox)",
             ],
             "@selenium//common:use_pinned_macos_firefox": [
                 "--test-parameter",
