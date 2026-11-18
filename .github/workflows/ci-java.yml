@@ -27,10 +27,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows, macos]
-        tag_filters: ["unit,os-sensitive,se-manager,skip-rbe"]
         include:
-          # Edge has no linux-arm64 build
           - os: ubuntu-24.04-arm
             tag_filters: "unit,os-sensitive,se-manager,skip-rbe,-edge"
     with:
@@ -42,6 +39,7 @@ jobs:
       run: >
         ./scripts/github-actions/bazel-test-if-targets.sh
         --config=gh-browser
+        --pin_browsers=true
         ${{ inputs.compile-manager && '--manager=host' || '' }}
         --test_tag_filters=${{ matrix.tag_filters }}${{ matrix.os == 'macos' && (github.event_name == 'pull_request' || github.event_name == 'push') && ',-edge' || '' }}
         //java/...
