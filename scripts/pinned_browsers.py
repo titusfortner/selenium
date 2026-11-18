@@ -34,7 +34,16 @@ def calculate_hash(url):
     return h.hexdigest()
 
 
-def get_chrome_info_for_channel(channel):
+def has_chrome_downloads(version, platforms):
+    downloads = version.get("downloads", {})
+    return all(
+        any(d["platform"] == platform for d in downloads.get(kind, []))
+        for kind in ("chrome", "chromedriver")
+        for platform in platforms
+    )
+
+
+def get_chrome_info_for_channel(channel, platforms):
     r = http.request(
         "GET",
         "https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json",
@@ -45,84 +54,80 @@ def get_chrome_info_for_channel(channel):
         "https://googlechromelabs.github.io/chrome-for-testing/known-good-versions-with-downloads.json",
     )
     versions = json.loads(r.data)["versions"]
+    in_milestone = [v for v in versions if v["version"].split(".")[0] == str(milestone)]
 
-    return max(
-        filter(lambda v: v["version"].split(".")[0] == str(milestone), versions),
-        key=lambda v: parse(v["version"]),
+    # Every platform pins the same build, so update_browsers.sh sees one Stable major for CDP
+    complete = [v for v in in_milestone if has_chrome_downloads(v, platforms)]
+    if not complete:
+        raise ValueError(f"No Chrome {milestone} build has chrome and chromedriver downloads for all of {platforms}")
+
+    selected = max(complete, key=lambda v: parse(v["version"]))
+    newest = max(in_milestone, key=lambda v: parse(v["version"]))
+    if selected is not newest:
+        print(
+            f"Chrome {newest['version']} is missing downloads for some of {platforms}; pinning {selected['version']}",
+            file=sys.stderr,
+        )
+    return selected
+
+
+def chrome_download_url(downloads, platform):
+    url = next((d["url"] for d in downloads if d["platform"] == platform), None)
+    if url is None:
+        raise ValueError(f"No download found for platform '{platform}'")
+    return url
+
+
+def chromedriver_archive(name, url, strip_prefix):
+    return f"""    http_archive(
+        name = "{name}",
+        url = "{url}",
+        sha256 = "{calculate_hash(url)}",
+        strip_prefix = "{strip_prefix}",
+        build_file_content = \"\"\"
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+package(default_visibility = ["//visibility:public"])
+
+exports_files(["chromedriver"])
+
+js_library(
+    name = "chromedriver-js",
+    data = ["chromedriver"],
+)
+\"\"\",
     )
+"""
 
 
-def chromedriver(selected_version, workspace_prefix=""):
-    content = ""
-
+def chromedriver(selected_version, workspace_prefix="", linux_arm64=False):
     drivers = selected_version["downloads"]["chromedriver"]
 
-    url = next((d["url"] for d in drivers if d["platform"] == "linux64"), None)
-    if url is None:
-        raise ValueError("No chromedriver download found for platform 'linux64'")
-    sha = calculate_hash(url)
-
-    content += f"""    http_archive(
-        name = "linux_{workspace_prefix}chromedriver",
-        url = "{url}",
-        sha256 = "{sha}",
-        strip_prefix = "chromedriver-linux64",
-        build_file_content = \"\"\"
-load("@aspect_rules_js//js:defs.bzl", "js_library")
-package(default_visibility = ["//visibility:public"])
-
-exports_files(["chromedriver"])
-
-js_library(
-    name = "chromedriver-js",
-    data = ["chromedriver"],
-)
-\"\"\",
+    content = chromedriver_archive(
+        f"linux_{workspace_prefix}chromedriver",
+        chrome_download_url(drivers, "linux64"),
+        "chromedriver-linux64",
     )
-"""
-
-    url = next((d["url"] for d in drivers if d["platform"] == "mac-arm64"), None)
-    if url is None:
-        raise ValueError("No chromedriver download found for platform 'mac-arm64'")
-    sha = calculate_hash(url)
-
-    content += f"""
-    http_archive(
-        name = "mac_{workspace_prefix}chromedriver",
-        url = "{url}",
-        sha256 = "{sha}",
-        strip_prefix = "chromedriver-mac-arm64",
-        build_file_content = \"\"\"
-load("@aspect_rules_js//js:defs.bzl", "js_library")
-package(default_visibility = ["//visibility:public"])
-
-exports_files(["chromedriver"])
-
-js_library(
-    name = "chromedriver-js",
-    data = ["chromedriver"],
-)
-\"\"\",
+    content += "\n" + chromedriver_archive(
+        f"mac_{workspace_prefix}chromedriver",
+        chrome_download_url(drivers, "mac-arm64"),
+        "chromedriver-mac-arm64",
     )
-"""
+    if linux_arm64:
+        content += "\n" + chromedriver_archive(
+            f"linux_arm64_{workspace_prefix}chromedriver",
+            chrome_download_url(drivers, "linux-arm64"),
+            "chromedriver-linux-arm64",
+        )
 
     return content
 
 
-def chrome(selected_version, workspace_prefix=""):
-    content = ""
-    chrome_downloads = selected_version["downloads"]["chrome"]
-
-    url = next((d["url"] for d in chrome_downloads if d["platform"] == "linux64"), None)
-    if url is None:
-        raise ValueError("No Chrome download found for platform 'linux64'")
-    sha = calculate_hash(url)
-
-    content += f"""
+def linux_chrome_archive(name, url, directory):
+    return f"""
     http_archive(
-        name = "linux_{workspace_prefix}chrome",
+        name = "{name}",
         url = "{url}",
-        sha256 = "{sha}",
+        sha256 = "{calculate_hash(url)}",
         build_file_content = \"\"\"
 load("@aspect_rules_js//js:defs.bzl", "js_library")
 package(default_visibility = ["//visibility:public"])
@@ -132,7 +137,7 @@ filegroup(
     srcs = glob(["**/*"]),
 )
 
-exports_files(["chrome-linux64/chrome"])
+exports_files(["{directory}/chrome"])
 
 js_library(
     name = "chrome-js",
@@ -142,10 +147,18 @@ js_library(
     )
 """
 
-    url = next((d["url"] for d in chrome_downloads if d["platform"] == "mac-arm64"), None)
-    if url is None:
-        raise ValueError("No Chrome download found for platform 'mac-arm64'")
-    sha = calculate_hash(url)  # Calculate SHA for Mac chrome
+
+def chrome(selected_version, workspace_prefix="", linux_arm64=False):
+    chrome_downloads = selected_version["downloads"]["chrome"]
+
+    content = linux_chrome_archive(
+        f"linux_{workspace_prefix}chrome",
+        chrome_download_url(chrome_downloads, "linux64"),
+        "chrome-linux64",
+    )
+
+    url = chrome_download_url(chrome_downloads, "mac-arm64")
+    sha = calculate_hash(url)
 
     content += f"""    http_archive(
         name = "mac_{workspace_prefix}chrome",
@@ -169,6 +182,12 @@ js_library(
 \"\"\",
     )
 """
+    if linux_arm64:
+        content += linux_chrome_archive(
+            f"linux_arm64_{workspace_prefix}chrome",
+            chrome_download_url(chrome_downloads, "linux-arm64"),
+            "chrome-linux-arm64",
+        )
 
     return content
 
@@ -395,63 +414,43 @@ js_library(
 """
 
 
-def geckodriver():
-    content = ""
+def geckodriver_archive(name, url):
+    return f"""    http_archive(
+        name = "{name}",
+        url = "{url}",
+        sha256 = "{calculate_hash(url)}",
+        build_file_content = \"\"\"
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+package(default_visibility = ["//visibility:public"])
 
+exports_files(["geckodriver"])
+
+js_library(
+    name = "geckodriver-js",
+    data = ["geckodriver"],
+)
+\"\"\",
+    )
+"""
+
+
+def geckodriver():
     releases_url = "https://api.github.com/repos/mozilla/geckodriver/releases/latest"
     r = http.request("GET", releases_url, headers=API_HEADERS)
     if r.status != 200:
         body = r.data[:200].decode("utf-8", "replace")
         raise ValueError(f"Fetch failed (HTTP {r.status}): {releases_url}: {body}")
-    for a in json.loads(r.data)["assets"]:
-        if a["name"].endswith("-linux64.tar.gz"):
-            url = a["browser_download_url"]
-            sha = calculate_hash(url)
-            content = (
-                content
-                + f"""    http_archive(
-        name = "linux_geckodriver",
-        url = "{url}",
-        sha256 = "{sha}",
-        build_file_content = \"\"\"
-load("@aspect_rules_js//js:defs.bzl", "js_library")
-package(default_visibility = ["//visibility:public"])
+    assets = json.loads(r.data)["assets"]
 
-exports_files(["geckodriver"])
+    def asset_url(suffix):
+        url = next((a["browser_download_url"] for a in assets if a["name"].endswith(suffix)), None)
+        if url is None:
+            raise ValueError(f"No geckodriver release asset ending in '{suffix}'")
+        return url
 
-js_library(
-    name = "geckodriver-js",
-    data = ["geckodriver"],
-)
-\"\"\",
-    )
-"""
-            )
-
-        if a["name"].endswith("-macos-aarch64.tar.gz"):
-            url = a["browser_download_url"]
-            sha = calculate_hash(url)
-            content = (
-                content
-                + f"""
-    http_archive(
-        name = "mac_geckodriver",
-        url = "{url}",
-        sha256 = "{sha}",
-        build_file_content = \"\"\"
-load("@aspect_rules_js//js:defs.bzl", "js_library")
-package(default_visibility = ["//visibility:public"])
-
-exports_files(["geckodriver"])
-
-js_library(
-    name = "geckodriver-js",
-    data = ["geckodriver"],
-)
-\"\"\",
-    )
-"""
-            )
+    content = geckodriver_archive("linux_geckodriver", asset_url("-linux64.tar.gz"))
+    content += "\n" + geckodriver_archive("mac_geckodriver", asset_url("-macos-aarch64.tar.gz"))
+    content += "\n" + geckodriver_archive("linux_arm64_geckodriver", asset_url("-linux-aarch64.tar.gz"))
     return content
 
 
@@ -462,6 +461,8 @@ def firefox():
     sha_linux = calculate_hash(firefox_linux(latest_firefox))
     sha_mac = calculate_hash(firefox_mac(latest_firefox))
     content = print_firefox(latest_firefox, "", sha_linux, sha_mac)
+    url = firefox_linux(latest_firefox, "aarch64")
+    content += linux_firefox_archive("linux_arm64_firefox", url, calculate_hash(url))
 
     beta_firefox = firefox_versions["LATEST_FIREFOX_RELEASED_DEVEL_VERSION"]
     if latest_firefox != beta_firefox:
@@ -475,26 +476,22 @@ def firefox_version_data():
     return versions.data
 
 
-def firefox_linux(version):
+def firefox_linux(version, arch="x86_64"):
     if int(version.split(".")[0]) < 135:
-        return f"https://ftp.mozilla.org/pub/firefox/releases/{version}/linux-x86_64/en-US/firefox-{version}.tar.bz2"
+        return f"https://ftp.mozilla.org/pub/firefox/releases/{version}/linux-{arch}/en-US/firefox-{version}.tar.bz2"
     else:
-        return f"https://ftp.mozilla.org/pub/firefox/releases/{version}/linux-x86_64/en-US/firefox-{version}.tar.xz"
+        return f"https://ftp.mozilla.org/pub/firefox/releases/{version}/linux-{arch}/en-US/firefox-{version}.tar.xz"
 
 
 def firefox_mac(version):
     return f"https://ftp.mozilla.org/pub/firefox/releases/{version}/mac/en-US/Firefox%20{version}.dmg"
 
 
-def print_firefox(version, workspace_name, sha_linux, sha_mac):
-    content = ""
-
-    content = (
-        content
-        + f"""    http_archive(
-        name = "linux_{workspace_name}firefox",
-        url = "{firefox_linux(version)}",
-        sha256 = "{sha_linux}",
+def linux_firefox_archive(name, url, sha):
+    return f"""    http_archive(
+        name = "{name}",
+        url = "{url}",
+        sha256 = "{sha}",
         build_file_content = \"\"\"
 load("@aspect_rules_js//js:defs.bzl", "js_library")
 package(default_visibility = ["//visibility:public"])
@@ -514,7 +511,10 @@ js_library(
     )
 
 """
-    )
+
+
+def print_firefox(version, workspace_name, sha_linux, sha_mac):
+    content = linux_firefox_archive(f"linux_{workspace_name}firefox", firefox_linux(version), sha_linux)
 
     content = (
         content
@@ -559,12 +559,12 @@ def pin_browsers():
     content = content + edge_and_edgedriver()
 
     # Stable Chrome
-    stable_chrome_info = get_chrome_info_for_channel(channel="Stable")
-    content = content + chrome(stable_chrome_info, workspace_prefix="")
-    content = content + chromedriver(stable_chrome_info, workspace_prefix="")
+    stable_chrome_info = get_chrome_info_for_channel("Stable", ["linux64", "linux-arm64", "mac-arm64"])
+    content = content + chrome(stable_chrome_info, workspace_prefix="", linux_arm64=True)
+    content = content + chromedriver(stable_chrome_info, workspace_prefix="", linux_arm64=True)
 
-    # Beta Chrome
-    beta_chrome_info = get_chrome_info_for_channel(channel="Beta")
+    # Beta Chrome and Firefox have no Linux arm64 pins because beta tests never run there
+    beta_chrome_info = get_chrome_info_for_channel("Beta", ["linux64", "mac-arm64"])
     content = content + chrome(beta_chrome_info, workspace_prefix="beta_")
     content = content + chromedriver(beta_chrome_info, workspace_prefix="beta_")
 

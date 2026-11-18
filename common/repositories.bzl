@@ -50,6 +50,28 @@ js_library(
     )
 
     http_archive(
+        name = "linux_arm64_firefox",
+        url = "https://ftp.mozilla.org/pub/firefox/releases/160.0/linux-aarch64/en-US/firefox-160.0.tar.xz",
+        sha256 = "0fd9e4fd7ab97f7b1eec42f70e809080679498ebabd78fd692f0b94f9b6bf92f",
+        build_file_content = """
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "files",
+    srcs = glob(["**/*"]),
+)
+
+exports_files(["firefox/firefox"])
+
+js_library(
+    name = "firefox-js",
+    data = [":files"],
+)
+""",
+    )
+
+    http_archive(
         name = "linux_beta_firefox",
         url = "https://ftp.mozilla.org/pub/firefox/releases/161.0b4/linux-x86_64/en-US/firefox-161.0b4.tar.xz",
         sha256 = "5e64c3abd6da2dadc3f939b0b6ee419f4f6e5d040947597756f8a0ad9beffb20",
@@ -109,6 +131,23 @@ js_library(
         name = "mac_geckodriver",
         url = "https://github.com/mozilla/geckodriver/releases/download/v0.37.1/geckodriver-v0.37.1-macos-aarch64.tar.gz",
         sha256 = "d02b3f7003f999caf90974a2ef5da0286c05d01cee19112c86846d759fdba4f5",
+        build_file_content = """
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+package(default_visibility = ["//visibility:public"])
+
+exports_files(["geckodriver"])
+
+js_library(
+    name = "geckodriver-js",
+    data = ["geckodriver"],
+)
+""",
+    )
+
+    http_archive(
+        name = "linux_arm64_geckodriver",
+        url = "https://github.com/mozilla/geckodriver/releases/download/v0.37.1/geckodriver-v0.37.1-linux-aarch64.tar.gz",
+        sha256 = "8fd90b951422fbad5b56539fb344dff66eb3f986d615d8d6fde9f1f62dad610c",
         build_file_content = """
 load("@aspect_rules_js//js:defs.bzl", "js_library")
 package(default_visibility = ["//visibility:public"])
@@ -240,6 +279,28 @@ js_library(
 )
 """,
     )
+
+    http_archive(
+        name = "linux_arm64_chrome",
+        url = "https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.78/linux-arm64/chrome-linux-arm64.zip",
+        sha256 = "f354d666822a11d8fe99e923c44be77dd226fab2750c5b5947e6318818bf10f1",
+        build_file_content = """
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+package(default_visibility = ["//visibility:public"])
+
+filegroup(
+    name = "files",
+    srcs = glob(["**/*"]),
+)
+
+exports_files(["chrome-linux-arm64/chrome"])
+
+js_library(
+    name = "chrome-js",
+    data = [":files"],
+)
+""",
+    )
     http_archive(
         name = "linux_chromedriver",
         url = "https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.78/linux64/chromedriver-linux64.zip",
@@ -263,6 +324,24 @@ js_library(
         url = "https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.78/mac-arm64/chromedriver-mac-arm64.zip",
         sha256 = "dc099dc128da1a324d85f877db7930b1ecd38e097aff02996434ebaacf4417bf",
         strip_prefix = "chromedriver-mac-arm64",
+        build_file_content = """
+load("@aspect_rules_js//js:defs.bzl", "js_library")
+package(default_visibility = ["//visibility:public"])
+
+exports_files(["chromedriver"])
+
+js_library(
+    name = "chromedriver-js",
+    data = ["chromedriver"],
+)
+""",
+    )
+
+    http_archive(
+        name = "linux_arm64_chromedriver",
+        url = "https://storage.googleapis.com/chrome-for-testing-public/157.0.8103.78/linux-arm64/chromedriver-linux-arm64.zip",
+        sha256 = "54b2a50b393dd44463242eca9ee2d35a63baa7baf2fd5882daada15fd1f5a5be",
+        strip_prefix = "chromedriver-linux-arm64",
         build_file_content = """
 load("@aspect_rules_js//js:defs.bzl", "js_library")
 package(default_visibility = ["//visibility:public"])
