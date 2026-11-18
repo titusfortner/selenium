@@ -1,0 +1,34 @@
+name: TMP - Java Safari quit
+
+on:
+  push:
+    branches:
+      - c/java-safari-shutdown-9e58c9-ci
+
+permissions:
+  contents: read
+  packages: read
+
+jobs:
+  safari:
+    name: Safari
+    uses: ./.github/workflows/bazel.yml
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - label: trunk
+            ref: 9a5b3e6b39eb353dfd8234e3639d9871214e986e
+          - label: fix
+            ref: d47564b4fa090c7133a26035401709c4a331251a
+    with:
+      name: Java Safari (${{ matrix.label }})
+      ref: ${{ matrix.ref }}
+      os: macos
+      needs-display: true
+      run: >
+        s=0;
+        bazel test --config=gh-browser --test_tag_filters=safari --test_output=errors //java/... || s=$?;
+        echo "Test logs mentioning Safari pairing:";
+        grep -rl "already paired" bazel-testlogs/java/ || echo none;
+        exit $s
