@@ -1,0 +1,48 @@
+name: WIP - Safari flake repro
+
+on:
+  push:
+    branches:
+      - wip-safari-flake-repro
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  network-safari-preview:
+    name: network STP ${{ matrix.shard }} (${{ matrix.shard <= 3 && 'SE_DEBUG' || 'no debug' }})
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [1, 2, 3, 4, 5]
+    uses: ./.github/workflows/bazel.yml
+    with:
+      name: network STP ${{ matrix.shard }}
+      os: macos
+      needs-display: true
+      safari-preview: true
+      artifact-name: safari-flake-repro-${{ matrix.shard }}
+      artifact-path: build/wip/**
+      run: |
+        mkdir -p build/wip
+        "/Applications/Safari Technology Preview.app/Contents/MacOS/safaridriver" --version | tee build/wip/stp-version.txt
+        deadline=$(( $(date +%s) + 720 ))
+        run=0
+        status=0
+        while [ "$(date +%s)" -lt "$deadline" ]; do
+          run=$((run + 1))
+          start=$(date +%s)
+          if bazel test --config=gh-browser --flaky_test_attempts=1 --nocache_test_results --test_output=summary --test_arg=--fail-fast ${{ matrix.shard <= 3 && '--test_env=SE_DEBUG=true' || '' }} //rb/spec/integration/selenium/webdriver:network-safari-preview-bidi; then
+            result=passed
+          else
+            result=FAILED
+            status=1
+          fi
+          echo "run $run: $result in $(( $(date +%s) - start ))s" | tee -a build/wip/runs.txt
+          cp "$(bazel info bazel-testlogs)/rb/spec/integration/selenium/webdriver/network-safari-preview-bidi/test.log" "build/wip/run-$run.log" || true
+          if [ "$status" -ne 0 ]; then break; fi
+        done
+        cp -R "$HOME/Library/Logs/com.apple.WebDriver" build/wip/safaridriver-diagnose || true
+        { echo "### network STP ${{ matrix.shard }}"; cat build/wip/runs.txt; } >> "$GITHUB_STEP_SUMMARY" || true
+        exit "$status"
