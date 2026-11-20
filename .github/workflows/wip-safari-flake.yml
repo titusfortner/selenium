@@ -1,0 +1,29 @@
+name: WIP - Safari flake diagnostics
+
+on:
+  push:
+    branches:
+      - wip-safari-flake-diagnose
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  network-safari-preview:
+    name: network-safari-preview-bidi x20
+    uses: ./.github/workflows/bazel.yml
+    with:
+      name: network-safari-preview-bidi x20
+      os: macos
+      needs-display: true
+      safari-preview: true
+      artifact-name: safari-flake-diagnostics
+      artifact-path: build/wip/**
+      run: |
+        status=0
+        bazel test --config=gh-browser --flaky_test_attempts=1 --runs_per_test=20 --nocache_test_results --test_output=summary --test_env=SE_DEBUG=true //rb/spec/integration/selenium/webdriver:network-safari-preview-bidi || status=$?
+        mkdir -p build/wip
+        cp -R "$(bazel info bazel-testlogs)/rb/spec/integration/selenium/webdriver/network-safari-preview-bidi" build/wip/testlogs || true
+        cp -R "$HOME/Library/Logs/com.apple.WebDriver" build/wip/safaridriver-diagnose || true
+        exit "$status"
